@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0b0b0b;
+
+  --brand-black: #1a1a1a;
+  --brand-black-2: #262626;
+  --brand-gold: #b08d2b;
+  --brand-gold-light: #d9be6b;
+  --brand-card: #f6f1e3;
+  --brand-white: #ffffff;
+  --brand-grey: #6b6b6b;
+  --brand-ink: #0b0b0b;
+  --brand-ink-secondary: #52514e;
+  --brand-ink-muted: #898781;
+  --brand-grid: #e1e0d9;
+  --brand-good: #0ca30c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-brand-black: var(--brand-black);
+  --color-brand-black-2: var(--brand-black-2);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-light: var(--brand-gold-light);
+  --color-brand-card: var(--brand-card);
+  --color-brand-white: var(--brand-white);
+  --color-brand-grey: var(--brand-grey);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-ink-secondary: var(--brand-ink-secondary);
+  --color-brand-ink-muted: var(--brand-ink-muted);
+  --color-brand-grid: var(--brand-grid);
+  --color-brand-good: var(--brand-good);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

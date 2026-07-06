@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "servicesCompanies": "Entreprises",
+    "servicesCandidates": "Candidats",
+    "germanCourses": "Cours d'allemand",
+    "shortageOccupations": "Métiers en pénurie",
+    "partners": "Partenaires",
+    "contact": "Contact",
+    "bookAppointment": "Prendre rendez-vous",
+    "candidateSpace": "Espace candidat",
+    "employerSpace": "Espace employeur",
+    "login": "Connexion"
+  },
+  "footer": {
+    "tagline": "Agence de placement international",
+    "rights": "Tous droits réservés.",
+    "imprint": "Mentions légales",
+    "privacy": "Confidentialité"
+  },
+  "home": {
+    "heroTitle": "Votre passerelle vers une carrière en Allemagne",
+    "heroSubtitle": "Karriere Fähre accompagne les talents camerounais et d'Afrique centrale vers des emplois qualifiés en Allemagne, et aide les entreprises allemandes à trouver la main-d'œuvre qui leur manque.",
+    "ctaCandidate": "Je suis candidat",
+    "ctaEmployer": "Je suis une entreprise",
+    "ctaBook": "Prendre rendez-vous",
+    "whyTitle": "Pourquoi Karriere Fähre ?",
+    "why1Title": "Une double expertise",
+    "why1Body": "Fondée par une entrepreneure franco-germano-camerounaise, Karriere Fähre comprend les deux rives : le marché du travail allemand et les talents d'Afrique centrale.",
+    "why2Title": "Formation complète",
+    "why2Body": "Cours d'allemand du niveau A1 à B2, préparation aux examens reconnus, et accompagnement à l'intégration.",
+    "why3Title": "Placement direct",
+    "why3Body": "Pour les candidats déjà au niveau B2, un accompagnement direct vers nos entreprises partenaires en Allemagne.",
+    "tracksTitle": "Deux parcours, un même objectif",
+    "fastTrackTitle": "Fast Track",
+    "fastTrackBody": "Vous avez déjà le niveau B2 en allemand ? Rejoignez notre vivier de candidats et démarrez votre mise en relation avec nos entreprises partenaires.",
+    "fullTrainingTitle": "Full Training",
+    "fullTrainingBody": "Vous débutez ou avez un niveau intermédiaire ? Notre parcours complet A1 → B2 vous prépare à l'examen et à l'intégration avant le placement."
+  },
+  "about": {
+    "title": "À propos de Karriere Fähre",
+    "intro": "Karriere Fähre est une agence de placement international basée à Douala, au Cameroun, fondée par une entrepreneure franco-germano-camerounaise.",
+    "missionTitle": "Notre mission",
+    "missionBody": "Construire un pont fiable entre les talents d'Afrique centrale et les entreprises allemandes confrontées à une pénurie de main-d'œuvre qualifiée — en formant, en préparant à l'intégration, et en accompagnant chaque étape du placement.",
+    "founderTitle": "Une fondatrice qui connaît les deux rives",
+    "founderBody": "Ayant grandi entre l'Allemagne et le Cameroun, notre fondatrice comprend à la fois les exigences du marché du travail allemand et les aspirations des talents camerounais. Karriere Fähre — littéralement « le ferry des carrières » — porte ce pont dans son nom.",
+    "valuesTitle": "Nos valeurs",
+    "value1": "Transparence à chaque étape du parcours",
+    "value2": "Exigence dans la formation et la préparation des candidats",
+    "value3": "Partenariat de confiance avec les entreprises allemandes"
+  },
+  "servicesCandidates": {
+    "title": "Services pour les candidats",
+    "subtitle": "Un accompagnement complet, du premier test de niveau jusqu'au placement en Allemagne.",
+    "step1Title": "1. Évaluation",
+    "step1Body": "Test de positionnement en allemand pour déterminer votre parcours : Fast Track ou Full Training.",
+    "step2Title": "2. Formation ou préparation",
+    "step2Body": "Si nécessaire, un parcours complet A1 → B2 avec préparation aux examens reconnus.",
+    "step3Title": "3. Mise en relation",
+    "step3Body": "Intégration à notre vivier de candidats et mise en relation avec nos entreprises partenaires en Allemagne.",
+    "step4Title": "4. Intégration",
+    "step4Body": "Accompagnement à l'intégration avant et après le départ.",
+    "cta": "Commencer mon inscription"
+  },
+  "servicesCompanies": {
+    "title": "Services pour les entreprises",
+    "subtitle": "Trouvez la main-d'œuvre qualifiée qui vous manque, avec un accompagnement de bout en bout.",
+    "step1Title": "1. Exprimez votre besoin",
+    "step1Body": "Décrivez le poste, le nombre de personnes recherchées et le niveau d'allemand requis.",
+    "step2Title": "2. Validation",
+    "step2Body": "Notre équipe valide votre compte entreprise pour garantir la qualité de notre réseau.",
+    "step3Title": "3. Accès au vivier",
+    "step3Body": "Consultez les profils de candidats qualifiés, prêts pour un placement ou en formation.",
+    "step4Title": "4. Accompagnement",
+    "step4Body": "Nous vous accompagnons dans les démarches jusqu'à l'arrivée du candidat en Allemagne.",
+    "cta": "Déposer un besoin en main-d'œuvre"
+  },
+  "partners": {
+    "title": "Nos partenaires",
+    "subtitle": "Karriere Fähre collabore avec des entreprises allemandes actives dans les secteurs en pénurie de main-d'œuvre, et cherche continuellement à élargir ce réseau.",
+    "growingBody": "Notre réseau de partenaires est en pleine croissance. Vous êtes une entreprise allemande à la recherche de main-d'œuvre qualifiée ?",
+    "cta": "Devenez partenaire"
+  },
+  "legal": {
+    "imprintTitle": "Mentions légales",
+    "imprintPlaceholder": "Cette page sera complétée avec les mentions légales officielles de Karriere Fähre SARL (numéro d'immatriculation, adresse, responsable de publication, etc.) avant la mise en ligne définitive.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyPlaceholder": "Cette page sera complétée avec la politique de confidentialité complète (RGPD) avant la mise en ligne définitive."
+  },
+  "shortageOccupations": {
+    "title": "Métiers en pénurie en Allemagne",
+    "subtitle": "Un aperçu des secteurs où les entreprises allemandes recherchent activement de la main-d'œuvre qualifiée.",
+    "filterCategory": "Catégorie",
+    "allCategories": "Toutes les catégories"
+  },
+  "germanCourses": {
+    "title": "Nos parcours de formation",
+    "subtitle": "Deux parcours selon votre niveau actuel d'allemand.",
+    "fastTrack": {
+      "title": "Fast Track — Niveau B2 déjà acquis",
+      "body": "Si vous avez déjà le niveau B2 en allemand (certifié ou non), vous pouvez rejoindre directement notre vivier de candidats pour un placement auprès de nos entreprises partenaires en Allemagne."
+    },
+    "fullTraining": {
+      "title": "Full Training — Parcours complet A1 → B2",
+      "body": "Un parcours intensif structuré selon le cadre européen commun de référence (CECR), sur environ 10 mois, plus 1 mois de préparation à l'examen.",
+      "levelsTitle": "Étapes du parcours",
+      "levelA1": "A1 — 2 mois, 160 heures",
+      "levelA2": "A2 — 2 mois, 160 heures",
+      "levelB1": "B1 — 3 mois, 240 heures",
+      "levelB2": "B2 — 3 mois, 240 heures",
+      "levelPrep": "Préparation à l'examen — 1 mois, 80 heures",
+      "examsTitle": "Examens reconnus",
+      "examsBody": "Goethe-Institut, TELC, ÖSD, TestDaF (niveau B2). Examen B1 disponible sur demande.",
+      "includesTitle": "L'inscription comprend",
+      "includes1": "Ouverture et gestion du dossier étudiant",
+      "includes2": "Test de positionnement (oral et écrit)",
+      "includes3": "Kit étudiant (badge, règlement intérieur, supports pédagogiques, guide de l'étudiant)",
+      "includes4": "Accès à l'espace étudiant en ligne",
+      "includes5": "Accès à la cafétéria"
+    },
+    "pricingNote": "Pour connaître les tarifs et modalités de paiement, contactez-nous ou prenez rendez-vous."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Écrivez-nous ou contactez-nous directement sur WhatsApp.",
+    "formName": "Nom complet",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSubmit": "Envoyer",
+    "formSuccess": "Merci, votre message a bien été envoyé.",
+    "whatsapp": "WhatsApp",
+    "office": "Bureaux",
+    "officeLocation": "Douala, Cameroun"
+  },
+  "bookAppointment": {
+    "title": "Prendre rendez-vous",
+    "subtitle": "Choisissez un jour et un horaire disponible (lundi-vendredi, 9h-18h).",
+    "selectDate": "Choisissez une date",
+    "selectTime": "Choisissez un horaire",
+    "formName": "Nom complet",
+    "formEmail": "Email",
+    "formPhone": "Téléphone",
+    "formNotes": "Motif du rendez-vous (facultatif)",
+    "submit": "Confirmer le rendez-vous",
+    "success": "Votre rendez-vous est confirmé. Vous recevrez un email de confirmation.",
+    "noSlots": "Aucun créneau disponible ce jour-là."
+  },
+  "candidate": {
+    "signup": { "title": "Inscription candidat" },
+    "login": { "title": "Connexion candidat" },
+    "dashboard": { "title": "Mon espace candidat" }
+  },
+  "employer": {
+    "signup": { "title": "Inscription entreprise" },
+    "login": { "title": "Connexion entreprise" },
+    "dashboard": { "title": "Mon espace entreprise" },
+    "pending": {
+      "title": "Compte en cours de validation",
+      "body": "Merci pour votre inscription. Notre équipe examine votre dossier et validera votre accès sous peu."
+    }
+  },
+  "admin": {
+    "dashboard": { "title": "Tableau de bord" }
+  },
+  "login": {
+    "title": "Connexion",
+    "email": "Email",
+    "password": "Mot de passe",
+    "submit": "Se connecter"
+  }
+}

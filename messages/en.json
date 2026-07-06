@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "servicesCompanies": "Companies",
+    "servicesCandidates": "Candidates",
+    "germanCourses": "German Courses",
+    "shortageOccupations": "Shortage Occupations",
+    "partners": "Partners",
+    "contact": "Contact",
+    "bookAppointment": "Book an Appointment",
+    "candidateSpace": "Candidate Area",
+    "employerSpace": "Employer Area",
+    "login": "Log In"
+  },
+  "footer": {
+    "tagline": "International Placement Agency",
+    "rights": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  },
+  "home": {
+    "heroTitle": "Your ferry to a career in Germany",
+    "heroSubtitle": "Karriere Fähre guides talent from Cameroon and Central Africa toward skilled jobs in Germany, and helps German companies find the workforce they're missing.",
+    "ctaCandidate": "I'm a candidate",
+    "ctaEmployer": "I'm a company",
+    "ctaBook": "Book an appointment",
+    "whyTitle": "Why Karriere Fähre?",
+    "why1Title": "Dual expertise",
+    "why1Body": "Founded by a German-Cameroonian entrepreneur, Karriere Fähre understands both sides: the German labor market and Central African talent.",
+    "why2Title": "Full training",
+    "why2Body": "German courses from A1 to B2, preparation for recognized exams, and support with integration.",
+    "why3Title": "Direct placement",
+    "why3Body": "For candidates already at B2 level, direct support toward our partner companies in Germany.",
+    "tracksTitle": "Two paths, one goal",
+    "fastTrackTitle": "Fast Track",
+    "fastTrackBody": "Already at B2 level in German? Join our candidate pool and start your matching process with our partner companies.",
+    "fullTrainingTitle": "Full Training",
+    "fullTrainingBody": "Starting out or at an intermediate level? Our complete A1 → B2 program prepares you for the exam and for integration before placement."
+  },
+  "about": {
+    "title": "About Karriere Fähre",
+    "intro": "Karriere Fähre is an international placement agency based in Douala, Cameroon, founded by a German-Cameroonian entrepreneur.",
+    "missionTitle": "Our mission",
+    "missionBody": "Building a reliable bridge between talent from Central Africa and German companies facing a skilled-labor shortage — through training, integration preparation, and support at every step of placement.",
+    "founderTitle": "A founder who knows both sides",
+    "founderBody": "Having grown up between Germany and Cameroon, our founder understands both the demands of the German labor market and the aspirations of Cameroonian talent. Karriere Fähre — literally \"the career ferry\" — carries that bridge in its name.",
+    "valuesTitle": "Our values",
+    "value1": "Transparency at every step",
+    "value2": "High standards in training and candidate preparation",
+    "value3": "Trusted partnership with German companies"
+  },
+  "servicesCandidates": {
+    "title": "Services for candidates",
+    "subtitle": "Full support, from your first level test to placement in Germany.",
+    "step1Title": "1. Assessment",
+    "step1Body": "A German placement test to determine your path: Fast Track or Full Training.",
+    "step2Title": "2. Training or preparation",
+    "step2Body": "If needed, a complete A1 → B2 path with preparation for recognized exams.",
+    "step3Title": "3. Matching",
+    "step3Body": "Join our candidate pool and get matched with our partner companies in Germany.",
+    "step4Title": "4. Integration",
+    "step4Body": "Support with integration before and after departure.",
+    "cta": "Start my sign-up"
+  },
+  "servicesCompanies": {
+    "title": "Services for companies",
+    "subtitle": "Find the skilled workforce you're missing, with end-to-end support.",
+    "step1Title": "1. Share your need",
+    "step1Body": "Describe the role, the number of people needed, and the required German level.",
+    "step2Title": "2. Validation",
+    "step2Body": "Our team validates your company account to maintain the quality of our network.",
+    "step3Title": "3. Access the pool",
+    "step3Body": "Browse qualified candidate profiles, ready for placement or in training.",
+    "step4Title": "4. Support",
+    "step4Body": "We support you through every step until the candidate arrives in Germany.",
+    "cta": "Submit a staffing need"
+  },
+  "partners": {
+    "title": "Our partners",
+    "subtitle": "Karriere Fähre works with German companies in sectors facing labor shortages, and is continually growing this network.",
+    "growingBody": "Our partner network is growing steadily. Are you a German company looking for skilled workers?",
+    "cta": "Become a partner"
+  },
+  "legal": {
+    "imprintTitle": "Imprint",
+    "imprintPlaceholder": "This page will be completed with Karriere Fähre SARL's official imprint (registration number, address, publisher, etc.) before final launch.",
+    "privacyTitle": "Privacy Policy",
+    "privacyPlaceholder": "This page will be completed with the full privacy policy (GDPR) before final launch."
+  },
+  "shortageOccupations": {
+    "title": "Shortage occupations in Germany",
+    "subtitle": "An overview of sectors where German companies are actively looking for skilled workers.",
+    "filterCategory": "Category",
+    "allCategories": "All categories"
+  },
+  "germanCourses": {
+    "title": "Our training paths",
+    "subtitle": "Two paths depending on your current German level.",
+    "fastTrack": {
+      "title": "Fast Track — Already at B2",
+      "body": "If you already have German level B2 (certified or not), you can join our candidate pool directly for placement with our partner companies in Germany."
+    },
+    "fullTraining": {
+      "title": "Full Training — Complete A1 → B2 path",
+      "body": "An intensive path structured around the Common European Framework of Reference (CEFR), over about 10 months, plus 1 month of exam preparation.",
+      "levelsTitle": "Steps of the path",
+      "levelA1": "A1 — 2 months, 160 hours",
+      "levelA2": "A2 — 2 months, 160 hours",
+      "levelB1": "B1 — 3 months, 240 hours",
+      "levelB2": "B2 — 3 months, 240 hours",
+      "levelPrep": "Exam preparation — 1 month, 80 hours",
+      "examsTitle": "Recognized exams",
+      "examsBody": "Goethe-Institut, TELC, ÖSD, TestDaF (B2 level). B1 exam available on request.",
+      "includesTitle": "Registration includes",
+      "includes1": "Opening and management of the student file",
+      "includes2": "Placement test (oral and written)",
+      "includes3": "Student kit (badge, internal rules, learning materials, student guide)",
+      "includes4": "Access to the online student area",
+      "includes5": "Cafeteria access"
+    },
+    "pricingNote": "For pricing and payment details, contact us or book an appointment."
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "A question? Write to us or reach us directly on WhatsApp.",
+    "formName": "Full name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSubmit": "Send",
+    "formSuccess": "Thank you, your message has been sent.",
+    "whatsapp": "WhatsApp",
+    "office": "Offices",
+    "officeLocation": "Douala, Cameroon"
+  },
+  "bookAppointment": {
+    "title": "Book an appointment",
+    "subtitle": "Choose an available day and time (Monday-Friday, 9am-6pm).",
+    "selectDate": "Choose a date",
+    "selectTime": "Choose a time",
+    "formName": "Full name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formNotes": "Reason for appointment (optional)",
+    "submit": "Confirm appointment",
+    "success": "Your appointment is confirmed. You will receive a confirmation email.",
+    "noSlots": "No slots available on this day."
+  },
+  "candidate": {
+    "signup": { "title": "Candidate Sign Up" },
+    "login": { "title": "Candidate Login" },
+    "dashboard": { "title": "My Candidate Area" }
+  },
+  "employer": {
+    "signup": { "title": "Company Sign Up" },
+    "login": { "title": "Company Login" },
+    "dashboard": { "title": "My Company Area" },
+    "pending": {
+      "title": "Account under review",
+      "body": "Thank you for signing up. Our team is reviewing your application and will validate your access shortly."
+    }
+  },
+  "admin": {
+    "dashboard": { "title": "Dashboard" }
+  },
+  "login": {
+    "title": "Log in",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Log in"
+  }
+}

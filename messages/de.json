@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "servicesCompanies": "Unternehmen",
+    "servicesCandidates": "Kandidaten",
+    "germanCourses": "Deutschkurse",
+    "shortageOccupations": "Mangelberufe",
+    "partners": "Partner",
+    "contact": "Kontakt",
+    "bookAppointment": "Termin buchen",
+    "candidateSpace": "Kandidatenbereich",
+    "employerSpace": "Arbeitgeberbereich",
+    "login": "Anmelden"
+  },
+  "footer": {
+    "tagline": "Internationale Personalvermittlung",
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "home": {
+    "heroTitle": "Ihre Fähre zu einer Karriere in Deutschland",
+    "heroSubtitle": "Karriere Fähre begleitet Talente aus Kamerun und Zentralafrika zu qualifizierten Arbeitsplätzen in Deutschland und hilft deutschen Unternehmen, den fehlenden Fachkräften zu finden.",
+    "ctaCandidate": "Ich bin Kandidat",
+    "ctaEmployer": "Ich bin ein Unternehmen",
+    "ctaBook": "Termin buchen",
+    "whyTitle": "Warum Karriere Fähre?",
+    "why1Title": "Doppelte Expertise",
+    "why1Body": "Gegründet von einer deutsch-kamerunischen Unternehmerin, versteht Karriere Fähre beide Seiten: den deutschen Arbeitsmarkt und die Talente Zentralafrikas.",
+    "why2Title": "Umfassende Ausbildung",
+    "why2Body": "Deutschkurse von A1 bis B2, Vorbereitung auf anerkannte Prüfungen und Unterstützung bei der Integration.",
+    "why3Title": "Direkte Vermittlung",
+    "why3Body": "Für Kandidaten mit bereits vorhandenem B2-Niveau eine direkte Vermittlung zu unseren Partnerunternehmen in Deutschland.",
+    "tracksTitle": "Zwei Wege, ein Ziel",
+    "fastTrackTitle": "Fast Track",
+    "fastTrackBody": "Sie haben bereits das Sprachniveau B2? Treten Sie unserem Kandidatenpool bei und starten Sie die Vermittlung zu unseren Partnerunternehmen.",
+    "fullTrainingTitle": "Full Training",
+    "fullTrainingBody": "Sie fangen an oder haben ein mittleres Niveau? Unser vollständiger Kurs A1 → B2 bereitet Sie auf die Prüfung und die Integration vor."
+  },
+  "about": {
+    "title": "Über Karriere Fähre",
+    "intro": "Karriere Fähre ist eine internationale Personalvermittlungsagentur mit Sitz in Douala, Kamerun, gegründet von einer deutsch-kamerunischen Unternehmerin.",
+    "missionTitle": "Unsere Mission",
+    "missionBody": "Eine verlässliche Brücke zwischen Talenten aus Zentralafrika und deutschen Unternehmen mit Fachkräftemangel bauen — durch Ausbildung, Integrationsvorbereitung und Begleitung bei jedem Schritt der Vermittlung.",
+    "founderTitle": "Eine Gründerin, die beide Seiten kennt",
+    "founderBody": "Aufgewachsen zwischen Deutschland und Kamerun, versteht unsere Gründerin sowohl die Anforderungen des deutschen Arbeitsmarkts als auch die Ambitionen kamerunischer Talente. Karriere Fähre trägt diese Brücke bereits im Namen.",
+    "valuesTitle": "Unsere Werte",
+    "value1": "Transparenz bei jedem Schritt",
+    "value2": "Hohe Ansprüche bei Ausbildung und Vorbereitung der Kandidaten",
+    "value3": "Vertrauensvolle Partnerschaft mit deutschen Unternehmen"
+  },
+  "servicesCandidates": {
+    "title": "Services für Kandidaten",
+    "subtitle": "Umfassende Begleitung, vom ersten Einstufungstest bis zur Vermittlung nach Deutschland.",
+    "step1Title": "1. Einstufung",
+    "step1Body": "Deutsch-Einstufungstest zur Bestimmung Ihres Weges: Fast Track oder Full Training.",
+    "step2Title": "2. Ausbildung oder Vorbereitung",
+    "step2Body": "Falls nötig, ein vollständiger Weg A1 → B2 mit Vorbereitung auf anerkannte Prüfungen.",
+    "step3Title": "3. Vermittlung",
+    "step3Body": "Aufnahme in unseren Kandidatenpool und Vermittlung zu unseren Partnerunternehmen in Deutschland.",
+    "step4Title": "4. Integration",
+    "step4Body": "Begleitung bei der Integration vor und nach der Abreise.",
+    "cta": "Jetzt registrieren"
+  },
+  "servicesCompanies": {
+    "title": "Services für Unternehmen",
+    "subtitle": "Finden Sie die fehlenden Fachkräfte, mit umfassender Begleitung von Anfang bis Ende.",
+    "step1Title": "1. Bedarf angeben",
+    "step1Body": "Beschreiben Sie die Stelle, die Anzahl der gesuchten Personen und das benötigte Deutschniveau.",
+    "step2Title": "2. Validierung",
+    "step2Body": "Unser Team prüft Ihr Unternehmenskonto, um die Qualität unseres Netzwerks zu sichern.",
+    "step3Title": "3. Zugang zum Pool",
+    "step3Body": "Sehen Sie qualifizierte Kandidatenprofile ein, bereit für Vermittlung oder in Ausbildung.",
+    "step4Title": "4. Begleitung",
+    "step4Body": "Wir begleiten Sie bei allen Schritten bis zur Ankunft des Kandidaten in Deutschland.",
+    "cta": "Personalbedarf melden"
+  },
+  "partners": {
+    "title": "Unsere Partner",
+    "subtitle": "Karriere Fähre arbeitet mit deutschen Unternehmen in Branchen mit Fachkräftemangel zusammen und erweitert dieses Netzwerk kontinuierlich.",
+    "growingBody": "Unser Partnernetzwerk wächst stetig. Sind Sie ein deutsches Unternehmen auf der Suche nach qualifizierten Fachkräften?",
+    "cta": "Werden Sie Partner"
+  },
+  "legal": {
+    "imprintTitle": "Impressum",
+    "imprintPlaceholder": "Diese Seite wird vor dem endgültigen Launch mit dem offiziellen Impressum von Karriere Fähre SARL vervollständigt (Handelsregisternummer, Adresse, Verantwortlicher usw.).",
+    "privacyTitle": "Datenschutzerklärung",
+    "privacyPlaceholder": "Diese Seite wird vor dem endgültigen Launch mit der vollständigen Datenschutzerklärung (DSGVO) vervollständigt."
+  },
+  "shortageOccupations": {
+    "title": "Mangelberufe in Deutschland",
+    "subtitle": "Ein Überblick über Branchen, in denen deutsche Unternehmen aktiv nach qualifizierten Arbeitskräften suchen.",
+    "filterCategory": "Kategorie",
+    "allCategories": "Alle Kategorien"
+  },
+  "germanCourses": {
+    "title": "Unsere Ausbildungswege",
+    "subtitle": "Zwei Wege je nach Ihrem aktuellen Deutschniveau.",
+    "fastTrack": {
+      "title": "Fast Track — Niveau B2 bereits erreicht",
+      "body": "Wenn Sie bereits das Sprachniveau B2 besitzen (zertifiziert oder nicht), können Sie direkt unserem Kandidatenpool beitreten, um mit unseren Partnerunternehmen in Deutschland vermittelt zu werden."
+    },
+    "fullTraining": {
+      "title": "Full Training — Vollständiger Weg A1 → B2",
+      "body": "Ein intensiver, nach dem Gemeinsamen Europäischen Referenzrahmen (GER) strukturierter Weg über etwa 10 Monate, plus 1 Monat Prüfungsvorbereitung.",
+      "levelsTitle": "Stufen des Weges",
+      "levelA1": "A1 — 2 Monate, 160 Stunden",
+      "levelA2": "A2 — 2 Monate, 160 Stunden",
+      "levelB1": "B1 — 3 Monate, 240 Stunden",
+      "levelB2": "B2 — 3 Monate, 240 Stunden",
+      "levelPrep": "Prüfungsvorbereitung — 1 Monat, 80 Stunden",
+      "examsTitle": "Anerkannte Prüfungen",
+      "examsBody": "Goethe-Institut, TELC, ÖSD, TestDaF (Niveau B2). B1-Prüfung auf Anfrage verfügbar.",
+      "includesTitle": "Die Anmeldung umfasst",
+      "includes1": "Eröffnung und Verwaltung der Studentenakte",
+      "includes2": "Einstufungstest (mündlich und schriftlich)",
+      "includes3": "Studenten-Kit (Ausweis, Hausordnung, Lehrmaterialien, Studentenhandbuch)",
+      "includes4": "Zugang zum Online-Studentenbereich",
+      "includes5": "Zugang zur Cafeteria"
+    },
+    "pricingNote": "Für Preise und Zahlungsmodalitäten kontaktieren Sie uns oder vereinbaren Sie einen Termin."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Eine Frage? Schreiben Sie uns oder kontaktieren Sie uns direkt über WhatsApp.",
+    "formName": "Vollständiger Name",
+    "formEmail": "E-Mail",
+    "formMessage": "Nachricht",
+    "formSubmit": "Senden",
+    "formSuccess": "Vielen Dank, Ihre Nachricht wurde gesendet.",
+    "whatsapp": "WhatsApp",
+    "office": "Büros",
+    "officeLocation": "Douala, Kamerun"
+  },
+  "bookAppointment": {
+    "title": "Termin buchen",
+    "subtitle": "Wählen Sie einen verfügbaren Tag und eine Uhrzeit (Montag-Freitag, 9-18 Uhr).",
+    "selectDate": "Datum auswählen",
+    "selectTime": "Uhrzeit auswählen",
+    "formName": "Vollständiger Name",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon",
+    "formNotes": "Grund des Termins (optional)",
+    "submit": "Termin bestätigen",
+    "success": "Ihr Termin ist bestätigt. Sie erhalten eine Bestätigungs-E-Mail.",
+    "noSlots": "An diesem Tag sind keine Termine verfügbar."
+  },
+  "candidate": {
+    "signup": { "title": "Kandidatenregistrierung" },
+    "login": { "title": "Kandidatenanmeldung" },
+    "dashboard": { "title": "Mein Kandidatenbereich" }
+  },
+  "employer": {
+    "signup": { "title": "Unternehmensregistrierung" },
+    "login": { "title": "Unternehmensanmeldung" },
+    "dashboard": { "title": "Mein Unternehmensbereich" },
+    "pending": {
+      "title": "Konto wird geprüft",
+      "body": "Vielen Dank für Ihre Registrierung. Unser Team prüft Ihre Unterlagen und schaltet Ihren Zugang in Kürze frei."
+    }
+  },
+  "admin": {
+    "dashboard": { "title": "Übersicht" }
+  },
+  "login": {
+    "title": "Anmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "submit": "Anmelden"
+  }
+}
