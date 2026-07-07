@@ -18,14 +18,14 @@ export async function SiteHeader() {
   ];
 
   return (
-    <header className="bg-brand-black text-brand-white sticky top-0 z-40 border-b border-brand-black-2">
+    <header className="bg-brand-white text-brand-ink sticky top-0 z-40 border-b border-brand-grid">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <Image
               src="/logo.png"
               alt="Karriere Fähre"
-              width={1536}
+              width={1024}
               height={1024}
               priority
               className="h-14 w-auto"
@@ -37,7 +37,7 @@ export async function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-brand-gold-light transition-colors duration-150"
+                className="text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150"
               >
                 {link.label}
               </Link>
@@ -47,13 +47,13 @@ export async function SiteHeader() {
           <div className="flex items-center gap-3">
             <Link
               href="/book-appointment"
-              className="press hidden md:inline-flex items-center rounded-full border border-brand-gold px-3 py-1.5 text-sm text-brand-gold-light hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
+              className="press hidden md:inline-flex items-center rounded-full border border-brand-gold px-3 py-1.5 text-sm text-brand-gold-text hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
             >
               {t("bookAppointment")}
             </Link>
             <Link
               href="/login"
-              className="hidden lg:inline text-sm text-brand-white/80 hover:text-brand-gold-light transition-colors duration-150"
+              className="hidden lg:inline text-sm text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150"
             >
               {t("login")}
             </Link>
