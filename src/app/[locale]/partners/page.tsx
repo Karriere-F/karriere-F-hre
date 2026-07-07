@@ -12,7 +12,7 @@ export default async function PartnersPage() {
 
   return (
     <div>
-      <PageHero title={content.title} subtitle={content.subtitle} />
+      <PageHero title={content.title} subtitle={content.subtitle} image="/images/partners.jpg" />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 text-center">
         <p className="text-brand-ink-secondary leading-relaxed mb-8">
           {content.growingBody}

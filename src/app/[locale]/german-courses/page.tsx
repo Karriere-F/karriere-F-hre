@@ -12,7 +12,11 @@ export default async function GermanCoursesPage() {
 
   return (
     <div>
-      <PageHero title={content.title} subtitle={content.subtitle} />
+      <PageHero
+        title={content.title}
+        subtitle={content.subtitle}
+        image="/images/german-courses.jpg"
+      />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 sm:grid-cols-2">
         <div className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid p-8">
           <h2 className="text-xl font-serif text-brand-black mb-3">

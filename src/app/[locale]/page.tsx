@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
@@ -11,8 +12,17 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-start gap-6">
+      <section className="relative bg-brand-black text-brand-white overflow-hidden">
+        <Image
+          src="/images/home-hero.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/90 to-brand-black/50" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-start gap-6">
           <h1
             className="animate-fade-up text-4xl sm:text-5xl font-serif max-w-2xl leading-tight"
           >

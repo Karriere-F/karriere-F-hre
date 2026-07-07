@@ -18,7 +18,11 @@ export default async function ServicesCompaniesPage() {
 
   return (
     <div>
-      <PageHero title={content.title} subtitle={content.subtitle} />
+      <PageHero
+        title={content.title}
+        subtitle={content.subtitle}
+        image="/images/services-companies.jpg"
+      />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <StepList steps={steps} />
         <div className="mt-10">
