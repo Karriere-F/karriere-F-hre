@@ -36,7 +36,13 @@
     "fastTrackTitle": "Fast Track",
     "fastTrackBody": "Vous avez déjà le niveau B2 en allemand ? Rejoignez notre vivier de candidats et démarrez votre mise en relation avec nos entreprises partenaires.",
     "fullTrainingTitle": "Full Training",
-    "fullTrainingBody": "Vous débutez ou avez un niveau intermédiaire ? Notre parcours complet A1 → B2 vous prépare à l'examen et à l'intégration avant le placement."
+    "fullTrainingBody": "Vous débutez ou avez un niveau intermédiaire ? Notre parcours complet A1 → B2 vous prépare à l'examen et à l'intégration avant le placement.",
+    "categoriesTitle": "Métiers en pénurie en Allemagne",
+    "categoriesSubtitle": "Un aperçu des secteurs où les entreprises allemandes recherchent activement de la main-d'œuvre qualifiée.",
+    "categoriesCta": "Voir tous les métiers",
+    "occupationsCount": "{count, plural, one {# métier} other {# métiers}}",
+    "finalCtaTitle": "Prêt à commencer votre parcours ?",
+    "finalCtaSubtitle": "Que vous soyez candidat ou entreprise, la première étape ne prend que quelques minutes."
   },
   "about": {
     "title": "À propos de Karriere Fähre",

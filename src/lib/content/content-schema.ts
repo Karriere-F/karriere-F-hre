@@ -21,6 +21,11 @@ export const CONTENT_PAGES = {
       "fastTrackBody",
       "fullTrainingTitle",
       "fullTrainingBody",
+      "categoriesTitle",
+      "categoriesSubtitle",
+      "categoriesCta",
+      "finalCtaTitle",
+      "finalCtaSubtitle",
     ],
   },
   about: {

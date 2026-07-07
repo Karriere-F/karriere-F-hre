@@ -36,7 +36,13 @@
     "fastTrackTitle": "Fast Track",
     "fastTrackBody": "Already at B2 level in German? Join our candidate pool and start your matching process with our partner companies.",
     "fullTrainingTitle": "Full Training",
-    "fullTrainingBody": "Starting out or at an intermediate level? Our complete A1 → B2 program prepares you for the exam and for integration before placement."
+    "fullTrainingBody": "Starting out or at an intermediate level? Our complete A1 → B2 program prepares you for the exam and for integration before placement.",
+    "categoriesTitle": "Shortage occupations in Germany",
+    "categoriesSubtitle": "An overview of sectors where German companies are actively looking for skilled workers.",
+    "categoriesCta": "See all occupations",
+    "occupationsCount": "{count, plural, one {# occupation} other {# occupations}}",
+    "finalCtaTitle": "Ready to start your journey?",
+    "finalCtaSubtitle": "Whether you're a candidate or a company, the first step only takes a few minutes."
   },
   "about": {
     "title": "About Karriere Fähre",

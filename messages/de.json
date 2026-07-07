@@ -36,7 +36,13 @@
     "fastTrackTitle": "Fast Track",
     "fastTrackBody": "Sie haben bereits das Sprachniveau B2? Treten Sie unserem Kandidatenpool bei und starten Sie die Vermittlung zu unseren Partnerunternehmen.",
     "fullTrainingTitle": "Full Training",
-    "fullTrainingBody": "Sie fangen an oder haben ein mittleres Niveau? Unser vollständiger Kurs A1 → B2 bereitet Sie auf die Prüfung und die Integration vor."
+    "fullTrainingBody": "Sie fangen an oder haben ein mittleres Niveau? Unser vollständiger Kurs A1 → B2 bereitet Sie auf die Prüfung und die Integration vor.",
+    "categoriesTitle": "Mangelberufe in Deutschland",
+    "categoriesSubtitle": "Ein Überblick über Branchen, in denen deutsche Unternehmen aktiv nach qualifizierten Arbeitskräften suchen.",
+    "categoriesCta": "Alle Berufe ansehen",
+    "occupationsCount": "{count, plural, one {# Beruf} other {# Berufe}}",
+    "finalCtaTitle": "Bereit, Ihren Weg zu beginnen?",
+    "finalCtaSubtitle": "Ob Kandidat oder Unternehmen: der erste Schritt dauert nur wenige Minuten."
   },
   "about": {
     "title": "Über Karriere Fähre",
