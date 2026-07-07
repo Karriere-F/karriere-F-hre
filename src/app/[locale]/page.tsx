@@ -60,7 +60,7 @@ export default async function HomePage() {
                 className="lift-on-hover animate-fade-up rounded-lg bg-brand-white border border-brand-grid p-6"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
-                <h3 className="text-brand-gold font-semibold mb-2">
+                <h3 className="text-brand-gold-text font-semibold mb-2">
                   {content[`why${i}Title` as "why1Title"]}
                 </h3>
                 <p className="text-brand-ink-secondary text-sm leading-relaxed">

@@ -36,10 +36,10 @@ export default async function CandidateDashboardPage() {
         </div>
       </div>
       <div className="flex gap-4 mt-6">
-        <Link href="/candidate/profile" className="text-brand-gold hover:underline text-sm">
+        <Link href="/candidate/profile" className="text-brand-gold-text hover:underline text-sm">
           Modifier mon profil
         </Link>
-        <Link href="/candidate/cv" className="text-brand-gold hover:underline text-sm">
+        <Link href="/candidate/cv" className="text-brand-gold-text hover:underline text-sm">
           Gérer mon CV
         </Link>
       </div>

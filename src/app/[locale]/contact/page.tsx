@@ -17,7 +17,7 @@ export default async function ContactPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 grid gap-12 sm:grid-cols-2">
         <ContactForm />
         <div>
-          <h2 className="text-brand-gold font-semibold text-sm mb-2">{t("whatsapp")}</h2>
+          <h2 className="text-brand-gold-text font-semibold text-sm mb-2">{t("whatsapp")}</h2>
           <ul className="text-sm text-brand-ink-secondary space-y-1 mb-8">
             {WHATSAPP_NUMBERS.map((n) => (
               <li key={n.e164}>
@@ -32,7 +32,7 @@ export default async function ContactPage() {
               </li>
             ))}
           </ul>
-          <h2 className="text-brand-gold font-semibold text-sm mb-2">{content.office}</h2>
+          <h2 className="text-brand-gold-text font-semibold text-sm mb-2">{content.office}</h2>
           <p className="text-sm text-brand-ink-secondary">{content.officeLocation}</p>
         </div>
       </div>

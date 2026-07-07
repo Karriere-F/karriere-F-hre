@@ -25,7 +25,7 @@ export function LocaleSwitcher() {
           className={`px-2 py-1 rounded transition-colors ${
             loc === locale
               ? "text-brand-gold font-semibold"
-              : "text-brand-grey hover:text-brand-gold-light"
+              : "text-brand-white/60 hover:text-brand-gold-light"
           }`}
           aria-current={loc === locale}
         >

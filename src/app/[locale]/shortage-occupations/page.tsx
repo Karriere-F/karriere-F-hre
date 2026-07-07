@@ -39,7 +39,7 @@ export default async function ShortageOccupationsPage() {
               className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid p-6 hover:border-brand-gold transition-colors duration-150"
               style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
             >
-              <span className="text-xs uppercase tracking-wide text-brand-gold">
+              <span className="text-xs uppercase tracking-wide text-brand-gold-text">
                 {occ.category}
               </span>
               <h3 className="text-brand-black font-serif text-lg mt-1">

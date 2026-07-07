@@ -21,7 +21,7 @@ export default async function EmployerCandidatesPage() {
             href={`/employer/candidates/${c.id}`}
             className="rounded-lg border border-brand-grid p-5 hover:border-brand-gold transition-colors"
           >
-            <p className="text-xs uppercase text-brand-gold">{c.german_level}</p>
+            <p className="text-xs uppercase text-brand-gold-text">{c.german_level}</p>
             <p className="text-brand-black font-medium mt-1">
               {c.years_experience ?? 0} an(s) d&apos;expérience
             </p>

@@ -23,7 +23,7 @@ export default async function GermanCoursesPage() {
           </p>
           <Link
             href="/candidate/signup"
-            className="press inline-flex rounded-full border border-brand-gold px-5 py-2.5 text-brand-gold hover:bg-brand-gold hover:text-brand-white transition-colors duration-150 text-sm"
+            className="press inline-flex rounded-full border border-brand-gold px-5 py-2.5 text-brand-gold-text hover:bg-brand-gold hover:text-brand-white transition-colors duration-150 text-sm"
           >
             {content.fastTrack.title}
           </Link>
@@ -40,7 +40,7 @@ export default async function GermanCoursesPage() {
             {content.fullTraining.body}
           </p>
 
-          <h3 className="text-brand-gold font-semibold text-sm mb-2">
+          <h3 className="text-brand-gold-text font-semibold text-sm mb-2">
             {content.fullTraining.levelsTitle}
           </h3>
           <ul className="text-sm text-brand-ink-secondary space-y-1 mb-6">
@@ -49,14 +49,14 @@ export default async function GermanCoursesPage() {
             ))}
           </ul>
 
-          <h3 className="text-brand-gold font-semibold text-sm mb-2">
+          <h3 className="text-brand-gold-text font-semibold text-sm mb-2">
             {content.fullTraining.examsTitle}
           </h3>
           <p className="text-sm text-brand-ink-secondary mb-6">
             {content.fullTraining.examsBody}
           </p>
 
-          <h3 className="text-brand-gold font-semibold text-sm mb-2">
+          <h3 className="text-brand-gold-text font-semibold text-sm mb-2">
             {content.fullTraining.includesTitle}
           </h3>
           <ul className="text-sm text-brand-ink-secondary space-y-1 list-disc list-inside">

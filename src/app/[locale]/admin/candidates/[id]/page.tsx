@@ -68,7 +68,7 @@ export default async function AdminCandidateDetailPage({
           <dt className="text-brand-ink-muted">CV</dt>
           <dd>
             {cvUrl ? (
-              <a href={cvUrl} target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:underline">
+              <a href={cvUrl} target="_blank" rel="noopener noreferrer" className="text-brand-gold-text hover:underline">
                 Télécharger
               </a>
             ) : (

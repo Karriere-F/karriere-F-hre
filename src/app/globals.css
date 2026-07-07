@@ -8,12 +8,18 @@
   --brand-black-2: #262626;
   --brand-gold: #b08d2b;
   --brand-gold-light: #d9be6b;
+  /* Darker gold for TEXT on light backgrounds only (headings, labels, links). The
+     base --brand-gold (#b08d2b) is ~3.1:1 on white -- fine for button fills with
+     black text on top, but fails WCAG AA (4.5:1) as body-size text on a light
+     surface. Keep --brand-gold for fills/borders/gold-on-black; use this one
+     wherever gold is the text color on white or cream. */
+  --brand-gold-text: #8a6f22;
   --brand-card: #f6f1e3;
   --brand-white: #ffffff;
   --brand-grey: #6b6b6b;
   --brand-ink: #0b0b0b;
   --brand-ink-secondary: #52514e;
-  --brand-ink-muted: #898781;
+  --brand-ink-muted: #6e6c66;
   --brand-grid: #e1e0d9;
   --brand-good: #0ca30c;
 }
@@ -28,6 +34,7 @@
   --color-brand-black-2: var(--brand-black-2);
   --color-brand-gold: var(--brand-gold);
   --color-brand-gold-light: var(--brand-gold-light);
+  --color-brand-gold-text: var(--brand-gold-text);
   --color-brand-card: var(--brand-card);
   --color-brand-white: var(--brand-white);
   --color-brand-grey: var(--brand-grey);
@@ -93,7 +100,9 @@ body {
   }
   .lift-on-hover:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px -12px rgb(0 0 0 / 0.18);
+    /* Blur kept <=8px on purpose: a 1px border is already present at rest, and
+       pairing that with a wide, soft shadow is the "ghost-card" pattern. */
+    box-shadow: 0 6px 8px -4px rgb(0 0 0 / 0.16);
   }
 }
 

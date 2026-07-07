@@ -28,10 +28,10 @@ export default async function EmployerDashboardPage() {
         </div>
       </div>
       <div className="flex gap-4">
-        <Link href="/employer/requests" className="text-brand-gold hover:underline text-sm">
+        <Link href="/employer/requests" className="text-brand-gold-text hover:underline text-sm">
           Mes besoins en main-d&apos;œuvre
         </Link>
-        <Link href="/employer/candidates" className="text-brand-gold hover:underline text-sm">
+        <Link href="/employer/candidates" className="text-brand-gold-text hover:underline text-sm">
           Vivier de candidats
         </Link>
       </div>
