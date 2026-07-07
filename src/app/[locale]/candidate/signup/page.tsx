@@ -97,11 +97,11 @@ export default function CandidateSignupPage() {
             <div className="flex flex-col gap-2 text-sm">
               <label className="flex items-center gap-2">
                 <input type="radio" value="false" {...register("needsTraining")} />
-                Fast Track — j&apos;ai déjà le niveau B2
+                Fast Track : j&apos;ai déjà le niveau B2
               </label>
               <label className="flex items-center gap-2">
                 <input type="radio" value="true" {...register("needsTraining")} defaultChecked />
-                Full Training — je débute ou niveau intermédiaire
+                Full Training : je débute ou niveau intermédiaire
               </label>
             </div>
           </div>

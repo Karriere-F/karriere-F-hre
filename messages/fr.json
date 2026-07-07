@@ -42,9 +42,9 @@
     "title": "À propos de Karriere Fähre",
     "intro": "Karriere Fähre est une agence de placement international basée à Douala, au Cameroun, fondée par une entrepreneure franco-germano-camerounaise.",
     "missionTitle": "Notre mission",
-    "missionBody": "Construire un pont fiable entre les talents d'Afrique centrale et les entreprises allemandes confrontées à une pénurie de main-d'œuvre qualifiée — en formant, en préparant à l'intégration, et en accompagnant chaque étape du placement.",
+    "missionBody": "Construire un pont fiable entre les talents d'Afrique centrale et les entreprises allemandes confrontées à une pénurie de main-d'œuvre qualifiée, en formant, en préparant à l'intégration, et en accompagnant chaque étape du placement.",
     "founderTitle": "Une fondatrice qui connaît les deux rives",
-    "founderBody": "Ayant grandi entre l'Allemagne et le Cameroun, notre fondatrice comprend à la fois les exigences du marché du travail allemand et les aspirations des talents camerounais. Karriere Fähre — littéralement « le ferry des carrières » — porte ce pont dans son nom.",
+    "founderBody": "Ayant grandi entre l'Allemagne et le Cameroun, notre fondatrice comprend à la fois les exigences du marché du travail allemand et les aspirations des talents camerounais. Karriere Fähre (littéralement « le ferry des carrières ») porte ce pont dans son nom.",
     "valuesTitle": "Nos valeurs",
     "value1": "Transparence à chaque étape du parcours",
     "value2": "Exigence dans la formation et la préparation des candidats",
@@ -74,7 +74,7 @@
     "step3Body": "Consultez les profils de candidats qualifiés, prêts pour un placement ou en formation.",
     "step4Title": "4. Accompagnement",
     "step4Body": "Nous vous accompagnons dans les démarches jusqu'à l'arrivée du candidat en Allemagne.",
-    "cta": "Déposer un besoin en main-d'œuvre"
+    "cta": "Déposer un besoin"
   },
   "partners": {
     "title": "Nos partenaires",
@@ -109,18 +109,18 @@
     "title": "Nos parcours de formation",
     "subtitle": "Deux parcours selon votre niveau actuel d'allemand.",
     "fastTrack": {
-      "title": "Fast Track — Niveau B2 déjà acquis",
+      "title": "Fast Track : niveau B2 déjà acquis",
       "body": "Si vous avez déjà le niveau B2 en allemand (certifié ou non), vous pouvez rejoindre directement notre vivier de candidats pour un placement auprès de nos entreprises partenaires en Allemagne."
     },
     "fullTraining": {
-      "title": "Full Training — Parcours complet A1 → B2",
+      "title": "Full Training : parcours complet A1 → B2",
       "body": "Un parcours intensif structuré selon le cadre européen commun de référence (CECR), sur environ 10 mois, plus 1 mois de préparation à l'examen.",
       "levelsTitle": "Étapes du parcours",
-      "levelA1": "A1 — 2 mois, 160 heures",
-      "levelA2": "A2 — 2 mois, 160 heures",
-      "levelB1": "B1 — 3 mois, 240 heures",
-      "levelB2": "B2 — 3 mois, 240 heures",
-      "levelPrep": "Préparation à l'examen — 1 mois, 80 heures",
+      "levelA1": "A1 (2 mois, 160 heures)",
+      "levelA2": "A2 (2 mois, 160 heures)",
+      "levelB1": "B1 (3 mois, 240 heures)",
+      "levelB2": "B2 (3 mois, 240 heures)",
+      "levelPrep": "Préparation à l'examen (1 mois, 80 heures)",
       "examsTitle": "Examens reconnus",
       "examsBody": "Goethe-Institut, TELC, ÖSD, TestDaF (niveau B2). Examen B1 disponible sur demande.",
       "includesTitle": "L'inscription comprend",

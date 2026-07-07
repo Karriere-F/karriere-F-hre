@@ -29,7 +29,7 @@ export default async function ImprintPage() {
             <dd className="text-brand-black">
               {WHATSAPP_NUMBERS.map((n, i) => (
                 <span key={n.e164}>
-                  {i > 0 && " — "}
+                  {i > 0 && " / "}
                   <a
                     href={whatsappLink(n.e164)}
                     target="_blank"

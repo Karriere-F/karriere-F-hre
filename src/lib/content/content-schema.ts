@@ -40,7 +40,7 @@ export const CONTENT_PAGES = {
     ],
   },
   servicesCandidates: {
-    label: "Services — Candidats",
+    label: "Services : Candidats",
     path: "/services/candidates",
     fields: [
       "title",
@@ -56,7 +56,7 @@ export const CONTENT_PAGES = {
     ],
   },
   servicesCompanies: {
-    label: "Services — Entreprises",
+    label: "Services : Entreprises",
     path: "/services/companies",
     fields: [
       "title",

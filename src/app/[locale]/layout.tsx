@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Karriere Fähre",
-  description: "Agence de placement international — Douala, Cameroun",
+  description: "Agence de placement international, Douala, Cameroun",
 };
 
 export default async function LocaleLayout({

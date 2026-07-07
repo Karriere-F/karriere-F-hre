@@ -25,7 +25,7 @@ export function WhatsAppButton() {
             rel="noopener noreferrer"
             className="text-sm text-brand-ink hover:text-brand-good transition-colors duration-150"
           >
-            {n.label} — +{n.e164.replace(/(\d{3})(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5")}
+            {n.label}: +{n.e164.replace(/(\d{3})(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5")}
           </a>
         ))}
       </div>
