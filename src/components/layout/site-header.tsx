@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "../../../i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
 
@@ -8,11 +9,16 @@ export async function SiteHeader() {
   return (
     <header className="bg-brand-black text-brand-white sticky top-0 z-40 border-b border-brand-black-2">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between gap-4">
+        <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="text-lg font-serif tracking-wide">
-              Karriere <span className="text-brand-gold">Fähre</span>
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Karriere Fähre"
+              width={1536}
+              height={1024}
+              priority
+              className="h-14 w-auto"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 text-sm">
