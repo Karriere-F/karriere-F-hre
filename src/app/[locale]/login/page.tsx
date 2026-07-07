@@ -15,6 +15,9 @@ const loginSchema = z.object({
 });
 type LoginInput = z.infer<typeof loginSchema>;
 
+const inputClass =
+  "w-full rounded border border-brand-grid px-3 py-2 text-sm transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20";
+
 export default function LoginPage() {
   const t = useTranslations("login");
   const router = useRouter();
@@ -54,7 +57,7 @@ export default function LoginPage() {
   return (
     <div>
       <PageHero title={t("title")} />
-      <div className="mx-auto max-w-md px-4 sm:px-6 lg:px-8 py-16">
+      <div className="animate-fade-up mx-auto max-w-md px-4 sm:px-6 lg:px-8 py-16">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
@@ -63,7 +66,7 @@ export default function LoginPage() {
             <input
               type="email"
               {...register("email")}
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
+              className={inputClass}
             />
             {errors.email && (
               <p className="text-xs text-red-600 mt-1">{errors.email.message}</p>
@@ -76,7 +79,7 @@ export default function LoginPage() {
             <input
               type="password"
               {...register("password")}
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
+              className={inputClass}
             />
             {errors.password && (
               <p className="text-xs text-red-600 mt-1">{errors.password.message}</p>
@@ -88,7 +91,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors disabled:opacity-50"
+            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150 disabled:opacity-50"
           >
             {t("submit")}
           </button>

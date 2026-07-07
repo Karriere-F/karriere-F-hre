@@ -14,7 +14,7 @@ export default async function GermanCoursesPage() {
     <div>
       <PageHero title={content.title} subtitle={content.subtitle} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 sm:grid-cols-2">
-        <div className="rounded-lg border border-brand-grid p-8">
+        <div className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid p-8">
           <h2 className="text-xl font-serif text-brand-black mb-3">
             {content.fastTrack.title}
           </h2>
@@ -23,13 +23,16 @@ export default async function GermanCoursesPage() {
           </p>
           <Link
             href="/candidate/signup"
-            className="inline-flex rounded-full border border-brand-gold px-5 py-2.5 text-brand-gold hover:bg-brand-gold hover:text-brand-white transition-colors text-sm"
+            className="press inline-flex rounded-full border border-brand-gold px-5 py-2.5 text-brand-gold hover:bg-brand-gold hover:text-brand-white transition-colors duration-150 text-sm"
           >
             {content.fastTrack.title}
           </Link>
         </div>
 
-        <div className="rounded-lg border border-brand-grid p-8">
+        <div
+          className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid p-8"
+          style={{ animationDelay: "80ms" }}
+        >
           <h2 className="text-xl font-serif text-brand-black mb-3">
             {content.fullTraining.title}
           </h2>

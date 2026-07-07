@@ -19,7 +19,7 @@ export default async function PartnersPage() {
         </p>
         <Link
           href="/employer/signup"
-          className="inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors"
+          className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
         >
           {t("cta")}
         </Link>

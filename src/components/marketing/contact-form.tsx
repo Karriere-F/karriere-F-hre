@@ -7,6 +7,9 @@ import { useTranslations } from "next-intl";
 import { contactSchema, type ContactInput } from "@/lib/validation/contact-schema";
 import { submitContactMessage } from "@/actions/contact-actions";
 
+const inputClass =
+  "w-full rounded border border-brand-grid px-3 py-2 text-sm transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20";
+
 export function ContactForm() {
   const t = useTranslations("contact");
   const [success, setSuccess] = useState(false);
@@ -26,7 +29,7 @@ export function ContactForm() {
   };
 
   if (success) {
-    return <p className="text-brand-good font-medium">{t("formSuccess")}</p>;
+    return <p className="animate-fade-up text-brand-good font-medium">{t("formSuccess")}</p>;
   }
 
   return (
@@ -35,10 +38,7 @@ export function ContactForm() {
         <label className="block text-sm text-brand-ink-secondary mb-1">
           {t("formName")}
         </label>
-        <input
-          {...register("name")}
-          className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
-        />
+        <input {...register("name")} className={inputClass} />
         {errors.name && (
           <p className="text-xs text-red-600 mt-1">{errors.name.message}</p>
         )}
@@ -47,11 +47,7 @@ export function ContactForm() {
         <label className="block text-sm text-brand-ink-secondary mb-1">
           {t("formEmail")}
         </label>
-        <input
-          type="email"
-          {...register("email")}
-          className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
-        />
+        <input type="email" {...register("email")} className={inputClass} />
         {errors.email && (
           <p className="text-xs text-red-600 mt-1">{errors.email.message}</p>
         )}
@@ -60,11 +56,7 @@ export function ContactForm() {
         <label className="block text-sm text-brand-ink-secondary mb-1">
           {t("formMessage")}
         </label>
-        <textarea
-          {...register("message")}
-          rows={5}
-          className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
-        />
+        <textarea {...register("message")} rows={5} className={inputClass} />
         {errors.message && (
           <p className="text-xs text-red-600 mt-1">{errors.message.message}</p>
         )}
@@ -72,7 +64,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="self-start rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors disabled:opacity-50"
+        className="press self-start rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150 disabled:opacity-50"
       >
         {t("formSubmit")}
       </button>

@@ -13,26 +13,36 @@ export default async function HomePage() {
     <div className="flex flex-col">
       <section className="bg-brand-black text-brand-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-start gap-6">
-          <h1 className="text-4xl sm:text-5xl font-serif max-w-2xl leading-tight">
+          <h1
+            className="animate-fade-up text-4xl sm:text-5xl font-serif max-w-2xl leading-tight"
+          >
             {content.heroTitle}
           </h1>
-          <p className="max-w-xl text-brand-white/80 text-lg">{content.heroSubtitle}</p>
-          <div className="flex flex-wrap gap-4 mt-2">
+          <p
+            className="animate-fade-up max-w-xl text-brand-white/80 text-lg"
+            style={{ animationDelay: "80ms" }}
+          >
+            {content.heroSubtitle}
+          </p>
+          <div
+            className="animate-fade-up flex flex-wrap gap-4 mt-2"
+            style={{ animationDelay: "160ms" }}
+          >
             <Link
               href="/candidate/signup"
-              className="rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors"
+              className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
             >
               {t("ctaCandidate")}
             </Link>
             <Link
               href="/employer/signup"
-              className="rounded-full border border-brand-gold px-6 py-3 text-brand-gold-light hover:bg-brand-gold hover:text-brand-black transition-colors"
+              className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-light hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
             >
               {t("ctaEmployer")}
             </Link>
             <Link
               href="/book-appointment"
-              className="rounded-full border border-brand-white/30 px-6 py-3 text-brand-white/80 hover:border-brand-gold-light hover:text-brand-gold-light transition-colors"
+              className="press rounded-full border border-brand-white/30 px-6 py-3 text-brand-white/80 hover:border-brand-gold-light hover:text-brand-gold-light transition-colors duration-150"
             >
               {t("ctaBook")}
             </Link>
@@ -45,7 +55,11 @@ export default async function HomePage() {
           <h2 className="text-2xl font-serif text-brand-ink mb-10">{content.whyTitle}</h2>
           <div className="grid gap-8 sm:grid-cols-3">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="rounded-lg bg-brand-white border border-brand-grid p-6">
+              <div
+                key={i}
+                className="lift-on-hover animate-fade-up rounded-lg bg-brand-white border border-brand-grid p-6"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
                 <h3 className="text-brand-gold font-semibold mb-2">
                   {content[`why${i}Title` as "why1Title"]}
                 </h3>
@@ -64,7 +78,7 @@ export default async function HomePage() {
           <div className="grid gap-8 sm:grid-cols-2">
             <Link
               href="/german-courses"
-              className="rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors block"
+              className="lift-on-hover rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors duration-150 block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
                 {content.fastTrackTitle}
@@ -75,7 +89,7 @@ export default async function HomePage() {
             </Link>
             <Link
               href="/german-courses"
-              className="rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors block"
+              className="lift-on-hover rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors duration-150 block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
                 {content.fullTrainingTitle}

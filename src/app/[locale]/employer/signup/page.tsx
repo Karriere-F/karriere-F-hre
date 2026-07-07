@@ -12,6 +12,9 @@ import {
 } from "@/lib/validation/employer-schema";
 import { PageHero } from "@/components/marketing/page-hero";
 
+const inputClass =
+  "w-full rounded border border-brand-grid px-3 py-2 text-sm transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20";
+
 export default function EmployerSignupPage() {
   const t = useTranslations("employer.signup");
   const tLogin = useTranslations("login");
@@ -49,7 +52,7 @@ export default function EmployerSignupPage() {
   return (
     <div>
       <PageHero title={t("title")} />
-      <div className="mx-auto max-w-md px-4 sm:px-6 lg:px-8 py-16">
+      <div className="animate-fade-up mx-auto max-w-md px-4 sm:px-6 lg:px-8 py-16">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
@@ -57,7 +60,7 @@ export default function EmployerSignupPage() {
             </label>
             <input
               {...register("fullName")}
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
+              className={inputClass}
             />
             {errors.fullName && (
               <p className="text-xs text-red-600 mt-1">{errors.fullName.message}</p>
@@ -69,7 +72,7 @@ export default function EmployerSignupPage() {
             </label>
             <input
               {...register("companyName")}
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
+              className={inputClass}
             />
             {errors.companyName && (
               <p className="text-xs text-red-600 mt-1">{errors.companyName.message}</p>
@@ -82,7 +85,7 @@ export default function EmployerSignupPage() {
             <input
               type="email"
               {...register("email")}
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
+              className={inputClass}
             />
             {errors.email && (
               <p className="text-xs text-red-600 mt-1">{errors.email.message}</p>
@@ -95,7 +98,7 @@ export default function EmployerSignupPage() {
             <input
               type="password"
               {...register("password")}
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
+              className={inputClass}
             />
             {errors.password && (
               <p className="text-xs text-red-600 mt-1">{errors.password.message}</p>
@@ -107,7 +110,7 @@ export default function EmployerSignupPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors disabled:opacity-50"
+            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150 disabled:opacity-50"
           >
             {t("title")}
           </button>

@@ -4,6 +4,9 @@ import { useEffect, useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 import { getAvailableSlots, bookAppointment } from "@/actions/appointment-actions";
 
+const inputClass =
+  "w-full rounded border border-brand-grid px-3 py-2 text-sm transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20";
+
 function todayIso() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
@@ -48,7 +51,7 @@ export function BookingForm() {
   };
 
   if (success) {
-    return <p className="text-brand-good font-medium">{t("success")}</p>;
+    return <p className="animate-fade-up text-brand-good font-medium">{t("success")}</p>;
   }
 
   return (
@@ -62,7 +65,7 @@ export function BookingForm() {
           value={date}
           min={todayIso()}
           onChange={(e) => setDate(e.target.value)}
-          className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
+          className={inputClass}
         />
       </div>
 
@@ -71,12 +74,13 @@ export function BookingForm() {
           {t("selectTime")}
         </label>
         <div className="grid grid-cols-4 gap-2">
-          {slots.map((slot) => (
+          {slots.map((slot, i) => (
             <button
               key={slot}
               type="button"
               onClick={() => setSelectedTime(slot)}
-              className={`text-sm rounded px-2 py-1.5 border transition-colors ${
+              style={{ animationDelay: `${Math.min(i, 10) * 25}ms` }}
+              className={`press animate-fade-up text-sm rounded px-2 py-1.5 border transition-colors duration-150 ${
                 selectedTime === slot
                   ? "bg-brand-gold text-brand-black border-brand-gold"
                   : "border-brand-grid text-brand-ink-secondary hover:border-brand-gold"
@@ -92,51 +96,35 @@ export function BookingForm() {
       </div>
 
       {selectedTime && (
-        <form action={onSubmit} className="flex flex-col gap-4">
+        <form action={onSubmit} className="animate-fade-up flex flex-col gap-4">
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
               {t("formName")}
             </label>
-            <input
-              name="fullName"
-              required
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
-            />
+            <input name="fullName" required className={inputClass} />
           </div>
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
               {t("formEmail")}
             </label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
-            />
+            <input type="email" name="email" required className={inputClass} />
           </div>
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
               {t("formPhone")}
             </label>
-            <input
-              name="phone"
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
-            />
+            <input name="phone" className={inputClass} />
           </div>
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
               {t("formNotes")}
             </label>
-            <textarea
-              name="notes"
-              rows={3}
-              className="w-full rounded border border-brand-grid px-3 py-2 text-sm"
-            />
+            <textarea name="notes" rows={3} className={inputClass} />
           </div>
           {error && <p className="text-sm text-red-600">{error}</p>}
           <button
             type="submit"
-            className="self-start rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors"
+            className="press self-start rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
             {t("submit")}
           </button>

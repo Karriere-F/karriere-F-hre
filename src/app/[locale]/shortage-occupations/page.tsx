@@ -32,11 +32,12 @@ export default async function ShortageOccupationsPage() {
       <PageHero title={content.title} subtitle={content.subtitle} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {(occupations ?? []).map((occ) => (
+          {(occupations ?? []).map((occ, i) => (
             <Link
               key={occ.id}
               href={`/shortage-occupations/${occ.slug}`}
-              className="rounded-lg border border-brand-grid p-6 hover:border-brand-gold transition-colors"
+              className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid p-6 hover:border-brand-gold transition-colors duration-150"
+              style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
             >
               <span className="text-xs uppercase tracking-wide text-brand-gold">
                 {occ.category}

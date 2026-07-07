@@ -38,7 +38,7 @@ export default async function ShortageOccupationDetailPage({
   return (
     <div>
       <PageHero title={occ[TITLE_COLUMN[locale]]} />
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="animate-fade-up mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
         <span className="text-xs uppercase tracking-wide text-brand-gold">
           {occ.category}
         </span>
