@@ -2,18 +2,23 @@ import { getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { StepList } from "@/components/marketing/step-list";
 import { Link } from "../../../../../i18n/navigation";
+import { getPageContent } from "@/lib/content/get-page-content";
+import type frMessages from "../../../../../messages/fr.json";
+
+type ServicesCandidatesContent = typeof frMessages.servicesCandidates;
 
 export default async function ServicesCandidatesPage() {
   const t = await getTranslations("servicesCandidates");
+  const content = await getPageContent<ServicesCandidatesContent>("servicesCandidates");
 
   const steps = [1, 2, 3, 4].map((i) => ({
-    title: t(`step${i}Title` as "step1Title"),
-    body: t(`step${i}Body` as "step1Body"),
+    title: content[`step${i}Title` as "step1Title"],
+    body: content[`step${i}Body` as "step1Body"],
   }));
 
   return (
     <div>
-      <PageHero title={t("title")} subtitle={t("subtitle")} />
+      <PageHero title={content.title} subtitle={content.subtitle} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <StepList steps={steps} />
         <div className="mt-10">

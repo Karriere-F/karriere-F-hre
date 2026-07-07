@@ -1,17 +1,22 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
+import { getPageContent } from "@/lib/content/get-page-content";
+import type frMessages from "../../../messages/fr.json";
+
+type HomeContent = typeof frMessages.home;
 
 export default async function HomePage() {
   const t = await getTranslations("home");
+  const content = await getPageContent<HomeContent>("home");
 
   return (
     <div className="flex flex-col">
       <section className="bg-brand-black text-brand-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-start gap-6">
           <h1 className="text-4xl sm:text-5xl font-serif max-w-2xl leading-tight">
-            {t("heroTitle")}
+            {content.heroTitle}
           </h1>
-          <p className="max-w-xl text-brand-white/80 text-lg">{t("heroSubtitle")}</p>
+          <p className="max-w-xl text-brand-white/80 text-lg">{content.heroSubtitle}</p>
           <div className="flex flex-wrap gap-4 mt-2">
             <Link
               href="/candidate/signup"
@@ -37,15 +42,15 @@ export default async function HomePage() {
 
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-2xl font-serif text-brand-ink mb-10">{t("whyTitle")}</h2>
+          <h2 className="text-2xl font-serif text-brand-ink mb-10">{content.whyTitle}</h2>
           <div className="grid gap-8 sm:grid-cols-3">
             {[1, 2, 3].map((i) => (
               <div key={i} className="rounded-lg bg-brand-white border border-brand-grid p-6">
                 <h3 className="text-brand-gold font-semibold mb-2">
-                  {t(`why${i}Title` as "why1Title")}
+                  {content[`why${i}Title` as "why1Title"]}
                 </h3>
                 <p className="text-brand-ink-secondary text-sm leading-relaxed">
-                  {t(`why${i}Body` as "why1Body")}
+                  {content[`why${i}Body` as "why1Body"]}
                 </p>
               </div>
             ))}
@@ -55,17 +60,17 @@ export default async function HomePage() {
 
       <section className="bg-brand-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-2xl font-serif text-brand-ink mb-10">{t("tracksTitle")}</h2>
+          <h2 className="text-2xl font-serif text-brand-ink mb-10">{content.tracksTitle}</h2>
           <div className="grid gap-8 sm:grid-cols-2">
             <Link
               href="/german-courses"
               className="rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
-                {t("fastTrackTitle")}
+                {content.fastTrackTitle}
               </h3>
               <p className="text-brand-ink-secondary text-sm leading-relaxed">
-                {t("fastTrackBody")}
+                {content.fastTrackBody}
               </p>
             </Link>
             <Link
@@ -73,10 +78,10 @@ export default async function HomePage() {
               className="rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
-                {t("fullTrainingTitle")}
+                {content.fullTrainingTitle}
               </h3>
               <p className="text-brand-ink-secondary text-sm leading-relaxed">
-                {t("fullTrainingBody")}
+                {content.fullTrainingBody}
               </p>
             </Link>
           </div>

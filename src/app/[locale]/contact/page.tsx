@@ -2,13 +2,18 @@ import { getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { ContactForm } from "@/components/marketing/contact-form";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
+import { getPageContent } from "@/lib/content/get-page-content";
+import type frMessages from "../../../../messages/fr.json";
+
+type ContactContent = typeof frMessages.contact;
 
 export default async function ContactPage() {
   const t = await getTranslations("contact");
+  const content = await getPageContent<ContactContent>("contact");
 
   return (
     <div>
-      <PageHero title={t("title")} subtitle={t("subtitle")} />
+      <PageHero title={content.title} subtitle={content.subtitle} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 grid gap-12 sm:grid-cols-2">
         <ContactForm />
         <div>
@@ -27,8 +32,8 @@ export default async function ContactPage() {
               </li>
             ))}
           </ul>
-          <h2 className="text-brand-gold font-semibold text-sm mb-2">{t("office")}</h2>
-          <p className="text-sm text-brand-ink-secondary">{t("officeLocation")}</p>
+          <h2 className="text-brand-gold font-semibold text-sm mb-2">{content.office}</h2>
+          <p className="text-sm text-brand-ink-secondary">{content.officeLocation}</p>
         </div>
       </div>
     </div>

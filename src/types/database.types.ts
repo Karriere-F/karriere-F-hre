@@ -144,6 +144,40 @@ export interface Database {
         Update: Partial<Database["public"]["Tables"]["appointments"]["Row"]>;
         Relationships: [];
       };
+      page_content: {
+        Row: {
+          id: string;
+          page_key: string;
+          field_key: string;
+          value_fr: string | null;
+          value_de: string | null;
+          value_en: string | null;
+          updated_at: string;
+          updated_by: string | null;
+        };
+        Insert: Partial<Database["public"]["Tables"]["page_content"]["Row"]> & {
+          page_key: string;
+          field_key: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["page_content"]["Row"]>;
+        Relationships: [];
+      };
+      site_images: {
+        Row: {
+          slot_key: string;
+          storage_path: string | null;
+          alt_fr: string | null;
+          alt_de: string | null;
+          alt_en: string | null;
+          updated_at: string;
+          updated_by: string | null;
+        };
+        Insert: Partial<Database["public"]["Tables"]["site_images"]["Row"]> & {
+          slot_key: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["site_images"]["Row"]>;
+        Relationships: [];
+      };
     };
     Views: {
       candidates_public_view: {

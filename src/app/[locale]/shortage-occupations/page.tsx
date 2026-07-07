@@ -1,8 +1,12 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getLocale } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Link } from "../../../../i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { getPageContent } from "@/lib/content/get-page-content";
 import type { Locale } from "../../../../i18n/routing";
+import type frMessages from "../../../../messages/fr.json";
+
+type ShortageOccupationsContent = typeof frMessages.shortageOccupations;
 
 const TITLE_COLUMN: Record<Locale, "title_fr" | "title_de" | "title_en"> = {
   fr: "title_fr",
@@ -11,7 +15,7 @@ const TITLE_COLUMN: Record<Locale, "title_fr" | "title_de" | "title_en"> = {
 };
 
 export default async function ShortageOccupationsPage() {
-  const t = await getTranslations("shortageOccupations");
+  const content = await getPageContent<ShortageOccupationsContent>("shortageOccupations");
   const locale = (await getLocale()) as Locale;
   const supabase = await createClient();
 
@@ -25,7 +29,7 @@ export default async function ShortageOccupationsPage() {
 
   return (
     <div>
-      <PageHero title={t("title")} subtitle={t("subtitle")} />
+      <PageHero title={content.title} subtitle={content.subtitle} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {(occupations ?? []).map((occ) => (

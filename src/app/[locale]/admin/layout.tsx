@@ -46,6 +46,18 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         >
           Rendez-vous
         </Link>
+        <Link
+          href="/admin/content"
+          className="text-brand-ink-secondary hover:text-brand-gold"
+        >
+          Contenu des pages
+        </Link>
+        <Link
+          href="/admin/images"
+          className="text-brand-ink-secondary hover:text-brand-gold"
+        >
+          Images
+        </Link>
       </nav>
       <div className="flex-1 min-w-0">{children}</div>
     </div>
