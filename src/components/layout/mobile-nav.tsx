@@ -5,11 +5,11 @@ import { Link } from "../../../i18n/navigation";
 
 export function MobileNav({
   links,
-  bookAppointmentLabel,
+  postulerLabel,
   loginLabel,
 }: {
   links: { href: string; label: string }[];
-  bookAppointmentLabel: string;
+  postulerLabel: string;
   loginLabel: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -62,11 +62,11 @@ export function MobileNav({
             </Link>
           ))}
           <Link
-            href="/book-appointment"
+            href="/postuler"
             onClick={() => setOpen(false)}
-            className="mt-2 rounded-full border border-brand-gold px-3 py-2 text-center text-brand-gold-text"
+            className="mt-2 rounded-full bg-brand-gold px-3 py-2 text-center text-brand-black font-medium"
           >
-            {bookAppointmentLabel}
+            {postulerLabel}
           </Link>
           <Link
             href="/login"

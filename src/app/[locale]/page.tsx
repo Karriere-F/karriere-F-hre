@@ -46,13 +46,13 @@ export default async function HomePage() {
               style={{ animationDelay: "160ms" }}
             >
               <Link
-                href="/candidate/signup"
+                href="/candidats"
                 className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
               >
                 {t("ctaCandidate")}
               </Link>
               <Link
-                href="/employer/signup"
+                href="/entreprises"
                 className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
               >
                 {t("ctaEmployer")}
@@ -91,7 +91,7 @@ export default async function HomePage() {
                 return (
                   <Link
                     key={cat}
-                    href="/shortage-occupations"
+                    href="/candidats/metiers"
                     className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid bg-brand-card p-6 flex items-start gap-4"
                     style={{ animationDelay: `${i * 50}ms` }}
                   >
@@ -111,7 +111,7 @@ export default async function HomePage() {
               })}
             </div>
             <Link
-              href="/shortage-occupations"
+              href="/candidats/metiers"
               className="press inline-flex mt-10 rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
             >
               {content.categoriesCta}
@@ -149,7 +149,7 @@ export default async function HomePage() {
           <h2 className="text-2xl font-serif text-brand-ink mb-10">{content.tracksTitle}</h2>
           <div className="grid gap-8 sm:grid-cols-2">
             <Link
-              href="/german-courses"
+              href="/candidats/formations"
               className="lift-on-hover rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors duration-150 block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
@@ -160,7 +160,7 @@ export default async function HomePage() {
               </p>
             </Link>
             <Link
-              href="/german-courses"
+              href="/candidats/formations"
               className="lift-on-hover rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors duration-150 block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
@@ -181,7 +181,7 @@ export default async function HomePage() {
           <p className="text-brand-white/80 max-w-lg">{content.finalCtaSubtitle}</p>
           <div className="flex flex-wrap justify-center gap-4 mt-2">
             <Link
-              href="/candidate/signup"
+              href="/postuler"
               className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
             >
               {t("ctaCandidate")}

@@ -1,29 +1,45 @@
 {
   "nav": {
-    "home": "Accueil",
-    "about": "À propos",
-    "servicesCompanies": "Entreprises",
-    "servicesCandidates": "Candidats",
-    "germanCourses": "Cours d'allemand",
-    "shortageOccupations": "Métiers en pénurie",
-    "partners": "Partenaires",
-    "contact": "Contact",
-    "bookAppointment": "Prendre rendez-vous",
-    "candidateSpace": "Espace candidat",
-    "employerSpace": "Espace employeur",
+    "candidats": "Candidats",
+    "entreprises": "Entreprises",
+    "formations": "Formations",
+    "aPropos": "À propos",
+    "blog": "Blog",
+    "postuler": "Postuler",
     "login": "Connexion"
   },
   "footer": {
     "tagline": "Agence de placement international",
     "rights": "Tous droits réservés.",
+    "columnCandidats": "Candidats",
+    "columnEntreprises": "Entreprises",
+    "columnCompany": "Karriere Fähre",
+    "columnLegal": "Infos légales",
+    "linkHowItWorks": "Comment ça marche",
+    "linkEligibility": "Suis-je éligible ?",
+    "linkOccupations": "Métiers qui recrutent",
+    "linkTrainings": "Nos formations",
+    "linkFaq": "FAQ",
+    "linkEntServices": "Nos services",
+    "linkEntProfiles": "Profils & secteurs",
+    "linkEntProcess": "Notre processus",
+    "linkEntPartner": "Devenir partenaire",
+    "linkEntRequest": "Demande de main-d'œuvre",
+    "linkAbout": "À propos",
+    "linkFounder": "La fondatrice",
+    "linkPartners": "Nos partenaires",
+    "linkTestimonials": "Témoignages",
+    "linkBlog": "Blog",
     "imprint": "Mentions légales",
-    "privacy": "Confidentialité"
+    "privacy": "Confidentialité",
+    "terms": "CGU",
+    "contactDouala": "Contact : Douala"
   },
   "home": {
     "heroTitle": "Votre passerelle vers une carrière en Allemagne",
     "heroSubtitle": "Karriere Fähre accompagne les talents camerounais et d'Afrique centrale vers des emplois qualifiés en Allemagne, et aide les entreprises allemandes à trouver la main-d'œuvre qui leur manque.",
-    "ctaCandidate": "Je suis candidat",
-    "ctaEmployer": "Je suis une entreprise",
+    "ctaCandidate": "Je veux partir",
+    "ctaEmployer": "Je recrute",
     "ctaBook": "Prendre rendez-vous",
     "whyTitle": "Pourquoi Karriere Fähre ?",
     "why1Title": "Une double expertise",
@@ -44,8 +60,8 @@
     "finalCtaTitle": "Prêt à commencer votre parcours ?",
     "finalCtaSubtitle": "Que vous soyez candidat ou entreprise, la première étape ne prend que quelques minutes."
   },
-  "about": {
-    "title": "À propos de Karriere Fähre",
+  "aPropos": {
+    "title": "Qui sommes-nous",
     "intro": "Karriere Fähre est une agence de placement international basée à Douala, au Cameroun, fondée par une entrepreneure franco-germano-camerounaise.",
     "missionTitle": "Notre mission",
     "missionBody": "Construire un pont fiable entre les talents d'Afrique centrale et les entreprises allemandes confrontées à une pénurie de main-d'œuvre qualifiée, en formant, en préparant à l'intégration, et en accompagnant chaque étape du placement.",
@@ -54,10 +70,35 @@
     "valuesTitle": "Nos valeurs",
     "value1": "Transparence à chaque étape du parcours",
     "value2": "Exigence dans la formation et la préparation des candidats",
-    "value3": "Partenariat de confiance avec les entreprises allemandes"
+    "value3": "Partenariat de confiance avec les entreprises allemandes",
+    "linkHistoire": "Notre histoire",
+    "linkMethode": "Notre méthode",
+    "linkPartenaires": "Nos partenaires"
   },
-  "servicesCandidates": {
-    "title": "Services pour les candidats",
+  "aProposHistoire": {
+    "title": "Notre histoire",
+    "subtitle": "Comment Karriere Fähre est née d'un parcours entre deux pays.",
+    "section1Title": "Deux pays, un même regard",
+    "section1Body": "Notre fondatrice a grandi entre l'Allemagne et le Cameroun. Elle a vu, d'un côté, des entreprises allemandes peiner à recruter dans des métiers essentiels, et de l'autre, des talents camerounais prêts à se former et à s'investir, mais sans pont fiable pour les relier.",
+    "section2Title": "Une agence pensée pour durer",
+    "section2Body": "Karriere Fähre est née à Douala pour combler ce manque : une structure qui connaît de l'intérieur les exigences allemandes (langue, reconnaissance des qualifications, cadre légal) et les réalités camerounaises (formation, accompagnement, confiance).",
+    "section3Title": "Le nom, un symbole",
+    "section3Body": "« Fähre » signifie « ferry » en allemand. Comme un ferry relie deux rives, Karriere Fähre relie deux marchés du travail, un candidat et une entreprise à la fois."
+  },
+  "aProposMethode": {
+    "title": "Notre méthode",
+    "subtitle": "Un accompagnement structuré, du premier contact jusqu'à l'intégration en Allemagne.",
+    "section1Title": "Évaluer avant de promettre",
+    "section1Body": "Chaque candidat passe un test de positionnement en allemand avant toute promesse de placement. On oriente vers le bon parcours, Fast Track ou Full Training, plutôt que de faire des promesses irréalistes.",
+    "section2Title": "Former sérieusement",
+    "section2Body": "Nos cours d'allemand suivent le cadre européen commun de référence (CECR), avec préparation aux examens reconnus par les employeurs et les autorités allemandes.",
+    "section3Title": "Vérifier avant de mettre en relation",
+    "section3Body": "Côté entreprises, chaque compte est validé par notre équipe avant tout accès au vivier de candidats. Côté candidats, chaque profil est vérifié avant d'être rendu visible aux entreprises partenaires.",
+    "section4Title": "Accompagner jusqu'au bout",
+    "section4Body": "Notre rôle ne s'arrête pas à la signature du contrat : nous restons disponibles pendant les démarches de visa et les premiers pas en Allemagne."
+  },
+  "candidats": {
+    "title": "Comprendre & s'orienter",
     "subtitle": "Un accompagnement complet, du premier test de niveau jusqu'au placement en Allemagne.",
     "step1Title": "1. Évaluation",
     "step1Body": "Test de positionnement en allemand pour déterminer votre parcours : Fast Track ou Full Training.",
@@ -67,52 +108,79 @@
     "step3Body": "Intégration à notre vivier de candidats et mise en relation avec nos entreprises partenaires en Allemagne.",
     "step4Title": "4. Intégration",
     "step4Body": "Accompagnement à l'intégration avant et après le départ.",
+    "cta": "Commencer mon inscription",
+    "linkComment": "Comment ça marche",
+    "linkEligibilite": "Suis-je éligible ?",
+    "linkDiplomes": "Reconnaissance des diplômes",
+    "linkVivre": "Vivre en Allemagne",
+    "linkFaq": "FAQ candidats",
+    "linkFormations": "Nos formations",
+    "linkMetiers": "Métiers qui recrutent"
+  },
+  "candidatsComment": {
+    "title": "Comment ça marche",
+    "subtitle": "Quatre étapes claires entre votre inscription et votre départ pour l'Allemagne.",
+    "section1Title": "1. Vous vous inscrivez",
+    "section1Body": "Vous créez votre profil candidat et passez un test de positionnement en allemand, oral et écrit.",
+    "section2Title": "2. Vous suivez le bon parcours",
+    "section2Body": "Déjà B2 : vous rejoignez directement notre vivier de candidats. En dessous de B2 : vous suivez notre formation complète A1 → B2.",
+    "section3Title": "3. Vous êtes mis en relation",
+    "section3Body": "Une fois votre profil validé par notre équipe, il devient visible par nos entreprises partenaires allemandes en recherche de vos compétences.",
+    "section4Title": "4. Vous êtes accompagné jusqu'au départ",
+    "section4Body": "Démarches de visa, préparation au départ, premiers pas en Allemagne : nous restons à vos côtés à chaque étape.",
     "cta": "Commencer mon inscription"
   },
-  "servicesCompanies": {
-    "title": "Services pour les entreprises",
-    "subtitle": "Trouvez la main-d'œuvre qualifiée qui vous manque, avec un accompagnement de bout en bout.",
-    "step1Title": "1. Exprimez votre besoin",
-    "step1Body": "Décrivez le poste, le nombre de personnes recherchées et le niveau d'allemand requis.",
-    "step2Title": "2. Validation",
-    "step2Body": "Notre équipe valide votre compte entreprise pour garantir la qualité de notre réseau.",
-    "step3Title": "3. Accès au vivier",
-    "step3Body": "Consultez les profils de candidats qualifiés, prêts pour un placement ou en formation.",
-    "step4Title": "4. Accompagnement",
-    "step4Body": "Nous vous accompagnons dans les démarches jusqu'à l'arrivée du candidat en Allemagne.",
-    "cta": "Déposer un besoin"
+  "candidatsEligibilite": {
+    "title": "Suis-je éligible ?",
+    "subtitle": "Les critères de base pour rejoindre le programme Karriere Fähre.",
+    "section1Title": "Âge et motivation",
+    "section1Body": "Être majeur et avoir un projet sérieux de formation ou d'installation professionnelle en Allemagne.",
+    "section2Title": "Niveau d'allemand",
+    "section2Body": "Aucun niveau requis à l'inscription. Si vous êtes déjà B2, vous accédez directement au placement. Sinon, vous suivez notre parcours de formation A1 → B2.",
+    "section3Title": "Qualification ou métier visé",
+    "section3Body": "Nous accompagnons en priorité les métiers en pénurie en Allemagne : santé, hôtellerie-restauration, BTP, industrie et technique, informatique. Une qualification ou une expérience dans l'un de ces domaines est un atout.",
+    "section4Title": "Un doute ? Faites le point avec nous",
+    "section4Body": "Le meilleur moyen de savoir où vous en êtes reste un échange direct. Prenez rendez-vous, c'est sans engagement.",
+    "cta": "Prendre rendez-vous"
   },
-  "partners": {
-    "title": "Nos partenaires",
-    "subtitle": "Karriere Fähre collabore avec des entreprises allemandes actives dans les secteurs en pénurie de main-d'œuvre, et cherche continuellement à élargir ce réseau.",
-    "growingBody": "Notre réseau de partenaires est en pleine croissance. Vous êtes une entreprise allemande à la recherche de main-d'œuvre qualifiée ?",
-    "cta": "Devenez partenaire"
+  "candidatsDiplomes": {
+    "title": "Reconnaissance des diplômes",
+    "subtitle": "Ce qu'il faut savoir avant de faire reconnaître votre qualification en Allemagne.",
+    "section1Title": "Pourquoi la reconnaissance compte",
+    "section1Body": "Pour de nombreux métiers réglementés (santé notamment), l'Allemagne exige que votre diplôme soit reconnu équivalent à un diplôme allemand avant que vous puissiez exercer.",
+    "section2Title": "Une démarche que nous accompagnons",
+    "section2Body": "Nous vous aidons à identifier l'autorité compétente selon votre métier et votre Land de destination, à réunir les bons documents, et à anticiper d'éventuelles mesures de mise à niveau.",
+    "section3Title": "Ce que cela implique pour votre calendrier",
+    "section3Body": "La reconnaissance peut prendre plusieurs mois. Nous l'intégrons dès le départ dans votre parcours pour éviter les mauvaises surprises côté visa et côté employeur."
   },
-  "legal": {
-    "imprintTitle": "Mentions légales",
-    "companyNameLabel": "Raison sociale",
-    "companyName": "Karriere Fähre SARL",
-    "legalFormLabel": "Forme juridique",
-    "legalForm": "Société à Responsabilité Limitée (SARL)",
-    "registrationLabel": "Numéro d'immatriculation (RCCM)",
-    "registrationValue": "CM-DLA-01-2025-B13-00504",
-    "registeredAddressLabel": "Adresse du siège social",
-    "registeredAddressValue": "Bonamoussadi, immeuble en face de Super U, 3e étage, Douala, Cameroun",
-    "postalAddressLabel": "Adresse postale",
-    "postalAddressValue": "BP 8414, Douala, Cameroun",
-    "contactLabel": "Contact",
-    "imprintNote": "Responsable de publication : la direction de Karriere Fähre SARL.",
-    "privacyTitle": "Politique de confidentialité",
-    "privacyPlaceholder": "Cette page sera complétée avec la politique de confidentialité complète (RGPD) avant la mise en ligne définitive."
+  "candidatsVivre": {
+    "title": "Vivre en Allemagne",
+    "subtitle": "À quoi s'attendre une fois sur place, au-delà du travail.",
+    "section1Title": "Le logement et les premiers pas",
+    "section1Body": "Inscription auprès des autorités locales (Anmeldung), ouverture d'un compte bancaire, recherche de logement : nous vous préparons à ces démarches avant le départ.",
+    "section2Title": "La langue au quotidien",
+    "section2Body": "Le niveau B2 vous permet de travailler, mais la vie quotidienne continue de demander des efforts. Nous encourageons la poursuite de l'apprentissage une fois sur place.",
+    "section3Title": "Un accompagnement qui continue",
+    "section3Body": "Karriere Fähre reste joignable après votre arrivée pour vous orienter en cas de question ou de difficulté d'intégration."
   },
-  "shortageOccupations": {
-    "title": "Métiers en pénurie en Allemagne",
-    "subtitle": "Un aperçu des secteurs où les entreprises allemandes recherchent activement de la main-d'œuvre qualifiée.",
-    "filterCategory": "Catégorie",
-    "allCategories": "Toutes les catégories"
+  "candidatsFaq": {
+    "title": "FAQ candidats",
+    "subtitle": "Les questions les plus fréquentes sur notre programme.",
+    "q1": "Karriere Fähre est-elle payante pour les candidats ?",
+    "a1": "Les modalités varient selon le parcours (Fast Track ou Full Training). Contactez-nous ou prenez rendez-vous pour en discuter précisément.",
+    "q2": "Dois-je déjà parler allemand pour m'inscrire ?",
+    "a2": "Non. Vous pouvez vous inscrire sans aucune base et suivre notre parcours complet A1 → B2.",
+    "q3": "Combien de temps dure le parcours complet ?",
+    "a3": "Environ 10 mois de formation (A1 à B2), plus 1 mois de préparation à l'examen.",
+    "q4": "Karriere Fähre garantit-elle un emploi en Allemagne ?",
+    "a4": "Nous garantissons un accompagnement sérieux et une mise en relation avec des entreprises partenaires réelles. Le placement final dépend aussi de votre profil et de l'entretien avec l'employeur.",
+    "q5": "Puis-je choisir mon secteur d'activité ?",
+    "a5": "Nous priorisons les métiers en pénurie en Allemagne (santé, hôtellerie-restauration, BTP, industrie, informatique). Votre profil et vos préférences sont pris en compte dans la mise en relation.",
+    "q6": "Que se passe-t-il si je n'atteins pas le niveau B2 ?",
+    "a6": "Nous adaptons le rythme de formation. Le placement n'intervient qu'une fois le niveau requis atteint."
   },
-  "germanCourses": {
-    "title": "Nos parcours de formation",
+  "formations": {
+    "title": "Nos formations",
     "subtitle": "Deux parcours selon votre niveau actuel d'allemand.",
     "fastTrack": {
       "title": "Fast Track : niveau B2 déjà acquis",
@@ -136,7 +204,184 @@
       "includes4": "Accès à l'espace étudiant en ligne",
       "includes5": "Accès à la cafétéria"
     },
-    "pricingNote": "Pour connaître les tarifs et modalités de paiement, contactez-nous ou prenez rendez-vous."
+    "pricingNote": "Pour connaître les tarifs et modalités de paiement, contactez-nous ou prenez rendez-vous.",
+    "linkAllemand": "Cours d'allemand A1 → B2",
+    "linkExamens": "Préparation aux examens",
+    "linkIntegration": "Mise à niveau & intégration"
+  },
+  "formationsAllemand": {
+    "title": "Cours d'allemand A1 → B2",
+    "subtitle": "Le cœur de notre parcours Full Training, du tout premier cours jusqu'au niveau requis pour travailler en Allemagne.",
+    "section1Title": "Un parcours structuré par niveau",
+    "section1Body": "A1, A2, B1, puis B2 : chaque niveau suit le cadre européen commun de référence (CECR), avec des groupes progressant ensemble sur environ 2 à 3 mois par palier.",
+    "section2Title": "Des cours pensés pour le contexte allemand",
+    "section2Body": "Au-delà de la grammaire et du vocabulaire, nos cours intègrent le vocabulaire professionnel et les situations de la vie quotidienne en Allemagne.",
+    "section3Title": "Un cadre sérieux",
+    "section3Body": "Dossier étudiant, badge, présence suivie : nous préparons nos candidats avec la même rigueur que celle attendue dans un cadre professionnel allemand.",
+    "cta": "Commencer mon inscription"
+  },
+  "formationsExamens": {
+    "title": "Préparation aux examens",
+    "subtitle": "Goethe-Institut, TELC, ÖSD, TestDaF : des examens reconnus par les employeurs et les autorités allemandes.",
+    "section1Title": "Pourquoi un examen certifié",
+    "section1Body": "Un certificat reconnu (niveau B2 le plus souvent) est généralement exigé pour le visa de travail et rassure directement l'employeur sur votre niveau réel.",
+    "section2Title": "Un mois dédié, en fin de parcours",
+    "section2Body": "Après votre niveau B2, un mois de préparation intensive (environ 80 heures) vous prépare spécifiquement au format de l'examen choisi.",
+    "section3Title": "Le choix de l'examen",
+    "section3Body": "Nous vous orientons vers l'examen le plus adapté à votre métier cible et à la région allemande visée. Un examen de niveau B1 est disponible sur demande."
+  },
+  "formationsIntegration": {
+    "title": "Mise à niveau & intégration",
+    "subtitle": "Se préparer à vivre et travailler en Allemagne, pas seulement à y parler la langue.",
+    "section1Title": "Au-delà de la langue",
+    "section1Body": "Codes professionnels allemands, ponctualité, communication avec un employeur, vie administrative : nous abordons ces sujets pendant la formation, pas seulement au moment du départ.",
+    "section2Title": "Pour les niveaux intermédiaires",
+    "section2Body": "Si vous avez déjà un niveau d'allemand mais des lacunes ciblées, nous proposons une mise à niveau plus courte plutôt que de reprendre tout le parcours A1 → B2.",
+    "section3Title": "Le lien avec l'intégration sur place",
+    "section3Body": "Cette préparation se poursuit après votre arrivée en Allemagne, en lien avec notre accompagnement post-départ."
+  },
+  "entreprises": {
+    "title": "Recruter avec nous",
+    "subtitle": "Trouvez la main-d'œuvre qualifiée qui vous manque, avec un accompagnement de bout en bout.",
+    "step1Title": "1. Exprimez votre besoin",
+    "step1Body": "Décrivez le poste, le nombre de personnes recherchées et le niveau d'allemand requis.",
+    "step2Title": "2. Validation",
+    "step2Body": "Notre équipe valide votre compte entreprise pour garantir la qualité de notre réseau.",
+    "step3Title": "3. Accès au vivier",
+    "step3Body": "Consultez les profils de candidats qualifiés, prêts pour un placement ou en formation.",
+    "step4Title": "4. Accompagnement",
+    "step4Body": "Nous vous accompagnons dans les démarches jusqu'à l'arrivée du candidat en Allemagne.",
+    "cta": "Déposer un besoin",
+    "linkServices": "Nos services de recrutement",
+    "linkProfils": "Profils & secteurs disponibles",
+    "linkPartenariat": "Devenir entreprise partenaire",
+    "linkProcessus": "Notre processus",
+    "linkPourquoi": "Pourquoi l'Afrique centrale",
+    "linkDemande": "Demande de main-d'œuvre"
+  },
+  "entreprisesServices": {
+    "title": "Nos services de recrutement",
+    "subtitle": "Un service de placement pensé pour les entreprises allemandes confrontées à la pénurie de main-d'œuvre.",
+    "section1Title": "Sourcing ciblé",
+    "section1Body": "Nous recrutons et formons des candidats camerounais et d'Afrique centrale dans les métiers où vos besoins sont les plus forts : santé, hôtellerie-restauration, BTP, industrie, informatique.",
+    "section2Title": "Candidats déjà de niveau B2",
+    "section2Body": "Chaque profil que vous consultez a passé un test de positionnement en allemand. Vous ne recevez pas de candidatures hors niveau.",
+    "section3Title": "Accompagnement administratif",
+    "section3Body": "Nous vous conseillons sur le cadre légal du recrutement de main-d'œuvre étrangère qualifiée (Fachkräfteeinwanderungsgesetz) et les démarches de visa côté candidat.",
+    "cta": "Déposer un besoin"
+  },
+  "entreprisesProfils": {
+    "title": "Profils & secteurs disponibles",
+    "subtitle": "Un vivier de candidats formés et vérifiés, classés par secteur en pénurie.",
+    "section1Title": "Cinq secteurs prioritaires",
+    "section1Body": "Santé & soins, hôtellerie-restauration, BTP & artisanat, industrie & technique, informatique : les secteurs où la demande allemande est la plus forte et où nous concentrons notre formation.",
+    "section2Title": "Des profils vérifiés",
+    "section2Body": "Chaque candidat visible dans notre vivier a été validé par notre équipe : identité, niveau d'allemand, qualification ou expérience dans le métier visé.",
+    "section3Title": "Accès réservé aux entreprises validées",
+    "section3Body": "L'accès aux profils complets (CV, coordonnées) est réservé aux comptes entreprise validés par notre équipe, pour protéger la confidentialité de nos candidats.",
+    "cta": "Créer mon compte entreprise"
+  },
+  "entreprisesPartenariat": {
+    "title": "Devenir entreprise partenaire",
+    "subtitle": "Karriere Fähre collabore avec des entreprises allemandes actives dans les secteurs en pénurie de main-d'œuvre, et cherche continuellement à élargir ce réseau.",
+    "section1Title": "Un partenariat, pas un simple recrutement ponctuel",
+    "section1Body": "Devenir partenaire, c'est construire avec nous une relation durable : anticiper vos besoins récurrents en main-d'œuvre plutôt que de les traiter au coup par coup.",
+    "section2Title": "Ce que nous attendons d'un partenaire",
+    "section2Body": "Un cadre légal clair, un accueil sérieux du candidat à son arrivée, et une communication transparente sur les postes proposés.",
+    "section3Title": "Ce que vous obtenez en retour",
+    "section3Body": "Un accès prioritaire à notre vivier de candidats, un accompagnement dédié, et une visibilité sur notre page partenaires.",
+    "cta": "Devenir partenaire"
+  },
+  "entreprisesProcessus": {
+    "title": "Notre processus",
+    "subtitle": "Visa, Fachkräfteeinwanderungsgesetz (loi sur l'immigration de main-d'œuvre qualifiée) : le cadre légal expliqué simplement.",
+    "section1Title": "Le cadre légal allemand",
+    "section1Body": "Depuis la loi sur l'immigration de main-d'œuvre qualifiée (Fachkräfteeinwanderungsgesetz), l'Allemagne a facilité l'entrée de travailleurs qualifiés non-européens dans les métiers en tension. Nous suivons cette évolution pour sécuriser chaque dossier.",
+    "section2Title": "Le parcours visa côté candidat",
+    "section2Body": "Contrat de travail, reconnaissance de qualification si nécessaire, rendez-vous consulaire : nous accompagnons le candidat à chaque étape, en lien avec vous.",
+    "section3Title": "Votre rôle, notre rôle",
+    "section3Body": "Vous fournissez le contrat et les informations sur le poste. Nous coordonnons la préparation du dossier et le suivi jusqu'à l'arrivée du candidat."
+  },
+  "entreprisesPourquoi": {
+    "title": "Pourquoi l'Afrique centrale",
+    "subtitle": "Ce que les candidats camerounais et d'Afrique centrale apportent à votre entreprise.",
+    "section1Title": "Une population jeune et motivée",
+    "section1Body": "Le Cameroun et l'Afrique centrale comptent une population jeune, en recherche de formation qualifiante et d'opportunités professionnelles sérieuses à l'international.",
+    "section2Title": "Un lien historique et linguistique",
+    "section2Body": "Le francophonie et, pour certains candidats, un premier contact avec l'allemand facilitent l'apprentissage rapide de la langue jusqu'au niveau B2.",
+    "section3Title": "Une agence qui connaît les deux rives",
+    "section3Body": "Fondée par une entrepreneure franco-germano-camerounaise, Karriere Fähre sélectionne et forme ses candidats en connaissant précisément vos attentes en tant qu'employeur allemand."
+  },
+  "entreprisesDemande": {
+    "title": "Demande de main-d'œuvre",
+    "subtitle": "Exprimez votre besoin, nous nous occupons du reste.",
+    "section1Title": "Ce qu'il nous faut de votre part",
+    "section1Body": "Le poste concerné, le nombre de personnes recherchées, le niveau d'allemand requis et, si possible, votre calendrier de recrutement.",
+    "section2Title": "Ce que nous faisons ensuite",
+    "section2Body": "Nous validons votre compte entreprise, puis vous donnons accès aux profils correspondants dans notre vivier de candidats.",
+    "section3Title": "Un premier échange sans engagement",
+    "section3Body": "Si vous préférez en parler avant de créer un compte, prenez simplement rendez-vous avec notre équipe.",
+    "cta": "Déposer un besoin",
+    "ctaSecondary": "Prendre rendez-vous"
+  },
+  "partenaires": {
+    "title": "Nos partenaires",
+    "subtitle": "Karriere Fähre collabore avec des entreprises allemandes actives dans les secteurs en pénurie de main-d'œuvre, et cherche continuellement à élargir ce réseau.",
+    "growingBody": "Notre réseau de partenaires est en pleine croissance. Vous êtes une entreprise allemande à la recherche de main-d'œuvre qualifiée ?",
+    "cta": "Devenez partenaire"
+  },
+  "temoignages": {
+    "title": "Témoignages",
+    "subtitle": "Les parcours de nos candidats et le retour de nos entreprises partenaires.",
+    "placeholder": "Nos premiers témoignages arrivent bientôt. Vous êtes un candidat placé ou une entreprise partenaire et souhaitez partager votre expérience ? Contactez-nous."
+  },
+  "postuler": {
+    "title": "Postuler",
+    "subtitle": "La première étape vers votre carrière en Allemagne ne prend que quelques minutes.",
+    "body": "Créez votre profil candidat, passez le test de positionnement en allemand, et notre équipe vous oriente vers le bon parcours : Fast Track si vous êtes déjà B2, Full Training sinon.",
+    "cta": "Créer mon profil candidat",
+    "ctaSecondary": "J'ai des questions avant de commencer"
+  },
+  "cgu": {
+    "title": "Conditions générales d'utilisation",
+    "placeholder": "Cette page sera complétée avec les conditions générales d'utilisation complètes avant la mise en ligne définitive.",
+    "section1Title": "Objet",
+    "section1Body": "Les présentes conditions régissent l'utilisation du site et des services de mise en relation proposés par Karriere Fähre SARL entre candidats et entreprises partenaires.",
+    "section2Title": "Comptes utilisateurs",
+    "section2Body": "L'inscription en tant que candidat ou entreprise implique l'exactitude des informations fournies. Les comptes entreprise sont soumis à validation par notre équipe avant tout accès au vivier de candidats.",
+    "section3Title": "Responsabilité",
+    "section3Body": "Karriere Fähre accompagne la mise en relation et la formation, mais ne peut garantir un résultat de placement, celui-ci dépendant également de la décision finale de l'employeur."
+  },
+  "legal": {
+    "imprintTitle": "Mentions légales",
+    "companyNameLabel": "Raison sociale",
+    "companyName": "Karriere Fähre SARL",
+    "legalFormLabel": "Forme juridique",
+    "legalForm": "Société à Responsabilité Limitée (SARL)",
+    "registrationLabel": "Numéro d'immatriculation (RCCM)",
+    "registrationValue": "CM-DLA-01-2025-B13-00504",
+    "registeredAddressLabel": "Adresse du siège social",
+    "registeredAddressValue": "Bonamoussadi, immeuble en face de Super U, 3e étage, Douala, Cameroun",
+    "postalAddressLabel": "Adresse postale",
+    "postalAddressValue": "BP 8414, Douala, Cameroun",
+    "contactLabel": "Contact",
+    "imprintNote": "Responsable de publication : la direction de Karriere Fähre SARL.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyPlaceholder": "Cette page sera complétée avec la politique de confidentialité complète (RGPD) avant la mise en ligne définitive."
+  },
+  "metiers": {
+    "title": "Métiers en pénurie en Allemagne",
+    "subtitle": "Un aperçu des secteurs où les entreprises allemandes recherchent activement de la main-d'œuvre qualifiée.",
+    "filterCategory": "Catégorie",
+    "allCategories": "Toutes les catégories",
+    "backToCategories": "Toutes les catégories de métiers"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Conseils, actualités et retours d'expérience pour travailler et vivre en Allemagne.",
+    "categoriesTitle": "Catégories",
+    "comingSoon": "Nos premiers articles arrivent bientôt.",
+    "backToBlog": "Retour au blog"
   },
   "contact": {
     "title": "Contactez-nous",

@@ -10,29 +10,32 @@ export function PageHero({
   image?: string;
 }) {
   return (
-    <section className="relative bg-brand-black text-brand-white overflow-hidden">
-      {image && (
-        <>
-          <Image
-            src={image}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-45"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/85 to-brand-black/40" />
-        </>
-      )}
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-        <h1 className="animate-fade-up text-3xl sm:text-4xl font-serif max-w-2xl">{title}</h1>
-        {subtitle && (
-          <p
-            className="animate-fade-up mt-4 max-w-xl text-brand-white/80"
-            style={{ animationDelay: "80ms" }}
+    <section className="bg-brand-card">
+      <div
+        className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid gap-10 items-center ${
+          image ? "lg:grid-cols-[3fr_2fr]" : ""
+        }`}
+      >
+        <div>
+          <h1 className="animate-fade-up text-3xl sm:text-4xl font-serif text-brand-black max-w-2xl">
+            {title}
+          </h1>
+          {subtitle && (
+            <p
+              className="animate-fade-up mt-4 max-w-xl text-brand-ink-secondary"
+              style={{ animationDelay: "80ms" }}
+            >
+              {subtitle}
+            </p>
+          )}
+        </div>
+        {image && (
+          <div
+            className="animate-fade-up relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg"
+            style={{ animationDelay: "120ms" }}
           >
-            {subtitle}
-          </p>
+            <Image src={image} alt="" fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+          </div>
         )}
       </div>
     </section>

@@ -8,13 +8,11 @@ export async function SiteHeader() {
   const t = await getTranslations("nav");
 
   const links = [
-    { href: "/about", label: t("about") },
-    { href: "/services/candidates", label: t("servicesCandidates") },
-    { href: "/services/companies", label: t("servicesCompanies") },
-    { href: "/german-courses", label: t("germanCourses") },
-    { href: "/shortage-occupations", label: t("shortageOccupations") },
-    { href: "/partners", label: t("partners") },
-    { href: "/contact", label: t("contact") },
+    { href: "/candidats", label: t("candidats") },
+    { href: "/entreprises", label: t("entreprises") },
+    { href: "/candidats/formations", label: t("formations") },
+    { href: "/a-propos", label: t("aPropos") },
+    { href: "/blog", label: t("blog") },
   ];
 
   return (
@@ -46,23 +44,19 @@ export async function SiteHeader() {
 
           <div className="flex items-center gap-3">
             <Link
-              href="/book-appointment"
-              className="press hidden md:inline-flex items-center rounded-full border border-brand-gold px-3 py-1.5 text-sm text-brand-gold-text hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
-            >
-              {t("bookAppointment")}
-            </Link>
-            <Link
               href="/login"
               className="hidden lg:inline text-sm text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150"
             >
               {t("login")}
             </Link>
+            <Link
+              href="/postuler"
+              className="press hidden md:inline-flex items-center rounded-full bg-brand-gold px-4 py-2 text-sm text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            >
+              {t("postuler")}
+            </Link>
             <LocaleSwitcher />
-            <MobileNav
-              links={links}
-              bookAppointmentLabel={t("bookAppointment")}
-              loginLabel={t("login")}
-            />
+            <MobileNav links={links} postulerLabel={t("postuler")} loginLabel={t("login")} />
           </div>
         </div>
       </div>

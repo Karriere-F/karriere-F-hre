@@ -95,7 +95,7 @@ export async function upsertOccupation(input: {
   if (error) return { ok: false as const, error: "save_failed" };
 
   revalidatePath("/admin/occupations");
-  revalidatePath("/shortage-occupations");
+  revalidatePath("/candidats/metiers");
   return { ok: true as const };
 }
 
