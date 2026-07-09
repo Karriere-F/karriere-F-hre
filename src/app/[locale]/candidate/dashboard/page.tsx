@@ -19,17 +19,17 @@ export default async function CandidateDashboardPage() {
       <h1 className="text-2xl font-serif text-brand-black mb-6">{t("title")}</h1>
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="rounded-lg border border-brand-grid p-5">
-          <p className="text-xs uppercase text-brand-ink-muted">Parcours</p>
+          <p className="text-xs uppercase text-brand-ink-muted">{t("pathLabel")}</p>
           <p className="text-brand-black font-medium mt-1">
             {candidate?.needs_training ? "Full Training" : "Fast Track"}
           </p>
         </div>
         <div className="rounded-lg border border-brand-grid p-5">
-          <p className="text-xs uppercase text-brand-ink-muted">Statut</p>
+          <p className="text-xs uppercase text-brand-ink-muted">{t("statusLabel")}</p>
           <p className="text-brand-black font-medium mt-1">{candidate?.status}</p>
         </div>
         <div className="rounded-lg border border-brand-grid p-5">
-          <p className="text-xs uppercase text-brand-ink-muted">Niveau d&apos;allemand</p>
+          <p className="text-xs uppercase text-brand-ink-muted">{t("germanLevelLabel")}</p>
           <p className="text-brand-black font-medium mt-1 uppercase">
             {candidate?.german_level}
           </p>
@@ -37,10 +37,10 @@ export default async function CandidateDashboardPage() {
       </div>
       <div className="flex gap-4 mt-6">
         <Link href="/candidate/profile" className="text-brand-gold-text hover:underline text-sm">
-          Modifier mon profil
+          {t("editProfileLink")}
         </Link>
         <Link href="/candidate/cv" className="text-brand-gold-text hover:underline text-sm">
-          Gérer mon CV
+          {t("manageCvLink")}
         </Link>
       </div>
     </div>

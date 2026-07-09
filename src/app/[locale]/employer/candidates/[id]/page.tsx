@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { requireValidatedEmployer } from "@/lib/auth/require-validated-employer";
 import { createClient } from "@/lib/supabase/server";
 
@@ -8,6 +9,7 @@ export default async function EmployerCandidateDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const t = await getTranslations("employer");
   await requireValidatedEmployer();
   const supabase = await createClient();
 
@@ -35,7 +37,7 @@ export default async function EmployerCandidateDetailPage({
         {candidate.german_level}
       </h1>
       <p className="text-sm text-brand-ink-muted mb-6">
-        {candidate.years_experience ?? 0} an(s) d&apos;expérience
+        {candidate.years_experience ?? 0} {t("candidates.yearsExperienceSuffix")}
       </p>
       {candidate.bio && (
         <p className="text-brand-ink-secondary leading-relaxed mb-6">{candidate.bio}</p>
@@ -47,10 +49,10 @@ export default async function EmployerCandidateDetailPage({
           rel="noopener noreferrer"
           className="inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors"
         >
-          Télécharger le CV
+          {t("candidateDetail.downloadCv")}
         </a>
       ) : (
-        <p className="text-sm text-brand-ink-muted">CV non disponible.</p>
+        <p className="text-sm text-brand-ink-muted">{t("candidateDetail.cvNotAvailable")}</p>
       )}
     </div>
   );

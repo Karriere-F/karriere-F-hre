@@ -1,8 +1,10 @@
+import { getTranslations } from "next-intl/server";
 import { requireValidatedEmployer } from "@/lib/auth/require-validated-employer";
 import { createClient } from "@/lib/supabase/server";
 import { Link } from "../../../../../i18n/navigation";
 
 export default async function EmployerRequestsPage() {
+  const t = await getTranslations("employer.requests");
   const current = await requireValidatedEmployer();
   const supabase = await createClient();
 
@@ -15,14 +17,12 @@ export default async function EmployerRequestsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-serif text-brand-black">
-          Mes besoins en main-d&apos;œuvre
-        </h1>
+        <h1 className="text-2xl font-serif text-brand-black">{t("title")}</h1>
         <Link
           href="/employer/requests/new"
           className="rounded-full bg-brand-gold px-5 py-2.5 text-brand-black font-medium hover:bg-brand-gold-light transition-colors text-sm"
         >
-          Nouveau besoin
+          {t("newButton")}
         </Link>
       </div>
 
@@ -36,13 +36,13 @@ export default async function EmployerRequestsPage() {
             <div>
               <p className="text-brand-black font-medium">{r.profession_title}</p>
               <p className="text-sm text-brand-ink-muted">
-                {r.headcount_needed} personne(s) — {r.status}
+                {r.headcount_needed} {t("headcountSuffix")} — {r.status}
               </p>
             </div>
           </Link>
         ))}
         {(!requests || requests.length === 0) && (
-          <p className="text-brand-ink-muted text-sm">Aucun besoin pour le moment.</p>
+          <p className="text-brand-ink-muted text-sm">{t("noneYet")}</p>
         )}
       </div>
     </div>

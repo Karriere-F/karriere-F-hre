@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useForm, type Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import {
   candidateProfileSchema,
   type CandidateProfileInput,
@@ -16,6 +17,7 @@ export function ProfileForm({
 }: {
   defaultValues: Partial<CandidateProfileInput>;
 }) {
+  const t = useTranslations("candidate.profile");
   const [success, setSuccess] = useState(false);
   const {
     register,
@@ -36,7 +38,7 @@ export function ProfileForm({
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 max-w-md">
       <div>
         <label className="block text-sm text-brand-ink-secondary mb-1">
-          Niveau d&apos;allemand
+          {t("germanLevelLabel")}
         </label>
         <select
           {...register("germanLevel")}
@@ -54,7 +56,7 @@ export function ProfileForm({
       </div>
       <div>
         <label className="block text-sm text-brand-ink-secondary mb-1">
-          Années d&apos;expérience
+          {t("yearsExperienceLabel")}
         </label>
         <input
           type="number"
@@ -63,7 +65,7 @@ export function ProfileForm({
         />
       </div>
       <div>
-        <label className="block text-sm text-brand-ink-secondary mb-1">Bio</label>
+        <label className="block text-sm text-brand-ink-secondary mb-1">{t("bioLabel")}</label>
         <textarea
           {...register("bio")}
           rows={5}
@@ -71,14 +73,14 @@ export function ProfileForm({
         />
       </div>
 
-      {success && <p className="text-sm text-brand-good">Profil mis à jour.</p>}
+      {success && <p className="text-sm text-brand-good">{t("updated")}</p>}
 
       <button
         type="submit"
         disabled={isSubmitting}
         className="self-start rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors disabled:opacity-50"
       >
-        Enregistrer
+        {t("save")}
       </button>
     </form>
   );

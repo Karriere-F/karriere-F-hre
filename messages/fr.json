@@ -409,14 +409,78 @@
     "noSlots": "Aucun créneau disponible ce jour-là."
   },
   "candidate": {
-    "signup": { "title": "Inscription candidat" },
+    "signup": {
+      "title": "Inscription candidat",
+      "fullNameLabel": "Nom complet",
+      "germanLevelLabel": "Votre niveau d'allemand",
+      "fastTrackOption": "Fast Track : j'ai déjà le niveau B2",
+      "fullTrainingOption": "Full Training : je débute ou niveau intermédiaire"
+    },
     "login": { "title": "Connexion candidat" },
-    "dashboard": { "title": "Mon espace candidat" }
+    "dashboard": {
+      "title": "Mon espace candidat",
+      "pathLabel": "Parcours",
+      "statusLabel": "Statut",
+      "germanLevelLabel": "Niveau d'allemand",
+      "editProfileLink": "Modifier mon profil",
+      "manageCvLink": "Gérer mon CV"
+    },
+    "profile": {
+      "title": "Mon profil",
+      "germanLevelLabel": "Niveau d'allemand",
+      "yearsExperienceLabel": "Années d'expérience",
+      "bioLabel": "Bio",
+      "updated": "Profil mis à jour.",
+      "save": "Enregistrer"
+    },
+    "cv": {
+      "title": "Mon CV",
+      "alreadyUploaded": "Un CV est déjà enregistré. Envoyez un nouveau fichier pour le remplacer.",
+      "upload": "Envoyer le CV (PDF, 5 Mo max)",
+      "success": "CV envoyé avec succès.",
+      "errorPrefix": "Erreur :"
+    }
   },
   "employer": {
-    "signup": { "title": "Inscription entreprise" },
+    "signup": {
+      "title": "Inscription entreprise",
+      "contactNameLabel": "Nom du contact",
+      "companyNameLabel": "Nom de l'entreprise"
+    },
     "login": { "title": "Connexion entreprise" },
-    "dashboard": { "title": "Mon espace entreprise" },
+    "dashboard": {
+      "title": "Mon espace entreprise",
+      "companyLabel": "Entreprise",
+      "openRequestsLabel": "Besoins ouverts",
+      "myRequestsLink": "Mes besoins en main-d'œuvre",
+      "candidatePoolLink": "Vivier de candidats"
+    },
+    "candidates": {
+      "title": "Vivier de candidats",
+      "yearsExperienceSuffix": "an(s) d'expérience",
+      "noneAvailable": "Aucun candidat disponible pour le moment."
+    },
+    "candidateDetail": {
+      "downloadCv": "Télécharger le CV",
+      "cvNotAvailable": "CV non disponible."
+    },
+    "requests": {
+      "title": "Mes besoins en main-d'œuvre",
+      "newButton": "Nouveau besoin",
+      "headcountSuffix": "personne(s)",
+      "noneYet": "Aucun besoin pour le moment.",
+      "statusLabel": "Statut",
+      "headcountLabel": "Nombre de personnes",
+      "germanLevelLabel": "Niveau d'allemand requis",
+      "descriptionLabel": "Description"
+    },
+    "requestForm": {
+      "professionLabel": "Poste / métier recherché",
+      "headcountLabel": "Nombre de personnes recherchées",
+      "germanLevelLabel": "Niveau d'allemand requis",
+      "descriptionLabel": "Description",
+      "submit": "Envoyer le besoin"
+    },
     "pending": {
       "title": "Compte en cours de validation",
       "body": "Merci pour votre inscription. Notre équipe examine votre dossier et validera votre accès sous peu."

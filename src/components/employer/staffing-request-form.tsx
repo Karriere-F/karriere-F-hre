@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useForm, type Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import {
   staffingRequestSchema,
   type StaffingRequestInput,
@@ -13,6 +14,7 @@ import { useRouter } from "../../../i18n/navigation";
 const LEVELS = ["none", "a1", "a2", "b1", "b2", "c1", "c2"] as const;
 
 export function StaffingRequestForm() {
+  const t = useTranslations("employer.requestForm");
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const {
@@ -37,7 +39,7 @@ export function StaffingRequestForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 max-w-md">
       <div>
         <label className="block text-sm text-brand-ink-secondary mb-1">
-          Poste / métier recherché
+          {t("professionLabel")}
         </label>
         <input
           {...register("professionTitle")}
@@ -49,7 +51,7 @@ export function StaffingRequestForm() {
       </div>
       <div>
         <label className="block text-sm text-brand-ink-secondary mb-1">
-          Nombre de personnes recherchées
+          {t("headcountLabel")}
         </label>
         <input
           type="number"
@@ -62,7 +64,7 @@ export function StaffingRequestForm() {
       </div>
       <div>
         <label className="block text-sm text-brand-ink-secondary mb-1">
-          Niveau d&apos;allemand requis
+          {t("germanLevelLabel")}
         </label>
         <select
           {...register("germanLevelRequired")}
@@ -76,7 +78,9 @@ export function StaffingRequestForm() {
         </select>
       </div>
       <div>
-        <label className="block text-sm text-brand-ink-secondary mb-1">Description</label>
+        <label className="block text-sm text-brand-ink-secondary mb-1">
+          {t("descriptionLabel")}
+        </label>
         <textarea
           {...register("description")}
           rows={5}
@@ -91,7 +95,7 @@ export function StaffingRequestForm() {
         disabled={isSubmitting}
         className="self-start rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors disabled:opacity-50"
       >
-        Envoyer le besoin
+        {t("submit")}
       </button>
     </form>
   );

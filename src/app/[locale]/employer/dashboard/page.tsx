@@ -19,20 +19,20 @@ export default async function EmployerDashboardPage() {
       <h1 className="text-2xl font-serif text-brand-black mb-6">{t("title")}</h1>
       <div className="grid gap-4 sm:grid-cols-2 mb-8">
         <div className="rounded-lg border border-brand-grid p-5">
-          <p className="text-xs uppercase text-brand-ink-muted">Entreprise</p>
+          <p className="text-xs uppercase text-brand-ink-muted">{t("companyLabel")}</p>
           <p className="text-brand-black font-medium mt-1">{current.employer.company_name}</p>
         </div>
         <div className="rounded-lg border border-brand-grid p-5">
-          <p className="text-xs uppercase text-brand-ink-muted">Besoins ouverts</p>
+          <p className="text-xs uppercase text-brand-ink-muted">{t("openRequestsLabel")}</p>
           <p className="text-brand-black font-medium mt-1">{openRequests ?? 0}</p>
         </div>
       </div>
       <div className="flex gap-4">
         <Link href="/employer/requests" className="text-brand-gold-text hover:underline text-sm">
-          Mes besoins en main-d&apos;œuvre
+          {t("myRequestsLink")}
         </Link>
         <Link href="/employer/candidates" className="text-brand-gold-text hover:underline text-sm">
-          Vivier de candidats
+          {t("candidatePoolLink")}
         </Link>
       </div>
     </div>

@@ -55,7 +55,9 @@ export default function CandidateSignupPage() {
       <div className="animate-fade-up mx-auto max-w-md px-4 sm:px-6 lg:px-8 py-16">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div>
-            <label className="block text-sm text-brand-ink-secondary mb-1">Nom complet</label>
+            <label className="block text-sm text-brand-ink-secondary mb-1">
+              {t("fullNameLabel")}
+            </label>
             <input
               {...register("fullName")}
               className={inputClass}
@@ -92,16 +94,16 @@ export default function CandidateSignupPage() {
           </div>
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-2">
-              Votre niveau d&apos;allemand
+              {t("germanLevelLabel")}
             </label>
             <div className="flex flex-col gap-2 text-sm">
               <label className="flex items-center gap-2">
                 <input type="radio" value="false" {...register("needsTraining")} />
-                Fast Track : j&apos;ai déjà le niveau B2
+                {t("fastTrackOption")}
               </label>
               <label className="flex items-center gap-2">
                 <input type="radio" value="true" {...register("needsTraining")} defaultChecked />
-                Full Training : je débute ou niveau intermédiaire
+                {t("fullTrainingOption")}
               </label>
             </div>
           </div>

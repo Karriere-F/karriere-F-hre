@@ -409,14 +409,78 @@
     "noSlots": "An diesem Tag sind keine Termine verfügbar."
   },
   "candidate": {
-    "signup": { "title": "Kandidatenregistrierung" },
+    "signup": {
+      "title": "Kandidatenregistrierung",
+      "fullNameLabel": "Vollständiger Name",
+      "germanLevelLabel": "Ihr Deutschniveau",
+      "fastTrackOption": "Fast Track: Ich habe bereits Niveau B2",
+      "fullTrainingOption": "Full Training: Ich fange an oder habe ein mittleres Niveau"
+    },
     "login": { "title": "Kandidatenanmeldung" },
-    "dashboard": { "title": "Mein Kandidatenbereich" }
+    "dashboard": {
+      "title": "Mein Kandidatenbereich",
+      "pathLabel": "Weg",
+      "statusLabel": "Status",
+      "germanLevelLabel": "Deutschniveau",
+      "editProfileLink": "Mein Profil bearbeiten",
+      "manageCvLink": "Meinen Lebenslauf verwalten"
+    },
+    "profile": {
+      "title": "Mein Profil",
+      "germanLevelLabel": "Deutschniveau",
+      "yearsExperienceLabel": "Jahre Erfahrung",
+      "bioLabel": "Über mich",
+      "updated": "Profil aktualisiert.",
+      "save": "Speichern"
+    },
+    "cv": {
+      "title": "Mein Lebenslauf",
+      "alreadyUploaded": "Ein Lebenslauf ist bereits gespeichert. Laden Sie eine neue Datei hoch, um ihn zu ersetzen.",
+      "upload": "Lebenslauf hochladen (PDF, max. 5 MB)",
+      "success": "Lebenslauf erfolgreich gesendet.",
+      "errorPrefix": "Fehler:"
+    }
   },
   "employer": {
-    "signup": { "title": "Unternehmensregistrierung" },
+    "signup": {
+      "title": "Unternehmensregistrierung",
+      "contactNameLabel": "Name des Ansprechpartners",
+      "companyNameLabel": "Firmenname"
+    },
     "login": { "title": "Unternehmensanmeldung" },
-    "dashboard": { "title": "Mein Unternehmensbereich" },
+    "dashboard": {
+      "title": "Mein Unternehmensbereich",
+      "companyLabel": "Unternehmen",
+      "openRequestsLabel": "Offene Bedarfe",
+      "myRequestsLink": "Mein Personalbedarf",
+      "candidatePoolLink": "Kandidatenpool"
+    },
+    "candidates": {
+      "title": "Kandidatenpool",
+      "yearsExperienceSuffix": "Jahr(e) Erfahrung",
+      "noneAvailable": "Derzeit sind keine Kandidaten verfügbar."
+    },
+    "candidateDetail": {
+      "downloadCv": "Lebenslauf herunterladen",
+      "cvNotAvailable": "Lebenslauf nicht verfügbar."
+    },
+    "requests": {
+      "title": "Mein Personalbedarf",
+      "newButton": "Neuer Bedarf",
+      "headcountSuffix": "Person(en)",
+      "noneYet": "Noch kein Bedarf gemeldet.",
+      "statusLabel": "Status",
+      "headcountLabel": "Anzahl der Personen",
+      "germanLevelLabel": "Erforderliches Deutschniveau",
+      "descriptionLabel": "Beschreibung"
+    },
+    "requestForm": {
+      "professionLabel": "Gesuchte Stelle / Beruf",
+      "headcountLabel": "Anzahl gesuchter Personen",
+      "germanLevelLabel": "Erforderliches Deutschniveau",
+      "descriptionLabel": "Beschreibung",
+      "submit": "Bedarf senden"
+    },
     "pending": {
       "title": "Konto wird geprüft",
       "body": "Vielen Dank für Ihre Registrierung. Unser Team prüft Ihre Unterlagen und schaltet Ihren Zugang in Kürze frei."

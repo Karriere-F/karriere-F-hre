@@ -56,7 +56,7 @@ export default function EmployerSignupPage() {
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
-              Nom du contact
+              {t("contactNameLabel")}
             </label>
             <input
               {...register("fullName")}
@@ -68,7 +68,7 @@ export default function EmployerSignupPage() {
           </div>
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
-              Nom de l&apos;entreprise
+              {t("companyNameLabel")}
             </label>
             <input
               {...register("companyName")}

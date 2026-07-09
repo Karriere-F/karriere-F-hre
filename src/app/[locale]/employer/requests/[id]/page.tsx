@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { requireValidatedEmployer } from "@/lib/auth/require-validated-employer";
 import { createClient } from "@/lib/supabase/server";
 
@@ -8,6 +9,7 @@ export default async function StaffingRequestDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const t = await getTranslations("employer.requests");
   const current = await requireValidatedEmployer();
   const supabase = await createClient();
 
@@ -27,21 +29,23 @@ export default async function StaffingRequestDetailPage({
       <h1 className="text-2xl font-serif text-brand-black mb-2">
         {request.profession_title}
       </h1>
-      <p className="text-sm text-brand-ink-muted mb-6">Statut : {request.status}</p>
+      <p className="text-sm text-brand-ink-muted mb-6">
+        {t("statusLabel")} : {request.status}
+      </p>
       <dl className="grid gap-4 text-sm">
         <div>
-          <dt className="text-brand-ink-muted">Nombre de personnes</dt>
+          <dt className="text-brand-ink-muted">{t("headcountLabel")}</dt>
           <dd className="text-brand-black">{request.headcount_needed}</dd>
         </div>
         <div>
-          <dt className="text-brand-ink-muted">Niveau d&apos;allemand requis</dt>
+          <dt className="text-brand-ink-muted">{t("germanLevelLabel")}</dt>
           <dd className="text-brand-black uppercase">
             {request.german_level_required}
           </dd>
         </div>
         {request.description && (
           <div>
-            <dt className="text-brand-ink-muted">Description</dt>
+            <dt className="text-brand-ink-muted">{t("descriptionLabel")}</dt>
             <dd className="text-brand-black">{request.description}</dd>
           </div>
         )}

@@ -409,14 +409,78 @@
     "noSlots": "No slots available on this day."
   },
   "candidate": {
-    "signup": { "title": "Candidate Sign Up" },
+    "signup": {
+      "title": "Candidate Sign Up",
+      "fullNameLabel": "Full name",
+      "germanLevelLabel": "Your German level",
+      "fastTrackOption": "Fast Track: I'm already at B2",
+      "fullTrainingOption": "Full Training: I'm starting out or at an intermediate level"
+    },
     "login": { "title": "Candidate Login" },
-    "dashboard": { "title": "My Candidate Area" }
+    "dashboard": {
+      "title": "My Candidate Area",
+      "pathLabel": "Path",
+      "statusLabel": "Status",
+      "germanLevelLabel": "German level",
+      "editProfileLink": "Edit my profile",
+      "manageCvLink": "Manage my CV"
+    },
+    "profile": {
+      "title": "My profile",
+      "germanLevelLabel": "German level",
+      "yearsExperienceLabel": "Years of experience",
+      "bioLabel": "Bio",
+      "updated": "Profile updated.",
+      "save": "Save"
+    },
+    "cv": {
+      "title": "My CV",
+      "alreadyUploaded": "A CV is already on file. Upload a new file to replace it.",
+      "upload": "Upload CV (PDF, 5 MB max)",
+      "success": "CV sent successfully.",
+      "errorPrefix": "Error:"
+    }
   },
   "employer": {
-    "signup": { "title": "Company Sign Up" },
+    "signup": {
+      "title": "Company Sign Up",
+      "contactNameLabel": "Contact name",
+      "companyNameLabel": "Company name"
+    },
     "login": { "title": "Company Login" },
-    "dashboard": { "title": "My Company Area" },
+    "dashboard": {
+      "title": "My Company Area",
+      "companyLabel": "Company",
+      "openRequestsLabel": "Open staffing needs",
+      "myRequestsLink": "My staffing needs",
+      "candidatePoolLink": "Candidate pool"
+    },
+    "candidates": {
+      "title": "Candidate pool",
+      "yearsExperienceSuffix": "year(s) of experience",
+      "noneAvailable": "No candidates available at the moment."
+    },
+    "candidateDetail": {
+      "downloadCv": "Download CV",
+      "cvNotAvailable": "CV not available."
+    },
+    "requests": {
+      "title": "My staffing needs",
+      "newButton": "New staffing need",
+      "headcountSuffix": "person(s)",
+      "noneYet": "No staffing needs yet.",
+      "statusLabel": "Status",
+      "headcountLabel": "Number of people",
+      "germanLevelLabel": "Required German level",
+      "descriptionLabel": "Description"
+    },
+    "requestForm": {
+      "professionLabel": "Role / occupation needed",
+      "headcountLabel": "Number of people needed",
+      "germanLevelLabel": "Required German level",
+      "descriptionLabel": "Description",
+      "submit": "Submit staffing need"
+    },
     "pending": {
       "title": "Account under review",
       "body": "Thank you for signing up. Our team is reviewing your application and will validate your access shortly."
