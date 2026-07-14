@@ -1,6 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { BookingForm } from "@/components/booking/booking-form";
+import { metadataFromNamespace } from "@/lib/seo";
+
+export const generateMetadata = () => metadataFromNamespace("bookAppointment", "/book-appointment");
 
 export default async function BookAppointmentPage() {
   const t = await getTranslations("bookAppointment");

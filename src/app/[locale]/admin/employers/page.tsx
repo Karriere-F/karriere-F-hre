@@ -19,7 +19,10 @@ export default async function AdminEmployersPage() {
             key={e.id}
             className="rounded-lg border border-brand-grid p-4 flex items-center justify-between"
           >
-            <Link href={`/admin/employers/${e.id}`} className="min-w-0">
+            <Link
+              href={{ pathname: "/admin/employers/[id]", params: { id: e.id } }}
+              className="min-w-0"
+            >
               <p className="text-brand-black font-medium">{e.company_name}</p>
               <p className="text-sm text-brand-ink-muted">{e.status}</p>
             </Link>

@@ -20,7 +20,7 @@ export default async function EmployerCandidatesPage() {
         {(candidates ?? []).map((c) => (
           <Link
             key={c.id}
-            href={`/employer/candidates/${c.id}`}
+            href={{ pathname: "/employer/candidates/[id]", params: { id: c.id } }}
             className="rounded-lg border border-brand-grid p-5 hover:border-brand-gold transition-colors"
           >
             <p className="text-xs uppercase text-brand-gold-text">{c.german_level}</p>

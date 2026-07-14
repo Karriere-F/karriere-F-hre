@@ -13,7 +13,7 @@ export default function AdminContentListPage() {
         {Object.entries(CONTENT_PAGES).map(([key, page]) => (
           <Link
             key={key}
-            href={`/admin/content/${key}`}
+            href={{ pathname: "/admin/content/[pageKey]", params: { pageKey: key } }}
             className="rounded-lg border border-brand-grid p-4 hover:border-brand-gold transition-colors flex items-center justify-between"
           >
             <span className="text-brand-black font-medium">{page.label}</span>

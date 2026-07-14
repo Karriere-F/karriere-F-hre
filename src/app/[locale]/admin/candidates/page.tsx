@@ -25,7 +25,10 @@ export default async function AdminCandidatesPage() {
             key={c.id}
             className="rounded-lg border border-brand-grid p-4 flex items-center justify-between"
           >
-            <Link href={`/admin/candidates/${c.id}`} className="min-w-0">
+            <Link
+              href={{ pathname: "/admin/candidates/[id]", params: { id: c.id } }}
+              className="min-w-0"
+            >
               <p className="text-brand-black font-medium">
                 {c.profiles?.full_name ?? c.id}
               </p>

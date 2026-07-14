@@ -24,7 +24,7 @@ export default async function AdminOccupationsPage() {
         {(occupations ?? []).map((o) => (
           <Link
             key={o.id}
-            href={`/admin/occupations/${o.id}/edit`}
+            href={{ pathname: "/admin/occupations/[id]/edit", params: { id: o.id } }}
             className="rounded-lg border border-brand-grid p-4 flex items-center justify-between hover:border-brand-gold transition-colors"
           >
             <div>

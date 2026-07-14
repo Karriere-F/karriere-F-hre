@@ -1,8 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import type { ComponentProps } from "react";
 import { Link } from "../../../i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
+
+type NavHref = ComponentProps<typeof Link>["href"];
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
@@ -13,7 +16,7 @@ export async function SiteHeader() {
     { href: "/candidats/formations", label: t("formations") },
     { href: "/a-propos", label: t("aPropos") },
     { href: "/blog", label: t("blog") },
-  ];
+  ] satisfies { href: NavHref; label: string }[];
 
   return (
     <header className="bg-brand-white text-brand-ink sticky top-0 z-40 border-b border-brand-grid">

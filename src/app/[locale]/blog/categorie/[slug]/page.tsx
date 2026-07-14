@@ -1,9 +1,28 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Link } from "@i18n/navigation";
 import { BLOG_CATEGORIES, type BlogCategorySlug } from "@/lib/blog-categories";
+import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const cat = BLOG_CATEGORIES[slug as BlogCategorySlug];
+  if (!cat) return {};
+  const locale = (await getLocale()) as Locale;
+  return buildMetadata({
+    pathname: { pathname: "/blog/categorie/[slug]", params: { slug } },
+    locale,
+    title: cat.title[locale],
+    description: cat.description[locale],
+  });
+}
 
 export default async function BlogCategoryPage({
   params,

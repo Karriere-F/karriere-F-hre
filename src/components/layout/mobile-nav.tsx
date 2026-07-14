@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ComponentProps } from "react";
 import { Link } from "../../../i18n/navigation";
 
 export function MobileNav({
@@ -8,7 +8,7 @@ export function MobileNav({
   postulerLabel,
   loginLabel,
 }: {
-  links: { href: string; label: string }[];
+  links: { href: ComponentProps<typeof Link>["href"]; label: string }[];
   postulerLabel: string;
   loginLabel: string;
 }) {
@@ -50,7 +50,7 @@ export function MobileNav({
         <nav className="flex flex-col px-4 py-4 gap-1">
           {links.map((link, i) => (
             <Link
-              key={link.href}
+              key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
               style={open ? { animationDelay: `${i * 40}ms` } : undefined}

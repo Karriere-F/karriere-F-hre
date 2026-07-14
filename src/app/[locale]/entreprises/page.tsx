@@ -1,15 +1,22 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { StepList } from "@/components/marketing/step-list";
 import { SubNavLinks } from "@/components/marketing/sub-nav-links";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
+import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.entreprises;
 
+export const generateMetadata = () => metadataFromNamespace("entreprises", "/entreprises");
+
 export default async function EntreprisesPage() {
   const t = await getTranslations("entreprises");
+  const tNav = await getTranslations("nav");
+  const locale = (await getLocale()) as Locale;
   const content = await getPageContent<Content>("entreprises");
 
   const steps = [1, 2, 3, 4].map((i) => ({
@@ -19,6 +26,13 @@ export default async function EntreprisesPage() {
 
   return (
     <div>
+      <BreadcrumbJsonLd
+        locale={locale}
+        items={[
+          { name: tNav("home"), pathname: "/" },
+          { name: tNav("entreprises"), pathname: "/entreprises" },
+        ]}
+      />
       <PageHero title={content.title} subtitle={content.subtitle} image="/images/services-companies.jpg" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <StepList steps={steps} />

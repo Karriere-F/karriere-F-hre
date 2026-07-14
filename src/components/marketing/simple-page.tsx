@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import { Link } from "../../../i18n/navigation";
 import { PageHero } from "./page-hero";
 
@@ -12,7 +13,7 @@ export function SimplePage({
   subtitle?: string;
   image?: string;
   sections: { title: string; body: string }[];
-  cta?: { label: string; href: string };
+  cta?: { label: string; href: ComponentProps<typeof Link>["href"] };
 }) {
   return (
     <div>

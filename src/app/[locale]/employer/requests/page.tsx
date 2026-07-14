@@ -30,7 +30,7 @@ export default async function EmployerRequestsPage() {
         {(requests ?? []).map((r) => (
           <Link
             key={r.id}
-            href={`/employer/requests/${r.id}`}
+            href={{ pathname: "/employer/requests/[id]", params: { id: r.id } }}
             className="rounded-lg border border-brand-grid p-4 flex items-center justify-between hover:border-brand-gold transition-colors"
           >
             <div>

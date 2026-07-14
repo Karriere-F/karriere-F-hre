@@ -3,9 +3,12 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { ContactForm } from "@/components/marketing/contact-form";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
 import type frMessages from "../../../../messages/fr.json";
 
 type ContactContent = typeof frMessages.contact;
+
+export const generateMetadata = () => metadataFromNamespace("contact", "/contact");
 
 export default async function ContactPage() {
   const t = await getTranslations("contact");

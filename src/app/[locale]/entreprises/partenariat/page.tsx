@@ -1,8 +1,12 @@
 import { SimplePage } from "@/components/marketing/simple-page";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.entreprisesPartenariat;
+
+export const generateMetadata = () =>
+  metadataFromNamespace("entreprisesPartenariat", "/entreprises/partenariat");
 
 export default async function EntreprisesPartenariatPage() {
   const content = await getPageContent<Content>("entreprisesPartenariat");

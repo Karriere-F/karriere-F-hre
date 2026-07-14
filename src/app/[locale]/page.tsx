@@ -1,13 +1,26 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { createClient } from "@/lib/supabase/server";
 import { OCCUPATION_CATEGORIES, categoryLabel } from "@/lib/occupation-categories";
+import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "../../../i18n/routing";
 import type frMessages from "../../../messages/fr.json";
 
 type HomeContent = typeof frMessages.home;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("home");
+  const locale = (await getLocale()) as Locale;
+  return buildMetadata({
+    pathname: "/",
+    locale,
+    title: t("heroTitle"),
+    description: t("heroSubtitle"),
+  });
+}
 
 export default async function HomePage() {
   const t = await getTranslations("home");

@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Link } from "@i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { METIER_CATEGORIES, type MetierCategorySlug } from "@/lib/metier-categories";
+import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
 
 const TITLE_COLUMN: Record<Locale, "title_fr" | "title_de" | "title_en"> = {
@@ -11,6 +13,25 @@ const TITLE_COLUMN: Record<Locale, "title_fr" | "title_de" | "title_en"> = {
   de: "title_de",
   en: "title_en",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> {
+  const { category } = await params;
+  const cat = METIER_CATEGORIES[category as MetierCategorySlug];
+  if (!cat) {
+    return {};
+  }
+  const locale = (await getLocale()) as Locale;
+  return buildMetadata({
+    pathname: { pathname: "/candidats/metiers/[category]", params: { category } },
+    locale,
+    title: cat.title[locale],
+    description: cat.subtitle[locale],
+  });
+}
 
 export default async function MetierCategoryPage({
   params,
@@ -49,7 +70,7 @@ export default async function MetierCategoryPage({
           {(occupations ?? []).map((occ, i) => (
             <Link
               key={occ.id}
-              href={`/candidats/metiers/offre/${occ.slug}`}
+              href={{ pathname: "/candidats/metiers/offre/[slug]", params: { slug: occ.slug } }}
               className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid bg-brand-white p-6 hover:border-brand-gold transition-colors duration-150"
               style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
             >

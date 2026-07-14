@@ -1,8 +1,11 @@
 import { PageHero } from "@/components/marketing/page-hero";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.temoignages;
+
+export const generateMetadata = () => metadataFromNamespace("temoignages", "/temoignages");
 
 export default async function TemoignagesPage() {
   const content = await getPageContent<Content>("temoignages");

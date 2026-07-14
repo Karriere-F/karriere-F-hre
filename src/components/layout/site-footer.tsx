@@ -46,7 +46,7 @@ export async function SiteFooter() {
         { href: "/contact", label: t("contactDouala") },
       ],
     },
-  ];
+  ] as const;
 
   return (
     <footer className="bg-brand-white text-brand-ink-secondary mt-16 border-t border-brand-grid">

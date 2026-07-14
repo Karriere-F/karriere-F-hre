@@ -2,7 +2,10 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Link } from "@i18n/navigation";
 import { BLOG_CATEGORIES } from "@/lib/blog-categories";
+import { metadataFromNamespace } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
+
+export const generateMetadata = () => metadataFromNamespace("blog", "/blog");
 
 export default async function BlogPage() {
   const t = await getTranslations("blog");
@@ -17,7 +20,7 @@ export default async function BlogPage() {
           {Object.entries(BLOG_CATEGORIES).map(([slug, cat], i) => (
             <Link
               key={slug}
-              href={`/blog/categorie/${slug}`}
+              href={{ pathname: "/blog/categorie/[slug]", params: { slug } }}
               className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid bg-brand-white p-6"
               style={{ animationDelay: `${i * 50}ms` }}
             >

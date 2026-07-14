@@ -1,9 +1,13 @@
 import { PageHero } from "@/components/marketing/page-hero";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.entreprisesDemande;
+
+export const generateMetadata = () =>
+  metadataFromNamespace("entreprisesDemande", "/entreprises/demande");
 
 export default async function EntreprisesDemandePage() {
   const content = await getPageContent<Content>("entreprisesDemande");

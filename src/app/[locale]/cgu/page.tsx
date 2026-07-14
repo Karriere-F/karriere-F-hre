@@ -1,9 +1,23 @@
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.cgu;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const t = await getTranslations("cgu");
+  return buildMetadata({
+    pathname: "/cgu",
+    locale,
+    title: t("title"),
+    description: t("placeholder"),
+  });
+}
 
 export default async function CguPage() {
   const t = await getTranslations("cgu");

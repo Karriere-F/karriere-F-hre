@@ -1,17 +1,22 @@
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { Link } from "@i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { METIER_CATEGORIES } from "@/lib/metier-categories";
+import { metadataFromNamespace } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.metiers;
 
+export const generateMetadata = () => metadataFromNamespace("metiers", "/candidats/metiers");
+
 export default async function MetiersPage() {
   const content = await getPageContent<Content>("metiers");
   const locale = (await getLocale()) as Locale;
+  const tNav = await getTranslations("nav");
   const supabase = await createClient();
 
   const { data: occupations } = await supabase
@@ -26,13 +31,21 @@ export default async function MetiersPage() {
 
   return (
     <div>
+      <BreadcrumbJsonLd
+        locale={locale}
+        items={[
+          { name: tNav("home"), pathname: "/" },
+          { name: tNav("candidats"), pathname: "/candidats" },
+          { name: content.title, pathname: "/candidats/metiers" },
+        ]}
+      />
       <PageHero title={content.title} subtitle={content.subtitle} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {Object.entries(METIER_CATEGORIES).map(([slug, cat], i) => (
             <Link
               key={slug}
-              href={`/candidats/metiers/${slug}`}
+              href={{ pathname: "/candidats/metiers/[category]", params: { category: slug } }}
               className="lift-on-hover animate-fade-up rounded-lg border border-brand-grid bg-brand-white p-6"
               style={{ animationDelay: `${i * 50}ms` }}
             >

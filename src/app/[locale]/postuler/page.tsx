@@ -1,9 +1,12 @@
 import { PageHero } from "@/components/marketing/page-hero";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.postuler;
+
+export const generateMetadata = () => metadataFromNamespace("postuler", "/postuler");
 
 export default async function PostulerPage() {
   const content = await getPageContent<Content>("postuler");

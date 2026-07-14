@@ -3,9 +3,12 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { SubNavLinks } from "@/components/marketing/sub-nav-links";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.formations;
+
+export const generateMetadata = () => metadataFromNamespace("formations", "/candidats/formations");
 
 export default async function FormationsPage() {
   const t = await getTranslations("formations");

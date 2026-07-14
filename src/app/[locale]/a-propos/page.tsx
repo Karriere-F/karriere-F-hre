@@ -1,18 +1,42 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { SubNavLinks } from "@/components/marketing/sub-nav-links";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type AProposContent = typeof frMessages.aPropos;
 
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const t = await getTranslations("aPropos");
+  return buildMetadata({
+    pathname: "/a-propos",
+    locale,
+    title: t("title"),
+    description: t("intro"),
+  });
+}
+
 export default async function AProposPage() {
   const t = await getTranslations("aPropos");
+  const tNav = await getTranslations("nav");
+  const locale = (await getLocale()) as Locale;
   const content = await getPageContent<AProposContent>("aPropos");
 
   return (
     <div>
+      <BreadcrumbJsonLd
+        locale={locale}
+        items={[
+          { name: tNav("home"), pathname: "/" },
+          { name: tNav("aPropos"), pathname: "/a-propos" },
+        ]}
+      />
       <PageHero title={content.title} subtitle={content.intro} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="animate-fade-up mb-16">

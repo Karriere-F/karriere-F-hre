@@ -1,5 +1,19 @@
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@i18n/routing";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const t = await getTranslations("legal");
+  return buildMetadata({
+    pathname: "/confidentialite",
+    locale,
+    title: t("privacyTitle"),
+    description: t("privacyPlaceholder"),
+  });
+}
 
 export default async function ConfidentialitePage() {
   const t = await getTranslations("legal");

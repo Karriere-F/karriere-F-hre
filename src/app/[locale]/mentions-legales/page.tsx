@@ -1,6 +1,20 @@
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@i18n/routing";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const t = await getTranslations("legal");
+  return buildMetadata({
+    pathname: "/mentions-legales",
+    locale,
+    title: t("imprintTitle"),
+    description: t("imprintNote"),
+  });
+}
 
 export default async function MentionsLegalesPage() {
   const t = await getTranslations("legal");

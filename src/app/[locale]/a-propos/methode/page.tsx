@@ -1,8 +1,11 @@
 import { SimplePage } from "@/components/marketing/simple-page";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { metadataFromNamespace } from "@/lib/seo";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.aProposMethode;
+
+export const generateMetadata = () => metadataFromNamespace("aProposMethode", "/a-propos/methode");
 
 export default async function AProposMethodePage() {
   const content = await getPageContent<Content>("aProposMethode");
