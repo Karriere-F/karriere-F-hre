@@ -4,7 +4,7 @@ import { AnchorSection } from "@/components/marketing/anchor-section";
 import { ComparisonTable } from "@/components/marketing/comparison-table";
 import { SubNavLinks } from "@/components/marketing/sub-nav-links";
 import { EligibilityQuiz } from "@/components/candidate/eligibility-quiz";
-import { AgePathGuide } from "@/components/candidate/age-path-guide";
+import { LegalPathQuiz } from "@/components/candidate/legal-path-quiz";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { FaqJsonLd } from "@/components/seo/faq-json-ld";
 import { Link } from "@i18n/navigation";
@@ -162,33 +162,71 @@ export default async function CandidatsPage() {
           ))}
         </div>
 
-        <AgePathGuide
-          eyebrow={content.ageGuideEyebrow}
-          title={content.ageGuideTitle}
-          subtitle={content.ageGuideSubtitle}
-          ageOptions={[
-            { value: "ausbildung", label: content.ageOpt1 },
-            { value: "emploiQualifie", label: content.ageOpt2 },
-            { value: "chancenkarte", label: content.ageOpt3 },
-          ]}
+        <LegalPathQuiz
+          eyebrow={content.legalQuizEyebrow}
+          title={content.legalQuizTitle}
+          subtitle={content.legalQuizSubtitle}
+          q1={{
+            title: content.legalQuizQ1Title,
+            options: [
+              { value: "yes", label: content.legalQuizQ1Opt1 },
+              { value: "no", label: content.legalQuizQ1Opt2 },
+            ],
+          }}
+          q2={{
+            title: content.legalQuizQ2Title,
+            options: [
+              { value: "university", label: content.legalQuizQ2Opt1 },
+              { value: "vocational", label: content.legalQuizQ2Opt2 },
+              { value: "none", label: content.legalQuizQ2Opt3 },
+            ],
+          }}
+          q3={{
+            title: content.legalQuizQ3Title,
+            options: [
+              { value: "b2plus", label: content.legalQuizQ3Opt1 },
+              { value: "b1", label: content.legalQuizQ3Opt2 },
+              { value: "a2minus", label: content.legalQuizQ3Opt3 },
+            ],
+          }}
+          q4={{
+            title: content.legalQuizQ4Title,
+            options: [
+              { value: "under35", label: content.legalQuizQ4Opt1 },
+              { value: "35to40", label: content.legalQuizQ4Opt2 },
+              { value: "over40", label: content.legalQuizQ4Opt3 },
+            ],
+          }}
           results={{
-            ausbildung: {
-              badge: content.ageResultAusbildungBadge,
-              title: content.ageResultAusbildungTitle,
-              text: content.ageResultAusbildungText,
-            },
             emploiQualifie: {
-              badge: content.ageResultEmploiBadge,
-              title: content.ageResultEmploiTitle,
-              text: content.ageResultEmploiText,
+              badge: content.legalQuizResultEmploiBadge,
+              title: content.legalQuizResultEmploiTitle,
+              text: content.legalQuizResultEmploiText,
+              legalRef: content.legalQuizResultEmploiRef,
             },
             chancenkarte: {
-              badge: content.ageResultChancenkarteBadge,
-              title: content.ageResultChancenkarteTitle,
-              text: content.ageResultChancenkarteText,
+              badge: content.legalQuizResultChancenkarteBadge,
+              title: content.legalQuizResultChancenkarteTitle,
+              text: content.legalQuizResultChancenkarteText,
+              legalRef: content.legalQuizResultChancenkarteRef,
+            },
+            ausbildung: {
+              badge: content.legalQuizResultAusbildungBadge,
+              title: content.legalQuizResultAusbildungTitle,
+              text: content.legalQuizResultAusbildungText,
+              legalRef: content.legalQuizResultAusbildungRef,
+            },
+            conseiller: {
+              badge: content.legalQuizResultConseillerBadge,
+              title: content.legalQuizResultConseillerTitle,
+              text: content.legalQuizResultConseillerText,
+              legalRef: content.legalQuizResultConseillerRef,
             },
           }}
-          noteText={content.ageGuideNote}
+          ctaLabel={content.legalQuizCta}
+          advisorCtaLabel={content.legalQuizAdvisorCta}
+          resetLabel={content.legalQuizReset}
+          noteText={content.legalQuizNote}
         />
 
         <EligibilityQuiz
