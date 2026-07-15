@@ -166,12 +166,6 @@ export const CONTENT_PAGES = {
       "acc6Body",
       "acc7Title",
       "acc7Body",
-      "metiersEyebrow",
-      "metiersTitle",
-      "metiersLead",
-      "metiersCta",
-      "statBig",
-      "statText",
       "formationsEyebrow",
       "formationsTitle",
       "formationsLead",
@@ -452,7 +446,7 @@ export const CONTENT_PAGES = {
   },
   metiers: {
     label: "Métiers qui recrutent",
-    path: "/candidats/metiers",
+    path: "/metiers",
     fields: [
       "title",
       "subtitle",

@@ -1,4 +1,4 @@
-// Static registry for /candidats/metiers -- rendered as anchored sections on a single
+// Static registry for /metiers -- rendered as anchored sections on a single
 // page (matching the founder's reference design), not separate routes per category.
 // dbCategory maps each section to the matching shortage_occupations.category value so
 // the page can link out to live listings; null means no occupations have been

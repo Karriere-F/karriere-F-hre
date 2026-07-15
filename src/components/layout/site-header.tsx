@@ -16,6 +16,7 @@ export async function SiteHeader() {
       href: `${getPathname({ href: "/candidats", locale })}#formations`,
       label: t("formations"),
     },
+    { href: getPathname({ href: "/metiers", locale }), label: t("metiers") },
     { href: getPathname({ href: "/a-propos", locale }), label: t("aPropos") },
     { href: getPathname({ href: "/blog", locale }), label: t("blog") },
   ];

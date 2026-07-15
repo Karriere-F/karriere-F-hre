@@ -17,9 +17,9 @@ const STATIC_PATHS = [
   "/candidats/formations/allemand",
   "/candidats/formations/examens",
   "/candidats/formations/integration",
-  "/candidats/metiers",
   "/candidats/reconnaissance-diplomes",
   "/candidats/vivre-en-allemagne",
+  "/metiers",
   "/entreprises",
   "/entreprises/partenariat",
   "/partenaires",
@@ -69,7 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const occ of occupations ?? []) {
     entries.push(
       ...entriesFor(
-        { pathname: "/candidats/metiers/offre/[slug]", params: { slug: occ.slug } },
+        { pathname: "/metiers/offre/[slug]", params: { slug: occ.slug } },
         0.5
       )
     );

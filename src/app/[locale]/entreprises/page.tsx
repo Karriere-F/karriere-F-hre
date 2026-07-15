@@ -235,7 +235,7 @@ export default async function EntreprisesPage() {
         </div>
         <div className="mt-8">
           <Link
-            href="/candidats/metiers"
+            href="/metiers"
             className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
           >
             {content.profilsCta}

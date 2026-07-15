@@ -142,7 +142,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Métiers qui recrutent — light teaser, full detail lives on /candidats/metiers */}
+      {/* Métiers qui recrutent — light teaser, full detail lives on /metiers */}
       <section className="bg-brand-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h2 className="text-2xl sm:text-3xl font-serif text-brand-black mb-3">
@@ -152,7 +152,7 @@ export default async function HomePage() {
             {content.categoriesSubtitle}
           </p>
           <Link
-            href="/candidats/metiers"
+            href="/metiers"
             className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
             {content.categoriesCta}

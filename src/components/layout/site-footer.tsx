@@ -17,7 +17,7 @@ export async function SiteFooter() {
       links: [
         { href: path("/candidats", "voies"), label: t("linkHowItWorks") },
         { href: path("/candidats", "eligibilite"), label: t("linkEligibility") },
-        { href: path("/candidats/metiers"), label: t("linkOccupations") },
+        { href: path("/metiers"), label: t("linkOccupations") },
         { href: path("/candidats", "formations"), label: t("linkTrainings") },
         { href: path("/candidats", "faq"), label: t("linkFaq") },
       ],

@@ -262,27 +262,6 @@ export default async function CandidatsPage() {
         </div>
       </AnchorSection>
 
-      {/* Métiers summary */}
-      <AnchorSection
-        id="metiers"
-        eyebrow={content.metiersEyebrow}
-        title={content.metiersTitle}
-        lead={content.metiersLead}
-      >
-        <div className="rounded-xl bg-brand-black text-brand-white p-6 flex flex-wrap items-center gap-4">
-          <span className="font-serif text-2xl text-brand-gold-light shrink-0">{content.statBig}</span>
-          <p className="text-sm text-brand-white/80">{content.statText}</p>
-        </div>
-        <div className="mt-8">
-          <Link
-            href="/candidats/metiers"
-            className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-          >
-            {content.metiersCta}
-          </Link>
-        </div>
-      </AnchorSection>
-
       {/* Formations */}
       <AnchorSection
         id="formations"

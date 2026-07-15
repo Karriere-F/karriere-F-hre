@@ -43,16 +43,6 @@ export const routing = defineRouting({
       de: "/kandidaten/ausbildung/integration",
       en: "/candidates/trainings/integration",
     },
-    "/candidats/metiers": {
-      fr: "/candidats/metiers",
-      de: "/kandidaten/berufe",
-      en: "/candidates/occupations",
-    },
-    "/candidats/metiers/offre/[slug]": {
-      fr: "/candidats/metiers/offre/[slug]",
-      de: "/kandidaten/berufe/angebot/[slug]",
-      en: "/candidates/occupations/offer/[slug]",
-    },
     "/candidats/reconnaissance-diplomes": {
       fr: "/candidats/reconnaissance-diplomes",
       de: "/kandidaten/anerkennung",
@@ -62,6 +52,13 @@ export const routing = defineRouting({
       fr: "/candidats/vivre-en-allemagne",
       de: "/kandidaten/leben-in-deutschland",
       en: "/candidates/living-in-germany",
+    },
+
+    "/metiers": { fr: "/metiers", de: "/berufe", en: "/occupations" },
+    "/metiers/offre/[slug]": {
+      fr: "/metiers/offre/[slug]",
+      de: "/berufe/angebot/[slug]",
+      en: "/occupations/offer/[slug]",
     },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },

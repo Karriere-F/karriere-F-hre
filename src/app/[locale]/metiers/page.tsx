@@ -14,7 +14,7 @@ import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.metiers;
 
-export const generateMetadata = () => metadataFromNamespace("metiers", "/candidats/metiers");
+export const generateMetadata = () => metadataFromNamespace("metiers", "/metiers");
 
 const SECTOR_ICONS: Record<string, LucideIcon> = {
   "sante-soins": HeartPulse,
@@ -70,8 +70,7 @@ export default async function MetiersPage() {
         locale={locale}
         items={[
           { name: tNav("home"), pathname: "/" },
-          { name: tNav("candidats"), pathname: "/candidats" },
-          { name: t("title"), pathname: "/candidats/metiers" },
+          { name: t("title"), pathname: "/metiers" },
         ]}
       />
       <FaqJsonLd items={faqItems} />

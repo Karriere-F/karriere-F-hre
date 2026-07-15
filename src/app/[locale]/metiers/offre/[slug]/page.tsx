@@ -35,7 +35,7 @@ export async function generateMetadata({
   if (!occ) return {};
 
   return buildMetadata({
-    pathname: { pathname: "/candidats/metiers/offre/[slug]", params: { slug } },
+    pathname: { pathname: "/metiers/offre/[slug]", params: { slug } },
     locale,
     title: occ[TITLE_COLUMN[locale]],
     description: occ[DESC_COLUMN[locale]] ?? occ[TITLE_COLUMN[locale]],
