@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
-import { Link, getPathname } from "../../../i18n/navigation";
+import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "../../../i18n/routing";
@@ -23,8 +23,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HomePage() {
   const t = await getTranslations("home");
   const content = await getPageContent<HomeContent>("home");
-  const locale = (await getLocale()) as Locale;
-  const formationsHref = `${getPathname({ href: "/candidats", locale })}#formations`;
 
   return (
     <div className="flex flex-col">
@@ -106,7 +104,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Comment se passe la traversée */}
+      {/* Notre accompagnement 360° */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
           <p className="text-xs uppercase tracking-widest text-brand-gold-text font-semibold mb-2 text-center">
@@ -119,21 +117,27 @@ export default async function HomePage() {
             {content.processLead}
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((i) => (
+            {[
+              [content.acc1Title, content.acc1Body],
+              [content.acc2Title, content.acc2Body],
+              [content.acc3Title, content.acc3Body],
+              [content.acc4Title, content.acc4Body],
+              [content.acc5Title, content.acc5Body],
+              [content.acc6Title, content.acc6Body],
+              [content.acc7Title, content.acc7Body],
+            ].map(([title, body], i) => (
               <div
-                key={i}
-                className="animate-fade-up rounded-lg border border-brand-grid bg-brand-white p-6"
-                style={{ animationDelay: `${i * 50}ms` }}
+                key={title}
+                className={`lift-on-hover animate-fade-up relative rounded-lg border border-brand-grid bg-brand-white p-5 ${
+                  i === 0 ? "lg:col-span-2" : ""
+                }`}
+                style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
               >
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-gold text-brand-black font-serif font-semibold text-sm mb-3">
-                  {i}
+                <span className="absolute top-3 right-4 font-serif text-2xl text-brand-gold/25">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-brand-black font-medium mb-1">
-                  {content[`proc${i}Title` as "proc1Title"]}
-                </h3>
-                <p className="text-sm text-brand-ink-secondary">
-                  {content[`proc${i}Body` as "proc1Body"]}
-                </p>
+                <h3 className="text-brand-black font-medium mb-1.5 max-w-[90%]">{title}</h3>
+                <p className="text-sm text-brand-ink-secondary">{body}</p>
               </div>
             ))}
           </div>
@@ -155,37 +159,6 @@ export default async function HomePage() {
           >
             {content.categoriesCta}
           </Link>
-        </div>
-      </section>
-
-      {/* Two tracks */}
-      <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-2xl font-serif text-brand-ink mb-10">{content.tracksTitle}</h2>
-          <div className="grid gap-8 sm:grid-cols-2">
-            <a
-              href={formationsHref}
-              className="lift-on-hover rounded-lg border border-brand-grid bg-brand-white p-8 hover:border-brand-gold transition-colors duration-150 block"
-            >
-              <h3 className="text-xl font-serif text-brand-black mb-3">
-                {content.fastTrackTitle}
-              </h3>
-              <p className="text-brand-ink-secondary text-sm leading-relaxed">
-                {content.fastTrackBody}
-              </p>
-            </a>
-            <a
-              href={formationsHref}
-              className="lift-on-hover rounded-lg border border-brand-grid bg-brand-white p-8 hover:border-brand-gold transition-colors duration-150 block"
-            >
-              <h3 className="text-xl font-serif text-brand-black mb-3">
-                {content.fullTrainingTitle}
-              </h3>
-              <p className="text-brand-ink-secondary text-sm leading-relaxed">
-                {content.fullTrainingBody}
-              </p>
-            </a>
-          </div>
         </div>
       </section>
 
