@@ -176,9 +176,10 @@ export default async function CandidatsPage() {
           q2={{
             title: content.legalQuizQ2Title,
             options: [
-              { value: "university", label: content.legalQuizQ2Opt1 },
-              { value: "vocational", label: content.legalQuizQ2Opt2 },
-              { value: "none", label: content.legalQuizQ2Opt3 },
+              { value: "secondary", label: content.legalQuizQ2Opt1 },
+              { value: "university", label: content.legalQuizQ2Opt2 },
+              { value: "vocational", label: content.legalQuizQ2Opt3 },
+              { value: "none", label: content.legalQuizQ2Opt4 },
             ],
           }}
           q3={{

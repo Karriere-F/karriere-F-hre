@@ -5,7 +5,7 @@ import { Link } from "../../../i18n/navigation";
 
 type ResultKey = "emploiQualifie" | "chancenkarte" | "ausbildung" | "conseiller";
 type JobOffer = "yes" | "no";
-type Qualification = "university" | "vocational" | "none";
+type Qualification = "university" | "vocational" | "secondary" | "none";
 type German = "b2plus" | "b1" | "a2minus";
 type Age = "under35" | "35to40" | "over40";
 
@@ -15,19 +15,24 @@ function computeResult(
   german: German,
   age: Age
 ): ResultKey {
+  // Only a university degree or 2+ year vocational training is "recognizable" for
+  // skilled-worker / Chancenkarte purposes -- a secondary school diploma alone
+  // doesn't qualify for those, but it's exactly the typical Ausbildung entry profile.
+  const hasRecognizedQualification = qualification === "university" || qualification === "vocational";
+
   // Fachkräfte / emploi qualifié (§§18a-18b AufenthG): job offer + a recognizable
-  // qualification (university degree or 2+ year vocational training), no age limit.
-  if (jobOffer === "yes" && qualification !== "none") return "emploiQualifie";
+  // qualification, no age limit.
+  if (jobOffer === "yes" && hasRecognizedQualification) return "emploiQualifie";
 
   // Ausbildung (§16a AufenthG): age limit raised to 35 since March 2024; no prior
   // qualification required, but a minimum German level is needed for the entry visa.
-  if (qualification === "none" && age === "under35") return "ausbildung";
+  if (!hasRecognizedQualification && age === "under35") return "ausbildung";
 
   // Chancenkarte (§§20a-20b AufenthG, points system): requires a recognizable
   // qualification even without a job offer yet; language, age and experience add
   // points toward the 6-point minimum. Past 40 with weaker German the points get
   // tight, so we defer to an advisor rather than guess.
-  if (qualification !== "none" && jobOffer === "no") {
+  if (hasRecognizedQualification && jobOffer === "no") {
     if (age !== "over40" || german === "b2plus") return "chancenkarte";
     return "conseiller";
   }
