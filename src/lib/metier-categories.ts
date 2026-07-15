@@ -3,10 +3,26 @@
 // dbCategory maps each section to the matching shortage_occupations.category value so
 // the page can link out to live listings; null means no occupations have been
 // published in that DB category yet.
+//
+// Per-job duration/qualifications/remuneration figures were researched (German
+// Handwerkskammer/IHK sources, Pflegeberufegesetz, aubi-plus.de, ausbildung.de) rather
+// than invented -- amounts vary by Land, employer, and collective agreement, so they're
+// presented as indicative ranges, not fixed figures. Where a listed occupation is not
+// actually a standalone 3-year dual Ausbildung in Germany (e.g. Commis de cuisine,
+// Schweißer as a stand-alone trade, Cybersecurity), that is stated plainly rather than
+// implying a formal apprenticeship that doesn't exist.
 
 import type { Locale } from "../../i18n/routing";
 
 type LocalizedText = Record<Locale, string>;
+
+type Job = {
+  label: LocalizedText;
+  de: string;
+  duration: LocalizedText;
+  qualifications: LocalizedText;
+  remuneration: LocalizedText;
+};
 
 export const METIER_CATEGORIES: Record<
   string,
@@ -15,7 +31,7 @@ export const METIER_CATEGORIES: Record<
     title: LocalizedText;
     tagline: LocalizedText;
     body: LocalizedText;
-    jobs: { label: LocalizedText; de: string }[];
+    jobs: Job[];
     specialCase?: {
       title: LocalizedText;
       levelLabel: string;
@@ -38,11 +54,81 @@ export const METIER_CATEGORIES: Record<
       en: "Germany's healthcare sector is actively looking for qualified staff, especially in nursing care. Diploma recognition is a key step in this path, which we support from the start.",
     },
     jobs: [
-      { label: { fr: "Infirmier(ère)", de: "Pflegefachkraft", en: "Nurse" }, de: "Pflegefachkraft" },
-      { label: { fr: "Aide-soignant(e)", de: "Pflegehelfer", en: "Care assistant" }, de: "Pflegehelfer" },
-      { label: { fr: "Soins aux aînés", de: "Altenpflege", en: "Elderly care" }, de: "Altenpflege" },
-      { label: { fr: "Sage-femme", de: "Hebamme", en: "Midwife" }, de: "Hebamme" },
-      { label: { fr: "Médico-technique", de: "MTA", en: "Medical-technical" }, de: "MTA" },
+      {
+        label: { fr: "Infirmier(ère)", de: "Pflegefachkraft", en: "Nurse" },
+        de: "Pflegefachkraft",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: {
+          fr: "Diplôme de fin d'études secondaires (Realschule) ou Hauptschulabschluss + formation qualifiante, allemand B2",
+          de: "Realschulabschluss oder Hauptschulabschluss mit abgeschlossener Berufsausbildung, Deutsch B2",
+          en: "Realschule diploma, or lower secondary diploma plus a completed vocational qualification, German B2",
+        },
+        remuneration: {
+          fr: "Environ 1 350 à 1 500 € brut/mois selon l'année (formation rémunérée dès le début, encadrée par la loi Pflegeberufegesetz)",
+          de: "Rund 1.350 bis 1.500 € brutto/Monat je nach Ausbildungsjahr (von Anfang an vergütet, geregelt im Pflegeberufegesetz)",
+          en: "About €1,350-1,500 gross/month depending on the year (paid from day one, set by the Pflegeberufegesetz)",
+        },
+      },
+      {
+        label: { fr: "Aide-soignant(e)", de: "Pflegehelfer", en: "Care assistant" },
+        de: "Pflegehelfer",
+        duration: { fr: "1 à 2 ans", de: "1 bis 2 Jahre", en: "1 to 2 years" },
+        qualifications: {
+          fr: "Accessible dès le niveau Hauptschulabschluss, allemand B1-B2",
+          de: "Ab Hauptschulabschluss zugänglich, Deutsch B1-B2",
+          en: "Accessible from a lower secondary diploma, German B1-B2",
+        },
+        remuneration: {
+          fr: "Environ 900 à 1 100 € brut/mois, indicatif (varie selon le Land et l'établissement)",
+          de: "Rund 900 bis 1.100 € brutto/Monat, indikativ (je nach Bundesland und Einrichtung)",
+          en: "About €900-1,100 gross/month, indicative (varies by state and employer)",
+        },
+      },
+      {
+        label: { fr: "Soins aux aînés", de: "Altenpflege", en: "Elderly care" },
+        de: "Altenpflege",
+        duration: { fr: "Intégré depuis 2020 dans la formation généraliste \"Pflegefachkraft\" (3 ans)", de: "Seit 2020 Teil der generalistischen Ausbildung \"Pflegefachkraft\" (3 Jahre)", en: "Folded since 2020 into the generalist \"Pflegefachkraft\" training (3 years)" },
+        qualifications: {
+          fr: "Mêmes prérequis que l'infirmier(ère), avec spécialisation possible en 3e année",
+          de: "Gleiche Voraussetzungen wie Pflegefachkraft, Spezialisierung im 3. Jahr möglich",
+          en: "Same prerequisites as the nurse pathway, with a specialization option in year 3",
+        },
+        remuneration: {
+          fr: "Environ 1 350 à 1 500 € brut/mois selon l'année, comme la formation Pflegefachkraft",
+          de: "Rund 1.350 bis 1.500 € brutto/Monat je nach Jahr, wie bei der Pflegefachkraft-Ausbildung",
+          en: "About €1,350-1,500 gross/month depending on the year, same as the Pflegefachkraft track",
+        },
+      },
+      {
+        label: { fr: "Sage-femme", de: "Hebamme", en: "Midwife" },
+        de: "Hebamme",
+        duration: { fr: "3 ans (cursus universitaire dual depuis la réforme de 2020)", de: "3 Jahre (duales Studium seit der Reform 2020)", en: "3 years (dual university program since the 2020 reform)" },
+        qualifications: {
+          fr: "Depuis 2020, la formation est devenue un cursus universitaire (Studium) ; diplôme équivalent à l'Abitur généralement requis",
+          de: "Seit 2020 ein Hochschulstudium; in der Regel Abitur oder gleichwertiger Abschluss erforderlich",
+          en: "Since 2020 this is a university-level program; an Abitur-equivalent diploma is generally required",
+        },
+        remuneration: {
+          fr: "Indemnité versée pendant les phases pratiques, montant variable selon l'université",
+          de: "Vergütung während der Praxisphasen, Höhe je nach Hochschule unterschiedlich",
+          en: "A stipend is paid during practical placements, amount varies by university",
+        },
+      },
+      {
+        label: { fr: "Médico-technique", de: "MTA", en: "Medical-technical" },
+        de: "MTA",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: {
+          fr: "Diplôme de fin d'études secondaires (Mittlere Reife) généralement requis",
+          de: "In der Regel Mittlere Reife erforderlich",
+          en: "A Mittlere Reife (secondary school) diploma is generally required",
+        },
+        remuneration: {
+          fr: "Formation en cours de réforme depuis 2023 (rémunération désormais plus largement prévue), montants variables selon l'établissement",
+          de: "Ausbildung seit der MTA-Reform 2023 im Wandel (Vergütung nun breiter vorgesehen), Höhe je nach Einrichtung unterschiedlich",
+          en: "Training reformed since 2023 (pay is now more widely provided), amounts vary by institution",
+        },
+      },
     ],
     specialCase: {
       title: {
@@ -79,11 +165,61 @@ export const METIER_CATEGORIES: Record<
       en: "German hospitality has faced a staff shortage for years. It's an accessible sector with B2-level German and experience or training in the trade.",
     },
     jobs: [
-      { label: { fr: "Cuisinier(ère)", de: "Koch", en: "Cook" }, de: "Koch" },
-      { label: { fr: "Commis de cuisine", de: "Küchenhilfe", en: "Kitchen assistant" }, de: "Küchenhilfe" },
-      { label: { fr: "Service en salle", de: "Restaurantfachmann", en: "Waitstaff" }, de: "Restaurantfachmann" },
-      { label: { fr: "Réception", de: "Hotelfachmann", en: "Front desk" }, de: "Hotelfachmann" },
-      { label: { fr: "Personnel d'étage", de: "Housekeeping", en: "Housekeeping" }, de: "Housekeeping" },
+      {
+        label: { fr: "Cuisinier(ère)", de: "Koch", en: "Cook" },
+        de: "Koch",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Accessible dès le niveau Hauptschulabschluss", de: "Ab Hauptschulabschluss zugänglich", en: "Accessible from a lower secondary diploma" },
+        remuneration: {
+          fr: "À partir de 649 € brut/mois la 1re année (minimum légal), jusqu'à environ 1 000 € en 3e année",
+          de: "Ab 649 € brutto/Monat im 1. Lehrjahr (gesetzlicher Mindestlohn), bis rund 1.000 € im 3. Jahr",
+          en: "From €649 gross/month in year 1 (legal minimum), up to around €1,000 in year 3",
+        },
+      },
+      {
+        label: { fr: "Commis de cuisine", de: "Küchenhilfe", en: "Kitchen assistant" },
+        de: "Küchenhilfe",
+        duration: { fr: "Poste d'entrée, pas une Ausbildung diplômante de 3 ans", de: "Einstiegsposition, keine dreijährige Ausbildung", en: "Entry-level role, not a diploma-granting 3-year apprenticeship" },
+        qualifications: { fr: "Aucun diplôme requis ; une formation courte est assurée en interne", de: "Kein Abschluss erforderlich; kurze betriebsinterne Einarbeitung", en: "No diploma required; short on-the-job training" },
+        remuneration: {
+          fr: "Rémunéré au salaire minimum légal ou selon la convention collective de l'établissement",
+          de: "Vergütung nach gesetzlichem Mindestlohn oder Haustarif",
+          en: "Paid at the legal minimum wage or the establishment's collective agreement rate",
+        },
+      },
+      {
+        label: { fr: "Service en salle", de: "Restaurantfachmann", en: "Waitstaff" },
+        de: "Restaurantfachmann",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Hauptschulabschluss ou mittlere Reife généralement demandé", de: "In der Regel Hauptschulabschluss oder mittlere Reife", en: "A lower or middle secondary diploma is generally expected" },
+        remuneration: {
+          fr: "Environ 878 à 1 172 € brut/mois selon l'année",
+          de: "Rund 878 bis 1.172 € brutto/Monat je nach Lehrjahr",
+          en: "About €878-1,172 gross/month depending on the year",
+        },
+      },
+      {
+        label: { fr: "Réception", de: "Hotelfachmann", en: "Front desk" },
+        de: "Hotelfachmann",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Mittlere Reife recommandée", de: "Mittlere Reife empfohlen", en: "A middle secondary diploma is recommended" },
+        remuneration: {
+          fr: "Environ 878 à 1 172 € brut/mois selon l'année",
+          de: "Rund 878 bis 1.172 € brutto/Monat je nach Lehrjahr",
+          en: "About €878-1,172 gross/month depending on the year",
+        },
+      },
+      {
+        label: { fr: "Personnel d'étage", de: "Housekeeping", en: "Housekeeping" },
+        de: "Housekeeping",
+        duration: { fr: "Poste d'entrée, pas une Ausbildung diplômante dédiée", de: "Einstiegsposition, keine eigene Ausbildung", en: "Entry-level role, no dedicated apprenticeship" },
+        qualifications: { fr: "Aucun diplôme requis ; formation courte en interne", de: "Kein Abschluss erforderlich; kurze betriebsinterne Einarbeitung", en: "No diploma required; short on-the-job training" },
+        remuneration: {
+          fr: "Rémunéré au salaire minimum légal ou selon la convention collective de l'établissement",
+          de: "Vergütung nach gesetzlichem Mindestlohn oder Haustarif",
+          en: "Paid at the legal minimum wage or the establishment's collective agreement rate",
+        },
+      },
     ],
   },
   "btp-artisanat": {
@@ -100,11 +236,61 @@ export const METIER_CATEGORIES: Record<
       en: "German construction and trades lack skilled workers almost nationwide. Hands-on experience or a recognized qualification is a major advantage for these occupations.",
     },
     jobs: [
-      { label: { fr: "Électricien", de: "Elektroniker", en: "Electrician" }, de: "Elektroniker" },
-      { label: { fr: "Plombier-chauffagiste", de: "Anlagenmechaniker SHK", en: "Plumber/heating" }, de: "Anlagenmechaniker SHK" },
-      { label: { fr: "Soudeur", de: "Schweißer", en: "Welder" }, de: "Schweißer" },
-      { label: { fr: "Maçon", de: "Maurer", en: "Mason" }, de: "Maurer" },
-      { label: { fr: "Peintre", de: "Maler", en: "Painter" }, de: "Maler" },
+      {
+        label: { fr: "Électricien", de: "Elektroniker", en: "Electrician" },
+        de: "Elektroniker",
+        duration: { fr: "3,5 ans (réductible à 3 ou 2,5 ans selon les résultats)", de: "3,5 Jahre (bei guten Leistungen auf 3 oder 2,5 Jahre verkürzbar)", en: "3.5 years (can be shortened to 3 or 2.5 years with strong results)" },
+        qualifications: { fr: "Realschulabschluss recommandé, bon niveau en mathématiques", de: "Realschulabschluss empfohlen, gute Mathematikkenntnisse", en: "A Realschule diploma is recommended, along with solid math skills" },
+        remuneration: {
+          fr: "Environ 800 à 1 200 € brut/mois selon l'année et l'entreprise",
+          de: "Rund 800 bis 1.200 € brutto/Monat je nach Lehrjahr und Betrieb",
+          en: "About €800-1,200 gross/month depending on the year and employer",
+        },
+      },
+      {
+        label: { fr: "Plombier-chauffagiste", de: "Anlagenmechaniker SHK", en: "Plumber/heating" },
+        de: "Anlagenmechaniker SHK",
+        duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
+        qualifications: { fr: "Hauptschulabschluss généralement suffisant", de: "Hauptschulabschluss in der Regel ausreichend", en: "A lower secondary diploma is generally sufficient" },
+        remuneration: {
+          fr: "Environ 700 à 1 100 € brut/mois selon l'année, indicatif",
+          de: "Rund 700 bis 1.100 € brutto/Monat je nach Lehrjahr, indikativ",
+          en: "About €700-1,100 gross/month depending on the year, indicative",
+        },
+      },
+      {
+        label: { fr: "Soudeur", de: "Schweißer", en: "Welder" },
+        de: "Schweißer",
+        duration: { fr: "Qualification complémentaire, pas une Ausbildung de 3 ans à part entière", de: "Zusatzqualifikation, keine eigenständige dreijährige Ausbildung", en: "An add-on certification, not a standalone 3-year apprenticeship" },
+        qualifications: { fr: "S'acquiert généralement après un métier de base (ex. Anlagenmechaniker) via une certification de soudure aux normes DIN EN", de: "In der Regel nach einem Grundberuf (z. B. Anlagenmechaniker) über eine Schweißprüfung nach DIN EN erworben", en: "Usually obtained after a base trade (e.g. Anlagenmechaniker) via a DIN EN welding certification" },
+        remuneration: {
+          fr: "Rémunération liée au métier de base suivi ; primes possibles une fois la certification obtenue",
+          de: "Vergütung richtet sich nach dem Grundberuf; nach Zertifizierung sind Zulagen möglich",
+          en: "Pay follows the base trade; bonuses are possible once certified",
+        },
+      },
+      {
+        label: { fr: "Maçon", de: "Maurer", en: "Mason" },
+        de: "Maurer",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Hauptschulabschluss suffisant", de: "Hauptschulabschluss ausreichend", en: "A lower secondary diploma is sufficient" },
+        remuneration: {
+          fr: "À partir de 632 € (Ouest) / 548 € (Est) brut/mois la 1re année, jusqu'à environ 1 000-1 200 € en 3e année",
+          de: "Ab 632 € (West) / 548 € (Ost) brutto/Monat im 1. Jahr, bis rund 1.000-1.200 € im 3. Jahr",
+          en: "From €632 (West) / €548 (East) gross/month in year 1, up to around €1,000-1,200 in year 3",
+        },
+      },
+      {
+        label: { fr: "Peintre", de: "Maler", en: "Painter" },
+        de: "Maler",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Hauptschulabschluss suffisant", de: "Hauptschulabschluss ausreichend", en: "A lower secondary diploma is sufficient" },
+        remuneration: {
+          fr: "À partir de 450 € brut/mois la 1re année, jusqu'à environ 700-900 € en 3e année",
+          de: "Ab 450 € brutto/Monat im 1. Jahr, bis rund 700-900 € im 3. Jahr",
+          en: "From €450 gross/month in year 1, up to around €700-900 in year 3",
+        },
+      },
     ],
   },
   "industrie-technique": {
@@ -121,11 +307,61 @@ export const METIER_CATEGORIES: Record<
       en: "German industry, the backbone of its economy, seeks technical profiles at every qualification level. We guide candidates according to their background and experience.",
     },
     jobs: [
-      { label: { fr: "Mécatronicien", de: "Mechatroniker", en: "Mechatronics technician" }, de: "Mechatroniker" },
-      { label: { fr: "Soudeur", de: "Schweißer", en: "Welder" }, de: "Schweißer" },
-      { label: { fr: "Maintenance", de: "Instandhaltung", en: "Maintenance" }, de: "Instandhaltung" },
-      { label: { fr: "Usinage CNC", de: "Zerspanungsmechaniker", en: "CNC machining" }, de: "Zerspanungsmechaniker" },
-      { label: { fr: "Électrotechnicien", de: "Elektroniker", en: "Electrical technician" }, de: "Elektroniker" },
+      {
+        label: { fr: "Mécatronicien", de: "Mechatroniker", en: "Mechatronics technician" },
+        de: "Mechatroniker",
+        duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
+        qualifications: { fr: "Realschulabschluss recommandé", de: "Realschulabschluss empfohlen", en: "A Realschule diploma is recommended" },
+        remuneration: {
+          fr: "Environ 900 à 1 200 € brut/mois selon l'année, indicatif",
+          de: "Rund 900 bis 1.200 € brutto/Monat je nach Lehrjahr, indikativ",
+          en: "About €900-1,200 gross/month depending on the year, indicative",
+        },
+      },
+      {
+        label: { fr: "Soudeur", de: "Schweißer", en: "Welder" },
+        de: "Schweißer",
+        duration: { fr: "Qualification complémentaire, pas une Ausbildung de 3 ans à part entière", de: "Zusatzqualifikation, keine eigenständige dreijährige Ausbildung", en: "An add-on certification, not a standalone 3-year apprenticeship" },
+        qualifications: { fr: "S'acquiert généralement après un métier de base (ex. Konstruktionsmechaniker) via une certification de soudure aux normes DIN EN", de: "In der Regel nach einem Grundberuf (z. B. Konstruktionsmechaniker) über eine Schweißprüfung nach DIN EN erworben", en: "Usually obtained after a base trade (e.g. Konstruktionsmechaniker) via a DIN EN welding certification" },
+        remuneration: {
+          fr: "Rémunération liée au métier de base suivi ; primes possibles une fois la certification obtenue",
+          de: "Vergütung richtet sich nach dem Grundberuf; nach Zertifizierung sind Zulagen möglich",
+          en: "Pay follows the base trade; bonuses are possible once certified",
+        },
+      },
+      {
+        label: { fr: "Maintenance", de: "Instandhaltung", en: "Maintenance" },
+        de: "Industriemechaniker",
+        duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
+        qualifications: { fr: "Realschulabschluss recommandé", de: "Realschulabschluss empfohlen", en: "A Realschule diploma is recommended" },
+        remuneration: {
+          fr: "Environ 900 à 1 150 € brut/mois selon l'année, indicatif",
+          de: "Rund 900 bis 1.150 € brutto/Monat je nach Lehrjahr, indikativ",
+          en: "About €900-1,150 gross/month depending on the year, indicative",
+        },
+      },
+      {
+        label: { fr: "Usinage CNC", de: "Zerspanungsmechaniker", en: "CNC machining" },
+        de: "Zerspanungsmechaniker",
+        duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
+        qualifications: { fr: "Realschulabschluss recommandé, bon niveau en mathématiques", de: "Realschulabschluss empfohlen, gute Mathematikkenntnisse", en: "A Realschule diploma is recommended, along with solid math skills" },
+        remuneration: {
+          fr: "Environ 900 à 1 150 € brut/mois selon l'année, indicatif",
+          de: "Rund 900 bis 1.150 € brutto/Monat je nach Lehrjahr, indikativ",
+          en: "About €900-1,150 gross/month depending on the year, indicative",
+        },
+      },
+      {
+        label: { fr: "Électrotechnicien", de: "Elektroniker", en: "Electrical technician" },
+        de: "Elektroniker (Automatisierungstechnik)",
+        duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
+        qualifications: { fr: "Realschulabschluss recommandé", de: "Realschulabschluss empfohlen", en: "A Realschule diploma is recommended" },
+        remuneration: {
+          fr: "Environ 900 à 1 200 € brut/mois selon l'année, indicatif",
+          de: "Rund 900 bis 1.200 € brutto/Monat je nach Lehrjahr, indikativ",
+          en: "About €900-1,200 gross/month depending on the year, indicative",
+        },
+      },
     ],
   },
   informatique: {
@@ -142,11 +378,61 @@ export const METIER_CATEGORIES: Record<
       en: "Germany's IT sector hires at every level, with attention to both technical skills and German proficiency for workplace integration.",
     },
     jobs: [
-      { label: { fr: "Développeur(se)", de: "Softwareentwickler", en: "Developer" }, de: "Softwareentwickler" },
-      { label: { fr: "Admin sys/réseau", de: "Systemadministrator", en: "Sysadmin" }, de: "Systemadministrator" },
-      { label: { fr: "Support IT", de: "IT-Support", en: "IT support" }, de: "IT-Support" },
-      { label: { fr: "Data", de: "Data Analyst", en: "Data" }, de: "Data Analyst" },
-      { label: { fr: "Cybersécurité", de: "IT-Security", en: "Cybersecurity" }, de: "IT-Security" },
+      {
+        label: { fr: "Développeur(se)", de: "Fachinformatiker Anwendungsentwicklung", en: "Developer" },
+        de: "Fachinformatiker (Anwendungsentwicklung)",
+        duration: { fr: "3 ans (réductible à 2-2,5 ans selon les résultats)", de: "3 Jahre (bei guten Leistungen auf 2-2,5 Jahre verkürzbar)", en: "3 years (can be shortened to 2-2.5 years with strong results)" },
+        qualifications: { fr: "Mittlere Reife suffisante légalement ; un niveau Abitur/Fachabitur est souvent apprécié en pratique", de: "Rechtlich reicht die Mittlere Reife; in der Praxis wird oft Abitur/Fachabitur bevorzugt", en: "A middle secondary diploma is legally enough; in practice an Abitur is often preferred" },
+        remuneration: {
+          fr: "Environ 900 à 1 200 € brut/mois selon l'année",
+          de: "Rund 900 bis 1.200 € brutto/Monat je nach Lehrjahr",
+          en: "About €900-1,200 gross/month depending on the year",
+        },
+      },
+      {
+        label: { fr: "Admin sys/réseau", de: "Fachinformatiker Systemintegration", en: "Sysadmin" },
+        de: "Fachinformatiker (Systemintegration)",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Mêmes prérequis que pour le développement", de: "Gleiche Voraussetzungen wie Anwendungsentwicklung", en: "Same prerequisites as the developer track" },
+        remuneration: {
+          fr: "Environ 885 à 1 443 € brut/mois selon l'année et l'entreprise",
+          de: "Rund 885 bis 1.443 € brutto/Monat je nach Lehrjahr und Betrieb",
+          en: "About €885-1,443 gross/month depending on the year and employer",
+        },
+      },
+      {
+        label: { fr: "Support IT", de: "IT-Support", en: "IT support" },
+        de: "IT-Support",
+        duration: { fr: "Souvent accessible via la spécialisation Systemintegration, ou une formation courte", de: "Oft über die Spezialisierung Systemintegration oder eine kurze Einarbeitung zugänglich", en: "Often reached via the Systemintegration specialization, or short on-the-job training" },
+        qualifications: { fr: "Une Ausbildung Fachinformatiker est un atout fort mais pas toujours exigée pour les postes d'entrée", de: "Eine Fachinformatiker-Ausbildung ist ein starkes Plus, für Einstiegspositionen aber nicht immer Pflicht", en: "A Fachinformatiker apprenticeship is a strong advantage but not always required for entry roles" },
+        remuneration: {
+          fr: "Variable selon l'entreprise et le niveau d'expérience",
+          de: "Je nach Unternehmen und Erfahrungsstand unterschiedlich",
+          en: "Varies by employer and experience level",
+        },
+      },
+      {
+        label: { fr: "Data", de: "Fachinformatiker Daten- und Prozessanalyse", en: "Data" },
+        de: "Fachinformatiker (Daten- und Prozessanalyse)",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Mêmes prérequis que pour le développement, bon niveau en analyse et en mathématiques", de: "Gleiche Voraussetzungen wie Anwendungsentwicklung, gute Analyse- und Mathematikkenntnisse", en: "Same prerequisites as the developer track, strong analytical and math skills" },
+        remuneration: {
+          fr: "Environ 900 à 1 200 € brut/mois selon l'année",
+          de: "Rund 900 bis 1.200 € brutto/Monat je nach Lehrjahr",
+          en: "About €900-1,200 gross/month depending on the year",
+        },
+      },
+      {
+        label: { fr: "Cybersécurité", de: "IT-Security", en: "Cybersecurity" },
+        de: "IT-Security",
+        duration: { fr: "Pas une Ausbildung autonome en Allemagne : spécialisation après une Ausbildung Fachinformatiker, ou via des études supérieures", de: "Keine eigenständige Ausbildung in Deutschland: Spezialisierung nach einer Fachinformatiker-Ausbildung oder über ein Studium", en: "Not a standalone apprenticeship in Germany: a specialization after a Fachinformatiker apprenticeship, or via higher education" },
+        qualifications: { fr: "Un premier diplôme IT (souvent Systemintegration) est le point de départ le plus courant", de: "Ein erster IT-Abschluss (meist Systemintegration) ist der übliche Ausgangspunkt", en: "A first IT qualification (usually Systemintegration) is the most common starting point" },
+        remuneration: {
+          fr: "Rémunération de spécialiste, supérieure à celle d'un poste d'entrée",
+          de: "Fachkräftevergütung, oberhalb des Einstiegsniveaus",
+          en: "Specialist-level pay, above entry-level roles",
+        },
+      },
     ],
   },
   "transport-logistique": {
@@ -163,11 +449,61 @@ export const METIER_CATEGORIES: Record<
       en: "The growth of e-commerce and the needs of German industry create strong demand for drivers and logistics staff, a sector accessible from B2 level.",
     },
     jobs: [
-      { label: { fr: "Conducteur PL", de: "Berufskraftfahrer", en: "Truck driver" }, de: "Berufskraftfahrer" },
-      { label: { fr: "Chauffeur bus", de: "Busfahrer", en: "Bus driver" }, de: "Busfahrer" },
-      { label: { fr: "Cariste", de: "Lagerist", en: "Forklift operator" }, de: "Lagerist" },
-      { label: { fr: "Préparateur", de: "Kommissionierer", en: "Order picker" }, de: "Kommissionierer" },
-      { label: { fr: "Agent logistique", de: "Fachkraft Lagerlogistik", en: "Logistics associate" }, de: "Fachkraft Lagerlogistik" },
+      {
+        label: { fr: "Conducteur PL", de: "Berufskraftfahrer", en: "Truck driver" },
+        de: "Berufskraftfahrer",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Hauptschulabschluss suffisant, permis poids lourd requis en fin de formation", de: "Hauptschulabschluss ausreichend, Lkw-Führerschein am Ende der Ausbildung erforderlich", en: "A lower secondary diploma is enough; a truck driving licence is required by the end of training" },
+        remuneration: {
+          fr: "Environ 930 à 1 220 € brut/mois selon l'année, indicatif",
+          de: "Rund 930 bis 1.220 € brutto/Monat je nach Lehrjahr, indikativ",
+          en: "About €930-1,220 gross/month depending on the year, indicative",
+        },
+      },
+      {
+        label: { fr: "Chauffeur bus", de: "Busfahrer", en: "Bus driver" },
+        de: "Busfahrer",
+        duration: { fr: "Accès généralement direct avec permis D, pas toujours une Ausbildung dédiée de 3 ans", de: "Meist direkter Zugang mit Führerschein Klasse D, keine eigene dreijährige Ausbildung", en: "Usually direct entry with a category D licence, not always a dedicated 3-year apprenticeship" },
+        qualifications: { fr: "Permis de conduire catégorie D et qualification initiale (Grundqualifikation) requis", de: "Führerschein Klasse D und Grundqualifikation erforderlich", en: "A category D driving licence and initial qualification (Grundqualifikation) are required" },
+        remuneration: {
+          fr: "Rémunération de poste qualifié dès l'embauche, variable selon l'employeur",
+          de: "Fachkräftevergütung bereits bei Einstellung, je nach Arbeitgeber unterschiedlich",
+          en: "Skilled-role pay from the start, varies by employer",
+        },
+      },
+      {
+        label: { fr: "Cariste", de: "Fachlagerist", en: "Forklift operator" },
+        de: "Fachlagerist",
+        duration: { fr: "2 ans", de: "2 Jahre", en: "2 years" },
+        qualifications: { fr: "Hauptschulabschluss suffisant", de: "Hauptschulabschluss ausreichend", en: "A lower secondary diploma is sufficient" },
+        remuneration: {
+          fr: "Environ 1 075 à 1 222 € brut/mois selon l'année",
+          de: "Rund 1.075 bis 1.222 € brutto/Monat je nach Lehrjahr",
+          en: "About €1,075-1,222 gross/month depending on the year",
+        },
+      },
+      {
+        label: { fr: "Préparateur", de: "Kommissionierer", en: "Order picker" },
+        de: "Kommissionierer",
+        duration: { fr: "Poste opérationnel, généralement sans Ausbildung dédiée de 3 ans", de: "Operative Position, meist ohne eigene dreijährige Ausbildung", en: "An operational role, usually without a dedicated 3-year apprenticeship" },
+        qualifications: { fr: "Accessible sans diplôme spécifique ; une formation courte est assurée en interne", de: "Ohne spezifischen Abschluss zugänglich; kurze betriebsinterne Einarbeitung", en: "Accessible without a specific diploma; short on-the-job training" },
+        remuneration: {
+          fr: "Rémunéré au salaire minimum légal ou selon la convention collective de l'entrepôt",
+          de: "Vergütung nach gesetzlichem Mindestlohn oder Haustarif des Lagers",
+          en: "Paid at the legal minimum wage or the warehouse's collective agreement rate",
+        },
+      },
+      {
+        label: { fr: "Agent logistique", de: "Fachkraft Lagerlogistik", en: "Logistics associate" },
+        de: "Fachkraft für Lagerlogistik",
+        duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
+        qualifications: { fr: "Hauptschulabschluss suffisant, bases en mathématiques utiles", de: "Hauptschulabschluss ausreichend, mathematisches Grundverständnis hilfreich", en: "A lower secondary diploma is sufficient; basic math skills help" },
+        remuneration: {
+          fr: "À partir de 871 € brut/mois la 1re année, indicatif",
+          de: "Ab 871 € brutto/Monat im 1. Lehrjahr, indikativ",
+          en: "From €871 gross/month in year 1, indicative",
+        },
+      },
     ],
   },
 };

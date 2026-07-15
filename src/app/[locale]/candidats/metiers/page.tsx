@@ -33,6 +33,20 @@ export default async function MetiersPage() {
   const content = await getPageContent<Content>("metiers");
   const supabase = await createClient();
 
+  const labels = {
+    duration: locale === "fr" ? "Durée" : locale === "de" ? "Dauer" : "Duration",
+    qualifications:
+      locale === "fr" ? "Qualifications" : locale === "de" ? "Voraussetzungen" : "Qualifications",
+    remuneration:
+      locale === "fr" ? "Rémunération" : locale === "de" ? "Vergütung" : "Pay during training",
+    note:
+      locale === "fr"
+        ? "Montants indicatifs bruts, avant impôts, susceptibles de varier selon la région, l'entreprise et la convention collective."
+        : locale === "de"
+          ? "Angaben brutto, indikativ, können je nach Region, Betrieb und Tarifvertrag variieren."
+          : "Indicative gross amounts, before tax; they can vary by region, employer, and collective agreement.",
+  };
+
   const { data: occupations } = await supabase
     .from("shortage_occupations")
     .select("category")
@@ -126,17 +140,34 @@ export default async function MetiersPage() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-brand-ink-secondary mb-4">{cat.body[locale]}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-sm text-brand-ink-secondary mb-5">{cat.body[locale]}</p>
+                <div className="grid gap-3 sm:grid-cols-2">
                   {cat.jobs.map((job) => (
-                    <span
+                    <div
                       key={job.de}
-                      className="rounded-full bg-brand-card border border-brand-grid px-3 py-1.5 text-xs text-brand-ink-secondary"
+                      className="rounded-lg border border-brand-grid bg-brand-card p-4"
                     >
-                      {job.label[locale]} <em className="not-italic text-brand-gold-text">· {job.de}</em>
-                    </span>
+                      <h4 className="text-sm font-medium text-brand-black mb-2">
+                        {job.label[locale]} <em className="not-italic text-brand-gold-text">· {job.de}</em>
+                      </h4>
+                      <dl className="space-y-1.5 text-xs text-brand-ink-secondary">
+                        <div>
+                          <dt className="inline font-semibold text-brand-ink">{labels.duration} : </dt>
+                          <dd className="inline">{job.duration[locale]}</dd>
+                        </div>
+                        <div>
+                          <dt className="inline font-semibold text-brand-ink">{labels.qualifications} : </dt>
+                          <dd className="inline">{job.qualifications[locale]}</dd>
+                        </div>
+                        <div>
+                          <dt className="inline font-semibold text-brand-ink">{labels.remuneration} : </dt>
+                          <dd className="inline">{job.remuneration[locale]}</dd>
+                        </div>
+                      </dl>
+                    </div>
                   ))}
                 </div>
+                <p className="text-xs text-brand-ink-muted mt-4">{labels.note}</p>
                 {cat.specialCase && (
                   <div className="mt-5 rounded-lg border border-brand-gold bg-brand-gold/10 p-5">
                     <div className="flex flex-wrap items-center gap-3 mb-2">
