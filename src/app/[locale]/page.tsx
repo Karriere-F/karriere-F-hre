@@ -89,6 +89,71 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Deux rives, un même besoin */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
+          <p className="text-xs uppercase tracking-widest text-brand-gold-text font-semibold mb-2 text-center">
+            {content.riveEyebrow}
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-serif text-brand-black mb-3 text-center">
+            {content.riveTitle}
+          </h2>
+          <p className="text-brand-ink-secondary max-w-2xl mx-auto mb-10 text-center">
+            {content.riveLead}
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="animate-fade-up rounded-xl border border-brand-grid bg-brand-card p-7">
+              <h3 className="font-serif text-lg text-brand-black mb-2">{content.riveDeTitle}</h3>
+              <p className="text-brand-ink-secondary text-sm">{content.riveDeBody}</p>
+            </div>
+            <div
+              className="animate-fade-up rounded-xl bg-brand-black text-brand-white p-7"
+              style={{ animationDelay: "60ms" }}
+            >
+              <h3 className="font-serif text-lg mb-2">{content.riveAfTitle}</h3>
+              <p className="text-brand-white/75 text-sm">{content.riveAfBody}</p>
+            </div>
+          </div>
+          <p className="text-center font-serif text-lg text-brand-gold-text mt-8">
+            {content.bridgeLine} →
+          </p>
+        </div>
+      </section>
+
+      {/* Comment se passe la traversée */}
+      <section className="bg-brand-card">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
+          <p className="text-xs uppercase tracking-widest text-brand-gold-text font-semibold mb-2 text-center">
+            {content.processEyebrow}
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-serif text-brand-black mb-3 text-center">
+            {content.processTitle}
+          </h2>
+          <p className="text-brand-ink-secondary max-w-2xl mx-auto mb-10 text-center">
+            {content.processLead}
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="animate-fade-up rounded-lg border border-brand-grid bg-brand-white p-6"
+                style={{ animationDelay: `${i * 50}ms` }}
+              >
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-gold text-brand-black font-serif font-semibold text-sm mb-3">
+                  {i}
+                </span>
+                <h3 className="text-brand-black font-medium mb-1">
+                  {content[`proc${i}Title` as "proc1Title"]}
+                </h3>
+                <p className="text-sm text-brand-ink-secondary">
+                  {content[`proc${i}Body` as "proc1Body"]}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Shortage-occupation categories — the "métiers en pénurie" grid */}
       {categories.length > 0 && (
         <section className="bg-brand-white">
