@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
-import { Link } from "../../../i18n/navigation";
+import { Link, getPathname } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { createClient } from "@/lib/supabase/server";
 import { OCCUPATION_CATEGORIES, categoryLabel } from "@/lib/occupation-categories";
@@ -26,6 +26,7 @@ export default async function HomePage() {
   const t = await getTranslations("home");
   const content = await getPageContent<HomeContent>("home");
   const locale = (await getLocale()) as Locale;
+  const formationsHref = `${getPathname({ href: "/candidats", locale })}#formations`;
   const supabase = await createClient();
 
   const { data: occupations } = await supabase
@@ -161,8 +162,8 @@ export default async function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-2xl font-serif text-brand-ink mb-10">{content.tracksTitle}</h2>
           <div className="grid gap-8 sm:grid-cols-2">
-            <Link
-              href="/candidats/formations"
+            <a
+              href={formationsHref}
               className="lift-on-hover rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors duration-150 block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
@@ -171,9 +172,9 @@ export default async function HomePage() {
               <p className="text-brand-ink-secondary text-sm leading-relaxed">
                 {content.fastTrackBody}
               </p>
-            </Link>
-            <Link
-              href="/candidats/formations"
+            </a>
+            <a
+              href={formationsHref}
               className="lift-on-hover rounded-lg border border-brand-grid p-8 hover:border-brand-gold transition-colors duration-150 block"
             >
               <h3 className="text-xl font-serif text-brand-black mb-3">
@@ -182,7 +183,7 @@ export default async function HomePage() {
               <p className="text-brand-ink-secondary text-sm leading-relaxed">
                 {content.fullTrainingBody}
               </p>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -1,7 +1,9 @@
+import { getLocale } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
-import { Link } from "@i18n/navigation";
+import { Link, getPathname } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
+import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.postuler;
@@ -10,6 +12,8 @@ export const generateMetadata = () => metadataFromNamespace("postuler", "/postul
 
 export default async function PostulerPage() {
   const content = await getPageContent<Content>("postuler");
+  const locale = (await getLocale()) as Locale;
+  const candidatsFaqHref = `${getPathname({ href: "/candidats", locale })}#faq`;
 
   return (
     <div>
@@ -23,12 +27,12 @@ export default async function PostulerPage() {
           >
             {content.cta}
           </Link>
-          <Link
-            href="/candidats/faq"
+          <a
+            href={candidatsFaqHref}
             className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
           >
             {content.ctaSecondary}
-          </Link>
+          </a>
         </div>
       </div>
     </div>

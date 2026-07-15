@@ -2,7 +2,6 @@ import type { MetadataRoute } from "next";
 import { getPathname } from "../../i18n/navigation";
 import { routing } from "../../i18n/routing";
 import { SITE_URL } from "@/lib/seo";
-import { METIER_CATEGORIES } from "@/lib/metier-categories";
 import { BLOG_CATEGORIES } from "@/lib/blog-categories";
 import { createPublicClient } from "@/lib/supabase/public";
 
@@ -15,10 +14,6 @@ const STATIC_PATHS = [
   "/a-propos/notre-histoire",
   "/a-propos/methode",
   "/candidats",
-  "/candidats/comment-ca-marche",
-  "/candidats/eligibilite",
-  "/candidats/faq",
-  "/candidats/formations",
   "/candidats/formations/allemand",
   "/candidats/formations/examens",
   "/candidats/formations/integration",
@@ -26,12 +21,7 @@ const STATIC_PATHS = [
   "/candidats/reconnaissance-diplomes",
   "/candidats/vivre-en-allemagne",
   "/entreprises",
-  "/entreprises/demande",
   "/entreprises/partenariat",
-  "/entreprises/pourquoi-afrique-centrale",
-  "/entreprises/processus",
-  "/entreprises/profils",
-  "/entreprises/services",
   "/partenaires",
   "/temoignages",
   "/postuler",
@@ -64,12 +54,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const path of STATIC_PATHS) {
     entries.push(...entriesFor(path, path === "/" ? 1 : 0.7));
-  }
-
-  for (const category of Object.keys(METIER_CATEGORIES)) {
-    entries.push(
-      ...entriesFor({ pathname: "/candidats/metiers/[category]", params: { category } }, 0.6)
-    );
   }
 
   for (const slug of Object.keys(BLOG_CATEGORIES)) {

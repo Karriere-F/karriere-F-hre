@@ -28,26 +28,6 @@ export const routing = defineRouting({
     },
 
     "/candidats": { fr: "/candidats", de: "/kandidaten", en: "/candidates" },
-    "/candidats/comment-ca-marche": {
-      fr: "/candidats/comment-ca-marche",
-      de: "/kandidaten/so-funktionierts",
-      en: "/candidates/how-it-works",
-    },
-    "/candidats/eligibilite": {
-      fr: "/candidats/eligibilite",
-      de: "/kandidaten/eignung",
-      en: "/candidates/eligibility",
-    },
-    "/candidats/faq": {
-      fr: "/candidats/faq",
-      de: "/kandidaten/faq",
-      en: "/candidates/faq",
-    },
-    "/candidats/formations": {
-      fr: "/candidats/formations",
-      de: "/kandidaten/ausbildung",
-      en: "/candidates/trainings",
-    },
     "/candidats/formations/allemand": {
       fr: "/candidats/formations/allemand",
       de: "/kandidaten/ausbildung/deutschkurs",
@@ -68,11 +48,6 @@ export const routing = defineRouting({
       de: "/kandidaten/berufe",
       en: "/candidates/occupations",
     },
-    "/candidats/metiers/[category]": {
-      fr: "/candidats/metiers/[category]",
-      de: "/kandidaten/berufe/[category]",
-      en: "/candidates/occupations/[category]",
-    },
     "/candidats/metiers/offre/[slug]": {
       fr: "/candidats/metiers/offre/[slug]",
       de: "/kandidaten/berufe/angebot/[slug]",
@@ -90,35 +65,10 @@ export const routing = defineRouting({
     },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
-    "/entreprises/demande": {
-      fr: "/entreprises/demande",
-      de: "/unternehmen/personalbedarf",
-      en: "/employers/staffing-request",
-    },
     "/entreprises/partenariat": {
       fr: "/entreprises/partenariat",
       de: "/unternehmen/partnerschaft",
       en: "/employers/partnership",
-    },
-    "/entreprises/pourquoi-afrique-centrale": {
-      fr: "/entreprises/pourquoi-afrique-centrale",
-      de: "/unternehmen/warum-zentralafrika",
-      en: "/employers/why-central-africa",
-    },
-    "/entreprises/processus": {
-      fr: "/entreprises/processus",
-      de: "/unternehmen/prozess",
-      en: "/employers/process",
-    },
-    "/entreprises/profils": {
-      fr: "/entreprises/profils",
-      de: "/unternehmen/profile",
-      en: "/employers/profiles",
-    },
-    "/entreprises/services": {
-      fr: "/entreprises/services",
-      de: "/unternehmen/leistungen",
-      en: "/employers/services",
     },
 
     "/partenaires": { fr: "/partenaires", de: "/partner", en: "/partners" },

@@ -1,22 +1,24 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
-import type { ComponentProps } from "react";
-import { Link } from "../../../i18n/navigation";
+import { Link, getPathname } from "../../../i18n/navigation";
+import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 
-type NavHref = ComponentProps<typeof Link>["href"];
-
 export async function SiteHeader() {
   const t = await getTranslations("nav");
+  const locale = (await getLocale()) as Locale;
 
   const links = [
-    { href: "/candidats", label: t("candidats") },
-    { href: "/entreprises", label: t("entreprises") },
-    { href: "/candidats/formations", label: t("formations") },
-    { href: "/a-propos", label: t("aPropos") },
-    { href: "/blog", label: t("blog") },
-  ] satisfies { href: NavHref; label: string }[];
+    { href: getPathname({ href: "/candidats", locale }), label: t("candidats") },
+    { href: getPathname({ href: "/entreprises", locale }), label: t("entreprises") },
+    {
+      href: `${getPathname({ href: "/candidats", locale })}#formations`,
+      label: t("formations"),
+    },
+    { href: getPathname({ href: "/a-propos", locale }), label: t("aPropos") },
+    { href: getPathname({ href: "/blog", locale }), label: t("blog") },
+  ];
 
   return (
     <header className="bg-brand-white text-brand-ink sticky top-0 z-40 border-b border-brand-grid">
@@ -35,13 +37,13 @@ export async function SiteHeader() {
 
           <nav className="hidden lg:flex items-center gap-5 text-sm">
             {links.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </nav>
 

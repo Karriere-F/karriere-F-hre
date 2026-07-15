@@ -1,52 +1,57 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { Link } from "../../../i18n/navigation";
+import { getPathname } from "../../../i18n/navigation";
+import type { Locale } from "../../../i18n/routing";
 
 export async function SiteFooter() {
   const t = await getTranslations("footer");
+  const locale = (await getLocale()) as Locale;
   const year = 2026;
+
+  const path = (href: Parameters<typeof getPathname>[0]["href"], hash?: string) =>
+    getPathname({ href, locale }) + (hash ? `#${hash}` : "");
 
   const columns = [
     {
       title: t("columnCandidats"),
       links: [
-        { href: "/candidats/comment-ca-marche", label: t("linkHowItWorks") },
-        { href: "/candidats/eligibilite", label: t("linkEligibility") },
-        { href: "/candidats/metiers", label: t("linkOccupations") },
-        { href: "/candidats/formations", label: t("linkTrainings") },
-        { href: "/candidats/faq", label: t("linkFaq") },
+        { href: path("/candidats", "voies"), label: t("linkHowItWorks") },
+        { href: path("/candidats", "eligibilite"), label: t("linkEligibility") },
+        { href: path("/candidats/metiers"), label: t("linkOccupations") },
+        { href: path("/candidats", "formations"), label: t("linkTrainings") },
+        { href: path("/candidats", "faq"), label: t("linkFaq") },
       ],
     },
     {
       title: t("columnEntreprises"),
       links: [
-        { href: "/entreprises/services", label: t("linkEntServices") },
-        { href: "/entreprises/profils", label: t("linkEntProfiles") },
-        { href: "/entreprises/processus", label: t("linkEntProcess") },
-        { href: "/entreprises/partenariat", label: t("linkEntPartner") },
-        { href: "/entreprises/demande", label: t("linkEntRequest") },
+        { href: path("/entreprises", "services"), label: t("linkEntServices") },
+        { href: path("/entreprises", "profils"), label: t("linkEntProfiles") },
+        { href: path("/entreprises", "processus"), label: t("linkEntProcess") },
+        { href: path("/entreprises/partenariat"), label: t("linkEntPartner") },
+        { href: path("/entreprises", "contact"), label: t("linkEntRequest") },
       ],
     },
     {
       title: t("columnCompany"),
       links: [
-        { href: "/a-propos", label: t("linkAbout") },
-        { href: "/a-propos/notre-histoire", label: t("linkFounder") },
-        { href: "/partenaires", label: t("linkPartners") },
-        { href: "/temoignages", label: t("linkTestimonials") },
-        { href: "/blog", label: t("linkBlog") },
+        { href: path("/a-propos"), label: t("linkAbout") },
+        { href: path("/a-propos/notre-histoire"), label: t("linkFounder") },
+        { href: path("/partenaires"), label: t("linkPartners") },
+        { href: path("/temoignages"), label: t("linkTestimonials") },
+        { href: path("/blog"), label: t("linkBlog") },
       ],
     },
     {
       title: t("columnLegal"),
       links: [
-        { href: "/mentions-legales", label: t("imprint") },
-        { href: "/confidentialite", label: t("privacy") },
-        { href: "/cgu", label: t("terms") },
-        { href: "/contact", label: t("contactDouala") },
+        { href: path("/mentions-legales"), label: t("imprint") },
+        { href: path("/confidentialite"), label: t("privacy") },
+        { href: path("/cgu"), label: t("terms") },
+        { href: path("/contact"), label: t("contactDouala") },
       ],
     },
-  ] as const;
+  ];
 
   return (
     <footer className="bg-brand-white text-brand-ink-secondary mt-16 border-t border-brand-grid">
@@ -62,12 +67,9 @@ export async function SiteFooter() {
               <ul className="space-y-2">
                 {col.links.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm hover:text-brand-gold-text transition-colors"
-                    >
+                    <a href={link.href} className="text-sm hover:text-brand-gold-text transition-colors">
                       {link.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
