@@ -2,6 +2,9 @@
   "nav": {
     "home": "Startseite",
     "candidats": "Kandidaten",
+    "candidatsMenuVoies": "Legale Wege nach Deutschland",
+    "candidatsMenuEligibilite": "Eignung",
+    "candidatsMenuFormations": "Sprachkurse",
     "entreprises": "Unternehmen",
     "formations": "Ausbildung",
     "metiers": "Berufe",

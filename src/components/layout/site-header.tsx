@@ -4,16 +4,24 @@ import { Link, getPathname } from "../../../i18n/navigation";
 import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
+import { NavDropdown } from "./nav-dropdown";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
   const locale = (await getLocale()) as Locale;
 
+  const candidatsHref = getPathname({ href: "/candidats", locale });
+  const candidatsDropdownItems = [
+    { href: `${candidatsHref}#voies`, label: t("candidatsMenuVoies") },
+    { href: `${candidatsHref}#eligibilite`, label: t("candidatsMenuEligibilite") },
+    { href: `${candidatsHref}#formations`, label: t("candidatsMenuFormations") },
+  ];
+
   const links = [
-    { href: getPathname({ href: "/candidats", locale }), label: t("candidats") },
+    { href: candidatsHref, label: t("candidats") },
     { href: getPathname({ href: "/entreprises", locale }), label: t("entreprises") },
     {
-      href: `${getPathname({ href: "/candidats", locale })}#formations`,
+      href: `${candidatsHref}#formations`,
       label: t("formations"),
     },
     { href: getPathname({ href: "/metiers", locale }), label: t("metiers") },
@@ -37,7 +45,8 @@ export async function SiteHeader() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 text-sm">
-            {links.map((link) => (
+            <NavDropdown label={t("candidats")} items={candidatsDropdownItems} />
+            {links.slice(1).map((link) => (
               <a
                 key={link.href}
                 href={link.href}

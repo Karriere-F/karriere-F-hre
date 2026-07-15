@@ -2,6 +2,9 @@
   "nav": {
     "home": "Home",
     "candidats": "Candidates",
+    "candidatsMenuVoies": "Legal paths to work in Germany",
+    "candidatsMenuEligibilite": "Eligibility",
+    "candidatsMenuFormations": "Language courses",
     "entreprises": "Companies",
     "formations": "Trainings",
     "metiers": "Occupations",
