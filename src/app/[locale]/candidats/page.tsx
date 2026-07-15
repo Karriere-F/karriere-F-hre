@@ -4,6 +4,7 @@ import { AnchorSection } from "@/components/marketing/anchor-section";
 import { ComparisonTable } from "@/components/marketing/comparison-table";
 import { SubNavLinks } from "@/components/marketing/sub-nav-links";
 import { EligibilityQuiz } from "@/components/candidate/eligibility-quiz";
+import { AgePathGuide } from "@/components/candidate/age-path-guide";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { FaqJsonLd } from "@/components/seo/faq-json-ld";
 import { Link } from "@i18n/navigation";
@@ -160,6 +161,35 @@ export default async function CandidatsPage() {
             </div>
           ))}
         </div>
+
+        <AgePathGuide
+          eyebrow={content.ageGuideEyebrow}
+          title={content.ageGuideTitle}
+          subtitle={content.ageGuideSubtitle}
+          ageOptions={[
+            { value: "ausbildung", label: content.ageOpt1 },
+            { value: "emploiQualifie", label: content.ageOpt2 },
+            { value: "chancenkarte", label: content.ageOpt3 },
+          ]}
+          results={{
+            ausbildung: {
+              badge: content.ageResultAusbildungBadge,
+              title: content.ageResultAusbildungTitle,
+              text: content.ageResultAusbildungText,
+            },
+            emploiQualifie: {
+              badge: content.ageResultEmploiBadge,
+              title: content.ageResultEmploiTitle,
+              text: content.ageResultEmploiText,
+            },
+            chancenkarte: {
+              badge: content.ageResultChancenkarteBadge,
+              title: content.ageResultChancenkarteTitle,
+              text: content.ageResultChancenkarteText,
+            },
+          }}
+          noteText={content.ageGuideNote}
+        />
 
         <EligibilityQuiz
           eyebrow={content.quizEyebrow}
