@@ -128,9 +128,7 @@ export default async function HomePage() {
             ].map(([title, body], i) => (
               <div
                 key={title}
-                className={`lift-on-hover animate-fade-up relative rounded-lg border border-brand-grid bg-brand-white p-5 ${
-                  i === 0 ? "lg:col-span-2" : ""
-                }`}
+                className="lift-on-hover animate-fade-up relative rounded-lg border border-brand-grid bg-brand-white p-5"
                 style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
               >
                 <span className="absolute top-3 right-4 font-serif text-2xl text-brand-gold/25">
