@@ -69,6 +69,7 @@ export const routing = defineRouting({
     },
 
     "/partenaires": { fr: "/partenaires", de: "/partner", en: "/partners" },
+    "/plan-du-site": { fr: "/plan-du-site", de: "/seitenuebersicht", en: "/sitemap" },
     "/temoignages": { fr: "/temoignages", de: "/erfahrungsberichte", en: "/testimonials" },
     "/postuler": { fr: "/postuler", de: "/bewerben", en: "/apply" },
     "/cgu": { fr: "/cgu", de: "/agb", en: "/terms" },

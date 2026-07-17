@@ -23,6 +23,7 @@ const STATIC_PATHS = [
   "/entreprises",
   "/entreprises/partenariat",
   "/partenaires",
+  "/plan-du-site",
   "/temoignages",
   "/postuler",
   "/cgu",

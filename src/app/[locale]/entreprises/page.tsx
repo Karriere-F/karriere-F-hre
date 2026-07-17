@@ -243,6 +243,52 @@ export default async function EntreprisesPage() {
         </div>
       </AnchorSection>
 
+      {/* Deux besoins : Fachkräfte ou apprentis */}
+      <AnchorSection
+        id="besoins"
+        white
+        eyebrow={content.besoinsEyebrow}
+        title={content.besoinsTitle}
+        lead={content.besoinsLead}
+      >
+        <div className="grid gap-6 sm:grid-cols-2">
+          {[
+            {
+              badge: content.besoin1Badge,
+              title: content.besoin1Title,
+              body: content.besoin1Body,
+              tags: [content.besoin1Tag1, content.besoin1Tag2, content.besoin1Tag3],
+            },
+            {
+              badge: content.besoin2Badge,
+              title: content.besoin2Title,
+              body: content.besoin2Body,
+              tags: [content.besoin2Tag1, content.besoin2Tag2, content.besoin2Tag3],
+            },
+          ].map((card, i) => (
+            <div
+              key={card.title}
+              className="animate-fade-up flex flex-col rounded-xl border border-brand-grid bg-brand-card p-7"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <span className="inline-block self-start text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full bg-brand-gold text-brand-black mb-3">
+                {card.badge}
+              </span>
+              <h3 className="font-serif text-xl text-brand-black mb-2">{card.title}</h3>
+              <p className="text-sm text-brand-ink-secondary mb-4">{card.body}</p>
+              <ul className="text-sm text-brand-ink-secondary space-y-1.5 mt-auto">
+                {card.tags.map((tag) => (
+                  <li key={tag} className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-gold shrink-0 mt-1.5" />
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </AnchorSection>
+
       {/* Pourquoi Afrique centrale */}
       <section id="pourquoi-afrique" className="bg-brand-black text-brand-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">

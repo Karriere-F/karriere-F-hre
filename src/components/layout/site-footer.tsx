@@ -48,6 +48,7 @@ export async function SiteFooter() {
         { href: path("/mentions-legales"), label: t("imprint") },
         { href: path("/confidentialite"), label: t("privacy") },
         { href: path("/cgu"), label: t("terms") },
+        { href: path("/plan-du-site"), label: t("sitemap") },
         { href: path("/contact"), label: t("contactDouala") },
       ],
     },
