@@ -67,6 +67,20 @@ export const routing = defineRouting({
       en: "/germany-visa/chancenkarte",
     },
 
+    // Silo 4. Its "métiers en pénurie" child is the existing /metiers page (linked, not
+    // duplicated) and its "vivre en Allemagne" child is /candidats/vivre-en-allemagne
+    // (linked, not moved). Only the salaires page is genuinely new.
+    "/travailler-en-allemagne": {
+      fr: "/travailler-en-allemagne",
+      de: "/in-deutschland-arbeiten",
+      en: "/working-in-germany",
+    },
+    "/travailler-en-allemagne/salaires": {
+      fr: "/travailler-en-allemagne/salaires",
+      de: "/in-deutschland-arbeiten/gehaelter",
+      en: "/working-in-germany/salaries",
+    },
+
     "/candidats/formations/integration": {
       fr: "/candidats/formations/integration",
       de: "/kandidaten/ausbildung/integration",
