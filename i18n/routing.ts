@@ -28,16 +28,19 @@ export const routing = defineRouting({
     },
 
     "/candidats": { fr: "/candidats", de: "/kandidaten", en: "/candidates" },
-    "/candidats/formations/allemand": {
-      fr: "/candidats/formations/allemand",
-      de: "/kandidaten/ausbildung/deutschkurs",
-      en: "/candidates/trainings/german-course",
+
+    // SEO silo: the German course is the most-searched entry point ("cours d'allemand"),
+    // so it sits at the root rather than three levels down under /candidats. It replaced
+    // /candidats/formations/{allemand,examens} -- those URLs 308 to here, see
+    // next.config.ts. /candidats#formations is now a teaser that links in, so the depth
+    // lives here only and the two pages don't compete for the same query.
+    "/cours-allemand": { fr: "/cours-allemand", de: "/deutschkurs", en: "/german-course" },
+    "/cours-allemand/preparation-examens": {
+      fr: "/cours-allemand/preparation-examens",
+      de: "/deutschkurs/pruefungsvorbereitung",
+      en: "/german-course/exam-preparation",
     },
-    "/candidats/formations/examens": {
-      fr: "/candidats/formations/examens",
-      de: "/kandidaten/ausbildung/pruefungsvorbereitung",
-      en: "/candidates/trainings/exam-preparation",
-    },
+
     "/candidats/formations/integration": {
       fr: "/candidats/formations/integration",
       de: "/kandidaten/ausbildung/integration",

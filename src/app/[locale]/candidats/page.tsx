@@ -27,7 +27,6 @@ export default async function CandidatsPage() {
   const content = await getPageContent<Content>("candidats");
   const formations = await getPageContent<FormationsContent>("formations");
 
-  const levels = ["levelA1", "levelA2", "levelB1", "levelB2", "levelPrep"] as const;
 
   const faqItems = [1, 2, 3, 4, 5, 6].map((i) => ({
     q: tFaq(`q${i}` as "q1"),
@@ -356,25 +355,22 @@ export default async function CandidatsPage() {
           >
             <h3 className="text-xl font-serif mb-3">{formations.fullTraining.title}</h3>
             <p className="text-brand-white/75 leading-relaxed mb-6">{formations.fullTraining.body}</p>
-            <h4 className="text-brand-gold-light font-semibold text-sm mb-2">
-              {formations.fullTraining.levelsTitle}
-            </h4>
-            <ul className="text-sm text-brand-white/75 space-y-1 mb-6">
-              {levels.map((key) => (
-                <li key={key}>{formations.fullTraining[key]}</li>
-              ))}
-            </ul>
-            <h4 className="text-brand-gold-light font-semibold text-sm mb-2">
-              {formations.fullTraining.examsTitle}
-            </h4>
-            <p className="text-sm text-brand-white/75">{formations.fullTraining.examsBody}</p>
+            {/* The level-by-level breakdown and the exam bodies used to be repeated here.
+                They now live only on /cours-allemand -- two pages spelling out the same
+                A1→B2 path would compete for the same query. This stays a teaser. */}
+            <Link
+              href="/cours-allemand"
+              className="press inline-flex rounded-full border border-brand-gold-light px-5 py-2.5 text-brand-gold-light hover:bg-brand-gold-light hover:text-brand-black transition-colors duration-150 text-sm"
+            >
+              {tFormations("linkAllemand")}
+            </Link>
           </div>
         </div>
         <p className="text-brand-ink-muted text-sm mb-8">{formations.pricingNote}</p>
         <SubNavLinks
           links={[
-            { href: "/candidats/formations/allemand", label: tFormations("linkAllemand") },
-            { href: "/candidats/formations/examens", label: tFormations("linkExamens") },
+            { href: "/cours-allemand", label: tFormations("linkAllemand") },
+            { href: "/cours-allemand/preparation-examens", label: tFormations("linkExamens") },
             { href: "/candidats/formations/integration", label: tFormations("linkIntegration") },
             { href: "/candidats/reconnaissance-diplomes", label: t("linkDiplomes") },
             { href: "/candidats/vivre-en-allemagne", label: t("linkVivre") },

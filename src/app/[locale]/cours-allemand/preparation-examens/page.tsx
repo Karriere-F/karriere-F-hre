@@ -7,18 +7,19 @@ import type frMessages from "@messages/fr.json";
 type Content = typeof frMessages.formationsExamens;
 
 export const generateMetadata = () =>
-  metadataFromNamespace("formationsExamens", "/candidats/formations/examens");
+  metadataFromNamespace("formationsExamens", "/cours-allemand/preparation-examens");
 
-export default async function FormationsExamensPage() {
+export default async function PreparationExamensPage() {
   const tNav = await getTranslations("nav");
+  const tCours = await getTranslations("coursAllemand");
   const content = await getPageContent<Content>("formationsExamens");
 
   return (
     <SimplePage
       breadcrumb={[
         { name: tNav("home"), pathname: "/" },
-        { name: tNav("candidats"), pathname: "/candidats" },
-        { name: content.title, pathname: "/candidats/formations/examens" },
+        { name: tNav("coursAllemand"), pathname: "/cours-allemand" },
+        { name: content.title, pathname: "/cours-allemand/preparation-examens" },
       ]}
       title={content.title}
       subtitle={content.subtitle}
@@ -27,6 +28,7 @@ export default async function FormationsExamensPage() {
         { title: content.section2Title, body: content.section2Body },
         { title: content.section3Title, body: content.section3Body },
       ]}
+      cta={{ label: tCours("ctaInscription"), href: "/candidate/signup" }}
     />
   );
 }
