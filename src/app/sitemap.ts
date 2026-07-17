@@ -18,6 +18,8 @@ const STATIC_PATHS = [
   "/cours-allemand/preparation-examens",
   "/ausbildung-allemagne",
   "/ausbildung-allemagne/salaire",
+  "/visa-allemagne",
+  "/visa-allemagne/chancenkarte",
   "/candidats/formations/integration",
   "/candidats/reconnaissance-diplomes",
   "/candidats/vivre-en-allemagne",
