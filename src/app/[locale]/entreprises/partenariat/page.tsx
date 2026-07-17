@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { SimplePage } from "@/components/marketing/simple-page";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
@@ -9,10 +10,16 @@ export const generateMetadata = () =>
   metadataFromNamespace("entreprisesPartenariat", "/entreprises/partenariat");
 
 export default async function EntreprisesPartenariatPage() {
+  const tNav = await getTranslations("nav");
   const content = await getPageContent<Content>("entreprisesPartenariat");
 
   return (
     <SimplePage
+      breadcrumb={[
+        { name: tNav("home"), pathname: "/" },
+        { name: tNav("entreprises"), pathname: "/entreprises" },
+        { name: content.title, pathname: "/entreprises/partenariat" },
+      ]}
       title={content.title}
       subtitle={content.subtitle}
       sections={[

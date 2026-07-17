@@ -6,7 +6,9 @@ import type { Locale } from "../../../i18n/routing";
 export async function SiteFooter() {
   const t = await getTranslations("footer");
   const locale = (await getLocale()) as Locale;
-  const year = 2026;
+  // Server-rendered per request (every page is dynamic), so this stays correct on
+  // 1 January without a redeploy -- and can't cause a hydration mismatch.
+  const year = new Date().getFullYear();
 
   const path = (href: Parameters<typeof getPathname>[0]["href"], hash?: string) =>
     getPathname({ href, locale }) + (hash ? `#${hash}` : "");

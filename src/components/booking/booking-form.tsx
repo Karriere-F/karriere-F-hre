@@ -23,13 +23,22 @@ export function BookingForm() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Fetches the slots for `date` -- syncing with an external system, which is what an
+  // effect is for. Clearing the picked time is NOT done here: that's a reaction to the
+  // user changing the date, so it belongs in onDateChange below.
   useEffect(() => {
-    setSelectedTime(null);
     startTransition(async () => {
       const available = await getAvailableSlots(date);
       setSlots(available);
     });
   }, [date]);
+
+  const onDateChange = (value: string) => {
+    setDate(value);
+    // The previously picked time belongs to the old date -- it may not even exist on
+    // the new one, and submitting it would book the wrong slot.
+    setSelectedTime(null);
+  };
 
   const onSubmit = async (formData: FormData) => {
     if (!selectedTime) return;
@@ -64,7 +73,7 @@ export function BookingForm() {
           type="date"
           value={date}
           min={todayIso()}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e) => onDateChange(e.target.value)}
           className={inputClass}
         />
       </div>

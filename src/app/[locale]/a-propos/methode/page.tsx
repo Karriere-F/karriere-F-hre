@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { SimplePage } from "@/components/marketing/simple-page";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
@@ -8,10 +9,16 @@ type Content = typeof frMessages.aProposMethode;
 export const generateMetadata = () => metadataFromNamespace("aProposMethode", "/a-propos/methode");
 
 export default async function AProposMethodePage() {
+  const tNav = await getTranslations("nav");
   const content = await getPageContent<Content>("aProposMethode");
 
   return (
     <SimplePage
+      breadcrumb={[
+        { name: tNav("home"), pathname: "/" },
+        { name: tNav("aPropos"), pathname: "/a-propos" },
+        { name: content.title, pathname: "/a-propos/methode" },
+      ]}
       title={content.title}
       subtitle={content.subtitle}
       sections={[

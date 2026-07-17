@@ -15,7 +15,6 @@ type Content = typeof frMessages.entreprises;
 export const generateMetadata = () => metadataFromNamespace("entreprises", "/entreprises");
 
 export default async function EntreprisesPage() {
-  const t = await getTranslations("entreprises");
   const tFaq = await getTranslations("entreprisesFaq");
   const tNav = await getTranslations("nav");
   const locale = (await getLocale()) as Locale;
