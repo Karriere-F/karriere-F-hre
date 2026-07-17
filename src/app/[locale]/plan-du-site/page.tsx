@@ -25,6 +25,8 @@ const GROUPS: { titleKey: string; entries: Entry[] }[] = [
       { href: "/candidats", hash: "faq", labelKey: "candidatsFaq" },
       { href: "/cours-allemand", labelKey: "formationsAllemand" },
       { href: "/cours-allemand/preparation-examens", labelKey: "formationsExamens" },
+      { href: "/ausbildung-allemagne", labelKey: "ausbildung" },
+      { href: "/ausbildung-allemagne/salaire", labelKey: "ausbildungSalaire" },
       { href: "/candidats/formations/integration", labelKey: "formationsIntegration" },
       { href: "/candidats/reconnaissance-diplomes", labelKey: "reconnaissance" },
       { href: "/candidats/vivre-en-allemagne", labelKey: "vivre" },

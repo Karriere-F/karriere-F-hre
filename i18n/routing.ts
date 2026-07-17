@@ -41,6 +41,19 @@ export const routing = defineRouting({
       en: "/german-course/exam-preparation",
     },
 
+    // Silo 2. "Ausbildung" is kept untranslated in every locale -- it's the term people
+    // actually search for, francophone candidates included.
+    "/ausbildung-allemagne": {
+      fr: "/ausbildung-allemagne",
+      de: "/ausbildung-in-deutschland",
+      en: "/ausbildung-germany",
+    },
+    "/ausbildung-allemagne/salaire": {
+      fr: "/ausbildung-allemagne/salaire",
+      de: "/ausbildung-in-deutschland/verguetung",
+      en: "/ausbildung-germany/salary",
+    },
+
     "/candidats/formations/integration": {
       fr: "/candidats/formations/integration",
       de: "/kandidaten/ausbildung/integration",
