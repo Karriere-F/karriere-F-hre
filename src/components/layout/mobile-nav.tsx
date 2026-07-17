@@ -2,17 +2,39 @@
 
 import { useState } from "react";
 import { Link } from "../../../i18n/navigation";
+import { useAudience } from "./use-audience";
 
+type NavLink = { href: string; label: string };
+
+// Mobile drawer. Mirrors the desktop switch: the pill flips audience, and the list below
+// shows that audience's links plus the company links. The switch links carry a full page
+// navigation, which also closes the drawer.
 export function MobileNav({
-  links,
+  candidatsSwitch,
+  entreprisesSwitch,
+  candidateLinks,
+  employerLinks,
+  companyLinks,
   postulerLabel,
+  employerCtaLabel,
   loginLabel,
 }: {
-  links: { href: string; label: string }[];
+  candidatsSwitch: NavLink;
+  entreprisesSwitch: NavLink;
+  candidateLinks: NavLink[];
+  employerLinks: NavLink[];
+  companyLinks: NavLink[];
   postulerLabel: string;
+  employerCtaLabel: string;
   loginLabel: string;
 }) {
   const [open, setOpen] = useState(false);
+  const audience = useAudience();
+  const primary = audience === "candidate" ? candidateLinks : employerLinks;
+
+  const pill = "flex-1 text-center px-3 py-2 rounded-full text-sm font-medium transition-colors";
+  const pillActive = "bg-brand-black text-brand-white";
+  const pillIdle = "text-brand-ink-secondary";
 
   return (
     <div className="lg:hidden">
@@ -48,9 +70,32 @@ export function MobileNav({
         }`}
       >
         <nav className="flex flex-col px-4 py-4 gap-1">
-          {links.map((link, i) => (
+          <div
+            className="flex rounded-full border border-brand-grid bg-brand-card p-0.5 mb-2"
+            role="tablist"
+            aria-label={`${candidatsSwitch.label} / ${entreprisesSwitch.label}`}
+          >
             <a
-              key={link.label}
+              href={candidatsSwitch.href}
+              role="tab"
+              aria-selected={audience === "candidate"}
+              className={`${pill} ${audience === "candidate" ? pillActive : pillIdle}`}
+            >
+              {candidatsSwitch.label}
+            </a>
+            <a
+              href={entreprisesSwitch.href}
+              role="tab"
+              aria-selected={audience === "employer"}
+              className={`${pill} ${audience === "employer" ? pillActive : pillIdle}`}
+            >
+              {entreprisesSwitch.label}
+            </a>
+          </div>
+
+          {[...primary, ...companyLinks].map((link, i) => (
+            <a
+              key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
               style={open ? { animationDelay: `${i * 40}ms` } : undefined}
@@ -61,13 +106,24 @@ export function MobileNav({
               {link.label}
             </a>
           ))}
-          <Link
-            href="/postuler"
-            onClick={() => setOpen(false)}
-            className="mt-2 rounded-full bg-brand-gold px-3 py-2 text-center text-brand-black font-medium"
-          >
-            {postulerLabel}
-          </Link>
+
+          {audience === "employer" ? (
+            <Link
+              href="/employer/signup"
+              onClick={() => setOpen(false)}
+              className="mt-2 rounded-full bg-brand-gold px-3 py-2 text-center text-brand-black font-medium"
+            >
+              {employerCtaLabel}
+            </Link>
+          ) : (
+            <Link
+              href="/postuler"
+              onClick={() => setOpen(false)}
+              className="mt-2 rounded-full bg-brand-gold px-3 py-2 text-center text-brand-black font-medium"
+            >
+              {postulerLabel}
+            </Link>
+          )}
           <Link
             href="/login"
             onClick={() => setOpen(false)}
