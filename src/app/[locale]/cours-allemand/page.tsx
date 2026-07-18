@@ -66,6 +66,44 @@ export default async function CoursAllemandPage() {
         </div>
       </div>
 
+      {/* Le choix : Full Training vs Fast Track */}
+      <AnchorSection
+        id="parcours"
+        eyebrow={content.forkEyebrow}
+        title={content.forkTitle}
+        lead={content.forkLead}
+      >
+        <div className="grid gap-6 sm:grid-cols-2">
+          <a
+            href="#full-training"
+            className="lift-on-hover animate-fade-up flex flex-col rounded-xl border border-brand-grid bg-brand-card p-7"
+          >
+            <span className="inline-block self-start text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full bg-brand-gold text-brand-black mb-3">
+              {content.fullCardBadge}
+            </span>
+            <h3 className="font-serif text-xl text-brand-black mb-2">{content.fullCardTitle}</h3>
+            <p className="text-sm text-brand-ink-secondary mb-4">{content.fullCardBody}</p>
+            <span className="mt-auto text-sm font-medium text-brand-gold-text">
+              {content.fullCardCta} →
+            </span>
+          </a>
+          <a
+            href="#fast-track"
+            className="lift-on-hover animate-fade-up flex flex-col rounded-xl bg-brand-black text-brand-white p-7"
+            style={{ animationDelay: "60ms" }}
+          >
+            <span className="inline-block self-start text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full border border-brand-gold text-brand-gold-light mb-3">
+              {content.fastCardBadge}
+            </span>
+            <h3 className="font-serif text-xl mb-2">{content.fastCardTitle}</h3>
+            <p className="text-sm text-brand-white/75 mb-4">{content.fastCardBody}</p>
+            <span className="mt-auto text-sm font-medium text-brand-gold-light">
+              {content.fastCardCta} →
+            </span>
+          </a>
+        </div>
+      </AnchorSection>
+
       {/* Pourquoi le niveau compte */}
       <AnchorSection
         id="pourquoi"
@@ -89,9 +127,9 @@ export default async function CoursAllemandPage() {
         <p className="mt-6 text-sm text-brand-ink-muted max-w-3xl">{content.voiesNote}</p>
       </AnchorSection>
 
-      {/* Le parcours, niveau par niveau */}
+      {/* Full Training : le parcours niveau par niveau */}
       <AnchorSection
-        id="parcours"
+        id="full-training"
         eyebrow={content.parcoursEyebrow}
         title={content.parcoursTitle}
         lead={content.parcoursLead}
@@ -169,20 +207,47 @@ export default async function CoursAllemandPage() {
         <p className="text-sm text-brand-ink-muted">{content.pricingNote}</p>
       </AnchorSection>
 
-      {/* Fast Track */}
+      {/* Fast Track : parcours détaillé pour les candidats déjà B2 */}
       <AnchorSection
-        id="deja-b2"
+        id="fast-track"
         white
-        eyebrow={content.fastTrackEyebrow}
-        title={content.fastTrackTitle}
-        lead={content.fastTrackBody}
+        eyebrow={content.fastEyebrow}
+        title={content.fastTitle}
+        lead={content.fastLead}
       >
-        <Link
-          href="/postuler"
-          className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
-        >
-          {content.fastTrackCta}
-        </Link>
+        <ol className="space-y-4 max-w-3xl">
+          {[
+            [content.fastStep1Title, content.fastStep1Body],
+            [content.fastStep2Title, content.fastStep2Body],
+            [content.fastStep3Title, content.fastStep3Body],
+            [content.fastStep4Title, content.fastStep4Body],
+          ].map(([title, body], i) => (
+            <li
+              key={title}
+              className="animate-fade-up flex gap-5 rounded-xl border border-brand-grid bg-brand-card p-6"
+              style={{ animationDelay: `${i * 50}ms` }}
+            >
+              <span className="shrink-0 h-10 w-10 rounded-lg bg-brand-gold text-brand-black font-serif font-bold flex items-center justify-center">
+                {i + 1}
+              </span>
+              <div>
+                <h3 className="font-serif text-lg text-brand-black mb-1">{title}</h3>
+                <p className="text-sm text-brand-ink-secondary">{body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <div className="mt-6 rounded-lg border-l-4 border-brand-gold bg-brand-gold/10 p-5 max-w-3xl">
+          <p className="text-sm text-brand-ink-secondary">{content.fastNote}</p>
+        </div>
+        <div className="mt-6">
+          <Link
+            href="/postuler"
+            className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+          >
+            {content.fastCta}
+          </Link>
+        </div>
       </AnchorSection>
 
       {/* CTA final */}
