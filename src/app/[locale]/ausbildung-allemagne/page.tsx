@@ -22,7 +22,7 @@ export default async function AusbildungPage() {
 
   // Cross-page anchors can't use the typed <Link> (it only takes registered pathname
   // keys, never "key#anchor") -- same plain <a> pattern as site-header/site-footer.
-  const eligibiliteHref = `${getPathname({ href: "/candidats", locale })}#eligibilite`;
+  const metiersHref = `${getPathname({ href: "/metiers", locale })}#secteurs`;
   const besoinsHref = `${getPathname({ href: "/entreprises", locale })}#besoins`;
 
   const quoi = [
@@ -61,16 +61,16 @@ export default async function AusbildungPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
           <a
-            href={eligibiliteHref}
+            href={metiersHref}
             className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
-            {content.ctaEval}
+            {content.ctaMetiers}
           </a>
           <a
-            href="#salaire"
+            href="#conditions"
             className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
           >
-            {content.ctaSalaire}
+            {content.ctaConditions}
           </a>
         </div>
       </div>
@@ -120,14 +120,6 @@ export default async function AusbildungPage() {
           ))}
         </div>
         <p className="mt-6 text-sm text-brand-ink-muted max-w-3xl">{content.conditionsNote}</p>
-        <div className="mt-6">
-          <a
-            href={eligibiliteHref}
-            className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
-          >
-            {content.conditionsCta}
-          </a>
-        </div>
       </AnchorSection>
 
       {/* La langue */}
@@ -232,10 +224,10 @@ export default async function AusbildungPage() {
         <p className="font-medium text-brand-black max-w-3xl mb-6">{content.payeLine}</p>
 
         <a
-          href={eligibiliteHref}
+          href={metiersHref}
           className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
         >
-          {content.ctaEval}
+          {content.ctaMetiers}
         </a>
       </AnchorSection>
 
@@ -244,12 +236,12 @@ export default async function AusbildungPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif max-w-xl">{content.finalTitle}</h2>
           <p className="text-brand-white/80 max-w-lg">{content.finalText}</p>
-          <a
-            href={eligibiliteHref}
+          <Link
+            href="/postuler"
             className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
             {content.finalCta}
-          </a>
+          </Link>
           <p className="text-sm text-brand-white/50 mt-4">
             {content.employeurNote}{" "}
             <a href={besoinsHref} className="text-brand-gold-light hover:underline font-medium">
