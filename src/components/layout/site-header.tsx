@@ -26,14 +26,13 @@ export async function SiteHeader() {
     {
       href: path("/cours-allemand"),
       label: t("coursAllemand"),
-      // Clicking the label goes to the hub; the tracks and the quiz are dedicated pages,
-      // while "pourquoi" and "l'inscription" are rich sections of the hub (anchors).
+      // Clicking the label goes to the hub; the dropdown lists only the three dedicated
+      // pages. "Pourquoi le niveau" and "L'inscription" stay as sections on the hub, not
+      // in the menu -- reached by opening the hub itself.
       items: [
         { href: path("/cours-allemand/full-training"), label: t("coursFullTraining") },
         { href: path("/cours-allemand/fast-track"), label: t("coursFastTrack") },
         { href: path("/cours-allemand/quel-parcours"), label: t("coursQuiz") },
-        { href: path("/cours-allemand", "pourquoi"), label: t("coursPourquoi") },
-        { href: path("/cours-allemand", "inscription"), label: t("coursInscription") },
       ],
     },
     { href: path("/ausbildung-allemagne"), label: t("ausbildung") },
