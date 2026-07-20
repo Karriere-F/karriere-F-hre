@@ -2,7 +2,8 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
-import { Link } from "@i18n/navigation";
+import { CourseTrackQuiz } from "@/components/candidate/course-track-quiz";
+import { Link, getPathname } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
@@ -36,6 +37,29 @@ export default async function CoursAllemandPage() {
   ];
 
   const includes = [content.inc1, content.inc2, content.inc3, content.inc4, content.inc5];
+
+  // Same-page anchors for the two track sections; the advisor result goes to /postuler.
+  const postulerHref = getPathname({ href: "/postuler", locale });
+  const quizResults = {
+    full: {
+      title: content.quizResFullTitle,
+      text: content.quizResFullText,
+      ctaLabel: content.quizResFullCta,
+      ctaHref: "#full-training",
+    },
+    fast: {
+      title: content.quizResFastTitle,
+      text: content.quizResFastText,
+      ctaLabel: content.quizResFastCta,
+      ctaHref: "#fast-track",
+    },
+    advisor: {
+      title: content.quizResAdvisorTitle,
+      text: content.quizResAdvisorText,
+      ctaLabel: content.quizResAdvisorCta,
+      ctaHref: postulerHref,
+    },
+  };
 
   return (
     <div>
@@ -103,6 +127,45 @@ export default async function CoursAllemandPage() {
           </a>
         </div>
       </AnchorSection>
+
+      {/* Quel parcours choisir : test express */}
+      <section id="quel-parcours" className="scroll-mt-24 bg-brand-card">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <CourseTrackQuiz
+            eyebrow={content.quizEyebrow}
+            title={content.quizTitle}
+            subtitle={content.quizSubtitle}
+            q1={{
+              title: content.quizQ1Title,
+              options: [
+                { value: "none", label: content.quizQ1o1 },
+                { value: "a1a2", label: content.quizQ1o2 },
+                { value: "b1", label: content.quizQ1o3 },
+                { value: "b2plus", label: content.quizQ1o4 },
+              ],
+            }}
+            q2={{
+              title: content.quizQ2Title,
+              options: [
+                { value: "b2recent", label: content.quizQ2o1 },
+                { value: "b2old", label: content.quizQ2o2 },
+                { value: "lower", label: content.quizQ2o3 },
+                { value: "none", label: content.quizQ2o4 },
+              ],
+            }}
+            q3={{
+              title: content.quizQ3Title,
+              options: [
+                { value: "learn", label: content.quizQ3o1 },
+                { value: "workfast", label: content.quizQ3o2 },
+                { value: "evaluate", label: content.quizQ3o3 },
+              ],
+            }}
+            results={quizResults}
+            resetLabel={content.quizReset}
+          />
+        </div>
+      </section>
 
       {/* Pourquoi le niveau compte */}
       <AnchorSection
