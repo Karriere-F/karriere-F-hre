@@ -23,7 +23,6 @@ export default async function CoursAllemandHubPage() {
     [content.voie2Title, content.voie2Body],
     [content.voie3Title, content.voie3Body],
   ];
-  const includes = [content.inc1, content.inc2, content.inc3, content.inc4, content.inc5];
 
   return (
     <div>
@@ -127,23 +126,6 @@ export default async function CoursAllemandHubPage() {
           ))}
         </div>
         <p className="mt-6 text-sm text-brand-ink-muted max-w-3xl">{content.voiesNote}</p>
-      </AnchorSection>
-
-      {/* L'inscription */}
-      <AnchorSection id="inscription" eyebrow={content.inscriptionEyebrow} title={content.inscriptionTitle}>
-        <ul className="grid gap-3 sm:grid-cols-2 max-w-3xl mb-6">
-          {includes.map((item) => (
-            <li
-              key={item}
-              className="flex items-start gap-2 text-sm text-brand-ink-secondary rounded-lg border border-brand-grid bg-brand-white p-4"
-            >
-              <span className="text-brand-gold-text font-bold shrink-0">✓</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-        {/* Pricing never appears on the public site -- this points at contact instead. */}
-        <p className="text-sm text-brand-ink-muted">{content.pricingNote}</p>
       </AnchorSection>
 
       {/* CTA final */}

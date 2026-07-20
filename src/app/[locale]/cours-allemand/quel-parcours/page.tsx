@@ -41,12 +41,6 @@ export default async function QuelParcoursPage() {
       ctaLabel: content.quizResFastCta,
       ctaHref: getPathname({ href: "/cours-allemand/fast-track", locale }),
     },
-    advisor: {
-      title: content.quizResAdvisorTitle,
-      text: content.quizResAdvisorText,
-      ctaLabel: content.quizResAdvisorCta,
-      ctaHref: getPathname({ href: "/postuler", locale }),
-    },
   };
 
   return (
@@ -91,7 +85,6 @@ export default async function QuelParcoursPage() {
               options: [
                 { value: "learn", label: content.quizQ3o1 },
                 { value: "workfast", label: content.quizQ3o2 },
-                { value: "evaluate", label: content.quizQ3o3 },
               ],
             }}
             results={quizResults}
