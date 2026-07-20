@@ -1,4 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import { Wrench, HeartPulse, GraduationCap } from "lucide-react";
 import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
@@ -184,12 +185,58 @@ export default async function AusbildungPage() {
         </ol>
       </AnchorSection>
 
-      {/* Après l'Ausbildung */}
+      {/* Après l'Ausbildung : le tremplin -> métier PUIS études */}
       <AnchorSection id="apres" white eyebrow={content.apresEyebrow} title={content.apresTitle}>
-        <div className="max-w-3xl">
-          <p className="text-brand-ink-secondary mb-3">{content.apresBody1}</p>
-          <p className="text-sm text-brand-ink-muted">{content.apresBody2}</p>
+        <blockquote className="border-l-4 border-brand-gold pl-5 py-1 max-w-3xl mb-6">
+          <p className="font-serif text-xl sm:text-2xl text-brand-black italic">{content.apresQuote}</p>
+        </blockquote>
+        <p className="text-brand-ink-secondary max-w-3xl mb-8">{content.apresIntro}</p>
+
+        {/* Les deux transformations */}
+        <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mb-8">
+          {[
+            { Icon: Wrench, kicker: content.path1Kicker, goal: content.path1Goal },
+            { Icon: HeartPulse, kicker: content.path2Kicker, goal: content.path2Goal },
+          ].map(({ Icon, kicker, goal }, i) => (
+            <div
+              key={kicker}
+              className="lift-on-hover animate-fade-up rounded-xl border border-brand-grid bg-brand-card p-6"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text mb-4">
+                <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
+              </span>
+              <p className="text-xs uppercase tracking-widest text-brand-ink-muted mb-1">{kicker}</p>
+              <div className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-brand-gold text-2xl font-bold leading-none">
+                  →
+                </span>
+                <span className="font-serif text-2xl text-brand-gold-text">{goal}</span>
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* Le Bac = clé de l'université */}
+        <div className="rounded-xl border-l-4 border-brand-gold bg-brand-gold/10 p-6 max-w-3xl mb-6">
+          <div className="flex items-start gap-3">
+            <GraduationCap size={24} strokeWidth={1.75} aria-hidden="true" className="shrink-0 text-brand-gold-text mt-0.5" />
+            <div>
+              <h3 className="font-serif text-lg text-brand-black mb-1">{content.bacTitle}</h3>
+              <p className="text-sm text-brand-ink-secondary">{content.bacBody}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Payé, puis étudier */}
+        <p className="font-medium text-brand-black max-w-3xl mb-6">{content.payeLine}</p>
+
+        <a
+          href={eligibiliteHref}
+          className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+        >
+          {content.ctaEval}
+        </a>
       </AnchorSection>
 
       {/* CTA final */}
