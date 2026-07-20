@@ -66,7 +66,14 @@ export function CourseTrackQuiz({
       <div className="space-y-6">
         <Question number={1} title={q1.title} options={q1.options} value={level} onChange={setLevel} />
         <Question number={2} title={q2.title} options={q2.options} value={cert} onChange={setCert} />
-        <Question number={3} title={q3.title} options={q3.options} value={priority} onChange={setPriority} />
+        <Question
+          number={3}
+          title={q3.title}
+          options={q3.options}
+          value={priority}
+          onChange={setPriority}
+          highlightValue="evaluate"
+        />
       </div>
 
       {result && (
@@ -100,13 +107,20 @@ function Question({
   options,
   value,
   onChange,
+  highlightValue,
 }: {
   number: number;
   title: string;
   options: Option[];
   value: string | null;
   onChange: (v: string) => void;
+  // One option can be pulled out onto its own centered, highlighted row -- e.g. the
+  // "get my profile assessed" shortcut, which is an action rather than a self-description.
+  highlightValue?: string;
 }) {
+  const normal = highlightValue ? options.filter((o) => o.value !== highlightValue) : options;
+  const special = highlightValue ? options.find((o) => o.value === highlightValue) : undefined;
+
   return (
     <div>
       <p className="font-serif text-base mb-3 flex items-center gap-2.5">
@@ -116,7 +130,7 @@ function Question({
         {title}
       </p>
       <div className="flex flex-wrap gap-2 pl-8">
-        {options.map((opt) => (
+        {normal.map((opt) => (
           <button
             key={opt.value}
             type="button"
@@ -131,6 +145,22 @@ function Question({
           </button>
         ))}
       </div>
+
+      {special && (
+        <div className="pl-8 mt-3 flex justify-center">
+          <button
+            type="button"
+            onClick={() => onChange(special.value)}
+            className={`press rounded-lg border-2 px-5 py-2.5 text-sm font-semibold transition-colors duration-150 ${
+              value === special.value
+                ? "bg-brand-gold-light text-brand-black border-brand-gold-light"
+                : "bg-brand-gold-light/10 text-brand-gold-light border-brand-gold-light ring-2 ring-brand-gold-light/25 hover:bg-brand-gold-light/20"
+            }`}
+          >
+            {special.label}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
