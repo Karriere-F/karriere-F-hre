@@ -23,7 +23,15 @@ export async function SiteHeader() {
   const entreprisesSwitch = { href: path("/entreprises"), label: t("entreprises") };
 
   const candidateLinks = [
-    { href: path("/cours-allemand"), label: t("coursAllemand") },
+    {
+      href: path("/cours-allemand"),
+      label: t("coursAllemand"),
+      // Clicking "Cours d'allemand" opens a dropdown to the page's two tracks.
+      items: [
+        { href: path("/cours-allemand", "full-training"), label: t("coursFullTraining") },
+        { href: path("/cours-allemand", "fast-track"), label: t("coursFastTrack") },
+      ],
+    },
     { href: path("/ausbildung-allemagne"), label: t("ausbildung") },
     { href: path("/visa-allemagne"), label: t("visa") },
     { href: path("/travailler-en-allemagne"), label: t("travailler") },

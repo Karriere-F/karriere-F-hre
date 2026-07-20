@@ -22,11 +22,11 @@ export default async function CoursAllemandPage() {
   // and a duration, so four separate URLs would compete for the same query with almost
   // the same words. There is deliberately no C1 -- the course stops at B2.
   const levels = [
-    { id: "a1", title: content.a1Title, duree: content.a1Duree, body: content.a1Body },
-    { id: "a2", title: content.a2Title, duree: content.a2Duree, body: content.a2Body },
-    { id: "b1", title: content.b1Title, duree: content.b1Duree, body: content.b1Body },
-    { id: "b2", title: content.b2Title, duree: content.b2Duree, body: content.b2Body },
-    { id: "examen", title: content.prepTitle, duree: content.prepDuree, body: content.prepBody },
+    { id: "a1", title: content.a1Title, duree: content.a1Duree, sous: content.a1Sous, body: content.a1Body },
+    { id: "a2", title: content.a2Title, duree: content.a2Duree, sous: content.a2Sous, body: content.a2Body },
+    { id: "b1", title: content.b1Title, duree: content.b1Duree, sous: content.b1Sous, body: content.b1Body },
+    { id: "b2", title: content.b2Title, duree: content.b2Duree, sous: content.b2Sous, body: content.b2Body },
+    { id: "examen", title: content.prepTitle, duree: content.prepDuree, sous: null, body: content.prepBody },
   ];
 
   const voies = [
@@ -134,6 +134,14 @@ export default async function CoursAllemandPage() {
         title={content.parcoursTitle}
         lead={content.parcoursLead}
       >
+        {/* Rythme : le détail qui distingue un cours intensif d'un cours du soir */}
+        <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-brand-gold/40 bg-brand-gold/10 px-5 py-4 max-w-3xl">
+          <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-text">
+            {content.rythmeLabel}
+          </span>
+          <span className="text-sm text-brand-ink-secondary">{content.rythmeText}</span>
+        </div>
+
         <ol className="space-y-4 max-w-3xl">
           {levels.map((level, i) => (
             <li
@@ -150,12 +158,25 @@ export default async function CoursAllemandPage() {
                   <h3 className="font-serif text-lg text-brand-black">{level.title}</h3>
                   <span className="text-xs font-medium text-brand-gold-text">{level.duree}</span>
                 </div>
+                {level.sous && (
+                  <p className="text-xs text-brand-ink-muted mb-1.5">
+                    {content.sousLabel} : {level.sous}
+                  </p>
+                )}
                 <p className="text-sm text-brand-ink-secondary">{level.body}</p>
               </div>
             </li>
           ))}
         </ol>
         <p className="mt-6 text-sm text-brand-ink-muted">{content.totalNote}</p>
+        <div className="mt-8">
+          <Link
+            href="/candidate/signup"
+            className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+          >
+            {content.ctaInscription}
+          </Link>
+        </div>
       </AnchorSection>
 
       {/* Notre différence */}

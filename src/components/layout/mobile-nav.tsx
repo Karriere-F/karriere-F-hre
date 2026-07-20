@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "../../../i18n/navigation";
 import { useAudience } from "./use-audience";
 
-type NavLink = { href: string; label: string };
+type NavLink = { href: string; label: string; items?: { href: string; label: string }[] };
 
 // Mobile drawer. Mirrors the desktop switch: the pill flips audience, and the list below
 // shows that audience's links plus the company links. The switch links carry a full page
@@ -94,17 +94,29 @@ export function MobileNav({
           </div>
 
           {[...primary, ...companyLinks].map((link, i) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              style={open ? { animationDelay: `${i * 40}ms` } : undefined}
-              className={`rounded px-2 py-2.5 text-brand-ink-secondary hover:text-brand-gold-text hover:bg-brand-card transition-colors ${
-                open ? "animate-fade-up" : ""
-              }`}
-            >
-              {link.label}
-            </a>
+            <div key={link.href} style={open ? { animationDelay: `${i * 40}ms` } : undefined} className={open ? "animate-fade-up" : ""}>
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block rounded px-2 py-2.5 text-brand-ink-secondary hover:text-brand-gold-text hover:bg-brand-card transition-colors"
+              >
+                {link.label}
+              </a>
+              {link.items && (
+                <div className="ml-4 flex flex-col border-l border-brand-grid pl-3">
+                  {link.items.map((sub) => (
+                    <a
+                      key={sub.href}
+                      href={sub.href}
+                      onClick={() => setOpen(false)}
+                      className="rounded px-2 py-2 text-sm text-brand-ink-muted hover:text-brand-gold-text hover:bg-brand-card transition-colors"
+                    >
+                      {sub.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
 
           {audience === "employer" ? (

@@ -1,13 +1,14 @@
 "use client";
 
+import { NavDropdown } from "./nav-dropdown";
 import { useAudience } from "./use-audience";
 
-type NavLink = { href: string; label: string };
+type NavLink = { href: string; label: string; items?: { href: string; label: string }[] };
 
 // Desktop primary nav. The switch sets the audience; the row below shows that audience's
-// destinations flat, then the audience-neutral company links. Both audiences are
-// symmetric -- no dropdown -- and the /candidats and /entreprises hubs are reached by the
-// switch itself. All hrefs are pre-localized server-side (plain <a>, full navigation).
+// destinations flat, then the audience-neutral company links. An entry with `items`
+// renders as a hover/click dropdown (Cours d'allemand -> Full Training / Fast Track).
+// The /candidats and /entreprises hubs are reached by the switch itself.
 export function HeaderNav({
   candidatsSwitch,
   entreprisesSwitch,
@@ -27,6 +28,8 @@ export function HeaderNav({
   const pill = "px-3.5 py-1.5 rounded-full transition-colors duration-150";
   const pillActive = "bg-brand-black text-brand-white";
   const pillIdle = "text-brand-ink-secondary hover:text-brand-gold-text";
+  const linkClass =
+    "text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150 whitespace-nowrap";
 
   return (
     <div className="hidden lg:flex items-center gap-6">
@@ -54,15 +57,15 @@ export function HeaderNav({
       </div>
 
       <nav className="flex items-center gap-5 text-sm">
-        {[...primary, ...companyLinks].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className="text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150 whitespace-nowrap"
-          >
-            {link.label}
-          </a>
-        ))}
+        {[...primary, ...companyLinks].map((link) =>
+          link.items ? (
+            <NavDropdown key={link.label} label={link.label} items={link.items} />
+          ) : (
+            <a key={link.href} href={link.href} className={linkClass}>
+              {link.label}
+            </a>
+          )
+        )}
       </nav>
     </div>
   );
