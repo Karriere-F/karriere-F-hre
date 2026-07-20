@@ -207,7 +207,7 @@ export default async function CoursAllemandPage() {
         <p className="text-sm text-brand-ink-muted">{content.pricingNote}</p>
       </AnchorSection>
 
-      {/* Fast Track : parcours détaillé pour les candidats déjà B2 */}
+      {/* Fast Track : parcours détaillé pour les candidats déjà B2 certifié */}
       <AnchorSection
         id="fast-track"
         white
@@ -215,6 +215,23 @@ export default async function CoursAllemandPage() {
         title={content.fastTitle}
         lead={content.fastLead}
       >
+        {/* Ce que comprend le Fast Track : les modules de préparation professionnelle */}
+        <h3 className="font-serif text-lg text-brand-black mb-4">{content.fastInclTitle}</h3>
+        <ul className="grid gap-3 sm:grid-cols-2 max-w-3xl mb-12">
+          {[content.fastIncl1, content.fastIncl2, content.fastIncl3, content.fastIncl4].map(
+            (item) => (
+              <li
+                key={item}
+                className="flex items-start gap-2 text-sm text-brand-ink-secondary rounded-lg border border-brand-grid bg-brand-card p-4"
+              >
+                <span className="text-brand-gold-text font-bold shrink-0">✓</span>
+                {item}
+              </li>
+            )
+          )}
+        </ul>
+
+        <h3 className="font-serif text-lg text-brand-black mb-4">{content.fastStepsTitle}</h3>
         <ol className="space-y-4 max-w-3xl">
           {[
             [content.fastStep1Title, content.fastStep1Body],
