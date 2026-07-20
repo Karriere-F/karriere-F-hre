@@ -22,7 +22,6 @@ export default async function AusbildungPage() {
 
   // Cross-page anchors can't use the typed <Link> (it only takes registered pathname
   // keys, never "key#anchor") -- same plain <a> pattern as site-header/site-footer.
-  const metiersHref = `${getPathname({ href: "/metiers", locale })}#secteurs`;
   const besoinsHref = `${getPathname({ href: "/entreprises", locale })}#besoins`;
 
   const quoi = [
@@ -60,12 +59,12 @@ export default async function AusbildungPage() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
-          <a
-            href={metiersHref}
+          <Link
+            href="/ausbildung-allemagne/metiers"
             className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
             {content.ctaMetiers}
-          </a>
+          </Link>
           <a
             href="#conditions"
             className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
@@ -223,12 +222,12 @@ export default async function AusbildungPage() {
         {/* Payé, puis étudier */}
         <p className="font-medium text-brand-black max-w-3xl mb-6">{content.payeLine}</p>
 
-        <a
-          href={metiersHref}
+        <Link
+          href="/ausbildung-allemagne/metiers"
           className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
         >
           {content.ctaMetiers}
-        </a>
+        </Link>
       </AnchorSection>
 
       {/* CTA final */}

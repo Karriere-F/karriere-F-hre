@@ -421,6 +421,12 @@ export const CONTENT_PAGES = {
       "employeurCta",
     ],
   },
+  ausbildungMetiers: {
+    // Page-level copy only; the trades/durations/pay come from metier-categories.ts.
+    label: "Ausbildung : Les métiers",
+    path: "/ausbildung-allemagne/metiers",
+    fields: ["title", "subtitle", "eyebrow", "sectionTitle", "sectionLead", "cta"],
+  },
   ausbildungSalaire: {
     // The euro figures are public German data (BIBB/BBiG) and go stale every year --
     // they're editable so they can be refreshed without a deploy. Whoever updates them

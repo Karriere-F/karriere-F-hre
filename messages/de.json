@@ -696,6 +696,14 @@
     "finalText": "Die Vergütung ist nur ein Kriterium. Der Test der legalen Wege prüft Ihre tatsächliche Eignung in vier Fragen.",
     "finalCta": "Test starten"
   },
+  "ausbildungMetiers": {
+    "title": "Ausbildungen in Deutschland: welche Berufe, welche Dauer, welche Vergütung",
+    "subtitle": "Welche Ausbildungen können Sie in Deutschland machen? Hier finden Sie, Branche für Branche, die Berufe der dualen Ausbildung — jeweils mit der deutschen Bezeichnung, der Dauer, den Voraussetzungen und der Vergütung ab dem ersten Jahr.",
+    "eyebrow": "Ausbildungen nach Branche",
+    "sectionTitle": "Die Berufe der dualen Ausbildung",
+    "sectionLead": "Jede Branche, ihre Ausbildungsberufe (mit deutscher Bezeichnung), die Dauer und die während der Ausbildung gezahlte Vergütung.",
+    "cta": "Für eine Ausbildung bewerben"
+  },
   "visa": {
     "title": "Visum für Deutschland: der richtige Weg je nach Ihrem Zugang",
     "subtitle": "Kurz gesagt: Es gibt nicht ein Deutschland-Visum, sondern mehrere — je nach Weg: qualifizierte Beschäftigung, Ausbildung oder Chancenkarte. Karriere Fähre bestimmt Ihres und erstellt den gesamten Antrag, bis zum Termin in der Botschaft.",
@@ -1255,6 +1263,7 @@
     "coursQuiz": "Welcher Weg passt?",
     "formationsExamens": "Prüfungsvorbereitung",
     "ausbildung": "Ausbildung in Deutschland",
+    "ausbildungMetiers": "Die Ausbildungen (Berufe)",
     "ausbildungSalaire": "Ausbildungsvergütung",
     "visa": "Visum & Formalitäten",
     "visaChancenkarte": "Chancenkarte",

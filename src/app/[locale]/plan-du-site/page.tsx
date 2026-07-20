@@ -29,6 +29,7 @@ const GROUPS: { titleKey: string; entries: Entry[] }[] = [
       { href: "/cours-allemand/quel-parcours", labelKey: "coursQuiz" },
       { href: "/cours-allemand/preparation-examens", labelKey: "formationsExamens" },
       { href: "/ausbildung-allemagne", labelKey: "ausbildung" },
+      { href: "/ausbildung-allemagne/metiers", labelKey: "ausbildungMetiers" },
       { href: "/ausbildung-allemagne/salaire", labelKey: "ausbildungSalaire" },
       { href: "/visa-allemagne", labelKey: "visa" },
       { href: "/visa-allemagne/chancenkarte", labelKey: "visaChancenkarte" },

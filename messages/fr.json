@@ -696,6 +696,14 @@
     "finalText": "Le salaire n'est qu'un critère. Le test des voies légales vérifie votre éligibilité réelle en quatre questions.",
     "finalCta": "Faire le test"
   },
+  "ausbildungMetiers": {
+    "title": "Les Ausbildung en Allemagne : quels métiers, quelle durée, quel salaire",
+    "subtitle": "Quelles Ausbildung pouvez-vous préparer en Allemagne ? Voici, secteur par secteur, les métiers qui se forment en alternance — avec, pour chacun, l'intitulé allemand, la durée de la formation, les prérequis et la rémunération versée dès la première année.",
+    "eyebrow": "Les Ausbildung par secteur",
+    "sectionTitle": "Les métiers qui se préparent en Ausbildung",
+    "sectionLead": "Chaque secteur, ses métiers en alternance (avec l'intitulé allemand), la durée de la formation et le salaire versé pendant la formation.",
+    "cta": "Postuler pour une Ausbildung"
+  },
   "visa": {
     "title": "Visa pour l'Allemagne : la bonne démarche selon votre voie",
     "subtitle": "En bref : il n'existe pas un seul visa Allemagne, mais plusieurs, chacun lié à une voie — emploi qualifié, Ausbildung ou Chancenkarte. Karriere Fähre identifie le vôtre et monte tout le dossier, jusqu'au rendez-vous à l'ambassade.",
@@ -1255,6 +1263,7 @@
     "coursQuiz": "Quel parcours choisir ?",
     "formationsExamens": "Préparation aux examens",
     "ausbildung": "Ausbildung en Allemagne",
+    "ausbildungMetiers": "Les Ausbildung (métiers)",
     "ausbildungSalaire": "Salaire en Ausbildung",
     "visa": "Visa & démarches",
     "visaChancenkarte": "Chancenkarte",

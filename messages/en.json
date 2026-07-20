@@ -696,6 +696,14 @@
     "finalText": "Pay is only one criterion. The legal routes test checks your actual eligibility in four questions.",
     "finalCta": "Take the test"
   },
+  "ausbildungMetiers": {
+    "title": "Ausbildungen in Germany: which trades, how long, what pay",
+    "subtitle": "Which Ausbildungen can you train for in Germany? Here, sector by sector, are the trades taught through dual training — each with its German name, the length of training, the requirements and the pay from the first year.",
+    "eyebrow": "Ausbildungen by sector",
+    "sectionTitle": "The trades taught through an Ausbildung",
+    "sectionLead": "Each sector, its dual-training trades (with the German name), the length of training and the pay during training.",
+    "cta": "Apply for an Ausbildung"
+  },
   "visa": {
     "title": "Visa for Germany: the right route depending on your path",
     "subtitle": "In short: there isn't one Germany visa but several, each tied to a route — skilled employment, Ausbildung or the Chancenkarte. Karriere Fähre identifies yours and assembles the whole file, right up to the embassy appointment.",
@@ -1255,6 +1263,7 @@
     "coursQuiz": "Which track is right?",
     "formationsExamens": "Exam preparation",
     "ausbildung": "Ausbildung in Germany",
+    "ausbildungMetiers": "The Ausbildungen (trades)",
     "ausbildungSalaire": "Ausbildung pay",
     "visa": "Visa & formalities",
     "visaChancenkarte": "Chancenkarte",

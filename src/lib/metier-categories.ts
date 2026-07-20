@@ -19,6 +19,10 @@ type LocalizedText = Record<Locale, string>;
 type Job = {
   label: LocalizedText;
   de: string;
+  // Whether this is a genuine dual Ausbildung (a paid 2-3.5 year vocational training),
+  // as opposed to an entry-level role or an add-on certification. Drives which jobs the
+  // /ausbildung-allemagne/metiers page lists.
+  ausbildung: boolean;
   duration: LocalizedText;
   qualifications: LocalizedText;
   remuneration: LocalizedText;
@@ -57,6 +61,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Infirmier(ère)", de: "Pflegefachkraft", en: "Nurse" },
         de: "Pflegefachkraft",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: {
           fr: "Diplôme de fin d'études secondaires (Realschule) ou Hauptschulabschluss + formation qualifiante, allemand B2",
@@ -72,6 +77,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Aide-soignant(e)", de: "Pflegehelfer", en: "Care assistant" },
         de: "Pflegehelfer",
+        ausbildung: true,
         duration: { fr: "1 à 2 ans", de: "1 bis 2 Jahre", en: "1 to 2 years" },
         qualifications: {
           fr: "Accessible dès le niveau Hauptschulabschluss, allemand B1-B2",
@@ -87,6 +93,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Soins aux aînés", de: "Altenpflege", en: "Elderly care" },
         de: "Altenpflege",
+        ausbildung: true,
         duration: { fr: "Intégré depuis 2020 dans la formation généraliste \"Pflegefachkraft\" (3 ans)", de: "Seit 2020 Teil der generalistischen Ausbildung \"Pflegefachkraft\" (3 Jahre)", en: "Folded since 2020 into the generalist \"Pflegefachkraft\" training (3 years)" },
         qualifications: {
           fr: "Mêmes prérequis que l'infirmier(ère), avec spécialisation possible en 3e année",
@@ -102,6 +109,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Sage-femme", de: "Hebamme", en: "Midwife" },
         de: "Hebamme",
+        ausbildung: false,
         duration: { fr: "3 ans (cursus universitaire dual depuis la réforme de 2020)", de: "3 Jahre (duales Studium seit der Reform 2020)", en: "3 years (dual university program since the 2020 reform)" },
         qualifications: {
           fr: "Depuis 2020, la formation est devenue un cursus universitaire (Studium) ; diplôme équivalent à l'Abitur généralement requis",
@@ -117,6 +125,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Médico-technique", de: "MTA", en: "Medical-technical" },
         de: "MTA",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: {
           fr: "Diplôme de fin d'études secondaires (Mittlere Reife) généralement requis",
@@ -168,6 +177,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Cuisinier(ère)", de: "Koch", en: "Cook" },
         de: "Koch",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Accessible dès le niveau Hauptschulabschluss", de: "Ab Hauptschulabschluss zugänglich", en: "Accessible from a lower secondary diploma" },
         remuneration: {
@@ -179,6 +189,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Commis de cuisine", de: "Küchenhilfe", en: "Kitchen assistant" },
         de: "Küchenhilfe",
+        ausbildung: false,
         duration: { fr: "Poste d'entrée, pas une Ausbildung diplômante de 3 ans", de: "Einstiegsposition, keine dreijährige Ausbildung", en: "Entry-level role, not a diploma-granting 3-year apprenticeship" },
         qualifications: { fr: "Aucun diplôme requis ; une formation courte est assurée en interne", de: "Kein Abschluss erforderlich; kurze betriebsinterne Einarbeitung", en: "No diploma required; short on-the-job training" },
         remuneration: {
@@ -190,6 +201,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Service en salle", de: "Restaurantfachmann", en: "Waitstaff" },
         de: "Restaurantfachmann",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Hauptschulabschluss ou mittlere Reife généralement demandé", de: "In der Regel Hauptschulabschluss oder mittlere Reife", en: "A lower or middle secondary diploma is generally expected" },
         remuneration: {
@@ -201,6 +213,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Réception", de: "Hotelfachmann", en: "Front desk" },
         de: "Hotelfachmann",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Mittlere Reife recommandée", de: "Mittlere Reife empfohlen", en: "A middle secondary diploma is recommended" },
         remuneration: {
@@ -212,6 +225,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Personnel d'étage", de: "Housekeeping", en: "Housekeeping" },
         de: "Housekeeping",
+        ausbildung: false,
         duration: { fr: "Poste d'entrée, pas une Ausbildung diplômante dédiée", de: "Einstiegsposition, keine eigene Ausbildung", en: "Entry-level role, no dedicated apprenticeship" },
         qualifications: { fr: "Aucun diplôme requis ; formation courte en interne", de: "Kein Abschluss erforderlich; kurze betriebsinterne Einarbeitung", en: "No diploma required; short on-the-job training" },
         remuneration: {
@@ -239,6 +253,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Électricien", de: "Elektroniker", en: "Electrician" },
         de: "Elektroniker",
+        ausbildung: true,
         duration: { fr: "3,5 ans (réductible à 3 ou 2,5 ans selon les résultats)", de: "3,5 Jahre (bei guten Leistungen auf 3 oder 2,5 Jahre verkürzbar)", en: "3.5 years (can be shortened to 3 or 2.5 years with strong results)" },
         qualifications: { fr: "Realschulabschluss recommandé, bon niveau en mathématiques", de: "Realschulabschluss empfohlen, gute Mathematikkenntnisse", en: "A Realschule diploma is recommended, along with solid math skills" },
         remuneration: {
@@ -250,6 +265,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Plombier-chauffagiste", de: "Anlagenmechaniker SHK", en: "Plumber/heating" },
         de: "Anlagenmechaniker SHK",
+        ausbildung: true,
         duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
         qualifications: { fr: "Hauptschulabschluss généralement suffisant", de: "Hauptschulabschluss in der Regel ausreichend", en: "A lower secondary diploma is generally sufficient" },
         remuneration: {
@@ -261,6 +277,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Soudeur", de: "Schweißer", en: "Welder" },
         de: "Schweißer",
+        ausbildung: false,
         duration: { fr: "Qualification complémentaire, pas une Ausbildung de 3 ans à part entière", de: "Zusatzqualifikation, keine eigenständige dreijährige Ausbildung", en: "An add-on certification, not a standalone 3-year apprenticeship" },
         qualifications: { fr: "S'acquiert généralement après un métier de base (ex. Anlagenmechaniker) via une certification de soudure aux normes DIN EN", de: "In der Regel nach einem Grundberuf (z. B. Anlagenmechaniker) über eine Schweißprüfung nach DIN EN erworben", en: "Usually obtained after a base trade (e.g. Anlagenmechaniker) via a DIN EN welding certification" },
         remuneration: {
@@ -272,6 +289,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Maçon", de: "Maurer", en: "Mason" },
         de: "Maurer",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Hauptschulabschluss suffisant", de: "Hauptschulabschluss ausreichend", en: "A lower secondary diploma is sufficient" },
         remuneration: {
@@ -283,6 +301,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Peintre", de: "Maler", en: "Painter" },
         de: "Maler",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Hauptschulabschluss suffisant", de: "Hauptschulabschluss ausreichend", en: "A lower secondary diploma is sufficient" },
         remuneration: {
@@ -310,6 +329,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Mécatronicien", de: "Mechatroniker", en: "Mechatronics technician" },
         de: "Mechatroniker",
+        ausbildung: true,
         duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
         qualifications: { fr: "Realschulabschluss recommandé", de: "Realschulabschluss empfohlen", en: "A Realschule diploma is recommended" },
         remuneration: {
@@ -321,6 +341,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Soudeur", de: "Schweißer", en: "Welder" },
         de: "Schweißer",
+        ausbildung: false,
         duration: { fr: "Qualification complémentaire, pas une Ausbildung de 3 ans à part entière", de: "Zusatzqualifikation, keine eigenständige dreijährige Ausbildung", en: "An add-on certification, not a standalone 3-year apprenticeship" },
         qualifications: { fr: "S'acquiert généralement après un métier de base (ex. Konstruktionsmechaniker) via une certification de soudure aux normes DIN EN", de: "In der Regel nach einem Grundberuf (z. B. Konstruktionsmechaniker) über eine Schweißprüfung nach DIN EN erworben", en: "Usually obtained after a base trade (e.g. Konstruktionsmechaniker) via a DIN EN welding certification" },
         remuneration: {
@@ -332,6 +353,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Maintenance", de: "Instandhaltung", en: "Maintenance" },
         de: "Industriemechaniker",
+        ausbildung: true,
         duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
         qualifications: { fr: "Realschulabschluss recommandé", de: "Realschulabschluss empfohlen", en: "A Realschule diploma is recommended" },
         remuneration: {
@@ -343,6 +365,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Usinage CNC", de: "Zerspanungsmechaniker", en: "CNC machining" },
         de: "Zerspanungsmechaniker",
+        ausbildung: true,
         duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
         qualifications: { fr: "Realschulabschluss recommandé, bon niveau en mathématiques", de: "Realschulabschluss empfohlen, gute Mathematikkenntnisse", en: "A Realschule diploma is recommended, along with solid math skills" },
         remuneration: {
@@ -354,6 +377,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Électrotechnicien", de: "Elektroniker", en: "Electrical technician" },
         de: "Elektroniker (Automatisierungstechnik)",
+        ausbildung: true,
         duration: { fr: "3,5 ans", de: "3,5 Jahre", en: "3.5 years" },
         qualifications: { fr: "Realschulabschluss recommandé", de: "Realschulabschluss empfohlen", en: "A Realschule diploma is recommended" },
         remuneration: {
@@ -381,6 +405,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Développeur(se)", de: "Fachinformatiker Anwendungsentwicklung", en: "Developer" },
         de: "Fachinformatiker (Anwendungsentwicklung)",
+        ausbildung: true,
         duration: { fr: "3 ans (réductible à 2-2,5 ans selon les résultats)", de: "3 Jahre (bei guten Leistungen auf 2-2,5 Jahre verkürzbar)", en: "3 years (can be shortened to 2-2.5 years with strong results)" },
         qualifications: { fr: "Mittlere Reife suffisante légalement ; un niveau Abitur/Fachabitur est souvent apprécié en pratique", de: "Rechtlich reicht die Mittlere Reife; in der Praxis wird oft Abitur/Fachabitur bevorzugt", en: "A middle secondary diploma is legally enough; in practice an Abitur is often preferred" },
         remuneration: {
@@ -392,6 +417,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Admin sys/réseau", de: "Fachinformatiker Systemintegration", en: "Sysadmin" },
         de: "Fachinformatiker (Systemintegration)",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Mêmes prérequis que pour le développement", de: "Gleiche Voraussetzungen wie Anwendungsentwicklung", en: "Same prerequisites as the developer track" },
         remuneration: {
@@ -403,6 +429,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Support IT", de: "IT-Support", en: "IT support" },
         de: "IT-Support",
+        ausbildung: false,
         duration: { fr: "Souvent accessible via la spécialisation Systemintegration, ou une formation courte", de: "Oft über die Spezialisierung Systemintegration oder eine kurze Einarbeitung zugänglich", en: "Often reached via the Systemintegration specialization, or short on-the-job training" },
         qualifications: { fr: "Une Ausbildung Fachinformatiker est un atout fort mais pas toujours exigée pour les postes d'entrée", de: "Eine Fachinformatiker-Ausbildung ist ein starkes Plus, für Einstiegspositionen aber nicht immer Pflicht", en: "A Fachinformatiker apprenticeship is a strong advantage but not always required for entry roles" },
         remuneration: {
@@ -414,6 +441,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Data", de: "Fachinformatiker Daten- und Prozessanalyse", en: "Data" },
         de: "Fachinformatiker (Daten- und Prozessanalyse)",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Mêmes prérequis que pour le développement, bon niveau en analyse et en mathématiques", de: "Gleiche Voraussetzungen wie Anwendungsentwicklung, gute Analyse- und Mathematikkenntnisse", en: "Same prerequisites as the developer track, strong analytical and math skills" },
         remuneration: {
@@ -425,6 +453,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Cybersécurité", de: "IT-Security", en: "Cybersecurity" },
         de: "IT-Security",
+        ausbildung: false,
         duration: { fr: "Pas une Ausbildung autonome en Allemagne : spécialisation après une Ausbildung Fachinformatiker, ou via des études supérieures", de: "Keine eigenständige Ausbildung in Deutschland: Spezialisierung nach einer Fachinformatiker-Ausbildung oder über ein Studium", en: "Not a standalone apprenticeship in Germany: a specialization after a Fachinformatiker apprenticeship, or via higher education" },
         qualifications: { fr: "Un premier diplôme IT (souvent Systemintegration) est le point de départ le plus courant", de: "Ein erster IT-Abschluss (meist Systemintegration) ist der übliche Ausgangspunkt", en: "A first IT qualification (usually Systemintegration) is the most common starting point" },
         remuneration: {
@@ -452,6 +481,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Conducteur PL", de: "Berufskraftfahrer", en: "Truck driver" },
         de: "Berufskraftfahrer",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Hauptschulabschluss suffisant, permis poids lourd requis en fin de formation", de: "Hauptschulabschluss ausreichend, Lkw-Führerschein am Ende der Ausbildung erforderlich", en: "A lower secondary diploma is enough; a truck driving licence is required by the end of training" },
         remuneration: {
@@ -463,6 +493,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Chauffeur bus", de: "Busfahrer", en: "Bus driver" },
         de: "Busfahrer",
+        ausbildung: false,
         duration: { fr: "Accès généralement direct avec permis D, pas toujours une Ausbildung dédiée de 3 ans", de: "Meist direkter Zugang mit Führerschein Klasse D, keine eigene dreijährige Ausbildung", en: "Usually direct entry with a category D licence, not always a dedicated 3-year apprenticeship" },
         qualifications: { fr: "Permis de conduire catégorie D et qualification initiale (Grundqualifikation) requis", de: "Führerschein Klasse D und Grundqualifikation erforderlich", en: "A category D driving licence and initial qualification (Grundqualifikation) are required" },
         remuneration: {
@@ -474,6 +505,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Cariste", de: "Fachlagerist", en: "Forklift operator" },
         de: "Fachlagerist",
+        ausbildung: true,
         duration: { fr: "2 ans", de: "2 Jahre", en: "2 years" },
         qualifications: { fr: "Hauptschulabschluss suffisant", de: "Hauptschulabschluss ausreichend", en: "A lower secondary diploma is sufficient" },
         remuneration: {
@@ -485,6 +517,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Préparateur", de: "Kommissionierer", en: "Order picker" },
         de: "Kommissionierer",
+        ausbildung: false,
         duration: { fr: "Poste opérationnel, généralement sans Ausbildung dédiée de 3 ans", de: "Operative Position, meist ohne eigene dreijährige Ausbildung", en: "An operational role, usually without a dedicated 3-year apprenticeship" },
         qualifications: { fr: "Accessible sans diplôme spécifique ; une formation courte est assurée en interne", de: "Ohne spezifischen Abschluss zugänglich; kurze betriebsinterne Einarbeitung", en: "Accessible without a specific diploma; short on-the-job training" },
         remuneration: {
@@ -496,6 +529,7 @@ export const METIER_CATEGORIES: Record<
       {
         label: { fr: "Agent logistique", de: "Fachkraft Lagerlogistik", en: "Logistics associate" },
         de: "Fachkraft für Lagerlogistik",
+        ausbildung: true,
         duration: { fr: "3 ans", de: "3 Jahre", en: "3 years" },
         qualifications: { fr: "Hauptschulabschluss suffisant, bases en mathématiques utiles", de: "Hauptschulabschluss ausreichend, mathematisches Grundverständnis hilfreich", en: "A lower secondary diploma is sufficient; basic math skills help" },
         remuneration: {
