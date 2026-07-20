@@ -217,13 +217,13 @@ export default async function AusbildungPage() {
           ))}
         </div>
 
-        {/* Le Bac = clé de l'université */}
+        {/* Métier + expérience -> accès à l'université (voie des beruflich Qualifizierte) */}
         <div className="rounded-xl border-l-4 border-brand-gold bg-brand-gold/10 p-6 max-w-3xl mb-6">
           <div className="flex items-start gap-3">
             <GraduationCap size={24} strokeWidth={1.75} aria-hidden="true" className="shrink-0 text-brand-gold-text mt-0.5" />
             <div>
-              <h3 className="font-serif text-lg text-brand-black mb-1">{content.bacTitle}</h3>
-              <p className="text-sm text-brand-ink-secondary">{content.bacBody}</p>
+              <h3 className="font-serif text-lg text-brand-black mb-1">{content.univTitle}</h3>
+              <p className="text-sm text-brand-ink-secondary">{content.univBody}</p>
             </div>
           </div>
         </div>
