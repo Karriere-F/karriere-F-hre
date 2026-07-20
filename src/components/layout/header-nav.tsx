@@ -59,7 +59,7 @@ export function HeaderNav({
       <nav className="flex items-center gap-5 text-sm">
         {[...primary, ...companyLinks].map((link) =>
           link.items ? (
-            <NavDropdown key={link.label} label={link.label} items={link.items} />
+            <NavDropdown key={link.label} label={link.label} href={link.href} items={link.items} />
           ) : (
             <a key={link.href} href={link.href} className={linkClass}>
               {link.label}

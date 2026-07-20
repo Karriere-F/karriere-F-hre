@@ -4,9 +4,13 @@ import { useState, useRef } from "react";
 
 export function NavDropdown({
   label,
+  href,
   items,
 }: {
   label: string;
+  // When set, the label itself is a link (to the silo hub); the menu opens on hover.
+  // Clicking the label navigates, so the hub page is reachable, not just its sections.
+  href?: string;
   items: { href: string; label: string }[];
 }) {
   const [open, setOpen] = useState(false);
@@ -20,20 +24,33 @@ export function NavDropdown({
     closeTimer.current = setTimeout(() => setOpen(false), 120);
   };
 
+  const labelClass =
+    "flex items-center gap-1 text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150";
+  const caret = (
+    <span className={`text-[10px] transition-transform duration-150 ${open ? "rotate-180" : ""}`}>
+      ▾
+    </span>
+  );
+
   return (
     <div className="relative" onMouseEnter={openNow} onMouseLeave={closeSoon}>
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-haspopup="true"
-        aria-expanded={open}
-        className="flex items-center gap-1 text-brand-ink-secondary hover:text-brand-gold-text transition-colors duration-150"
-      >
-        {label}
-        <span className={`text-[10px] transition-transform duration-150 ${open ? "rotate-180" : ""}`}>
-          ▾
-        </span>
-      </button>
+      {href ? (
+        <a href={href} aria-haspopup="true" aria-expanded={open} className={labelClass}>
+          {label}
+          {caret}
+        </a>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-haspopup="true"
+          aria-expanded={open}
+          className={labelClass}
+        >
+          {label}
+          {caret}
+        </button>
+      )}
       <div
         role="menu"
         className={`absolute left-0 top-full pt-3 transition-[opacity,transform] duration-150 ${

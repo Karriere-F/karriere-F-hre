@@ -2,8 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
-import { CourseTrackQuiz } from "@/components/candidate/course-track-quiz";
-import { Link, getPathname } from "@i18n/navigation";
+import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
@@ -13,53 +12,18 @@ type Content = typeof frMessages.coursAllemand;
 
 export const generateMetadata = () => metadataFromNamespace("coursAllemand", "/cours-allemand");
 
-export default async function CoursAllemandPage() {
+export default async function CoursAllemandHubPage() {
   const t = await getTranslations("coursAllemand");
   const tNav = await getTranslations("nav");
   const locale = (await getLocale()) as Locale;
   const content = await getPageContent<Content>("coursAllemand");
-
-  // Anchored per level rather than one thin page each: the levels differ by a paragraph
-  // and a duration, so four separate URLs would compete for the same query with almost
-  // the same words. There is deliberately no C1 -- the course stops at B2.
-  const levels = [
-    { id: "a1", title: content.a1Title, duree: content.a1Duree, sous: content.a1Sous, body: content.a1Body },
-    { id: "a2", title: content.a2Title, duree: content.a2Duree, sous: content.a2Sous, body: content.a2Body },
-    { id: "b1", title: content.b1Title, duree: content.b1Duree, sous: content.b1Sous, body: content.b1Body },
-    { id: "b2", title: content.b2Title, duree: content.b2Duree, sous: content.b2Sous, body: content.b2Body },
-    { id: "examen", title: content.prepTitle, duree: content.prepDuree, sous: null, body: content.prepBody },
-  ];
 
   const voies = [
     [content.voie1Title, content.voie1Body],
     [content.voie2Title, content.voie2Body],
     [content.voie3Title, content.voie3Body],
   ];
-
   const includes = [content.inc1, content.inc2, content.inc3, content.inc4, content.inc5];
-
-  // Same-page anchors for the two track sections; the advisor result goes to /postuler.
-  const postulerHref = getPathname({ href: "/postuler", locale });
-  const quizResults = {
-    full: {
-      title: content.quizResFullTitle,
-      text: content.quizResFullText,
-      ctaLabel: content.quizResFullCta,
-      ctaHref: "#full-training",
-    },
-    fast: {
-      title: content.quizResFastTitle,
-      text: content.quizResFastText,
-      ctaLabel: content.quizResFastCta,
-      ctaHref: "#fast-track",
-    },
-    advisor: {
-      title: content.quizResAdvisorTitle,
-      text: content.quizResAdvisorText,
-      ctaLabel: content.quizResAdvisorCta,
-      ctaHref: postulerHref,
-    },
-  };
 
   return (
     <div>
@@ -90,16 +54,11 @@ export default async function CoursAllemandPage() {
         </div>
       </div>
 
-      {/* Le choix : Full Training vs Fast Track */}
-      <AnchorSection
-        id="parcours"
-        eyebrow={content.forkEyebrow}
-        title={content.forkTitle}
-        lead={content.forkLead}
-      >
+      {/* Le choix : Full Training vs Fast Track -> pages dédiées */}
+      <AnchorSection id="parcours" eyebrow={content.forkEyebrow} title={content.forkTitle} lead={content.forkLead}>
         <div className="grid gap-6 sm:grid-cols-2">
-          <a
-            href="#full-training"
+          <Link
+            href="/cours-allemand/full-training"
             className="lift-on-hover animate-fade-up flex flex-col rounded-xl border border-brand-grid bg-brand-card p-7"
           >
             <span className="inline-block self-start text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full bg-brand-gold text-brand-black mb-3">
@@ -110,9 +69,9 @@ export default async function CoursAllemandPage() {
             <span className="mt-auto text-sm font-medium text-brand-gold-text">
               {content.fullCardCta} →
             </span>
-          </a>
-          <a
-            href="#fast-track"
+          </Link>
+          <Link
+            href="/cours-allemand/fast-track"
             className="lift-on-hover animate-fade-up flex flex-col rounded-xl bg-brand-black text-brand-white p-7"
             style={{ animationDelay: "60ms" }}
           >
@@ -124,46 +83,26 @@ export default async function CoursAllemandPage() {
             <span className="mt-auto text-sm font-medium text-brand-gold-light">
               {content.fastCardCta} →
             </span>
-          </a>
+          </Link>
         </div>
       </AnchorSection>
 
-      {/* Quel parcours choisir : test express */}
-      <section id="quel-parcours" className="scroll-mt-24 bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <CourseTrackQuiz
-            eyebrow={content.quizEyebrow}
-            title={content.quizTitle}
-            subtitle={content.quizSubtitle}
-            q1={{
-              title: content.quizQ1Title,
-              options: [
-                { value: "none", label: content.quizQ1o1 },
-                { value: "a1a2", label: content.quizQ1o2 },
-                { value: "b1", label: content.quizQ1o3 },
-                { value: "b2plus", label: content.quizQ1o4 },
-              ],
-            }}
-            q2={{
-              title: content.quizQ2Title,
-              options: [
-                { value: "b2recent", label: content.quizQ2o1 },
-                { value: "b2old", label: content.quizQ2o2 },
-                { value: "lower", label: content.quizQ2o3 },
-                { value: "none", label: content.quizQ2o4 },
-              ],
-            }}
-            q3={{
-              title: content.quizQ3Title,
-              options: [
-                { value: "learn", label: content.quizQ3o1 },
-                { value: "workfast", label: content.quizQ3o2 },
-                { value: "evaluate", label: content.quizQ3o3 },
-              ],
-            }}
-            results={quizResults}
-            resetLabel={content.quizReset}
-          />
+      {/* Teaser du test -> page quiz dédiée */}
+      <section className="bg-brand-black text-brand-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div className="max-w-xl">
+            <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
+              {content.quizEyebrow}
+            </p>
+            <h2 className="text-2xl font-serif mb-2">{content.quizTitle}</h2>
+            <p className="text-brand-white/70 text-sm">{content.quizSubtitle}</p>
+          </div>
+          <Link
+            href="/cours-allemand/quel-parcours"
+            className="press shrink-0 inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+          >
+            {content.quizTeaserCta}
+          </Link>
         </div>
       </section>
 
@@ -190,92 +129,8 @@ export default async function CoursAllemandPage() {
         <p className="mt-6 text-sm text-brand-ink-muted max-w-3xl">{content.voiesNote}</p>
       </AnchorSection>
 
-      {/* Full Training : le parcours niveau par niveau */}
-      <AnchorSection
-        id="full-training"
-        eyebrow={content.parcoursEyebrow}
-        title={content.parcoursTitle}
-        lead={content.parcoursLead}
-      >
-        {/* Rythme : le détail qui distingue un cours intensif d'un cours du soir */}
-        <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-brand-gold/40 bg-brand-gold/10 px-5 py-4 max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-text">
-            {content.rythmeLabel}
-          </span>
-          <span className="text-sm text-brand-ink-secondary">{content.rythmeText}</span>
-        </div>
-
-        <ol className="space-y-4 max-w-3xl">
-          {levels.map((level, i) => (
-            <li
-              key={level.id}
-              id={level.id}
-              className="animate-fade-up scroll-mt-24 flex gap-5 rounded-xl border border-brand-grid bg-brand-white p-6"
-              style={{ animationDelay: `${i * 50}ms` }}
-            >
-              <span className="shrink-0 h-10 w-10 rounded-lg bg-brand-gold text-brand-black font-serif font-bold flex items-center justify-center">
-                {i + 1}
-              </span>
-              <div>
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1.5">
-                  <h3 className="font-serif text-lg text-brand-black">{level.title}</h3>
-                  <span className="text-xs font-medium text-brand-gold-text">{level.duree}</span>
-                </div>
-                {level.sous && (
-                  <p className="text-xs text-brand-ink-muted mb-1.5">
-                    {content.sousLabel} : {level.sous}
-                  </p>
-                )}
-                <p className="text-sm text-brand-ink-secondary">{level.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-6 text-sm text-brand-ink-muted">{content.totalNote}</p>
-        <div className="mt-8">
-          <Link
-            href="/candidate/signup"
-            className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-          >
-            {content.ctaInscription}
-          </Link>
-        </div>
-      </AnchorSection>
-
-      {/* Notre différence */}
-      <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-          <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
-            {content.metierEyebrow}
-          </p>
-          <h2 className="text-2xl sm:text-3xl font-serif mb-4 max-w-2xl">{content.metierTitle}</h2>
-          <p className="text-brand-white/75 max-w-2xl mb-3">{content.metierBody1}</p>
-          <p className="text-brand-white/60 text-sm max-w-2xl">{content.metierBody2}</p>
-        </div>
-      </section>
-
-      {/* Examens */}
-      <AnchorSection
-        id="examens"
-        white
-        eyebrow={content.examensEyebrow}
-        title={content.examensTitle}
-        lead={content.examensLead}
-      >
-        <Link
-          href="/cours-allemand/preparation-examens"
-          className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
-        >
-          {content.examensCta}
-        </Link>
-      </AnchorSection>
-
-      {/* Inscription */}
-      <AnchorSection
-        id="inscription"
-        eyebrow={content.inscriptionEyebrow}
-        title={content.inscriptionTitle}
-      >
+      {/* L'inscription */}
+      <AnchorSection id="inscription" eyebrow={content.inscriptionEyebrow} title={content.inscriptionTitle}>
         <ul className="grid gap-3 sm:grid-cols-2 max-w-3xl mb-6">
           {includes.map((item) => (
             <li
@@ -289,66 +144,6 @@ export default async function CoursAllemandPage() {
         </ul>
         {/* Pricing never appears on the public site -- this points at contact instead. */}
         <p className="text-sm text-brand-ink-muted">{content.pricingNote}</p>
-      </AnchorSection>
-
-      {/* Fast Track : parcours détaillé pour les candidats déjà B2 certifié */}
-      <AnchorSection
-        id="fast-track"
-        white
-        eyebrow={content.fastEyebrow}
-        title={content.fastTitle}
-        lead={content.fastLead}
-      >
-        {/* Ce que comprend le Fast Track : les modules de préparation professionnelle */}
-        <h3 className="font-serif text-lg text-brand-black mb-4">{content.fastInclTitle}</h3>
-        <ul className="grid gap-3 sm:grid-cols-2 max-w-3xl mb-12">
-          {[content.fastIncl1, content.fastIncl2, content.fastIncl3, content.fastIncl4].map(
-            (item) => (
-              <li
-                key={item}
-                className="flex items-start gap-2 text-sm text-brand-ink-secondary rounded-lg border border-brand-grid bg-brand-card p-4"
-              >
-                <span className="text-brand-gold-text font-bold shrink-0">✓</span>
-                {item}
-              </li>
-            )
-          )}
-        </ul>
-
-        <h3 className="font-serif text-lg text-brand-black mb-4">{content.fastStepsTitle}</h3>
-        <ol className="space-y-4 max-w-3xl">
-          {[
-            [content.fastStep1Title, content.fastStep1Body],
-            [content.fastStep2Title, content.fastStep2Body],
-            [content.fastStep3Title, content.fastStep3Body],
-            [content.fastStep4Title, content.fastStep4Body],
-          ].map(([title, body], i) => (
-            <li
-              key={title}
-              className="animate-fade-up flex gap-5 rounded-xl border border-brand-grid bg-brand-card p-6"
-              style={{ animationDelay: `${i * 50}ms` }}
-            >
-              <span className="shrink-0 h-10 w-10 rounded-lg bg-brand-gold text-brand-black font-serif font-bold flex items-center justify-center">
-                {i + 1}
-              </span>
-              <div>
-                <h3 className="font-serif text-lg text-brand-black mb-1">{title}</h3>
-                <p className="text-sm text-brand-ink-secondary">{body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <div className="mt-6 rounded-lg border-l-4 border-brand-gold bg-brand-gold/10 p-5 max-w-3xl">
-          <p className="text-sm text-brand-ink-secondary">{content.fastNote}</p>
-        </div>
-        <div className="mt-6">
-          <Link
-            href="/postuler"
-            className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-          >
-            {content.fastCta}
-          </Link>
-        </div>
       </AnchorSection>
 
       {/* CTA final */}

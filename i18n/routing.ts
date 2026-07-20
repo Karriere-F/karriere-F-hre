@@ -40,6 +40,23 @@ export const routing = defineRouting({
       de: "/deutschkurs/pruefungsvorbereitung",
       en: "/german-course/exam-preparation",
     },
+    // Silo spokes off the /cours-allemand hub. "full-training" / "fast-track" are brand
+    // terms, kept identical across locales like Ausbildung/Chancenkarte.
+    "/cours-allemand/full-training": {
+      fr: "/cours-allemand/full-training",
+      de: "/deutschkurs/full-training",
+      en: "/german-course/full-training",
+    },
+    "/cours-allemand/fast-track": {
+      fr: "/cours-allemand/fast-track",
+      de: "/deutschkurs/fast-track",
+      en: "/german-course/fast-track",
+    },
+    "/cours-allemand/quel-parcours": {
+      fr: "/cours-allemand/quel-parcours",
+      de: "/deutschkurs/welcher-weg",
+      en: "/german-course/which-track",
+    },
 
     // Silo 2. "Ausbildung" is kept untranslated in every locale -- it's the term people
     // actually search for, francophone candidates included.
