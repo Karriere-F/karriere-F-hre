@@ -88,6 +88,25 @@ export default async function TravaillerPage() {
         lead={content.contexteLead}
       >
         <p className="text-brand-ink-secondary max-w-3xl">{content.contexteBody}</p>
+
+        <dl className="mt-8 grid gap-4 sm:grid-cols-3 max-w-3xl">
+          {[
+            [content.stat1Num, content.stat1Label],
+            [content.stat2Num, content.stat2Label],
+            [content.stat3Num, content.stat3Label],
+          ].map(([num, label], i) => (
+            <div
+              key={label}
+              className="animate-fade-up rounded-xl border border-brand-grid bg-brand-card p-5"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <dt className="font-serif text-3xl text-brand-gold-text">{num}</dt>
+              <dd className="mt-1 text-sm text-brand-ink-secondary">{label}</dd>
+            </div>
+          ))}
+        </dl>
+
+        <p className="mt-4 text-xs text-brand-ink-muted max-w-3xl">{content.contexteNote}</p>
       </AnchorSection>
 
       {/* Trois cartes */}
