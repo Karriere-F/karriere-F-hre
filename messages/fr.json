@@ -1400,7 +1400,7 @@
   },
   "metiers": {
     "title": "Les métiers qui recrutent en Allemagne",
-    "subtitle": "En bref : l'Allemagne manque de main-d'œuvre qualifiée dans de nombreux secteurs. Santé, BTP, hôtellerie, industrie, informatique et logistique offrent de réelles opportunités : nous vous orientons vers la voie et le métier adaptés à votre profil, et vous formons en allemand.",
+    "subtitle": "L'Allemagne manque de professionnels qualifiés dans des secteurs entiers — santé, bâtiment, hôtellerie, industrie, informatique, logistique. Vous avez déjà un métier ? Ces secteurs vous attendent. Nous faisons reconnaître votre diplôme, vous menons au niveau d'allemand requis et vous ouvrons la porte d'un poste qualifié.",
     "kick": "Candidats · Métiers qui recrutent",
     "ctaEligibility": "Vérifier mon éligibilité",
     "ctaSecteurs": "Voir les secteurs",
@@ -1408,11 +1408,12 @@
     "contexteEyebrow": "Le contexte",
     "contexteTitle": "Pourquoi l'Allemagne recrute à l'étranger",
     "contexteLead": "Le vieillissement de la population et une économie dynamique créent une pénurie durable de main-d'œuvre qualifiée. Pour la combler, l'Allemagne s'ouvre largement aux talents étrangers, dans un cadre légal dédié (Fachkräfteeinwanderungsgesetz).",
-    "contexteBody": "Pour vous, cela veut dire des besoins réels dans plusieurs secteurs, et un chemin balisé pour vous y insérer, à condition d'être bien préparé. C'est notre métier.",
+    "contexteBody": "Pour vous qui avez déjà une qualification, ce sont des postes ouverts dans plusieurs secteurs et un chemin balisé pour les décrocher : reconnaissance du diplôme, langue, visa de travailleur qualifié. C'est notre métier.",
 
     "secteursEyebrow": "Les secteurs",
     "secteursTitle": "Tous les métiers qui recrutent, en un coup d'œil",
-    "secteursLead": "Chaque secteur, ses postes (avec les intitulés allemands) et le niveau de langue généralement attendu.",
+    "secteursLead": "Chaque secteur et les postes qu'il recrute, avec leur intitulé allemand. Le niveau attendu est en général le B2.",
+    "salairesLink": "Voir les repères de salaires pour un poste qualifié",
     "levelLabel": "Niveau B2",
     "openingsSuffix": "offres publiées",
 

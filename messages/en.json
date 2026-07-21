@@ -1400,7 +1400,7 @@
   },
   "metiers": {
     "title": "The occupations hiring in Germany",
-    "subtitle": "In short: Germany lacks skilled workers across many sectors. Healthcare, construction, hospitality, industry, IT, and logistics offer real opportunities: we guide you to the path and trade suited to your profile, and train you in German.",
+    "subtitle": "Germany is short of qualified professionals across whole sectors — health, construction, hospitality, industry, IT, logistics. Already have a trade? These sectors are waiting for you. We get your qualification recognised, bring you to the required level of German, and open the door to a skilled position.",
     "kick": "Candidates · Occupations hiring now",
     "ctaEligibility": "Check my eligibility",
     "ctaSecteurs": "See the sectors",
@@ -1408,11 +1408,12 @@
     "contexteEyebrow": "The context",
     "contexteTitle": "Why Germany recruits abroad",
     "contexteLead": "An aging population and a dynamic economy create a lasting shortage of skilled labor. To fill it, Germany has opened widely to foreign talent, under a dedicated legal framework (Skilled Immigration Act).",
-    "contexteBody": "For you, that means real demand across several sectors, and a clear path to get there, provided you're well prepared. That's our job.",
+    "contexteBody": "If you already hold a qualification, that means open positions across several sectors and a clear path to reach them: diploma recognition, language, skilled-worker visa. That's our job.",
 
     "secteursEyebrow": "The sectors",
     "secteursTitle": "Every occupation hiring, at a glance",
-    "secteursLead": "Each sector, its roles (with German job titles), and the language level generally expected.",
+    "secteursLead": "Each sector and the roles it recruits for, with their German job titles. The level expected is generally B2.",
+    "salairesLink": "See pay benchmarks for a qualified role",
     "levelLabel": "Level B2",
     "openingsSuffix": "published openings",
 
