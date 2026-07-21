@@ -75,6 +75,16 @@ export const routing = defineRouting({
       de: "/ausbildung-in-deutschland/berufe",
       en: "/ausbildung-germany/occupations",
     },
+    "/ausbildung-allemagne/conditions": {
+      fr: "/ausbildung-allemagne/conditions",
+      de: "/ausbildung-in-deutschland/voraussetzungen",
+      en: "/ausbildung-germany/requirements",
+    },
+    "/ausbildung-allemagne/apres-ausbildung": {
+      fr: "/ausbildung-allemagne/apres-ausbildung",
+      de: "/ausbildung-in-deutschland/nach-der-ausbildung",
+      en: "/ausbildung-germany/after",
+    },
 
     // Silo 3. "Chancenkarte" stays untranslated in the slug -- it's a proper noun people
     // search by name, francophone candidates included, like "Ausbildung".

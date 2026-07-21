@@ -1,5 +1,4 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { Wrench, HeartPulse, GraduationCap } from "lucide-react";
 import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
@@ -10,18 +9,16 @@ import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.ausbildung;
+type Href = Parameters<typeof getPathname>[0]["href"];
 
-export const generateMetadata = () =>
-  metadataFromNamespace("ausbildung", "/ausbildung-allemagne");
+export const generateMetadata = () => metadataFromNamespace("ausbildung", "/ausbildung-allemagne");
 
-export default async function AusbildungPage() {
+export default async function AusbildungHubPage() {
   const t = await getTranslations("ausbildung");
   const tNav = await getTranslations("nav");
   const locale = (await getLocale()) as Locale;
   const content = await getPageContent<Content>("ausbildung");
 
-  // Cross-page anchors can't use the typed <Link> (it only takes registered pathname
-  // keys, never "key#anchor") -- same plain <a> pattern as site-header/site-footer.
   const besoinsHref = `${getPathname({ href: "/entreprises", locale })}#besoins`;
 
   const quoi = [
@@ -30,19 +27,20 @@ export default async function AusbildungPage() {
     [content.quoi3Title, content.quoi3Body],
   ];
 
-  const conditions = [
-    [content.cond1Title, content.cond1Body],
-    [content.cond2Title, content.cond2Body],
-    [content.cond3Title, content.cond3Body],
-    [content.cond4Title, content.cond4Body],
-  ];
-
   const etapes = [
     [content.etape1Title, content.etape1Body],
     [content.etape2Title, content.etape2Body],
     [content.etape3Title, content.etape3Body],
     [content.etape4Title, content.etape4Body],
     [content.etape5Title, content.etape5Body],
+  ];
+
+  // The four spokes of the silo -- each a dedicated page, also in the header dropdown.
+  const cards: { href: Href; title: string; body: string }[] = [
+    { href: "/ausbildung-allemagne/metiers", title: content.card1Title, body: content.card1Body },
+    { href: "/ausbildung-allemagne/conditions", title: content.card2Title, body: content.card2Body },
+    { href: "/ausbildung-allemagne/salaire", title: content.card3Title, body: content.card3Body },
+    { href: "/ausbildung-allemagne/apres-ausbildung", title: content.card4Title, body: content.card4Body },
   ];
 
   return (
@@ -65,12 +63,12 @@ export default async function AusbildungPage() {
           >
             {content.ctaMetiers}
           </Link>
-          <a
-            href="#conditions"
+          <Link
+            href="/ausbildung-allemagne/conditions"
             className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
           >
             {content.ctaConditions}
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -96,29 +94,24 @@ export default async function AusbildungPage() {
         </div>
       </AnchorSection>
 
-      {/* Conditions */}
-      <AnchorSection
-        id="conditions"
-        eyebrow={content.conditionsEyebrow}
-        title={content.conditionsTitle}
-        lead={content.conditionsLead}
-      >
-        <div className="grid gap-4 sm:grid-cols-2">
-          {conditions.map(([title, body], i) => (
-            <div
-              key={title}
-              className="animate-fade-up flex gap-3 rounded-lg border border-brand-grid bg-brand-white p-5"
+      {/* Explorer le silo : 4 pages */}
+      <AnchorSection id="explorer" eyebrow={content.exploreEyebrow} title={content.exploreTitle}>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {cards.map((card, i) => (
+            <Link
+              key={card.title}
+              href={card.href}
+              className="lift-on-hover animate-fade-up flex flex-col rounded-xl border border-brand-grid bg-brand-card p-6"
               style={{ animationDelay: `${i * 50}ms` }}
             >
-              <span className="text-brand-gold-text font-bold shrink-0">✓</span>
-              <div>
-                <h4 className="text-brand-black font-medium text-sm mb-1">{title}</h4>
-                <p className="text-sm text-brand-ink-secondary">{body}</p>
-              </div>
-            </div>
+              <h3 className="font-serif text-lg text-brand-black mb-2">{card.title}</h3>
+              <p className="text-sm text-brand-ink-secondary mb-4">{card.body}</p>
+              <span aria-hidden="true" className="mt-auto text-brand-gold-text font-bold">
+                →
+              </span>
+            </Link>
           ))}
         </div>
-        <p className="mt-6 text-sm text-brand-ink-muted max-w-3xl">{content.conditionsNote}</p>
       </AnchorSection>
 
       {/* La langue */}
@@ -139,24 +132,8 @@ export default async function AusbildungPage() {
         </div>
       </section>
 
-      {/* Salaire (teaser -> page dédiée) */}
-      <AnchorSection
-        id="salaire"
-        white
-        eyebrow={content.salaireEyebrow}
-        title={content.salaireTitle}
-        lead={content.salaireLead}
-      >
-        <Link
-          href="/ausbildung-allemagne/salaire"
-          className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
-        >
-          {content.salaireCta}
-        </Link>
-      </AnchorSection>
-
       {/* Étapes */}
-      <AnchorSection id="etapes" eyebrow={content.etapesEyebrow} title={content.etapesTitle}>
+      <AnchorSection id="etapes" white eyebrow={content.etapesEyebrow} title={content.etapesTitle}>
         <ol className="space-y-4 max-w-3xl">
           {etapes.map(([title, body], i) => (
             <li
@@ -174,60 +151,6 @@ export default async function AusbildungPage() {
             </li>
           ))}
         </ol>
-      </AnchorSection>
-
-      {/* Après l'Ausbildung : le tremplin -> métier PUIS études */}
-      <AnchorSection id="apres" white eyebrow={content.apresEyebrow} title={content.apresTitle}>
-        <blockquote className="border-l-4 border-brand-gold pl-5 py-1 max-w-3xl mb-6">
-          <p className="font-serif text-xl sm:text-2xl text-brand-black italic">{content.apresQuote}</p>
-        </blockquote>
-        <p className="text-brand-ink-secondary max-w-3xl mb-8">{content.apresIntro}</p>
-
-        {/* Les deux transformations */}
-        <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mb-8">
-          {[
-            { Icon: Wrench, kicker: content.path1Kicker, goal: content.path1Goal },
-            { Icon: HeartPulse, kicker: content.path2Kicker, goal: content.path2Goal },
-          ].map(({ Icon, kicker, goal }, i) => (
-            <div
-              key={kicker}
-              className="lift-on-hover animate-fade-up rounded-xl border border-brand-grid bg-brand-card p-6"
-              style={{ animationDelay: `${i * 60}ms` }}
-            >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text mb-4">
-                <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
-              </span>
-              <p className="text-xs uppercase tracking-widest text-brand-ink-muted mb-1">{kicker}</p>
-              <div className="flex items-center gap-2">
-                <span aria-hidden="true" className="text-brand-gold text-2xl font-bold leading-none">
-                  →
-                </span>
-                <span className="font-serif text-2xl text-brand-gold-text">{goal}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Métier + expérience -> accès à l'université (voie des beruflich Qualifizierte) */}
-        <div className="rounded-xl border-l-4 border-brand-gold bg-brand-gold/10 p-6 max-w-3xl mb-6">
-          <div className="flex items-start gap-3">
-            <GraduationCap size={24} strokeWidth={1.75} aria-hidden="true" className="shrink-0 text-brand-gold-text mt-0.5" />
-            <div>
-              <h3 className="font-serif text-lg text-brand-black mb-1">{content.univTitle}</h3>
-              <p className="text-sm text-brand-ink-secondary">{content.univBody}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Payé, puis étudier */}
-        <p className="font-medium text-brand-black max-w-3xl mb-6">{content.payeLine}</p>
-
-        <Link
-          href="/ausbildung-allemagne/metiers"
-          className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-        >
-          {content.ctaMetiers}
-        </Link>
       </AnchorSection>
 
       {/* CTA final */}

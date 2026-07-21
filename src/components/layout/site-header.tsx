@@ -35,7 +35,16 @@ export async function SiteHeader() {
         { href: path("/cours-allemand/quel-parcours"), label: t("coursQuiz") },
       ],
     },
-    { href: path("/ausbildung-allemagne"), label: t("ausbildung") },
+    {
+      href: path("/ausbildung-allemagne"),
+      label: t("ausbildung"),
+      items: [
+        { href: path("/ausbildung-allemagne/metiers"), label: t("ausMetiers") },
+        { href: path("/ausbildung-allemagne/salaire"), label: t("ausSalaire") },
+        { href: path("/ausbildung-allemagne/conditions"), label: t("ausConditions") },
+        { href: path("/ausbildung-allemagne/apres-ausbildung"), label: t("ausApres") },
+      ],
+    },
     { href: path("/visa-allemagne"), label: t("visa") },
     { href: path("/travailler-en-allemagne"), label: t("travailler") },
     { href: path("/partir-en-allemagne"), label: t("partir") },
