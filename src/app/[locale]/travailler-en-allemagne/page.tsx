@@ -19,10 +19,37 @@ export default async function TravaillerPage() {
   const locale = (await getLocale()) as Locale;
   const content = await getPageContent<Content>("travailler");
 
-  const eligibiliteHref = `${getPathname({ href: "/candidats", locale })}#eligibilite`;
   // "Vivre en Allemagne" still lives under /candidats -- linked, not moved, so this is a
   // cross-page href, not the typed <Link>.
   const vivreHref = getPathname({ href: "/candidats/vivre-en-allemagne", locale });
+
+  type Href = Parameters<typeof getPathname>[0]["href"];
+  const conditions: { title: string; body: string; linkLabel: string; href: Href }[] = [
+    {
+      title: content.cond1Title,
+      body: content.cond1Body,
+      linkLabel: content.cond1LinkLabel,
+      href: "/candidats/reconnaissance-diplomes",
+    },
+    {
+      title: content.cond2Title,
+      body: content.cond2Body,
+      linkLabel: content.cond2LinkLabel,
+      href: "/cours-allemand",
+    },
+    {
+      title: content.cond3Title,
+      body: content.cond3Body,
+      linkLabel: content.cond3LinkLabel,
+      href: "/visa-allemagne/chancenkarte",
+    },
+    {
+      title: content.cond4Title,
+      body: content.cond4Body,
+      linkLabel: content.cond4LinkLabel,
+      href: "/visa-allemagne/travailleur-qualifie",
+    },
+  ];
 
   // The three cards fan out to where each subtopic already lives: /metiers owns the
   // shortage-occupation list, the salaires child is new, and vivre stays under /candidats.
@@ -65,10 +92,10 @@ export default async function TravaillerPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
           <a
-            href={eligibiliteHref}
+            href="#conditions"
             className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
-            {content.ctaEval}
+            {content.ctaConditions}
           </a>
           <Link
             href="/metiers"
@@ -109,8 +136,40 @@ export default async function TravaillerPage() {
         <p className="mt-4 text-xs text-brand-ink-muted max-w-3xl">{content.contexteNote}</p>
       </AnchorSection>
 
+      {/* Conditions d'éligibilité */}
+      <AnchorSection
+        id="conditions"
+        eyebrow={content.condEyebrow}
+        title={content.condTitle}
+        lead={content.condLead}
+      >
+        <div className="grid gap-5 sm:grid-cols-2">
+          {conditions.map((c, i) => (
+            <div
+              key={c.title}
+              className="animate-fade-up flex flex-col rounded-xl border border-brand-grid bg-brand-white p-6"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-8 w-8 shrink-0 rounded-lg bg-brand-gold text-brand-black font-serif font-bold text-sm flex items-center justify-center">
+                  {i + 1}
+                </span>
+                <h3 className="font-serif text-lg text-brand-black">{c.title}</h3>
+              </div>
+              <p className="text-sm text-brand-ink-secondary mb-4">{c.body}</p>
+              <Link
+                href={c.href}
+                className="mt-auto text-sm font-medium text-brand-gold-text hover:underline"
+              >
+                {c.linkLabel} →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </AnchorSection>
+
       {/* Trois cartes */}
-      <AnchorSection id="explorer" eyebrow={content.exploreEyebrow} title={content.exploreTitle}>
+      <AnchorSection id="explorer" white eyebrow={content.exploreEyebrow} title={content.exploreTitle}>
         <div className="grid gap-6 lg:grid-cols-3">
           {cards.map((card, i) => (
             <div
@@ -159,12 +218,12 @@ export default async function TravaillerPage() {
             {content.finalTitle}
           </h2>
           <p className="text-brand-ink-secondary max-w-lg">{content.finalText}</p>
-          <a
-            href={eligibiliteHref}
+          <Link
+            href="/postuler"
             className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
             {content.finalCta}
-          </a>
+          </Link>
         </div>
       </section>
     </div>
