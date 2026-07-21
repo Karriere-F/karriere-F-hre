@@ -20,19 +20,18 @@ export default async function VisaPage() {
 
   // Cross-page anchors can't use the typed <Link> -- plain <a>, same pattern as the
   // other silos.
-  const voiesHref = `${getPathname({ href: "/candidats", locale })}#voies`;
   const eligibiliteHref = `${getPathname({ href: "/candidats", locale })}#eligibilite`;
 
-  // Each visa card points at the page that owns that route's detail: the routes table
-  // on /candidats, the Ausbildung silo, and the Chancenkarte child page.
+  // Each visa card points at the page that owns that route's detail: the skilled-worker
+  // page, the Ausbildung silo, and the Chancenkarte child page.
   const types = [
     {
       title: content.type1Title,
       ref: content.type1Ref,
       body: content.type1Body,
       cta: content.type1Cta,
-      href: voiesHref,
-      internal: false as const,
+      href: "/visa-allemagne/travailleur-qualifie" as const,
+      internal: true as const,
     },
     {
       title: content.type2Title,

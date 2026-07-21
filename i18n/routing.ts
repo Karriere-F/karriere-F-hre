@@ -98,6 +98,11 @@ export const routing = defineRouting({
       de: "/visum-deutschland/chancenkarte",
       en: "/germany-visa/chancenkarte",
     },
+    "/visa-allemagne/travailleur-qualifie": {
+      fr: "/visa-allemagne/travailleur-qualifie",
+      de: "/visum-deutschland/fachkraeftevisum",
+      en: "/germany-visa/skilled-worker",
+    },
 
     // Silo 4. Its "métiers en pénurie" child is the existing /metiers page (linked, not
     // duplicated) and its "vivre en Allemagne" child is /candidats/vivre-en-allemagne

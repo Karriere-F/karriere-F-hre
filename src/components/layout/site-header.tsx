@@ -45,7 +45,14 @@ export async function SiteHeader() {
         { href: path("/ausbildung-allemagne/apres-ausbildung"), label: t("ausApres") },
       ],
     },
-    { href: path("/visa-allemagne"), label: t("visa") },
+    {
+      href: path("/visa-allemagne"),
+      label: t("visa"),
+      items: [
+        { href: path("/visa-allemagne/travailleur-qualifie"), label: t("visTravailleur") },
+        { href: path("/visa-allemagne/chancenkarte"), label: t("visChancenkarte") },
+      ],
+    },
     {
       href: path("/travailler-en-allemagne"),
       label: t("travailler"),
