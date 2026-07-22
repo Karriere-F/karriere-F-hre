@@ -1037,7 +1037,6 @@ export const CONTENT_PAGES = {
       "secteursEyebrow",
       "secteursTitle",
       "secteursLead",
-      "salairesLink",
       "eligibiliteEyebrow",
       "eligibiliteTitle",
       "eligibiliteLead",

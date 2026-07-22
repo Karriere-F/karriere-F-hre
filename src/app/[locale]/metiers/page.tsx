@@ -162,14 +162,6 @@ export default async function MetiersPage() {
             );
           })}
         </div>
-        <p className="mt-6 text-sm">
-          <Link
-            href="/travailler-en-allemagne/salaires"
-            className="font-medium text-brand-gold-text hover:underline"
-          >
-            {content.salairesLink} →
-          </Link>
-        </p>
       </AnchorSection>
 
       {/* Éligibilité */}
