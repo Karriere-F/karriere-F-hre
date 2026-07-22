@@ -48,7 +48,10 @@ export async function SiteHeader() {
     {
       href: path("/visa-allemagne"),
       label: t("visa"),
+      // The three visa routes the hub presents as cards. The Ausbildung visa detail
+      // lives in the Ausbildung silo, so that item crosses to /ausbildung-allemagne.
       items: [
+        { href: path("/ausbildung-allemagne"), label: t("ausbildung") },
         { href: path("/visa-allemagne/travailleur-qualifie"), label: t("visTravailleur") },
         { href: path("/visa-allemagne/chancenkarte"), label: t("visChancenkarte") },
       ],

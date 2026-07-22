@@ -497,7 +497,6 @@ export const CONTENT_PAGES = {
       "title",
       "subtitle",
       "kick",
-      "ctaEval",
       "ctaTypes",
       "introEyebrow",
       "introTitle",
