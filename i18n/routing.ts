@@ -112,11 +112,6 @@ export const routing = defineRouting({
       de: "/in-deutschland-arbeiten",
       en: "/working-in-germany",
     },
-    "/travailler-en-allemagne/salaires": {
-      fr: "/travailler-en-allemagne/salaires",
-      de: "/in-deutschland-arbeiten/gehaelter",
-      en: "/working-in-germany/salaries",
-    },
 
     // Silo 5. Only the Cameroun page is built -- it's the founder's base (Douala) and the
     // one country with verifiable, KF-specific content. Other Central African source

@@ -51,8 +51,8 @@ export default async function TravaillerPage() {
     },
   ];
 
-  // The three cards fan out to where each subtopic already lives: /metiers owns the
-  // shortage-occupation list, the salaires child is new, and vivre stays under /candidats.
+  // The two cards fan out to where each subtopic already lives: /metiers owns the
+  // shortage-occupation list, and vivre stays under /candidats.
   const cards = [
     {
       title: content.card1Title,
@@ -65,13 +65,6 @@ export default async function TravaillerPage() {
       title: content.card2Title,
       body: content.card2Body,
       cta: content.card2Cta,
-      href: "/travailler-en-allemagne/salaires" as const,
-      internal: true as const,
-    },
-    {
-      title: content.card3Title,
-      body: content.card3Body,
-      cta: content.card3Cta,
       href: vivreHref,
       internal: false as const,
     },
@@ -170,7 +163,7 @@ export default async function TravaillerPage() {
 
       {/* Trois cartes */}
       <AnchorSection id="explorer" white eyebrow={content.exploreEyebrow} title={content.exploreTitle}>
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {cards.map((card, i) => (
             <div
               key={card.title}

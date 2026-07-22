@@ -56,11 +56,10 @@ export async function SiteHeader() {
     {
       href: path("/travailler-en-allemagne"),
       label: t("travailler"),
-      // The three sub-topics of "working in Germany" -- all full pages, though two
-      // live in other silos (the hub already presents them as cards).
+      // The two sub-topics of "working in Germany" -- both full pages living in other
+      // silos (the hub already presents them as cards).
       items: [
         { href: path("/metiers"), label: t("travMetiers") },
-        { href: path("/travailler-en-allemagne/salaires"), label: t("travSalaires") },
         { href: path("/candidats/vivre-en-allemagne"), label: t("travVivre") },
       ],
     },

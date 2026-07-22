@@ -37,7 +37,6 @@ const GROUPS: { titleKey: string; entries: Entry[] }[] = [
       { href: "/visa-allemagne/travailleur-qualifie", labelKey: "visaTravailleur" },
       { href: "/visa-allemagne/chancenkarte", labelKey: "visaChancenkarte" },
       { href: "/travailler-en-allemagne", labelKey: "travailler" },
-      { href: "/travailler-en-allemagne/salaires", labelKey: "travaillerSalaires" },
       { href: "/partir-en-allemagne", labelKey: "partir" },
       { href: "/partir-en-allemagne/cameroun", labelKey: "partirCameroun" },
       { href: "/candidats/formations/integration", labelKey: "formationsIntegration" },
