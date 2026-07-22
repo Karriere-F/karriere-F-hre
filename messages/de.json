@@ -690,7 +690,7 @@
     "title": "Visum für Deutschland: der richtige Weg je nach Ihrem Zugang",
     "subtitle": "Kurz gesagt: Es gibt nicht ein Deutschland-Visum, sondern mehrere — je nach Weg: qualifizierte Beschäftigung, Ausbildung oder Chancenkarte. Karriere Fähre bestimmt Ihres und erstellt den gesamten Antrag, bis zum Termin in der Botschaft.",
     "kick": "Legaler Weg · Visum & Formalitäten",
-    "ctaEval": "Welches Visum ist meines?",
+    "ctaEval": "Mein Profil prüfen lassen",
     "ctaTypes": "Die Visa ansehen",
     "introEyebrow": "Das Prinzip",
     "introTitle": "Das Visum ergibt sich aus Ihrem Weg, nicht umgekehrt",
@@ -724,9 +724,9 @@
     "delaisEyebrow": "Die Fristen",
     "delaisTitle": "Realistische Fristen, von Anfang an genannt",
     "delaisBody": "Die Fristen hängen vom Weg, vom Land und von der Auslastung der Behörden ab. Wir versprechen keine Wunder: Wir geben Ihnen schon bei der ersten Bewertung einen realistischen Zeitplan und aktivieren das beschleunigte Verfahren, wo es möglich ist.",
-    "finalTitle": "Welches Visum ist Ihres?",
-    "finalText": "Der Test der legalen Wege weist Ihnen in vier Fragen den richtigen Weg, anhand der offiziellen deutschen Kriterien.",
-    "finalCta": "Test starten"
+    "finalTitle": "Schon qualifiziert?",
+    "finalText": "Anerkannter Abschluss, Jobangebot, Deutsch: Das Fachkräftevisum belohnt ein Profil, das bereit ist. Sehen Sie sich die Voraussetzungen im Detail an und lassen Sie Ihres prüfen.",
+    "finalCta": "Das Fachkräftevisum"
   },
   "visaChancenkarte": {
     "title": "Chancenkarte: zur Suche nach qualifizierter Arbeit nach Deutschland kommen",

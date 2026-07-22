@@ -690,7 +690,7 @@
     "title": "Visa pour l'Allemagne : la bonne démarche selon votre voie",
     "subtitle": "En bref : il n'existe pas un seul visa Allemagne, mais plusieurs, chacun lié à une voie — emploi qualifié, Ausbildung ou Chancenkarte. Karriere Fähre identifie le vôtre et monte tout le dossier, jusqu'au rendez-vous à l'ambassade.",
     "kick": "Voie légale · Visa & démarches",
-    "ctaEval": "Quel visa est le mien ?",
+    "ctaEval": "Faire évaluer mon profil",
     "ctaTypes": "Voir les visas",
     "introEyebrow": "Le principe",
     "introTitle": "Le visa découle de votre voie, pas l'inverse",
@@ -724,9 +724,9 @@
     "delaisEyebrow": "Les délais",
     "delaisTitle": "Des délais réalistes, annoncés dès le départ",
     "delaisBody": "Les délais dépendent de la voie, du pays et de la charge des administrations. Nous ne promettons pas de miracle : nous vous donnons un calendrier réaliste dès la première évaluation, et nous activons la procédure accélérée quand elle est possible.",
-    "finalTitle": "Quel visa est le vôtre ?",
-    "finalText": "Le test des voies légales vous oriente vers la bonne démarche en quatre questions, à partir des critères officiels allemands.",
-    "finalCta": "Faire le test"
+    "finalTitle": "Vous êtes déjà qualifié ?",
+    "finalText": "Diplôme reconnu, offre d'emploi, allemand : le visa de travailleur qualifié récompense un profil déjà prêt. Voyez les conditions en détail et faites évaluer le vôtre.",
+    "finalCta": "Le visa travailleur qualifié"
   },
   "visaChancenkarte": {
     "title": "Chancenkarte : venir chercher un emploi qualifié en Allemagne",
