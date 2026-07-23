@@ -40,7 +40,6 @@ export async function SiteHeader() {
       label: t("ausbildung"),
       items: [
         { href: path("/ausbildung-allemagne/metiers"), label: t("ausMetiers") },
-        { href: path("/ausbildung-allemagne/salaire"), label: t("ausSalaire") },
         { href: path("/ausbildung-allemagne/conditions"), label: t("ausConditions") },
         { href: path("/ausbildung-allemagne/apres-ausbildung"), label: t("ausApres") },
       ],

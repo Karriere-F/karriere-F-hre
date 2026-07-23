@@ -65,11 +65,6 @@ export const routing = defineRouting({
       de: "/ausbildung-in-deutschland",
       en: "/ausbildung-germany",
     },
-    "/ausbildung-allemagne/salaire": {
-      fr: "/ausbildung-allemagne/salaire",
-      de: "/ausbildung-in-deutschland/verguetung",
-      en: "/ausbildung-germany/salary",
-    },
     "/ausbildung-allemagne/metiers": {
       fr: "/ausbildung-allemagne/metiers",
       de: "/ausbildung-in-deutschland/berufe",

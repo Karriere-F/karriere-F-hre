@@ -31,7 +31,6 @@ const GROUPS: { titleKey: string; entries: Entry[] }[] = [
       { href: "/ausbildung-allemagne", labelKey: "ausbildung" },
       { href: "/ausbildung-allemagne/metiers", labelKey: "ausbildungMetiers" },
       { href: "/ausbildung-allemagne/conditions", labelKey: "ausbildungConditions" },
-      { href: "/ausbildung-allemagne/salaire", labelKey: "ausbildungSalaire" },
       { href: "/ausbildung-allemagne/apres-ausbildung", labelKey: "ausbildungApres" },
       { href: "/visa-allemagne", labelKey: "visa" },
       { href: "/visa-allemagne/travailleur-qualifie", labelKey: "visaTravailleur" },

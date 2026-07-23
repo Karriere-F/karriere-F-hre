@@ -35,12 +35,11 @@ export default async function AusbildungHubPage() {
     [content.etape5Title, content.etape5Body],
   ];
 
-  // The four spokes of the silo -- each a dedicated page, also in the header dropdown.
+  // The three spokes of the silo -- each a dedicated page, also in the header dropdown.
   const cards: { href: Href; title: string; body: string }[] = [
     { href: "/ausbildung-allemagne/metiers", title: content.card1Title, body: content.card1Body },
     { href: "/ausbildung-allemagne/conditions", title: content.card2Title, body: content.card2Body },
-    { href: "/ausbildung-allemagne/salaire", title: content.card3Title, body: content.card3Body },
-    { href: "/ausbildung-allemagne/apres-ausbildung", title: content.card4Title, body: content.card4Body },
+    { href: "/ausbildung-allemagne/apres-ausbildung", title: content.card3Title, body: content.card3Body },
   ];
 
   return (
@@ -94,9 +93,9 @@ export default async function AusbildungHubPage() {
         </div>
       </AnchorSection>
 
-      {/* Explorer le silo : 4 pages */}
+      {/* Explorer le silo : 3 pages */}
       <AnchorSection id="explorer" eyebrow={content.exploreEyebrow} title={content.exploreTitle}>
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-3">
           {cards.map((card, i) => (
             <Link
               key={card.title}

@@ -22,7 +22,6 @@ const STATIC_PATHS = [
   "/ausbildung-allemagne",
   "/ausbildung-allemagne/metiers",
   "/ausbildung-allemagne/conditions",
-  "/ausbildung-allemagne/salaire",
   "/ausbildung-allemagne/apres-ausbildung",
   "/visa-allemagne",
   "/visa-allemagne/travailleur-qualifie",
