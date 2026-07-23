@@ -782,11 +782,11 @@
     "roleEyebrow": "Notre rôle",
     "roleTitle": "Nous calculons vos points et montons le dossier",
     "roleBody": "Le système à points paraît simple sur le papier, mais chaque critère a ses conditions. Nous évaluons votre situation réelle, identifions les points qui vous manquent — souvent la langue — et construisons le dossier avec vous.",
-    "roleCta": "Faire évaluer mon profil",
+    "roleCta": "Postuler",
     "disclaimer": "Ces critères sont ceux de la loi allemande (§ 20a AufenthG), fournis à titre d'information et susceptibles d'évoluer. Seule l'administration allemande décide de l'attribution de la Chancenkarte ; nous vous aidons à présenter le dossier le plus solide possible.",
     "finalTitle": "La Chancenkarte est-elle faite pour vous ?",
-    "finalText": "Le test des voies légales estime votre éligibilité en quatre questions.",
-    "finalCta": "Faire le test"
+    "finalText": "Réunissez les points, préparez votre dossier et postulez : nous vous accompagnons de la Chancenkarte jusqu'à l'emploi.",
+    "finalCta": "Postuler"
   },
   "visaTravailleur": {
     "title": "Visa travailleur qualifié pour l'Allemagne : conditions et procédure",
@@ -823,7 +823,7 @@
     "finalTitle": "Pas encore d'offre d'emploi ?",
     "finalText": "La Chancenkarte vous permet de venir chercher un poste qualifié sur place, sans contrat au départ.",
     "finalCta": "Découvrir la Chancenkarte",
-    "ctaPostuler": "Faire évaluer mon profil"
+    "ctaPostuler": "Postuler"
   },
   "travailler": {
     "title": "Travailler en Allemagne : 163 métiers n'arrivent pas à recruter",

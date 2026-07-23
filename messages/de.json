@@ -782,11 +782,11 @@
     "roleEyebrow": "Unsere Rolle",
     "roleTitle": "Wir berechnen Ihre Punkte und erstellen den Antrag",
     "roleBody": "Das Punktesystem wirkt einfach, doch jedes Kriterium hat seine Bedingungen. Wir bewerten Ihre reale Situation, erkennen die fehlenden Punkte — oft die Sprache — und erstellen den Antrag mit Ihnen.",
-    "roleCta": "Mein Profil bewerten lassen",
+    "roleCta": "Jetzt bewerben",
     "disclaimer": "Diese Kriterien stammen aus dem deutschen Recht (§ 20a AufenthG), dienen der Information und können sich ändern. Über die Erteilung der Chancenkarte entscheidet allein die deutsche Behörde; wir helfen Ihnen, den bestmöglichen Antrag vorzulegen.",
     "finalTitle": "Ist die Chancenkarte das Richtige für Sie?",
-    "finalText": "Der Test der legalen Wege schätzt Ihre Eignung in vier Fragen ein.",
-    "finalCta": "Test starten"
+    "finalText": "Sammeln Sie die Punkte, bereiten Sie Ihre Unterlagen vor und bewerben Sie sich: Wir begleiten Sie von der Chancenkarte bis zur Stelle.",
+    "finalCta": "Jetzt bewerben"
   },
   "visaTravailleur": {
     "title": "Fachkräftevisum für Deutschland: Voraussetzungen und Verfahren",
@@ -823,7 +823,7 @@
     "finalTitle": "Noch kein Stellenangebot?",
     "finalText": "Die Chancenkarte lässt Sie vor Ort eine qualifizierte Stelle suchen, ohne Vertrag zu Beginn.",
     "finalCta": "Die Chancenkarte entdecken",
-    "ctaPostuler": "Mein Profil bewerten lassen"
+    "ctaPostuler": "Jetzt bewerben"
   },
   "travailler": {
     "title": "In Deutschland arbeiten: 163 Berufe finden keine Fachkräfte",

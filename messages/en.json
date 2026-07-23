@@ -782,11 +782,11 @@
     "roleEyebrow": "Our role",
     "roleTitle": "We work out your points and build the file",
     "roleBody": "The points system looks simple on paper, but each criterion has its conditions. We assess your real situation, spot the points you're missing — often the language — and build the file with you.",
-    "roleCta": "Get my profile assessed",
+    "roleCta": "Apply",
     "disclaimer": "These criteria are German law (§ 20a AufenthG), provided for information and subject to change. Only the German authorities decide on granting the Chancenkarte; we help you put forward the strongest possible file.",
     "finalTitle": "Is the Chancenkarte right for you?",
-    "finalText": "The legal routes test estimates your eligibility in four questions.",
-    "finalCta": "Take the test"
+    "finalText": "Gather the points, prepare your file and apply: we support you from the Chancenkarte all the way to the job.",
+    "finalCta": "Apply"
   },
   "visaTravailleur": {
     "title": "Skilled worker visa for Germany: requirements and procedure",
@@ -823,7 +823,7 @@
     "finalTitle": "No job offer yet?",
     "finalText": "The Chancenkarte lets you come and look for a qualified role on the spot, with no contract to start.",
     "finalCta": "Discover the Chancenkarte",
-    "ctaPostuler": "Get my profile assessed"
+    "ctaPostuler": "Apply"
   },
   "travailler": {
     "title": "Working in Germany: 163 occupations can't fill their jobs",

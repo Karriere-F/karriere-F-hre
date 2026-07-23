@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
-import { getPathname } from "@i18n/navigation";
+import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
@@ -17,8 +17,6 @@ export default async function ChancenkartePage() {
   const tNav = await getTranslations("nav");
   const locale = (await getLocale()) as Locale;
   const content = await getPageContent<Content>("visaChancenkarte");
-
-  const eligibiliteHref = `${getPathname({ href: "/candidats", locale })}#eligibilite`;
 
   const quoi = [
     [content.quoi1Title, content.quoi1Body],
@@ -147,12 +145,12 @@ export default async function ChancenkartePage() {
       <AnchorSection id="notre-role" eyebrow={content.roleEyebrow} title={content.roleTitle}>
         <div className="max-w-3xl">
           <p className="text-brand-ink-secondary mb-6">{content.roleBody}</p>
-          <a
-            href={eligibiliteHref}
+          <Link
+            href="/postuler"
             className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
           >
             {content.roleCta}
-          </a>
+          </Link>
         </div>
 
         {/* Load-bearing: official German criteria, not a Karriere Fähre promise. */}
@@ -166,12 +164,12 @@ export default async function ChancenkartePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif max-w-xl">{content.finalTitle}</h2>
           <p className="text-brand-white/80 max-w-lg">{content.finalText}</p>
-          <a
-            href={eligibiliteHref}
+          <Link
+            href="/postuler"
             className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
             {content.finalCta}
-          </a>
+          </Link>
         </div>
       </section>
     </div>
