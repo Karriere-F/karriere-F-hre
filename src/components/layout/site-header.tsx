@@ -4,6 +4,7 @@ import { Link, getPathname } from "../../../i18n/navigation";
 import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
+import { NavDropdown } from "./nav-dropdown";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
@@ -88,12 +89,16 @@ export async function SiteHeader() {
         <div className="grid grid-cols-[1fr_auto_1fr] h-20 sm:h-24 items-center gap-4">
           <div className="justify-self-start flex items-center">
             <nav className="hidden lg:flex items-center gap-7">
-              <Link href="/candidats" className={navLink}>
-                {t("candidats")}
-              </Link>
-              <Link href="/entreprises" className={navLink}>
-                {t("entreprises")}
-              </Link>
+              <NavDropdown
+                label={t("candidats")}
+                href={path("/candidats")}
+                items={candidateLinks.map(({ href, label }) => ({ href, label }))}
+              />
+              <NavDropdown
+                label={t("entreprises")}
+                href={path("/entreprises")}
+                items={employerLinks}
+              />
             </nav>
             <div className="lg:hidden">
               <MobileNav
