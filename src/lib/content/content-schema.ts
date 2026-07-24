@@ -9,6 +9,11 @@ export const CONTENT_PAGES = {
     fields: [
       "heroTitle",
       "heroSubtitle",
+      "door1Title",
+      "door1Body",
+      "door2Title",
+      "door2Body",
+      "founderCta",
       "riveEyebrow",
       "riveTitle",
       "riveLead",
