@@ -92,7 +92,7 @@ export async function SiteHeader() {
               <NavDropdown
                 label={t("candidats")}
                 href={path("/candidats")}
-                items={candidateLinks.map(({ href, label }) => ({ href, label }))}
+                groups={candidateLinks}
               />
               <NavDropdown
                 label={t("entreprises")}
