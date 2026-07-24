@@ -3,7 +3,6 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { ComparisonTable } from "@/components/marketing/comparison-table";
 import { SubNavLinks } from "@/components/marketing/sub-nav-links";
-import { EligibilityQuiz } from "@/components/candidate/eligibility-quiz";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { FaqJsonLd } from "@/components/seo/faq-json-ld";
 import { Link } from "@i18n/navigation";
@@ -159,62 +158,6 @@ export default async function CandidatsPage() {
             </div>
           ))}
         </div>
-
-        <EligibilityQuiz
-          eyebrow={content.quizEyebrow}
-          title={content.quizTitle}
-          subtitle={content.quizSubtitle}
-          q1={{
-            title: content.quizQ1Title,
-            options: [
-              { value: "none", label: content.quizQ1Opt1 },
-              { value: "a1a2", label: content.quizQ1Opt2 },
-              { value: "b1", label: content.quizQ1Opt3 },
-              { value: "b2plus", label: content.quizQ1Opt4 },
-            ],
-          }}
-          q2={{
-            title: content.quizQ2Title,
-            options: [
-              { value: "b2valid", label: content.quizQ2Opt1 },
-              { value: "b2expired", label: content.quizQ2Opt2 },
-              { value: "low", label: content.quizQ2Opt3 },
-              { value: "no", label: content.quizQ2Opt4 },
-            ],
-          }}
-          q3={{
-            title: content.quizQ3Title,
-            options: [
-              { value: "learn", label: content.quizQ3Opt1 },
-              { value: "work", label: content.quizQ3Opt2 },
-            ],
-          }}
-          results={{
-            fastTrack: {
-              badge: content.quizResultFastTrackBadge,
-              title: content.quizResultFastTrackTitle,
-              text: content.quizResultFastTrackText,
-            },
-            examPrep: {
-              badge: content.quizResultExamPrepBadge,
-              title: content.quizResultExamPrepTitle,
-              text: content.quizResultExamPrepText,
-            },
-            b1ToB2: {
-              badge: content.quizResultB1ToB2Badge,
-              title: content.quizResultB1ToB2Title,
-              text: content.quizResultB1ToB2Text,
-            },
-            fullTraining: {
-              badge: content.quizResultFullTrainingBadge,
-              title: content.quizResultFullTrainingTitle,
-              text: content.quizResultFullTrainingText,
-            },
-          }}
-          ctaLabel={content.quizCta}
-          resetLabel={content.quizReset}
-          noteText={content.quizNote}
-        />
 
         <div className="mt-8">
           <Link
