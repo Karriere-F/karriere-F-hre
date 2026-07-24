@@ -89,16 +89,8 @@ export async function SiteHeader() {
         <div className="grid grid-cols-[1fr_auto_1fr] h-20 sm:h-24 items-center gap-4">
           <div className="justify-self-start flex items-center">
             <nav className="hidden lg:flex items-center gap-7">
-              <NavDropdown
-                label={t("candidats")}
-                href={path("/candidats")}
-                groups={candidateLinks}
-              />
-              <NavDropdown
-                label={t("entreprises")}
-                href={path("/entreprises")}
-                items={employerLinks}
-              />
+              <NavDropdown label={t("candidats")} groups={candidateLinks} />
+              <NavDropdown label={t("entreprises")} items={employerLinks} />
             </nav>
             <div className="lg:hidden">
               <MobileNav

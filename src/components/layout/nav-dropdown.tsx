@@ -1,31 +1,55 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 type Item = { href: string; label: string };
 type Group = { href: string; label: string; items?: Item[] };
 
-// Desktop header dropdown. The label itself links to the section hub; hovering (or
-// keyboard-focusing) the group reveals the menu. Two shapes:
+// Desktop header dropdown. Opens on CLICK (not hover) so the panel is stable and the
+// trigger never navigates by accident — clicking the label reveals the menu, clicking
+// away or Escape closes it. Two shapes:
 //   - `items`  -> a simple single-column list (e.g. Entreprises).
-//   - `groups` -> a mega-menu, one column per section with its sub-pages beneath
-//                 (e.g. Candidats: Cours d'allemand / Ausbildung / Visa / Travailler).
-// Pure CSS via group-hover / group-focus-within, so it opens on keyboard focus too and
-// needs no client JS. The hrefs are already-localized path strings, hence plain <a>.
+//   - `groups` -> a mega-menu, one column per section (highlighted header linking to the
+//                 hub) with its sub-pages listed plainly beneath (e.g. Candidats).
+// The hrefs are already-localized path strings, hence plain <a>.
 export function NavDropdown({
   label,
-  href,
   items,
   groups,
 }: {
   label: string;
-  href: string;
   items?: Item[];
   groups?: Group[];
 }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const close = () => setOpen(false);
+
   return (
-    <div className="group relative">
-      <a
-        href={href}
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
         aria-haspopup="true"
+        aria-expanded={open}
         className="inline-flex items-center gap-1 text-sm font-medium text-brand-ink hover:text-brand-gold-text transition-colors duration-150"
       >
         {label}
@@ -33,29 +57,31 @@ export function NavDropdown({
           size={15}
           strokeWidth={2}
           aria-hidden="true"
-          className="text-brand-ink-muted transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+          className={`text-brand-ink-muted transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
-      </a>
+      </button>
 
-      <div className="invisible absolute left-0 top-full z-50 translate-y-1 pt-3 opacity-0 transition-[opacity,transform] duration-150 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-        {groups ? (
-          <div className="flex gap-7 rounded-xl border border-brand-grid bg-brand-white p-5 shadow-lg shadow-black/5">
+      {open &&
+        (groups ? (
+          <div className="absolute left-0 top-full z-50 mt-3 flex gap-6 rounded-xl border border-brand-grid bg-brand-white p-4 shadow-xl shadow-black/10">
             {groups.map((section) => (
               <div key={section.href} className="w-44">
                 <a
                   href={section.href}
-                  className="block border-b border-brand-grid pb-2 font-serif text-sm text-brand-black transition-colors hover:text-brand-gold-text"
+                  onClick={close}
+                  className="block rounded-lg bg-brand-card px-3 py-2 font-serif text-sm font-semibold text-brand-black transition-colors hover:text-brand-gold-text"
                 >
                   {section.label}
                 </a>
                 {section.items && (
-                  <ul role="menu" className="mt-2 flex flex-col gap-0.5">
+                  <ul role="menu" className="mt-1.5 flex flex-col gap-0.5">
                     {section.items.map((item) => (
                       <li key={item.href} role="none">
                         <a
                           href={item.href}
+                          onClick={close}
                           role="menuitem"
-                          className="block rounded-lg px-2 py-1.5 text-sm leading-snug text-brand-ink-secondary transition-colors hover:bg-brand-card hover:text-brand-gold-text"
+                          className="block rounded-lg px-3 py-1.5 text-sm leading-snug text-brand-ink-secondary transition-colors hover:bg-brand-card hover:text-brand-gold-text"
                         >
                           {item.label}
                         </a>
@@ -69,12 +95,13 @@ export function NavDropdown({
         ) : (
           <ul
             role="menu"
-            className="min-w-[13rem] rounded-xl border border-brand-grid bg-brand-white p-1.5 shadow-lg shadow-black/5"
+            className="absolute left-0 top-full z-50 mt-3 min-w-[13rem] rounded-xl border border-brand-grid bg-brand-white p-1.5 shadow-xl shadow-black/10"
           >
             {items?.map((item) => (
               <li key={item.href} role="none">
                 <a
                   href={item.href}
+                  onClick={close}
                   role="menuitem"
                   className="block rounded-lg px-3 py-2 text-sm text-brand-ink-secondary transition-colors hover:bg-brand-card hover:text-brand-gold-text"
                 >
@@ -83,8 +110,7 @@ export function NavDropdown({
               </li>
             ))}
           </ul>
-        )}
-      </div>
+        ))}
     </div>
   );
 }
