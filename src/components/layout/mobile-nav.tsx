@@ -6,10 +6,10 @@ import { useAudience } from "./use-audience";
 
 type NavLink = { href: string; label: string; items?: { href: string; label: string }[] };
 
-// The primary nav drawer, opened from the menu button on the left of the header at every
-// breakpoint (talentorange-style centred-logo header). The pill flips audience, and the
-// list below shows that audience's links plus the company links; a switch link carries a
-// full page navigation, which also closes the drawer.
+// The mobile nav drawer, opened from the menu button on the left of the header below lg
+// (desktop shows the audience links inline). The pill flips audience, and the list below
+// shows that audience's links plus the company links; a switch link carries a full page
+// navigation, which also closes the drawer.
 export function MobileNav({
   candidatsSwitch,
   entreprisesSwitch,

@@ -4,7 +4,6 @@ import { Link, getPathname } from "../../../i18n/navigation";
 import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
-import { HeaderCta } from "./header-cta";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
@@ -78,23 +77,36 @@ export async function SiteHeader() {
     { href: path("/blog"), label: t("blog") },
   ];
 
+  const navLink =
+    "text-sm font-medium text-brand-ink hover:text-brand-gold-text transition-colors duration-150";
+
   return (
     <header className="bg-brand-white text-brand-ink sticky top-0 z-40 border-b border-brand-grid">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Centred logo, talentorange-style: menu on the left, brand in the middle,
-            actions on the right. The full nav lives in the drawer at every breakpoint. */}
+        {/* Centred logo: audience links to its left, About / language / apply to its
+            right. On mobile the two audience links collapse into the drawer. */}
         <div className="grid grid-cols-[1fr_auto_1fr] h-20 sm:h-24 items-center gap-4">
-          <div className="justify-self-start">
-            <MobileNav
-              candidatsSwitch={candidatsSwitch}
-              entreprisesSwitch={entreprisesSwitch}
-              candidateLinks={candidateLinks}
-              employerLinks={employerLinks}
-              companyLinks={companyLinks}
-              postulerLabel={t("postuler")}
-              employerCtaLabel={tEnt("contactCta")}
-              loginLabel={t("login")}
-            />
+          <div className="justify-self-start flex items-center">
+            <nav className="hidden lg:flex items-center gap-7">
+              <Link href="/candidats" className={navLink}>
+                {t("candidats")}
+              </Link>
+              <Link href="/entreprises" className={navLink}>
+                {t("entreprises")}
+              </Link>
+            </nav>
+            <div className="lg:hidden">
+              <MobileNav
+                candidatsSwitch={candidatsSwitch}
+                entreprisesSwitch={entreprisesSwitch}
+                candidateLinks={candidateLinks}
+                employerLinks={employerLinks}
+                companyLinks={companyLinks}
+                postulerLabel={t("postulerNow")}
+                employerCtaLabel={tEnt("contactCta")}
+                loginLabel={t("login")}
+              />
+            </div>
           </div>
 
           <Link href="/" className="justify-self-center flex items-center" aria-label="Karriere Fähre">
@@ -108,13 +120,17 @@ export async function SiteHeader() {
             />
           </Link>
 
-          <div className="justify-self-end flex items-center gap-3">
-            <HeaderCta
-              postulerLabel={t("postuler")}
-              employerCtaLabel={tEnt("contactCta")}
-              loginLabel={t("login")}
-            />
+          <div className="justify-self-end flex items-center gap-4 sm:gap-5">
+            <Link href="/a-propos" className={`hidden lg:inline ${navLink}`}>
+              {t("aProposUs")}
+            </Link>
             <LocaleSwitcher />
+            <Link
+              href="/postuler"
+              className="press hidden sm:inline-flex items-center rounded-full bg-brand-gold px-4 sm:px-5 py-2 text-sm text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            >
+              {t("postulerNow")}
+            </Link>
           </div>
         </div>
       </div>
