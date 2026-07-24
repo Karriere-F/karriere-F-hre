@@ -65,7 +65,6 @@ export async function SiteHeader() {
         { href: path("/candidats/vivre-en-allemagne"), label: t("travVivre") },
       ],
     },
-    { href: path("/partir-en-allemagne"), label: t("partir") },
   ];
 
   const employerLinks = [

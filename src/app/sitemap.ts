@@ -27,8 +27,6 @@ const STATIC_PATHS = [
   "/visa-allemagne/travailleur-qualifie",
   "/visa-allemagne/chancenkarte",
   "/travailler-en-allemagne",
-  "/partir-en-allemagne",
-  "/partir-en-allemagne/cameroun",
   "/candidats/formations/integration",
   "/candidats/reconnaissance-diplomes",
   "/candidats/vivre-en-allemagne",

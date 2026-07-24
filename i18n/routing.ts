@@ -108,20 +108,6 @@ export const routing = defineRouting({
       en: "/working-in-germany",
     },
 
-    // Silo 5. Only the Cameroun page is built -- it's the founder's base (Douala) and the
-    // one country with verifiable, KF-specific content. Other Central African source
-    // countries are named on the hub with a contact CTA, not given empty pages.
-    "/partir-en-allemagne": {
-      fr: "/partir-en-allemagne",
-      de: "/nach-deutschland-auswandern",
-      en: "/moving-to-germany",
-    },
-    "/partir-en-allemagne/cameroun": {
-      fr: "/partir-en-allemagne/cameroun",
-      de: "/nach-deutschland-auswandern/kamerun",
-      en: "/moving-to-germany/cameroon",
-    },
-
     "/candidats/formations/integration": {
       fr: "/candidats/formations/integration",
       de: "/kandidaten/ausbildung/integration",

@@ -8,6 +8,18 @@ export const BLOG_CATEGORIES: Record<
   string,
   { title: Record<Locale, string>; description: Record<Locale, string> }
 > = {
+  "partir-en-allemagne": {
+    title: {
+      fr: "Partir en Allemagne depuis l'Afrique",
+      de: "Von Afrika nach Deutschland auswandern",
+      en: "Moving to Germany from Africa",
+    },
+    description: {
+      fr: "Reconnaissance, allemand, visa : le chemin de l'Afrique vers l'Allemagne, avec le Cameroun en cas concret.",
+      de: "Anerkennung, Deutsch, Visum: der Weg von Afrika nach Deutschland, mit Kamerun als konkretem Fall.",
+      en: "Recognition, German, visa: the path from Africa to Germany, with Cameroon as a concrete case.",
+    },
+  },
   "travailler-en-allemagne": {
     title: {
       fr: "Travailler en Allemagne",

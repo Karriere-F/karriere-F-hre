@@ -4,8 +4,15 @@ import { notFound } from "next/navigation";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Link } from "@i18n/navigation";
 import { BLOG_CATEGORIES, type BlogCategorySlug } from "@/lib/blog-categories";
+import { PartirAfriqueArticle } from "@/components/blog/partir-afrique-article";
+import { getPageContent } from "@/lib/content/get-page-content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
+import type frMessages from "@messages/fr.json";
+
+// The blog's first developed piece lives at this category slug; other categories are
+// still placeholders.
+const ARTICLE_SLUG = "partir-en-allemagne";
 
 export async function generateMetadata({
   params,
@@ -37,6 +44,11 @@ export default async function BlogCategoryPage({
 
   const locale = (await getLocale()) as Locale;
   const t = await getTranslations("blog");
+
+  if (slug === ARTICLE_SLUG) {
+    const content = await getPageContent<typeof frMessages.blogPartir>("blogPartir");
+    return <PartirAfriqueArticle content={content} locale={locale} />;
+  }
 
   return (
     <div>
