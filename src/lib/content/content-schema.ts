@@ -937,7 +937,6 @@ export const CONTENT_PAGES = {
       "title",
       "subtitle",
       "kick",
-      "ctaEligibility",
       "ctaSecteurs",
       "contexteEyebrow",
       "contexteTitle",

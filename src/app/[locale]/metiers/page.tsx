@@ -4,7 +4,7 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { FaqJsonLd } from "@/components/seo/faq-json-ld";
-import { Link, getPathname } from "@i18n/navigation";
+import { Link } from "@i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
@@ -48,8 +48,6 @@ export default async function MetiersPage() {
     a: tFaq(`a${i}` as "a1"),
   }));
 
-  const candidatsEligibiliteHref = `${getPathname({ href: "/candidats", locale })}#eligibilite`;
-
   return (
     <div>
       <BreadcrumbJsonLd
@@ -65,14 +63,8 @@ export default async function MetiersPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
           <a
-            href={candidatsEligibiliteHref}
-            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-          >
-            {content.ctaEligibility}
-          </a>
-          <a
             href="#secteurs"
-            className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
+            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
           >
             {content.ctaSecteurs}
           </a>
