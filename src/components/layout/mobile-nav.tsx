@@ -6,9 +6,10 @@ import { useAudience } from "./use-audience";
 
 type NavLink = { href: string; label: string; items?: { href: string; label: string }[] };
 
-// Mobile drawer. Mirrors the desktop switch: the pill flips audience, and the list below
-// shows that audience's links plus the company links. The switch links carry a full page
-// navigation, which also closes the drawer.
+// The primary nav drawer, opened from the menu button on the left of the header at every
+// breakpoint (talentorange-style centred-logo header). The pill flips audience, and the
+// list below shows that audience's links plus the company links; a switch link carries a
+// full page navigation, which also closes the drawer.
 export function MobileNav({
   candidatsSwitch,
   entreprisesSwitch,
@@ -37,7 +38,7 @@ export function MobileNav({
   const pillIdle = "text-brand-ink-secondary";
 
   return (
-    <div className="lg:hidden">
+    <div>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -63,13 +64,13 @@ export function MobileNav({
       </button>
 
       <div
-        className={`fixed inset-x-0 top-20 z-30 bg-brand-white border-b border-brand-grid shadow-lg transition-[opacity,transform] duration-200 ease-out ${
+        className={`fixed inset-x-0 top-20 sm:top-24 z-30 bg-brand-white border-b border-brand-grid shadow-lg transition-[opacity,transform] duration-200 ease-out ${
           open
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col px-4 py-4 gap-1">
+        <nav className="mx-auto w-full max-w-6xl flex flex-col px-4 sm:px-6 lg:px-8 py-4 gap-1">
           <div
             className="flex rounded-full border border-brand-grid bg-brand-card p-0.5 mb-2"
             role="tablist"

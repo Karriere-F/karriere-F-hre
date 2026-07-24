@@ -4,7 +4,6 @@ import { Link, getPathname } from "../../../i18n/navigation";
 import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
-import { HeaderNav } from "./header-nav";
 import { HeaderCta } from "./header-cta";
 
 export async function SiteHeader() {
@@ -82,33 +81,10 @@ export async function SiteHeader() {
   return (
     <header className="bg-brand-white text-brand-ink sticky top-0 z-40 border-b border-brand-grid">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <Image
-              src="/logo.png"
-              alt="Karriere Fähre"
-              width={1024}
-              height={1024}
-              priority
-              className="h-14 w-auto"
-            />
-          </Link>
-
-          <HeaderNav
-            candidatsSwitch={candidatsSwitch}
-            entreprisesSwitch={entreprisesSwitch}
-            candidateLinks={candidateLinks}
-            employerLinks={employerLinks}
-            companyLinks={companyLinks}
-          />
-
-          <div className="flex items-center gap-3">
-            <HeaderCta
-              postulerLabel={t("postuler")}
-              employerCtaLabel={tEnt("contactCta")}
-              loginLabel={t("login")}
-            />
-            <LocaleSwitcher />
+        {/* Centred logo, talentorange-style: menu on the left, brand in the middle,
+            actions on the right. The full nav lives in the drawer at every breakpoint. */}
+        <div className="grid grid-cols-[1fr_auto_1fr] h-20 sm:h-24 items-center gap-4">
+          <div className="justify-self-start">
             <MobileNav
               candidatsSwitch={candidatsSwitch}
               entreprisesSwitch={entreprisesSwitch}
@@ -119,6 +95,26 @@ export async function SiteHeader() {
               employerCtaLabel={tEnt("contactCta")}
               loginLabel={t("login")}
             />
+          </div>
+
+          <Link href="/" className="justify-self-center flex items-center" aria-label="Karriere Fähre">
+            <Image
+              src="/logo.png"
+              alt="Karriere Fähre"
+              width={1024}
+              height={1024}
+              priority
+              className="h-16 sm:h-20 w-auto"
+            />
+          </Link>
+
+          <div className="justify-self-end flex items-center gap-3">
+            <HeaderCta
+              postulerLabel={t("postuler")}
+              employerCtaLabel={tEnt("contactCta")}
+              loginLabel={t("login")}
+            />
+            <LocaleSwitcher />
           </div>
         </div>
       </div>

@@ -178,29 +178,51 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <ol className="mt-10 sm:mt-12 relative border-l border-brand-grid ml-3 sm:ml-4">
-            {steps.map(([title, body], i) => (
-              <li
-                key={title}
-                className="animate-fade-up relative pl-8 sm:pl-10 pb-9 last:pb-0"
-                style={{ animationDelay: `${Math.min(i, 8) * 50}ms` }}
-              >
-                <span className="absolute -left-[13px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-brand-gold text-brand-black font-serif text-xs font-bold ring-4 ring-brand-card">
-                  {i + 1}
-                </span>
-                <h3 className="font-medium text-brand-black leading-snug">{title}</h3>
-                <p className="mt-1.5 max-w-xl text-sm text-brand-ink-secondary leading-relaxed">
-                  {body}
-                </p>
-              </li>
-            ))}
-          </ol>
+          <div className="mt-10 sm:mt-12 grid gap-10 lg:grid-cols-[minmax(0,0.82fr)_1fr] lg:gap-14 items-start">
+            <div className="animate-fade-up lg:sticky lg:top-28">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/german-courses.jpg"
+                  alt="Des candidats en formation, carnet en main"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
+
+            <ol className="relative border-l border-brand-grid ml-3 sm:ml-4">
+              {steps.map(([title, body], i) => (
+                <li
+                  key={title}
+                  className="animate-fade-up relative pl-8 sm:pl-10 pb-9 last:pb-0"
+                  style={{ animationDelay: `${Math.min(i, 8) * 50}ms` }}
+                >
+                  <span className="absolute -left-[13px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-brand-gold text-brand-black font-serif text-xs font-bold ring-4 ring-brand-card">
+                    {i + 1}
+                  </span>
+                  <h3 className="font-medium text-brand-black leading-snug">{title}</h3>
+                  <p className="mt-1.5 max-w-xl text-sm text-brand-ink-secondary leading-relaxed">
+                    {body}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
       {/* Closing — the one deliberate dark band, restating the two doors */}
-      <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 flex flex-col items-center text-center gap-5">
+      <section className="relative bg-brand-black text-brand-white overflow-hidden">
+        <Image
+          src="/images/home-hero.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/85 to-brand-black/75" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 flex flex-col items-center text-center gap-5">
           <h2 className="font-serif text-2xl sm:text-3xl max-w-xl text-balance">
             {content.finalCtaTitle}
           </h2>
