@@ -66,12 +66,12 @@ export default async function HomePage() {
               className="group relative block overflow-hidden rounded-2xl lg:col-span-7 min-h-[440px] sm:min-h-[520px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-card"
             >
               <Image
-                src="/images/services-candidates.jpg"
-                alt="Une candidate prépare son projet de départ pour l'Allemagne"
+                src="/images/candidats-soins-technique.jpg"
+                alt="Une infirmière et un technicien, prêts pour une carrière qualifiée en Allemagne"
                 fill
                 priority
                 sizes="(min-width: 1024px) 58vw, 100vw"
-                className="object-cover object-[center_25%] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                className="object-cover object-[center_20%] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/92 via-brand-black/60 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-7 sm:p-8">
@@ -102,11 +102,11 @@ export default async function HomePage() {
               className="group relative block overflow-hidden rounded-2xl lg:col-span-5 min-h-[440px] sm:min-h-[520px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-card"
             >
               <Image
-                src="/images/services-companies.jpg"
-                alt="Un technicien qualifié au travail, le profil que recherchent les entreprises allemandes"
+                src="/images/entreprises-allemandes.jpg"
+                alt="L'équipe d'une entreprise allemande dans ses bureaux modernes"
                 fill
                 sizes="(min-width: 1024px) 42vw, 100vw"
-                className="object-cover object-[left_center] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                className="object-cover object-[center_25%] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/92 via-brand-black/60 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-7 sm:p-8">
