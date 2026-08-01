@@ -42,13 +42,13 @@ export default async function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16">
           <div className="max-w-3xl">
             <h1
-              className="animate-fade-up font-serif text-brand-black leading-[1.08] text-balance"
-              style={{ fontSize: "clamp(2.25rem, 5.2vw, 3.75rem)", letterSpacing: "-0.02em" }}
+              className="animate-fade-up font-serif text-brand-black leading-[1.06] text-balance"
+              style={{ fontSize: "clamp(2.5rem, 5.8vw, 4.5rem)", letterSpacing: "-0.025em" }}
             >
               {content.heroTitle}
             </h1>
             <p
-              className="animate-fade-up mt-5 max-w-xl text-brand-ink-secondary text-lg leading-relaxed text-pretty"
+              className="animate-fade-up mt-6 max-w-2xl text-brand-ink-secondary text-xl leading-relaxed text-pretty"
               style={{ animationDelay: "80ms" }}
             >
               {content.heroSubtitle}
