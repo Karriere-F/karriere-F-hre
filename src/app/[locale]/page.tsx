@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { Check } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
@@ -25,6 +26,15 @@ export default async function HomePage() {
   const tNav = await getTranslations("nav");
   const content = await getPageContent<HomeContent>("home");
 
+  const heroSteps = [
+    content.heroStep1,
+    content.heroStep2,
+    content.heroStep3,
+    content.heroStep4,
+    content.heroStep5,
+    content.heroStep6,
+  ];
+
   const steps = [
     [content.acc1Title, content.acc1Body],
     [content.acc2Title, content.acc2Body],
@@ -40,44 +50,76 @@ export default async function HomePage() {
       {/* Hero + the two doors — the page's whole job is to route to one of them */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16">
-          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-12">
-            <div>
-              <h1
-                className="animate-fade-up font-serif text-brand-black leading-[1.08] text-balance"
-                style={{ fontSize: "clamp(1.875rem, 3vw, 2.75rem)", letterSpacing: "-0.02em" }}
+          <div className="max-w-3xl">
+            <h1
+              className="animate-fade-up font-serif text-brand-black leading-[1.06] text-balance"
+              style={{ fontSize: "clamp(2.25rem, 5.2vw, 4rem)", letterSpacing: "-0.025em" }}
+            >
+              {content.heroTitle}
+            </h1>
+            <p
+              className="animate-fade-up mt-6 max-w-2xl text-brand-ink-secondary text-lg leading-relaxed"
+              style={{ animationDelay: "80ms" }}
+            >
+              {content.heroSubtitle}
+            </p>
+            <ul
+              className="animate-fade-up mt-5 grid gap-x-6 gap-y-2.5 sm:grid-cols-2 max-w-xl"
+              style={{ animationDelay: "120ms" }}
+            >
+              {heroSteps.map((step) => (
+                <li key={step} className="flex items-center gap-2.5 text-brand-ink">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text">
+                    <Check size={15} strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  {step}
+                </li>
+              ))}
+            </ul>
+            <p
+              className="animate-fade-up mt-7 max-w-2xl font-serif text-2xl text-brand-gold-text leading-snug text-balance"
+              style={{ animationDelay: "160ms" }}
+            >
+              {content.heroClosing}
+            </p>
+            <div
+              className="animate-fade-up mt-7 flex flex-wrap gap-4"
+              style={{ animationDelay: "200ms" }}
+            >
+              <Link
+                href="/postuler"
+                className="press rounded-full bg-brand-gold px-7 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
               >
-                {content.heroTitle}
-              </h1>
-              <p
-                className="animate-fade-up mt-6 text-brand-ink-secondary text-lg leading-relaxed text-justify hyphens-auto"
-                style={{ animationDelay: "80ms" }}
+                {content.heroCtaStart}
+              </Link>
+              <a
+                href="#portes"
+                className="press rounded-full border border-brand-black px-7 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
               >
-                {content.heroSubtitle}
-              </p>
-              <p
-                className="animate-fade-up mt-6 font-serif text-2xl text-brand-gold-text leading-snug text-balance"
-                style={{ animationDelay: "120ms" }}
-              >
-                {content.heroClosing}
-              </p>
+                {content.heroCtaDiscover}
+              </a>
             </div>
-            <div className="animate-fade-up" style={{ animationDelay: "100ms" }}>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl">
-                <Image
-                  src="/images/parcours-allemagne.jpg"
-                  alt="Un technicien, une infirmière, un cadre, un ingénieur et un chef marchent vers une ville allemande au coucher du soleil"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover object-center"
-                />
-              </div>
-            </div>
+          </div>
+
+          {/* IMAGE XXL — full width below the text */}
+          <div
+            className="animate-fade-up mt-10 sm:mt-12 relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl"
+            style={{ animationDelay: "160ms" }}
+          >
+            <Image
+              src="/images/parcours-allemagne.jpg"
+              alt="Un technicien, une infirmière, un cadre, un ingénieur et un chef marchent vers une ville allemande au coucher du soleil"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-[center_35%]"
+            />
           </div>
 
           {/* Two doors, equal halves. */}
           <div
-            className="animate-fade-up mt-10 sm:mt-12 grid gap-4 sm:gap-5 sm:grid-cols-2"
+            id="portes"
+            className="animate-fade-up mt-12 sm:mt-16 scroll-mt-28 grid gap-4 sm:gap-5 sm:grid-cols-2"
             style={{ animationDelay: "160ms" }}
           >
             {/* Candidat door */}
