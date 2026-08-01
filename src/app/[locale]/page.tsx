@@ -40,19 +40,39 @@ export default async function HomePage() {
       {/* Hero + the two doors — the page's whole job is to route to one of them */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16">
-          <div className="max-w-3xl">
-            <h1
-              className="animate-fade-up font-serif text-brand-black leading-[1.06] text-balance"
-              style={{ fontSize: "clamp(2.5rem, 5.8vw, 4.5rem)", letterSpacing: "-0.025em" }}
-            >
-              {content.heroTitle}
-            </h1>
-            <p
-              className="animate-fade-up mt-6 max-w-2xl text-brand-ink-secondary text-xl leading-relaxed text-justify hyphens-auto"
-              style={{ animationDelay: "80ms" }}
-            >
-              {content.heroSubtitle}
-            </p>
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-12">
+            <div>
+              <h1
+                className="animate-fade-up font-serif text-brand-black leading-[1.08] text-balance"
+                style={{ fontSize: "clamp(1.875rem, 3vw, 2.75rem)", letterSpacing: "-0.02em" }}
+              >
+                {content.heroTitle}
+              </h1>
+              <p
+                className="animate-fade-up mt-6 text-brand-ink-secondary text-lg leading-relaxed text-justify hyphens-auto"
+                style={{ animationDelay: "80ms" }}
+              >
+                {content.heroSubtitle}
+              </p>
+              <p
+                className="animate-fade-up mt-6 font-serif text-2xl text-brand-gold-text leading-snug text-balance"
+                style={{ animationDelay: "120ms" }}
+              >
+                {content.heroClosing}
+              </p>
+            </div>
+            <div className="animate-fade-up" style={{ animationDelay: "100ms" }}>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl">
+                <Image
+                  src="/images/parcours-allemagne.jpg"
+                  alt="Un technicien, une infirmière, un cadre, un ingénieur et un chef marchent vers une ville allemande au coucher du soleil"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Two doors, equal halves. */}

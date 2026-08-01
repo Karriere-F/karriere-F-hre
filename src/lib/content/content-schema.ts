@@ -9,6 +9,7 @@ export const CONTENT_PAGES = {
     fields: [
       "heroTitle",
       "heroSubtitle",
+      "heroClosing",
       "door1Title",
       "door1Body",
       "door2Title",
