@@ -55,22 +55,22 @@ export default async function HomePage() {
             </p>
           </div>
 
-          {/* Two doors: asymmetric on purpose — candidates (primary audience) wider. */}
+          {/* Two doors, equal halves. */}
           <div
-            className="animate-fade-up mt-10 sm:mt-12 grid gap-4 sm:gap-5 lg:grid-cols-12"
+            className="animate-fade-up mt-10 sm:mt-12 grid gap-4 sm:gap-5 sm:grid-cols-2"
             style={{ animationDelay: "160ms" }}
           >
             {/* Candidat door */}
             <Link
               href="/candidats"
-              className="group relative block overflow-hidden rounded-2xl lg:col-span-7 min-h-[440px] sm:min-h-[520px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-card"
+              className="group relative block overflow-hidden rounded-2xl min-h-[440px] sm:min-h-[520px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-card"
             >
               <Image
                 src="/images/candidats-soins-technique.jpg"
                 alt="Une infirmière et un technicien, prêts pour une carrière qualifiée en Allemagne"
                 fill
                 priority
-                sizes="(min-width: 1024px) 58vw, 100vw"
+                sizes="(min-width: 640px) 50vw, 100vw"
                 className="object-cover object-[center_20%] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/92 via-brand-black/60 to-transparent" />
@@ -99,13 +99,13 @@ export default async function HomePage() {
             {/* Entreprise door */}
             <Link
               href="/entreprises"
-              className="group relative block overflow-hidden rounded-2xl lg:col-span-5 min-h-[440px] sm:min-h-[520px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-card"
+              className="group relative block overflow-hidden rounded-2xl min-h-[440px] sm:min-h-[520px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-card"
             >
               <Image
                 src="/images/entreprises-allemandes.jpg"
                 alt="L'équipe d'une entreprise allemande dans ses bureaux modernes"
                 fill
-                sizes="(min-width: 1024px) 42vw, 100vw"
+                sizes="(min-width: 640px) 50vw, 100vw"
                 className="object-cover object-[center_25%] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/92 via-brand-black/60 to-transparent" />
@@ -113,10 +113,10 @@ export default async function HomePage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-light">
                   {tNav("entreprises")}
                 </span>
-                <h2 className="mt-2 font-serif text-2xl sm:text-3xl text-brand-white max-w-sm leading-snug">
+                <h2 className="mt-2 font-serif text-2xl sm:text-3xl text-brand-white max-w-md leading-snug">
                   {content.door2Title}
                 </h2>
-                <p className="mt-3 max-w-sm text-sm sm:text-base text-brand-white/80 leading-relaxed">
+                <p className="mt-3 max-w-md text-sm sm:text-base text-brand-white/80 leading-relaxed">
                   {content.door2Body}
                 </p>
                 <span className="mt-5 inline-flex items-center gap-2 font-medium text-brand-white">
