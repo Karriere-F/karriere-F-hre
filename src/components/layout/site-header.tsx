@@ -108,10 +108,10 @@ export async function SiteHeader() {
 
           <Link href="/" className="justify-self-center flex items-center" aria-label="Karriere Fähre">
             <Image
-              src="/logo.png"
+              src="/logo-kf.png"
               alt="Karriere Fähre"
-              width={1024}
-              height={1024}
+              width={900}
+              height={620}
               priority
               className="h-16 sm:h-20 w-auto"
             />

@@ -61,7 +61,7 @@ export async function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
-            <Image src="/logo.png" alt="Karriere Fähre" width={1024} height={1024} className="h-14 w-auto mb-3" />
+            <Image src="/logo-kf.png" alt="Karriere Fähre" width={900} height={620} className="h-14 w-auto mb-3" />
             <p className="text-xs text-brand-ink-muted">{t("tagline")}</p>
           </div>
           {columns.map((col) => (
