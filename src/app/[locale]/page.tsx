@@ -40,7 +40,7 @@ export default async function HomePage() {
       {/* Hero + the two doors — the page's whole job is to route to one of them */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl">
             <h1
               className="animate-fade-up font-serif text-brand-black leading-[1.06] text-balance"
               style={{ fontSize: "clamp(2.5rem, 5.8vw, 4.5rem)", letterSpacing: "-0.025em" }}
@@ -48,7 +48,7 @@ export default async function HomePage() {
               {content.heroTitle}
             </h1>
             <p
-              className="animate-fade-up mt-6 max-w-2xl mx-auto text-brand-ink-secondary text-xl leading-relaxed text-pretty"
+              className="animate-fade-up mt-6 max-w-2xl text-brand-ink-secondary text-xl leading-relaxed text-justify hyphens-auto"
               style={{ animationDelay: "80ms" }}
             >
               {content.heroSubtitle}
