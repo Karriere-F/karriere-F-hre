@@ -202,7 +202,7 @@ export default async function HomePage() {
       {/* Section 2 — Métiers qui recrutent : real photo per profession */}
       <section className="bg-brand-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <div className="max-w-2xl">
+          <div>
             <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
               {content.metiersTitle}
             </h2>
