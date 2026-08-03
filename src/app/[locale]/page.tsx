@@ -27,15 +27,15 @@ export default async function HomePage() {
   const content = await getPageContent<HomeContent>("home");
 
   const metiers = [
-    { slug: "medecins", label: content.metierMedecins, alt: "Un médecin en blouse blanche, stéthoscope au cou, dans un hôpital allemand" },
-    { slug: "infirmiers", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
+    { slug: "medecins", img: "medecins-v2", label: content.metierMedecins, alt: "Un médecin en blouse blanche, stéthoscope au cou, dans un hôpital allemand" },
+    { slug: "infirmiers", img: "infirmiers-v2", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
     { slug: "personnel-sante", label: content.metierPersonnelSante, alt: "Un membre du personnel de santé en tenue blanche dans un service hospitalier" },
-    { slug: "ingenieurs", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
+    { slug: "ingenieurs", img: "ingenieurs-v2", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
     { slug: "informaticiens", label: content.metierInformaticiens, alt: "Un informaticien à son poste, code affiché sur ses écrans" },
     { slug: "techniciens", img: "techniciens-v2", label: content.metierTechniciens, alt: "Un technicien devant une armoire électrique industrielle" },
     { slug: "btp", label: content.metierBtp, alt: "Un ouvrier du bâtiment sur un chantier de construction" },
     { slug: "hotellerie", img: "hotellerie-v2", label: content.metierHotellerie, alt: "Un serveur et une réceptionniste dans un établissement hôtelier" },
-    { slug: "industrie", label: content.metierIndustrie, alt: "Une opératrice sur une machine-outil dans une usine" },
+    { slug: "industrie", img: "industrie-v3", label: content.metierIndustrie, alt: "Une opératrice en atelier industriel, bras croisés devant les machines" },
     { slug: "logistique", img: "logistique-v2", label: content.metierLogistique, alt: "Un agent logistique devant un camion en chargement dans un entrepôt" },
   ];
 
