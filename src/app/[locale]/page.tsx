@@ -29,6 +29,7 @@ export default async function HomePage() {
   const metiers = [
     { slug: "medecins", label: content.metierMedecins, alt: "Un médecin en blouse blanche, stéthoscope au cou, dans un hôpital allemand" },
     { slug: "infirmiers", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
+    { slug: "personnel-sante", label: content.metierPersonnelSante, alt: "Un membre du personnel de santé en tenue blanche dans un service hospitalier" },
     { slug: "ingenieurs", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
     { slug: "electriciens", label: content.metierElectriciens, alt: "Un électricien intervenant sur une armoire électrique" },
     { slug: "techniciens", label: content.metierTechniciens, alt: "Un technicien de maintenance sur une installation industrielle" },
@@ -210,22 +211,22 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <ul className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+          <ul className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
             {metiers.map(({ slug, label, alt }, i) => (
               <li
                 key={slug}
                 className="animate-fade-up group relative aspect-[4/5] overflow-hidden rounded-xl"
-                style={{ animationDelay: `${Math.min(i, 8) * 45}ms` }}
+                style={{ animationDelay: `${Math.min(i, 9) * 45}ms` }}
               >
                 <Image
                   src={`/images/metiers/${slug}.jpg`}
                   alt={alt}
                   fill
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 50vw"
+                  sizes="(min-width: 1024px) 20vw, 50vw"
                   className="object-cover object-[center_25%] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.05] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black/85 via-brand-black/25 to-transparent" />
-                <h3 className="absolute inset-x-0 bottom-0 p-4 sm:p-5 font-serif text-lg sm:text-xl text-brand-white leading-tight">
+                <h3 className="absolute inset-x-0 bottom-0 p-3.5 sm:p-4 font-serif text-base sm:text-lg text-brand-white leading-tight">
                   {label}
                 </h3>
               </li>
