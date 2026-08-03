@@ -32,11 +32,11 @@ export default async function HomePage() {
     { slug: "personnel-sante", label: content.metierPersonnelSante, alt: "Un membre du personnel de santé en tenue blanche dans un service hospitalier" },
     { slug: "ingenieurs", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
     { slug: "electriciens", label: content.metierElectriciens, alt: "Un électricien intervenant sur une armoire électrique" },
-    { slug: "techniciens", label: content.metierTechniciens, alt: "Un technicien de maintenance sur une installation industrielle" },
+    { slug: "techniciens", img: "techniciens-v2", label: content.metierTechniciens, alt: "Un technicien devant une armoire électrique industrielle" },
     { slug: "btp", label: content.metierBtp, alt: "Un ouvrier du bâtiment sur un chantier de construction" },
-    { slug: "hotellerie", label: content.metierHotellerie, alt: "Un serveur en tenue élégante dans un restaurant" },
+    { slug: "hotellerie", img: "hotellerie-v2", label: content.metierHotellerie, alt: "Un serveur et une réceptionniste dans un établissement hôtelier" },
     { slug: "industrie", label: content.metierIndustrie, alt: "Une opératrice sur une machine-outil dans une usine" },
-    { slug: "logistique", label: content.metierLogistique, alt: "Un cariste dans un entrepôt logistique" },
+    { slug: "logistique", img: "logistique-v2", label: content.metierLogistique, alt: "Un agent logistique devant un camion en chargement dans un entrepôt" },
   ];
 
   const steps = [
@@ -212,14 +212,14 @@ export default async function HomePage() {
           </div>
 
           <ul className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
-            {metiers.map(({ slug, label, alt }, i) => (
+            {metiers.map(({ slug, img, label, alt }, i) => (
               <li
                 key={slug}
                 className="animate-fade-up group relative aspect-[4/5] overflow-hidden rounded-xl"
                 style={{ animationDelay: `${Math.min(i, 9) * 45}ms` }}
               >
                 <Image
-                  src={`/images/metiers/${slug}.jpg`}
+                  src={`/images/metiers/${img ?? slug}.jpg`}
                   alt={alt}
                   fill
                   sizes="(min-width: 1024px) 20vw, 50vw"
