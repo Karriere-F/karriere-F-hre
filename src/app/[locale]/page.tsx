@@ -58,7 +58,7 @@ export default async function HomePage() {
               {content.heroTitle}
             </h1>
             <p
-              className="animate-fade-up mt-6 text-brand-white/85 text-lg leading-relaxed"
+              className="animate-fade-up mt-6 text-brand-white/85 text-lg leading-relaxed text-justify hyphens-auto"
               style={{ animationDelay: "80ms" }}
             >
               {content.heroSubtitle}
