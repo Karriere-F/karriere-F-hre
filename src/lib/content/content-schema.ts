@@ -27,7 +27,7 @@ export const CONTENT_PAGES = {
       "door2Body",
       "metiersTitle",
       "metiersLead",
-      "metiersSource",
+      "metiersLead2",
       "founderCta",
       "riveEyebrow",
       "riveTitle",
