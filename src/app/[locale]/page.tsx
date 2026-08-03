@@ -31,7 +31,7 @@ export default async function HomePage() {
     { slug: "infirmiers", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
     { slug: "personnel-sante", label: content.metierPersonnelSante, alt: "Un membre du personnel de santé en tenue blanche dans un service hospitalier" },
     { slug: "ingenieurs", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
-    { slug: "electriciens", label: content.metierElectriciens, alt: "Un électricien intervenant sur une armoire électrique" },
+    { slug: "informaticiens", label: content.metierInformaticiens, alt: "Un informaticien à son poste, code affiché sur ses écrans" },
     { slug: "techniciens", img: "techniciens-v2", label: content.metierTechniciens, alt: "Un technicien devant une armoire électrique industrielle" },
     { slug: "btp", label: content.metierBtp, alt: "Un ouvrier du bâtiment sur un chantier de construction" },
     { slug: "hotellerie", img: "hotellerie-v2", label: content.metierHotellerie, alt: "Un serveur et une réceptionniste dans un établissement hôtelier" },
