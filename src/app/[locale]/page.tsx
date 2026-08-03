@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
+import { Check, GraduationCap, Handshake, LifeBuoy } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
@@ -37,6 +37,12 @@ export default async function HomePage() {
     { slug: "hotellerie", img: "hotellerie-v2", label: content.metierHotellerie, alt: "Un serveur et une réceptionniste dans un établissement hôtelier" },
     { slug: "industrie", img: "industrie-v3", label: content.metierIndustrie, alt: "Une opératrice en atelier industriel, bras croisés devant les machines" },
     { slug: "logistique", img: "logistique-v2", label: content.metierLogistique, alt: "Un agent logistique devant un camion en chargement dans un entrepôt" },
+  ];
+
+  const pillars = [
+    { icon: GraduationCap, title: content.pillar1Title, body: content.pillar1Body },
+    { icon: Handshake, title: content.pillar2Title, body: content.pillar2Body },
+    { icon: LifeBuoy, title: content.pillar3Title, body: content.pillar3Body },
   ];
 
   const steps = [
@@ -235,6 +241,40 @@ export default async function HomePage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Section 3 — Pourquoi Karriere Fähre : préparer · accompagner · suivre */}
+      <section className="bg-brand-card">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div>
+            <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+              {content.whyTitle}
+            </h2>
+            <p className="mt-4 text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">
+              {content.pourquoiLead}
+            </p>
+          </div>
+
+          <div className="mt-12 sm:mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-3">
+            {pillars.map(({ icon: Icon, title, body }, i) => (
+              <div
+                key={title}
+                className="animate-fade-up relative"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text ring-1 ring-brand-gold/25">
+                  <Icon size={26} strokeWidth={1.75} aria-hidden="true" />
+                </span>
+                <h3 className="mt-5 font-serif text-xl sm:text-2xl text-brand-black leading-snug">
+                  {title}
+                </h3>
+                <p className="mt-3 text-brand-ink-secondary leading-relaxed text-pretty">
+                  {body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
