@@ -26,6 +26,18 @@ export default async function HomePage() {
   const tNav = await getTranslations("nav");
   const content = await getPageContent<HomeContent>("home");
 
+  const metiers = [
+    { slug: "medecins", label: content.metierMedecins, alt: "Un médecin en blouse blanche, stéthoscope au cou, dans un hôpital allemand" },
+    { slug: "infirmiers", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
+    { slug: "ingenieurs", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
+    { slug: "electriciens", label: content.metierElectriciens, alt: "Un électricien intervenant sur une armoire électrique" },
+    { slug: "techniciens", label: content.metierTechniciens, alt: "Un technicien de maintenance sur une installation industrielle" },
+    { slug: "btp", label: content.metierBtp, alt: "Un ouvrier du bâtiment sur un chantier de construction" },
+    { slug: "hotellerie", label: content.metierHotellerie, alt: "Un serveur en tenue élégante dans un restaurant" },
+    { slug: "industrie", label: content.metierIndustrie, alt: "Une opératrice sur une machine-outil dans une usine" },
+    { slug: "logistique", label: content.metierLogistique, alt: "Un cariste dans un entrepôt logistique" },
+  ];
+
   const steps = [
     [content.acc1Title, content.acc1Body],
     [content.acc2Title, content.acc2Body],
@@ -183,6 +195,44 @@ export default async function HomePage() {
               </div>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Section 2 — Métiers qui recrutent : real photo per profession */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div className="max-w-2xl">
+            <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+              {content.metiersTitle}
+            </h2>
+            <p className="mt-4 text-brand-ink-secondary leading-relaxed text-pretty">
+              {content.metiersLead}
+            </p>
+          </div>
+
+          <ul className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+            {metiers.map(({ slug, label, alt }, i) => (
+              <li
+                key={slug}
+                className="animate-fade-up group relative aspect-[4/5] overflow-hidden rounded-xl"
+                style={{ animationDelay: `${Math.min(i, 8) * 45}ms` }}
+              >
+                <Image
+                  src={`/images/metiers/${slug}.jpg`}
+                  alt={alt}
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 50vw"
+                  className="object-cover object-[center_25%] transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.05] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/85 via-brand-black/25 to-transparent" />
+                <h3 className="absolute inset-x-0 bottom-0 p-4 sm:p-5 font-serif text-lg sm:text-xl text-brand-white leading-tight">
+                  {label}
+                </h3>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-6 text-xs text-brand-ink-secondary/80">{content.metiersSource}</p>
         </div>
       </section>
 
