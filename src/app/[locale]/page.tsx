@@ -69,35 +69,38 @@ export default async function HomePage() {
             >
               {content.heroClosing}
             </p>
-            <div
-              className="animate-fade-up mt-8 flex flex-wrap gap-4"
-              style={{ animationDelay: "160ms" }}
-            >
-              <Link
-                href="/postuler"
-                className="press rounded-full bg-brand-gold px-7 py-3.5 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-              >
-                {content.heroCtaStart}
-              </Link>
-              <Link
-                href="/a-propos/methode"
-                className="press rounded-full border border-brand-white/40 px-7 py-3.5 text-brand-white font-medium hover:bg-brand-white hover:text-brand-black transition-colors duration-150"
-              >
-                {content.heroCtaDiscover}
-              </Link>
-            </div>
-            <ul
-              className="animate-fade-up mt-8 flex flex-wrap gap-x-6 gap-y-2.5"
-              style={{ animationDelay: "200ms" }}
-            >
-              {[content.heroTrust1, content.heroTrust2, content.heroTrust3].map((tm) => (
-                <li key={tm} className="flex items-center gap-2 text-sm font-medium text-brand-white/90">
-                  <Check size={16} strokeWidth={3} aria-hidden="true" className="text-brand-gold-light" />
-                  {tm}
-                </li>
-              ))}
-            </ul>
           </div>
+          <div
+            className="animate-fade-up mt-8 flex flex-wrap gap-4 sm:flex-nowrap"
+            style={{ animationDelay: "160ms" }}
+          >
+            <Link
+              href="/postuler"
+              className="press whitespace-nowrap rounded-full bg-brand-gold px-7 py-3.5 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            >
+              {content.heroCtaStart}
+            </Link>
+            <Link
+              href="/a-propos/methode"
+              className="press whitespace-nowrap rounded-full bg-brand-gold px-7 py-3.5 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            >
+              {content.heroCtaDiscover}
+            </Link>
+          </div>
+          <ul
+            className="animate-fade-up mt-8 flex flex-wrap items-center gap-x-8 gap-y-2.5 sm:flex-nowrap"
+            style={{ animationDelay: "200ms" }}
+          >
+            {[content.heroTrust1, content.heroTrust2, content.heroTrust3].map((tm) => (
+              <li
+                key={tm}
+                className="flex items-center gap-2 whitespace-nowrap text-sm font-medium text-brand-white/90"
+              >
+                <Check size={16} strokeWidth={3} aria-hidden="true" className="text-brand-gold-light" />
+                {tm}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
