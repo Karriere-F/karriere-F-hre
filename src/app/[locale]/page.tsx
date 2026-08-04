@@ -265,22 +265,13 @@ export default async function HomePage() {
       {/* Section 3 — Pourquoi Karriere Fähre : méthode, promotion, équipe */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <div>
-            <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
-              {content.whyTitle}
-            </h2>
-            <p className="mt-4 text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">
-              {content.pourquoiLead}
-            </p>
-          </div>
-
           {/* Une méthode claire — three photographed steps with a real flow */}
-          <div className="mt-14 sm:mt-16">
-            <h3 className="font-serif text-2xl sm:text-3xl text-brand-black leading-tight text-balance">
+          <div>
+            <h2 className="font-serif text-2xl sm:text-3xl text-brand-black leading-tight text-balance">
               {content.methodeTitle1}
               <br className="hidden sm:block" />{" "}
               <span className="text-brand-gold-text">{content.methodeTitle2}</span>
-            </h3>
+            </h2>
             <p className="mt-4 max-w-3xl text-brand-ink-secondary leading-relaxed text-pretty">
               {content.methodeLead}
             </p>
