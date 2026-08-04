@@ -291,18 +291,20 @@ export default async function HomePage() {
                         sizes="(min-width: 768px) 33vw, 100vw"
                         className="object-cover"
                       />
-                      <span className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-brand-black/80 font-serif text-sm font-semibold text-brand-white backdrop-blur">
-                        {i + 1}
-                      </span>
                     </div>
                     <div className="flex flex-1 flex-col p-5">
-                      <h4 className="font-serif text-xl text-brand-black">{step.title}</h4>
-                      <ul className="mt-3 flex flex-wrap gap-2">
+                      <h4 className="font-serif text-xl text-brand-black">
+                        <span className="text-brand-gold-text">{i + 1}.</span> {step.title}
+                      </h4>
+                      <ul className="mt-4 space-y-2.5">
                         {step.chips.map((chip) => (
-                          <li
-                            key={chip}
-                            className="rounded-full bg-brand-gold/10 px-3 py-1 text-sm font-medium text-brand-gold-text"
-                          >
+                          <li key={chip} className="flex items-center gap-2.5 text-brand-black">
+                            <Check
+                              size={18}
+                              strokeWidth={3}
+                              aria-hidden="true"
+                              className="shrink-0 text-brand-gold-text"
+                            />
                             {chip}
                           </li>
                         ))}
