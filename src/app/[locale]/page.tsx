@@ -5,6 +5,7 @@ import { Check, ArrowRight } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
+import { Traversee } from "@/components/home/traversee";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "../../../i18n/routing";
 import type frMessages from "../../../messages/fr.json";
@@ -261,6 +262,26 @@ export default async function HomePage() {
           </ul>
         </div>
       </section>
+
+      {/* La Traversée — signature scroll animation: a light crossing from Africa to Germany */}
+      <Traversee
+        eyebrow={content.traverseeEyebrow}
+        title={content.riveTitle}
+        lead={content.riveLead}
+        startLabel={content.traverseeStart}
+        endLabel={content.traverseeEnd}
+        waypoints={[
+          content.traverseeWp1,
+          content.traverseeWp2,
+          content.traverseeWp3,
+          content.traverseeWp4,
+        ]}
+        afTitle={content.riveAfTitle}
+        afBody={content.riveAfBody}
+        deTitle={content.riveDeTitle}
+        deBody={content.riveDeBody}
+        bridge={content.bridgeLine}
+      />
 
       {/* Section 3 — Pourquoi Karriere Fähre : méthode, promotion, équipe */}
       <section className="bg-brand-card">
