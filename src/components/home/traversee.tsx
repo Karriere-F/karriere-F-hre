@@ -116,6 +116,12 @@ export function Traversee({
 
   const dashoffset = len ? len * (1 - progress) : 1;
 
+  // Split the title on its first comma so it can breathe across two lines,
+  // the second one indented — whitespace as luxury.
+  const commaIdx = title.indexOf(",");
+  const titleLine1 = commaIdx >= 0 ? title.slice(0, commaIdx + 1) : title;
+  const titleLine2 = commaIdx >= 0 ? title.slice(commaIdx + 1).trim() : "";
+
   return (
     <section className="relative overflow-hidden bg-brand-black text-brand-white">
       {/* soft light bloom behind the route */}
@@ -127,15 +133,21 @@ export function Traversee({
             "radial-gradient(60% 55% at 50% 42%, rgba(224,196,119,0.14), transparent 70%)",
         }}
       />
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="max-w-2xl">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div className="max-w-3xl">
           <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-light">
             {eyebrow}
           </span>
-          <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.08] text-balance">
-            {title}
+          <h2
+            className="mt-6 font-serif leading-[1.02] tracking-[-0.02em]"
+            style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
+          >
+            <span className="block">{titleLine1}</span>
+            {titleLine2 && (
+              <span className="mt-6 block pl-[14%] sm:mt-9 sm:pl-[26%]">{titleLine2}</span>
+            )}
           </h2>
-          <p className="mt-5 text-lg sm:text-xl text-brand-white/90 leading-relaxed text-pretty">
+          <p className="mt-10 max-w-xl text-lg sm:text-xl text-brand-white/90 leading-relaxed text-pretty">
             {subtitle}
           </p>
           <p className="mt-4 text-brand-white/65 leading-relaxed text-pretty">{body}</p>
