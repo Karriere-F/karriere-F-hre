@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Check, GraduationCap, Handshake, LifeBuoy } from "lucide-react";
+import { Fragment } from "react";
+import { Check, ArrowRight } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
@@ -39,11 +40,28 @@ export default async function HomePage() {
     { slug: "logistique", img: "logistique-v2", label: content.metierLogistique, alt: "Un agent logistique devant un camion en chargement dans un entrepôt" },
   ];
 
-  const pillars = [
-    { icon: GraduationCap, title: content.pillar1Title, body: content.pillar1Body },
-    { icon: Handshake, title: content.pillar2Title, body: content.pillar2Body },
-    { icon: LifeBuoy, title: content.pillar3Title, body: content.pillar3Body },
+  const methodSteps = [
+    {
+      img: "prepare",
+      title: content.stepPrepareTitle,
+      chips: [content.prep1, content.prep2, content.prep3, content.prep4],
+      alt: "La salle de cours de Karriere Fähre à Douala, prête pour la formation en allemand",
+    },
+    {
+      img: "construire",
+      title: content.stepConstruireTitle,
+      chips: [content.constr1, content.constr2, content.constr3, content.constr4],
+      alt: "Un candidat en entretien individuel avec une conseillère Karriere Fähre",
+    },
+    {
+      img: "reussir",
+      title: content.stepReussirTitle,
+      chips: [content.reuss1, content.reuss2, content.reuss3],
+      alt: "Un candidat accueilli par une responsable devant une entreprise allemande",
+    },
   ];
+
+  const trustPoints = [content.trust1, content.trust2, content.trust3, content.trust4, content.trust5];
 
   const steps = [
     [content.acc1Title, content.acc1Body],
@@ -244,7 +262,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Section 3 — Pourquoi Karriere Fähre : préparer · accompagner · suivre */}
+      {/* Section 3 — Pourquoi Karriere Fähre : méthode, promotion, équipe */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div>
@@ -256,24 +274,125 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <div className="mt-12 sm:mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-3">
-            {pillars.map(({ icon: Icon, title, body }, i) => (
-              <div
-                key={title}
-                className="animate-fade-up relative"
-                style={{ animationDelay: `${i * 80}ms` }}
+          {/* Une méthode claire — three photographed steps with a real flow */}
+          <div className="mt-14 sm:mt-16">
+            <h3 className="font-serif text-2xl sm:text-3xl text-brand-black leading-tight text-balance">
+              {content.methodeTitle1}
+              <br className="hidden sm:block" />{" "}
+              <span className="text-brand-gold-text">{content.methodeTitle2}</span>
+            </h3>
+            <p className="mt-4 max-w-3xl text-brand-ink-secondary leading-relaxed text-pretty">
+              {content.methodeLead}
+            </p>
+
+            <div className="mt-10 flex flex-col gap-6 md:flex-row md:items-stretch md:gap-3">
+              {methodSteps.map((step, i) => (
+                <Fragment key={step.title}>
+                  <div
+                    className="animate-fade-up flex flex-1 flex-col overflow-hidden rounded-2xl bg-brand-white shadow-[0_1px_3px_rgba(26,26,26,0.07)]"
+                    style={{ animationDelay: `${i * 90}ms` }}
+                  >
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src={`/images/pourquoi/${step.img}.jpg`}
+                        alt={step.alt}
+                        fill
+                        sizes="(min-width: 768px) 33vw, 100vw"
+                        className="object-cover"
+                      />
+                      <span className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-brand-black/80 font-serif text-sm font-semibold text-brand-white backdrop-blur">
+                        {i + 1}
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h4 className="font-serif text-xl text-brand-black">{step.title}</h4>
+                      <ul className="mt-3 flex flex-wrap gap-2">
+                        {step.chips.map((chip) => (
+                          <li
+                            key={chip}
+                            className="rounded-full bg-brand-gold/10 px-3 py-1 text-sm font-medium text-brand-gold-text"
+                          >
+                            {chip}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  {i < methodSteps.length - 1 && (
+                    <div
+                      aria-hidden="true"
+                      className="flex items-center justify-center text-brand-gold md:px-0.5"
+                    >
+                      <ArrowRight className="hidden md:block" size={26} strokeWidth={2} />
+                      <ArrowRight className="rotate-90 md:hidden" size={22} strokeWidth={2} />
+                    </div>
+                  )}
+                </Fragment>
+              ))}
+            </div>
+          </div>
+
+          {/* Notre première promotion est en cours */}
+          <div className="animate-fade-up mt-16 sm:mt-20">
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand-gold/12 px-3 py-1 text-sm font-medium text-brand-gold-text">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-gold opacity-75 motion-reduce:hidden" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-gold" />
+              </span>
+              {content.promoBadge}
+            </span>
+            <h3 className="mt-4 font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+              {content.promoTitle}
+            </h3>
+            <p className="mt-3 max-w-3xl text-brand-ink-secondary leading-relaxed text-pretty">
+              {content.promoText}
+            </p>
+            <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/pourquoi/promotion.jpg"
+                alt="La première promotion de candidats Karriere Fähre en cours d'allemand à Douala"
+                fill
+                sizes="(min-width: 1024px) 1000px, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* L'équipe + garanties + CTA */}
+          <div className="mt-16 sm:mt-20 grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+            <div className="animate-fade-up relative aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-[4/3]">
+              <Image
+                src="/images/pourquoi/equipe.jpg"
+                alt="L'équipe de Karriere Fähre à Douala"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="animate-fade-up" style={{ animationDelay: "80ms" }}>
+              <h3 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+                {content.teamTitle}
+              </h3>
+              <ul className="mt-6 space-y-3.5">
+                {trustPoints.map((point) => (
+                  <li key={point} className="flex items-start gap-3">
+                    <Check
+                      size={20}
+                      strokeWidth={3}
+                      aria-hidden="true"
+                      className="mt-0.5 shrink-0 text-brand-gold-text"
+                    />
+                    <span className="text-brand-black">{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/postuler"
+                className="press mt-8 inline-flex rounded-full bg-brand-gold px-7 py-3.5 font-medium text-brand-black hover:bg-brand-gold-light transition-colors duration-150"
               >
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text ring-1 ring-brand-gold/25">
-                  <Icon size={26} strokeWidth={1.75} aria-hidden="true" />
-                </span>
-                <h3 className="mt-5 font-serif text-xl sm:text-2xl text-brand-black leading-snug">
-                  {title}
-                </h3>
-                <p className="mt-3 text-brand-ink-secondary leading-relaxed text-pretty">
-                  {body}
-                </p>
-              </div>
-            ))}
+                {content.ctaCandidature}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
