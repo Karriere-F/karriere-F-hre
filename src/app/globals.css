@@ -4,10 +4,10 @@
   --background: #ffffff;
   --foreground: #0b0b0b;
 
-  --brand-black: #1a1a1a;
-  --brand-black-2: #262626;
-  --brand-gold: #b08d2b;
-  --brand-gold-light: #d9be6b;
+  --brand-black: #111111;
+  --brand-black-2: #232323;
+  --brand-gold: #c39a3e;
+  --brand-gold-light: #e0c477;
   /* Darker gold for TEXT on light backgrounds only (headings, labels, links). The
      base --brand-gold (#b08d2b) is ~3.1:1 on white -- fine for button fills with
      black text on top, but fails WCAG AA (4.5:1) as body-size text on a light
@@ -16,7 +16,7 @@
   --brand-gold-text: #8a6f22;
   --brand-card: #f6f1e3;
   --brand-white: #ffffff;
-  --brand-grey: #6b6b6b;
+  --brand-grey: #7a7a7a;
   --brand-ink: #0b0b0b;
   --brand-ink-secondary: #52514e;
   --brand-ink-muted: #6e6c66;

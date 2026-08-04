@@ -124,7 +124,7 @@ export function Traversee({
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           background:
-            "radial-gradient(60% 55% at 50% 42%, rgba(217,190,107,0.14), transparent 70%)",
+            "radial-gradient(60% 55% at 50% 42%, rgba(224,196,119,0.14), transparent 70%)",
         }}
       />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -157,8 +157,8 @@ export function Traversee({
           >
             <defs>
               <linearGradient id="trav-grad" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0%" stopColor="#b08d2b" />
-                <stop offset="100%" stopColor="#d9be6b" />
+                <stop offset="0%" stopColor="#c39a3e" />
+                <stop offset="100%" stopColor="#e0c477" />
               </linearGradient>
               <filter id="trav-glow" x="-60%" y="-60%" width="220%" height="220%">
                 <feGaussianBlur stdDeviation="7" result="b" />
@@ -192,8 +192,8 @@ export function Traversee({
             />
 
             {/* shore anchors */}
-            <circle cx={START.x} cy={START.y} r={7} fill="#d9be6b" />
-            <circle cx={END.x} cy={END.y} r={7} fill="none" stroke="#d9be6b" strokeWidth={2} />
+            <circle cx={START.x} cy={START.y} r={7} fill="#e0c477" />
+            <circle cx={END.x} cy={END.y} r={7} fill="none" stroke="#e0c477" strokeWidth={2} />
 
             {/* waypoint pins */}
             {wps.map((w, i) => {
@@ -204,7 +204,7 @@ export function Traversee({
                   cx={w.x}
                   cy={w.y}
                   r={active ? 8 : 5}
-                  fill={active ? "#d9be6b" : "rgba(255,255,255,0.2)"}
+                  fill={active ? "#e0c477" : "rgba(255,255,255,0.2)"}
                   filter={active ? "url(#trav-glow)" : undefined}
                   className="transition-all duration-500 ease-out"
                 />
@@ -213,7 +213,7 @@ export function Traversee({
 
             {/* the travelling light */}
             <g filter="url(#trav-glow)" className="trav-dot">
-              <circle cx={dot.x} cy={dot.y} r={13} fill="rgba(217,190,107,0.35)" />
+              <circle cx={dot.x} cy={dot.y} r={13} fill="rgba(224,196,119,0.35)" />
               <circle cx={dot.x} cy={dot.y} r={6} fill="#fff7e0" />
             </g>
           </svg>
