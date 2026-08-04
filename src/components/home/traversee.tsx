@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Link } from "../../../i18n/navigation";
 
 type TraverseeProps = {
   eyebrow: string;
   title: string;
-  lead: string;
+  subtitle: string;
+  body: string;
+  ctaLabel: string;
   startLabel: string;
   endLabel: string;
   waypoints: string[];
@@ -30,7 +33,9 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 export function Traversee({
   eyebrow,
   title,
-  lead,
+  subtitle,
+  body,
+  ctaLabel,
   startLabel,
   endLabel,
   waypoints,
@@ -127,10 +132,19 @@ export function Traversee({
           <span className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-light">
             {eyebrow}
           </span>
-          <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight text-balance">
+          <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.08] text-balance">
             {title}
           </h2>
-          <p className="mt-4 text-brand-white/75 leading-relaxed text-pretty">{lead}</p>
+          <p className="mt-5 text-lg sm:text-xl text-brand-white/90 leading-relaxed text-pretty">
+            {subtitle}
+          </p>
+          <p className="mt-4 text-brand-white/65 leading-relaxed text-pretty">{body}</p>
+          <Link
+            href="/postuler"
+            className="press mt-8 inline-flex rounded-full bg-brand-gold px-7 py-3.5 font-medium text-brand-black hover:bg-brand-gold-light transition-colors duration-200"
+          >
+            {ctaLabel}
+          </Link>
         </div>
 
         {/* The animated crossing */}

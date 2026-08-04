@@ -267,7 +267,9 @@ export default async function HomePage() {
       <Traversee
         eyebrow={content.traverseeEyebrow}
         title={content.riveTitle}
-        lead={content.riveLead}
+        subtitle={content.traverseeSubtitle}
+        body={content.traverseeBody}
+        ctaLabel={content.heroCtaStart}
         startLabel={content.traverseeStart}
         endLabel={content.traverseeEnd}
         waypoints={[
