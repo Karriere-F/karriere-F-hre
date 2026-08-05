@@ -72,11 +72,11 @@ export function Traversee({
     };
   }, []);
 
-  // Two-tone title: first line up to the comma (white), then the first word
-  // (white) + the remainder in gold.
-  const commaIdx = title.indexOf(",");
-  const line1 = commaIdx >= 0 ? title.slice(0, commaIdx + 1) : title;
-  const rest = commaIdx >= 0 ? title.slice(commaIdx + 1).trim() : "";
+  // Two-tone title: first line up to the first sentence break (white), then
+  // the first word of the rest (white) + the remainder in gold.
+  const sepIdx = title.search(/[.,]/);
+  const line1 = sepIdx >= 0 ? title.slice(0, sepIdx + 1) : title;
+  const rest = sepIdx >= 0 ? title.slice(sepIdx + 1).trim() : "";
   const spaceIdx = rest.indexOf(" ");
   const restLead = spaceIdx > 0 ? rest.slice(0, spaceIdx) : rest;
   const restGold = spaceIdx > 0 ? rest.slice(spaceIdx + 1) : "";
@@ -91,8 +91,9 @@ export function Traversee({
           src={imageSrc}
           alt={imageAlt}
           fill
+          priority
           sizes="100vw"
-          className="object-cover object-[72%_center]"
+          className="object-cover object-[58%_center] motion-safe:animate-[slowZoom_25s_ease-in-out_infinite_alternate]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-brand-black/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-brand-black/50" />
@@ -100,38 +101,46 @@ export function Traversee({
 
       <div className="relative mx-auto flex min-h-[94vh] max-w-7xl flex-col px-4 sm:px-6 lg:px-14">
         {/* Text */}
-        <div className="flex flex-1 items-center pb-8 pt-28 lg:pt-24">
-          <div className="max-w-xl">
+        <div className="flex flex-1 items-center pb-10 pt-28 lg:pt-24">
+          <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-gold-light">
               {eyebrow}
             </span>
             <h2
-              className="mt-6 font-serif leading-[1.02] tracking-[-0.02em]"
-              style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.75rem)" }}
+              className="mt-7 font-serif leading-[1.04] tracking-[-0.02em]"
+              style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}
             >
               <span className="block">{line1}</span>
-              <span className="mt-2 block">
+              <span className="mt-1.5 block">
                 {restLead}{" "}
                 <span className="text-brand-gold-light">{restGold}.</span>
               </span>
             </h2>
-            <p className="mt-7 max-w-md text-base sm:text-lg text-brand-white/85 leading-relaxed text-pretty">
+            <p className="mt-10 max-w-md text-base sm:text-lg text-brand-white/85 leading-relaxed text-pretty">
               {subtitle}
             </p>
-            <div className="mt-9 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-wrap gap-4">
               <Link
                 href="/candidats"
-                className="press inline-flex items-center gap-2 rounded-lg bg-brand-gold px-6 py-3.5 font-medium text-brand-black hover:bg-brand-gold-light transition-colors duration-200"
+                className="group inline-flex items-center gap-2 rounded-lg bg-brand-gold px-6 py-3.5 font-medium text-brand-black transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-0.5 hover:bg-brand-gold-light hover:shadow-[0_14px_30px_-10px_rgba(195,154,62,0.6)] active:translate-y-0 active:scale-[0.98] motion-reduce:hover:translate-y-0"
               >
                 {ctaCandidat}
-                <ArrowRight size={18} aria-hidden="true" />
+                <ArrowRight
+                  size={18}
+                  aria-hidden="true"
+                  className="transition-transform duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:translate-x-0.5 motion-reduce:group-hover:translate-x-0"
+                />
               </Link>
               <Link
                 href="/entreprises"
-                className="press inline-flex items-center gap-2 rounded-lg border border-brand-white/30 px-6 py-3.5 font-medium text-brand-white hover:border-brand-gold-light hover:text-brand-gold-light transition-colors duration-200"
+                className="group inline-flex items-center gap-2 rounded-lg border border-brand-white/30 px-6 py-3.5 font-medium text-brand-white transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-0.5 hover:border-brand-gold-light hover:text-brand-gold-light hover:shadow-[0_14px_30px_-12px_rgba(0,0,0,0.65)] active:translate-y-0 active:scale-[0.98] motion-reduce:hover:translate-y-0"
               >
                 {ctaRecrute}
-                <ArrowRight size={18} aria-hidden="true" />
+                <ArrowRight
+                  size={18}
+                  aria-hidden="true"
+                  className="transition-transform duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:translate-x-0.5 motion-reduce:group-hover:translate-x-0"
+                />
               </Link>
             </div>
           </div>

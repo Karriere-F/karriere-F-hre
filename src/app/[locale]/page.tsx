@@ -270,8 +270,8 @@ export default async function HomePage() {
         subtitle={content.traverseeSubtitle}
         ctaCandidat={content.traverseeCtaCandidat}
         ctaRecrute={content.traverseeCtaRecrute}
-        imageSrc="/images/hero-hamburg.jpg"
-        imageAlt="Un jeune professionnel camerounais, passeport en main, à l'aéroport de Hambourg, prêt pour sa carrière en Allemagne"
+        imageSrc="/images/traversee-walk.jpg"
+        imageAlt="Un jeune professionnel camerounais marche vers les départs d'un aéroport allemand, passeport en main"
         stops={[
           { label: content.tw1L, sublabel: content.tw1S },
           { label: content.tw2L, sublabel: content.tw2S },

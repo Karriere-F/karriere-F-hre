@@ -126,6 +126,16 @@ body {
   animation: fade-up 500ms var(--ease-out-strong) both;
 }
 
+/* Very slow cinematic zoom (Apple-style ken burns) for hero imagery. */
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
 /* Card hover lift — subtle, transform+shadow only. */
 @media (hover: hover) and (pointer: fine) {
   .lift-on-hover {
