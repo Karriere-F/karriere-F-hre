@@ -72,14 +72,11 @@ export function Traversee({
     };
   }, []);
 
-  // Two-tone title: first line up to the first sentence break (white), then
-  // the first word of the rest (white) + the remainder in gold.
+  // Two-tone title: first line up to the first sentence break (white), the
+  // whole second line in gold.
   const sepIdx = title.search(/[.,]/);
   const line1 = sepIdx >= 0 ? title.slice(0, sepIdx + 1) : title;
-  const rest = sepIdx >= 0 ? title.slice(sepIdx + 1).trim() : "";
-  const spaceIdx = rest.indexOf(" ");
-  const restLead = spaceIdx > 0 ? rest.slice(0, spaceIdx) : rest;
-  const restGold = spaceIdx > 0 ? rest.slice(spaceIdx + 1) : "";
+  const line2 = sepIdx >= 0 ? title.slice(sepIdx + 1).trim() : "";
 
   const dotLeft = EDGE + progress * SPAN;
 
@@ -93,7 +90,7 @@ export function Traversee({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[58%_center] brightness-110 motion-safe:animate-[slowZoom_25s_ease-in-out_infinite_alternate]"
+          className="object-cover object-[56%_30%] brightness-110 motion-safe:animate-[slowZoom_25s_ease-in-out_infinite_alternate]"
         />
         {/* Darken only the left (for the text) and the bottom (for the timeline);
             keep the walking figure clear. */}
@@ -113,10 +110,7 @@ export function Traversee({
               style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}
             >
               <span className="block">{line1}</span>
-              <span className="mt-1.5 block">
-                {restLead}{" "}
-                <span className="text-brand-gold-light">{restGold}.</span>
-              </span>
+              <span className="mt-1.5 block text-brand-gold-light">{line2}.</span>
             </h2>
             <p className="mt-10 max-w-md text-base sm:text-lg text-brand-white/85 leading-relaxed text-pretty">
               {subtitle}
@@ -135,7 +129,7 @@ export function Traversee({
               </Link>
               <Link
                 href="/entreprises"
-                className="group inline-flex items-center gap-2 rounded-lg border border-brand-white/30 px-6 py-3.5 font-medium text-brand-white transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-0.5 hover:border-brand-gold-light hover:text-brand-gold-light hover:shadow-[0_14px_30px_-12px_rgba(0,0,0,0.65)] active:translate-y-0 active:scale-[0.98] motion-reduce:hover:translate-y-0"
+                className="group inline-flex items-center gap-2 rounded-lg bg-brand-gold px-6 py-3.5 font-medium text-brand-black transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-0.5 hover:bg-brand-gold-light hover:shadow-[0_14px_30px_-10px_rgba(195,154,62,0.6)] active:translate-y-0 active:scale-[0.98] motion-reduce:hover:translate-y-0"
               >
                 {ctaRecrute}
                 <ArrowRight
