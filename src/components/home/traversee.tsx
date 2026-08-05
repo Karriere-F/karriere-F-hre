@@ -153,7 +153,7 @@ export function Traversee({
             />
             {/* travelling light */}
             <div
-              className="absolute top-5 z-10 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gold-light shadow-[0_0_16px_4px_rgba(224,196,119,0.55)] transition-[left] duration-150 ease-out"
+              className="absolute top-5 z-10 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gold-light shadow-[0_0_16px_4px_rgba(195,154,62,0.55)] transition-[left] duration-150 ease-out"
               style={{ left: `${dotLeft}%` }}
             />
 
@@ -168,7 +168,7 @@ export function Traversee({
                     <span
                       className={`flex h-10 w-10 items-center justify-center rounded-full ring-1 transition-all duration-500 ${
                         active
-                          ? "bg-brand-gold text-brand-black ring-brand-gold shadow-[0_0_18px_rgba(224,196,119,0.55)]"
+                          ? "bg-brand-gold text-brand-black ring-brand-gold shadow-[0_0_18px_rgba(195,154,62,0.55)]"
                           : "bg-brand-black/70 text-brand-white/45 ring-brand-white/20"
                       }`}
                     >

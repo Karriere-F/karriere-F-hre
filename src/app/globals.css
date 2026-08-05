@@ -1,27 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0b0b0b;
+  /* Strict three-colour identity: deep black, off-white, gold. No other hues.
+     Text hierarchy is built from black at varying opacity, not from greys. */
+  --background: #fafaf8;
+  --foreground: #111111;
 
   --brand-black: #111111;
   --brand-black-2: #232323;
   --brand-gold: #c39a3e;
-  --brand-gold-light: #e0c477;
-  /* Darker gold for TEXT on light backgrounds only (headings, labels, links). The
-     base --brand-gold (#b08d2b) is ~3.1:1 on white -- fine for button fills with
-     black text on top, but fails WCAG AA (4.5:1) as body-size text on a light
-     surface. Keep --brand-gold for fills/borders/gold-on-black; use this one
-     wherever gold is the text color on white or cream. */
-  --brand-gold-text: #8a6f22;
-  --brand-card: #f6f1e3;
-  --brand-white: #ffffff;
-  --brand-grey: #7a7a7a;
-  --brand-ink: #0b0b0b;
-  --brand-ink-secondary: #52514e;
-  --brand-ink-muted: #6e6c66;
-  --brand-grid: #e1e0d9;
-  --brand-good: #0ca30c;
+  --brand-gold-light: #c39a3e;
+  --brand-gold-text: #c39a3e;
+  --brand-card: #fafaf8;
+  --brand-white: #fafaf8;
+  --brand-grey: rgba(17, 17, 17, 0.55);
+  --brand-ink: #111111;
+  --brand-ink-secondary: rgba(17, 17, 17, 0.66);
+  --brand-ink-muted: rgba(17, 17, 17, 0.52);
+  --brand-grid: rgba(17, 17, 17, 0.12);
+  --brand-good: #c39a3e;
 }
 
 @theme inline {
