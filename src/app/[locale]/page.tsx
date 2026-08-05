@@ -268,21 +268,18 @@ export default async function HomePage() {
         eyebrow={content.traverseeEyebrow}
         title={content.riveTitle}
         subtitle={content.traverseeSubtitle}
-        body={content.traverseeBody}
-        ctaLabel={content.heroCtaStart}
-        startLabel={content.traverseeStart}
-        endLabel={content.traverseeEnd}
-        waypoints={[
-          content.traverseeWp1,
-          content.traverseeWp2,
-          content.traverseeWp3,
-          content.traverseeWp4,
+        ctaCandidat={content.traverseeCtaCandidat}
+        ctaRecrute={content.traverseeCtaRecrute}
+        imageSrc="/images/hero-hamburg.jpg"
+        imageAlt="Un jeune professionnel camerounais, passeport en main, à l'aéroport de Hambourg, prêt pour sa carrière en Allemagne"
+        stops={[
+          { label: content.tw1L, sublabel: content.tw1S },
+          { label: content.tw2L, sublabel: content.tw2S },
+          { label: content.tw3L, sublabel: content.tw3S },
+          { label: content.tw4L, sublabel: content.tw4S },
+          { label: content.tw5L, sublabel: content.tw5S },
+          { label: content.tw6L, sublabel: content.tw6S },
         ]}
-        afTitle={content.riveAfTitle}
-        afBody={content.riveAfBody}
-        deTitle={content.riveDeTitle}
-        deBody={content.riveDeBody}
-        bridge={content.bridgeLine}
       />
 
       {/* Section 3 — Pourquoi Karriere Fähre : méthode, promotion, équipe */}
