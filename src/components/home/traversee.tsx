@@ -93,10 +93,12 @@ export function Traversee({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[58%_center] motion-safe:animate-[slowZoom_25s_ease-in-out_infinite_alternate]"
+          className="object-cover object-[58%_center] brightness-110 motion-safe:animate-[slowZoom_25s_ease-in-out_infinite_alternate]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-brand-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-brand-black/50" />
+        {/* Darken only the left (for the text) and the bottom (for the timeline);
+            keep the walking figure clear. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/50 via-40% to-transparent to-72%" />
+        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-brand-black to-transparent" />
       </div>
 
       <div className="relative mx-auto flex min-h-[94vh] max-w-7xl flex-col px-4 sm:px-6 lg:px-14">
