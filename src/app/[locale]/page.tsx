@@ -84,7 +84,7 @@ export default async function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_30%] brightness-115"
+          className="object-cover object-[center_30%] brightness-115 motion-safe:animate-[slowZoom_25s_ease-in-out_infinite_alternate]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black/85 via-brand-black/45 to-transparent" />
         <div className="relative w-full mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
