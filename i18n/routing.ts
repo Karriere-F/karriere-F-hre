@@ -130,6 +130,16 @@ export const routing = defineRouting({
       de: "/berufe/angebot/[slug]",
       en: "/occupations/offer/[slug]",
     },
+    "/metiers/sante": {
+      fr: "/metiers/sante",
+      de: "/berufe/gesundheit",
+      en: "/occupations/healthcare",
+    },
+    "/metiers/sante/[slug]": {
+      fr: "/metiers/sante/[slug]",
+      de: "/berufe/gesundheit/[slug]",
+      en: "/occupations/healthcare/[slug]",
+    },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
     "/entreprises/partenariat": {

@@ -150,6 +150,21 @@ export default async function MetiersPage() {
                     </div>
                   </div>
                 )}
+                {slug === "sante-soins" && (
+                  <div className="mt-5">
+                    <Link
+                      href="/metiers/sante"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text hover:underline"
+                    >
+                      {locale === "fr"
+                        ? "Voir tous les métiers de la santé"
+                        : locale === "de"
+                          ? "Alle Gesundheitsberufe ansehen"
+                          : "See all healthcare professions"}
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                )}
               </article>
             );
           })}
