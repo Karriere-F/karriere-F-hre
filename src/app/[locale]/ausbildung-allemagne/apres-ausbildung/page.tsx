@@ -58,7 +58,7 @@ export default async function ApresAusbildungPage() {
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text mb-4">
-                <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
+                <Icon size={22} strokeWidth={2} aria-hidden="true" />
               </span>
               <p className="text-xs uppercase tracking-widest text-brand-ink-muted mb-1">{kicker}</p>
               <div className="flex items-center gap-2 mb-3">
@@ -75,7 +75,7 @@ export default async function ApresAusbildungPage() {
         {/* Accès à l'université sans Abitur (voie des beruflich Qualifizierte) */}
         <div className="rounded-xl border-l-4 border-brand-gold bg-brand-gold/10 p-6 max-w-3xl mb-6">
           <div className="flex items-start gap-3">
-            <GraduationCap size={24} strokeWidth={1.75} aria-hidden="true" className="shrink-0 text-brand-gold-text mt-0.5" />
+            <GraduationCap size={24} strokeWidth={2} aria-hidden="true" className="shrink-0 text-brand-gold-text mt-0.5" />
             <div>
               <h3 className="font-serif text-lg text-brand-black mb-1">{content.univTitle}</h3>
               <p className="text-sm text-brand-ink-secondary">{content.univBody}</p>

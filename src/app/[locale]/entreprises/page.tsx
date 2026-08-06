@@ -225,7 +225,7 @@ export default async function EntreprisesPage() {
                 style={{ animationDelay: `${i * 40}ms` }}
               >
                 <span className="shrink-0 h-11 w-11 rounded-full bg-brand-gold/15 text-brand-gold-text flex items-center justify-center">
-                  <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
+                  <Icon size={20} strokeWidth={2} aria-hidden="true" />
                 </span>
                 <h4 className="text-brand-black font-medium text-sm">{categoryLabel(cat, locale)}</h4>
               </div>

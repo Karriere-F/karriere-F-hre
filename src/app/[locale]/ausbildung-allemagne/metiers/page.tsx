@@ -71,7 +71,7 @@ export default async function AusbildungMetiersPage() {
               >
                 <div className="flex flex-wrap items-start gap-4 mb-4">
                   <span className="shrink-0 h-12 w-12 rounded-xl bg-brand-card border border-brand-grid flex items-center justify-center">
-                    <Icon size={24} strokeWidth={1.75} className="text-brand-gold-text" aria-hidden="true" />
+                    <Icon size={24} strokeWidth={2} className="text-brand-gold-text" aria-hidden="true" />
                   </span>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-serif text-lg text-brand-black">{cat.title[locale]}</h3>

@@ -104,7 +104,7 @@ function TrackCard({
     >
       {isMatch && (
         <span className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-brand-gold px-3 py-1 text-xs font-semibold text-brand-black shadow-sm">
-          <Check size={13} strokeWidth={3} aria-hidden="true" />
+          <Check size={13} strokeWidth={2} aria-hidden="true" />
           {matchBadge}
         </span>
       )}

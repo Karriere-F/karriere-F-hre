@@ -86,7 +86,7 @@ export default async function ShortageOccupationDetailPage({
       <section className="bg-brand-white">
         <div className="animate-fade-up mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-gold/15 px-4 py-1.5 text-sm font-medium text-brand-gold-text">
-            {Icon && <Icon size={16} strokeWidth={1.75} aria-hidden="true" />}
+            {Icon && <Icon size={16} strokeWidth={2} aria-hidden="true" />}
             {categoryLabel(occ.category, locale)}
           </span>
 

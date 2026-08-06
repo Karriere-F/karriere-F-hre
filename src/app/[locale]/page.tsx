@@ -134,7 +134,7 @@ export default async function HomePage() {
                 key={tm}
                 className="flex items-center gap-2 whitespace-nowrap text-sm font-medium text-brand-white/90"
               >
-                <Check size={16} strokeWidth={3} aria-hidden="true" className="text-brand-gold-light" />
+                <Check size={16} strokeWidth={2} aria-hidden="true" className="text-brand-gold-light" />
                 {tm}
               </li>
             ))}
@@ -321,7 +321,7 @@ export default async function HomePage() {
                           <li key={chip} className="flex items-center gap-2.5 text-brand-black">
                             <Check
                               size={18}
-                              strokeWidth={3}
+                              strokeWidth={2}
                               aria-hidden="true"
                               className="shrink-0 text-brand-gold-text"
                             />
@@ -391,7 +391,7 @@ export default async function HomePage() {
                   <li key={point} className="flex items-start gap-3">
                     <Check
                       size={20}
-                      strokeWidth={3}
+                      strokeWidth={2}
                       aria-hidden="true"
                       className="mt-0.5 shrink-0 text-brand-gold-text"
                     />
