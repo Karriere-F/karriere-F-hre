@@ -300,7 +300,7 @@ export default async function HomePage() {
               {methodSteps.map((step, i) => (
                 <Fragment key={step.title}>
                   <div
-                    className="animate-fade-up flex flex-1 flex-col overflow-hidden rounded-2xl bg-brand-white shadow-[0_1px_3px_rgba(26,26,26,0.07)]"
+                    className="animate-fade-up flex flex-1 flex-col overflow-hidden rounded-2xl bg-brand-white shadow-[0_6px_28px_-10px_rgba(17,17,17,0.18)] ring-1 ring-black/[0.04]"
                     style={{ animationDelay: `${i * 90}ms` }}
                   >
                     <div className="relative aspect-[4/3]">
