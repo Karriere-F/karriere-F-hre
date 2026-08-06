@@ -1,6 +1,6 @@
 // Health-sector professions and their detailed fiches. Static, trilingual and
 // grounded in public German data (salaries: Entgeltatlas / Bundesagentur für
-// Arbeit) — never invented figures. New fiches are added under SANTE_FICHES as
+// Arbeit), never invented figures. New fiches are added under SANTE_FICHES as
 // their content is researched; list items without a fiche simply route to
 // "Postuler" until their fiche is written.
 
@@ -12,19 +12,19 @@ export const tr = (t: LocalizedText, locale: Locale) => t[locale];
 
 export type SanteMetier = {
   slug: string;
-  /** Display name (kept in German for the Ausbildung path — the searched term). */
+  /** Display name (kept in German for the Ausbildung path, the searched term). */
   name: LocalizedText;
   /** Short gloss shown under the name. */
   note: LocalizedText;
 };
 
-// Path 1 — "Je veux faire une Ausbildung" (train in Germany). German titles are
+// Path 1, "Je veux faire une Ausbildung" (train in Germany). German titles are
 // the real, searched terms; the note carries the local-language gloss.
 export const AUSBILDUNG_METIERS: SanteMetier[] = [
   {
     slug: "infirmier",
     name: { fr: "Pflegefachmann / Pflegefachfrau", de: "Pflegefachmann / Pflegefachfrau", en: "Pflegefachmann / Pflegefachfrau" },
-    note: { fr: "Infirmier·ère (soins généralistes)", de: "Pflegefachkraft (generalistisch)", en: "Registered nurse (generalist)" },
+    note: { fr: "Infirmier (soins généralistes)", de: "Pflegefachkraft (generalistisch)", en: "Registered nurse (generalist)" },
   },
   {
     slug: "krankenpflegehelfer",
@@ -39,27 +39,27 @@ export const AUSBILDUNG_METIERS: SanteMetier[] = [
   {
     slug: "ota",
     name: { fr: "Operationstechnischer Assistent (OTA)", de: "Operationstechnischer Assistent (OTA)", en: "Operationstechnischer Assistent (OTA)" },
-    note: { fr: "Assistant·e de bloc opératoire", de: "OP-Assistenz", en: "Surgical assistant" },
+    note: { fr: "Assistant de bloc opératoire", de: "OP-Assistenz", en: "Surgical assistant" },
   },
   {
     slug: "ata",
     name: { fr: "Anästhesietechnischer Assistent (ATA)", de: "Anästhesietechnischer Assistent (ATA)", en: "Anästhesietechnischer Assistent (ATA)" },
-    note: { fr: "Assistant·e en anesthésie", de: "Anästhesie-Assistenz", en: "Anaesthesia assistant" },
+    note: { fr: "Assistant en anesthésie", de: "Anästhesie-Assistenz", en: "Anaesthesia assistant" },
   },
   {
     slug: "mfa",
     name: { fr: "Medizinischer Fachangestellter (MFA)", de: "Medizinischer Fachangestellter (MFA)", en: "Medizinischer Fachangestellter (MFA)" },
-    note: { fr: "Assistant·e médical·e (cabinet)", de: "Medizinische Fachangestellte", en: "Medical assistant" },
+    note: { fr: "Assistant médical (cabinet)", de: "Medizinische Fachangestellte", en: "Medical assistant" },
   },
   {
     slug: "zfa",
     name: { fr: "Zahnmedizinischer Fachangestellter (ZFA)", de: "Zahnmedizinischer Fachangestellter (ZFA)", en: "Zahnmedizinischer Fachangestellter (ZFA)" },
-    note: { fr: "Assistant·e dentaire", de: "Zahnmedizinische Fachangestellte", en: "Dental assistant" },
+    note: { fr: "Assistant dentaire", de: "Zahnmedizinische Fachangestellte", en: "Dental assistant" },
   },
   {
     slug: "notfallsanitaeter",
     name: { fr: "Notfallsanitäter", de: "Notfallsanitäter", en: "Notfallsanitäter" },
-    note: { fr: "Ambulancier·ère d'urgence", de: "Notfallsanitäter", en: "Emergency paramedic" },
+    note: { fr: "Ambulancier d'urgence", de: "Notfallsanitäter", en: "Emergency paramedic" },
   },
   {
     slug: "hebamme",
@@ -68,20 +68,20 @@ export const AUSBILDUNG_METIERS: SanteMetier[] = [
   },
 ];
 
-// Path 2 — "Je suis déjà diplômé" (already qualified, seeking recognition +
+// Path 2, "Je suis déjà diplômé" (already qualified, seeking recognition +
 // placement). Titles in the reader's language.
 export const DIPLOME_METIERS: SanteMetier[] = [
-  { slug: "infirmier", name: { fr: "Infirmier·ère", de: "Pflegefachkraft", en: "Nurse" }, note: { fr: "Diplôme d'État infirmier", de: "Examinierte Pflege", en: "Registered nurse" } },
-  { slug: "aide-soignant", name: { fr: "Aide-soignant·e", de: "Pflegehelfer·in", en: "Nursing assistant" }, note: { fr: "", de: "", en: "" } },
+  { slug: "infirmier", name: { fr: "Infirmier", de: "Pflegefachkraft", en: "Nurse" }, note: { fr: "Diplôme d'État infirmier", de: "Examinierte Pflege", en: "Registered nurse" } },
+  { slug: "aide-soignant", name: { fr: "Aide-soignant", de: "Pflegehelfer", en: "Nursing assistant" }, note: { fr: "", de: "", en: "" } },
   { slug: "medecin", name: { fr: "Médecin", de: "Arzt / Ärztin", en: "Doctor" }, note: { fr: "", de: "", en: "" } },
-  { slug: "kinesitherapeute", name: { fr: "Kinésithérapeute", de: "Physiotherapeut·in", en: "Physiotherapist" }, note: { fr: "", de: "", en: "" } },
-  { slug: "ergotherapeute", name: { fr: "Ergothérapeute", de: "Ergotherapeut·in", en: "Occupational therapist" }, note: { fr: "", de: "", en: "" } },
+  { slug: "kinesitherapeute", name: { fr: "Kinésithérapeute", de: "Physiotherapeut", en: "Physiotherapist" }, note: { fr: "", de: "", en: "" } },
+  { slug: "ergotherapeute", name: { fr: "Ergothérapeute", de: "Ergotherapeut", en: "Occupational therapist" }, note: { fr: "", de: "", en: "" } },
   { slug: "sage-femme", name: { fr: "Sage-femme", de: "Hebamme", en: "Midwife" }, note: { fr: "", de: "", en: "" } },
   { slug: "dentiste", name: { fr: "Dentiste", de: "Zahnarzt / Zahnärztin", en: "Dentist" }, note: { fr: "", de: "", en: "" } },
-  { slug: "pharmacien", name: { fr: "Pharmacien·ne", de: "Apotheker·in", en: "Pharmacist" }, note: { fr: "", de: "", en: "" } },
-  { slug: "technicien-laboratoire", name: { fr: "Technicien·ne de laboratoire", de: "MTLA (Labor)", en: "Laboratory technician" }, note: { fr: "", de: "", en: "" } },
-  { slug: "manipulateur-radio", name: { fr: "Manipulateur·rice radio", de: "MTRA (Radiologie)", en: "Radiographer" }, note: { fr: "", de: "", en: "" } },
-  { slug: "ambulancier", name: { fr: "Ambulancier·ère", de: "Rettungssanitäter·in", en: "Paramedic" }, note: { fr: "", de: "", en: "" } },
+  { slug: "pharmacien", name: { fr: "Pharmacien", de: "Apotheker", en: "Pharmacist" }, note: { fr: "", de: "", en: "" } },
+  { slug: "technicien-laboratoire", name: { fr: "Technicien de laboratoire", de: "MTLA (Labor)", en: "Laboratory technician" }, note: { fr: "", de: "", en: "" } },
+  { slug: "manipulateur-radio", name: { fr: "Manipulateur radio", de: "MTRA (Radiologie)", en: "Radiographer" }, note: { fr: "", de: "", en: "" } },
+  { slug: "ambulancier", name: { fr: "Ambulancier", de: "Rettungssanitäter", en: "Paramedic" }, note: { fr: "", de: "", en: "" } },
 ];
 
 export type FicheSection = { heading: LocalizedText; body: LocalizedText };
@@ -106,9 +106,9 @@ export const SANTE_UI = {
     en: "Healthcare professions in Germany",
   },
   hubIntro: {
-    fr: "La santé est le premier secteur en tension en Allemagne. Deux chemins s'offrent à vous selon votre situation — dans les deux cas, nous vous accompagnons de la formation à l'installation.",
-    de: "Das Gesundheitswesen ist der Bereich mit dem größten Fachkräftemangel in Deutschland. Je nach Situation stehen Ihnen zwei Wege offen — in beiden Fällen begleiten wir Sie von der Ausbildung bis zur Ankunft.",
-    en: "Healthcare is Germany's number-one shortage sector. Two paths are open to you depending on your situation — in both cases we support you from training to arrival.",
+    fr: "La santé est le premier secteur en tension en Allemagne. Deux chemins s'offrent à vous selon votre situation, dans les deux cas, nous vous accompagnons de la formation à l'installation.",
+    de: "Das Gesundheitswesen ist der Bereich mit dem größten Fachkräftemangel in Deutschland. Je nach Situation stehen Ihnen zwei Wege offen, in beiden Fällen begleiten wir Sie von der Ausbildung bis zur Ankunft.",
+    en: "Healthcare is Germany's number-one shortage sector. Two paths are open to you depending on your situation, in both cases we support you from training to arrival.",
   },
   pathAusbildungTitle: { fr: "Je veux faire une Ausbildung", de: "Ich möchte eine Ausbildung machen", en: "I want to do an Ausbildung" },
   pathAusbildungIntro: {
@@ -116,9 +116,9 @@ export const SANTE_UI = {
     de: "Sie werden direkt in Deutschland ausgebildet: eine vergütete, anerkannte Ausbildung mit Abschluss.",
     en: "You train directly in Germany: a paid, recognised, qualifying programme.",
   },
-  pathDiplomeTitle: { fr: "Je suis déjà diplômé·e", de: "Ich bin bereits qualifiziert", en: "I am already qualified" },
+  pathDiplomeTitle: { fr: "Je suis déjà diplômé", de: "Ich bin bereits qualifiziert", en: "I am already qualified" },
   pathDiplomeIntro: {
-    fr: "Vous êtes déjà qualifié·e : nous faisons reconnaître votre diplôme et vous plaçons auprès d'un employeur.",
+    fr: "Vous êtes déjà qualifié : nous faisons reconnaître votre diplôme et vous plaçons auprès d'un employeur.",
     de: "Sie sind bereits qualifiziert: Wir lassen Ihren Abschluss anerkennen und vermitteln Sie an einen Arbeitgeber.",
     en: "You are already qualified: we get your diploma recognised and place you with an employer.",
   },
@@ -138,17 +138,17 @@ export const SANTE_UI = {
 export const SANTE_FICHES: Record<string, SanteFiche> = {
   infirmier: {
     slug: "infirmier",
-    title: { fr: "Infirmier·ère (Pflegefachkraft)", de: "Pflegefachkraft", en: "Nurse (Pflegefachkraft)" },
+    title: { fr: "Infirmier (Pflegefachkraft)", de: "Pflegefachkraft", en: "Nurse (Pflegefachkraft)" },
     intro: {
-      fr: "L'un des métiers les plus recherchés en Allemagne. Que vous soyez déjà diplômé·e ou que vous souhaitiez vous former sur place (Ausbildung), Karriere Fähre vous accompagne jusqu'à votre poste et votre installation.",
-      de: "Einer der gefragtesten Berufe in Deutschland. Ob bereits examiniert oder über eine Ausbildung vor Ort — Karriere Fähre begleitet Sie bis zur Stelle und zur Ankunft.",
+      fr: "L'un des métiers les plus recherchés en Allemagne. Que vous soyez déjà diplômé ou que vous souhaitiez vous former sur place (Ausbildung), Karriere Fähre vous accompagne jusqu'à votre poste et votre installation.",
+      de: "Einer der gefragtesten Berufe in Deutschland. Ob bereits examiniert oder über eine Ausbildung vor Ort, Karriere Fähre begleitet Sie bis zur Stelle und zur Ankunft.",
       en: "One of the most sought-after professions in Germany. Whether you are already qualified or want to train on site (Ausbildung), Karriere Fähre supports you all the way to your role and your arrival.",
     },
     sections: [
       {
         heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" },
         body: {
-          fr: "Le·la Pflegefachkraft assure les soins généralistes : suivi des patients, administration des traitements, coordination avec les médecins, accompagnement des personnes en milieu hospitalier, en clinique ou en établissement de soins. C'est un métier reconnu, stable et central dans le système de santé allemand.",
+          fr: "Le Pflegefachkraft assure les soins généralistes : suivi des patients, administration des traitements, coordination avec les médecins, accompagnement des personnes en milieu hospitalier, en clinique ou en établissement de soins. C'est un métier reconnu, stable et central dans le système de santé allemand.",
           de: "Die Pflegefachkraft übernimmt die generalistische Pflege: Patientenbetreuung, Verabreichung von Behandlungen, Abstimmung mit Ärzten und Begleitung von Menschen in Krankenhaus, Klinik oder Pflegeeinrichtung. Ein anerkannter, stabiler und zentraler Beruf im deutschen Gesundheitswesen.",
           en: "The Pflegefachkraft provides generalist nursing care: monitoring patients, administering treatments, coordinating with doctors and supporting people in hospitals, clinics or care facilities. It is a recognised, stable and central role in the German healthcare system.",
         },
@@ -156,7 +156,7 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
       {
         heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" },
         body: {
-          fr: "Un·e infirmier·ère (Pflegefachkraft) perçoit un salaire médian d'environ 4 150 € brut/mois à temps plein. S'y ajoutent selon les établissements des primes (nuit, week-end, jours fériés) et souvent un 13e mois. Pendant l'Ausbildung, la formation est rémunérée dès la première année.",
+          fr: "Un infirmier (Pflegefachkraft) perçoit un salaire médian d'environ 4 150 € brut/mois à temps plein. S'y ajoutent selon les établissements des primes (nuit, week-end, jours fériés) et souvent un 13e mois. Pendant l'Ausbildung, la formation est rémunérée dès la première année.",
           de: "Eine Pflegefachkraft verdient im Median rund 4.150 € brutto/Monat in Vollzeit. Hinzu kommen je nach Einrichtung Zuschläge (Nacht, Wochenende, Feiertage) und oft ein 13. Monatsgehalt. Während der Ausbildung wird bereits ab dem ersten Jahr eine Vergütung gezahlt.",
           en: "A nurse (Pflegefachkraft) earns a median of about €4,150 gross per month full-time. Depending on the employer, shift premiums (night, weekend, public holidays) and often a 13th month are added. During the Ausbildung, training is paid from the first year.",
         },
@@ -172,7 +172,7 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
       {
         heading: { fr: "Conditions d'accès", de: "Zugangsvoraussetzungen", en: "Entry requirements" },
         body: {
-          fr: "Deux voies. 1) L'Ausbildung : une formation généraliste de 3 ans en Allemagne, ouverte dès un niveau de scolarité équivalent au brevet et un allemand B2. 2) Déjà diplômé·e : votre diplôme d'infirmier doit être reconnu (voir ci-dessous) et votre allemand porté au niveau B2.",
+          fr: "Deux voies. 1) L'Ausbildung : une formation généraliste de 3 ans en Allemagne, ouverte dès un niveau de scolarité équivalent au brevet et un allemand B2. 2) Déjà diplômé : votre diplôme d'infirmier doit être reconnu (voir ci-dessous) et votre allemand porté au niveau B2.",
           de: "Zwei Wege. 1) Die Ausbildung: eine dreijährige generalistische Ausbildung in Deutschland, offen ab einem mittleren Schulabschluss und Deutsch B2. 2) Bereits examiniert: Ihr Pflegediplom muss anerkannt werden (siehe unten) und Ihr Deutsch auf B2-Niveau sein.",
           en: "Two routes. 1) The Ausbildung: a three-year generalist training in Germany, open from a secondary-school level and German at B2. 2) Already qualified: your nursing diploma must be recognised (see below) and your German brought up to B2.",
         },
@@ -181,7 +181,7 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
         heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" },
         body: {
           fr: "Le niveau B2 est le standard pour exercer et obtenir l'enregistrement professionnel dans la plupart des Länder. Karriere Fähre vous forme du niveau débutant jusqu'au B2 à Douala, avant le départ.",
-          de: "B2 ist der Standard, um zu arbeiten und die Berufserlaubnis in den meisten Ländern zu erhalten. Karriere Fähre bildet Sie in Douala vom Anfängerniveau bis B2 aus — vor der Ausreise.",
+          de: "B2 ist der Standard, um zu arbeiten und die Berufserlaubnis in den meisten Ländern zu erhalten. Karriere Fähre bildet Sie in Douala vom Anfängerniveau bis B2 aus, vor der Ausreise.",
           en: "B2 is the standard to work and obtain professional registration in most federal states. Karriere Fähre trains you from beginner level up to B2 in Douala, before departure.",
         },
       },

@@ -125,7 +125,7 @@ export default async function MetiersPage() {
                       className="rounded-full border border-brand-grid bg-brand-card px-3.5 py-1.5 text-sm text-brand-ink-secondary"
                     >
                       {job.label[locale]}{" "}
-                      <span className="text-brand-gold-text">· {job.de}</span>
+                      <span className="text-brand-gold-text">({job.de})</span>
                     </li>
                   ))}
                 </ul>

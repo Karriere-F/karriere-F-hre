@@ -83,7 +83,7 @@ export default async function AusbildungMetiersPage() {
                     <div key={job.de} className="rounded-lg border border-brand-grid bg-brand-card p-4">
                       <h4 className="text-sm font-medium text-brand-black mb-2">
                         {job.label[locale]}{" "}
-                        <em className="not-italic text-brand-gold-text">· {job.de}</em>
+                        <em className="not-italic text-brand-gold-text">({job.de})</em>
                       </h4>
                       <dl className="space-y-1.5 text-xs text-brand-ink-secondary">
                         <div>

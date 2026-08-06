@@ -192,7 +192,7 @@ export async function SiteFooter() {
       <div className="border-t border-brand-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-brand-white/45 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-10">
           <p>
-            © {year} Karriere Fähre SARL · {t("rccm")}
+            © {year} Karriere Fähre SARL, {t("rccm")}
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             {legalLinks.map((l) => (
