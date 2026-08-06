@@ -59,7 +59,19 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "sitemap": "Sitemap",
-    "contactDouala": "Contact: Douala"
+    "contactDouala": "Contact: Douala",
+    "newsletterTitle": "Stay informed",
+    "newsletterText": "Opportunities, tips and news about building a career in Germany. Once a month, no spam.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterCta": "Subscribe",
+    "newsletterSuccess": "Thank you! Your subscription is confirmed.",
+    "newsletterError": "Something went wrong. Please try again.",
+    "brandDesc": "The bridge between talent from Africa and employers in Germany.",
+    "columnContact": "Contact",
+    "followUs": "Follow us",
+    "addr1": "Bonamoussadi, building opposite Super U, 3rd floor",
+    "addr2": "BP 8414 — Douala, Cameroon",
+    "rccm": "Business reg. (RCCM): CM-DLA-01-2025-B13-00504"
   },
   "home": {
     "heroTitle": "What if Germany were just a simple crossing away?",

@@ -59,7 +59,19 @@
     "privacy": "Confidentialité",
     "terms": "CGU",
     "sitemap": "Plan du site",
-    "contactDouala": "Contact : Douala"
+    "contactDouala": "Contact : Douala",
+    "newsletterTitle": "Restez informé·e",
+    "newsletterText": "Opportunités, conseils et actualités sur la carrière en Allemagne. Une fois par mois, sans spam.",
+    "newsletterPlaceholder": "Votre adresse e-mail",
+    "newsletterCta": "S'inscrire",
+    "newsletterSuccess": "Merci ! Votre inscription est bien enregistrée.",
+    "newsletterError": "Une erreur est survenue. Merci de réessayer.",
+    "brandDesc": "Le pont entre les talents d'Afrique et les employeurs d'Allemagne.",
+    "columnContact": "Contact",
+    "followUs": "Suivez-nous",
+    "addr1": "Bonamoussadi, immeuble face à Super U, 3e étage",
+    "addr2": "BP 8414 — Douala, Cameroun",
+    "rccm": "RCCM : CM-DLA-01-2025-B13-00504"
   },
   "home": {
     "heroTitle": "Et si l'Allemagne n'était plus qu'une simple traversée ?",

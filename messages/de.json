@@ -59,7 +59,19 @@
     "privacy": "Datenschutz",
     "terms": "AGB",
     "sitemap": "Seitenübersicht",
-    "contactDouala": "Kontakt: Douala"
+    "contactDouala": "Kontakt: Douala",
+    "newsletterTitle": "Bleiben Sie informiert",
+    "newsletterText": "Chancen, Tipps und Neuigkeiten rund um die Karriere in Deutschland. Einmal im Monat, kein Spam.",
+    "newsletterPlaceholder": "Ihre E-Mail-Adresse",
+    "newsletterCta": "Abonnieren",
+    "newsletterSuccess": "Danke! Ihre Anmeldung ist eingegangen.",
+    "newsletterError": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
+    "brandDesc": "Die Brücke zwischen Talenten aus Afrika und Arbeitgebern in Deutschland.",
+    "columnContact": "Kontakt",
+    "followUs": "Folgen Sie uns",
+    "addr1": "Bonamoussadi, Gebäude gegenüber Super U, 3. Etage",
+    "addr2": "BP 8414 — Douala, Kamerun",
+    "rccm": "RCCM: CM-DLA-01-2025-B13-00504"
   },
   "home": {
     "heroTitle": "Was, wenn Deutschland nur noch eine einfache Überfahrt wäre?",
