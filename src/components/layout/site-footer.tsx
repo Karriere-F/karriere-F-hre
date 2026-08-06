@@ -5,7 +5,7 @@ import type { Locale } from "../../../i18n/routing";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
 import { NewsletterForm } from "./newsletter-form";
 
-const EMAIL = "karrierefaehre@gmail.com";
+const EMAIL = "kontakt@karrierfaehre.com";
 
 // Brand icons (lucide dropped its brand set) — kept minimal and monochrome.
 const SOCIALS = [
@@ -180,7 +180,7 @@ export async function SiteFooter() {
                   className="flex items-center gap-2.5 transition-colors duration-200 hover:text-brand-gold-light"
                 >
                   <Phone size={16} strokeWidth={2} aria-hidden="true" className="shrink-0 text-brand-gold-light" />
-                  {n.label} · +{n.e164.replace(/(\d{3})(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5")}
+                  +{n.e164.replace(/(\d{3})(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5")}
                 </a>
               </li>
             ))}
