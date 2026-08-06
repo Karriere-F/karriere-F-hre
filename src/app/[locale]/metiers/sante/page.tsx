@@ -6,14 +6,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { PageHero } from "@/components/marketing/page-hero";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
-import {
-  AUSBILDUNG_METIERS,
-  DIPLOME_METIERS,
-  SANTE_FICHES,
-  SANTE_UI,
-  tr,
-  type SanteMetier,
-} from "@/lib/sante-metiers";
+import { SANTE_UI, tr } from "@/lib/sante-metiers";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
@@ -25,60 +18,21 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-function MetierList({ metiers, locale }: { metiers: SanteMetier[]; locale: Locale }) {
-  return (
-    <ul className="mt-6 divide-y divide-brand-grid border-y border-brand-grid">
-      {metiers.map((m) => {
-        const hasFiche = Boolean(SANTE_FICHES[m.slug]);
-        const note = tr(m.note, locale);
-        const inner = (
-          <>
-            <span className="min-w-0">
-              <span className="block font-medium text-brand-black">{tr(m.name, locale)}</span>
-              {note && <span className="block text-sm text-brand-ink-secondary">{note}</span>}
-            </span>
-            {hasFiche && (
-              <span className="shrink-0 inline-flex items-center gap-1 text-sm font-medium text-brand-gold-text">
-                {tr(SANTE_UI.viewFiche, locale)}
-                <ArrowRight size={15} strokeWidth={2} aria-hidden="true" />
-              </span>
-            )}
-          </>
-        );
-        return (
-          <li key={m.slug + tr(m.name, locale)}>
-            {hasFiche ? (
-              <Link
-                href={{ pathname: "/metiers/sante/[slug]", params: { slug: m.slug } }}
-                className="group flex items-center justify-between gap-4 py-3.5 transition-colors hover:text-brand-gold-text"
-              >
-                {inner}
-              </Link>
-            ) : (
-              <div className="flex items-center justify-between gap-4 py-3.5">{inner}</div>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
 export default async function SanteHubPage() {
   const locale = (await getLocale()) as Locale;
 
-  const paths = [
+  const choices = [
     {
+      href: "/metiers/sante/ausbildung" as const,
       icon: GraduationCap,
       title: tr(SANTE_UI.pathAusbildungTitle, locale),
       intro: tr(SANTE_UI.pathAusbildungIntro, locale),
-      metiers: AUSBILDUNG_METIERS,
     },
     {
+      href: "/metiers/sante/diplome" as const,
       icon: Stethoscope,
       title: tr(SANTE_UI.pathDiplomeTitle, locale),
       intro: tr(SANTE_UI.pathDiplomeIntro, locale),
-      metiers: DIPLOME_METIERS,
     },
   ];
 
@@ -96,31 +50,31 @@ export default async function SanteHubPage() {
       <PageHero title={tr(SANTE_UI.hubTitle, locale)} subtitle={tr(SANTE_UI.hubIntro, locale)} />
 
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-            {paths.map(({ icon: Icon, title, intro, metiers }) => (
-              <div
-                key={title}
-                className="animate-fade-up flex flex-col rounded-2xl border border-brand-grid bg-brand-card p-6 sm:p-8"
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div className="grid gap-5 sm:grid-cols-2">
+            {choices.map(({ href, icon: Icon, title, intro }) => (
+              <Link
+                key={href}
+                href={href}
+                className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-card p-7 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_14px_34px_-16px_rgba(17,17,17,0.25)] sm:p-8"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
                   <Icon size={24} strokeWidth={2} aria-hidden="true" />
                 </span>
-                <h2 className="mt-4 font-serif text-2xl text-brand-black leading-snug">{title}</h2>
-                <p className="mt-2 text-brand-ink-secondary leading-relaxed">{intro}</p>
-
-                <MetierList metiers={metiers} locale={locale} />
-
-                <div className="mt-auto pt-7">
-                  <Link
-                    href="/postuler"
-                    className="press inline-flex items-center gap-2 rounded-lg bg-brand-gold px-6 py-3 font-medium text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
-                  >
-                    {tr(SANTE_UI.apply, locale)}
-                    <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
+                <h2 className="mt-4 font-serif text-xl text-brand-black leading-snug sm:text-2xl">
+                  {title}
+                </h2>
+                <p className="mt-2 flex-1 text-sm text-brand-ink-secondary leading-relaxed">{intro}</p>
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text">
+                  {locale === "fr" ? "Choisir" : locale === "de" ? "Auswählen" : "Choose"}
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                    className="transition-transform duration-200 group-hover:translate-x-0.5"
+                  />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

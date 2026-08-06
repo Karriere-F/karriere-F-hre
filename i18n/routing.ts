@@ -135,6 +135,16 @@ export const routing = defineRouting({
       de: "/berufe/gesundheit",
       en: "/occupations/healthcare",
     },
+    "/metiers/sante/ausbildung": {
+      fr: "/metiers/sante/ausbildung",
+      de: "/berufe/gesundheit/ausbildung",
+      en: "/occupations/healthcare/ausbildung",
+    },
+    "/metiers/sante/diplome": {
+      fr: "/metiers/sante/diplome",
+      de: "/berufe/gesundheit/diplom",
+      en: "/occupations/healthcare/qualified",
+    },
     "/metiers/sante/[slug]": {
       fr: "/metiers/sante/[slug]",
       de: "/berufe/gesundheit/[slug]",
