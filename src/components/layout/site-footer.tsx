@@ -5,7 +5,7 @@ import type { Locale } from "../../../i18n/routing";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
 import { NewsletterForm } from "./newsletter-form";
 
-const EMAIL = "kontakt@karrierfaehre.com";
+const EMAIL = "kontakt@karrierefaehre.com";
 
 // Brand icons (lucide dropped its brand set) — kept minimal and monochrome.
 const SOCIALS = [
