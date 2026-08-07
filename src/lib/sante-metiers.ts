@@ -1017,4 +1017,412 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
       en: "Salaries: Entgeltatlas (Federal Employment Agency) and the TVöD-P scale, 2025. Indicative figures, not guaranteed. Recognition and visas: competent German authorities.",
     },
   },
+
+  ergotherapeute: {
+    slug: "ergotherapeute",
+    title: { fr: "Ergothérapeute en Allemagne (Ergotherapeut)", de: "Ergotherapeut in Deutschland", en: "Occupational therapist in Germany" },
+    image: "ergotherapeute",
+    intro: {
+      fr: "L'ergothérapie (Ergotherapie) est une profession de santé réglementée et recherchée en Allemagne. Karriere Fähre vous accompagne de l'allemand à la reconnaissance et à l'embauche.",
+      de: "Ergotherapie ist ein reglementierter, gefragter Gesundheitsberuf in Deutschland. Karriere Fähre begleitet Sie vom Deutsch über die Anerkennung bis zur Einstellung.",
+      en: "Occupational therapy (Ergotherapie) is a regulated, sought-after health profession in Germany. Karriere Fähre supports you from German through recognition to hiring.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "L'ergothérapeute aide les patients à retrouver leur autonomie dans les gestes du quotidien après une maladie, un accident ou un handicap, par des activités et des exercices ciblés.",
+        de: "Der Ergotherapeut hilft Patienten, nach Krankheit, Unfall oder Behinderung ihre Selbstständigkeit im Alltag wiederzuerlangen, durch gezielte Aktivitäten und Übungen.",
+        en: "The occupational therapist helps patients regain independence in daily life after illness, accident or disability, through targeted activities and exercises." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Environ 2 700 € à 3 500 € brut par mois selon l'expérience et l'employeur.",
+        de: "Etwa 2.700 € bis 3.500 € brutto pro Monat je nach Erfahrung und Arbeitgeber.",
+        en: "About €2,700 to €3,500 gross per month depending on experience and employer." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "L'Ausbildung d'ergothérapeute dure 3 ans. Déjà diplômé : le délai dépend de la reconnaissance (contrôle d'équivalence) et de l'allemand B2.",
+        de: "Die Ausbildung zum Ergotherapeuten dauert 3 Jahre. Bereits ausgebildet: Die Dauer hängt von der Anerkennung (Gleichwertigkeitsprüfung) und Deutsch B2 ab.",
+        en: "Occupational-therapy training lasts 3 years. Already qualified: the timeline depends on recognition (equivalence check) and German B2." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Cabinets d'ergothérapie, cliniques de rééducation, hôpitaux, structures pour personnes âgées et pour personnes en situation de handicap.",
+        de: "Ergotherapiepraxen, Reha-Kliniken, Krankenhäuser, Einrichtungen für ältere Menschen und für Menschen mit Behinderung.",
+        en: "Occupational-therapy practices, rehabilitation clinics, hospitals, facilities for older people and for people with disabilities." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Rééducation neurologique, pédiatrique, gériatrique et psychiatrique, en cabinet, en clinique ou à domicile.",
+        de: "Neurologische, pädiatrische, geriatrische und psychiatrische Rehabilitation, in der Praxis, Klinik oder zu Hause.",
+        en: "Neurological, paediatric, geriatric and psychiatric rehabilitation, in practices, clinics or at home." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations, coordination d'équipe, enseignement, ou ouverture de son propre cabinet.",
+        de: "Spezialisierungen, Teamleitung, Lehre oder eine eigene Praxis.",
+        en: "Specialisations, team coordination, teaching, or opening your own practice." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis pour la reconnaissance et l'exercice. Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist für Anerkennung und Ausübung erforderlich. Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required for recognition and practice. Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Profession réglementée : une autorisation d'État est nécessaire après contrôle d'équivalence ; une mesure d'adaptation peut être demandée. Nous montons le dossier avec vous.",
+        de: "Reglementierter Beruf: Nach Gleichwertigkeitsprüfung ist eine staatliche Erlaubnis nötig; eine Anpassungsmaßnahme kann verlangt werden. Wir erstellen den Antrag mit Ihnen.",
+        en: "Regulated profession: a state authorisation is required after an equivalence check; an adaptation measure may be required. We build the file with you." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa et titre de séjour pour travailleurs qualifiés (§ 18a/18b), ou entrée pour reconnaissance sur place (§ 16d). Nous gérons les démarches.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b) oder Einreise zur Anerkennung vor Ort (§ 16d). Wir übernehmen die Formalitäten.",
+        en: "Visa and residence permit for skilled workers (§ 18a/18b), or entry for on-site recognition (§ 16d). We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier et reconnaissance, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Unterlagen und Anerkennung, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, file and recognition, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "L'ergothérapie est-elle réglementée ?", de: "Ist Ergotherapie reglementiert?", en: "Is occupational therapy regulated?" }, a: {
+        fr: "Oui. Une autorisation d'État est nécessaire après contrôle d'équivalence. Nous vous accompagnons.",
+        de: "Ja. Nach einer Gleichwertigkeitsprüfung ist eine staatliche Erlaubnis nötig. Wir begleiten Sie.",
+        en: "Yes. A state authorisation is required after an equivalence check. We support you." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Le niveau B2 est requis ; nous vous formons jusque-là avant le départ.",
+        de: "B2 ist erforderlich; wir bilden Sie vorher bis dahin aus.",
+        en: "B2 is required; we train you up to that level before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : Entgeltatlas (Bundesagentur für Arbeit) et sources spécialisées, 2025. Montants indicatifs, non garantis. Reconnaissance (profession réglementée) et visas : autorités allemandes compétentes.",
+      de: "Gehälter: Entgeltatlas (Bundesagentur für Arbeit) und Fachquellen, 2025. Richtwerte, nicht garantiert. Anerkennung (reglementierter Beruf) und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: Entgeltatlas (Federal Employment Agency) and specialist sources, 2025. Indicative figures, not guaranteed. Recognition (regulated profession) and visas: competent German authorities.",
+    },
+  },
+
+  dentiste: {
+    slug: "dentiste",
+    title: { fr: "Dentiste en Allemagne (Zahnarzt)", de: "Zahnarzt in Deutschland", en: "Dentist in Germany (Zahnarzt)" },
+    image: "dentiste",
+    intro: {
+      fr: "L'Allemagne recrute des dentistes. Le parcours passe par l'Approbation (autorisation d'exercer) et un bon niveau d'allemand ; Karriere Fähre vous accompagne à chaque étape.",
+      de: "Deutschland sucht Zahnärzte. Der Weg führt über die Approbation und gute Deutschkenntnisse; Karriere Fähre begleitet Sie bei jedem Schritt.",
+      en: "Germany is recruiting dentists. The path runs through the Approbation (licence to practise) and strong German; Karriere Fähre supports you at every step.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le dentiste (Zahnarzt) diagnostique et traite les pathologies bucco-dentaires, réalise les soins, la prévention et la chirurgie dentaire, en cabinet ou en clinique.",
+        de: "Der Zahnarzt diagnostiziert und behandelt Zahn-, Mund- und Kiefererkrankungen, führt Behandlung, Prophylaxe und Zahnchirurgie durch, in Praxis oder Klinik.",
+        en: "The dentist diagnoses and treats oral and dental conditions, delivering care, prevention and dental surgery, in a practice or clinic." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Un dentiste salarié gagne en médiane autour de 6 900 € brut par mois, de ~5 700 € à ~9 000 € selon l'expérience, la forme d'exercice et la région ; l'installation en cabinet augmente les revenus.",
+        de: "Ein angestellter Zahnarzt verdient im Median rund 6.900 € brutto pro Monat, von ca. 5.700 € bis 9.000 € je nach Erfahrung, Praxisform und Region; die eigene Praxis erhöht das Einkommen.",
+        en: "An employed dentist earns a median of around €6,900 gross per month, from about €5,700 to €9,000 depending on experience, practice type and region; owning a practice raises earnings." } },
+      { heading: { fr: "Durée", de: "Dauer", en: "Duration" }, body: {
+        fr: "Le diplôme de dentiste n'est pas refait. Le délai dépend de l'Approbation et de la langue ; un examen de connaissances peut être requis.",
+        de: "Das Zahnmedizinstudium wird nicht wiederholt. Die Dauer hängt von Approbation und Sprache ab; eine Kenntnisprüfung kann nötig sein.",
+        en: "The dental degree is not repeated. The timeline depends on the Approbation and language; a knowledge exam may be required." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Cabinets dentaires, centres dentaires et cliniques, dans tout le pays, avec une forte demande en zones rurales.",
+        de: "Zahnarztpraxen, Zahnzentren und Kliniken, bundesweit, mit hoher Nachfrage in ländlichen Regionen.",
+        en: "Dental practices, dental centres and clinics, across the country, with strong demand in rural areas." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Dentisterie générale, orthodontie, chirurgie bucco-dentaire, en cabinet salarié puis, à terme, en cabinet indépendant.",
+        de: "Allgemeine Zahnheilkunde, Kieferorthopädie, Oralchirurgie, angestellt und perspektivisch in eigener Praxis.",
+        en: "General dentistry, orthodontics, oral surgery, employed and, in time, in your own practice." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations, statut d'associé, ou installation en cabinet avec sa propre patientèle.",
+        de: "Spezialisierungen, Partnerschaft in einer Praxis oder eigene Niederlassung mit eigenem Patientenstamm.",
+        en: "Specialisations, partnership in a practice, or setting up your own practice with your own patients." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "B2 en allemand général, plus un examen d'allemand médical (Fachsprachprüfung, C1) demandé par l'Ordre des dentistes.",
+        de: "B2 im Allgemeindeutsch plus eine Fachsprachprüfung (C1), die von der Zahnärztekammer verlangt wird.",
+        en: "B2 in general German plus a medical-language exam (Fachsprachprüfung, C1) required by the dental chamber." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Pour exercer, il faut l'Approbation délivrée par l'autorité du Land, avec un examen de connaissances (Kenntnisprüfung) si l'équivalence n'est pas directe, et l'inscription à l'Ordre des dentistes.",
+        de: "Zum Arbeiten ist die Approbation der Landesbehörde nötig, ggf. mit Kenntnisprüfung, sowie die Mitgliedschaft in der Zahnärztekammer.",
+        en: "To practise you need the Approbation from the state authority, with a knowledge exam (Kenntnisprüfung) if equivalence is not direct, plus membership of the dental chamber." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa puis titre de séjour pour travailleurs qualifiés (§ 18a/18b), ou entrée pour préparer l'Approbation sur place (§ 16d). Nous gérons ces démarches.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b) oder Einreise zur Vorbereitung der Approbation (§ 16d). Wir übernehmen die Schritte.",
+        en: "Visa then residence permit for skilled workers (§ 18a/18b), or entry to prepare the Approbation on site (§ 16d). We handle these steps." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand général puis médical, dossier d'Approbation, mise en relation avec un cabinet, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Allgemein- und Fachdeutsch, Approbationsantrag, Kontakt zu einer Praxis, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, general then medical German, Approbation file, matching with a practice, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Quel niveau d'allemand pour un dentiste ?", de: "Welches Deutschniveau als Zahnarzt?", en: "What German level for a dentist?" }, a: {
+        fr: "B2 général et un examen d'allemand médical (Fachsprachprüfung, C1). Nous vous préparons aux deux.",
+        de: "B2 allgemein und eine Fachsprachprüfung (C1). Wir bereiten Sie auf beides vor.",
+        en: "General B2 and a medical-language exam (Fachsprachprüfung, C1). We prepare you for both." } },
+      { q: { fr: "Faut-il refaire ses études ?", de: "Muss ich das Studium wiederholen?", en: "Do I need to redo my studies?" }, a: {
+        fr: "Non. Votre diplôme est évalué pour l'Approbation ; un examen de connaissances peut être demandé, mais pas de nouvelles études complètes.",
+        de: "Nein. Ihr Abschluss wird für die Approbation geprüft; ggf. eine Kenntnisprüfung, aber kein neues Studium.",
+        en: "No. Your degree is assessed for the Approbation; a knowledge exam may be required, but not full new studies." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : étude dentale 2025 (Dentalwelt/apoBank) et medi-karriere. Montants indicatifs, non garantis. Approbation, reconnaissance et visas : autorités allemandes compétentes (Zahnärztekammer, autorité du Land).",
+      de: "Gehälter: Dentale Gehaltsstudie 2025 (Dentalwelt/apoBank) und medi-karriere. Richtwerte, nicht garantiert. Approbation, Anerkennung und Visa: zuständige deutsche Behörden (Zahnärztekammer, Landesbehörde).",
+      en: "Salaries: dental salary study 2025 (Dentalwelt/apoBank) and medi-karriere. Indicative figures, not guaranteed. Approbation, recognition and visas: competent German authorities (dental chamber, state authority).",
+    },
+  },
+
+  pharmacien: {
+    slug: "pharmacien",
+    title: { fr: "Pharmacien en Allemagne (Apotheker)", de: "Apotheker in Deutschland", en: "Pharmacist in Germany (Apotheker)" },
+    image: "pharmacien",
+    intro: {
+      fr: "Le pharmacien (Apotheker) est un métier réglementé et bien rémunéré, recherché en Allemagne. Le parcours passe par l'Approbation ; Karriere Fähre vous accompagne à chaque étape.",
+      de: "Der Apotheker ist ein reglementierter, gut bezahlter und gefragter Beruf in Deutschland. Der Weg führt über die Approbation; Karriere Fähre begleitet Sie bei jedem Schritt.",
+      en: "The pharmacist (Apotheker) is a regulated, well-paid, in-demand profession in Germany. The path runs through the Approbation; Karriere Fähre supports you at every step.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le pharmacien délivre et contrôle les médicaments, conseille les patients et assure la sécurité des traitements, en officine, à l'hôpital ou dans l'industrie.",
+        de: "Der Apotheker gibt Arzneimittel ab und prüft sie, berät Patienten und sichert die Arzneimitteltherapie, in Apotheke, Krankenhaus oder Industrie.",
+        en: "The pharmacist dispenses and checks medicines, advises patients and ensures treatment safety, in a pharmacy, hospital or industry." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Un pharmacien salarié gagne d'environ 3 400 € à 5 200 € brut par mois (début ~3 460 €), davantage en clinique (~4 800 à 6 500 €) ou dans l'industrie.",
+        de: "Ein angestellter Apotheker verdient etwa 3.400 € bis 5.200 € brutto pro Monat (Einstieg ~3.460 €), mehr in der Klinik (~4.800 bis 6.500 €) oder in der Industrie.",
+        en: "An employed pharmacist earns about €3,400 to €5,200 gross per month (entry ~€3,460), more in hospitals (~€4,800 to €6,500) or in industry." } },
+      { heading: { fr: "Durée", de: "Dauer", en: "Duration" }, body: {
+        fr: "Le diplôme de pharmacien n'est pas refait. Le délai dépend de l'Approbation et de la langue ; un examen de connaissances peut être requis.",
+        de: "Das Pharmaziestudium wird nicht wiederholt. Die Dauer hängt von Approbation und Sprache ab; eine Kenntnisprüfung kann nötig sein.",
+        en: "The pharmacy degree is not repeated. The timeline depends on the Approbation and language; a knowledge exam may be required." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Officines (pharmacies de ville), pharmacies hospitalières et industrie pharmaceutique. La demande est forte, surtout en officine.",
+        de: "Öffentliche Apotheken, Krankenhausapotheken und die pharmazeutische Industrie. Hohe Nachfrage, besonders in der Offizin.",
+        en: "Community pharmacies, hospital pharmacies and the pharmaceutical industry. Strong demand, especially in community pharmacies." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Officine, pharmacie hospitalière, industrie et recherche, contrôle qualité et affaires réglementaires.",
+        de: "Offizin, Krankenhausapotheke, Industrie und Forschung, Qualitätskontrolle und Regulatory Affairs.",
+        en: "Community pharmacy, hospital pharmacy, industry and research, quality control and regulatory affairs." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Gérant d'officine, pharmacien-chef d'hôpital, postes en industrie, ou installation en tant que titulaire d'officine.",
+        de: "Filialleitung, leitender Krankenhausapotheker, Industriepositionen oder eigene Apotheke.",
+        en: "Pharmacy manager, chief hospital pharmacist, industry roles, or owning a pharmacy." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "B2 en allemand général, plus un examen d'allemand spécialisé (Fachsprachprüfung, C1) demandé par l'autorité compétente.",
+        de: "B2 im Allgemeindeutsch plus eine Fachsprachprüfung (C1), die von der zuständigen Behörde verlangt wird.",
+        en: "B2 in general German plus a specialist-language exam (Fachsprachprüfung, C1) required by the competent authority." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Pour exercer, il faut l'Approbation délivrée par l'autorité du Land, avec un examen de connaissances (Kenntnisprüfung) si l'équivalence n'est pas directe.",
+        de: "Zum Arbeiten ist die Approbation der Landesbehörde nötig, ggf. mit Kenntnisprüfung bei fehlender Gleichwertigkeit.",
+        en: "To practise you need the Approbation from the state authority, with a knowledge exam (Kenntnisprüfung) if equivalence is not direct." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa puis titre de séjour pour travailleurs qualifiés (§ 18a/18b), ou entrée pour préparer l'Approbation sur place (§ 16d). Nous gérons ces démarches.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b) oder Einreise zur Vorbereitung der Approbation (§ 16d). Wir übernehmen die Schritte.",
+        en: "Visa then residence permit for skilled workers (§ 18a/18b), or entry to prepare the Approbation on site (§ 16d). We handle these steps." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand général puis spécialisé, dossier d'Approbation, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Allgemein- und Fachdeutsch, Approbationsantrag, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, general then specialist German, Approbation file, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Le métier est-il réglementé ?", de: "Ist der Beruf reglementiert?", en: "Is the profession regulated?" }, a: {
+        fr: "Oui, il faut l'Approbation. Nous vous accompagnons dans la constitution du dossier et la préparation linguistique.",
+        de: "Ja, die Approbation ist nötig. Wir begleiten Sie bei Antrag und sprachlicher Vorbereitung.",
+        en: "Yes, the Approbation is required. We support you with the file and language preparation." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "B2 général et un examen d'allemand spécialisé (C1). Nous vous préparons aux deux avant le départ.",
+        de: "B2 allgemein und eine Fachsprachprüfung (C1). Wir bereiten Sie vor der Ausreise auf beides vor.",
+        en: "General B2 and a specialist-language exam (C1). We prepare you for both before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : medi-karriere et jobvector (Apotheker), 2025. Montants indicatifs, non garantis. Approbation, reconnaissance et visas : autorités allemandes compétentes.",
+      de: "Gehälter: medi-karriere und jobvector (Apotheker), 2025. Richtwerte, nicht garantiert. Approbation, Anerkennung und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: medi-karriere and jobvector (Apotheker), 2025. Indicative figures, not guaranteed. Approbation, recognition and visas: competent German authorities.",
+    },
+  },
+
+  "technicien-laboratoire": {
+    slug: "technicien-laboratoire",
+    title: { fr: "Technicien de laboratoire (MTLA)", de: "MTLA (Laboratorium) in Deutschland", en: "Laboratory technician (MTLA)" },
+    image: "technicien-laboratoire",
+    intro: {
+      fr: "Le technicien de laboratoire médical (MTLA) réalise les analyses qui guident les diagnostics. Une profession réglementée et recherchée en Allemagne.",
+      de: "Der medizinisch-technische Laboratoriumsassistent (MTLA) führt die Analysen durch, die Diagnosen ermöglichen. Ein reglementierter, gefragter Beruf in Deutschland.",
+      en: "The medical laboratory technician (MTLA) runs the analyses that guide diagnoses. A regulated, sought-after profession in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le MTLA effectue les analyses de sang et d'échantillons (hématologie, microbiologie, chimie), assure la qualité des résultats et fait fonctionner les appareils du laboratoire.",
+        de: "Der MTLA führt Blut- und Probenanalysen durch (Hämatologie, Mikrobiologie, Chemie), sichert die Qualität der Ergebnisse und bedient die Laborgeräte.",
+        en: "The MTLA performs blood and sample analyses (haematology, microbiology, chemistry), ensures result quality and operates laboratory equipment." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Environ 3 000 € à 4 000 € brut par mois, début autour de 3 050 €.",
+        de: "Etwa 3.000 € bis 4.000 € brutto pro Monat, Einstieg um 3.050 €.",
+        en: "About €3,000 to €4,000 gross per month, entry around €3,050." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "L'Ausbildung dure 3 ans (profession réglementée). Déjà diplômé : reconnaissance (contrôle d'équivalence) et allemand B2.",
+        de: "Die Ausbildung dauert 3 Jahre (reglementierter Beruf). Bereits ausgebildet: Anerkennung (Gleichwertigkeitsprüfung) und Deutsch B2.",
+        en: "Training lasts 3 years (regulated profession). Already qualified: recognition (equivalence check) and German B2." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Laboratoires d'analyses médicales, hôpitaux et cliniques universitaires, instituts de recherche et industrie.",
+        de: "Medizinische Labore, Krankenhäuser und Universitätskliniken, Forschungsinstitute und Industrie.",
+        en: "Medical laboratories, hospitals and university clinics, research institutes and industry." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Hématologie, microbiologie, biochimie, génétique et transfusion, en laboratoire ou en recherche.",
+        de: "Hämatologie, Mikrobiologie, Biochemie, Genetik und Transfusion, im Labor oder in der Forschung.",
+        en: "Haematology, microbiology, biochemistry, genetics and transfusion, in laboratories or research." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations, responsable de laboratoire, qualité, ou enseignement et recherche.",
+        de: "Spezialisierungen, Laborleitung, Qualitätsmanagement oder Lehre und Forschung.",
+        en: "Specialisations, laboratory manager, quality, or teaching and research." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis pour la reconnaissance et l'exercice. Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist für Anerkennung und Ausübung erforderlich. Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required for recognition and practice. Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Profession réglementée : autorisation d'État après contrôle d'équivalence ; une mesure d'adaptation peut être demandée. Nous montons le dossier avec vous.",
+        de: "Reglementierter Beruf: staatliche Erlaubnis nach Gleichwertigkeitsprüfung; eine Anpassungsmaßnahme kann verlangt werden. Wir erstellen den Antrag mit Ihnen.",
+        en: "Regulated profession: state authorisation after an equivalence check; an adaptation measure may be required. We build the file with you." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa et titre de séjour pour travailleurs qualifiés (§ 18a/18b), ou entrée pour reconnaissance sur place (§ 16d). Nous gérons les démarches.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b) oder Einreise zur Anerkennung vor Ort (§ 16d). Wir übernehmen die Formalitäten.",
+        en: "Visa and residence permit for skilled workers (§ 18a/18b), or entry for on-site recognition (§ 16d). We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier et reconnaissance, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Unterlagen und Anerkennung, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, file and recognition, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Le métier est-il réglementé ?", de: "Ist der Beruf reglementiert?", en: "Is the profession regulated?" }, a: {
+        fr: "Oui, une autorisation d'État est nécessaire après contrôle d'équivalence. Nous vous accompagnons.",
+        de: "Ja, nach einer Gleichwertigkeitsprüfung ist eine staatliche Erlaubnis nötig. Wir begleiten Sie.",
+        en: "Yes, a state authorisation is required after an equivalence check. We support you." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Le niveau B2 est requis ; nous vous formons jusque-là avant le départ.",
+        de: "B2 ist erforderlich; wir bilden Sie vorher bis dahin aus.",
+        en: "B2 is required; we train you up to that level before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : jobvector et sources spécialisées (MTLA/MTA), 2025. Montants indicatifs, non garantis. Reconnaissance (profession réglementée) et visas : autorités allemandes compétentes.",
+      de: "Gehälter: jobvector und Fachquellen (MTLA/MTA), 2025. Richtwerte, nicht garantiert. Anerkennung (reglementierter Beruf) und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: jobvector and specialist sources (MTLA/MTA), 2025. Indicative figures, not guaranteed. Recognition (regulated profession) and visas: competent German authorities.",
+    },
+  },
+
+  "manipulateur-radio": {
+    slug: "manipulateur-radio",
+    title: { fr: "Manipulateur en radiologie (MTRA)", de: "MTRA (Radiologie) in Deutschland", en: "Radiographer (MTRA)" },
+    image: "manipulateur-radio",
+    intro: {
+      fr: "Le manipulateur en radiologie (MTRA) réalise les examens d'imagerie médicale. Une profession réglementée, technique et recherchée en Allemagne.",
+      de: "Der medizinisch-technische Radiologieassistent (MTRA) führt bildgebende Untersuchungen durch. Ein reglementierter, technischer und gefragter Beruf in Deutschland.",
+      en: "The radiographer (MTRA) carries out medical imaging examinations. A regulated, technical and sought-after profession in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le MTRA réalise les radiographies, scanners, IRM et examens de médecine nucléaire, veille à la radioprotection et prépare les images pour le médecin.",
+        de: "Der MTRA führt Röntgen, CT, MRT und nuklearmedizinische Untersuchungen durch, achtet auf den Strahlenschutz und bereitet die Bilder für den Arzt auf.",
+        en: "The MTRA performs X-rays, CT, MRI and nuclear-medicine examinations, ensures radiation protection and prepares images for the doctor." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Environ 3 100 € à 4 200 € brut par mois selon l'expérience et l'établissement.",
+        de: "Etwa 3.100 € bis 4.200 € brutto pro Monat je nach Erfahrung und Einrichtung.",
+        en: "About €3,100 to €4,200 gross per month depending on experience and employer." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "L'Ausbildung dure 3 ans (profession réglementée). Déjà diplômé : reconnaissance (contrôle d'équivalence) et allemand B2.",
+        de: "Die Ausbildung dauert 3 Jahre (reglementierter Beruf). Bereits ausgebildet: Anerkennung (Gleichwertigkeitsprüfung) und Deutsch B2.",
+        en: "Training lasts 3 years (regulated profession). Already qualified: recognition (equivalence check) and German B2." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Hôpitaux et cliniques, cabinets de radiologie, cliniques universitaires et centres d'imagerie.",
+        de: "Krankenhäuser und Kliniken, radiologische Praxen, Universitätskliniken und Bildgebungszentren.",
+        en: "Hospitals and clinics, radiology practices, university clinics and imaging centres." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Radiologie, scanner et IRM, médecine nucléaire et radiothérapie, en hôpital ou en cabinet.",
+        de: "Radiologie, CT und MRT, Nuklearmedizin und Strahlentherapie, im Krankenhaus oder in der Praxis.",
+        en: "Radiology, CT and MRI, nuclear medicine and radiotherapy, in hospitals or practices." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations (IRM, médecine nucléaire, radiothérapie), responsable technique ou enseignement.",
+        de: "Spezialisierungen (MRT, Nuklearmedizin, Strahlentherapie), technische Leitung oder Lehre.",
+        en: "Specialisations (MRI, nuclear medicine, radiotherapy), technical lead or teaching." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis pour la reconnaissance et l'exercice. Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist für Anerkennung und Ausübung erforderlich. Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required for recognition and practice. Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Profession réglementée : autorisation d'État après contrôle d'équivalence ; une mesure d'adaptation peut être demandée. Nous montons le dossier avec vous.",
+        de: "Reglementierter Beruf: staatliche Erlaubnis nach Gleichwertigkeitsprüfung; eine Anpassungsmaßnahme kann verlangt werden. Wir erstellen den Antrag mit Ihnen.",
+        en: "Regulated profession: state authorisation after an equivalence check; an adaptation measure may be required. We build the file with you." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa et titre de séjour pour travailleurs qualifiés (§ 18a/18b), ou entrée pour reconnaissance sur place (§ 16d). Nous gérons les démarches.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b) oder Einreise zur Anerkennung vor Ort (§ 16d). Wir übernehmen die Formalitäten.",
+        en: "Visa and residence permit for skilled workers (§ 18a/18b), or entry for on-site recognition (§ 16d). We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier et reconnaissance, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Unterlagen und Anerkennung, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, file and recognition, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Le métier est-il réglementé ?", de: "Ist der Beruf reglementiert?", en: "Is the profession regulated?" }, a: {
+        fr: "Oui, une autorisation d'État est nécessaire après contrôle d'équivalence. Nous vous accompagnons.",
+        de: "Ja, nach einer Gleichwertigkeitsprüfung ist eine staatliche Erlaubnis nötig. Wir begleiten Sie.",
+        en: "Yes, a state authorisation is required after an equivalence check. We support you." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Le niveau B2 est requis ; nous vous formons jusque-là avant le départ.",
+        de: "B2 ist erforderlich; wir bilden Sie vorher bis dahin aus.",
+        en: "B2 is required; we train you up to that level before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : jobvector et sources spécialisées (MTRA/MTA), 2025. Montants indicatifs, non garantis. Reconnaissance (profession réglementée) et visas : autorités allemandes compétentes.",
+      de: "Gehälter: jobvector und Fachquellen (MTRA/MTA), 2025. Richtwerte, nicht garantiert. Anerkennung (reglementierter Beruf) und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: jobvector and specialist sources (MTRA/MTA), 2025. Indicative figures, not guaranteed. Recognition (regulated profession) and visas: competent German authorities.",
+    },
+  },
+
+  ambulancier: {
+    slug: "ambulancier",
+    title: { fr: "Ambulancier en Allemagne (Rettungssanitäter)", de: "Rettungssanitäter in Deutschland", en: "Ambulance worker in Germany (Rettungssanitäter)" },
+    image: "ambulancier",
+    intro: {
+      fr: "L'ambulancier (Rettungssanitäter) intervient dans le secours et le transport sanitaire. Un métier d'action, accessible par une qualification courte en Allemagne.",
+      de: "Der Rettungssanitäter ist im Rettungsdienst und Krankentransport tätig. Ein Beruf mit Verantwortung, über eine kurze Qualifikation in Deutschland zugänglich.",
+      en: "The ambulance worker (Rettungssanitäter) works in emergency response and medical transport. An action-oriented role, accessible through a short qualification in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "L'ambulancier prend en charge et transporte les patients, prodigue les premiers secours et seconde le Notfallsanitäter et le médecin urgentiste sur le terrain.",
+        de: "Der Rettungssanitäter versorgt und transportiert Patienten, leistet Erste Hilfe und unterstützt Notfallsanitäter und Notarzt im Einsatz.",
+        en: "The ambulance worker cares for and transports patients, provides first aid and supports the paramedic and emergency doctor in the field." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "De l'ordre de 2 600 € à 2 800 € brut en début de carrière, jusqu'à ~3 800 € et plus avec l'expérience, primes en sus.",
+        de: "Rund 2.600 € bis 2.800 € brutto zu Berufsbeginn, bis ca. 3.800 € und mehr mit Erfahrung, zuzüglich Zuschlägen.",
+        en: "Around €2,600 to €2,800 gross at the start, up to about €3,800 and more with experience, plus premiums." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "Le Rettungssanitäter est une qualification courte (formation de quelques mois). Selon votre parcours, une reconnaissance ou une formation en Allemagne est nécessaire ; le niveau supérieur (Notfallsanitäter) s'obtient par une Ausbildung de 3 ans.",
+        de: "Der Rettungssanitäter ist eine kurze Qualifikation (Ausbildung von wenigen Monaten). Je nach Werdegang ist eine Anerkennung oder eine Ausbildung in Deutschland nötig; die höhere Stufe (Notfallsanitäter) dauert 3 Jahre.",
+        en: "The Rettungssanitäter is a short qualification (a few months of training). Depending on your background, recognition or training in Germany is required; the higher level (Notfallsanitäter) takes a 3-year Ausbildung." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Services de secours (Rettungsdienst), croix-rouge et organisations de secours (DRK, Malteser, Johanniter, ASB) et sociétés de transport sanitaire.",
+        de: "Rettungsdienste, Rotes Kreuz und Hilfsorganisationen (DRK, Malteser, Johanniter, ASB) und Krankentransportunternehmen.",
+        en: "Emergency services (Rettungsdienst), Red Cross and aid organisations (DRK, Malteser, Johanniter, ASB) and medical-transport companies." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Transport sanitaire, secours d'urgence, transferts inter-hospitaliers et services de secours d'événements.",
+        de: "Krankentransport, Notfallrettung, Verlegungstransporte und Sanitätsdienste bei Veranstaltungen.",
+        en: "Medical transport, emergency response, inter-hospital transfers and event medical services." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Passerelle vers le Notfallsanitäter (Ausbildung 3 ans), puis chef d'équipe ou formateur.",
+        de: "Aufstieg zum Notfallsanitäter (3-jährige Ausbildung), danach Wachleiter oder Ausbilder.",
+        en: "Progression to Notfallsanitäter (3-year Ausbildung), then shift leader or instructor." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis (communication rapide et précise indispensable). Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist erforderlich (schnelle, präzise Kommunikation ist entscheidend). Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required (fast, precise communication is essential). Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Selon votre parcours, une reconnaissance ou une formation courte en Allemagne est nécessaire. Nous évaluons votre situation et montons le dossier.",
+        de: "Je nach Werdegang ist eine Anerkennung oder eine kurze Ausbildung in Deutschland nötig. Wir prüfen Ihre Situation und erstellen den Antrag.",
+        en: "Depending on your background, recognition or a short course in Germany is required. We assess your situation and build the file." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de travailleur qualifié (§ 18a/18b) ou visa de formation (§ 16a) selon le parcours. Un permis de conduire est en général requis ; nous vous informons des conditions.",
+        de: "Fachkräftevisum (§ 18a/18b) oder Ausbildungsvisum (§ 16a) je nach Weg. In der Regel ist ein Führerschein erforderlich; wir informieren Sie über die Voraussetzungen.",
+        en: "Skilled-worker visa (§ 18a/18b) or training visa (§ 16a) depending on the route. A driving licence is generally required; we advise you on the conditions." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier et reconnaissance ou formation, mise en relation avec un service de secours, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Anerkennung oder Ausbildung, Kontakt zu einem Rettungsdienst, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, recognition or training, matching with an emergency service, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Quelle différence avec le Notfallsanitäter ?", de: "Was ist der Unterschied zum Notfallsanitäter?", en: "What is the difference from the Notfallsanitäter?" }, a: {
+        fr: "Le Rettungssanitäter est une qualification courte ; le Notfallsanitäter est le plus haut niveau (Ausbildung de 3 ans). On peut évoluer de l'un à l'autre.",
+        de: "Der Rettungssanitäter ist eine kurze Qualifikation; der Notfallsanitäter ist die höchste Stufe (3-jährige Ausbildung). Ein Aufstieg ist möglich.",
+        en: "The Rettungssanitäter is a short qualification; the Notfallsanitäter is the highest level (3-year Ausbildung). You can progress from one to the other." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Le niveau B2 est requis ; nous vous formons jusque-là avant le départ.",
+        de: "B2 ist erforderlich; wir bilden Sie vorher bis dahin aus.",
+        en: "B2 is required; we train you up to that level before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : StepStone et sources spécialisées (Rettungssanitäter), 2025. Montants indicatifs, non garantis. Reconnaissance, conditions et visas : autorités allemandes compétentes.",
+      de: "Gehälter: StepStone und Fachquellen (Rettungssanitäter), 2025. Richtwerte, nicht garantiert. Anerkennung, Voraussetzungen und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: StepStone and specialist sources (Rettungssanitäter), 2025. Indicative figures, not guaranteed. Recognition, conditions and visas: competent German authorities.",
+    },
+  },
 };
