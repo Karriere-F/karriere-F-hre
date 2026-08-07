@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft } from "lucide-react";
@@ -43,6 +45,11 @@ export default async function ItFichePage({
   }
 
   const title = tr(fiche.title, locale);
+  // Photos are added per profession over time; only render the image once the
+  // file actually exists so a missing photo never shows a broken image.
+  const imageExists =
+    !!fiche.image &&
+    existsSync(join(process.cwd(), "public", "images", "metiers", "informatique", `${fiche.image}.jpg`));
 
   return (
     <div>
@@ -69,8 +76,8 @@ export default async function ItFichePage({
             {tr(SECTEURS_UI.backToSecteurs, locale)}
           </Link>
 
-          {/* Illustration */}
-          {fiche.image && (
+          {/* Illustration (only when the photo file exists) */}
+          {imageExists && (
             <div className="relative mt-6 aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[16/9]">
               <Image
                 src={`/images/metiers/informatique/${fiche.image}.jpg`}
