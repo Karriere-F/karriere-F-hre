@@ -62,7 +62,7 @@ export const AUSBILDUNG_METIERS: SanteMetier[] = [
     note: { fr: "Ambulancier d'urgence", de: "Notfallsanitäter", en: "Emergency paramedic" },
   },
   {
-    slug: "hebamme",
+    slug: "sage-femme",
     name: { fr: "Hebamme", de: "Hebamme", en: "Hebamme" },
     note: { fr: "Sage-femme", de: "Hebamme", en: "Midwife" },
   },
@@ -811,6 +811,210 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
       fr: "Salaires et vergütung : medi-karriere et conventions du secours (2025). Montants indicatifs, non garantis. Visas et conditions : autorités allemandes compétentes.",
       de: "Gehälter und Vergütung: medi-karriere und Rettungsdiensttarife (2025). Richtwerte, nicht garantiert. Visa und Voraussetzungen: zuständige deutsche Behörden.",
       en: "Salaries and training pay: medi-karriere and emergency-service agreements (2025). Indicative figures, not guaranteed. Visas and conditions: competent German authorities.",
+    },
+  },
+
+  mfa: {
+    slug: "mfa",
+    title: { fr: "Assistant médical (MFA)", de: "Medizinische Fachangestellte (MFA)", en: "Medical assistant (MFA)" },
+    image: "mfa",
+    intro: {
+      fr: "L'assistant médical (MFA) est le bras droit du médecin en cabinet. Un métier polyvalent et recherché, accessible par une Ausbildung rémunérée de 3 ans en Allemagne.",
+      de: "Die Medizinische Fachangestellte (MFA) ist die rechte Hand des Arztes in der Praxis. Ein vielseitiger, gefragter Beruf über eine vergütete 3-jährige Ausbildung.",
+      en: "The medical assistant (MFA) is the doctor's right hand in the practice. A versatile, in-demand role, accessible through a paid 3-year Ausbildung in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le MFA accueille les patients, gère les rendez-vous et les dossiers, réalise des prises de sang et des soins simples, et assiste le médecin pendant les consultations.",
+        de: "Die MFA empfängt Patienten, organisiert Termine und Unterlagen, führt Blutentnahmen und einfache Behandlungen durch und assistiert dem Arzt bei der Sprechstunde.",
+        en: "The MFA welcomes patients, manages appointments and records, performs blood draws and simple treatments, and assists the doctor during consultations." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Salaire de début d'environ 2 800 € brut par mois, jusqu'à ~3 500 € et plus avec l'expérience et selon la convention.",
+        de: "Einstiegsgehalt rund 2.800 € brutto pro Monat, bis ca. 3.500 € und mehr mit Erfahrung und je nach Tarif.",
+        en: "Entry salary around €2,800 gross per month, up to about €3,500 and more with experience and depending on the agreement." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation de MFA dure 3 ans et est rémunérée dès la première année (environ 1 000 € la 1re, 1 100 € la 2e, 1 200 € la 3e).",
+        de: "Die MFA-Ausbildung dauert 3 Jahre und ist ab dem ersten Jahr vergütet (rund 1.000 € im 1., 1.100 € im 2., 1.200 € im 3. Jahr).",
+        en: "MFA training lasts 3 years and is paid from the first year (about €1,000 in year 1, €1,100 in year 2, €1,200 in year 3)." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Cabinets médicaux, centres de santé (MVZ), hôpitaux et cliniques, laboratoires et centres de vaccination.",
+        de: "Arztpraxen, Medizinische Versorgungszentren (MVZ), Krankenhäuser und Kliniken, Labore und Impfzentren.",
+        en: "Doctors' practices, medical care centres (MVZ), hospitals and clinics, laboratories and vaccination centres." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Médecine générale et spécialités, services hospitaliers ambulatoires, laboratoires et structures de prévention.",
+        de: "Allgemeinmedizin und Fachrichtungen, ambulante Krankenhausbereiche, Labore und Präventionseinrichtungen.",
+        en: "General practice and specialties, hospital outpatient services, laboratories and prevention services." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations (dermatologie, cardiologie, chirurgie), gestion de cabinet, ou formations complémentaires vers des postes qualifiés.",
+        de: "Spezialisierungen (Dermatologie, Kardiologie, Chirurgie), Praxismanagement oder Weiterbildungen zu qualifizierten Positionen.",
+        en: "Specialisations (dermatology, cardiology, surgery), practice management or further training towards qualified roles." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis (contact patients permanent). Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist erforderlich (ständiger Patientenkontakt). Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required (constant patient contact). Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Par la voie de l'Ausbildung, vous obtenez directement le diplôme allemand, sans reconnaissance préalable.",
+        de: "Über die Ausbildung erwerben Sie direkt den deutschen Abschluss, ohne vorherige Anerkennung.",
+        en: "Via the Ausbildung you obtain the German qualification directly, with no prior recognition." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de formation (§ 16a) pour l'Ausbildung. Nous gérons les démarches avec vous.",
+        de: "Ausbildungsvisum (§ 16a) für die Ausbildung. Wir übernehmen die Schritte mit Ihnen.",
+        en: "Training visa (§ 16a) for the Ausbildung. We handle the steps with you." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier d'admission, mise en relation avec un cabinet ou un hôpital, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Bewerbung, Kontakt zu Praxis oder Krankenhaus, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, application, matching with a practice or hospital, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "La formation est-elle rémunérée ?", de: "Ist die Ausbildung vergütet?", en: "Is the training paid?" }, a: {
+        fr: "Oui, dès la première année (environ 1 000 à 1 200 €/mois selon l'année).",
+        de: "Ja, ab dem ersten Jahr (rund 1.000 bis 1.200 €/Monat je nach Jahr).",
+        en: "Yes, from the first year (about €1,000 to €1,200/month depending on the year)." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Nous vous formons du débutant jusqu'au B2 avant le départ, à Douala.",
+        de: "Wir bilden Sie vor der Ausreise in Douala vom Anfänger bis B2 aus.",
+        en: "We train you from beginner up to B2 before departure, in Douala." } },
+    ],
+    sourceNote: {
+      fr: "Salaires et vergütung : convention MFA (Ärztekammer) et medi-karriere, 2025. Montants indicatifs, non garantis. Visas : autorités allemandes compétentes.",
+      de: "Gehälter und Vergütung: MFA-Tarifvertrag (Ärztekammer) und medi-karriere, 2025. Richtwerte, nicht garantiert. Visa: zuständige deutsche Behörden.",
+      en: "Salaries and training pay: MFA collective agreement (medical chamber) and medi-karriere, 2025. Indicative figures, not guaranteed. Visas: competent German authorities.",
+    },
+  },
+
+  zfa: {
+    slug: "zfa",
+    title: { fr: "Assistant dentaire (ZFA)", de: "Zahnmedizinische Fachangestellte (ZFA)", en: "Dental assistant (ZFA)" },
+    image: "zfa",
+    intro: {
+      fr: "L'assistant dentaire (ZFA) seconde le dentiste au quotidien. Un métier stable et recherché, accessible par une Ausbildung rémunérée de 3 ans en Allemagne.",
+      de: "Die Zahnmedizinische Fachangestellte (ZFA) unterstützt den Zahnarzt im Alltag. Ein stabiler, gefragter Beruf über eine vergütete 3-jährige Ausbildung.",
+      en: "The dental assistant (ZFA) supports the dentist day to day. A stable, in-demand role, accessible through a paid 3-year Ausbildung in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le ZFA accueille les patients, prépare les instruments, assiste le dentiste pendant les soins et gère l'hygiène et l'organisation du cabinet.",
+        de: "Die ZFA empfängt Patienten, bereitet Instrumente vor, assistiert dem Zahnarzt bei der Behandlung und sorgt für Hygiene und Organisation der Praxis.",
+        en: "The ZFA welcomes patients, prepares instruments, assists the dentist during treatment and manages hygiene and practice organisation." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Salaire de début d'environ 2 700 € à 3 700 € brut par mois selon la région et l'expérience.",
+        de: "Einstiegsgehalt etwa 2.700 € bis 3.700 € brutto pro Monat je nach Region und Erfahrung.",
+        en: "Entry salary around €2,700 to €3,700 gross per month depending on region and experience." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation de ZFA dure 3 ans et est rémunérée dès la première année (environ 1 000 € la 1re, 1 100 € la 2e, 1 200 € la 3e).",
+        de: "Die ZFA-Ausbildung dauert 3 Jahre und ist ab dem ersten Jahr vergütet (rund 1.000 € im 1., 1.100 € im 2., 1.200 € im 3. Jahr).",
+        en: "ZFA training lasts 3 years and is paid from the first year (about €1,000 in year 1, €1,100 in year 2, €1,200 in year 3)." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Cabinets dentaires, cliniques dentaires et centres de santé bucco-dentaire, dans tout le pays.",
+        de: "Zahnarztpraxen, Zahnkliniken und zahnmedizinische Versorgungszentren, bundesweit.",
+        en: "Dental practices, dental clinics and oral-health centres, across the country." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Cabinets généralistes et spécialisés (orthodontie, chirurgie dentaire), cliniques et centres de prévention.",
+        de: "Allgemein- und Fachpraxen (Kieferorthopädie, Oralchirurgie), Kliniken und Prophylaxezentren.",
+        en: "General and specialist practices (orthodontics, oral surgery), clinics and prevention centres." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations (prophylaxie, assistance chirurgicale), gestion de cabinet ou formations complémentaires (hygiène dentaire).",
+        de: "Spezialisierungen (Prophylaxe, chirurgische Assistenz), Praxismanagement oder Weiterbildungen (Dentalhygiene).",
+        en: "Specialisations (prophylaxis, surgical assistance), practice management or further training (dental hygiene)." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis (contact patients permanent). Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist erforderlich (ständiger Patientenkontakt). Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required (constant patient contact). Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Par la voie de l'Ausbildung, vous obtenez directement le diplôme allemand, sans reconnaissance préalable.",
+        de: "Über die Ausbildung erwerben Sie direkt den deutschen Abschluss, ohne vorherige Anerkennung.",
+        en: "Via the Ausbildung you obtain the German qualification directly, with no prior recognition." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de formation (§ 16a) pour l'Ausbildung. Nous gérons les démarches avec vous.",
+        de: "Ausbildungsvisum (§ 16a) für die Ausbildung. Wir übernehmen die Schritte mit Ihnen.",
+        en: "Training visa (§ 16a) for the Ausbildung. We handle the steps with you." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier d'admission, mise en relation avec un cabinet, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Bewerbung, Kontakt zu einer Praxis, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, application, matching with a practice, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "La formation est-elle rémunérée ?", de: "Ist die Ausbildung vergütet?", en: "Is the training paid?" }, a: {
+        fr: "Oui, dès la première année (environ 1 000 à 1 200 €/mois selon l'année).",
+        de: "Ja, ab dem ersten Jahr (rund 1.000 bis 1.200 €/Monat je nach Jahr).",
+        en: "Yes, from the first year (about €1,000 to €1,200/month depending on the year)." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Nous vous formons du débutant jusqu'au B2 avant le départ, à Douala.",
+        de: "Wir bilden Sie vor der Ausreise in Douala vom Anfänger bis B2 aus.",
+        en: "We train you from beginner up to B2 before departure, in Douala." } },
+    ],
+    sourceNote: {
+      fr: "Salaires et vergütung : convention ZFA et sources spécialisées (praktischArzt, rebmann-research), 2025. Montants indicatifs, non garantis. Visas : autorités allemandes compétentes.",
+      de: "Gehälter und Vergütung: ZFA-Tarifvertrag und Fachquellen (praktischArzt, rebmann-research), 2025. Richtwerte, nicht garantiert. Visa: zuständige deutsche Behörden.",
+      en: "Salaries and training pay: ZFA collective agreement and specialist sources (praktischArzt, rebmann-research), 2025. Indicative figures, not guaranteed. Visas: competent German authorities.",
+    },
+  },
+
+  krankenpflegehelfer: {
+    slug: "krankenpflegehelfer",
+    title: { fr: "Aide en soins infirmiers (Krankenpflegehelfer)", de: "Krankenpflegehelfer in Deutschland", en: "Nursing aide (Krankenpflegehelfer)" },
+    image: "krankenpflegehelfer",
+    intro: {
+      fr: "L'aide en soins infirmiers (Krankenpflegehelfer) soutient l'équipe soignante à l'hôpital et en établissement. Une formation courte, une entrée rapide et un tremplin vers le métier d'infirmier.",
+      de: "Der Krankenpflegehelfer unterstützt das Pflegeteam im Krankenhaus und in Einrichtungen. Eine kurze Ausbildung, ein schneller Einstieg und ein Sprungbrett zur Pflegefachkraft.",
+      en: "The nursing aide (Krankenpflegehelfer) supports the care team in hospitals and facilities. A short training, a quick entry and a springboard to becoming a nurse.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "L'aide en soins accompagne les patients dans la toilette, les repas et la mobilité, prend les constantes et seconde les infirmiers dans les soins de base.",
+        de: "Der Krankenpflegehelfer unterstützt Patienten bei Körperpflege, Essen und Mobilität, misst Vitalwerte und entlastet die Pflegefachkräfte bei der Grundpflege.",
+        en: "The nursing aide helps patients with washing, meals and mobility, takes vital signs and supports nurses with basic care." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "De l'ordre de 2 500 € à 3 300 € brut par mois ; dans le service public (TVöD-P), jusqu'à ~4 000 € avec l'ancienneté, primes en sus.",
+        de: "Etwa 2.500 € bis 3.300 € brutto pro Monat; im öffentlichen Dienst (TVöD-P) bis ca. 4.000 € mit Erfahrung, zuzüglich Zuschlägen.",
+        en: "Around €2,500 to €3,300 gross per month; in the public sector (TVöD-P) up to about €4,000 with seniority, plus premiums." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation dure 1 à 2 ans selon le Land (formation surtout scolaire). Elle constitue une passerelle vers la formation complète d'infirmier (3 ans).",
+        de: "Die Ausbildung dauert je nach Bundesland 1 bis 2 Jahre (überwiegend schulisch). Sie ist ein Sprungbrett zur vollen Pflegeausbildung (3 Jahre).",
+        en: "Training lasts 1 to 2 years depending on the state (mostly school-based). It is a stepping stone to the full nursing training (3 years)." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Hôpitaux et cliniques, maisons de retraite, services de soins à domicile et réseaux confessionnels (Caritas, Diakonie).",
+        de: "Krankenhäuser und Kliniken, Pflegeheime, ambulante Pflegedienste und kirchliche Träger (Caritas, Diakonie).",
+        en: "Hospitals and clinics, care homes, home-care services and faith-based providers (Caritas, Diakonie)." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Services hospitaliers, établissements pour personnes âgées, soins à domicile et structures de soins de longue durée.",
+        de: "Krankenhausstationen, Altenpflegeeinrichtungen, ambulante Pflege und Langzeitpflege.",
+        en: "Hospital wards, elderly-care facilities, home care and long-term care." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Passerelle vers le diplôme d'infirmier (Pflegefachkraft) par une formation complémentaire, puis spécialisations et encadrement.",
+        de: "Aufstieg zur Pflegefachkraft über eine Weiterbildung, anschließend Spezialisierungen und Leitungsaufgaben.",
+        en: "Progression to registered nurse (Pflegefachkraft) through further training, then specialisations and leadership." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est visé pour travailler et évoluer. Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 wird für Arbeit und Aufstieg angestrebt. Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is targeted to work and progress. Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Par la voie de l'Ausbildung, vous obtenez directement le diplôme allemand, sans reconnaissance préalable.",
+        de: "Über die Ausbildung erwerben Sie direkt den deutschen Abschluss, ohne vorherige Anerkennung.",
+        en: "Via the Ausbildung you obtain the German qualification directly, with no prior recognition." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de formation (§ 16a) pour l'Ausbildung. Nous gérons les démarches avec vous.",
+        de: "Ausbildungsvisum (§ 16a) für die Ausbildung. Wir übernehmen die Schritte mit Ihnen.",
+        en: "Training visa (§ 16a) for the Ausbildung. We handle the steps with you." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier d'admission, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Bewerbung, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, application, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Peut-on devenir infirmier ensuite ?", de: "Kann man danach Pflegefachkraft werden?", en: "Can you become a nurse afterwards?" }, a: {
+        fr: "Oui, c'est une excellente porte d'entrée : une formation complémentaire mène au diplôme d'infirmier (Pflegefachkraft).",
+        de: "Ja, ein guter Einstieg: Eine Weiterbildung führt zur Pflegefachkraft.",
+        en: "Yes, a great entry point: further training leads to the registered-nurse qualification (Pflegefachkraft)." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Nous vous formons du débutant jusqu'au B2 avant le départ, à Douala.",
+        de: "Wir bilden Sie vor der Ausreise in Douala vom Anfänger bis B2 aus.",
+        en: "We train you from beginner up to B2 before departure, in Douala." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : Entgeltatlas (Bundesagentur für Arbeit) et grille TVöD-P, 2025. Montants indicatifs, non garantis. Reconnaissance et visas : autorités allemandes compétentes.",
+      de: "Gehälter: Entgeltatlas (Bundesagentur für Arbeit) und TVöD-P, 2025. Richtwerte, nicht garantiert. Anerkennung und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: Entgeltatlas (Federal Employment Agency) and the TVöD-P scale, 2025. Indicative figures, not guaranteed. Recognition and visas: competent German authorities.",
     },
   },
 };
