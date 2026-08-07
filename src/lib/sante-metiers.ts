@@ -541,4 +541,276 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
       en: "Salaries: Entgeltatlas (Federal Employment Agency), 2025. Indicative figures, not guaranteed. Recognition (regulated profession) and visas: competent German authorities.",
     },
   },
+
+  altenpflege: {
+    slug: "altenpflege",
+    title: { fr: "Soins aux personnes âgées (Altenpflege)", de: "Altenpflege in Deutschland", en: "Geriatric care in Germany (Altenpflege)" },
+    image: "altenpflege",
+    intro: {
+      fr: "Avec le vieillissement de la population, les soins aux personnes âgées (Altenpflege) sont un secteur en très forte demande. Vous pouvez vous former en Allemagne par une Ausbildung rémunérée et reconnue.",
+      de: "Durch die alternde Bevölkerung ist die Altenpflege ein Bereich mit sehr hoher Nachfrage. Sie können sich in Deutschland über eine vergütete, anerkannte Ausbildung qualifizieren.",
+      en: "With an ageing population, geriatric care (Altenpflege) is in very high demand. You can train in Germany through a paid, recognised Ausbildung.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "L'Altenpflege accompagne les personnes âgées dans les soins, l'autonomie et la vie quotidienne, en maison de retraite comme à domicile. C'est désormais une spécialité de la formation généraliste d'infirmier.",
+        de: "Die Altenpflege begleitet ältere Menschen bei Pflege, Selbstständigkeit und Alltag, im Pflegeheim wie zu Hause. Sie ist heute ein Schwerpunkt der generalistischen Pflegeausbildung.",
+        en: "Geriatric care supports older people with care, independence and daily life, in care homes and at home. It is now a focus within the generalist nursing training." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Comme infirmier en gériatrie : d'environ 2 800 € à 4 500 € brut par mois, moyenne autour de 3 800 €, primes de nuit et de week-end en sus.",
+        de: "Wie eine Pflegefachkraft in der Altenpflege: etwa 2.800 € bis 4.500 € brutto pro Monat, im Schnitt rund 3.800 €, Nacht- und Wochenendzuschläge inklusive.",
+        en: "Like a nurse in geriatric care: about €2,800 to €4,500 gross per month, averaging around €3,800, with night and weekend premiums." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation dure 3 ans et est rémunérée dès la première année (environ 1 490 € la 1re, 1 552 € la 2e, 1 653 € la 3e, convention TVAöD-Pflege).",
+        de: "Die Ausbildung dauert 3 Jahre und ist ab dem ersten Jahr vergütet (rund 1.490 € im 1., 1.552 € im 2., 1.653 € im 3. Jahr, TVAöD-Pflege).",
+        en: "Training lasts 3 years and is paid from the first year (about €1,490 in year 1, €1,552 in year 2, €1,653 in year 3, TVAöD-Pflege agreement)." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Maisons de retraite (EHPAD), services de soins à domicile, résidences pour seniors et réseaux confessionnels (Caritas, Diakonie). Demande très forte partout.",
+        de: "Pflegeheime, ambulante Pflegedienste, Seniorenresidenzen und kirchliche Träger (Caritas, Diakonie). Sehr hohe Nachfrage überall.",
+        en: "Care homes, home-care services, senior residences and faith-based providers (Caritas, Diakonie). Very strong demand everywhere." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Établissements pour personnes âgées, soins à domicile, services de gériatrie et structures de soins de longue durée.",
+        de: "Altenpflegeeinrichtungen, ambulante Pflege, Geriatrie und Langzeitpflege.",
+        en: "Elderly-care facilities, home care, geriatric services and long-term care." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations (gériatrie, soins palliatifs, démence), postes d'encadrement (Stationsleitung) ou études en management des soins.",
+        de: "Spezialisierungen (Geriatrie, Palliativpflege, Demenz), Leitungspositionen (Stationsleitung) oder ein Studium im Pflegemanagement.",
+        en: "Specialisations (geriatrics, palliative care, dementia), leadership roles (ward manager) or studies in care management." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est le standard. Karriere Fähre vous forme jusqu'au B2 à Douala, avant le départ.",
+        de: "B2 ist der Standard. Karriere Fähre bildet Sie in Douala bis B2 aus, vor der Ausreise.",
+        en: "B2 is the standard. Karriere Fähre trains you up to B2 in Douala, before departure." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Par la voie de l'Ausbildung, vous obtenez directement le diplôme allemand, sans reconnaissance préalable. Déjà diplômé en soins : une reconnaissance est possible.",
+        de: "Über die Ausbildung erwerben Sie direkt den deutschen Abschluss, ohne vorherige Anerkennung. Bereits in der Pflege ausgebildet: Eine Anerkennung ist möglich.",
+        en: "Via the Ausbildung you obtain the German qualification directly, with no prior recognition. Already trained in care: recognition is possible." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de formation (§ 16a) pour l'Ausbildung, ou visa de travailleur qualifié (§ 18a/18b) si vous êtes déjà qualifié. Nous gérons les démarches.",
+        de: "Ausbildungsvisum (§ 16a) für die Ausbildung oder Fachkräftevisum (§ 18a/18b) bei bereits vorhandener Qualifikation. Wir übernehmen die Formalitäten.",
+        en: "Training visa (§ 16a) for the Ausbildung, or skilled-worker visa (§ 18a/18b) if already qualified. We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier d'admission en Ausbildung, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Bewerbung um den Ausbildungsplatz, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, application for the training place, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Est-ce le même diplôme qu'infirmier ?", de: "Ist das derselbe Abschluss wie Pflegefachkraft?", en: "Is it the same qualification as a nurse?" }, a: {
+        fr: "Depuis 2020, la formation est généraliste : vous devenez infirmier (Pflegefachkraft) avec une orientation soins aux personnes âgées.",
+        de: "Seit 2020 ist die Ausbildung generalistisch: Sie werden Pflegefachkraft mit Schwerpunkt Altenpflege.",
+        en: "Since 2020 the training is generalist: you become a registered nurse (Pflegefachkraft) with a geriatric-care focus." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Nous vous formons du débutant jusqu'au B2 avant le départ, à Douala.",
+        de: "Wir bilden Sie vor der Ausreise in Douala vom Anfänger bis B2 aus.",
+        en: "We train you from beginner up to B2 before departure, in Douala." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : Entgeltatlas (Bundesagentur für Arbeit) et grilles TVöD-P / TVAöD-Pflege, 2025. Montants indicatifs, non garantis. Reconnaissance et visas : autorités allemandes compétentes.",
+      de: "Gehälter: Entgeltatlas (Bundesagentur für Arbeit) und TVöD-P / TVAöD-Pflege, 2025. Richtwerte, nicht garantiert. Anerkennung und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: Entgeltatlas (Federal Employment Agency) and TVöD-P / TVAöD-Pflege scales, 2025. Indicative figures, not guaranteed. Recognition and visas: competent German authorities.",
+    },
+  },
+
+  ota: {
+    slug: "ota",
+    title: { fr: "Assistant de bloc opératoire (OTA)", de: "Operationstechnischer Assistent (OTA)", en: "Surgical assistant (OTA)" },
+    image: "ota",
+    intro: {
+      fr: "L'assistant technique de bloc opératoire (OTA) est un métier technique très recherché, accessible par une Ausbildung rémunérée de 3 ans en Allemagne.",
+      de: "Der Operationstechnische Assistent (OTA) ist ein gefragter technischer Beruf, zugänglich über eine vergütete 3-jährige Ausbildung in Deutschland.",
+      en: "The surgical assistant (OTA) is a sought-after technical role, accessible through a paid 3-year Ausbildung in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "L'OTA prépare la salle et le matériel, assiste les chirurgiens pendant l'opération, veille à l'hygiène et à la sécurité du patient au bloc opératoire.",
+        de: "Der OTA bereitet OP-Saal und Instrumente vor, assistiert den Chirurgen während der Operation und sorgt für Hygiene und Patientensicherheit im OP.",
+        en: "The OTA prepares the theatre and instruments, assists surgeons during operations and ensures hygiene and patient safety in the operating room." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Salaire de début d'environ 3 400 € brut par mois, jusqu'à ~4 200 € avec l'expérience, primes en sus.",
+        de: "Einstiegsgehalt rund 3.400 € brutto pro Monat, bis ca. 4.200 € mit Erfahrung, zuzüglich Zuschlägen.",
+        en: "Entry salary around €3,400 gross per month, up to about €4,200 with experience, plus premiums." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation d'OTA dure 3 ans et fait partie des rares formations scolaires rémunérées (rémunération comparable à la formation en soins, environ 1 200 à 1 650 €/mois).",
+        de: "Die OTA-Ausbildung dauert 3 Jahre und gehört zu den wenigen vergüteten schulischen Ausbildungen (Vergütung vergleichbar mit der Pflege, rund 1.200 bis 1.650 €/Monat).",
+        en: "OTA training lasts 3 years and is one of the few paid school-based programmes (pay comparable to nursing, about €1,200 to €1,650/month)." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Hôpitaux et cliniques chirurgicales, cliniques universitaires et grands groupes (Helios, Asklepios, Sana). Forte demande partout.",
+        de: "Krankenhäuser und chirurgische Kliniken, Universitätskliniken und große Träger (Helios, Asklepios, Sana). Hohe Nachfrage überall.",
+        en: "Hospitals and surgical clinics, university hospitals and large groups (Helios, Asklepios, Sana). Strong demand everywhere." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Blocs opératoires, salles d'endoscopie, services d'ambulatoire chirurgical et centres de stérilisation.",
+        de: "Operationssäle, Endoskopie, ambulante Chirurgie und Sterilisationsabteilungen.",
+        en: "Operating theatres, endoscopy suites, day-surgery units and sterilisation departments." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations chirurgicales, référent hygiène, coordination de bloc (Leitung), ou passerelle vers les soins infirmiers.",
+        de: "Chirurgische Spezialisierungen, Hygienebeauftragter, OP-Leitung oder Wechsel in die Pflege.",
+        en: "Surgical specialisations, hygiene officer, theatre coordination (Leitung), or a bridge into nursing." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis. Karriere Fähre vous forme jusqu'au B2 à Douala, avant le départ.",
+        de: "B2 ist erforderlich. Karriere Fähre bildet Sie in Douala bis B2 aus, vor der Ausreise.",
+        en: "B2 is required. Karriere Fähre trains you up to B2 in Douala, before departure." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Par la voie de l'Ausbildung, vous obtenez directement le diplôme allemand, sans reconnaissance préalable.",
+        de: "Über die Ausbildung erwerben Sie direkt den deutschen Abschluss, ohne vorherige Anerkennung.",
+        en: "Via the Ausbildung you obtain the German qualification directly, with no prior recognition." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de formation (§ 16a) pour l'Ausbildung. Nous gérons les démarches avec vous.",
+        de: "Ausbildungsvisum (§ 16a) für die Ausbildung. Wir übernehmen die Schritte mit Ihnen.",
+        en: "Training visa (§ 16a) for the Ausbildung. We handle the steps with you." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier d'admission, mise en relation avec un hôpital, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Bewerbung, Kontakt zu einem Krankenhaus, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, application, matching with a hospital, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "La formation est-elle rémunérée ?", de: "Ist die Ausbildung vergütet?", en: "Is the training paid?" }, a: {
+        fr: "Oui, l'OTA fait partie des rares formations scolaires rémunérées dès la première année.",
+        de: "Ja, OTA gehört zu den wenigen schulischen Ausbildungen mit Vergütung ab dem ersten Jahr.",
+        en: "Yes, OTA is one of the few school-based programmes paid from the first year." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Nous vous formons du débutant jusqu'au B2 avant le départ, à Douala.",
+        de: "Wir bilden Sie vor der Ausreise in Douala vom Anfänger bis B2 aus.",
+        en: "We train you from beginner up to B2 before departure, in Douala." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : sources spécialisées (doctari, ausbildung.de) et conventions du secteur, 2025. Montants indicatifs, non garantis. Visas : autorités allemandes compétentes.",
+      de: "Gehälter: Fachquellen (doctari, ausbildung.de) und Branchentarife, 2025. Richtwerte, nicht garantiert. Visa: zuständige deutsche Behörden.",
+      en: "Salaries: specialist sources (doctari, ausbildung.de) and sector agreements, 2025. Indicative figures, not guaranteed. Visas: competent German authorities.",
+    },
+  },
+
+  ata: {
+    slug: "ata",
+    title: { fr: "Assistant en anesthésie (ATA)", de: "Anästhesietechnischer Assistent (ATA)", en: "Anaesthesia assistant (ATA)" },
+    image: "ata",
+    intro: {
+      fr: "L'assistant technique en anesthésie (ATA) est un métier technique bien rémunéré, accessible par une Ausbildung de 3 ans rémunérée en Allemagne.",
+      de: "Der Anästhesietechnische Assistent (ATA) ist ein gut bezahlter technischer Beruf, zugänglich über eine vergütete 3-jährige Ausbildung in Deutschland.",
+      en: "The anaesthesia assistant (ATA) is a well-paid technical role, accessible through a paid 3-year Ausbildung in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "L'ATA prépare et surveille le matériel d'anesthésie, assiste les anesthésistes et veille à la sécurité du patient avant, pendant et après l'intervention.",
+        de: "Der ATA bereitet die Anästhesietechnik vor und überwacht sie, assistiert den Anästhesisten und sorgt für die Patientensicherheit vor, während und nach dem Eingriff.",
+        en: "The ATA prepares and monitors anaesthesia equipment, assists anaesthetists and ensures patient safety before, during and after the procedure." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Salaire de début d'environ 3 400 € brut par mois, jusqu'à ~4 400 € avec l'expérience (moyenne autour de 4 390 €), l'un des mieux payés parmi les métiers d'assistance.",
+        de: "Einstiegsgehalt rund 3.400 € brutto pro Monat, bis ca. 4.400 € mit Erfahrung (im Schnitt rund 4.390 €), einer der bestbezahlten Assistenzberufe.",
+        en: "Entry salary around €3,400 gross per month, up to about €4,400 with experience (averaging around €4,390), one of the best-paid assistance roles." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation d'ATA dure 3 ans et est rémunérée dès la première année (environ 1 200 à 1 650 €/mois).",
+        de: "Die ATA-Ausbildung dauert 3 Jahre und ist ab dem ersten Jahr vergütet (rund 1.200 bis 1.650 €/Monat).",
+        en: "ATA training lasts 3 years and is paid from the first year (about €1,200 to €1,650/month)." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Hôpitaux et cliniques, services d'anesthésie et de soins intensifs, cliniques universitaires et grands groupes (Helios, Asklepios, Sana).",
+        de: "Krankenhäuser und Kliniken, Anästhesie- und Intensivabteilungen, Universitätskliniken und große Träger (Helios, Asklepios, Sana).",
+        en: "Hospitals and clinics, anaesthesia and intensive-care units, university hospitals and large groups (Helios, Asklepios, Sana)." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Services d'anesthésie, soins intensifs, salle de réveil, endoscopie et urgences.",
+        de: "Anästhesie, Intensivstation, Aufwachraum, Endoskopie und Notaufnahme.",
+        en: "Anaesthesia units, intensive care, recovery rooms, endoscopy and emergency departments." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations, coordination d'équipe (Leitung), référent qualité, ou passerelle vers les soins infirmiers spécialisés.",
+        de: "Spezialisierungen, Teamleitung, Qualitätsbeauftragter oder Wechsel in die spezialisierte Pflege.",
+        en: "Specialisations, team leadership (Leitung), quality officer, or a bridge into specialised nursing." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis. Karriere Fähre vous forme jusqu'au B2 à Douala, avant le départ.",
+        de: "B2 ist erforderlich. Karriere Fähre bildet Sie in Douala bis B2 aus, vor der Ausreise.",
+        en: "B2 is required. Karriere Fähre trains you up to B2 in Douala, before departure." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Par la voie de l'Ausbildung, vous obtenez directement le diplôme allemand, sans reconnaissance préalable.",
+        de: "Über die Ausbildung erwerben Sie direkt den deutschen Abschluss, ohne vorherige Anerkennung.",
+        en: "Via the Ausbildung you obtain the German qualification directly, with no prior recognition." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de formation (§ 16a) pour l'Ausbildung. Nous gérons les démarches avec vous.",
+        de: "Ausbildungsvisum (§ 16a) für die Ausbildung. Wir übernehmen die Schritte mit Ihnen.",
+        en: "Training visa (§ 16a) for the Ausbildung. We handle the steps with you." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier d'admission, mise en relation avec un hôpital, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Bewerbung, Kontakt zu einem Krankenhaus, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, application, matching with a hospital, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Quelle différence avec l'OTA ?", de: "Was ist der Unterschied zum OTA?", en: "What is the difference from OTA?" }, a: {
+        fr: "L'ATA travaille en anesthésie et soins intensifs, l'OTA au bloc opératoire. Les deux formations durent 3 ans et sont rémunérées.",
+        de: "Der ATA arbeitet in Anästhesie und Intensivpflege, der OTA im OP. Beide Ausbildungen dauern 3 Jahre und sind vergütet.",
+        en: "The ATA works in anaesthesia and intensive care, the OTA in the operating theatre. Both trainings last 3 years and are paid." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Nous vous formons du débutant jusqu'au B2 avant le départ, à Douala.",
+        de: "Wir bilden Sie vor der Ausreise in Douala vom Anfänger bis B2 aus.",
+        en: "We train you from beginner up to B2 before departure, in Douala." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : sources spécialisées (doctari, Medwing, medi-karriere), 2025. Montants indicatifs, non garantis. Visas : autorités allemandes compétentes.",
+      de: "Gehälter: Fachquellen (doctari, Medwing, medi-karriere), 2025. Richtwerte, nicht garantiert. Visa: zuständige deutsche Behörden.",
+      en: "Salaries: specialist sources (doctari, Medwing, medi-karriere), 2025. Indicative figures, not guaranteed. Visas: competent German authorities.",
+    },
+  },
+
+  notfallsanitaeter: {
+    slug: "notfallsanitaeter",
+    title: { fr: "Ambulancier d'urgence (Notfallsanitäter)", de: "Notfallsanitäter in Deutschland", en: "Emergency paramedic (Notfallsanitäter)" },
+    image: "notfallsanitaeter",
+    intro: {
+      fr: "Le Notfallsanitäter est le plus haut niveau du secours d'urgence en Allemagne. Un métier d'action, recherché, accessible par une Ausbildung rémunérée de 3 ans.",
+      de: "Der Notfallsanitäter ist die höchste Qualifikation im Rettungsdienst in Deutschland. Ein gefragter Beruf mit Verantwortung, zugänglich über eine vergütete 3-jährige Ausbildung.",
+      en: "The Notfallsanitäter is the highest qualification in German emergency services. An action-oriented, in-demand role, accessible through a paid 3-year Ausbildung.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le Notfallsanitäter prend en charge les patients en urgence, réalise les premiers soins vitaux et assure le transport médicalisé jusqu'à l'hôpital.",
+        de: "Der Notfallsanitäter versorgt Patienten im Notfall, leistet lebensrettende Erstmaßnahmen und übernimmt den qualifizierten Transport ins Krankenhaus.",
+        en: "The Notfallsanitäter cares for patients in emergencies, delivers life-saving first care and provides medically supervised transport to hospital." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "De l'ordre de 2 800 € à 3 200 € brut en début de carrière, environ 3 640 € couramment, jusqu'à 4 500 € et plus avec l'expérience, primes de nuit et de garde en sus.",
+        de: "Rund 2.800 € bis 3.200 € brutto zu Berufsbeginn, üblich etwa 3.640 €, bis 4.500 € und mehr mit Erfahrung, Nacht- und Bereitschaftszuschläge inklusive.",
+        en: "Around €2,800 to €3,200 gross at the start, typically about €3,640, up to €4,500 and more with experience, plus night and on-call premiums." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation dure 3 ans et est rémunérée dès la première année (environ 1 293 € la 1re, 1 343 € la 2e, 1 389 € la 3e), avec une prime après l'examen final.",
+        de: "Die Ausbildung dauert 3 Jahre und ist ab dem ersten Jahr vergütet (rund 1.293 € im 1., 1.343 € im 2., 1.389 € im 3. Jahr), mit einer Prämie nach der Abschlussprüfung.",
+        en: "Training lasts 3 years and is paid from the first year (about €1,293 in year 1, €1,343 in year 2, €1,389 in year 3), with a bonus after the final exam." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Services de secours (Rettungsdienst), croix-rouge et organisations de secours (DRK, Malteser, Johanniter, ASB), pompiers et hôpitaux.",
+        de: "Rettungsdienste, Rotes Kreuz und Hilfsorganisationen (DRK, Malteser, Johanniter, ASB), Feuerwehren und Krankenhäuser.",
+        en: "Emergency services (Rettungsdienst), Red Cross and aid organisations (DRK, Malteser, Johanniter, ASB), fire services and hospitals." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Ambulances et véhicules de secours, services d'urgence hospitaliers, transport inter-hospitalier et postes de secours d'événements.",
+        de: "Rettungswagen und Notarzteinsatzfahrzeuge, Notaufnahmen, Verlegungstransporte und Sanitätsdienste bei Veranstaltungen.",
+        en: "Ambulances and emergency vehicles, hospital emergency departments, inter-hospital transfers and event medical services." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Chef d'équipe (Wachleiter), formateur, coordination des secours, ou spécialisations (soins intensifs mobiles).",
+        de: "Wachleiter, Ausbilder, Einsatzkoordination oder Spezialisierungen (Intensivtransport).",
+        en: "Shift leader (Wachleiter), instructor, dispatch coordination, or specialisations (mobile intensive care)." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis (communication rapide et précise indispensable). Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist erforderlich (schnelle, präzise Kommunikation ist entscheidend). Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required (fast, precise communication is essential). Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Par la voie de l'Ausbildung, vous obtenez directement le diplôme allemand, sans reconnaissance préalable.",
+        de: "Über die Ausbildung erwerben Sie direkt den deutschen Abschluss, ohne vorherige Anerkennung.",
+        en: "Via the Ausbildung you obtain the German qualification directly, with no prior recognition." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de formation (§ 16a) pour l'Ausbildung. Un permis de conduire est en général requis ; nous vous informons des conditions. Nous gérons les démarches.",
+        de: "Ausbildungsvisum (§ 16a) für die Ausbildung. In der Regel ist ein Führerschein erforderlich; wir informieren Sie über die Voraussetzungen. Wir übernehmen die Formalitäten.",
+        en: "Training visa (§ 16a) for the Ausbildung. A driving licence is generally required; we advise you on the conditions. We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier d'admission, mise en relation avec un service de secours, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Bewerbung, Kontakt zu einem Rettungsdienst, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, application, matching with an emergency service, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "La formation est-elle rémunérée ?", de: "Ist die Ausbildung vergütet?", en: "Is the training paid?" }, a: {
+        fr: "Oui, dès la première année, avec une prime après l'examen final.",
+        de: "Ja, ab dem ersten Jahr, mit einer Prämie nach der Abschlussprüfung.",
+        en: "Yes, from the first year, with a bonus after the final exam." } },
+      { q: { fr: "Faut-il un permis de conduire ?", de: "Braucht man einen Führerschein?", en: "Do you need a driving licence?" }, a: {
+        fr: "En général oui. Nous vous précisons les conditions selon votre situation avant le départ.",
+        de: "In der Regel ja. Wir klären die Voraussetzungen je nach Ihrer Situation vor der Ausreise.",
+        en: "Usually yes. We clarify the conditions for your situation before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires et vergütung : medi-karriere et conventions du secours (2025). Montants indicatifs, non garantis. Visas et conditions : autorités allemandes compétentes.",
+      de: "Gehälter und Vergütung: medi-karriere und Rettungsdiensttarife (2025). Richtwerte, nicht garantiert. Visa und Voraussetzungen: zuständige deutsche Behörden.",
+      en: "Salaries and training pay: medi-karriere and emergency-service agreements (2025). Indicative figures, not guaranteed. Visas and conditions: competent German authorities.",
+    },
+  },
 };
