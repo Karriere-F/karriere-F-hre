@@ -153,14 +153,14 @@ export default async function MetiersPage() {
                 {slug === "sante-soins" && (
                   <div className="mt-5">
                     <Link
-                      href="/metiers/sante"
+                      href="/secteurs"
                       className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text hover:underline"
                     >
                       {locale === "fr"
-                        ? "Voir tous les métiers de la santé"
+                        ? "Choisir mon parcours et mon secteur"
                         : locale === "de"
-                          ? "Alle Gesundheitsberufe ansehen"
-                          : "See all healthcare professions"}
+                          ? "Weg und Branche wählen"
+                          : "Choose my path and sector"}
                       <span aria-hidden="true">→</span>
                     </Link>
                   </div>

@@ -10,6 +10,7 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
 import { SANTE_FICHES, SANTE_UI, tr } from "@/lib/sante-metiers";
+import { SECTEURS_UI } from "@/lib/secteurs";
 
 export async function generateMetadata({
   params,
@@ -49,8 +50,8 @@ export default async function SanteFichePage({
         locale={locale}
         items={[
           { name: tr(SANTE_UI.home, locale), pathname: "/" },
-          { name: tr(SANTE_UI.metiers, locale), pathname: "/metiers" },
-          { name: tr(SANTE_UI.sector, locale), pathname: "/metiers/sante" },
+          { name: tr(SECTEURS_UI.secteurs, locale), pathname: "/secteurs" },
+          { name: tr(SANTE_UI.sector, locale), pathname: "/secteurs/diplome/sante" },
           { name: title, pathname: { pathname: "/metiers/sante/[slug]", params: { slug } } },
         ]}
       />
@@ -61,11 +62,11 @@ export default async function SanteFichePage({
       <section className="bg-brand-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <Link
-            href="/metiers/sante"
+            href="/secteurs"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text hover:underline"
           >
             <ArrowLeft size={15} strokeWidth={2} aria-hidden="true" />
-            {tr(SANTE_UI.backToSante, locale)}
+            {tr(SECTEURS_UI.backToSecteurs, locale)}
           </Link>
 
           {/* Illustration */}

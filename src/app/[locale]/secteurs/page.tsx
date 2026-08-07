@@ -6,33 +6,34 @@ import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { PageHero } from "@/components/marketing/page-hero";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
-import { SANTE_UI, tr } from "@/lib/sante-metiers";
+import { SECTEURS_UI } from "@/lib/secteurs";
+import { tr } from "@/lib/sante-metiers";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   return buildMetadata({
-    pathname: "/metiers/sante",
+    pathname: "/secteurs",
     locale,
-    title: tr(SANTE_UI.hubTitle, locale),
-    description: tr(SANTE_UI.hubIntro, locale),
+    title: tr(SECTEURS_UI.hubTitle, locale),
+    description: tr(SECTEURS_UI.hubIntro, locale),
   });
 }
 
-export default async function SanteHubPage() {
+export default async function SecteursPage() {
   const locale = (await getLocale()) as Locale;
 
   const choices = [
     {
-      href: "/metiers/sante/ausbildung" as const,
+      href: "/secteurs/ausbildung" as const,
       icon: GraduationCap,
-      title: tr(SANTE_UI.pathAusbildungTitle, locale),
-      intro: tr(SANTE_UI.pathAusbildungIntro, locale),
+      title: tr(SECTEURS_UI.routeAusbildungTitle, locale),
+      intro: tr(SECTEURS_UI.routeAusbildungIntro, locale),
     },
     {
-      href: "/metiers/sante/diplome" as const,
+      href: "/secteurs/diplome" as const,
       icon: Stethoscope,
-      title: tr(SANTE_UI.pathDiplomeTitle, locale),
-      intro: tr(SANTE_UI.pathDiplomeIntro, locale),
+      title: tr(SECTEURS_UI.routeDiplomeTitle, locale),
+      intro: tr(SECTEURS_UI.routeDiplomeIntro, locale),
     },
   ];
 
@@ -41,13 +42,12 @@ export default async function SanteHubPage() {
       <BreadcrumbJsonLd
         locale={locale}
         items={[
-          { name: tr(SANTE_UI.home, locale), pathname: "/" },
-          { name: tr(SANTE_UI.metiers, locale), pathname: "/metiers" },
-          { name: tr(SANTE_UI.sector, locale), pathname: "/metiers/sante" },
+          { name: tr(SECTEURS_UI.home, locale), pathname: "/" },
+          { name: tr(SECTEURS_UI.secteurs, locale), pathname: "/secteurs" },
         ]}
       />
 
-      <PageHero title={tr(SANTE_UI.hubTitle, locale)} subtitle={tr(SANTE_UI.hubIntro, locale)} />
+      <PageHero title={tr(SECTEURS_UI.hubTitle, locale)} subtitle={tr(SECTEURS_UI.hubIntro, locale)} />
 
       <section className="bg-brand-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -66,7 +66,7 @@ export default async function SanteHubPage() {
                 </h2>
                 <p className="mt-2 flex-1 text-sm text-brand-ink-secondary leading-relaxed">{intro}</p>
                 <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text">
-                  {locale === "fr" ? "Choisir" : locale === "de" ? "Auswählen" : "Choose"}
+                  {tr(SECTEURS_UI.choose, locale)}
                   <ArrowRight
                     size={16}
                     strokeWidth={2}

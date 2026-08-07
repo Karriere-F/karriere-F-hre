@@ -7,50 +7,47 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { MetierList } from "@/components/sante/metier-list";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
-import { DIPLOME_METIERS, SANTE_UI, tr } from "@/lib/sante-metiers";
+import { SECTEURS_UI } from "@/lib/secteurs";
+import { AUSBILDUNG_METIERS, SANTE_UI, tr } from "@/lib/sante-metiers";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   return buildMetadata({
-    pathname: "/metiers/sante/diplome",
+    pathname: "/secteurs/ausbildung/sante",
     locale,
-    title: tr(SANTE_UI.pathDiplomeTitle, locale),
-    description: tr(SANTE_UI.pathDiplomeIntro, locale),
+    title: tr(SANTE_UI.hubTitle, locale),
+    description: tr(SECTEURS_UI.routeAusbildungIntro, locale),
   });
 }
 
-export default async function SanteDiplomePage() {
+export default async function SecteursAusbildungSantePage() {
   const locale = (await getLocale()) as Locale;
-
   return (
     <div>
       <BreadcrumbJsonLd
         locale={locale}
         items={[
-          { name: tr(SANTE_UI.home, locale), pathname: "/" },
-          { name: tr(SANTE_UI.metiers, locale), pathname: "/metiers" },
-          { name: tr(SANTE_UI.sector, locale), pathname: "/metiers/sante" },
-          { name: tr(SANTE_UI.pathDiplomeTitle, locale), pathname: "/metiers/sante/diplome" },
+          { name: tr(SECTEURS_UI.home, locale), pathname: "/" },
+          { name: tr(SECTEURS_UI.secteurs, locale), pathname: "/secteurs" },
+          { name: tr(SECTEURS_UI.routeAusbildungTitle, locale), pathname: "/secteurs/ausbildung" },
+          { name: tr(SANTE_UI.sector, locale), pathname: "/secteurs/ausbildung/sante" },
         ]}
       />
 
-      <PageHero
-        title={tr(SANTE_UI.pathDiplomeTitle, locale)}
-        subtitle={tr(SANTE_UI.pathDiplomeIntro, locale)}
-      />
+      <PageHero title={tr(SANTE_UI.hubTitle, locale)} subtitle={tr(SECTEURS_UI.routeAusbildungIntro, locale)} />
 
       <section className="bg-brand-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <Link
-            href="/metiers/sante"
+            href="/secteurs/ausbildung"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text hover:underline"
           >
             <ArrowLeft size={15} strokeWidth={2} aria-hidden="true" />
-            {tr(SANTE_UI.backToSante, locale)}
+            {tr(SECTEURS_UI.backToRoute, locale)}
           </Link>
 
           <div className="mt-6">
-            <MetierList metiers={DIPLOME_METIERS} locale={locale} />
+            <MetierList metiers={AUSBILDUNG_METIERS} locale={locale} />
           </div>
         </div>
       </section>
