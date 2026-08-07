@@ -5,6 +5,8 @@ import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 import { NavDropdown } from "./nav-dropdown";
+import { SECTORS_ALL, SECTEURS_UI } from "@/lib/secteurs";
+import { tr } from "@/lib/sante-metiers";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
@@ -21,7 +23,22 @@ export async function SiteHeader() {
   const candidatsSwitch = { href: path("/candidats"), label: t("candidats") };
   const entreprisesSwitch = { href: path("/entreprises"), label: t("entreprises") };
 
+  // Sector-first entry. The column header goes to the /secteurs grid; each sector lists
+  // beneath it. Only active sectors have their own page yet -- the rest point back to the
+  // grid, where their "bientôt disponible" state is shown.
+  const secteursGroup = {
+    href: path("/secteurs"),
+    label: tr(SECTEURS_UI.secteurs, locale),
+    items: SECTORS_ALL.map((sector) => ({
+      href: sector.active ? path("/secteurs/sante") : path("/secteurs"),
+      label: sector.active
+        ? tr(sector.name, locale)
+        : `${tr(sector.name, locale)} (${tr(SECTEURS_UI.comingSoon, locale)})`,
+    })),
+  };
+
   const candidateLinks = [
+    secteursGroup,
     {
       href: path("/cours-allemand"),
       label: t("coursAllemand"),

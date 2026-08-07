@@ -63,7 +63,7 @@ export function NavDropdown({
 
       {open &&
         (groups ? (
-          <div className="absolute left-0 top-full z-50 mt-3 flex gap-6 rounded-xl border border-brand-grid bg-brand-white p-4 shadow-xl shadow-black/10">
+          <div className="absolute left-0 top-full z-50 mt-3 flex w-max max-w-[calc(100vw-5rem)] flex-wrap gap-x-6 gap-y-4 rounded-xl border border-brand-grid bg-brand-white p-4 shadow-xl shadow-black/10">
             {groups.map((section) => (
               <div key={section.href} className="w-44">
                 <a
