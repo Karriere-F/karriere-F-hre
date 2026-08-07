@@ -269,4 +269,276 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
       en: "Salaries: TVöD-P and TVAöD-Pflege scales and the Entgeltatlas (Federal Employment Agency), 2024-2025. Public reference figures, not guaranteed, varying by employer, region and experience. Diploma recognition and visa issuance are decided by the competent German authorities.",
     },
   },
+
+  "aide-soignant": {
+    slug: "aide-soignant",
+    title: { fr: "Aide-soignant en Allemagne (Pflegehelfer)", de: "Pflegehelfer in Deutschland", en: "Nursing assistant in Germany (Pflegehelfer)" },
+    image: "aide-soignant",
+    intro: {
+      fr: "L'aide-soignant (Pflegehelfer) épaule les infirmiers au quotidien. Un métier très demandé, accessible rapidement, et une première marche idéale vers le diplôme d'infirmier en Allemagne.",
+      de: "Der Pflegehelfer unterstützt die Pflegefachkräfte im Alltag. Ein sehr gefragter Beruf mit schnellem Einstieg und ein idealer erster Schritt zur Pflegefachkraft in Deutschland.",
+      en: "A nursing assistant (Pflegehelfer) supports nurses day to day. A role in high demand, quick to enter, and an ideal first step towards becoming a qualified nurse in Germany.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "L'aide-soignant assiste les patients dans les gestes du quotidien (toilette, repas, mobilité), prend les constantes et seconde l'équipe infirmière, surtout auprès des personnes âgées et dépendantes.",
+        de: "Der Pflegehelfer unterstützt Patienten bei alltäglichen Verrichtungen (Körperpflege, Essen, Mobilität), misst Vitalwerte und entlastet das Pflegeteam, vor allem bei älteren und pflegebedürftigen Menschen.",
+        en: "A nursing assistant helps patients with daily activities (washing, meals, mobility), takes vital signs and supports the nursing team, especially with elderly and dependent people." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "De l'ordre de 2 500 € à 3 300 € brut par mois. Dans le service public (TVöD-P, groupe P6), de ~3 000 € à ~4 000 € avec l'ancienneté. Primes de nuit et de week-end en sus.",
+        de: "Etwa 2.500 € bis 3.300 € brutto pro Monat. Im öffentlichen Dienst (TVöD-P, Gruppe P6) von rund 3.000 € bis 4.000 € mit steigender Erfahrung. Nacht- und Wochenendzuschläge kommen hinzu.",
+        en: "Around €2,500 to €3,300 gross per month. In the public sector (TVöD-P, group P6) from about €3,000 to €4,000 with seniority. Night and weekend premiums on top." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "L'Ausbildung d'aide-soignant dure 1 à 2 ans selon le Land (formation surtout scolaire). C'est aussi une passerelle vers la formation complète d'infirmier (3 ans).",
+        de: "Die Ausbildung zum Pflegehelfer dauert je nach Bundesland 1 bis 2 Jahre (überwiegend schulisch). Sie ist zugleich ein Sprungbrett zur vollen Pflegeausbildung (3 Jahre).",
+        en: "The nursing-assistant training lasts 1 to 2 years depending on the state (mostly school-based). It is also a stepping stone to the full nursing training (3 years)." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Maisons de retraite (EHPAD), services de soins à domicile, hôpitaux et cliniques, réseaux confessionnels (Caritas, Diakonie). La demande est forte partout en Allemagne.",
+        de: "Pflegeheime, ambulante Pflegedienste, Krankenhäuser und Kliniken, kirchliche Träger (Caritas, Diakonie). Die Nachfrage ist bundesweit hoch.",
+        en: "Care homes, home-care services, hospitals and clinics, faith-based providers (Caritas, Diakonie). Demand is strong across Germany." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Établissements pour personnes âgées, soins à domicile, services hospitaliers et structures pour personnes en situation de handicap.",
+        de: "Altenpflegeeinrichtungen, ambulante Pflege, Krankenhausstationen und Einrichtungen für Menschen mit Behinderung.",
+        en: "Elderly-care facilities, home care, hospital wards and facilities for people with disabilities." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "L'aide-soignant peut évoluer vers le diplôme d'infirmier (Pflegefachkraft) par une formation complémentaire, puis vers des spécialisations et des postes d'encadrement.",
+        de: "Der Pflegehelfer kann über eine Weiterbildung zur Pflegefachkraft aufsteigen und sich anschließend spezialisieren oder Leitungsaufgaben übernehmen.",
+        en: "A nursing assistant can progress to registered nurse (Pflegefachkraft) through further training, then specialise or move into leadership roles." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est visé pour travailler sereinement et évoluer. Karriere Fähre vous forme jusqu'au B2 à Douala, avant le départ.",
+        de: "Angestrebt wird B2, um sicher zu arbeiten und aufzusteigen. Karriere Fähre bildet Sie in Douala bis B2 aus, vor der Ausreise.",
+        en: "B2 is the target to work confidently and progress. Karriere Fähre trains you up to B2 in Douala, before departure." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Selon le Land et votre parcours, une reconnaissance ou une autorisation d'exercer peut être demandée. Nous constituons le dossier avec vous.",
+        de: "Je nach Bundesland und Werdegang kann eine Anerkennung oder Berufserlaubnis nötig sein. Wir erstellen den Antrag mit Ihnen.",
+        en: "Depending on the state and your background, recognition or a work authorisation may be required. We build the file with you." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa de travailleur qualifié (§ 18a/18b) une fois la qualification reconnue, ou visa de formation (§ 16a) pour l'Ausbildung. Nous gérons les démarches.",
+        de: "Fachkräftevisum (§ 18a/18b) nach anerkannter Qualifikation oder Ausbildungsvisum (§ 16a). Wir übernehmen die Formalitäten.",
+        en: "Skilled-worker visa (§ 18a/18b) once the qualification is recognised, or a training visa (§ 16a) for the Ausbildung. We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier et reconnaissance, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Unterlagen und Anerkennung, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, file and recognition, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Peut-on devenir infirmier ensuite ?", de: "Kann man danach Pflegefachkraft werden?", en: "Can you become a nurse afterwards?" }, a: {
+        fr: "Oui. Le poste d'aide-soignant est une excellente porte d'entrée : une formation complémentaire mène au diplôme d'infirmier (Pflegefachkraft).",
+        de: "Ja. Der Beruf Pflegehelfer ist ein guter Einstieg: Eine Weiterbildung führt zur Pflegefachkraft.",
+        en: "Yes. The nursing-assistant role is a great entry point: further training leads to the registered-nurse qualification (Pflegefachkraft)." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Nous vous formons du débutant jusqu'au B2 avant le départ, à Douala.",
+        de: "Wir bilden Sie vor der Ausreise in Douala vom Anfänger bis B2 aus.",
+        en: "We train you from beginner up to B2 before departure, in Douala." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : Entgeltatlas (Bundesagentur für Arbeit) et grille TVöD-P, 2025. Montants publics indicatifs, non garantis. Reconnaissance et visas : autorités allemandes compétentes.",
+      de: "Gehälter: Entgeltatlas (Bundesagentur für Arbeit) und TVöD-P, 2025. Öffentliche Richtwerte, nicht garantiert. Anerkennung und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: Entgeltatlas (Federal Employment Agency) and the TVöD-P scale, 2025. Public reference figures, not guaranteed. Recognition and visas: competent German authorities.",
+    },
+  },
+
+  medecin: {
+    slug: "medecin",
+    title: { fr: "Médecin en Allemagne (Arzt)", de: "Arzt in Deutschland", en: "Doctor in Germany (Arzt)" },
+    image: "medecin",
+    intro: {
+      fr: "L'Allemagne manque de médecins et recrute activement à l'international. Le parcours passe par l'Approbation (autorisation d'exercer) et un bon niveau d'allemand ; Karriere Fähre vous accompagne à chaque étape.",
+      de: "Deutschland fehlen Ärzte und rekrutiert aktiv international. Der Weg führt über die Approbation und gute Deutschkenntnisse; Karriere Fähre begleitet Sie bei jedem Schritt.",
+      en: "Germany is short of doctors and actively recruits internationally. The path runs through the Approbation (licence to practise) and strong German; Karriere Fähre supports you at every step.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le médecin diagnostique et traite les patients à l'hôpital, en clinique ou en cabinet. Les jeunes médecins débutent le plus souvent comme Assistenzarzt (médecin en spécialisation).",
+        de: "Der Arzt diagnostiziert und behandelt Patienten in Krankenhaus, Klinik oder Praxis. Junge Ärzte starten meist als Assistenzarzt (in der Facharztweiterbildung).",
+        en: "A doctor diagnoses and treats patients in hospitals, clinics or practices. Junior doctors usually start as an Assistenzarzt (in specialty training)." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Un Assistenzarzt gagne d'environ 5 400 € brut par mois en 1re année jusqu'à ~7 100 € après cinq à six ans. Le médecin spécialiste (Facharzt) gagne davantage.",
+        de: "Ein Assistenzarzt verdient von rund 5.400 € brutto im 1. Jahr bis ca. 7.100 € nach fünf bis sechs Jahren. Als Facharzt verdient man mehr.",
+        en: "An Assistenzarzt earns from around €5,400 gross per month in year 1 to about €7,100 after five to six years. Specialists (Facharzt) earn more." } },
+      { heading: { fr: "Durée", de: "Dauer", en: "Duration" }, body: {
+        fr: "Le diplôme de médecine (environ 6 ans) n'est pas refait. Le délai dépend de l'Approbation et de la langue. La spécialisation (Facharzt) dure ensuite 5 à 6 ans.",
+        de: "Das Medizinstudium (rund 6 Jahre) wird nicht wiederholt. Die Dauer hängt von Approbation und Sprache ab. Die Facharztweiterbildung dauert danach 5 bis 6 Jahre.",
+        en: "The medical degree (about 6 years) is not repeated. The timeline depends on the Approbation and language. Specialty training (Facharzt) then takes 5 to 6 years." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Hôpitaux publics et cliniques universitaires, grands groupes privés (Helios, Asklepios, Sana), centres médicaux et cabinets. La pénurie touche particulièrement les zones rurales.",
+        de: "Öffentliche Krankenhäuser und Universitätskliniken, große private Träger (Helios, Asklepios, Sana), medizinische Versorgungszentren und Praxen. Besonders ländliche Regionen sind betroffen.",
+        en: "Public hospitals and university clinics, large private groups (Helios, Asklepios, Sana), medical centres and practices. Rural areas are especially affected." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Toutes les spécialités hospitalières, la médecine générale, les cliniques spécialisées et, à terme, l'installation en cabinet.",
+        de: "Alle Krankenhausfachrichtungen, Allgemeinmedizin, Fachkliniken und perspektivisch die eigene Praxis.",
+        en: "All hospital specialties, general medicine, specialist clinics and, in time, one's own practice." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Après la spécialisation (Facharzt), vous pouvez devenir médecin-chef adjoint (Oberarzt) puis chef de service (Chefarzt), enseigner ou vous installer.",
+        de: "Nach dem Facharzt können Sie Oberarzt, dann Chefarzt werden, lehren oder sich niederlassen.",
+        en: "After becoming a Facharzt you can advance to senior physician (Oberarzt) then head of department (Chefarzt), teach or set up a practice." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "B2 en allemand général, plus un examen d'allemand médical (Fachsprachprüfung, niveau C1) exigé par la plupart des Ordres régionaux (Ärztekammer).",
+        de: "B2 im Allgemeindeutsch plus eine Fachsprachprüfung (Niveau C1), die von den meisten Ärztekammern verlangt wird.",
+        en: "B2 in general German plus a medical-language exam (Fachsprachprüfung, C1 level) required by most regional medical chambers (Ärztekammer)." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Pour exercer, il faut l'Approbation délivrée par l'autorité du Land, avec un examen de connaissances (Kenntnisprüfung) si l'équivalence n'est pas directe, et l'inscription à l'Ordre des médecins.",
+        de: "Zum Arbeiten ist die Approbation der Landesbehörde nötig, ggf. mit Kenntnisprüfung bei fehlender Gleichwertigkeit, sowie die Mitgliedschaft in der Ärztekammer.",
+        en: "To practise you need the Approbation from the state authority, with a knowledge exam (Kenntnisprüfung) if equivalence is not direct, plus membership of the medical chamber." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa puis titre de séjour pour travailleurs qualifiés (§ 18a/18b). Il est possible d'entrer pour préparer l'Approbation sur place (§ 16d). Nous gérons ces démarches avec vous.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b). Eine Einreise zur Vorbereitung der Approbation ist möglich (§ 16d). Wir übernehmen die Schritte mit Ihnen.",
+        en: "Visa then residence permit for skilled workers (§ 18a/18b). Entry to prepare the Approbation on site is possible (§ 16d). We handle these steps with you." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand général puis médical, dossier d'Approbation, mise en relation avec un hôpital, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Allgemein- und Fachdeutsch, Approbationsantrag, Kontakt zu einem Krankenhaus, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, general then medical German, Approbation file, matching with a hospital, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Faut-il refaire ses études de médecine ?", de: "Muss ich das Medizinstudium wiederholen?", en: "Do I need to redo medical studies?" }, a: {
+        fr: "Non. Votre diplôme est évalué pour l'Approbation ; selon les cas, un examen de connaissances (Kenntnisprüfung) est demandé, mais pas de nouvelles études complètes.",
+        de: "Nein. Ihr Abschluss wird für die Approbation geprüft; ggf. ist eine Kenntnisprüfung nötig, aber kein komplettes neues Studium.",
+        en: "No. Your degree is assessed for the Approbation; a knowledge exam (Kenntnisprüfung) may be required, but not full new studies." } },
+      { q: { fr: "Quel niveau d'allemand pour un médecin ?", de: "Welches Deutschniveau als Arzt?", en: "What German level for a doctor?" }, a: {
+        fr: "B2 général et un examen d'allemand médical (Fachsprachprüfung, C1). Nous vous préparons aux deux.",
+        de: "B2 allgemein und eine Fachsprachprüfung (C1). Wir bereiten Sie auf beides vor.",
+        en: "General B2 and a medical-language exam (Fachsprachprüfung, C1). We prepare you for both." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : conventions TV-Ärzte (VKA/TdL) et magazines spécialisés (doctari), 2025-2026. Montants indicatifs, non garantis. Approbation, reconnaissance et visas : autorités allemandes compétentes (Ärztekammer, autorité du Land).",
+      de: "Gehälter: TV-Ärzte (VKA/TdL) und Fachmagazine (doctari), 2025-2026. Richtwerte, nicht garantiert. Approbation, Anerkennung und Visa: zuständige deutsche Behörden (Ärztekammer, Landesbehörde).",
+      en: "Salaries: TV-Ärzte (VKA/TdL) agreements and specialist sources (doctari), 2025-2026. Indicative figures, not guaranteed. Approbation, recognition and visas: competent German authorities (medical chamber, state authority).",
+    },
+  },
+
+  "sage-femme": {
+    slug: "sage-femme",
+    title: { fr: "Sage-femme en Allemagne (Hebamme)", de: "Hebamme in Deutschland", en: "Midwife in Germany (Hebamme)" },
+    image: "sage-femme",
+    intro: {
+      fr: "Métier essentiel et très recherché, la sage-femme (Hebamme) accompagne la grossesse, l'accouchement et les suites de couches. Karriere Fähre vous accompagne de l'allemand jusqu'à votre poste.",
+      de: "Ein wichtiger und stark gefragter Beruf: Die Hebamme begleitet Schwangerschaft, Geburt und Wochenbett. Karriere Fähre begleitet Sie vom Deutsch bis zur Stelle.",
+      en: "An essential, highly sought-after profession: the midwife (Hebamme) supports pregnancy, birth and postnatal care. Karriere Fähre supports you from German to your role.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "La sage-femme suit la grossesse, assure les accouchements avec l'équipe médicale et accompagne la mère et le nouveau-né après la naissance.",
+        de: "Die Hebamme betreut die Schwangerschaft, begleitet Geburten mit dem medizinischen Team und unterstützt Mutter und Neugeborenes nach der Geburt.",
+        en: "The midwife follows pregnancy, assists births with the medical team and supports mother and newborn after birth." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Environ 3 300 € à 4 800 € brut par mois, avec une médiane autour de 4 380 €. Primes et exercice libéral peuvent augmenter les revenus.",
+        de: "Etwa 3.300 € bis 4.800 € brutto pro Monat, im Median rund 4.380 €. Zuschläge und freiberufliche Tätigkeit können das Einkommen erhöhen.",
+        en: "About €3,300 to €4,800 gross per month, with a median around €4,380. Premiums and self-employment can raise earnings." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "Depuis 2020, sage-femme est un cursus universitaire en alternance de 3 à 4 ans, rémunéré (~1 400 à 1 800 €/mois). Déjà diplômée : reconnaissance du diplôme et allemand B2.",
+        de: "Seit 2020 ist Hebamme ein duales Studium von 3 bis 4 Jahren, vergütet (~1.400 bis 1.800 €/Monat). Bereits ausgebildet: Anerkennung und Deutsch B2.",
+        en: "Since 2020, midwifery is a dual university programme of 3 to 4 years, paid (~€1,400 to €1,800/month). Already qualified: diploma recognition and German B2." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Maternités des hôpitaux et cliniques, maisons de naissance, et exercice libéral (suivi à domicile). La demande est forte dans tout le pays.",
+        de: "Geburtskliniken in Krankenhäusern, Geburtshäuser und freiberufliche Tätigkeit (häusliche Betreuung). Die Nachfrage ist bundesweit hoch.",
+        en: "Hospital maternity units, birth centres and self-employed practice (home visits). Demand is strong across the country." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Salles de naissance, services de maternité, suivi pré et postnatal, et cabinets libéraux.",
+        de: "Kreißsäle, Wochenstationen, Vor- und Nachsorge sowie freiberufliche Praxis.",
+        en: "Delivery rooms, maternity wards, ante- and postnatal care, and independent practice." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations (allaitement, périnatalité), coordination d'équipe, enseignement, ou installation en libéral avec sa propre patientèle.",
+        de: "Spezialisierungen (Stillberatung, Perinatalbetreuung), Teamkoordination, Lehre oder freiberufliche Selbstständigkeit.",
+        en: "Specialisations (lactation, perinatal care), team coordination, teaching, or self-employment with one's own clients." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis pour l'exercice et la reconnaissance. Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist für Ausübung und Anerkennung erforderlich. Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required to practise and for recognition. Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Profession réglementée : votre diplôme doit être reconnu par l'autorité compétente du Land (contrôle d'équivalence), avec parfois une mesure d'adaptation.",
+        de: "Reglementierter Beruf: Ihr Abschluss muss von der zuständigen Landesbehörde anerkannt werden (Gleichwertigkeitsprüfung), ggf. mit Anpassungsmaßnahme.",
+        en: "Regulated profession: your diploma must be recognised by the competent state authority (equivalence check), sometimes with an adaptation measure." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa et titre de séjour pour travailleurs qualifiés (§ 18a/18b), ou entrée pour reconnaissance sur place (§ 16d). Nous gérons les démarches.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b) oder Einreise zur Anerkennung vor Ort (§ 16d). Wir übernehmen die Formalitäten.",
+        en: "Visa and residence permit for skilled workers (§ 18a/18b), or entry for on-site recognition (§ 16d). We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier et reconnaissance, mise en relation avec une maternité, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Unterlagen und Anerkennung, Kontakt zu einer Geburtsklinik, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, file and recognition, matching with a maternity unit, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "Mon diplôme de sage-femme est-il reconnu ?", de: "Wird mein Hebammen-Abschluss anerkannt?", en: "Is my midwifery diploma recognised?" }, a: {
+        fr: "La reconnaissance se fait au cas par cas par l'autorité compétente. Nous constituons le dossier avec vous.",
+        de: "Die Anerkennung erfolgt im Einzelfall durch die zuständige Behörde. Wir erstellen den Antrag mit Ihnen.",
+        en: "Recognition is decided case by case by the competent authority. We build the file with you." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Le niveau B2 est requis ; nous vous formons jusque-là avant le départ.",
+        de: "B2 ist erforderlich; wir bilden Sie vorher bis dahin aus.",
+        en: "B2 is required; we train you up to that level before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : Entgeltatlas (Bundesagentur für Arbeit) et sources spécialisées, 2025. Montants indicatifs, non garantis. Reconnaissance et visas : autorités allemandes compétentes.",
+      de: "Gehälter: Entgeltatlas (Bundesagentur für Arbeit) und Fachquellen, 2025. Richtwerte, nicht garantiert. Anerkennung und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: Entgeltatlas (Federal Employment Agency) and specialist sources, 2025. Indicative figures, not guaranteed. Recognition and visas: competent German authorities.",
+    },
+  },
+
+  kinesitherapeute: {
+    slug: "kinesitherapeute",
+    title: { fr: "Kinésithérapeute en Allemagne (Physiotherapeut)", de: "Physiotherapeut in Deutschland", en: "Physiotherapist in Germany" },
+    image: "kinesitherapeute",
+    intro: {
+      fr: "La kinésithérapie (Physiotherapie) est un métier réglementé et recherché en Allemagne. Karriere Fähre vous accompagne de l'allemand à la reconnaissance et à l'embauche.",
+      de: "Physiotherapie ist ein reglementierter, gefragter Beruf in Deutschland. Karriere Fähre begleitet Sie vom Deutsch über die Anerkennung bis zur Einstellung.",
+      en: "Physiotherapy is a regulated, sought-after profession in Germany. Karriere Fähre supports you from German through recognition to hiring.",
+    },
+    sections: [
+      { heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" }, body: {
+        fr: "Le kinésithérapeute rééduque et soulage les patients par le mouvement, les techniques manuelles et des exercices adaptés, après une blessure, une opération ou pour une pathologie chronique.",
+        de: "Der Physiotherapeut behandelt und mobilisiert Patienten mit Bewegung, manuellen Techniken und gezielten Übungen, nach Verletzungen, Operationen oder bei chronischen Erkrankungen.",
+        en: "The physiotherapist rehabilitates and relieves patients through movement, manual techniques and tailored exercises, after injury, surgery or for chronic conditions." } },
+      { heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" }, body: {
+        fr: "Environ 2 800 € à 3 600 € brut par mois, avec une médiane autour de 3 450 € (Entgeltatlas 2025). Pendant une qualification d'adaptation : ~2 300 à 2 700 €.",
+        de: "Etwa 2.800 € bis 3.600 € brutto pro Monat, im Median rund 3.450 € (Entgeltatlas 2025). Während einer Anpassungsqualifizierung: ~2.300 bis 2.700 €.",
+        en: "About €2,800 to €3,600 gross per month, median around €3,450 (Entgeltatlas 2025). During an adaptation programme: ~€2,300 to €2,700." } },
+      { heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" }, body: {
+        fr: "La formation (Ausbildung) de kinésithérapeute dure 3 ans. Déjà diplômé : le délai dépend de la reconnaissance (contrôle d'équivalence) et de l'allemand B2.",
+        de: "Die Ausbildung zum Physiotherapeuten dauert 3 Jahre. Bereits ausgebildet: Die Dauer hängt von der Anerkennung (Gleichwertigkeitsprüfung) und Deutsch B2 ab.",
+        en: "Physiotherapy training lasts 3 years. Already qualified: the timeline depends on recognition (equivalence check) and German B2." } },
+      { heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" }, body: {
+        fr: "Cabinets de kinésithérapie, cliniques de rééducation, hôpitaux, centres sportifs et établissements pour personnes âgées.",
+        de: "Physiotherapiepraxen, Reha-Kliniken, Krankenhäuser, Sportzentren und Altenpflegeeinrichtungen.",
+        en: "Physiotherapy practices, rehabilitation clinics, hospitals, sports centres and elderly-care facilities." } },
+      { heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" }, body: {
+        fr: "Rééducation orthopédique, neurologique, sportive et gériatrique, en cabinet, en clinique ou à domicile.",
+        de: "Orthopädische, neurologische, sportliche und geriatrische Rehabilitation, in der Praxis, Klinik oder zu Hause.",
+        en: "Orthopaedic, neurological, sports and geriatric rehabilitation, in practices, clinics or at home." } },
+      { heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" }, body: {
+        fr: "Spécialisations (thérapie manuelle, neurologie, sport), postes d'encadrement, enseignement, ou ouverture de son propre cabinet.",
+        de: "Spezialisierungen (Manuelle Therapie, Neurologie, Sport), Leitungspositionen, Lehre oder eine eigene Praxis.",
+        en: "Specialisations (manual therapy, neurology, sport), leadership roles, teaching, or opening your own practice." } },
+      { heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" }, body: {
+        fr: "Le niveau B2 est requis pour la reconnaissance et l'exercice. Karriere Fähre vous forme jusqu'au B2 à Douala.",
+        de: "B2 ist für Anerkennung und Ausübung erforderlich. Karriere Fähre bildet Sie in Douala bis B2 aus.",
+        en: "B2 is required for recognition and practice. Karriere Fähre trains you up to B2 in Douala." } },
+      { heading: { fr: "Reconnaissance du diplôme", de: "Anerkennung", en: "Recognition" }, body: {
+        fr: "Profession réglementée : une autorisation d'État est nécessaire après contrôle d'équivalence ; une mesure d'adaptation (stage ou examen) peut être demandée.",
+        de: "Reglementierter Beruf: Nach Gleichwertigkeitsprüfung ist eine staatliche Erlaubnis nötig; eine Anpassungsmaßnahme (Lehrgang oder Prüfung) kann verlangt werden.",
+        en: "Regulated profession: a state authorisation is required after an equivalence check; an adaptation measure (course or exam) may be required." } },
+      { heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" }, body: {
+        fr: "Visa et titre de séjour pour travailleurs qualifiés (§ 18a/18b), ou entrée pour reconnaissance sur place (§ 16d). Nous gérons les démarches.",
+        de: "Visum und Aufenthaltstitel für Fachkräfte (§ 18a/18b) oder Einreise zur Anerkennung vor Ort (§ 16d). Wir übernehmen die Formalitäten.",
+        en: "Visa and residence permit for skilled workers (§ 18a/18b), or entry for on-site recognition (§ 16d). We handle the paperwork." } },
+      { heading: { fr: "Le processus avec Karriere Fähre", de: "Der Ablauf mit Karriere Fähre", en: "The process with Karriere Fähre" }, body: {
+        fr: "Évaluation du profil, allemand jusqu'au B2, dossier et reconnaissance, mise en relation avec un employeur, visa et démarches, puis accompagnement à l'installation.",
+        de: "Profilbewertung, Deutsch bis B2, Unterlagen und Anerkennung, Kontakt zu einem Arbeitgeber, Visum und Formalitäten, danach Begleitung bei der Ankunft.",
+        en: "Profile assessment, German up to B2, file and recognition, employer matching, visa and paperwork, then support with settling in." } },
+    ],
+    faq: [
+      { q: { fr: "La kinésithérapie est-elle réglementée ?", de: "Ist Physiotherapie reglementiert?", en: "Is physiotherapy regulated?" }, a: {
+        fr: "Oui. Il faut une autorisation d'État après contrôle d'équivalence de votre diplôme. Nous vous accompagnons dans la démarche.",
+        de: "Ja. Nach einer Gleichwertigkeitsprüfung ist eine staatliche Erlaubnis nötig. Wir begleiten Sie dabei.",
+        en: "Yes. A state authorisation is required after an equivalence check of your diploma. We support you through it." } },
+      { q: { fr: "Faut-il parler allemand ?", de: "Muss ich Deutsch sprechen?", en: "Do I need German?" }, a: {
+        fr: "Le niveau B2 est requis ; nous vous formons jusque-là avant le départ.",
+        de: "B2 ist erforderlich; wir bilden Sie vorher bis dahin aus.",
+        en: "B2 is required; we train you up to that level before departure." } },
+    ],
+    sourceNote: {
+      fr: "Salaires : Entgeltatlas (Bundesagentur für Arbeit), 2025. Montants indicatifs, non garantis. Reconnaissance (profession réglementée) et visas : autorités allemandes compétentes.",
+      de: "Gehälter: Entgeltatlas (Bundesagentur für Arbeit), 2025. Richtwerte, nicht garantiert. Anerkennung (reglementierter Beruf) und Visa: zuständige deutsche Behörden.",
+      en: "Salaries: Entgeltatlas (Federal Employment Agency), 2025. Indicative figures, not guaranteed. Recognition (regulated profession) and visas: competent German authorities.",
+    },
+  },
 };
