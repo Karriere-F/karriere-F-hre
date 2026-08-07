@@ -171,6 +171,26 @@ export const routing = defineRouting({
       de: "/berufe/it/[slug]",
       en: "/occupations/it/[slug]",
     },
+    "/secteurs/industrie": {
+      fr: "/secteurs/industrie",
+      de: "/branchen/industrie",
+      en: "/sectors/industry",
+    },
+    "/secteurs/industrie/ausbildung": {
+      fr: "/secteurs/industrie/ausbildung",
+      de: "/branchen/industrie/ausbildung",
+      en: "/sectors/industry/ausbildung",
+    },
+    "/secteurs/industrie/diplome": {
+      fr: "/secteurs/industrie/diplome",
+      de: "/branchen/industrie/diplom",
+      en: "/sectors/industry/qualified",
+    },
+    "/metiers/industrie/[slug]": {
+      fr: "/metiers/industrie/[slug]",
+      de: "/berufe/industrie/[slug]",
+      en: "/occupations/industry/[slug]",
+    },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
     "/entreprises/partenariat": {

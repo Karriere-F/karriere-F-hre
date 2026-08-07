@@ -13,7 +13,7 @@ export type Sector = {
 };
 
 const SANTE: Sector = { slug: "sante", name: { fr: "Santé", de: "Gesundheit", en: "Healthcare" }, icon: HeartPulse, active: true };
-const INDUSTRIE: Sector = { slug: "industrie", name: { fr: "Industrie", de: "Industrie", en: "Industry" }, icon: Cog, active: false };
+const INDUSTRIE: Sector = { slug: "industrie", name: { fr: "Industrie", de: "Industrie", en: "Industry" }, icon: Cog, active: true };
 const INFORMATIQUE: Sector = { slug: "informatique", name: { fr: "Informatique", de: "IT", en: "IT" }, icon: Cpu, active: true };
 const CONSTRUCTION: Sector = { slug: "construction", name: { fr: "Construction / BTP", de: "Bau", en: "Construction" }, icon: HardHat, active: false };
 const LOGISTIQUE: Sector = { slug: "logistique", name: { fr: "Logistique", de: "Logistik", en: "Logistics" }, icon: Truck, active: false };
@@ -25,8 +25,8 @@ const INGENIERIE: Sector = { slug: "ingenierie", name: { fr: "Ingénierie", de: 
 export const SECTORS_ALL: Sector[] = [
   SANTE,
   INFORMATIQUE,
-  INGENIERIE,
   INDUSTRIE,
+  INGENIERIE,
   CONSTRUCTION,
   LOGISTIQUE,
   HOTELLERIE,
@@ -38,6 +38,7 @@ export const SECTORS_ALL: Sector[] = [
 export const ACTIVE_SECTOR_PATH = {
   sante: "/secteurs/sante",
   informatique: "/secteurs/informatique",
+  industrie: "/secteurs/industrie",
 } as const;
 
 export const SECTEURS_UI = {
