@@ -13,14 +13,14 @@ import { AUSBILDUNG_METIERS, SANTE_UI, tr } from "@/lib/sante-metiers";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   return buildMetadata({
-    pathname: "/secteurs/ausbildung/sante",
+    pathname: "/secteurs/sante/ausbildung",
     locale,
-    title: tr(SANTE_UI.hubTitle, locale),
+    title: `${tr(SANTE_UI.sector, locale)} — ${tr(SECTEURS_UI.routeAusbildungTitle, locale)}`,
     description: tr(SECTEURS_UI.routeAusbildungIntro, locale),
   });
 }
 
-export default async function SecteursAusbildungSantePage() {
+export default async function SanteAusbildungPage() {
   const locale = (await getLocale()) as Locale;
   return (
     <div>
@@ -29,8 +29,8 @@ export default async function SecteursAusbildungSantePage() {
         items={[
           { name: tr(SECTEURS_UI.home, locale), pathname: "/" },
           { name: tr(SECTEURS_UI.secteurs, locale), pathname: "/secteurs" },
-          { name: tr(SECTEURS_UI.routeAusbildungTitle, locale), pathname: "/secteurs/ausbildung" },
-          { name: tr(SANTE_UI.sector, locale), pathname: "/secteurs/ausbildung/sante" },
+          { name: tr(SANTE_UI.sector, locale), pathname: "/secteurs/sante" },
+          { name: tr(SECTEURS_UI.routeAusbildungTitle, locale), pathname: "/secteurs/sante/ausbildung" },
         ]}
       />
 
@@ -39,7 +39,7 @@ export default async function SecteursAusbildungSantePage() {
       <section className="bg-brand-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <Link
-            href="/secteurs/ausbildung"
+            href="/secteurs/sante"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text hover:underline"
           >
             <ArrowLeft size={15} strokeWidth={2} aria-hidden="true" />

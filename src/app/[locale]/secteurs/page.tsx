@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
-import { ArrowRight, GraduationCap, Stethoscope } from "lucide-react";
-import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { PageHero } from "@/components/marketing/page-hero";
+import { SectorGrid } from "@/components/secteurs/sector-grid";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
-import { SECTEURS_UI } from "@/lib/secteurs";
+import { SECTEURS_UI, SECTORS_ALL } from "@/lib/secteurs";
 import { tr } from "@/lib/sante-metiers";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -21,22 +20,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function SecteursPage() {
   const locale = (await getLocale()) as Locale;
-
-  const choices = [
-    {
-      href: "/secteurs/ausbildung" as const,
-      icon: GraduationCap,
-      title: tr(SECTEURS_UI.routeAusbildungTitle, locale),
-      intro: tr(SECTEURS_UI.routeAusbildungIntro, locale),
-    },
-    {
-      href: "/secteurs/diplome" as const,
-      icon: Stethoscope,
-      title: tr(SECTEURS_UI.routeDiplomeTitle, locale),
-      intro: tr(SECTEURS_UI.routeDiplomeIntro, locale),
-    },
-  ];
-
   return (
     <div>
       <BreadcrumbJsonLd
@@ -50,33 +33,8 @@ export default async function SecteursPage() {
       <PageHero title={tr(SECTEURS_UI.hubTitle, locale)} subtitle={tr(SECTEURS_UI.hubIntro, locale)} />
 
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <div className="grid gap-5 sm:grid-cols-2">
-            {choices.map(({ href, icon: Icon, title, intro }) => (
-              <Link
-                key={href}
-                href={href}
-                className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-card p-7 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_14px_34px_-16px_rgba(17,17,17,0.25)] sm:p-8"
-              >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
-                  <Icon size={24} strokeWidth={2} aria-hidden="true" />
-                </span>
-                <h2 className="mt-4 font-serif text-xl text-brand-black leading-snug sm:text-2xl">
-                  {title}
-                </h2>
-                <p className="mt-2 flex-1 text-sm text-brand-ink-secondary leading-relaxed">{intro}</p>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text">
-                  {tr(SECTEURS_UI.choose, locale)}
-                  <ArrowRight
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                    className="transition-transform duration-200 group-hover:translate-x-0.5"
-                  />
-                </span>
-              </Link>
-            ))}
-          </div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <SectorGrid sectors={SECTORS_ALL} locale={locale} />
         </div>
       </section>
     </div>

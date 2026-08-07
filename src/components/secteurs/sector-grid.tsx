@@ -4,17 +4,7 @@ import type { Locale } from "@i18n/routing";
 import { SECTEURS_UI, type Sector } from "@/lib/secteurs";
 import { tr } from "@/lib/sante-metiers";
 
-type SanteHref = "/secteurs/ausbildung/sante" | "/secteurs/diplome/sante";
-
-export function SectorGrid({
-  sectors,
-  locale,
-  santeHref,
-}: {
-  sectors: Sector[];
-  locale: Locale;
-  santeHref: SanteHref;
-}) {
+export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Locale }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {sectors.map((s) => {
@@ -25,7 +15,7 @@ export function SectorGrid({
           return (
             <Link
               key={s.slug}
-              href={santeHref}
+              href="/secteurs/sante"
               className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_12px_28px_-14px_rgba(17,17,17,0.25)]"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">

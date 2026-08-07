@@ -51,7 +51,7 @@ export default async function SanteFichePage({
         items={[
           { name: tr(SANTE_UI.home, locale), pathname: "/" },
           { name: tr(SECTEURS_UI.secteurs, locale), pathname: "/secteurs" },
-          { name: tr(SANTE_UI.sector, locale), pathname: "/secteurs/diplome/sante" },
+          { name: tr(SANTE_UI.sector, locale), pathname: "/secteurs/sante" },
           { name: title, pathname: { pathname: "/metiers/sante/[slug]", params: { slug } } },
         ]}
       />

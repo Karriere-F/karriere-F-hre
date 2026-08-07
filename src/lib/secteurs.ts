@@ -20,18 +20,28 @@ const LOGISTIQUE: Sector = { slug: "logistique", name: { fr: "Logistique", de: "
 const HOTELLERIE: Sector = { slug: "hotellerie", name: { fr: "Hôtellerie-Restauration", de: "Hotel & Gastronomie", en: "Hospitality" }, icon: UtensilsCrossed, active: false };
 const INGENIERIE: Sector = { slug: "ingenierie", name: { fr: "Ingénierie", de: "Ingenieurwesen", en: "Engineering" }, icon: Wrench, active: false };
 
-export const SECTORS_AUSBILDUNG: Sector[] = [SANTE, INDUSTRIE, INFORMATIQUE, CONSTRUCTION, LOGISTIQUE, HOTELLERIE];
-export const SECTORS_DIPLOME: Sector[] = [SANTE, INFORMATIQUE, INGENIERIE, INDUSTRIE, CONSTRUCTION, LOGISTIQUE];
+// Sector-first navigation: one list of sectors; the route (Ausbildung / already
+// qualified) is chosen inside each sector.
+export const SECTORS_ALL: Sector[] = [
+  SANTE,
+  INGENIERIE,
+  INDUSTRIE,
+  INFORMATIQUE,
+  CONSTRUCTION,
+  LOGISTIQUE,
+  HOTELLERIE,
+];
 
 export const SECTEURS_UI = {
   home: { fr: "Accueil", de: "Startseite", en: "Home" },
   secteurs: { fr: "Secteurs", de: "Branchen", en: "Sectors" },
   hubTitle: { fr: "Travailler ou se former en Allemagne", de: "In Deutschland arbeiten oder sich ausbilden", en: "Work or train in Germany" },
   hubIntro: {
-    fr: "Choisissez votre situation, puis votre secteur : nous vous accompagnons de l'allemand jusqu'à votre poste et votre installation.",
-    de: "Wählen Sie Ihre Situation und dann Ihre Branche: Wir begleiten Sie vom Deutsch bis zur Stelle und zur Ankunft.",
-    en: "Choose your situation, then your sector: we support you from German all the way to your role and your arrival.",
+    fr: "Choisissez votre secteur, puis votre parcours : nous vous accompagnons de l'allemand jusqu'à votre poste et votre installation.",
+    de: "Wählen Sie Ihre Branche und dann Ihren Weg: Wir begleiten Sie vom Deutsch bis zur Stelle und zur Ankunft.",
+    en: "Choose your sector, then your path: we support you from German all the way to your role and your arrival.",
   },
+  chooseRouteTitle: { fr: "Choisissez votre parcours", de: "Wählen Sie Ihren Weg", en: "Choose your path" },
   routeAusbildungTitle: { fr: "Je veux faire une Ausbildung", de: "Ich möchte eine Ausbildung machen", en: "I want to do an Ausbildung" },
   routeAusbildungIntro: {
     fr: "Vous vous formez directement en Allemagne : une formation rémunérée, diplômante et reconnue.",
@@ -48,5 +58,5 @@ export const SECTEURS_UI = {
   choose: { fr: "Choisir", de: "Auswählen", en: "Choose" },
   comingSoon: { fr: "Bientôt disponible", de: "Bald verfügbar", en: "Coming soon" },
   backToSecteurs: { fr: "Tous les secteurs", de: "Alle Branchen", en: "All sectors" },
-  backToRoute: { fr: "Choisir un autre secteur", de: "Andere Branche wählen", en: "Choose another sector" },
+  backToRoute: { fr: "Choisir un autre parcours", de: "Anderen Weg wählen", en: "Choose another path" },
 } satisfies Record<string, LocalizedText>;

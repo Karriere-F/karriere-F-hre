@@ -131,25 +131,20 @@ export const routing = defineRouting({
       en: "/occupations/offer/[slug]",
     },
     "/secteurs": { fr: "/secteurs", de: "/branchen", en: "/sectors" },
-    "/secteurs/ausbildung": {
-      fr: "/secteurs/ausbildung",
-      de: "/branchen/ausbildung",
-      en: "/sectors/ausbildung",
+    "/secteurs/sante": {
+      fr: "/secteurs/sante",
+      de: "/branchen/gesundheit",
+      en: "/sectors/healthcare",
     },
-    "/secteurs/diplome": {
-      fr: "/secteurs/diplome",
-      de: "/branchen/diplom",
-      en: "/sectors/qualified",
+    "/secteurs/sante/ausbildung": {
+      fr: "/secteurs/sante/ausbildung",
+      de: "/branchen/gesundheit/ausbildung",
+      en: "/sectors/healthcare/ausbildung",
     },
-    "/secteurs/ausbildung/sante": {
-      fr: "/secteurs/ausbildung/sante",
-      de: "/branchen/ausbildung/gesundheit",
-      en: "/sectors/ausbildung/healthcare",
-    },
-    "/secteurs/diplome/sante": {
-      fr: "/secteurs/diplome/sante",
-      de: "/branchen/diplom/gesundheit",
-      en: "/sectors/qualified/healthcare",
+    "/secteurs/sante/diplome": {
+      fr: "/secteurs/sante/diplome",
+      de: "/branchen/gesundheit/diplom",
+      en: "/sectors/healthcare/qualified",
     },
     "/metiers/sante/[slug]": {
       fr: "/metiers/sante/[slug]",
