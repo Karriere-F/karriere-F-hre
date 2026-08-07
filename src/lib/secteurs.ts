@@ -3,7 +3,7 @@
 // sectors show as "Bientôt disponible" until their content is built.
 
 import { Cog, Cpu, HardHat, HeartPulse, Truck, UtensilsCrossed, Wrench, type LucideIcon } from "lucide-react";
-import type { LocalizedText } from "./sante-metiers";
+import type { LocalizedText } from "./localized";
 
 export type Sector = {
   slug: string;
@@ -14,7 +14,7 @@ export type Sector = {
 
 const SANTE: Sector = { slug: "sante", name: { fr: "Santé", de: "Gesundheit", en: "Healthcare" }, icon: HeartPulse, active: true };
 const INDUSTRIE: Sector = { slug: "industrie", name: { fr: "Industrie", de: "Industrie", en: "Industry" }, icon: Cog, active: false };
-const INFORMATIQUE: Sector = { slug: "informatique", name: { fr: "Informatique", de: "IT", en: "IT" }, icon: Cpu, active: false };
+const INFORMATIQUE: Sector = { slug: "informatique", name: { fr: "Informatique", de: "IT", en: "IT" }, icon: Cpu, active: true };
 const CONSTRUCTION: Sector = { slug: "construction", name: { fr: "Construction / BTP", de: "Bau", en: "Construction" }, icon: HardHat, active: false };
 const LOGISTIQUE: Sector = { slug: "logistique", name: { fr: "Logistique", de: "Logistik", en: "Logistics" }, icon: Truck, active: false };
 const HOTELLERIE: Sector = { slug: "hotellerie", name: { fr: "Hôtellerie-Restauration", de: "Hotel & Gastronomie", en: "Hospitality" }, icon: UtensilsCrossed, active: false };
@@ -24,13 +24,21 @@ const INGENIERIE: Sector = { slug: "ingenierie", name: { fr: "Ingénierie", de: 
 // qualified) is chosen inside each sector.
 export const SECTORS_ALL: Sector[] = [
   SANTE,
+  INFORMATIQUE,
   INGENIERIE,
   INDUSTRIE,
-  INFORMATIQUE,
   CONSTRUCTION,
   LOGISTIQUE,
   HOTELLERIE,
 ];
+
+// Destination for each active sector's landing page. Kept as literal strings so
+// the typed <Link> / getPathname keep their route-key checking. A sector absent
+// here (still "Bientôt disponible") falls back to the /secteurs grid.
+export const ACTIVE_SECTOR_PATH = {
+  sante: "/secteurs/sante",
+  informatique: "/secteurs/informatique",
+} as const;
 
 export const SECTEURS_UI = {
   home: { fr: "Accueil", de: "Startseite", en: "Home" },

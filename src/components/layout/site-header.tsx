@@ -5,8 +5,8 @@ import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 import { NavDropdown } from "./nav-dropdown";
-import { SECTORS_ALL, SECTEURS_UI } from "@/lib/secteurs";
-import { tr } from "@/lib/sante-metiers";
+import { ACTIVE_SECTOR_PATH, SECTORS_ALL, SECTEURS_UI } from "@/lib/secteurs";
+import { tr } from "@/lib/localized";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
@@ -24,17 +24,20 @@ export async function SiteHeader() {
   const entreprisesSwitch = { href: path("/entreprises"), label: t("entreprises") };
 
   // Sector-first entry. The column header goes to the /secteurs grid; each sector lists
-  // beneath it. Only active sectors have their own page yet -- the rest point back to the
+  // beneath it. Active sectors link to their own landing page; the rest point back to the
   // grid, where their "bientôt disponible" state is shown.
   const secteursGroup = {
     href: path("/secteurs"),
     label: tr(SECTEURS_UI.secteurs, locale),
-    items: SECTORS_ALL.map((sector) => ({
-      href: sector.active ? path("/secteurs/sante") : path("/secteurs"),
-      label: sector.active
-        ? tr(sector.name, locale)
-        : `${tr(sector.name, locale)} (${tr(SECTEURS_UI.comingSoon, locale)})`,
-    })),
+    items: SECTORS_ALL.map((sector) => {
+      const dest = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
+      return {
+        href: sector.active && dest ? path(dest) : path("/secteurs"),
+        label: sector.active
+          ? tr(sector.name, locale)
+          : `${tr(sector.name, locale)} (${tr(SECTEURS_UI.comingSoon, locale)})`,
+      };
+    }),
   };
 
   const candidateLinks = [

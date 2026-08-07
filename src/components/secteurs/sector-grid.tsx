@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import type { Locale } from "@i18n/routing";
-import { SECTEURS_UI, type Sector } from "@/lib/secteurs";
-import { tr } from "@/lib/sante-metiers";
+import { ACTIVE_SECTOR_PATH, SECTEURS_UI, type Sector } from "@/lib/secteurs";
+import { tr } from "@/lib/localized";
 
 export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Locale }) {
   return (
@@ -10,12 +10,13 @@ export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Loc
       {sectors.map((s) => {
         const Icon = s.icon;
         const name = tr(s.name, locale);
+        const href = ACTIVE_SECTOR_PATH[s.slug as keyof typeof ACTIVE_SECTOR_PATH];
 
-        if (s.active && s.slug === "sante") {
+        if (s.active && href) {
           return (
             <Link
               key={s.slug}
-              href="/secteurs/sante"
+              href={href}
               className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_12px_28px_-14px_rgba(17,17,17,0.25)]"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">

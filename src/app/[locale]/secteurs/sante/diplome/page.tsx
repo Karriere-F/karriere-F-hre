@@ -4,18 +4,18 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { PageHero } from "@/components/marketing/page-hero";
-import { MetierList } from "@/components/sante/metier-list";
+import { MetierList } from "@/components/secteurs/metier-list";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
 import { SECTEURS_UI } from "@/lib/secteurs";
-import { DIPLOME_METIERS, SANTE_UI, tr } from "@/lib/sante-metiers";
+import { DIPLOME_METIERS, SANTE_FICHES, SANTE_UI, tr } from "@/lib/sante-metiers";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   return buildMetadata({
     pathname: "/secteurs/sante/diplome",
     locale,
-    title: `${tr(SANTE_UI.sector, locale)} — ${tr(SECTEURS_UI.routeDiplomeTitle, locale)}`,
+    title: `${tr(SANTE_UI.sector, locale)} : ${tr(SECTEURS_UI.routeDiplomeTitle, locale)}`,
     description: tr(SECTEURS_UI.routeDiplomeIntro, locale),
   });
 }
@@ -47,7 +47,13 @@ export default async function SanteDiplomePage() {
           </Link>
 
           <div className="mt-6">
-            <MetierList metiers={DIPLOME_METIERS} locale={locale} />
+            <MetierList
+              metiers={DIPLOME_METIERS}
+              locale={locale}
+              hasFiche={(slug) => Boolean(SANTE_FICHES[slug])}
+              ficheHref={(slug) => ({ pathname: "/metiers/sante/[slug]", params: { slug } })}
+              labels={{ viewFiche: SANTE_UI.viewFiche, apply: SANTE_UI.apply }}
+            />
           </div>
         </div>
       </section>

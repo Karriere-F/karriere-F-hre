@@ -151,6 +151,26 @@ export const routing = defineRouting({
       de: "/berufe/gesundheit/[slug]",
       en: "/occupations/healthcare/[slug]",
     },
+    "/secteurs/informatique": {
+      fr: "/secteurs/informatique",
+      de: "/branchen/it",
+      en: "/sectors/it",
+    },
+    "/secteurs/informatique/ausbildung": {
+      fr: "/secteurs/informatique/ausbildung",
+      de: "/branchen/it/ausbildung",
+      en: "/sectors/it/ausbildung",
+    },
+    "/secteurs/informatique/diplome": {
+      fr: "/secteurs/informatique/diplome",
+      de: "/branchen/it/diplom",
+      en: "/sectors/it/qualified",
+    },
+    "/metiers/informatique/[slug]": {
+      fr: "/metiers/informatique/[slug]",
+      de: "/berufe/it/[slug]",
+      en: "/occupations/it/[slug]",
+    },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
     "/entreprises/partenariat": {

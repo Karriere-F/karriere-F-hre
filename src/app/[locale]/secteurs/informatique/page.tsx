@@ -1,37 +1,37 @@
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
-import { ArrowLeft, ArrowRight, GraduationCap, Stethoscope } from "lucide-react";
+import { ArrowLeft, ArrowRight, GraduationCap, Code2 } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { PageHero } from "@/components/marketing/page-hero";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
 import { SECTEURS_UI } from "@/lib/secteurs";
-import { SANTE_UI, tr } from "@/lib/sante-metiers";
+import { IT_UI, tr } from "@/lib/it-metiers";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   return buildMetadata({
-    pathname: "/secteurs/sante",
+    pathname: "/secteurs/informatique",
     locale,
-    title: `${tr(SANTE_UI.sector, locale)} : ${tr(SECTEURS_UI.chooseRouteTitle, locale)}`,
-    description: tr(SANTE_UI.hubIntro, locale),
+    title: `${tr(IT_UI.sector, locale)} : ${tr(SECTEURS_UI.chooseRouteTitle, locale)}`,
+    description: tr(IT_UI.hubIntro, locale),
   });
 }
 
-export default async function SecteursSantePage() {
+export default async function SecteursInformatiquePage() {
   const locale = (await getLocale()) as Locale;
 
   const choices = [
     {
-      href: "/secteurs/sante/ausbildung" as const,
+      href: "/secteurs/informatique/ausbildung" as const,
       icon: GraduationCap,
       title: tr(SECTEURS_UI.routeAusbildungTitle, locale),
       intro: tr(SECTEURS_UI.routeAusbildungIntro, locale),
     },
     {
-      href: "/secteurs/sante/diplome" as const,
-      icon: Stethoscope,
+      href: "/secteurs/informatique/diplome" as const,
+      icon: Code2,
       title: tr(SECTEURS_UI.routeDiplomeTitle, locale),
       intro: tr(SECTEURS_UI.routeDiplomeIntro, locale),
     },
@@ -42,13 +42,13 @@ export default async function SecteursSantePage() {
       <BreadcrumbJsonLd
         locale={locale}
         items={[
-          { name: tr(SECTEURS_UI.home, locale), pathname: "/" },
+          { name: tr(IT_UI.home, locale), pathname: "/" },
           { name: tr(SECTEURS_UI.secteurs, locale), pathname: "/secteurs" },
-          { name: tr(SANTE_UI.sector, locale), pathname: "/secteurs/sante" },
+          { name: tr(IT_UI.sector, locale), pathname: "/secteurs/informatique" },
         ]}
       />
 
-      <PageHero title={tr(SANTE_UI.sector, locale)} subtitle={tr(SECTEURS_UI.chooseRouteTitle, locale)} />
+      <PageHero title={tr(IT_UI.sector, locale)} subtitle={tr(SECTEURS_UI.chooseRouteTitle, locale)} />
 
       <section className="bg-brand-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

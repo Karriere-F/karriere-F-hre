@@ -1,14 +1,31 @@
+import type { ComponentProps } from "react";
 import { Link } from "@i18n/navigation";
 import type { Locale } from "@i18n/routing";
-import { SANTE_FICHES, SANTE_UI, tr, type SanteMetier } from "@/lib/sante-metiers";
+import { tr, type LocalizedText } from "@/lib/localized";
 
-// Server-rendered list of health professions: each row offers "Voir la fiche"
-// (when a fiche exists) and "Postuler".
-export function MetierList({ metiers, locale }: { metiers: SanteMetier[]; locale: Locale }) {
+export type Metier = { slug: string; name: LocalizedText; note: LocalizedText };
+type LinkHref = ComponentProps<typeof Link>["href"];
+
+// Server-rendered list of professions for a sector path. Each row offers
+// "Voir la fiche" (only when that profession has a written fiche) and
+// "Postuler". Sector-agnostic: the caller supplies which slugs have a fiche,
+// how to build the fiche link, and the labels.
+export function MetierList({
+  metiers,
+  locale,
+  hasFiche,
+  ficheHref,
+  labels,
+}: {
+  metiers: Metier[];
+  locale: Locale;
+  hasFiche: (slug: string) => boolean;
+  ficheHref: (slug: string) => LinkHref;
+  labels: { viewFiche: LocalizedText; apply: LocalizedText };
+}) {
   return (
     <ul className="divide-y divide-brand-grid overflow-hidden rounded-2xl border border-brand-grid bg-brand-white">
       {metiers.map((m) => {
-        const hasFiche = Boolean(SANTE_FICHES[m.slug]);
         const note = tr(m.note, locale);
         return (
           <li
@@ -20,19 +37,16 @@ export function MetierList({ metiers, locale }: { metiers: SanteMetier[]; locale
               {note && <span className="block text-sm text-brand-ink-secondary">{note}</span>}
             </span>
             <span className="flex shrink-0 items-center gap-4 text-sm font-medium">
-              {hasFiche && (
-                <Link
-                  href={{ pathname: "/metiers/sante/[slug]", params: { slug: m.slug } }}
-                  className="text-brand-gold-text hover:underline"
-                >
-                  {tr(SANTE_UI.viewFiche, locale)}
+              {hasFiche(m.slug) && (
+                <Link href={ficheHref(m.slug)} className="text-brand-gold-text hover:underline">
+                  {tr(labels.viewFiche, locale)}
                 </Link>
               )}
               <Link
                 href="/postuler"
                 className="press rounded-md bg-brand-gold px-4 py-1.5 text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
               >
-                {tr(SANTE_UI.apply, locale)}
+                {tr(labels.apply, locale)}
               </Link>
             </span>
           </li>

@@ -4,11 +4,12 @@
 // their content is researched; list items without a fiche simply route to
 // "Postuler" until their fiche is written.
 
-import type { Locale } from "@i18n/routing";
+import type { LocalizedText } from "./localized";
+import { tr } from "./localized";
 
-export type LocalizedText = { fr: string; de: string; en: string };
-
-export const tr = (t: LocalizedText, locale: Locale) => t[locale];
+// Re-exported so existing importers of "@/lib/sante-metiers" keep working.
+export type { LocalizedText };
+export { tr };
 
 export type SanteMetier = {
   slug: string;
