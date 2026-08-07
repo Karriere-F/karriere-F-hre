@@ -91,6 +91,8 @@ export type SanteFiche = {
   slug: string;
   title: LocalizedText;
   intro: LocalizedText;
+  image?: string; // filename in /public/images/metiers/sante
+  video?: string; // optional embed URL (YouTube), rendered when present
   sections: FicheSection[];
   faq: FicheFaq[];
   sourceNote: LocalizedText;
@@ -138,51 +140,68 @@ export const SANTE_UI = {
 export const SANTE_FICHES: Record<string, SanteFiche> = {
   infirmier: {
     slug: "infirmier",
-    title: { fr: "Infirmier (Pflegefachkraft)", de: "Pflegefachkraft", en: "Nurse (Pflegefachkraft)" },
+    title: { fr: "Infirmier en Allemagne (Pflegefachkraft)", de: "Pflegefachkraft in Deutschland", en: "Nurse in Germany (Pflegefachkraft)" },
+    image: "infirmier",
     intro: {
-      fr: "L'un des métiers les plus recherchés en Allemagne. Que vous soyez déjà diplômé ou que vous souhaitiez vous former sur place (Ausbildung), Karriere Fähre vous accompagne jusqu'à votre poste et votre installation.",
-      de: "Einer der gefragtesten Berufe in Deutschland. Ob bereits examiniert oder über eine Ausbildung vor Ort, Karriere Fähre begleitet Sie bis zur Stelle und zur Ankunft.",
-      en: "One of the most sought-after professions in Germany. Whether you are already qualified or want to train on site (Ausbildung), Karriere Fähre supports you all the way to your role and your arrival.",
+      fr: "Infirmier est l'un des métiers les plus recherchés en Allemagne. Que vous soyez déjà diplômé ou que vous vouliez vous former sur place par une Ausbildung, Karriere Fähre vous accompagne de l'allemand jusqu'à votre poste et votre installation.",
+      de: "Pflegefachkraft ist einer der gefragtesten Berufe in Deutschland. Ob bereits examiniert oder über eine Ausbildung vor Ort, Karriere Fähre begleitet Sie vom Deutsch bis zur Stelle und zur Ankunft.",
+      en: "Nursing is one of the most sought-after professions in Germany. Whether you are already qualified or want to train on site through an Ausbildung, Karriere Fähre supports you from German all the way to your role and your arrival.",
     },
     sections: [
       {
-        heading: { fr: "Le métier", de: "Der Beruf", en: "The profession" },
+        heading: { fr: "Le métier d'infirmier en Allemagne", de: "Der Beruf Pflegefachkraft", en: "The nursing profession in Germany" },
         body: {
-          fr: "Le Pflegefachkraft assure les soins généralistes : suivi des patients, administration des traitements, coordination avec les médecins, accompagnement des personnes en milieu hospitalier, en clinique ou en établissement de soins. C'est un métier reconnu, stable et central dans le système de santé allemand.",
+          fr: "L'infirmier (Pflegefachkraft) assure les soins généralistes : suivi des patients, administration des traitements, coordination avec les médecins et accompagnement des personnes à l'hôpital, en clinique ou en établissement de soins. C'est un métier reconnu, stable et central dans le système de santé allemand.",
           de: "Die Pflegefachkraft übernimmt die generalistische Pflege: Patientenbetreuung, Verabreichung von Behandlungen, Abstimmung mit Ärzten und Begleitung von Menschen in Krankenhaus, Klinik oder Pflegeeinrichtung. Ein anerkannter, stabiler und zentraler Beruf im deutschen Gesundheitswesen.",
-          en: "The Pflegefachkraft provides generalist nursing care: monitoring patients, administering treatments, coordinating with doctors and supporting people in hospitals, clinics or care facilities. It is a recognised, stable and central role in the German healthcare system.",
+          en: "A nurse (Pflegefachkraft) provides generalist care: monitoring patients, administering treatments, coordinating with doctors and supporting people in hospitals, clinics or care facilities. It is a recognised, stable and central role in the German healthcare system.",
         },
       },
       {
-        heading: { fr: "Salaire en Allemagne", de: "Gehalt in Deutschland", en: "Salary in Germany" },
+        heading: { fr: "Salaire d'un infirmier en Allemagne", de: "Gehalt als Pflegefachkraft", en: "Nurse salary in Germany" },
         body: {
-          fr: "Un infirmier (Pflegefachkraft) perçoit un salaire médian d'environ 4 150 € brut/mois à temps plein. S'y ajoutent selon les établissements des primes (nuit, week-end, jours fériés) et souvent un 13e mois. Pendant l'Ausbildung, la formation est rémunérée dès la première année.",
-          de: "Eine Pflegefachkraft verdient im Median rund 4.150 € brutto/Monat in Vollzeit. Hinzu kommen je nach Einrichtung Zuschläge (Nacht, Wochenende, Feiertage) und oft ein 13. Monatsgehalt. Während der Ausbildung wird bereits ab dem ersten Jahr eine Vergütung gezahlt.",
-          en: "A nurse (Pflegefachkraft) earns a median of about €4,150 gross per month full-time. Depending on the employer, shift premiums (night, weekend, public holidays) and often a 13th month are added. During the Ausbildung, training is paid from the first year.",
+          fr: "Le salaire d'un infirmier va d'environ 2 800 € brut par mois en début de carrière à 4 500 € et plus avec l'expérience, pour une moyenne autour de 3 800 €. Dans le service public (convention TVöD-P), la grille démarre vers 3 300 € (groupe P7) et progresse jusqu'à environ 4 200 €. S'y ajoutent des primes de nuit, de week-end et de jours fériés, ainsi qu'un 13e mois dans de nombreux établissements.",
+          de: "Das Gehalt einer Pflegefachkraft reicht von rund 2.800 € brutto pro Monat zu Berufsbeginn bis 4.500 € und mehr mit Erfahrung, im Schnitt etwa 3.800 €. Im öffentlichen Dienst (TVöD-P) beginnt die Tabelle bei rund 3.300 € (Gruppe P7) und steigt auf etwa 4.200 €. Hinzu kommen Nacht-, Wochenend- und Feiertagszuschläge sowie in vielen Häusern ein 13. Monatsgehalt.",
+          en: "A nurse's salary ranges from around €2,800 gross per month at the start of their career to €4,500 and more with experience, averaging about €3,800. In the public sector (TVöD-P agreement) the scale starts near €3,300 (group P7) and rises to roughly €4,200. Night, weekend and public-holiday premiums apply, plus a 13th month at many employers.",
         },
       },
       {
-        heading: { fr: "Régions qui recrutent", de: "Regionen mit Bedarf", en: "Regions hiring" },
+        heading: { fr: "Durée de la formation", de: "Dauer der Ausbildung", en: "Training duration" },
         body: {
-          fr: "La pénurie est nationale : tous les Länder recrutent. La demande est particulièrement forte dans les grandes agglomérations et dans le sud (Bavière, Bade-Wurtemberg) et l'ouest (Rhénanie-du-Nord-Westphalie). Les soins figurent parmi les métiers en tension officiels (Engpassberufe) de la Bundesagentur für Arbeit.",
-          de: "Der Mangel ist bundesweit: Alle Länder stellen ein. Besonders hoch ist der Bedarf in den Ballungsräumen sowie im Süden (Bayern, Baden-Württemberg) und Westen (Nordrhein-Westfalen). Die Pflege zählt zu den offiziellen Engpassberufen der Bundesagentur für Arbeit.",
-          en: "The shortage is nationwide: every federal state is hiring. Demand is especially strong in major cities and in the south (Bavaria, Baden-Württemberg) and west (North Rhine-Westphalia). Nursing is one of the Federal Employment Agency's official shortage occupations (Engpassberufe).",
+          fr: "Par la voie de l'Ausbildung, la formation d'infirmier (généraliste) dure 3 ans et est rémunérée dès la première année : environ 1 490 € la 1re année, 1 552 € la 2e et 1 653 € la 3e (convention TVAöD-Pflege). Si vous êtes déjà diplômé, il n'y a pas de nouvelle formation : le délai dépend de la reconnaissance de votre diplôme et de votre montée au niveau B2.",
+          de: "Über die Ausbildung dauert die generalistische Pflegeausbildung 3 Jahre und ist ab dem ersten Jahr vergütet: rund 1.490 € im 1., 1.552 € im 2. und 1.653 € im 3. Jahr (TVAöD-Pflege). Wer bereits examiniert ist, macht keine neue Ausbildung: Die Dauer hängt von der Anerkennung und dem Erreichen von B2 ab.",
+          en: "Via the Ausbildung, the generalist nursing training lasts 3 years and is paid from the first year: about €1,490 in year 1, €1,552 in year 2 and €1,653 in year 3 (TVAöD-Pflege agreement). If you are already qualified there is no new training: the timeline depends on your diploma recognition and reaching B2.",
         },
       },
       {
-        heading: { fr: "Conditions d'accès", de: "Zugangsvoraussetzungen", en: "Entry requirements" },
+        heading: { fr: "Entreprises qui recrutent", de: "Arbeitgeber mit Bedarf", en: "Employers hiring" },
         body: {
-          fr: "Deux voies. 1) L'Ausbildung : une formation généraliste de 3 ans en Allemagne, ouverte dès un niveau de scolarité équivalent au brevet et un allemand B2. 2) Déjà diplômé : votre diplôme d'infirmier doit être reconnu (voir ci-dessous) et votre allemand porté au niveau B2.",
-          de: "Zwei Wege. 1) Die Ausbildung: eine dreijährige generalistische Ausbildung in Deutschland, offen ab einem mittleren Schulabschluss und Deutsch B2. 2) Bereits examiniert: Ihr Pflegediplom muss anerkannt werden (siehe unten) und Ihr Deutsch auf B2-Niveau sein.",
-          en: "Two routes. 1) The Ausbildung: a three-year generalist training in Germany, open from a secondary-school level and German at B2. 2) Already qualified: your nursing diploma must be recognised (see below) and your German brought up to B2.",
+          fr: "Hôpitaux publics et cliniques universitaires, grands groupes privés (Helios, Asklepios, Sana, Vivantes), établissements confessionnels (Caritas, Diakonie), maisons de retraite et services de soins à domicile. La pénurie touche tout le pays, avec une demande particulièrement forte dans les grandes villes et les Länder du sud et de l'ouest. Les soins figurent parmi les métiers en tension officiels (Engpassberufe) de la Bundesagentur für Arbeit.",
+          de: "Öffentliche Krankenhäuser und Universitätskliniken, große private Träger (Helios, Asklepios, Sana, Vivantes), kirchliche Einrichtungen (Caritas, Diakonie), Pflegeheime und ambulante Pflegedienste. Der Mangel besteht bundesweit, besonders hoch ist die Nachfrage in Großstädten und in den Ländern im Süden und Westen. Die Pflege zählt zu den offiziellen Engpassberufen der Bundesagentur für Arbeit.",
+          en: "Public hospitals and university clinics, large private groups (Helios, Asklepios, Sana, Vivantes), faith-based providers (Caritas, Diakonie), care homes and home-care services. The shortage is nationwide, with especially strong demand in major cities and the southern and western states. Nursing is one of the Federal Employment Agency's official shortage occupations (Engpassberufe).",
+        },
+      },
+      {
+        heading: { fr: "Débouchés", de: "Einsatzbereiche", en: "Where you can work" },
+        body: {
+          fr: "Services hospitaliers (médecine, chirurgie, urgences, pédiatrie, gériatrie), cliniques spécialisées, maisons de retraite, soins à domicile et centres de rééducation. La forte demande garantit un emploi stable et une embauche rapide.",
+          de: "Krankenhausstationen (Innere Medizin, Chirurgie, Notaufnahme, Pädiatrie, Geriatrie), Fachkliniken, Pflegeheime, ambulante Pflege und Reha-Einrichtungen. Die hohe Nachfrage sorgt für einen sicheren Arbeitsplatz und eine schnelle Einstellung.",
+          en: "Hospital wards (internal medicine, surgery, emergency, paediatrics, geriatrics), specialist clinics, care homes, home care and rehabilitation centres. Strong demand means stable employment and fast hiring.",
+        },
+      },
+      {
+        heading: { fr: "Évolution de carrière", de: "Karriereentwicklung", en: "Career progression" },
+        body: {
+          fr: "Après quelques années, vous pouvez vous spécialiser (soins intensifs, anesthésie, bloc opératoire, oncologie, gériatrie) grâce à une formation continue (Fachweiterbildung), accéder à des postes d'encadrement (chef d'unité, Stationsleitung) ou poursuivre des études en management ou en sciences infirmières.",
+          de: "Nach einigen Jahren können Sie sich spezialisieren (Intensivpflege, Anästhesie, OP, Onkologie, Geriatrie) über eine Fachweiterbildung, Leitungspositionen übernehmen (Stationsleitung) oder ein Studium in Pflegemanagement oder Pflegewissenschaft anschließen.",
+          en: "After a few years you can specialise (intensive care, anaesthesia, operating theatre, oncology, geriatrics) through advanced training (Fachweiterbildung), move into leadership roles (ward manager, Stationsleitung) or pursue studies in nursing management or science.",
         },
       },
       {
         heading: { fr: "Niveau d'allemand requis", de: "Erforderliches Deutschniveau", en: "German level required" },
         body: {
-          fr: "Le niveau B2 est le standard pour exercer et obtenir l'enregistrement professionnel dans la plupart des Länder. Karriere Fähre vous forme du niveau débutant jusqu'au B2 à Douala, avant le départ.",
+          fr: "Le niveau B2 est le standard pour exercer et obtenir l'autorisation professionnelle dans la plupart des Länder. Karriere Fähre vous forme du niveau débutant jusqu'au B2 à Douala, avant le départ.",
           de: "B2 ist der Standard, um zu arbeiten und die Berufserlaubnis in den meisten Ländern zu erhalten. Karriere Fähre bildet Sie in Douala vom Anfängerniveau bis B2 aus, vor der Ausreise.",
-          en: "B2 is the standard to work and obtain professional registration in most federal states. Karriere Fähre trains you from beginner level up to B2 in Douala, before departure.",
+          en: "B2 is the standard to work and obtain professional authorisation in most federal states. Karriere Fähre trains you from beginner level up to B2 in Douala, before departure.",
         },
       },
       {
@@ -191,6 +210,14 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
           fr: "Pour exercer comme Pflegefachkraft, votre diplôme doit être reconnu (Anerkennung) par l'autorité compétente du Land. Selon les cas, un stage d'adaptation (Anpassungslehrgang) ou un examen de connaissances (Kenntnisprüfung) peut être demandé. Nous constituons le dossier et vous accompagnons jusqu'à la reconnaissance.",
           de: "Um als Pflegefachkraft zu arbeiten, muss Ihr Abschluss von der zuständigen Landesbehörde anerkannt werden. Je nach Fall können ein Anpassungslehrgang oder eine Kenntnisprüfung verlangt werden. Wir stellen den Antrag zusammen und begleiten Sie bis zur Anerkennung.",
           en: "To work as a Pflegefachkraft, your diploma must be recognised by the competent authority of the federal state. Depending on the case, an adaptation course (Anpassungslehrgang) or a knowledge exam (Kenntnisprüfung) may be required. We prepare the file and support you through to recognition.",
+        },
+      },
+      {
+        heading: { fr: "Visa et titre de séjour", de: "Visum und Aufenthaltstitel", en: "Visa and residence permit" },
+        body: {
+          fr: "Une fois votre diplôme reconnu, vous obtenez un visa puis un titre de séjour pour travailleurs qualifiés (§ 18a/18b de la loi allemande sur le séjour). Il est aussi possible de venir finaliser la reconnaissance sur place (partenariat de reconnaissance, § 16d) ; pour l'Ausbildung, c'est un visa de formation (§ 16a). Nous gérons ces démarches avec vous.",
+          de: "Sobald Ihr Abschluss anerkannt ist, erhalten Sie ein Visum und anschließend einen Aufenthaltstitel für Fachkräfte (§ 18a/18b AufenthG). Möglich ist auch die Einreise zur Anerkennung vor Ort (Anerkennungspartnerschaft, § 16d); für die Ausbildung gilt ein Ausbildungsvisum (§ 16a). Wir übernehmen diese Schritte mit Ihnen.",
+          en: "Once your diploma is recognised, you receive a visa and then a residence permit for skilled workers (§ 18a/18b of the German Residence Act). It is also possible to come and complete recognition on site (recognition partnership, § 16d); for the Ausbildung a training visa applies (§ 16a). We handle these steps with you.",
         },
       },
       {
@@ -203,6 +230,22 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
       },
     ],
     faq: [
+      {
+        q: { fr: "Combien gagne un infirmier en Allemagne ?", de: "Wie viel verdient eine Pflegefachkraft in Deutschland?", en: "How much does a nurse earn in Germany?" },
+        a: {
+          fr: "Entre environ 2 800 € en début de carrière et 4 500 € brut par mois avec l'expérience, primes de nuit et de week-end en plus. La moyenne se situe autour de 3 800 €.",
+          de: "Zwischen rund 2.800 € zu Berufsbeginn und 4.500 € brutto pro Monat mit Erfahrung, zuzüglich Nacht- und Wochenendzuschlägen. Der Schnitt liegt bei etwa 3.800 €.",
+          en: "Between around €2,800 at the start and €4,500 gross per month with experience, plus night and weekend premiums. The average is about €3,800.",
+        },
+      },
+      {
+        q: { fr: "Je n'ai pas de diplôme d'infirmier, puis-je partir quand même ?", de: "Ich habe kein Pflegediplom, kann ich trotzdem gehen?", en: "I don't have a nursing diploma, can I still go?" },
+        a: {
+          fr: "Oui, par la voie de l'Ausbildung : vous vous formez directement en Allemagne pendant 3 ans, avec une formation rémunérée dès la première année.",
+          de: "Ja, über die Ausbildung: Sie werden 3 Jahre direkt in Deutschland ausgebildet, mit einer Vergütung ab dem ersten Jahr.",
+          en: "Yes, through the Ausbildung: you train directly in Germany for 3 years, paid from the first year.",
+        },
+      },
       {
         q: { fr: "Faut-il déjà parler allemand ?", de: "Muss ich schon Deutsch sprechen?", en: "Do I need to speak German already?" },
         a: {
@@ -219,19 +262,11 @@ export const SANTE_FICHES: Record<string, SanteFiche> = {
           en: "Recognition is assessed case by case by the competent German authority. We build the file with you and guide you at every step.",
         },
       },
-      {
-        q: { fr: "Combien de temps dure le parcours ?", de: "Wie lange dauert der Weg?", en: "How long does the journey take?" },
-        a: {
-          fr: "La durée dépend surtout de votre progression en allemand (jusqu'au B2) et de la reconnaissance de votre diplôme. Nous établissons un calendrier réaliste dès l'évaluation de votre profil.",
-          de: "Die Dauer hängt vor allem von Ihrem Deutsch-Fortschritt (bis B2) und der Anerkennung ab. Wir erstellen bereits bei der Profilbewertung einen realistischen Zeitplan.",
-          en: "The duration depends mainly on your German progress (up to B2) and your diploma recognition. We set out a realistic timeline as soon as we assess your profile.",
-        },
-      },
     ],
     sourceNote: {
-      fr: "Salaire : Entgeltatlas, Bundesagentur für Arbeit (médiane brute, temps plein, 2024). Montants publics indicatifs, non garantis. La reconnaissance des diplômes relève des autorités allemandes compétentes.",
-      de: "Gehalt: Entgeltatlas, Bundesagentur für Arbeit (Median, brutto, Vollzeit, 2024). Öffentliche Richtwerte, nicht garantiert. Die Anerkennung von Abschlüssen liegt bei den zuständigen deutschen Behörden.",
-      en: "Salary: Entgeltatlas, Federal Employment Agency (median, gross, full-time, 2024). Public reference figures, not guaranteed. Diploma recognition is decided by the competent German authorities.",
+      fr: "Salaires : grilles TVöD-P et TVAöD-Pflege et Entgeltatlas (Bundesagentur für Arbeit), données 2024-2025. Montants publics indicatifs, non garantis, variables selon l'employeur, la région et l'expérience. La reconnaissance des diplômes et la délivrance des visas relèvent des autorités allemandes compétentes.",
+      de: "Gehälter: TVöD-P und TVAöD-Pflege sowie Entgeltatlas (Bundesagentur für Arbeit), Stand 2024-2025. Öffentliche Richtwerte, nicht garantiert, je nach Arbeitgeber, Region und Erfahrung unterschiedlich. Anerkennung und Visumerteilung liegen bei den zuständigen deutschen Behörden.",
+      en: "Salaries: TVöD-P and TVAöD-Pflege scales and the Entgeltatlas (Federal Employment Agency), 2024-2025. Public reference figures, not guaranteed, varying by employer, region and experience. Diploma recognition and visa issuance are decided by the competent German authorities.",
     },
   },
 };

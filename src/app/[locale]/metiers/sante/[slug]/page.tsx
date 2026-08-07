@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { FaqJsonLd } from "@/components/seo/faq-json-ld";
 import { PageHero } from "@/components/marketing/page-hero";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@i18n/routing";
@@ -52,6 +54,7 @@ export default async function SanteFichePage({
           { name: title, pathname: { pathname: "/metiers/sante/[slug]", params: { slug } } },
         ]}
       />
+      <FaqJsonLd items={fiche.faq.map((f) => ({ q: tr(f.q, locale), a: tr(f.a, locale) }))} />
 
       <PageHero title={title} subtitle={tr(fiche.intro, locale)} />
 
@@ -64,6 +67,34 @@ export default async function SanteFichePage({
             <ArrowLeft size={15} strokeWidth={2} aria-hidden="true" />
             {tr(SANTE_UI.backToSante, locale)}
           </Link>
+
+          {/* Illustration */}
+          {fiche.image && (
+            <div className="relative mt-6 aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[16/9]">
+              <Image
+                src={`/images/metiers/sante/${fiche.image}.jpg`}
+                alt={title}
+                fill
+                priority
+                sizes="(min-width: 768px) 768px, 100vw"
+                className="object-cover"
+              />
+            </div>
+          )}
+
+          {/* Optional video */}
+          {fiche.video && (
+            <div className="relative mt-6 aspect-video overflow-hidden rounded-2xl">
+              <iframe
+                src={fiche.video}
+                title={title}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
+            </div>
+          )}
 
           {/* Content sections */}
           <div className="mt-8 space-y-9">
