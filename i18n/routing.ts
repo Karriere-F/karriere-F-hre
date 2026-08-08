@@ -211,6 +211,26 @@ export const routing = defineRouting({
       de: "/berufe/bau/[slug]",
       en: "/occupations/construction/[slug]",
     },
+    "/secteurs/logistique": {
+      fr: "/secteurs/logistique",
+      de: "/branchen/logistik",
+      en: "/sectors/logistics",
+    },
+    "/secteurs/logistique/ausbildung": {
+      fr: "/secteurs/logistique/ausbildung",
+      de: "/branchen/logistik/ausbildung",
+      en: "/sectors/logistics/ausbildung",
+    },
+    "/secteurs/logistique/diplome": {
+      fr: "/secteurs/logistique/diplome",
+      de: "/branchen/logistik/diplom",
+      en: "/sectors/logistics/qualified",
+    },
+    "/metiers/logistique/[slug]": {
+      fr: "/metiers/logistique/[slug]",
+      de: "/berufe/logistik/[slug]",
+      en: "/occupations/logistics/[slug]",
+    },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
     "/entreprises/partenariat": {
