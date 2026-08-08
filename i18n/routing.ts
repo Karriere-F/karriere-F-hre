@@ -191,6 +191,26 @@ export const routing = defineRouting({
       de: "/berufe/industrie/[slug]",
       en: "/occupations/industry/[slug]",
     },
+    "/secteurs/construction": {
+      fr: "/secteurs/construction",
+      de: "/branchen/bau",
+      en: "/sectors/construction",
+    },
+    "/secteurs/construction/ausbildung": {
+      fr: "/secteurs/construction/ausbildung",
+      de: "/branchen/bau/ausbildung",
+      en: "/sectors/construction/ausbildung",
+    },
+    "/secteurs/construction/diplome": {
+      fr: "/secteurs/construction/diplome",
+      de: "/branchen/bau/diplom",
+      en: "/sectors/construction/qualified",
+    },
+    "/metiers/construction/[slug]": {
+      fr: "/metiers/construction/[slug]",
+      de: "/berufe/bau/[slug]",
+      en: "/occupations/construction/[slug]",
+    },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
     "/entreprises/partenariat": {
