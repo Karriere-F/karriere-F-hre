@@ -17,7 +17,7 @@ const INDUSTRIE: Sector = { slug: "industrie", name: { fr: "Industrie", de: "Ind
 const INFORMATIQUE: Sector = { slug: "informatique", name: { fr: "Informatique", de: "IT", en: "IT" }, icon: Cpu, active: true };
 const CONSTRUCTION: Sector = { slug: "construction", name: { fr: "Construction / BTP", de: "Bau", en: "Construction" }, icon: HardHat, active: true };
 const LOGISTIQUE: Sector = { slug: "logistique", name: { fr: "Logistique & Transport", de: "Logistik & Transport", en: "Logistics & Transport" }, icon: Truck, active: true };
-const HOTELLERIE: Sector = { slug: "hotellerie", name: { fr: "Hôtellerie-Restauration", de: "Hotel & Gastronomie", en: "Hospitality" }, icon: UtensilsCrossed, active: false };
+const HOTELLERIE: Sector = { slug: "hotellerie", name: { fr: "Hôtellerie-Restauration", de: "Hotel & Gastronomie", en: "Hospitality" }, icon: UtensilsCrossed, active: true };
 const INGENIERIE: Sector = { slug: "ingenierie", name: { fr: "Ingénierie", de: "Ingenieurwesen", en: "Engineering" }, icon: Wrench, active: true };
 
 // Sector-first navigation: one list of sectors; the route (Ausbildung / already
@@ -42,6 +42,7 @@ export const ACTIVE_SECTOR_PATH = {
   construction: "/secteurs/construction",
   logistique: "/secteurs/logistique",
   ingenierie: "/secteurs/ingenierie",
+  hotellerie: "/secteurs/hotellerie",
 } as const;
 
 export const SECTEURS_UI = {

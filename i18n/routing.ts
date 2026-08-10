@@ -251,6 +251,26 @@ export const routing = defineRouting({
       de: "/berufe/ingenieurwesen/[slug]",
       en: "/occupations/engineering/[slug]",
     },
+    "/secteurs/hotellerie": {
+      fr: "/secteurs/hotellerie",
+      de: "/branchen/hotel-gastronomie",
+      en: "/sectors/hospitality",
+    },
+    "/secteurs/hotellerie/ausbildung": {
+      fr: "/secteurs/hotellerie/ausbildung",
+      de: "/branchen/hotel-gastronomie/ausbildung",
+      en: "/sectors/hospitality/ausbildung",
+    },
+    "/secteurs/hotellerie/diplome": {
+      fr: "/secteurs/hotellerie/diplome",
+      de: "/branchen/hotel-gastronomie/diplom",
+      en: "/sectors/hospitality/qualified",
+    },
+    "/metiers/hotellerie/[slug]": {
+      fr: "/metiers/hotellerie/[slug]",
+      de: "/berufe/hotel-gastronomie/[slug]",
+      en: "/occupations/hospitality/[slug]",
+    },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
     "/entreprises/partenariat": {
