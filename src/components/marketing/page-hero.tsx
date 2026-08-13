@@ -33,7 +33,7 @@ export function PageHero({
         </div>
         {image && (
           <div
-            className="animate-fade-up relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg"
+            className="animate-fade-up relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[4/5] shadow-lg"
             style={{ animationDelay: "120ms" }}
           >
             <Image src={image} alt={imageAlt ?? ""} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
