@@ -52,7 +52,7 @@ export default async function IngenierieAusbildungPage() {
               locale={locale}
               hasFiche={(slug) => Boolean(INGENIERIE_FICHES[slug])}
               ficheHref={(slug) => ({ pathname: "/metiers/ingenierie/[slug]", params: { slug } })}
-              labels={{ viewFiche: INGENIERIE_UI.viewFiche, apply: INGENIERIE_UI.apply }}
+              labels={{ viewFiche: INGENIERIE_UI.viewFiche }}
             />
           </div>
         </div>

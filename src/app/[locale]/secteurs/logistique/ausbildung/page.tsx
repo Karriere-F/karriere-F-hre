@@ -52,7 +52,7 @@ export default async function LogistiqueAusbildungPage() {
               locale={locale}
               hasFiche={(slug) => Boolean(LOGISTIQUE_FICHES[slug])}
               ficheHref={(slug) => ({ pathname: "/metiers/logistique/[slug]", params: { slug } })}
-              labels={{ viewFiche: LOGISTIQUE_UI.viewFiche, apply: LOGISTIQUE_UI.apply }}
+              labels={{ viewFiche: LOGISTIQUE_UI.viewFiche }}
             />
           </div>
         </div>

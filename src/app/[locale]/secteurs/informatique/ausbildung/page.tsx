@@ -52,7 +52,7 @@ export default async function ItAusbildungPage() {
               locale={locale}
               hasFiche={(slug) => Boolean(IT_FICHES[slug])}
               ficheHref={(slug) => ({ pathname: "/metiers/informatique/[slug]", params: { slug } })}
-              labels={{ viewFiche: IT_UI.viewFiche, apply: IT_UI.apply }}
+              labels={{ viewFiche: IT_UI.viewFiche }}
             />
           </div>
         </div>

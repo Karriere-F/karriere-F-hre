@@ -52,7 +52,7 @@ export default async function IndustrieDiplomePage() {
               locale={locale}
               hasFiche={(slug) => Boolean(INDUSTRIE_FICHES[slug])}
               ficheHref={(slug) => ({ pathname: "/metiers/industrie/[slug]", params: { slug } })}
-              labels={{ viewFiche: INDUSTRIE_UI.viewFiche, apply: INDUSTRIE_UI.apply }}
+              labels={{ viewFiche: INDUSTRIE_UI.viewFiche }}
             />
           </div>
         </div>

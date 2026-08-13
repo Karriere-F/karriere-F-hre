@@ -52,7 +52,7 @@ export default async function ConstructionAusbildungPage() {
               locale={locale}
               hasFiche={(slug) => Boolean(CONSTRUCTION_FICHES[slug])}
               ficheHref={(slug) => ({ pathname: "/metiers/construction/[slug]", params: { slug } })}
-              labels={{ viewFiche: CONSTRUCTION_UI.viewFiche, apply: CONSTRUCTION_UI.apply }}
+              labels={{ viewFiche: CONSTRUCTION_UI.viewFiche }}
             />
           </div>
         </div>

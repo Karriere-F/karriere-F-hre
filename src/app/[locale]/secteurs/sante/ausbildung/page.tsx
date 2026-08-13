@@ -52,7 +52,7 @@ export default async function SanteAusbildungPage() {
               locale={locale}
               hasFiche={(slug) => Boolean(SANTE_FICHES[slug])}
               ficheHref={(slug) => ({ pathname: "/metiers/sante/[slug]", params: { slug } })}
-              labels={{ viewFiche: SANTE_UI.viewFiche, apply: SANTE_UI.apply }}
+              labels={{ viewFiche: SANTE_UI.viewFiche }}
             />
           </div>
         </div>

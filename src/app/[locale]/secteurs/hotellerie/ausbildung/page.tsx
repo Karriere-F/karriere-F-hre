@@ -52,7 +52,7 @@ export default async function HotellerieAusbildungPage() {
               locale={locale}
               hasFiche={(slug) => Boolean(HOTELLERIE_FICHES[slug])}
               ficheHref={(slug) => ({ pathname: "/metiers/hotellerie/[slug]", params: { slug } })}
-              labels={{ viewFiche: HOTELLERIE_UI.viewFiche, apply: HOTELLERIE_UI.apply }}
+              labels={{ viewFiche: HOTELLERIE_UI.viewFiche }}
             />
           </div>
         </div>
