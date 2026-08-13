@@ -29,17 +29,17 @@ export default async function HomePage() {
   const content = await getPageContent<HomeContent>("home");
 
   const metiers = [
-    { slug: "medecins", img: "medecins-v2", label: content.metierMedecins, alt: "Un médecin en blouse blanche, stéthoscope au cou, dans un hôpital allemand" },
-    { slug: "infirmiers", img: "infirmiers-v2", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
-    { slug: "personnel-sante", label: content.metierPersonnelSante, alt: "Un membre du personnel de santé en tenue blanche dans un service hospitalier" },
-    { slug: "ingenieurs", img: "ingenieurs-v2", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
-    { slug: "informaticiens", label: content.metierInformaticiens, alt: "Un informaticien à son poste, code affiché sur ses écrans" },
-    { slug: "techniciens", img: "techniciens-v2", label: content.metierTechniciens, alt: "Un technicien devant une armoire électrique industrielle" },
-    { slug: "btp", label: content.metierBtp, alt: "Un ouvrier du bâtiment sur un chantier de construction" },
-    { slug: "hotellerie", img: "hotellerie-v2", label: content.metierHotellerie, alt: "Un serveur et une réceptionniste dans un établissement hôtelier" },
-    { slug: "industrie", img: "industrie-v3", label: content.metierIndustrie, alt: "Une opératrice en atelier industriel, bras croisés devant les machines" },
-    { slug: "logistique", img: "logistique-v2", label: content.metierLogistique, alt: "Un agent logistique devant un camion en chargement dans un entrepôt" },
-  ];
+    { slug: "medecins", img: "medecins-v2", sector: "/secteurs/sante", label: content.metierMedecins, alt: "Un médecin en blouse blanche, stéthoscope au cou, dans un hôpital allemand" },
+    { slug: "infirmiers", img: "infirmiers-v2", sector: "/secteurs/sante", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
+    { slug: "personnel-sante", img: "personnel-sante", sector: "/secteurs/sante", label: content.metierPersonnelSante, alt: "Un membre du personnel de santé en tenue blanche dans un service hospitalier" },
+    { slug: "ingenieurs", img: "ingenieurs-v2", sector: "/secteurs/ingenierie", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
+    { slug: "informaticiens", img: "informaticiens", sector: "/secteurs/informatique", label: content.metierInformaticiens, alt: "Un informaticien à son poste, code affiché sur ses écrans" },
+    { slug: "techniciens", img: "techniciens-v2", sector: "/secteurs/industrie", label: content.metierTechniciens, alt: "Un technicien devant une armoire électrique industrielle" },
+    { slug: "btp", img: "btp", sector: "/secteurs/construction", label: content.metierBtp, alt: "Un ouvrier du bâtiment sur un chantier de construction" },
+    { slug: "hotellerie", img: "hotellerie-v2", sector: "/secteurs/hotellerie", label: content.metierHotellerie, alt: "Un serveur et une réceptionniste dans un établissement hôtelier" },
+    { slug: "industrie", img: "industrie-v3", sector: "/secteurs/industrie", label: content.metierIndustrie, alt: "Une opératrice en atelier industriel, bras croisés devant les machines" },
+    { slug: "logistique", img: "logistique-v2", sector: "/secteurs/logistique", label: content.metierLogistique, alt: "Un agent logistique devant un camion en chargement dans un entrepôt" },
+  ] as const;
 
   const methodSteps = [
     {
@@ -240,23 +240,32 @@ export default async function HomePage() {
           </div>
 
           <ul className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
-            {metiers.map(({ slug, img, label, alt }, i) => (
+            {metiers.map(({ slug, img, sector, label, alt }, i) => (
               <li
                 key={slug}
-                className="animate-fade-up group relative aspect-[4/5] overflow-hidden rounded-xl"
+                className="animate-fade-up"
                 style={{ animationDelay: `${Math.min(i, 9) * 45}ms` }}
               >
-                <Image
-                  src={`/images/metiers/${img ?? slug}.jpg`}
-                  alt={alt}
-                  fill
-                  sizes="(min-width: 1024px) 20vw, 50vw"
-                  className="object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.05] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/85 via-brand-black/25 to-transparent" />
-                <h3 className="absolute inset-x-0 bottom-0 p-3.5 sm:p-4 font-serif text-base sm:text-lg text-brand-white leading-tight">
-                  {label}
-                </h3>
+                <Link
+                  href={sector}
+                  aria-label={label}
+                  className="group relative block aspect-[4/5] overflow-hidden rounded-xl outline-none ring-brand-gold/70 transition-shadow duration-200 focus-visible:ring-2 hover:shadow-[0_16px_36px_-18px_rgba(17,17,17,0.5)]"
+                >
+                  <Image
+                    src={`/images/metiers/${img ?? slug}.jpg`}
+                    alt={alt}
+                    fill
+                    sizes="(min-width: 1024px) 20vw, 50vw"
+                    className="object-cover object-center transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.05] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black/85 via-brand-black/25 to-transparent" />
+                  <span className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-brand-white/15 text-brand-white opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                    <ArrowRight size={16} strokeWidth={2} aria-hidden="true" />
+                  </span>
+                  <h3 className="absolute inset-x-0 bottom-0 p-3.5 sm:p-4 font-serif text-base sm:text-lg text-brand-white leading-tight">
+                    {label}
+                  </h3>
+                </Link>
               </li>
             ))}
           </ul>
