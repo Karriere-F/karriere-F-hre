@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { getLocale } from "next-intl/server";
@@ -64,7 +63,12 @@ export default async function IndustrieFichePage({
       />
       <FaqJsonLd items={fiche.faq.map((f) => ({ q: tr(f.q, locale), a: tr(f.a, locale) }))} />
 
-      <PageHero title={title} subtitle={tr(fiche.intro, locale)} />
+      <PageHero
+        title={title}
+        subtitle={tr(fiche.intro, locale)}
+        image={imageExists ? `/images/metiers/industrie/${fiche.image}.jpg` : undefined}
+        imageAlt={title}
+      />
 
       <section className="bg-brand-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -75,20 +79,6 @@ export default async function IndustrieFichePage({
             <ArrowLeft size={15} strokeWidth={2} aria-hidden="true" />
             {tr(SECTEURS_UI.backToSecteurs, locale)}
           </Link>
-
-          {/* Illustration (only when the photo file exists) */}
-          {imageExists && (
-            <div className="relative mt-6 aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[16/9]">
-              <Image
-                src={`/images/metiers/industrie/${fiche.image}.jpg`}
-                alt={title}
-                fill
-                priority
-                sizes="(min-width: 768px) 768px, 100vw"
-                className="object-cover"
-              />
-            </div>
-          )}
 
           {/* Optional video */}
           {fiche.video && (

@@ -4,10 +4,12 @@ export function PageHero({
   title,
   subtitle,
   image,
+  imageAlt,
 }: {
   title: string;
   subtitle?: string;
   image?: string;
+  imageAlt?: string;
 }) {
   return (
     <section className="bg-brand-card">
@@ -34,7 +36,7 @@ export function PageHero({
             className="animate-fade-up relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg"
             style={{ animationDelay: "120ms" }}
           >
-            <Image src={image} alt="" fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+            <Image src={image} alt={imageAlt ?? ""} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
           </div>
         )}
       </div>
