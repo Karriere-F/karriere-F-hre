@@ -14,8 +14,8 @@ export function PageHero({
   return (
     <section className="bg-brand-card">
       <div
-        className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid gap-10 items-center ${
-          image ? "lg:grid-cols-[3fr_2fr]" : ""
+        className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid gap-10 lg:gap-12 items-center ${
+          image ? "lg:grid-cols-2" : ""
         }`}
       >
         <div>
