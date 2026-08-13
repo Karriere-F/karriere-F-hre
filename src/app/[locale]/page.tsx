@@ -237,7 +237,7 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <ul className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
+          <ul className="mt-10 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-4">
             {metiers.map(({ slug, img, sector, label, alt }, i) => (
               <li
                 key={slug}
