@@ -29,9 +29,7 @@ export default async function HomePage() {
   const content = await getPageContent<HomeContent>("home");
 
   const metiers = [
-    { slug: "medecins", img: "medecins-v2", sector: "/secteurs/sante", label: content.metierMedecins, alt: "Un médecin en blouse blanche, stéthoscope au cou, dans un hôpital allemand" },
-    { slug: "infirmiers", img: "infirmiers-v2", sector: "/secteurs/sante", label: content.metierInfirmiers, alt: "Une infirmière en tenue de soins dans un service hospitalier" },
-    { slug: "personnel-sante", img: "personnel-sante", sector: "/secteurs/sante", label: content.metierPersonnelSante, alt: "Un membre du personnel de santé en tenue blanche dans un service hospitalier" },
+    { slug: "sante", img: "sante-equipe", sector: "/secteurs/sante", label: content.metierSante, alt: "Une équipe soignante africaine souriante dans un couloir d'hôpital en Allemagne" },
     { slug: "ingenieurs", img: "ingenieurs-v2", sector: "/secteurs/ingenierie", label: content.metierIngenieurs, alt: "Une ingénieure casquée devant des plans et des écrans techniques" },
     { slug: "informaticiens", img: "informaticiens", sector: "/secteurs/informatique", label: content.metierInformaticiens, alt: "Un informaticien à son poste, code affiché sur ses écrans" },
     { slug: "techniciens", img: "techniciens-v2", sector: "/secteurs/industrie", label: content.metierTechniciens, alt: "Un technicien devant une armoire électrique industrielle" },
