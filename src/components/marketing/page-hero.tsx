@@ -14,8 +14,8 @@ export function PageHero({
   return (
     <section className="bg-brand-card">
       <div
-        className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid gap-10 lg:gap-12 items-center ${
-          image ? "lg:grid-cols-2" : ""
+        className={`mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid gap-10 lg:gap-12 items-center ${
+          image ? "max-w-7xl lg:grid-cols-[2fr_3fr]" : "max-w-6xl"
         }`}
       >
         <div>
@@ -33,10 +33,10 @@ export function PageHero({
         </div>
         {image && (
           <div
-            className="animate-fade-up relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[4/5] shadow-lg"
+            className="animate-fade-up relative rounded-2xl overflow-hidden aspect-[3/2] shadow-lg"
             style={{ animationDelay: "120ms" }}
           >
-            <Image src={image} alt={imageAlt ?? ""} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+            <Image src={image} alt={imageAlt ?? ""} fill priority sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover" />
           </div>
         )}
       </div>
