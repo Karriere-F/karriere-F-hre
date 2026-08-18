@@ -77,14 +77,14 @@ export default async function HomePage() {
       {/* Section 1 — Hero: editorial multi-trade photo bleeding in from the right, text left */}
       <section className="relative overflow-hidden bg-brand-white">
         {/* Desktop photo: full-bleed on the right, faded into the page on its left and edges */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[64%] lg:block">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[72%] lg:block">
           <Image
-            src="/images/hero-metiers.jpg"
+            src="/images/hero-equipe.jpg"
             alt="Une infirmière, un ouvrier du bâtiment, un informaticien, un cuisinier et un technicien industriel africains au travail en Allemagne"
             fill
             priority
-            sizes="64vw"
-            className="object-cover object-[55%_45%]"
+            sizes="72vw"
+            className="object-cover object-[50%_42%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
           <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-brand-white to-transparent" />
@@ -95,7 +95,7 @@ export default async function HomePage() {
           {/* Mobile photo: above the text */}
           <div className="relative -mx-4 aspect-[16/11] sm:-mx-6 lg:hidden">
             <Image
-              src="/images/hero-metiers.jpg"
+              src="/images/hero-equipe.jpg"
               alt="Une infirmière, un ouvrier du bâtiment, un informaticien, un cuisinier et un technicien industriel africains au travail en Allemagne"
               fill
               priority
