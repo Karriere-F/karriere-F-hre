@@ -106,12 +106,12 @@ export default async function HomePage() {
           </div>
 
           {/* Text block */}
-          <div className="max-w-xl py-12 lg:flex lg:min-h-[780px] lg:max-w-lg lg:flex-col lg:justify-center lg:py-28">
+          <div className="max-w-xl py-12 lg:flex lg:min-h-[780px] lg:max-w-xl lg:flex-col lg:justify-center lg:py-28">
             <span className="animate-fade-up text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-text">
               {content.heroSurtitre}
             </span>
             <h1
-              className="animate-fade-up mt-5 font-sans font-bold uppercase text-brand-black text-balance"
+              className="animate-fade-up mt-5 font-sans font-bold uppercase text-brand-black text-balance whitespace-normal lg:whitespace-pre-line"
               style={{ fontSize: "clamp(2.375rem, 5vw, 4.25rem)", letterSpacing: "-0.02em", lineHeight: 1.05, animationDelay: "60ms" }}
             >
               {content.heroTitle}
@@ -132,7 +132,7 @@ export default async function HomePage() {
               ))}
             </p>
             <p
-              className="animate-fade-up mt-6 max-w-md text-brand-ink-secondary leading-relaxed"
+              className="animate-fade-up mt-6 max-w-xl text-brand-ink-secondary leading-relaxed whitespace-normal lg:whitespace-pre-line"
               style={{ animationDelay: "140ms" }}
             >
               {content.heroSubtitle}
@@ -172,9 +172,10 @@ export default async function HomePage() {
             </div>
 
             <p
-              className="animate-fade-up mt-8 text-sm font-medium text-brand-ink-secondary"
+              className="animate-fade-up mt-8 text-sm italic text-brand-ink-secondary"
               style={{ animationDelay: "260ms" }}
             >
+              <span className="font-semibold text-brand-black">Karriere Fähre.</span>{" "}
               {content.heroClosing}
             </p>
           </div>
