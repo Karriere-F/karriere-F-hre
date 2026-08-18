@@ -5,6 +5,7 @@ import type { Locale } from "../../../i18n/routing";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 import { NavDropdown } from "./nav-dropdown";
+import { HeaderShell } from "./header-shell";
 import { ACTIVE_SECTOR_PATH, SECTORS_ALL, SECTEURS_UI } from "@/lib/secteurs";
 import { tr } from "@/lib/localized";
 
@@ -102,7 +103,7 @@ export async function SiteHeader() {
     "text-sm font-medium text-brand-ink hover:text-brand-gold-text transition-colors duration-150";
 
   return (
-    <header className="bg-brand-white text-brand-ink sticky top-0 z-40 border-b border-brand-grid">
+    <HeaderShell>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centred logo: audience links to its left, About / language / apply to its
             right. On mobile the two audience links collapse into the drawer. */}
@@ -151,6 +152,6 @@ export async function SiteHeader() {
           </div>
         </div>
       </div>
-    </header>
+    </HeaderShell>
   );
 }
