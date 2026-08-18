@@ -74,69 +74,110 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col">
-      {/* Section 1 — Hero: full-bleed image, text over a left gradient */}
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-brand-black">
-        <Image
-          src="/images/parcours-allemagne.jpg"
-          alt="Un technicien, une infirmière, un cadre, un ingénieur et un chef marchent vers une ville allemande au lever du soleil"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[center_30%] brightness-115 motion-safe:animate-[slowZoom_25s_ease-in-out_infinite_alternate]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-black/85 via-brand-black/45 to-transparent" />
-        <div className="relative w-full mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-xl">
+      {/* Section 1 — Hero: editorial multi-trade photo bleeding in from the right, text left */}
+      <section className="relative overflow-hidden bg-brand-white">
+        {/* Desktop photo: full-bleed on the right, faded into the page on its left and edges */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[64%] lg:block">
+          <Image
+            src="/images/hero-metiers.jpg"
+            alt="Une infirmière, un ouvrier du bâtiment, un informaticien, un cuisinier et un technicien industriel africains au travail en Allemagne"
+            fill
+            priority
+            sizes="64vw"
+            className="object-cover object-[55%_45%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-brand-white to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-white to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Mobile photo: above the text */}
+          <div className="relative -mx-4 aspect-[16/11] sm:-mx-6 lg:hidden">
+            <Image
+              src="/images/hero-metiers.jpg"
+              alt="Une infirmière, un ouvrier du bâtiment, un informaticien, un cuisinier et un technicien industriel africains au travail en Allemagne"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-[55%_45%]"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-white to-transparent" />
+          </div>
+
+          {/* Text block */}
+          <div className="max-w-xl py-12 lg:flex lg:min-h-[780px] lg:max-w-lg lg:flex-col lg:justify-center lg:py-28">
+            <span className="animate-fade-up text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-text">
+              {content.heroSurtitre}
+            </span>
             <h1
-              className="animate-fade-up font-serif text-brand-white leading-[1.06] text-balance"
-              style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", letterSpacing: "-0.025em" }}
+              className="animate-fade-up mt-5 font-sans font-bold uppercase text-brand-black text-balance"
+              style={{ fontSize: "clamp(2.375rem, 5vw, 4.25rem)", letterSpacing: "-0.02em", lineHeight: 1.05, animationDelay: "60ms" }}
             >
               {content.heroTitle}
             </h1>
             <p
-              className="animate-fade-up mt-6 text-brand-white/85 text-base leading-relaxed text-justify [hyphens:none]"
-              style={{ animationDelay: "80ms" }}
+              className="animate-fade-up mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-semibold uppercase tracking-[0.1em] text-brand-black"
+              style={{ animationDelay: "100ms" }}
+            >
+              {content.heroTags.split(" · ").map((w, i) => (
+                <Fragment key={w}>
+                  {i > 0 && (
+                    <span aria-hidden="true" className="text-brand-gold-text">
+                      ·
+                    </span>
+                  )}
+                  <span>{w}</span>
+                </Fragment>
+              ))}
+            </p>
+            <p
+              className="animate-fade-up mt-6 max-w-md text-brand-ink-secondary leading-relaxed"
+              style={{ animationDelay: "140ms" }}
             >
               {content.heroSubtitle}
             </p>
+            <div
+              className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+              style={{ animationDelay: "180ms" }}
+            >
+              <Link
+                href="/postuler"
+                className="press inline-flex h-[54px] items-center justify-center rounded-md bg-brand-black px-8 font-semibold text-brand-white transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black"
+              >
+                {content.heroCtaStart}
+              </Link>
+              <Link
+                href="/secteurs"
+                className="press inline-flex h-[54px] items-center justify-center rounded-md border border-brand-black/25 px-8 font-semibold text-brand-black transition-colors duration-200 hover:border-brand-gold hover:text-brand-gold-text"
+              >
+                {content.heroCtaDiscover}
+              </Link>
+            </div>
+
+            {/* Cameroun -> Allemagne : the crossing, kept discreet */}
+            <div
+              className="animate-fade-up mt-9 hidden items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-ink-muted sm:flex"
+              style={{ animationDelay: "220ms" }}
+            >
+              <span className="text-brand-black">{content.heroFrom}</span>
+              {[content.heroPath1, content.heroPath2, content.heroPath3, content.heroPath4].map((step) => (
+                <Fragment key={step}>
+                  <span aria-hidden="true" className="h-px w-5 bg-brand-gold/50" />
+                  <span>{step}</span>
+                </Fragment>
+              ))}
+              <span aria-hidden="true" className="h-px w-5 bg-brand-gold/50" />
+              <span className="text-brand-black">{content.heroTo}</span>
+            </div>
+
             <p
-              className="animate-fade-up mt-6 font-serif text-2xl text-brand-gold-light leading-snug text-balance"
-              style={{ animationDelay: "120ms" }}
+              className="animate-fade-up mt-8 text-sm font-medium text-brand-ink-secondary"
+              style={{ animationDelay: "260ms" }}
             >
               {content.heroClosing}
             </p>
           </div>
-          <div
-            className="animate-fade-up mt-8 flex flex-wrap gap-4 sm:flex-nowrap"
-            style={{ animationDelay: "160ms" }}
-          >
-            <Link
-              href="/postuler"
-              className="press whitespace-nowrap rounded-full bg-brand-gold px-7 py-3.5 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-            >
-              {content.heroCtaStart}
-            </Link>
-            <Link
-              href="/a-propos/methode"
-              className="press whitespace-nowrap rounded-full bg-brand-gold px-7 py-3.5 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
-            >
-              {content.heroCtaDiscover}
-            </Link>
-          </div>
-          <ul
-            className="animate-fade-up mt-8 flex flex-wrap items-center gap-x-8 gap-y-2.5 sm:flex-nowrap"
-            style={{ animationDelay: "200ms" }}
-          >
-            {[content.heroTrust1, content.heroTrust2, content.heroTrust3].map((tm) => (
-              <li
-                key={tm}
-                className="flex items-center gap-2 whitespace-nowrap text-sm font-medium text-brand-white/90"
-              >
-                <Check size={16} strokeWidth={2} aria-hidden="true" className="text-brand-gold-light" />
-                {tm}
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
