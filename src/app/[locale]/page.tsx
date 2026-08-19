@@ -88,7 +88,14 @@ export default async function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
           <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-brand-white to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-white to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-brand-white via-brand-white/85 to-transparent" />
+          {/* Handwritten brand sign-off, bottom-right of the photo */}
+          <div className="absolute bottom-5 right-8 text-right font-script leading-[1.1]">
+            <span className="block text-3xl text-brand-black">Karriere Fähre.</span>
+            <span className="block text-2xl text-brand-gold-text">
+              L&apos;exigence allemande. Votre réussite.
+            </span>
+          </div>
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -102,7 +109,14 @@ export default async function HomePage() {
               sizes="100vw"
               className="object-cover object-[55%_45%]"
             />
-            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-white to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-white via-brand-white/85 to-transparent" />
+            {/* Handwritten brand sign-off, bottom-right of the photo */}
+            <div className="absolute bottom-3 right-4 max-w-[85%] text-right font-script leading-[1.1]">
+              <span className="block text-2xl text-brand-black">Karriere Fähre.</span>
+              <span className="block text-xl text-brand-gold-text">
+                L&apos;exigence allemande. Votre réussite.
+              </span>
+            </div>
           </div>
 
           {/* Text block */}
@@ -170,14 +184,6 @@ export default async function HomePage() {
               <span aria-hidden="true" className="h-px w-5 bg-brand-gold/50" />
               <span className="text-brand-black">{content.heroTo}</span>
             </div>
-
-            <p
-              className="animate-fade-up mt-8 text-sm italic text-brand-ink-secondary"
-              style={{ animationDelay: "260ms" }}
-            >
-              <span className="font-semibold text-brand-black">Karriere Fähre.</span>{" "}
-              {content.heroClosing}
-            </p>
           </div>
         </div>
       </section>
