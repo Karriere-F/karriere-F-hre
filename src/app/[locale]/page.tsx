@@ -5,7 +5,7 @@ import { Check, ArrowRight } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
-import { Traversee } from "@/components/home/traversee";
+import { HeroParcours } from "@/components/home/hero-parcours";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "../../../i18n/routing";
 import type frMessages from "../../../messages/fr.json";
@@ -74,8 +74,11 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col">
-      {/* Section 1 — Hero: editorial multi-trade photo bleeding in from the right, text left */}
+      {/* Section 1 — Hero: editorial multi-trade photo bleeding in from the right, text left,
+          with the animated Africa → Germany journey banded across the bottom */}
       <section className="relative overflow-hidden bg-brand-white">
+        {/* Upper region — text + photo */}
+        <div className="relative">
         {/* Desktop photo: full-bleed on the right, faded into the page on its left and edges */}
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[72%] lg:block">
           <Image
@@ -120,7 +123,7 @@ export default async function HomePage() {
           </div>
 
           {/* Text block */}
-          <div className="max-w-xl py-12 lg:flex lg:min-h-[780px] lg:max-w-xl lg:flex-col lg:justify-center lg:py-28">
+          <div className="max-w-xl py-12 lg:flex lg:min-h-[600px] lg:max-w-xl lg:flex-col lg:justify-center lg:py-20">
             <h1
               className="animate-fade-up font-sans font-bold uppercase text-brand-black text-balance whitespace-normal lg:whitespace-pre-line"
               style={{ fontSize: "clamp(2.375rem, 5vw, 4.25rem)", letterSpacing: "-0.02em", lineHeight: 1.05, animationDelay: "60ms" }}
@@ -166,21 +169,23 @@ export default async function HomePage() {
               </Link>
             </div>
 
-            {/* Cameroun -> Allemagne : the crossing, kept discreet */}
-            <div
-              className="animate-fade-up mt-9 hidden items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-ink-muted sm:flex"
-              style={{ animationDelay: "220ms" }}
-            >
-              <span className="text-brand-black">{content.heroFrom}</span>
-              {[content.heroPath1, content.heroPath2, content.heroPath3, content.heroPath4].map((step) => (
-                <Fragment key={step}>
-                  <span aria-hidden="true" className="h-px w-5 bg-brand-gold/50" />
-                  <span>{step}</span>
-                </Fragment>
-              ))}
-              <span aria-hidden="true" className="h-px w-5 bg-brand-gold/50" />
-              <span className="text-brand-black">{content.heroTo}</span>
-            </div>
+          </div>
+        </div>
+        </div>
+
+        {/* La Traversée — the Africa → Germany journey, animated across the bottom of the hero */}
+        <div className="relative border-t border-brand-grid">
+          <div className="mx-auto max-w-5xl px-4 pb-14 pt-11 sm:px-6 lg:px-8">
+            <HeroParcours
+              stops={[
+                { label: content.tw1L, sublabel: content.tw1S },
+                { label: content.tw2L, sublabel: content.tw2S },
+                { label: content.tw3L, sublabel: content.tw3S },
+                { label: content.tw4L, sublabel: content.tw4S },
+                { label: content.tw5L, sublabel: content.tw5S },
+                { label: content.tw6L, sublabel: content.tw6S },
+              ]}
+            />
           </div>
         </div>
       </section>
@@ -314,25 +319,6 @@ export default async function HomePage() {
           </ul>
         </div>
       </section>
-
-      {/* La Traversée — signature scroll animation: a light crossing from Africa to Germany */}
-      <Traversee
-        eyebrow={content.traverseeEyebrow}
-        title={content.riveTitle}
-        subtitle={content.traverseeSubtitle}
-        ctaCandidat={content.traverseeCtaCandidat}
-        ctaRecrute={content.traverseeCtaRecrute}
-        imageSrc="/images/traversee-walk.jpg"
-        imageAlt="Un jeune professionnel camerounais marche vers les départs d'un aéroport allemand, passeport en main"
-        stops={[
-          { label: content.tw1L, sublabel: content.tw1S },
-          { label: content.tw2L, sublabel: content.tw2S },
-          { label: content.tw3L, sublabel: content.tw3S },
-          { label: content.tw4L, sublabel: content.tw4S },
-          { label: content.tw5L, sublabel: content.tw5S },
-          { label: content.tw6L, sublabel: content.tw6S },
-        ]}
-      />
 
       {/* Section 3 — Pourquoi Karriere Fähre : méthode, promotion, équipe */}
       <section className="bg-brand-card">
