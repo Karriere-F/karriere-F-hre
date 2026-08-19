@@ -188,6 +188,15 @@ export async function SiteFooter() {
         </div>
       </div>
 
+      {/* Handwritten brand sign-off */}
+      <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-10">
+        <p className="font-script text-3xl leading-[1.15] text-brand-gold-light sm:text-4xl">
+          Karriere Fähre.
+          <br />
+          L&apos;exigence allemande. Votre réussite.
+        </p>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-brand-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-brand-white/45 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-10">

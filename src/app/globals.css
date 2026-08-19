@@ -26,6 +26,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-script: var(--font-signature), "Segoe Script", cursive;
 
   --color-brand-black: var(--brand-black);
   --color-brand-black-2: var(--brand-black-2);

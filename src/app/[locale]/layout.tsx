@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "../../../i18n/routing";
@@ -22,6 +23,17 @@ const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
   display: "swap",
+});
+
+// Handwritten script, used only for the brand sign-off in the footer.
+// Self-hosted so it works offline and does not depend on Google Fonts at build.
+const dancing = localFont({
+  variable: "--font-signature",
+  display: "swap",
+  src: [
+    { path: "../fonts/DancingScript-600.ttf", weight: "600", style: "normal" },
+    { path: "../fonts/DancingScript-700.ttf", weight: "700", style: "normal" },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -49,7 +61,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${playfair.variable} ${manrope.variable} h-full antialiased`}
+      className={`${playfair.variable} ${manrope.variable} ${dancing.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-brand-white text-brand-ink">
         <OrganizationJsonLd />
