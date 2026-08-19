@@ -121,11 +121,8 @@ export default async function HomePage() {
 
           {/* Text block */}
           <div className="max-w-xl py-12 lg:flex lg:min-h-[780px] lg:max-w-xl lg:flex-col lg:justify-center lg:py-28">
-            <span className="animate-fade-up text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-text">
-              {content.heroSurtitre}
-            </span>
             <h1
-              className="animate-fade-up mt-5 font-sans font-bold uppercase text-brand-black text-balance whitespace-normal lg:whitespace-pre-line"
+              className="animate-fade-up font-sans font-bold uppercase text-brand-black text-balance whitespace-normal lg:whitespace-pre-line"
               style={{ fontSize: "clamp(2.375rem, 5vw, 4.25rem)", letterSpacing: "-0.02em", lineHeight: 1.05, animationDelay: "60ms" }}
             >
               {content.heroTitle}
