@@ -108,7 +108,7 @@ export async function SiteHeader() {
         {/* Logo on the left, navigation on the right. No solid CTA in the bar:
             the gold stays a rare accent, which reads more premium. On mobile the
             nav collapses into the drawer. */}
-        <div className="flex h-20 sm:h-24 items-center justify-between gap-4">
+        <div className="flex h-[108px] sm:h-[116px] items-center justify-between gap-4">
           <Link href="/" className="flex items-center" aria-label="Karriere Fähre">
             <Image
               src="/logo-kf.png"
@@ -116,7 +116,7 @@ export async function SiteHeader() {
               width={900}
               height={620}
               priority
-              className="h-16 sm:h-20 w-auto"
+              className="w-[148px] sm:w-[160px] h-auto"
             />
           </Link>
 
