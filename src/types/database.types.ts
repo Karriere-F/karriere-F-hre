@@ -123,6 +123,37 @@ export interface Database {
         Update: Partial<Database["public"]["Tables"]["contact_messages"]["Row"]>;
         Relationships: [];
       };
+      profile_evaluations: {
+        Row: {
+          id: string;
+          prenom: string;
+          nom: string;
+          email: string;
+          whatsapp: string;
+          pays: string;
+          objectif: string | null;
+          etudes: string | null;
+          domaine: string | null;
+          qualification: string | null;
+          experience: string | null;
+          allemand: string | null;
+          certificat: string | null;
+          age: string | null;
+          orientation: string | null;
+          compat: string | null;
+          handled: boolean;
+          created_at: string;
+        };
+        Insert: Partial<Database["public"]["Tables"]["profile_evaluations"]["Row"]> & {
+          prenom: string;
+          nom: string;
+          email: string;
+          whatsapp: string;
+          pays: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["profile_evaluations"]["Row"]>;
+        Relationships: [];
+      };
       appointments: {
         Row: {
           id: string;
