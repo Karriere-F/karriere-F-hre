@@ -111,7 +111,7 @@ export async function SiteHeader() {
         <div className="flex h-[108px] sm:h-[116px] items-center justify-between gap-4">
           <Link href="/" className="flex items-center" aria-label="Karriere Fähre">
             <Image
-              src="/logo-kf.png"
+              src="/logo-kf-transparent.png"
               alt="Karriere Fähre"
               width={900}
               height={620}
