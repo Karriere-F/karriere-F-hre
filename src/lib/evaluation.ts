@@ -157,6 +157,13 @@ const FR: Record<string, Record<string, string>> = {
   },
 };
 
+// French label for a stored code (used by the summary and the admin list). Groups:
+// objectif · etudes · domaine · qualification · experience · allemand · path · compat.
+export function frLabel(group: string, key?: string | null): string {
+  if (!key) return "—";
+  return FR[group]?.[key] ?? key;
+}
+
 // Human-readable French summary of the whole evaluation, stored with the lead so a
 // counselor can read the profile and the computed orientation at a glance.
 export function buildSummary(a: Answers): string {

@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { requireRole } from "@/lib/auth/require-role";
 import type { CandidateStatus } from "@/types/database.types";
 
@@ -111,6 +112,23 @@ export async function markContactMessageHandled(messageId: string, handled: bool
   if (error) return { ok: false as const, error: "update_failed" };
 
   revalidatePath("/admin/contact-messages");
+  return { ok: true as const };
+}
+
+// profile_evaluations has RLS enabled with no policies, so it's reached with the
+// service-role client (the admin role is already enforced by requireRole).
+export async function markEvaluationHandled(evaluationId: string, handled: boolean) {
+  await requireRole("admin");
+  const admin = createAdminClient();
+
+  const { error } = await admin
+    .from("profile_evaluations")
+    .update({ handled })
+    .eq("id", evaluationId);
+
+  if (error) return { ok: false as const, error: "update_failed" };
+
+  revalidatePath("/admin/evaluations");
   return { ok: true as const };
 }
 

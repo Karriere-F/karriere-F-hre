@@ -41,6 +41,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           Messages de contact
         </Link>
         <Link
+          href="/admin/evaluations"
+          className="text-brand-ink-secondary hover:text-brand-gold"
+        >
+          Évaluations profil
+        </Link>
+        <Link
           href="/admin/appointments"
           className="text-brand-ink-secondary hover:text-brand-gold"
         >

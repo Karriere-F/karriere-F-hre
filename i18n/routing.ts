@@ -320,6 +320,7 @@ export const routing = defineRouting({
     "/admin/candidates": "/admin/candidates",
     "/admin/candidates/[id]": "/admin/candidates/[id]",
     "/admin/contact-messages": "/admin/contact-messages",
+    "/admin/evaluations": "/admin/evaluations",
     "/admin/content": "/admin/content",
     "/admin/content/[pageKey]": "/admin/content/[pageKey]",
     "/admin/employers": "/admin/employers",
