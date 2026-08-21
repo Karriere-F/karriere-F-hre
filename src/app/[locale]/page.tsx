@@ -131,7 +131,7 @@ export default async function HomePage() {
               {content.heroTitle}
             </h1>
             <p
-              className="animate-fade-up mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-semibold uppercase tracking-[0.1em] text-brand-black"
+              className="animate-fade-up mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-semibold uppercase tracking-[0.1em] text-brand-gold-text"
               style={{ animationDelay: "100ms" }}
             >
               {content.heroTags.split(" · ").map((w, i) => (
@@ -157,13 +157,13 @@ export default async function HomePage() {
             >
               <Link
                 href="/postuler"
-                className="press inline-flex h-[54px] items-center justify-center rounded-md bg-brand-black px-8 font-semibold text-brand-white transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black"
+                className="press inline-flex h-[54px] items-center justify-center rounded-md bg-brand-gold px-8 font-semibold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
               >
                 {content.heroCtaStart}
               </Link>
               <Link
                 href="/secteurs"
-                className="press inline-flex h-[54px] items-center justify-center rounded-md border border-brand-black/25 px-8 font-semibold text-brand-black transition-colors duration-200 hover:border-brand-gold hover:text-brand-gold-text"
+                className="press inline-flex h-[54px] items-center justify-center rounded-md border border-brand-gold px-8 font-semibold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black"
               >
                 {content.heroCtaDiscover}
               </Link>
