@@ -234,7 +234,6 @@
     "linkHistoire": "Notre histoire",
     "linkMethode": "Notre méthode",
     "linkPartenaires": "Nos partenaires",
-
     "distingueEyebrow": "Notre approche",
     "distingueTitle": "Ce qui nous distingue",
     "distingueLead": "Une agence pensée pour les deux rives, avec une vraie maîtrise du cadre allemand.",
@@ -246,14 +245,12 @@
     "dist3Body": "De l'A1 jusqu'au niveau requis, pour accompagner même les candidats qui partent de zéro.",
     "dist4Title": "Une exigence éthique",
     "dist4Body": "Un recrutement respectueux des personnes comme des pays d'origine, sur le long terme.",
-
     "ethiqueEyebrow": "Notre engagement",
     "ethiqueTitle": "Un recrutement éthique, des deux côtés du pont",
     "ethiqueHeading": "Nous suivons le Code de pratique de l'OMS",
     "ethiqueBody1": "Le recrutement international de professionnels, en particulier dans la santé, doit être responsable. Nous nous appuyons sur le Code de pratique mondial de l'OMS pour le recrutement international des personnels de santé : nous ne recrutons pas au détriment des pays dont les systèmes essentiels sont fragiles.",
     "ethiqueBody2": "Concrètement, cela signifie des parcours transparents, le consentement éclairé des candidats, et une relation gagnant-gagnant entre l'Afrique centrale et l'Allemagne.",
     "ethiqueNote": "Référence : Code de pratique mondial de l'OMS pour le recrutement international des personnels de santé.",
-
     "equipeEyebrow": "Les visages du pont",
     "equipeTitle": "L'équipe",
     "equipeLead": "Une équipe germano-camerounaise qui connaît les deux réalités : celle des talents africains et celle des employeurs allemands.",
@@ -262,10 +259,8 @@
     "equipe2Role": "Accompagnement candidats",
     "equipe3Role": "Relations entreprises",
     "equipePlaceholder": "Présentation à venir",
-
     "faqEyebrow": "Bon à savoir",
     "faqTitle": "Questions fréquentes sur Karriere Fähre",
-
     "doorsTitle": "De quel côté du pont êtes-vous ?",
     "doorsText": "Que vous vouliez travailler ou vous former en Allemagne, ou que vous cherchiez à recruter, nous vous accompagnons.",
     "doorsCandidat": "Je veux travailler / me former en Allemagne",
@@ -311,7 +306,6 @@
     "kick": "Espace candidat, Cameroun & Afrique centrale → Allemagne",
     "ctaEligibility": "Vérifier mon éligibilité",
     "ctaVoies": "Comparer les 3 voies",
-
     "voiesEyebrow": "Votre point de départ",
     "voiesTitle": "Quelles sont les voies pour travailler en Allemagne ?",
     "voiesLead": "Trois voies légales mènent à l'Allemagne, selon votre diplôme, votre expérience et votre niveau d'allemand. Voici comment les distinguer, et laquelle vous correspond.",
@@ -363,7 +357,6 @@
     "tableRow6Val2": "Vous débutez votre carrière",
     "tableRow6Val3": "Vous êtes flexible et motivé",
     "tableNote": "Les seuils exacts (points, niveau de langue par métier) évoluent selon la réglementation allemande. Nous les vérifions pour votre cas lors de l'évaluation.",
-
     "eligibiliteEyebrow": "Éligibilité",
     "eligibiliteTitle": "Suis-je éligible pour travailler en Allemagne ?",
     "eligibiliteLead": "Vous êtes probablement éligible si vous avez entre 18 et environ 40 ans, un diplôme ou une expérience professionnelle, et la volonté d'apprendre l'allemand jusqu'au niveau requis. Quatre éléments comptent :",
@@ -375,9 +368,7 @@
     "crit3Body": "La plupart des voies s'adressent aux 18-40 ans, l'Ausbildung visant plutôt les plus jeunes. Chaque cas s'étudie.",
     "crit4Title": "Motivation & projet",
     "crit4Body": "La réussite tient autant à la préparation qu'à l'envie. Nous accompagnons ceux qui s'engagent sérieusement.",
-
     "ctaEval": "Faire évaluer mon profil",
-
     "accompagnementEyebrow": "Service complet",
     "accompagnementTitle": "Notre accompagnement 360°",
     "accompagnementLead": "De la première évaluation jusqu'à votre intégration en Allemagne, nous prenons en charge chaque étape. Sept services, un seul interlocuteur : vous n'avez jamais à naviguer seul dans les démarches.",
@@ -395,29 +386,23 @@
     "acc6Body": "Billet, arrivée, premiers jours : votre départ est préparé pour éviter toute mauvaise surprise.",
     "acc7Title": "Intégration et suivi sur place",
     "acc7Body": "Nous restons présents après votre arrivée : installation, repères et réseau des anciens candidats.",
-
     "metiersEyebrow": "Les opportunités",
     "metiersTitle": "Quels métiers recrutent le plus en Allemagne ?",
     "metiersLead": "L'Allemagne manque de main-d'œuvre qualifiée dans la santé, le BTP et l'artisanat, l'hôtellerie-restauration, l'industrie technique et l'informatique. Ce sont les secteurs où votre profil a le plus de valeur.",
     "metiersCta": "Voir tous les métiers en détail",
     "statBig": "Pénurie",
     "statText": "L'Allemagne fait face à une pénurie durable de main-d'œuvre qualifiée dans de nombreux secteurs, à l'origine de la réforme de sa loi sur l'immigration et de la Chancenkarte.",
-
     "formationsEyebrow": "Cours de langue",
     "formationsTitle": "Deux parcours de formation, selon votre niveau",
     "formationsLead": "Vous partez de zéro en allemand, ou vous avez déjà le niveau et voulez être prêt pour le marché du travail allemand ? Nous avons un parcours pour chaque situation.",
-
     "blogEyebrow": "Le blog",
     "blogTitle": "Vivre et travailler en Allemagne : nos articles",
     "blogLead": "Guides pratiques, conseils et réponses aux questions les plus fréquentes pour préparer votre projet.",
-
     "faqEyebrow": "Questions fréquentes",
     "faqTitle": "Vos questions sur le travail en Allemagne",
-
     "finalTitle": "Faites évaluer votre profil",
     "finalText": "En quelques minutes, découvrez quelle voie vous correspond et quelles étapes vous attendent.",
     "finalCta": "Postuler / vérifier mon éligibilité",
-
     "linkComment": "Comment ça marche",
     "linkEligibilite": "Suis-je éligible ?",
     "linkDiplomes": "Reconnaissance des diplômes",
@@ -951,7 +936,6 @@
     "kf3Label": "Procédure accélérée possible",
     "kf4Big": "A → Z",
     "kf4Label": "Sélection, formation, visa, intégration",
-
     "probEyebrow": "Le défi",
     "probTitle": "La pénurie de main-d'œuvre freine votre activité ?",
     "probBody1": "Postes non pourvus, plannings sous tension, croissance ralentie : le manque de personnel qualifié coûte cher aux entreprises allemandes. Recruter localement ne suffit plus.",
@@ -960,7 +944,6 @@
     "probStat1Label": "de postes qualifiés non pourvus en Allemagne (sources officielles)",
     "probStat2Big": "Secteurs en tension",
     "probStat2Label": "santé, BTP, industrie, hôtellerie, IT, logistique",
-
     "pourquoiEyebrow": "Pourquoi nous",
     "pourquoiTitle": "Pourquoi recruter avec Karriere Fähre",
     "pourquoiLead": "Un partenaire unique, de la recherche du bon profil jusqu'à son intégration durable.",
@@ -970,7 +953,6 @@
     "pil2Body": "Reconnaissance des diplômes (Anerkennung), visa de travailleur qualifié, procédure accélérée : nous sécurisons chaque étape.",
     "pil3Title": "Un pont de confiance",
     "pil3Body": "Agence germano-camerounaise, nous comprenons les deux rives : la réalité des candidats et les attentes des employeurs allemands.",
-
     "secteursEyebrow": "Votre secteur",
     "secteursTitle": "Une réponse adaptée à votre activité",
     "secteursLead": "Chaque secteur a ses contraintes. Nous adaptons profils et préparation à votre réalité.",
@@ -982,7 +964,6 @@
     "seg3Body": "Bâtiment et métiers techniques : main-d'œuvre qualifiée rare, chantiers sous tension.",
     "seg4Title": "Industrie, IT & logistique",
     "seg4Body": "Usines, tech et transport : besoin de techniciens, de profils numériques et de conducteurs.",
-
     "servicesEyebrow": "Notre offre",
     "servicesTitle": "Un recrutement clé en main",
     "servicesLead": "De la recherche du bon profil jusqu'à son intégration, nous prenons en charge toute la chaîne : vous gardez un interlocuteur unique.",
@@ -994,7 +975,6 @@
     "srv3Body": "Reconnaissance des diplômes, dossier et procédure de visa, en toute conformité.",
     "srv4Title": "Suivi & intégration",
     "srv4Body": "Accompagnement après l'arrivée, pour une intégration réussie et durable.",
-
     "profilsEyebrow": "Profils disponibles",
     "profilsTitle": "Les métiers où nous recrutons",
     "profilsLead": "Des profils qualifiés dans les secteurs les plus en tension en Allemagne.",
@@ -1014,13 +994,11 @@
     "besoin2Tag1": "Diplôme de fin d'études",
     "besoin2Tag2": "Allemand au niveau requis avant l'arrivée",
     "besoin2Tag3": "Formation de 3 ans en alternance",
-
     "pourquoiAfriqueEyebrow": "Le vivier",
     "pourquoiAfriqueTitle": "Pourquoi l'Afrique centrale ?",
     "pourquoiAfriqueBody1": "L'Afrique centrale compte une jeunesse nombreuse, qualifiée et fortement motivée à construire une carrière durable. Francophones et formés à l'allemand par nos soins, ces candidats s'intègrent avec sérieux et un vrai projet de vie, pas une simple opportunité passagère.",
     "pourquoiAfriqueBody2": "Nos pays sources : Cameroun (base), Gabon, Congo, Tchad, Guinée équatoriale, République centrafricaine, et, en anglais, au-delà de l'Afrique centrale.",
     "pourquoiAfriqueCta": "Découvrir nos profils",
-
     "modelesEyebrow": "Deux façons de collaborer",
     "modelesTitle": "Le modèle qui correspond à votre urgence",
     "modelesLead": "Selon votre besoin, nous vous proposons des profils déjà prêts ou une formation sur mesure.",
@@ -1036,7 +1014,6 @@
     "modele2Tag1": "Montée en allemand (jusqu'à B2) + préparation métier",
     "modele2Tag2": "Profils façonnés pour votre secteur",
     "modele2Tag3": "Reconnaissance possible sur place (Anerkennungspartnerschaft)",
-
     "processusEyebrow": "Comment ça marche",
     "processusTitle": "Notre processus en 7 étapes",
     "processusLead": "Un déroulé clair et sécurisé, de l'analyse de votre besoin jusqu'à l'intégration durable, dans le respect du cadre légal allemand.",
@@ -1054,7 +1031,6 @@
     "proc6Body": "Dossier et visa de travailleur qualifié, accélérables via le § 81a.",
     "proc7Title": "Arrivée & intégration",
     "proc7Body": "Installation, prise de poste et suivi pour une intégration qui dure.",
-
     "cadreEyebrow": "Sécurité juridique",
     "cadreTitle": "Le cadre légal allemand, maîtrisé de bout en bout",
     "cadreLead": "Le Fachkräfteeinwanderungsgesetz, réformé en 2023-2024, ouvre trois voies. Nous connaissons chacune et retenons la plus rapide et la plus sûre pour votre recrutement.",
@@ -1065,7 +1041,6 @@
     "cadre3Title": "Partenariat de reconnaissance",
     "cadre3Body": "Nouveauté 2024 : l'Anerkennungspartnerschaft permet de faire venir le candidat, puis de finaliser la reconnaissance du diplôme sur place.",
     "cadreNote": "Ce que cela change pour vous : nous combinons ces instruments pour raccourcir les délais tout en restant parfaitement conformes. Vous n'avez pas à naviguer dans l'administration allemande, c'est notre métier.",
-
     "rolesEyebrow": "Répartition des rôles",
     "rolesTitle": "Qui fait quoi ?",
     "rolesLead": "Une répartition claire, pour que vous sachiez exactement ce que nous prenons en charge.",
@@ -1081,7 +1056,6 @@
     "rolesYou2": "Un engagement d'embauche (contrat ou promesse)",
     "rolesYou3": "Le lancement de la procédure accélérée, si souhaité",
     "rolesYou4": "Un accueil et un accompagnement à la prise de poste",
-
     "garantiesEyebrow": "Nos engagements",
     "garantiesTitle": "Ce sur quoi vous pouvez compter",
     "garantiesLead": "Des engagements clairs, parce que recruter à l'international demande de la confiance.",
@@ -1097,21 +1071,17 @@
     "gar5Body": "Nous restons présents pour une intégration qui dure.",
     "gar6Title": "Un engagement de solution",
     "gar6Body": "Si un profil ne convient pas, nous cherchons une alternative avec vous.",
-
     "partenaireEyebrow": "Partenariat",
     "partenaireTitle": "Devenez partenaire de Karriere Fähre",
     "partenaireLead": "Nous construisons un réseau des deux côtés du pont. Un partenaire peut être local (école de formation, centre de langue, organisme en Afrique centrale) ou basé en Allemagne (entreprise, établissement de santé, institution).",
     "partenaireCta": "Devenir partenaire",
-
     "faqEyebrow": "Questions fréquentes",
     "faqTitle": "Vos questions d'employeur",
-
     "contactEyebrow": "Demande de main-d'œuvre",
     "contactTitle": "Confiez-nous votre besoin de recrutement",
     "contactLead": "Décrivez-nous les postes à pourvoir : nous revenons vers vous avec des profils adaptés et un calendrier clair. Échange sans engagement.",
     "contactCta": "Déposer un besoin",
     "contactCtaSecondary": "Prendre rendez-vous",
-
     "cta": "Déposer un besoin",
     "linkServices": "Nos services de recrutement",
     "linkProfils": "Profils & secteurs disponibles",
@@ -1303,18 +1273,15 @@
     "subtitle": "L'Allemagne manque de professionnels qualifiés dans des secteurs entiers, santé, bâtiment, hôtellerie, industrie, informatique, logistique. Vous avez déjà un métier ? Ces secteurs vous attendent. Nous faisons reconnaître votre diplôme, vous menons au niveau d'allemand requis et vous ouvrons la porte d'un poste qualifié.",
     "kick": "Candidats, Métiers qui recrutent",
     "ctaSecteurs": "Voir les secteurs",
-
     "contexteEyebrow": "Le contexte",
     "contexteTitle": "Pourquoi l'Allemagne recrute à l'étranger",
     "contexteLead": "Le vieillissement de la population et une économie dynamique créent une pénurie durable de main-d'œuvre qualifiée. Pour la combler, l'Allemagne s'ouvre largement aux talents étrangers, dans un cadre légal dédié (Fachkräfteeinwanderungsgesetz).",
     "contexteBody": "Pour vous qui avez déjà une qualification, ce sont des postes ouverts dans plusieurs secteurs et un chemin balisé pour les décrocher : reconnaissance du diplôme, langue, visa de travailleur qualifié. C'est notre métier.",
-
     "secteursEyebrow": "Les secteurs",
     "secteursTitle": "Tous les métiers qui recrutent, en un coup d'œil",
     "secteursLead": "Chaque secteur et les postes qu'il recrute, avec leur intitulé allemand. Le niveau attendu est en général le B2.",
     "levelLabel": "Niveau B2",
     "openingsSuffix": "offres publiées",
-
     "eligibiliteEyebrow": "Éligibilité",
     "eligibiliteTitle": "Les conditions communes",
     "eligibiliteLead": "Quel que soit le secteur, quatre éléments déterminent votre projet, et nous vous aidons sur chacun :",
@@ -1326,7 +1293,6 @@
     "crit3Body": "Nous préparons l'Anerkennung de votre diplôme, l'étape la plus délicate.",
     "crit4Title": "Un projet durable",
     "crit4Body": "Les employeurs cherchent des profils qui s'installent dans la durée.",
-
     "parcoursEyebrow": "Votre parcours",
     "parcoursTitle": "De votre candidature à votre poste, en 4 étapes",
     "step1Title": "Évaluation",
@@ -1337,14 +1303,11 @@
     "step3Body": "Reconnaissance, dossier et visa de travailleur qualifié.",
     "step4Title": "Départ & intégration",
     "step4Body": "Prise de poste en Allemagne, avec notre suivi.",
-
     "faqEyebrow": "Questions fréquentes",
     "faqTitle": "Métiers en Allemagne : vos questions",
-
     "finalTitle": "Trouvez le métier qui vous correspond",
     "finalText": "Faites évaluer votre profil : nous vous dirons quel secteur et quelle voie vous conviennent, et quelles étapes vous attendent.",
     "finalCta": "Postuler / vérifier mon éligibilité",
-
     "filterCategory": "Catégorie",
     "allCategories": "Toutes les catégories",
     "backToCategories": "Toutes les catégories de métiers"
@@ -1377,7 +1340,6 @@
     "comingSoon": "Nos premiers articles arrivent bientôt.",
     "backToBlog": "Retour au blog"
   },
-
   "blogPartir": {
     "title": "Partir en Allemagne depuis l'Afrique",
     "subtitle": "L'Allemagne recrute des travailleurs qualifiés dans le monde entier, l'Afrique comprise. Le chemin est partout le même : faire reconnaître son diplôme, atteindre le niveau d'allemand, obtenir son visa. Voici comment il se déroule, avec le Cameroun comme exemple concret.",
@@ -1444,7 +1406,9 @@
       "fastTrackOption": "Fast Track : j'ai déjà le niveau B2",
       "fullTrainingOption": "Full Training : je débute ou niveau intermédiaire"
     },
-    "login": { "title": "Connexion candidat" },
+    "login": {
+      "title": "Connexion candidat"
+    },
     "dashboard": {
       "title": "Mon espace candidat",
       "pathLabel": "Parcours",
@@ -1475,7 +1439,9 @@
       "contactNameLabel": "Nom du contact",
       "companyNameLabel": "Nom de l'entreprise"
     },
-    "login": { "title": "Connexion entreprise" },
+    "login": {
+      "title": "Connexion entreprise"
+    },
     "dashboard": {
       "title": "Mon espace entreprise",
       "companyLabel": "Entreprise",
@@ -1515,12 +1481,226 @@
     }
   },
   "admin": {
-    "dashboard": { "title": "Tableau de bord" }
+    "dashboard": {
+      "title": "Tableau de bord"
+    }
   },
   "login": {
     "title": "Connexion",
     "email": "Email",
     "password": "Mot de passe",
     "submit": "Se connecter"
+  },
+  "evaluation": {
+    "title": "Évaluer mon profil",
+    "subtitle": "Diagnostic d'orientation pour construire votre parcours professionnel en Allemagne : Ausbildung, emploi direct ou préparation.",
+    "intro": {
+      "title": "Quel parcours professionnel en Allemagne correspond à votre profil ?",
+      "text": "En 3 minutes, nous analysons votre formation, votre expérience, votre niveau d'allemand et votre objectif afin d'identifier le parcours le plus pertinent pour vous.",
+      "promise": "Ausbildung · Emploi direct · Préparation",
+      "cta": "Commencer mon évaluation",
+      "reassurance": "Gratuit · Sans engagement · Analyse confidentielle"
+    },
+    "progress": "Étape {n} sur {total}",
+    "back": "Retour",
+    "continue": "Continuer",
+    "objectif": {
+      "title": "Quel est votre objectif ?",
+      "options": {
+        "ausbildung": "Faire une Ausbildung en Allemagne",
+        "emploi": "Travailler directement en Allemagne",
+        "former": "Me former puis travailler",
+        "indecis": "Je ne sais pas encore quel parcours choisir"
+      }
+    },
+    "etudes": {
+      "title": "Quel est votre niveau d'études ?",
+      "options": {
+        "sans": "Sans diplôme",
+        "bepc": "BEPC / équivalent",
+        "bac": "Bac",
+        "bac2": "Bac +2",
+        "bac3": "Bac +3",
+        "bac45": "Bac +4/5",
+        "autre": "Autre"
+      }
+    },
+    "domaine": {
+      "title": "Quel est votre domaine ?",
+      "options": {
+        "sante": "Santé",
+        "btp": "BTP",
+        "industrie": "Industrie",
+        "informatique": "Informatique",
+        "ingenierie": "Ingénierie",
+        "hotellerie": "Hôtellerie-Restauration",
+        "logistique": "Logistique",
+        "autre": "Autre"
+      }
+    },
+    "qualification": {
+      "title": "Êtes-vous déjà qualifié dans votre métier ?",
+      "options": {
+        "qualif_pro": "Oui, j'ai une qualification professionnelle",
+        "diplome_univ": "Oui, j'ai un diplôme universitaire",
+        "experience": "J'ai de l'expérience mais pas de qualification reconnue",
+        "en_formation": "Je suis encore en formation",
+        "non": "Non"
+      }
+    },
+    "experience": {
+      "title": "Combien d'années d'expérience avez-vous ?",
+      "options": {
+        "0": "0",
+        "<1": "< 1 an",
+        "1-2": "1–2 ans",
+        "3-5": "3–5 ans",
+        "5+": "5+ ans"
+      }
+    },
+    "allemand": {
+      "title": "Où en êtes-vous en allemand ?",
+      "options": {
+        "aucun": "Je ne parle pas allemand",
+        "a1": "A1",
+        "a2": "A2",
+        "b1": "B1",
+        "b2": "B2",
+        "c1": "C1+"
+      },
+      "certificatQuestion": "Avez-vous déjà obtenu un certificat d'allemand ?",
+      "oui": "Oui",
+      "non": "Non"
+    },
+    "age": {
+      "title": "Quel est votre âge ?",
+      "placeholder": "Votre âge",
+      "help": "Cela nous permet de contextualiser l'orientation. Aucun âge ne garantit ni n'exclut automatiquement un parcours.",
+      "cta": "Voir mon orientation"
+    },
+    "result": {
+      "title": "Votre parcours semble correspondre à :",
+      "compatLabel": "Compatibilité préliminaire :",
+      "compat": {
+        "elevee": "ÉLEVÉE",
+        "prometteuse": "PROMETTEUSE",
+        "aConstruire": "À CONSTRUIRE"
+      },
+      "strengthsTitle": "Vos points forts",
+      "checksTitle": "À vérifier",
+      "paths": {
+        "ausbildung": {
+          "name": "AUSBILDUNG",
+          "intro": "Votre profil semble particulièrement adapté à une formation professionnelle rémunérée en Allemagne.",
+          "strengths": [
+            "Formation pertinente",
+            "Motivation et projet cohérent",
+            "Accès à une qualification reconnue"
+          ],
+          "checks": [
+            "Niveau d'allemand",
+            "Conditions spécifiques du métier",
+            "Éligibilité et exigences de l'employeur"
+          ]
+        },
+        "emploi": {
+          "name": "EMPLOI DIRECT",
+          "intro": "Votre qualification et votre expérience peuvent permettre d'envisager une recherche d'emploi direct en Allemagne, sous réserve de la vérification de votre qualification et des exigences du métier.",
+          "strengths": [
+            "Qualification professionnelle ou diplôme",
+            "Expérience professionnelle",
+            "Projet professionnel cohérent"
+          ],
+          "checks": [
+            "Reconnaissance du diplôme",
+            "Niveau d'allemand exigé",
+            "Exigences spécifiques du poste"
+          ]
+        },
+        "preparation": {
+          "name": "PRÉPARATION",
+          "intro": "Avant de viser une Ausbildung ou un emploi, une phase de préparation — surtout linguistique — renforcera nettement votre dossier et vos chances.",
+          "strengths": [
+            "Projet de départ vers l'Allemagne",
+            "Marge de progression claire",
+            "Accompagnement possible dès le départ"
+          ],
+          "checks": [
+            "Apprentissage de l'allemand (objectif B1/B2)",
+            "Choix du secteur et du parcours",
+            "Constitution du dossier"
+          ]
+        }
+      },
+      "compareTitle": "Les deux parcours",
+      "table": {
+        "colAusbildung": "Ausbildung",
+        "colEmploi": "Emploi direct",
+        "rows": [
+          {
+            "label": "Formation",
+            "ausbildung": "Oui",
+            "emploi": "Déjà qualifié"
+          },
+          {
+            "label": "Travail",
+            "ausbildung": "Oui",
+            "emploi": "Oui"
+          },
+          {
+            "label": "Rémunération",
+            "ausbildung": "Pendant la formation",
+            "emploi": "Salaire professionnel"
+          },
+          {
+            "label": "Objectif",
+            "ausbildung": "Obtenir une qualification",
+            "emploi": "Intégrer directement un emploi"
+          },
+          {
+            "label": "Conditions",
+            "ausbildung": "Selon le métier",
+            "emploi": "Qualification + exigences du poste"
+          }
+        ]
+      },
+      "closerTo": "Votre profil semble actuellement plus proche de :",
+      "cta": "Recevoir mon analyse"
+    },
+    "lead": {
+      "title": "Recevez votre analyse personnalisée",
+      "intro": "Pour recevoir votre résultat détaillé et permettre à un conseiller Karriere Fähre de vérifier votre situation :",
+      "prenom": "Prénom",
+      "nom": "Nom",
+      "whatsapp": "WhatsApp / téléphone",
+      "email": "Email",
+      "pays": "Pays de résidence",
+      "submit": "Recevoir mon analyse",
+      "sending": "Envoi…",
+      "error": "Une erreur est survenue. Merci de réessayer.",
+      "requiredNote": "Vos informations restent confidentielles et servent uniquement à l'analyse de votre dossier par Karriere Fähre."
+    },
+    "final": {
+      "badge": "Analyse enregistrée",
+      "profileTitle": "Votre profil",
+      "labelObjectif": "Objectif",
+      "labelSecteur": "Secteur",
+      "labelQualification": "Qualification",
+      "labelExperience": "Expérience",
+      "labelAllemand": "Allemand",
+      "orientationTitle": "Notre orientation préliminaire",
+      "toStudy": "à étudier",
+      "stepsTitle": "Prochaines étapes",
+      "steps": [
+        "Vérification du diplôme",
+        "Vérification de la reconnaissance nécessaire",
+        "Vérification du niveau linguistique",
+        "Identification des postes ou formations compatibles",
+        "Candidature auprès des employeurs ou centres de formation"
+      ],
+      "whatsappCta": "Parler à un conseiller",
+      "whatsappMessage": "Bonjour, je viens de réaliser l'évaluation de profil sur votre site. Mon orientation préliminaire : {path}. J'aimerais en parler avec un conseiller Karriere Fähre."
+    },
+    "disclaimer": "Cette évaluation est une première orientation et ne constitue pas une promesse d'emploi, d'Ausbildung ou de visa. Votre éligibilité définitive dépend de la vérification de votre dossier et des exigences applicables à votre métier."
   }
 }

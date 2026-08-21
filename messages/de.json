@@ -234,7 +234,6 @@
     "linkHistoire": "Unsere Geschichte",
     "linkMethode": "Unsere Methode",
     "linkPartenaires": "Unsere Partner",
-
     "distingueEyebrow": "Unser Ansatz",
     "distingueTitle": "Was uns auszeichnet",
     "distingueLead": "Eine Agentur, die für beide Ufer gedacht ist, mit echter Beherrschung des deutschen Rechtsrahmens.",
@@ -246,14 +245,12 @@
     "dist3Body": "Von A1 bis zum erforderlichen Niveau, um auch Kandidaten zu begleiten, die bei null starten.",
     "dist4Title": "Ethischer Anspruch",
     "dist4Body": "Eine Rekrutierung, die Menschen wie Herkunftsländer respektiert, langfristig gedacht.",
-
     "ethiqueEyebrow": "Unser Engagement",
     "ethiqueTitle": "Ethische Rekrutierung, auf beiden Seiten der Brücke",
     "ethiqueHeading": "Wir folgen dem WHO-Verhaltenskodex",
     "ethiqueBody1": "Die internationale Rekrutierung von Fachkräften, insbesondere im Gesundheitswesen, muss verantwortungsvoll sein. Wir stützen uns auf den globalen WHO-Verhaltenskodex für die internationale Anwerbung von Gesundheitspersonal: wir rekrutieren nicht zu Lasten von Ländern mit fragilen wesentlichen Systemen.",
     "ethiqueBody2": "Konkret bedeutet das transparente Wege, informierte Zustimmung der Kandidaten und eine Win-win-Beziehung zwischen Zentralafrika und Deutschland.",
     "ethiqueNote": "Referenz: Globaler WHO-Verhaltenskodex für die internationale Anwerbung von Gesundheitspersonal.",
-
     "equipeEyebrow": "Die Gesichter der Brücke",
     "equipeTitle": "Das Team",
     "equipeLead": "Ein deutsch-kamerunisches Team, das beide Realitäten kennt: die der afrikanischen Talente und die der deutschen Arbeitgeber.",
@@ -262,10 +259,8 @@
     "equipe2Role": "Kandidatenbetreuung",
     "equipe3Role": "Unternehmensbeziehungen",
     "equipePlaceholder": "Vorstellung folgt",
-
     "faqEyebrow": "Gut zu wissen",
     "faqTitle": "Häufige Fragen zu Karriere Fähre",
-
     "doorsTitle": "Auf welcher Seite der Brücke stehen Sie?",
     "doorsText": "Ob Sie in Deutschland arbeiten oder sich ausbilden möchten, oder ob Sie rekrutieren möchten: wir begleiten Sie.",
     "doorsCandidat": "Ich möchte in Deutschland arbeiten / mich ausbilden",
@@ -311,7 +306,6 @@
     "kick": "Kandidatenbereich, Kamerun & Zentralafrika → Deutschland",
     "ctaEligibility": "Meine Eignung prüfen",
     "ctaVoies": "Die 3 Wege vergleichen",
-
     "voiesEyebrow": "Ihr Ausgangspunkt",
     "voiesTitle": "Welche Wege führen zur Arbeit in Deutschland?",
     "voiesLead": "Drei legale Wege führen nach Deutschland, je nach Ihrem Abschluss, Ihrer Erfahrung und Ihrem Deutschniveau. So unterscheiden sie sich, und welcher zu Ihnen passt.",
@@ -363,7 +357,6 @@
     "tableRow6Val2": "Sie starten Ihre Karriere",
     "tableRow6Val3": "Sie sind flexibel und motiviert",
     "tableNote": "Die genauen Schwellenwerte (Punkte, Sprachniveau je Beruf) ändern sich je nach deutscher Gesetzgebung. Wir prüfen sie für Ihren Fall bei der Bewertung.",
-
     "eligibiliteEyebrow": "Voraussetzungen",
     "eligibiliteTitle": "Bin ich geeignet, um in Deutschland zu arbeiten?",
     "eligibiliteLead": "Sie sind wahrscheinlich geeignet, wenn Sie zwischen 18 und etwa 40 Jahre alt sind, einen Abschluss oder Berufserfahrung haben und bereit sind, Deutsch bis zum erforderlichen Niveau zu lernen. Vier Elemente zählen:",
@@ -375,9 +368,7 @@
     "crit3Body": "Die meisten Wege richten sich an 18- bis 40-Jährige, die Ausbildung eher an Jüngere. Jeder Fall wird individuell geprüft.",
     "crit4Title": "Motivation & Vorhaben",
     "crit4Body": "Der Erfolg hängt ebenso von der Vorbereitung wie vom Willen ab. Wir begleiten diejenigen, die sich ernsthaft engagieren.",
-
     "ctaEval": "Mein Profil bewerten lassen",
-
     "accompagnementEyebrow": "Kompletter Service",
     "accompagnementTitle": "Unsere 360°-Begleitung",
     "accompagnementLead": "Von der ersten Bewertung bis zu Ihrer Integration in Deutschland übernehmen wir jeden Schritt. Sieben Services, ein einziger Ansprechpartner: Sie müssen die Formalitäten nie allein bewältigen.",
@@ -395,29 +386,23 @@
     "acc6Body": "Ticket, Ankunft, erste Tage: Ihre Abreise wird vorbereitet, um Überraschungen zu vermeiden.",
     "acc7Title": "Integration und Begleitung vor Ort",
     "acc7Body": "Wir bleiben nach Ihrer Ankunft präsent: Einleben, Orientierung und Netzwerk ehemaliger Kandidaten.",
-
     "metiersEyebrow": "Die Chancen",
     "metiersTitle": "Welche Berufe suchen in Deutschland am meisten Fachkräfte?",
     "metiersLead": "Deutschland fehlen Fachkräfte in Gesundheit, Bau und Handwerk, Hotel- und Gaststättengewerbe, Industrie und Technik sowie IT. Das sind die Branchen, in denen Ihr Profil den größten Wert hat.",
     "metiersCta": "Alle Berufe im Detail ansehen",
     "statBig": "Mangel",
     "statText": "Deutschland steht in vielen Branchen vor einem dauerhaften Fachkräftemangel, der Anlass für die Reform des Einwanderungsgesetzes und die Chancenkarte war.",
-
     "formationsEyebrow": "Sprachkurse",
     "formationsTitle": "Zwei Ausbildungswege, je nach Ihrem Niveau",
     "formationsLead": "Sie starten bei null in Deutsch, oder haben bereits das Niveau und möchten bereit für den deutschen Arbeitsmarkt sein? Wir haben für jede Situation einen Weg.",
-
     "blogEyebrow": "Der Blog",
     "blogTitle": "Leben und Arbeiten in Deutschland: unsere Artikel",
     "blogLead": "Praktische Leitfäden, Tipps und Antworten auf die häufigsten Fragen zur Vorbereitung Ihres Vorhabens.",
-
     "faqEyebrow": "Häufige Fragen",
     "faqTitle": "Ihre Fragen zur Arbeit in Deutschland",
-
     "finalTitle": "Lassen Sie Ihr Profil bewerten",
     "finalText": "In wenigen Minuten erfahren Sie, welcher Weg zu Ihnen passt und welche Schritte Sie erwarten.",
     "finalCta": "Bewerben / meine Eignung prüfen",
-
     "linkComment": "So funktioniert's",
     "linkEligibilite": "Bin ich geeignet?",
     "linkDiplomes": "Anerkennung von Abschlüssen",
@@ -951,7 +936,6 @@
     "kf3Label": "Beschleunigtes Verfahren möglich",
     "kf4Big": "A → Z",
     "kf4Label": "Auswahl, Ausbildung, Visum, Integration",
-
     "probEyebrow": "Die Herausforderung",
     "probTitle": "Bremst der Fachkräftemangel Ihr Geschäft?",
     "probBody1": "Unbesetzte Stellen, angespannte Personalplanung, gebremstes Wachstum: der Mangel an qualifiziertem Personal kostet deutsche Unternehmen viel. Lokale Rekrutierung reicht nicht mehr aus.",
@@ -960,7 +944,6 @@
     "probStat1Label": "unbesetzte qualifizierte Stellen in Deutschland (offizielle Quellen)",
     "probStat2Big": "Angespannte Branchen",
     "probStat2Label": "Gesundheit, Bau, Industrie, Hotelgewerbe, IT, Logistik",
-
     "pourquoiEyebrow": "Warum wir",
     "pourquoiTitle": "Warum mit Karriere Fähre rekrutieren",
     "pourquoiLead": "Ein einziger Partner, von der Suche des passenden Profils bis zur dauerhaften Integration.",
@@ -970,7 +953,6 @@
     "pil2Body": "Anerkennung von Abschlüssen, Fachkräfte-Visum, beschleunigtes Verfahren: wir sichern jeden Schritt ab.",
     "pil3Title": "Eine Brücke des Vertrauens",
     "pil3Body": "Als deutsch-kamerunische Agentur verstehen wir beide Ufer: die Realität der Kandidaten und die Erwartungen deutscher Arbeitgeber.",
-
     "secteursEyebrow": "Ihre Branche",
     "secteursTitle": "Eine Antwort, die zu Ihrem Geschäft passt",
     "secteursLead": "Jede Branche hat ihre eigenen Anforderungen. Wir passen Profile und Vorbereitung an Ihre Realität an.",
@@ -982,7 +964,6 @@
     "seg3Body": "Bauwesen und technische Berufe: seltene Fachkräfte, angespannte Baustellen.",
     "seg4Title": "Industrie, IT & Logistik",
     "seg4Body": "Fabriken, Technik und Transport: Bedarf an Technikern, digitalen Profilen und Fahrern.",
-
     "servicesEyebrow": "Unser Angebot",
     "servicesTitle": "Eine Rekrutierung aus einer Hand",
     "servicesLead": "Von der Suche des passenden Profils bis zu seiner Integration übernehmen wir die gesamte Kette: Sie behalten einen einzigen Ansprechpartner.",
@@ -994,7 +975,6 @@
     "srv3Body": "Anerkennung von Abschlüssen, Visumantrag und -verfahren, vollständig konform.",
     "srv4Title": "Begleitung & Integration",
     "srv4Body": "Begleitung nach der Ankunft, für eine erfolgreiche und dauerhafte Integration.",
-
     "profilsEyebrow": "Verfügbare Profile",
     "profilsTitle": "Die Berufe, in denen wir rekrutieren",
     "profilsLead": "Qualifizierte Profile in den Branchen mit dem größten Fachkräftemangel in Deutschland.",
@@ -1014,13 +994,11 @@
     "besoin2Tag1": "Schulabschluss",
     "besoin2Tag2": "Deutsch auf dem erforderlichen Niveau vor der Anreise",
     "besoin2Tag3": "Dreijährige duale Ausbildung",
-
     "pourquoiAfriqueEyebrow": "Der Talentpool",
     "pourquoiAfriqueTitle": "Warum Zentralafrika?",
     "pourquoiAfriqueBody1": "Zentralafrika verfügt über eine zahlreiche, qualifizierte und stark motivierte Jugend, die eine dauerhafte Karriere aufbauen möchte. Französischsprachig und von uns in Deutsch ausgebildet, integrieren sich diese Kandidaten mit Ernsthaftigkeit und einem echten Lebensvorhaben, nicht nur einer vorübergehenden Gelegenheit.",
     "pourquoiAfriqueBody2": "Unsere Herkunftsländer: Kamerun (Basis), Gabun, Kongo, Tschad, Äquatorialguinea, Zentralafrikanische Republik, und auf Englisch auch über Zentralafrika hinaus.",
     "pourquoiAfriqueCta": "Unsere Profile entdecken",
-
     "modelesEyebrow": "Zwei Arten der Zusammenarbeit",
     "modelesTitle": "Das Modell, das zu Ihrer Dringlichkeit passt",
     "modelesLead": "Je nach Bedarf bieten wir Ihnen bereits einsatzbereite Profile oder eine maßgeschneiderte Ausbildung an.",
@@ -1036,7 +1014,6 @@
     "modele2Tag1": "Deutschaufbau (bis B2) + berufliche Vorbereitung",
     "modele2Tag2": "Für Ihre Branche geformte Profile",
     "modele2Tag3": "Anerkennung vor Ort möglich (Anerkennungspartnerschaft)",
-
     "processusEyebrow": "So funktioniert's",
     "processusTitle": "Unser Prozess in 7 Schritten",
     "processusLead": "Ein klarer, abgesicherter Ablauf, von der Analyse Ihres Bedarfs bis zur dauerhaften Integration, im Einklang mit dem deutschen Rechtsrahmen.",
@@ -1054,7 +1031,6 @@
     "proc6Body": "Fachkräfte-Visumantrag und -verfahren, beschleunigbar über § 81a.",
     "proc7Title": "Ankunft & Integration",
     "proc7Body": "Ansiedlung, Stellenantritt und Begleitung für eine dauerhafte Integration.",
-
     "cadreEyebrow": "Rechtssicherheit",
     "cadreTitle": "Der deutsche Rechtsrahmen, von A bis Z beherrscht",
     "cadreLead": "Das 2023-2024 reformierte Fachkräfteeinwanderungsgesetz eröffnet drei Wege. Wir kennen jeden davon und wählen den schnellsten und sichersten für Ihre Rekrutierung.",
@@ -1065,7 +1041,6 @@
     "cadre3Title": "Anerkennungspartnerschaft",
     "cadre3Body": "Neu seit 2024: die Anerkennungspartnerschaft ermöglicht es, den Kandidaten einreisen zu lassen und die Anerkennung des Abschlusses anschließend vor Ort abzuschließen.",
     "cadreNote": "Was das für Sie bedeutet: wir kombinieren diese Instrumente, um die Fristen zu verkürzen und dabei vollständig konform zu bleiben. Sie müssen sich nicht durch die deutsche Verwaltung navigieren, das ist unsere Aufgabe.",
-
     "rolesEyebrow": "Rollenverteilung",
     "rolesTitle": "Wer macht was?",
     "rolesLead": "Eine klare Aufteilung, damit Sie genau wissen, was wir übernehmen.",
@@ -1081,7 +1056,6 @@
     "rolesYou2": "Eine Einstellungszusage (Vertrag oder Versprechen)",
     "rolesYou3": "Die Einleitung des beschleunigten Verfahrens, falls gewünscht",
     "rolesYou4": "Einen Empfang und eine Begleitung beim Stellenantritt",
-
     "garantiesEyebrow": "Unsere Verpflichtungen",
     "garantiesTitle": "Worauf Sie sich verlassen können",
     "garantiesLead": "Klare Verpflichtungen, denn internationale Rekrutierung erfordert Vertrauen.",
@@ -1097,21 +1071,17 @@
     "gar5Body": "Wir bleiben präsent für eine dauerhafte Integration.",
     "gar6Title": "Eine Lösungszusage",
     "gar6Body": "Passt ein Profil nicht, suchen wir gemeinsam mit Ihnen eine Alternative.",
-
     "partenaireEyebrow": "Partnerschaft",
     "partenaireTitle": "Werden Sie Partner von Karriere Fähre",
     "partenaireLead": "Wir bauen ein Netzwerk auf beiden Seiten der Brücke auf. Ein Partner kann lokal sein (Ausbildungsschule, Sprachzentrum, Organisation in Zentralafrika) oder in Deutschland ansässig (Unternehmen, Gesundheitseinrichtung, Institution).",
     "partenaireCta": "Partner werden",
-
     "faqEyebrow": "Häufige Fragen",
     "faqTitle": "Ihre Fragen als Arbeitgeber",
-
     "contactEyebrow": "Personalbedarf",
     "contactTitle": "Teilen Sie uns Ihren Rekrutierungsbedarf mit",
     "contactLead": "Beschreiben Sie uns die zu besetzenden Stellen: wir melden uns mit passenden Profilen und einem klaren Zeitplan. Unverbindliches Gespräch.",
     "contactCta": "Personalbedarf melden",
     "contactCtaSecondary": "Termin buchen",
-
     "cta": "Personalbedarf melden",
     "linkServices": "Unsere Rekrutierungsservices",
     "linkProfils": "Profile & verfügbare Branchen",
@@ -1303,18 +1273,15 @@
     "subtitle": "In Deutschland fehlen qualifizierte Fachkräfte in ganzen Branchen, Gesundheit, Bau, Gastgewerbe, Industrie, IT, Logistik. Sie haben bereits einen Beruf? Diese Branchen warten auf Sie. Wir lassen Ihren Abschluss anerkennen, bringen Sie auf das nötige Deutschniveau und öffnen Ihnen die Tür zu einer Fachkraftstelle.",
     "kick": "Kandidaten, Gesuchte Berufe",
     "ctaSecteurs": "Branchen ansehen",
-
     "contexteEyebrow": "Der Kontext",
     "contexteTitle": "Warum Deutschland im Ausland rekrutiert",
     "contexteLead": "Die alternde Bevölkerung und eine dynamische Wirtschaft schaffen einen dauerhaften Fachkräftemangel. Um ihn zu beheben, öffnet sich Deutschland weit für ausländische Talente, in einem eigenen Rechtsrahmen (Fachkräfteeinwanderungsgesetz).",
     "contexteBody": "Für Sie mit einer bereits vorhandenen Qualifikation bedeutet das offene Stellen in mehreren Branchen und einen klaren Weg dorthin: Anerkennung des Abschlusses, Sprache, Fachkräftevisum. Das ist unsere Aufgabe.",
-
     "secteursEyebrow": "Die Branchen",
     "secteursTitle": "Alle gesuchten Berufe auf einen Blick",
     "secteursLead": "Jede Branche und die Stellen, die sie sucht, mit deutscher Berufsbezeichnung. Erwartet wird in der Regel Niveau B2.",
     "levelLabel": "Niveau B2",
     "openingsSuffix": "veröffentlichte Stellen",
-
     "eligibiliteEyebrow": "Eignung",
     "eligibiliteTitle": "Die gemeinsamen Voraussetzungen",
     "eligibiliteLead": "Unabhängig von der Branche bestimmen vier Elemente Ihr Vorhaben, und wir helfen bei jedem einzelnen:",
@@ -1326,7 +1293,6 @@
     "crit3Body": "Wir bereiten die Anerkennung Ihres Abschlusses vor, den heikelsten Schritt.",
     "crit4Title": "Ein dauerhaftes Vorhaben",
     "crit4Body": "Arbeitgeber suchen Profile, die sich langfristig niederlassen.",
-
     "parcoursEyebrow": "Ihr Weg",
     "parcoursTitle": "Von Ihrer Bewerbung bis zur Stelle, in 4 Schritten",
     "step1Title": "Bewertung",
@@ -1337,14 +1303,11 @@
     "step3Body": "Anerkennung, Unterlagen und Fachkräfte-Visum.",
     "step4Title": "Abreise & Integration",
     "step4Body": "Stellenantritt in Deutschland, mit unserer Begleitung.",
-
     "faqEyebrow": "Häufige Fragen",
     "faqTitle": "Berufe in Deutschland: Ihre Fragen",
-
     "finalTitle": "Finden Sie den Beruf, der zu Ihnen passt",
     "finalText": "Lassen Sie Ihr Profil bewerten: wir sagen Ihnen, welche Branche und welcher Weg zu Ihnen passen und welche Schritte Sie erwarten.",
     "finalCta": "Bewerben / meine Eignung prüfen",
-
     "filterCategory": "Kategorie",
     "allCategories": "Alle Kategorien",
     "backToCategories": "Alle Berufskategorien"
@@ -1377,7 +1340,6 @@
     "comingSoon": "Unsere ersten Artikel erscheinen bald.",
     "backToBlog": "Zurück zum Blog"
   },
-
   "blogPartir": {
     "title": "Von Afrika nach Deutschland auswandern",
     "subtitle": "Deutschland sucht qualifizierte Fachkräfte weltweit, auch in Afrika. Der Weg ist überall derselbe: den Abschluss anerkennen lassen, das nötige Deutschniveau erreichen, das Visum bekommen. So läuft er ab, mit Kamerun als konkretem Beispiel.",
@@ -1444,7 +1406,9 @@
       "fastTrackOption": "Fast Track: Ich habe bereits Niveau B2",
       "fullTrainingOption": "Full Training: Ich fange an oder habe ein mittleres Niveau"
     },
-    "login": { "title": "Kandidatenanmeldung" },
+    "login": {
+      "title": "Kandidatenanmeldung"
+    },
     "dashboard": {
       "title": "Mein Kandidatenbereich",
       "pathLabel": "Weg",
@@ -1475,7 +1439,9 @@
       "contactNameLabel": "Name des Ansprechpartners",
       "companyNameLabel": "Firmenname"
     },
-    "login": { "title": "Unternehmensanmeldung" },
+    "login": {
+      "title": "Unternehmensanmeldung"
+    },
     "dashboard": {
       "title": "Mein Unternehmensbereich",
       "companyLabel": "Unternehmen",
@@ -1515,12 +1481,226 @@
     }
   },
   "admin": {
-    "dashboard": { "title": "Übersicht" }
+    "dashboard": {
+      "title": "Übersicht"
+    }
   },
   "login": {
     "title": "Anmelden",
     "email": "E-Mail",
     "password": "Passwort",
     "submit": "Anmelden"
+  },
+  "evaluation": {
+    "title": "Profil bewerten",
+    "subtitle": "Orientierungs-Check für Ihren beruflichen Weg in Deutschland: Ausbildung, Direkteinstieg oder Vorbereitung.",
+    "intro": {
+      "title": "Welcher berufliche Weg in Deutschland passt zu Ihrem Profil?",
+      "text": "In 3 Minuten analysieren wir Ihre Ausbildung, Ihre Erfahrung, Ihr Deutschniveau und Ihr Ziel, um den für Sie passendsten Weg zu ermitteln.",
+      "promise": "Ausbildung · Direkteinstieg · Vorbereitung",
+      "cta": "Meine Bewertung starten",
+      "reassurance": "Kostenlos · Unverbindlich · Vertrauliche Analyse"
+    },
+    "progress": "Schritt {n} von {total}",
+    "back": "Zurück",
+    "continue": "Weiter",
+    "objectif": {
+      "title": "Was ist Ihr Ziel?",
+      "options": {
+        "ausbildung": "Eine Ausbildung in Deutschland machen",
+        "emploi": "Direkt in Deutschland arbeiten",
+        "former": "Mich qualifizieren und dann arbeiten",
+        "indecis": "Ich weiß noch nicht, welchen Weg ich wählen soll"
+      }
+    },
+    "etudes": {
+      "title": "Was ist Ihr Bildungsniveau?",
+      "options": {
+        "sans": "Ohne Abschluss",
+        "bepc": "Mittlere Reife",
+        "bac": "Abitur",
+        "bac2": "2 Jahre Studium",
+        "bac3": "Bachelor",
+        "bac45": "Master",
+        "autre": "Andere"
+      }
+    },
+    "domaine": {
+      "title": "Was ist Ihr Bereich?",
+      "options": {
+        "sante": "Gesundheit",
+        "btp": "Bau",
+        "industrie": "Industrie",
+        "informatique": "IT",
+        "ingenierie": "Ingenieurwesen",
+        "hotellerie": "Hotel & Gastronomie",
+        "logistique": "Logistik",
+        "autre": "Andere"
+      }
+    },
+    "qualification": {
+      "title": "Sind Sie in Ihrem Beruf bereits qualifiziert?",
+      "options": {
+        "qualif_pro": "Ja, ich habe eine Berufsqualifikation",
+        "diplome_univ": "Ja, ich habe einen Hochschulabschluss",
+        "experience": "Ich habe Erfahrung, aber keine anerkannte Qualifikation",
+        "en_formation": "Ich bin noch in Ausbildung",
+        "non": "Nein"
+      }
+    },
+    "experience": {
+      "title": "Wie viele Jahre Erfahrung haben Sie?",
+      "options": {
+        "0": "0",
+        "<1": "< 1 Jahr",
+        "1-2": "1–2 J.",
+        "3-5": "3–5 J.",
+        "5+": "5+ J."
+      }
+    },
+    "allemand": {
+      "title": "Wo stehen Sie bei Deutsch?",
+      "options": {
+        "aucun": "Ich spreche kein Deutsch",
+        "a1": "A1",
+        "a2": "A2",
+        "b1": "B1",
+        "b2": "B2",
+        "c1": "C1+"
+      },
+      "certificatQuestion": "Haben Sie bereits ein Deutschzertifikat?",
+      "oui": "Ja",
+      "non": "Nein"
+    },
+    "age": {
+      "title": "Wie alt sind Sie?",
+      "placeholder": "Ihr Alter",
+      "help": "So können wir die Orientierung einordnen. Kein Alter garantiert oder schließt einen Weg automatisch aus.",
+      "cta": "Meine Orientierung ansehen"
+    },
+    "result": {
+      "title": "Ihr Weg scheint zu passen zu:",
+      "compatLabel": "Vorläufige Eignung:",
+      "compat": {
+        "elevee": "HOCH",
+        "prometteuse": "VIELVERSPRECHEND",
+        "aConstruire": "AUSBAUFÄHIG"
+      },
+      "strengthsTitle": "Ihre Stärken",
+      "checksTitle": "Zu prüfen",
+      "paths": {
+        "ausbildung": {
+          "name": "AUSBILDUNG",
+          "intro": "Ihr Profil scheint besonders für eine vergütete Berufsausbildung in Deutschland geeignet.",
+          "strengths": [
+            "Passende Vorbildung",
+            "Motivation und schlüssiges Projekt",
+            "Zugang zu einer anerkannten Qualifikation"
+          ],
+          "checks": [
+            "Deutschniveau",
+            "Spezifische Anforderungen des Berufs",
+            "Eignung und Anforderungen des Arbeitgebers"
+          ]
+        },
+        "emploi": {
+          "name": "DIREKTEINSTIEG",
+          "intro": "Ihre Qualifikation und Erfahrung könnten eine direkte Arbeitssuche in Deutschland ermöglichen – vorbehaltlich der Prüfung Ihrer Qualifikation und der Anforderungen des Berufs.",
+          "strengths": [
+            "Berufsqualifikation oder Abschluss",
+            "Berufserfahrung",
+            "Schlüssiges berufliches Projekt"
+          ],
+          "checks": [
+            "Anerkennung des Abschlusses",
+            "Erforderliches Deutschniveau",
+            "Spezifische Stellenanforderungen"
+          ]
+        },
+        "preparation": {
+          "name": "VORBEREITUNG",
+          "intro": "Vor einer Ausbildung oder Anstellung stärkt eine Vorbereitungsphase – vor allem sprachlich – Ihr Dossier und Ihre Chancen deutlich.",
+          "strengths": [
+            "Klares Vorhaben Richtung Deutschland",
+            "Klares Entwicklungspotenzial",
+            "Begleitung von Anfang an möglich"
+          ],
+          "checks": [
+            "Deutsch lernen (Ziel B1/B2)",
+            "Wahl von Bereich und Weg",
+            "Aufbau des Dossiers"
+          ]
+        }
+      },
+      "compareTitle": "Die beiden Wege",
+      "table": {
+        "colAusbildung": "Ausbildung",
+        "colEmploi": "Direkteinstieg",
+        "rows": [
+          {
+            "label": "Ausbildung",
+            "ausbildung": "Ja",
+            "emploi": "Bereits qualifiziert"
+          },
+          {
+            "label": "Arbeit",
+            "ausbildung": "Ja",
+            "emploi": "Ja"
+          },
+          {
+            "label": "Vergütung",
+            "ausbildung": "Während der Ausbildung",
+            "emploi": "Berufsgehalt"
+          },
+          {
+            "label": "Ziel",
+            "ausbildung": "Eine Qualifikation erwerben",
+            "emploi": "Direkt in eine Stelle einsteigen"
+          },
+          {
+            "label": "Voraussetzungen",
+            "ausbildung": "Je nach Beruf",
+            "emploi": "Qualifikation + Stellenanforderungen"
+          }
+        ]
+      },
+      "closerTo": "Ihr Profil liegt derzeit näher an:",
+      "cta": "Meine Analyse erhalten"
+    },
+    "lead": {
+      "title": "Erhalten Sie Ihre persönliche Analyse",
+      "intro": "Um Ihr ausführliches Ergebnis zu erhalten und einem Karriere-Fähre-Berater die Prüfung Ihrer Situation zu ermöglichen:",
+      "prenom": "Vorname",
+      "nom": "Nachname",
+      "whatsapp": "WhatsApp / Telefon",
+      "email": "E-Mail",
+      "pays": "Wohnsitzland",
+      "submit": "Meine Analyse erhalten",
+      "sending": "Wird gesendet…",
+      "error": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
+      "requiredNote": "Ihre Angaben bleiben vertraulich und dienen ausschließlich der Prüfung Ihres Dossiers durch Karriere Fähre."
+    },
+    "final": {
+      "badge": "Analyse gespeichert",
+      "profileTitle": "Ihr Profil",
+      "labelObjectif": "Ziel",
+      "labelSecteur": "Bereich",
+      "labelQualification": "Qualifikation",
+      "labelExperience": "Erfahrung",
+      "labelAllemand": "Deutsch",
+      "orientationTitle": "Unsere vorläufige Orientierung",
+      "toStudy": "zu prüfen",
+      "stepsTitle": "Nächste Schritte",
+      "steps": [
+        "Prüfung des Abschlusses",
+        "Prüfung der nötigen Anerkennung",
+        "Prüfung des Sprachniveaus",
+        "Ermittlung passender Stellen oder Ausbildungen",
+        "Bewerbung bei Arbeitgebern oder Ausbildungszentren"
+      ],
+      "whatsappCta": "Mit einem Berater sprechen",
+      "whatsappMessage": "Hallo, ich habe gerade die Profilbewertung auf Ihrer Website gemacht. Meine vorläufige Orientierung: {path}. Ich würde gern mit einem Karriere-Fähre-Berater darüber sprechen."
+    },
+    "disclaimer": "Diese Bewertung ist eine erste Orientierung und stellt keine Zusage für Arbeit, Ausbildung oder Visum dar. Ihre endgültige Eignung hängt von der Prüfung Ihres Dossiers und den für Ihren Beruf geltenden Anforderungen ab."
   }
 }
