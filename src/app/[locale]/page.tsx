@@ -157,13 +157,13 @@ export default async function HomePage() {
             >
               <Link
                 href="/postuler"
-                className="press inline-flex h-[54px] items-center justify-center rounded-md bg-brand-gold px-8 font-semibold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
+                className="press inline-flex h-[54px] items-center justify-center rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
               >
                 {content.heroCtaStart}
               </Link>
               <Link
                 href="/secteurs"
-                className="press inline-flex h-[54px] items-center justify-center rounded-md border border-brand-gold px-8 font-semibold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black"
+                className="press inline-flex h-[54px] items-center justify-center rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
               >
                 {content.heroCtaDiscover}
               </Link>
