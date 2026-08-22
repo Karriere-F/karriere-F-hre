@@ -66,19 +66,34 @@ export default async function ParcoursPage() {
       {/* 1 — Hero + three routes */}
       <section className="bg-brand-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-          <div className="max-w-3xl">
-            <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
-              {content.hero.title}
-            </h1>
-            <p
-              className="animate-fade-up mt-6 max-w-2xl text-lg text-brand-ink-secondary leading-relaxed"
-              style={{ animationDelay: "80ms" }}
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="max-w-2xl">
+              <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
+                {content.hero.title}
+              </h1>
+              <p
+                className="animate-fade-up mt-6 text-lg text-brand-ink-secondary leading-relaxed"
+                style={{ animationDelay: "80ms" }}
+              >
+                {content.hero.subtitle}
+              </p>
+            </div>
+            <div
+              className="animate-fade-up relative hidden aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(17,17,17,0.4)] lg:block"
+              style={{ animationDelay: "120ms" }}
             >
-              {content.hero.subtitle}
-            </p>
+              <Image
+                src="/images/candidats-soins-technique.jpg"
+                alt="Une infirmière et un technicien africains, prêts pour une carrière qualifiée en Allemagne"
+                fill
+                priority
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover object-[center_20%]"
+              />
+            </div>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-3">
+          <div className="mt-14 grid gap-5 sm:grid-cols-3">
             {cards.map(({ key, href, icon: Icon, data }, i) => (
               <Link
                 key={key}
@@ -116,17 +131,27 @@ export default async function ParcoursPage() {
           </h2>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
             <div className="rounded-2xl border border-brand-grid bg-brand-white p-6">
-              <p className="text-sm text-brand-ink-secondary">{content.compare.qualifiedTitle}</p>
-              <p className="mt-1 mb-5 font-serif text-xl text-brand-gold-text">
-                {content.compare.qualifiedPath}
-              </p>
+              <div className="mb-6 flex items-center gap-3">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
+                  <Briefcase size={22} strokeWidth={1.75} aria-hidden="true" />
+                </span>
+                <div>
+                  <p className="text-sm text-brand-ink-secondary">{content.compare.qualifiedTitle}</p>
+                  <p className="font-serif text-xl text-brand-gold-text">{content.compare.qualifiedPath}</p>
+                </div>
+              </div>
               <Flow steps={content.compare.qualifiedSteps} highlightLast />
             </div>
             <div className="rounded-2xl border border-brand-grid bg-brand-white p-6">
-              <p className="text-sm text-brand-ink-secondary">{content.compare.acquireTitle}</p>
-              <p className="mt-1 mb-5 font-serif text-xl text-brand-gold-text">
-                {content.compare.acquirePath}
-              </p>
+              <div className="mb-6 flex items-center gap-3">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
+                  <GraduationCap size={22} strokeWidth={1.75} aria-hidden="true" />
+                </span>
+                <div>
+                  <p className="text-sm text-brand-ink-secondary">{content.compare.acquireTitle}</p>
+                  <p className="font-serif text-xl text-brand-gold-text">{content.compare.acquirePath}</p>
+                </div>
+              </div>
               <Flow steps={content.compare.acquireSteps} highlightLast />
             </div>
           </div>
