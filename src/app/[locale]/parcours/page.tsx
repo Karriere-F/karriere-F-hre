@@ -64,36 +64,40 @@ export default async function ParcoursPage() {
   return (
     <div className="flex flex-col">
       {/* 1 — Hero + three routes */}
-      <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="max-w-2xl">
+      <section className="relative overflow-hidden bg-brand-white">
+        {/* Upper hero: text left, photo bleeding in from the right and fading into the page */}
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[54%] lg:block">
+            <Image
+              src="/images/candidats-soins-technique.jpg"
+              alt="Une infirmière et un technicien africains, prêts pour une carrière qualifiée en Allemagne"
+              fill
+              priority
+              sizes="54vw"
+              className="object-cover object-[center_22%]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-white to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
+          </div>
+
+          <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-xl py-14 lg:flex lg:min-h-[520px] lg:flex-col lg:justify-center lg:py-20">
               <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
                 {content.hero.title}
               </h1>
               <p
-                className="animate-fade-up mt-6 text-lg text-brand-ink-secondary leading-relaxed"
+                className="animate-fade-up mt-6 max-w-lg text-lg text-brand-ink-secondary leading-relaxed"
                 style={{ animationDelay: "80ms" }}
               >
                 {content.hero.subtitle}
               </p>
             </div>
-            <div
-              className="animate-fade-up relative hidden aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(17,17,17,0.4)] lg:block"
-              style={{ animationDelay: "120ms" }}
-            >
-              <Image
-                src="/images/candidats-soins-technique.jpg"
-                alt="Une infirmière et un technicien africains, prêts pour une carrière qualifiée en Allemagne"
-                fill
-                priority
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover object-[center_20%]"
-              />
-            </div>
           </div>
+        </div>
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-3">
+        <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
+          <div className="grid gap-5 sm:grid-cols-3">
             {cards.map(({ key, href, icon: Icon, data }, i) => (
               <Link
                 key={key}
