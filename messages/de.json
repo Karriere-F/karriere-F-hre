@@ -1702,5 +1702,206 @@
       "whatsappMessage": "Hallo, ich habe gerade die Profilbewertung auf Ihrer Website gemacht. Meine vorläufige Orientierung: {path}. Ich würde gern mit einem Karriere-Fähre-Berater darüber sprechen."
     },
     "disclaimer": "Diese Bewertung ist eine erste Orientierung und stellt keine Zusage für Arbeit, Ausbildung oder Visum dar. Ihre endgültige Eignung hängt von der Prüfung Ihres Dossiers und den für Ihren Beruf geltenden Anforderungen ab."
+  },
+  "parcours": {
+    "title": "Unsere Wege",
+    "subtitle": "Ausbildung, Direkteinstieg oder begleiteter Weg: Verstehen Sie alle Wege nach Deutschland, bevor Sie Ihren wählen.",
+    "hero": {
+      "title": "Ihre Zukunft in Deutschland beginnt mit dem richtigen Weg.",
+      "subtitle": "Ob Sie sich in Deutschland ausbilden lassen oder direkt in ein Unternehmen einsteigen möchten – Karriere Fähre begleitet Sie zum passenden Weg für Ihr Profil."
+    },
+    "cards": {
+      "seFormer": {
+        "kicker": "Sich ausbilden",
+        "name": "Ausbildung",
+        "text": "Eine vergütete Berufsausbildung in Deutschland, die Unterricht und praktische Erfahrung im Betrieb verbindet.",
+        "cta": "Ausbildung entdecken"
+      },
+      "travailler": {
+        "kicker": "Arbeiten",
+        "name": "Direkteinstieg",
+        "text": "Sie sind bereits qualifiziert und haben Berufserfahrung? Entdecken Sie die Beschäftigungsmöglichkeiten für Ihr Profil.",
+        "cta": "Direkteinstieg entdecken"
+      },
+      "preparer": {
+        "kicker": "Projekt vorbereiten",
+        "name": "Begleiteter Weg",
+        "text": "Sie sind noch nicht bereit? Wir helfen Ihnen, Ihr Projekt Schritt für Schritt aufzubauen: Sprache, Kompetenzen, Dossier und Orientierung.",
+        "cta": "Meinen Weg aufbauen"
+      }
+    },
+    "compare": {
+      "title": "Zwei Profile. Zwei Wege. Ein Ziel: in Deutschland arbeiten.",
+      "qualifiedTitle": "Sind Sie bereits qualifiziert?",
+      "qualifiedPath": "Direkteinstieg",
+      "qualifiedSteps": [
+        "Qualifikation + Erfahrung + Deutsch + Anforderungen des Berufs",
+        "Arbeitgebersuche",
+        "Bewerbung",
+        "Anstellung in Deutschland"
+      ],
+      "acquireTitle": "Möchten Sie eine Qualifikation erwerben?",
+      "acquirePath": "Ausbildung",
+      "acquireSteps": [
+        "Vorbereitung",
+        "Bewerbung",
+        "Vergütete Ausbildung",
+        "Berufsabschluss",
+        "Qualifizierte Beschäftigung"
+      ]
+    },
+    "sectors": {
+      "title": "Wählen Sie Ihren Berufsbereich",
+      "metiersLabel": "Berufe",
+      "parcoursLabel": "Wege",
+      "cta": "Berufe ansehen",
+      "items": {
+        "sante": {
+          "blurb": "Chancen in Krankenhäusern, Kliniken und Pflegeeinrichtungen.",
+          "metiers": "Pflegefachkraft · Pflegehelfer · Hebamme · Physiotherapeut · Laborant",
+          "parcours": "Ausbildung oder Direkteinstieg je nach Qualifikation"
+        },
+        "informatique": {
+          "blurb": "Entwicklung, Systeme und Netzwerke: in Deutschland stark gefragt.",
+          "metiers": "Entwickler · Systemadministrator · Netzwerktechniker · Data · Cybersicherheit",
+          "parcours": "Ausbildung oder Direkteinstieg je nach Qualifikation"
+        },
+        "industrie": {
+          "blurb": "Produktion, Wartung und Technik in der deutschen Industrie.",
+          "metiers": "Mechatroniker · Elektrotechniker · Instandhaltungstechniker · Maschinenführer",
+          "parcours": "Ausbildung oder Direkteinstieg je nach Qualifikation"
+        },
+        "construction": {
+          "blurb": "Hoch- und Tiefbau: stark nachgefragte Berufe.",
+          "metiers": "Maurer · Elektriker · Anlagenmechaniker · Zimmerer · Baumaschinenführer",
+          "parcours": "Ausbildung oder Direkteinstieg je nach Qualifikation"
+        },
+        "logistique": {
+          "blurb": "Lager, Transport und Lieferkette.",
+          "metiers": "Staplerfahrer · Lagerfachkraft · Berufskraftfahrer · Lagerleiter",
+          "parcours": "Ausbildung oder Direkteinstieg je nach Qualifikation"
+        },
+        "ingenierie": {
+          "blurb": "Ingenieurbüros und technische Projekte in Deutschland.",
+          "metiers": "Maschinenbau · Bauingenieurwesen · Elektrotechnik · Automatisierung",
+          "parcours": "Direkteinstieg je nach Anerkennung des Abschlusses"
+        },
+        "hotellerie": {
+          "blurb": "Hotels, Restaurants und Gastronomiebetriebe.",
+          "metiers": "Koch · Servicekraft · Rezeptionist · Etagenmitarbeiter",
+          "parcours": "Ausbildung oder Direkteinstieg je nach Qualifikation"
+        }
+      }
+    },
+    "ausbildung": {
+      "title": "Die Ausbildung: einen Beruf lernen und vergütet werden",
+      "text": "In Deutschland ermöglicht die Ausbildung, einen Beruf zu erlernen und gleichzeitig im Betrieb zu arbeiten. Sie ist meist zwischen Berufsschule und Betrieb organisiert.",
+      "pillars": [
+        {
+          "label": "Ausbildung",
+          "value": "Berufsschule"
+        },
+        {
+          "label": "Erfahrung",
+          "value": "Im Betrieb"
+        },
+        {
+          "label": "Vergütung",
+          "value": "Während der Ausbildung"
+        },
+        {
+          "label": "Qualifikation",
+          "value": "Anerkannter Berufsabschluss"
+        }
+      ],
+      "cta": "Ausbildung verstehen"
+    },
+    "emploi": {
+      "title": "Sind Sie bereits Fachkraft?",
+      "text": "Wenn Sie bereits über eine passende Qualifikation und Erfahrung verfügen, können Sie je nach Beruf und geltenden Bedingungen unter Umständen direkt eine Stelle in Deutschland antreten.",
+      "stepsTitle": "Der Weg",
+      "steps": [
+        "Ihre Qualifikation",
+        "Profilprüfung",
+        "Anerkennung / Gleichwertigkeit bei Bedarf",
+        "Arbeitgebersuche",
+        "Bewerbung",
+        "Anstellung in Deutschland"
+      ],
+      "cta": "Voraussetzungen ansehen"
+    },
+    "matcher": {
+      "title": "Welcher Weg für welches Profil?",
+      "colSituation": "Ihre Situation",
+      "colParcours": "Möglicher Weg",
+      "rows": [
+        {
+          "situation": "Noch keine Berufsqualifikation",
+          "parcours": "Ausbildung"
+        },
+        {
+          "situation": "Junger Absolvent ohne größere Erfahrung",
+          "parcours": "Ausbildung / je nach Profil"
+        },
+        {
+          "situation": "Berufsqualifikation + Erfahrung",
+          "parcours": "Direkteinstieg / je nach Beruf"
+        },
+        {
+          "situation": "Ausländischer Abschluss",
+          "parcours": "Anerkennungsprüfung"
+        },
+        {
+          "situation": "Unzureichendes Deutsch",
+          "parcours": "Sprachliche Vorbereitung"
+        },
+        {
+          "situation": "Sie wissen nicht, was Sie wählen sollen",
+          "parcours": "Profilbewertung"
+        }
+      ],
+      "ctaText": "Sie wissen nicht, welchen Weg Sie wählen sollen?",
+      "cta": "Profil bewerten"
+    },
+    "method": {
+      "title": "Wir schicken Ihnen nicht einfach Stellenangebote. Wir bauen Ihren Weg auf.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Bewertung",
+          "text": "Wir analysieren Ihr Profil."
+        },
+        {
+          "n": "02",
+          "title": "Orientierung",
+          "text": "Wir bestimmen den schlüssigsten Weg."
+        },
+        {
+          "n": "03",
+          "title": "Vorbereitung",
+          "text": "Sprache, Kompetenzen und Projektvorbereitung."
+        },
+        {
+          "n": "04",
+          "title": "Dossier",
+          "text": "Wir begleiten Sie beim Aufbau Ihres Dossiers."
+        },
+        {
+          "n": "05",
+          "title": "Vermittlung",
+          "text": "Wir orientieren Sie zu den passenden Möglichkeiten."
+        },
+        {
+          "n": "06",
+          "title": "Ausreise & Integration",
+          "text": "Wir begleiten Sie bei Ankunft und Integration."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Wissen Sie jetzt, welcher Weg zu Ihnen passt?",
+      "primary": "Profil bewerten",
+      "secondary": "Mit Karriere Fähre sprechen"
+    }
   }
 }

@@ -1702,5 +1702,206 @@
       "whatsappMessage": "Bonjour, je viens de réaliser l'évaluation de profil sur votre site. Mon orientation préliminaire : {path}. J'aimerais en parler avec un conseiller Karriere Fähre."
     },
     "disclaimer": "Cette évaluation est une première orientation et ne constitue pas une promesse d'emploi, d'Ausbildung ou de visa. Votre éligibilité définitive dépend de la vérification de votre dossier et des exigences applicables à votre métier."
+  },
+  "parcours": {
+    "title": "Nos parcours",
+    "subtitle": "Ausbildung, emploi direct ou parcours accompagné : comprenez toutes les voies vers l'Allemagne avant de choisir la vôtre.",
+    "hero": {
+      "title": "Votre avenir en Allemagne commence par le bon parcours.",
+      "subtitle": "Que vous souhaitiez vous former en Allemagne ou intégrer directement une entreprise, Karriere Fähre vous accompagne vers le parcours adapté à votre profil."
+    },
+    "cards": {
+      "seFormer": {
+        "kicker": "Se former",
+        "name": "Ausbildung",
+        "text": "Une formation professionnelle rémunérée en Allemagne, combinant enseignement et expérience pratique en entreprise.",
+        "cta": "Découvrir l'Ausbildung"
+      },
+      "travailler": {
+        "kicker": "Travailler",
+        "name": "Emploi direct",
+        "text": "Vous êtes déjà qualifié et disposez d'une expérience professionnelle ? Découvrez les possibilités d'emploi correspondant à votre profil.",
+        "cta": "Découvrir l'emploi direct"
+      },
+      "preparer": {
+        "kicker": "Préparer son projet",
+        "name": "Parcours accompagné",
+        "text": "Vous n'êtes pas encore prêt ? Nous vous aidons à construire progressivement votre projet : langue, compétences, dossier et orientation.",
+        "cta": "Construire mon parcours"
+      }
+    },
+    "compare": {
+      "title": "Deux profils. Deux parcours. Un même objectif : travailler en Allemagne.",
+      "qualifiedTitle": "Vous êtes déjà qualifié ?",
+      "qualifiedPath": "Emploi direct",
+      "qualifiedSteps": [
+        "Qualification + expérience + allemand + conditions du métier",
+        "Recherche d'employeur",
+        "Candidature",
+        "Emploi en Allemagne"
+      ],
+      "acquireTitle": "Vous souhaitez acquérir une qualification ?",
+      "acquirePath": "Ausbildung",
+      "acquireSteps": [
+        "Préparation",
+        "Candidature",
+        "Ausbildung rémunérée",
+        "Diplôme professionnel",
+        "Emploi qualifié"
+      ]
+    },
+    "sectors": {
+      "title": "Choisissez votre domaine professionnel",
+      "metiersLabel": "Métiers",
+      "parcoursLabel": "Parcours",
+      "cta": "Voir les métiers",
+      "items": {
+        "sante": {
+          "blurb": "Des opportunités dans les hôpitaux, cliniques et établissements de soins.",
+          "metiers": "Infirmier · Aide-soignant · Sage-femme · Physiothérapeute · Technicien de laboratoire",
+          "parcours": "Ausbildung ou emploi direct selon la qualification"
+        },
+        "informatique": {
+          "blurb": "Développement, systèmes et réseaux : des profils très recherchés en Allemagne.",
+          "metiers": "Développeur · Administrateur systèmes · Technicien réseau · Data · Cybersécurité",
+          "parcours": "Ausbildung ou emploi direct selon la qualification"
+        },
+        "industrie": {
+          "blurb": "Production, maintenance et technique dans l'industrie allemande.",
+          "metiers": "Mécatronicien · Électrotechnicien · Technicien de maintenance · Opérateur",
+          "parcours": "Ausbildung ou emploi direct selon la qualification"
+        },
+        "construction": {
+          "blurb": "Bâtiment et travaux publics : des métiers en forte demande.",
+          "metiers": "Maçon · Électricien · Plombier · Charpentier · Conducteur d'engins",
+          "parcours": "Ausbildung ou emploi direct selon la qualification"
+        },
+        "logistique": {
+          "blurb": "Entrepôts, transport et chaîne d'approvisionnement.",
+          "metiers": "Cariste · Agent logistique · Chauffeur · Gestionnaire d'entrepôt",
+          "parcours": "Ausbildung ou emploi direct selon la qualification"
+        },
+        "ingenierie": {
+          "blurb": "Bureaux d'études et projets techniques en Allemagne.",
+          "metiers": "Ingénieur mécanique · Génie civil · Électrotechnique · Automatisation",
+          "parcours": "Emploi direct selon la reconnaissance du diplôme"
+        },
+        "hotellerie": {
+          "blurb": "Hôtels, restaurants et établissements de restauration.",
+          "metiers": "Cuisinier · Serveur · Réceptionniste · Employé d'étage",
+          "parcours": "Ausbildung ou emploi direct selon la qualification"
+        }
+      }
+    },
+    "ausbildung": {
+      "title": "L'Ausbildung : apprendre un métier et être rémunéré",
+      "text": "En Allemagne, l'Ausbildung permet de se former à un métier tout en travaillant en entreprise. La formation est généralement organisée entre une école professionnelle et l'entreprise.",
+      "pillars": [
+        {
+          "label": "Formation",
+          "value": "École professionnelle"
+        },
+        {
+          "label": "Expérience",
+          "value": "En entreprise"
+        },
+        {
+          "label": "Rémunération",
+          "value": "Pendant la formation"
+        },
+        {
+          "label": "Qualification",
+          "value": "Diplôme professionnel reconnu"
+        }
+      ],
+      "cta": "Comprendre l'Ausbildung"
+    },
+    "emploi": {
+      "title": "Vous êtes déjà professionnel ?",
+      "text": "Si vous disposez déjà d'une qualification et d'une expérience pertinentes, vous pouvez éventuellement accéder directement à un emploi en Allemagne, selon votre métier et les conditions applicables.",
+      "stepsTitle": "Le parcours",
+      "steps": [
+        "Votre qualification",
+        "Vérification du profil",
+        "Reconnaissance / équivalence si nécessaire",
+        "Recherche d'employeur",
+        "Candidature",
+        "Emploi en Allemagne"
+      ],
+      "cta": "Voir les conditions"
+    },
+    "matcher": {
+      "title": "Quel parcours pour quel profil ?",
+      "colSituation": "Votre situation",
+      "colParcours": "Parcours à envisager",
+      "rows": [
+        {
+          "situation": "Pas encore de qualification professionnelle",
+          "parcours": "Ausbildung"
+        },
+        {
+          "situation": "Jeune diplômé sans expérience importante",
+          "parcours": "Ausbildung / selon profil"
+        },
+        {
+          "situation": "Qualification professionnelle + expérience",
+          "parcours": "Emploi direct / selon métier"
+        },
+        {
+          "situation": "Diplôme étranger",
+          "parcours": "Vérification de reconnaissance"
+        },
+        {
+          "situation": "Allemand insuffisant",
+          "parcours": "Préparation linguistique"
+        },
+        {
+          "situation": "Vous ne savez pas quoi choisir",
+          "parcours": "Évaluation de profil"
+        }
+      ],
+      "ctaText": "Vous ne savez pas quel parcours choisir ?",
+      "cta": "Évaluer mon profil"
+    },
+    "method": {
+      "title": "Nous ne vous envoyons pas simplement des offres. Nous construisons votre parcours.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Évaluation",
+          "text": "Nous analysons votre profil."
+        },
+        {
+          "n": "02",
+          "title": "Orientation",
+          "text": "Nous déterminons le parcours le plus cohérent."
+        },
+        {
+          "n": "03",
+          "title": "Préparation",
+          "text": "Langue, compétences et préparation au projet."
+        },
+        {
+          "n": "04",
+          "title": "Dossier",
+          "text": "Nous vous accompagnons dans la constitution de votre dossier."
+        },
+        {
+          "n": "05",
+          "title": "Placement",
+          "text": "Nous vous orientons vers les opportunités correspondant à votre profil."
+        },
+        {
+          "n": "06",
+          "title": "Départ & intégration",
+          "text": "Nous vous accompagnons dans votre arrivée et votre intégration."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Vous savez maintenant quel parcours vous correspond ?",
+      "primary": "Évaluer mon profil",
+      "secondary": "Parler à Karriere Fähre"
+    }
   }
 }

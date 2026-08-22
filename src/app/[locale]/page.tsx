@@ -162,7 +162,7 @@ export default async function HomePage() {
                 {content.heroCtaStart}
               </Link>
               <Link
-                href="/secteurs"
+                href="/parcours"
                 className="press inline-flex h-[54px] items-center justify-center rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
               >
                 {content.heroCtaDiscover}

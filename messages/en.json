@@ -1702,5 +1702,206 @@
       "whatsappMessage": "Hello, I've just completed the profile evaluation on your website. My preliminary orientation: {path}. I'd like to discuss it with a Karriere Fähre adviser."
     },
     "disclaimer": "This evaluation is a first orientation and does not constitute a promise of employment, Ausbildung or visa. Your final eligibility depends on the verification of your file and the requirements applicable to your occupation."
+  },
+  "parcours": {
+    "title": "Our pathways",
+    "subtitle": "Ausbildung, direct employment or a supported path: understand every route to Germany before choosing yours.",
+    "hero": {
+      "title": "Your future in Germany starts with the right pathway.",
+      "subtitle": "Whether you want to train in Germany or join a company directly, Karriere Fähre guides you to the path that fits your profile."
+    },
+    "cards": {
+      "seFormer": {
+        "kicker": "Train",
+        "name": "Ausbildung",
+        "text": "A paid vocational training in Germany that combines classroom teaching and hands-on experience in a company.",
+        "cta": "Discover the Ausbildung"
+      },
+      "travailler": {
+        "kicker": "Work",
+        "name": "Direct employment",
+        "text": "Already qualified with professional experience? Discover the employment opportunities that match your profile.",
+        "cta": "Discover direct employment"
+      },
+      "preparer": {
+        "kicker": "Prepare your project",
+        "name": "Supported path",
+        "text": "Not ready yet? We help you build your project step by step: language, skills, file and orientation.",
+        "cta": "Build my path"
+      }
+    },
+    "compare": {
+      "title": "Two profiles. Two paths. One goal: working in Germany.",
+      "qualifiedTitle": "Already qualified?",
+      "qualifiedPath": "Direct employment",
+      "qualifiedSteps": [
+        "Qualification + experience + German + occupation requirements",
+        "Employer search",
+        "Application",
+        "Employment in Germany"
+      ],
+      "acquireTitle": "Want to gain a qualification?",
+      "acquirePath": "Ausbildung",
+      "acquireSteps": [
+        "Preparation",
+        "Application",
+        "Paid Ausbildung",
+        "Professional qualification",
+        "Qualified employment"
+      ]
+    },
+    "sectors": {
+      "title": "Choose your professional field",
+      "metiersLabel": "Occupations",
+      "parcoursLabel": "Paths",
+      "cta": "See the occupations",
+      "items": {
+        "sante": {
+          "blurb": "Opportunities in hospitals, clinics and care facilities.",
+          "metiers": "Nurse · Care assistant · Midwife · Physiotherapist · Lab technician",
+          "parcours": "Ausbildung or direct employment depending on qualification"
+        },
+        "informatique": {
+          "blurb": "Development, systems and networks: profiles in high demand in Germany.",
+          "metiers": "Developer · Systems administrator · Network technician · Data · Cybersecurity",
+          "parcours": "Ausbildung or direct employment depending on qualification"
+        },
+        "industrie": {
+          "blurb": "Production, maintenance and engineering in German industry.",
+          "metiers": "Mechatronics technician · Electrical technician · Maintenance technician · Operator",
+          "parcours": "Ausbildung or direct employment depending on qualification"
+        },
+        "construction": {
+          "blurb": "Building and civil works: occupations in strong demand.",
+          "metiers": "Mason · Electrician · Plumber · Carpenter · Machine operator",
+          "parcours": "Ausbildung or direct employment depending on qualification"
+        },
+        "logistique": {
+          "blurb": "Warehousing, transport and supply chain.",
+          "metiers": "Forklift operator · Logistics agent · Driver · Warehouse manager",
+          "parcours": "Ausbildung or direct employment depending on qualification"
+        },
+        "ingenierie": {
+          "blurb": "Engineering offices and technical projects in Germany.",
+          "metiers": "Mechanical engineer · Civil engineering · Electrical engineering · Automation",
+          "parcours": "Direct employment depending on diploma recognition"
+        },
+        "hotellerie": {
+          "blurb": "Hotels, restaurants and catering establishments.",
+          "metiers": "Cook · Waiter · Receptionist · Room attendant",
+          "parcours": "Ausbildung or direct employment depending on qualification"
+        }
+      }
+    },
+    "ausbildung": {
+      "title": "The Ausbildung: learn a trade and get paid",
+      "text": "In Germany, the Ausbildung lets you train for a trade while working in a company. It is usually organised between a vocational school and the company.",
+      "pillars": [
+        {
+          "label": "Training",
+          "value": "Vocational school"
+        },
+        {
+          "label": "Experience",
+          "value": "In a company"
+        },
+        {
+          "label": "Pay",
+          "value": "During the training"
+        },
+        {
+          "label": "Qualification",
+          "value": "Recognised professional diploma"
+        }
+      ],
+      "cta": "Understand the Ausbildung"
+    },
+    "emploi": {
+      "title": "Already a professional?",
+      "text": "If you already have a relevant qualification and experience, you may be able to access a job directly in Germany, depending on your occupation and the applicable conditions.",
+      "stepsTitle": "The path",
+      "steps": [
+        "Your qualification",
+        "Profile review",
+        "Recognition / equivalence if needed",
+        "Employer search",
+        "Application",
+        "Employment in Germany"
+      ],
+      "cta": "See the conditions"
+    },
+    "matcher": {
+      "title": "Which path for which profile?",
+      "colSituation": "Your situation",
+      "colParcours": "Path to consider",
+      "rows": [
+        {
+          "situation": "No professional qualification yet",
+          "parcours": "Ausbildung"
+        },
+        {
+          "situation": "Recent graduate with little experience",
+          "parcours": "Ausbildung / depending on profile"
+        },
+        {
+          "situation": "Professional qualification + experience",
+          "parcours": "Direct employment / depending on occupation"
+        },
+        {
+          "situation": "Foreign diploma",
+          "parcours": "Recognition check"
+        },
+        {
+          "situation": "Insufficient German",
+          "parcours": "Language preparation"
+        },
+        {
+          "situation": "You don't know what to choose",
+          "parcours": "Profile evaluation"
+        }
+      ],
+      "ctaText": "You don't know which path to choose?",
+      "cta": "Evaluate my profile"
+    },
+    "method": {
+      "title": "We don't just send you offers. We build your pathway.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Evaluation",
+          "text": "We analyse your profile."
+        },
+        {
+          "n": "02",
+          "title": "Orientation",
+          "text": "We determine the most coherent path."
+        },
+        {
+          "n": "03",
+          "title": "Preparation",
+          "text": "Language, skills and project preparation."
+        },
+        {
+          "n": "04",
+          "title": "File",
+          "text": "We support you in building your application file."
+        },
+        {
+          "n": "05",
+          "title": "Placement",
+          "text": "We guide you to the opportunities that match your profile."
+        },
+        {
+          "n": "06",
+          "title": "Departure & integration",
+          "text": "We support you through your arrival and integration."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Now you know which path fits you?",
+      "primary": "Evaluate my profile",
+      "secondary": "Talk to Karriere Fähre"
+    }
   }
 }
