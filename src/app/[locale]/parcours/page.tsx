@@ -105,14 +105,18 @@ export default async function ParcoursPage() {
                 style={{ animationDelay: `${120 + i * 80}ms` }}
                 className="lift-on-hover animate-fade-up group flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-7 transition-colors hover:border-brand-gold"
               >
-                <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
-                  <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
-                </span>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
-                  {data.kicker}
-                </span>
-                <h2 className="mt-2 font-serif text-2xl text-brand-black">{data.name}</h2>
-                <p className="mt-3 flex-1 text-sm text-brand-ink-secondary leading-relaxed">{data.text}</p>
+                <div className="flex items-center gap-2.5">
+                  <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-gold/10 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
+                    <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
+                    {data.kicker}
+                  </span>
+                </div>
+                <h2 className="mt-4 text-center font-serif text-2xl text-brand-black">{data.name}</h2>
+                <p className="mt-3 flex-1 text-sm text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">
+                  {data.text}
+                </p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-black">
                   {data.cta}
                   <ArrowRight
