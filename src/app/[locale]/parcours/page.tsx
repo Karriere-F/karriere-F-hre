@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getLocale } from "next-intl/server";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, Briefcase, ChevronDown, Compass, GraduationCap } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
@@ -56,9 +56,9 @@ export default async function ParcoursPage() {
   const locale = (await getLocale()) as Locale;
 
   const cards = [
-    { key: "seFormer" as const, href: "/ausbildung-allemagne" as const, data: content.cards.seFormer },
-    { key: "travailler" as const, href: "/travailler-en-allemagne" as const, data: content.cards.travailler },
-    { key: "preparer" as const, href: "/candidats" as const, data: content.cards.preparer },
+    { key: "seFormer" as const, href: "/ausbildung-allemagne" as const, icon: GraduationCap, data: content.cards.seFormer },
+    { key: "travailler" as const, href: "/travailler-en-allemagne" as const, icon: Briefcase, data: content.cards.travailler },
+    { key: "preparer" as const, href: "/candidats" as const, icon: Compass, data: content.cards.preparer },
   ];
 
   return (
@@ -79,13 +79,16 @@ export default async function ParcoursPage() {
           </div>
 
           <div className="mt-12 grid gap-5 sm:grid-cols-3">
-            {cards.map(({ key, href, data }, i) => (
+            {cards.map(({ key, href, icon: Icon, data }, i) => (
               <Link
                 key={key}
                 href={href}
                 style={{ animationDelay: `${120 + i * 80}ms` }}
                 className="lift-on-hover animate-fade-up group flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-7 transition-colors hover:border-brand-gold"
               >
+                <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
+                  <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
+                </span>
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
                   {data.kicker}
                 </span>
