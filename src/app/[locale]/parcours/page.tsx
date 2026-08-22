@@ -114,7 +114,7 @@ export default async function ParcoursPage() {
                   </span>
                 </div>
                 <h2 className="mt-4 text-center font-serif text-2xl text-brand-black">{data.name}</h2>
-                <p className="mt-3 flex-1 text-sm text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">
+                <p className="mt-3 flex-1 text-sm text-brand-ink-secondary leading-relaxed text-left text-pretty">
                   {data.text}
                 </p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-black">
