@@ -1,6 +1,20 @@
 import Image from "next/image";
 import { getLocale } from "next-intl/server";
-import { ArrowRight, Briefcase, ChevronDown, Compass, GraduationCap } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  BadgeCheck,
+  BookOpen,
+  Briefcase,
+  Compass,
+  GraduationCap,
+  Search,
+  Send,
+  Stamp,
+  UserCheck,
+  Wallet,
+  type LucideIcon,
+} from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
@@ -25,25 +39,38 @@ export const generateMetadata = () => metadataFromNamespace("parcours", "/parcou
 
 // Vertical step flow with a chevron between steps — used by the two comparison
 // columns and the direct-employment path.
-function Flow({ steps, highlightLast = false }: { steps: string[]; highlightLast?: boolean }) {
+// A read-only process diagram: numbered icon nodes joined by a vertical line. Not
+// interactive -- it explains the steps, it doesn't link anywhere.
+function Schema({ steps }: { steps: { icon: LucideIcon; label: string }[] }) {
   return (
-    <ol className="flex flex-col items-stretch gap-0">
+    <ol className="relative flex flex-1 flex-col justify-center">
       {steps.map((s, i) => {
+        const Icon = s.icon;
         const last = i === steps.length - 1;
         return (
-          <li key={s} className="flex flex-col items-center">
-            <div
-              className={`w-full rounded-lg border px-4 py-3 text-center text-sm ${
-                last && highlightLast
-                  ? "border-brand-gold bg-brand-gold/10 font-semibold text-brand-black"
-                  : "border-brand-grid bg-brand-white text-brand-ink-secondary"
+          <li key={s.label} className="relative flex items-start gap-4 pb-6 last:pb-0">
+            {!last && (
+              <span
+                aria-hidden="true"
+                className="absolute left-5 top-11 bottom-0 w-px -translate-x-1/2 bg-brand-grid"
+              />
+            )}
+            <span
+              className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full ring-1 ${
+                last
+                  ? "bg-brand-gold text-brand-black ring-brand-gold"
+                  : "bg-brand-white text-brand-gold-text ring-brand-grid"
               }`}
             >
-              {s}
-            </div>
-            {!last && (
-              <ChevronDown size={18} aria-hidden="true" className="my-1.5 text-brand-gold" />
-            )}
+              <Icon size={18} strokeWidth={1.9} aria-hidden="true" />
+            </span>
+            <p
+              className={`pt-2 text-sm leading-snug ${
+                last ? "font-semibold text-brand-black" : "text-brand-ink-secondary"
+              }`}
+            >
+              {s.label}
+            </p>
           </li>
         );
       })}
@@ -137,9 +164,9 @@ export default async function ParcoursPage() {
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.compare.title}
           </h2>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            <div className="rounded-2xl border border-brand-grid bg-brand-white p-6">
-              <div className="mb-6 flex items-center gap-3">
+          <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
+            <div className="flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
+              <div className="mb-7 flex items-center gap-3">
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
                   <Briefcase size={22} strokeWidth={1.75} aria-hidden="true" />
                 </span>
@@ -148,10 +175,15 @@ export default async function ParcoursPage() {
                   <p className="font-serif text-xl text-brand-gold-text">{content.compare.qualifiedPath}</p>
                 </div>
               </div>
-              <Flow steps={content.compare.qualifiedSteps} highlightLast />
+              <Schema
+                steps={content.compare.qualifiedSteps.map((label, i) => ({
+                  icon: [BadgeCheck, Search, Send, Briefcase][i] ?? Briefcase,
+                  label,
+                }))}
+              />
             </div>
-            <div className="rounded-2xl border border-brand-grid bg-brand-white p-6">
-              <div className="mb-6 flex items-center gap-3">
+            <div className="flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
+              <div className="mb-7 flex items-center gap-3">
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
                   <GraduationCap size={22} strokeWidth={1.75} aria-hidden="true" />
                 </span>
@@ -160,7 +192,12 @@ export default async function ParcoursPage() {
                   <p className="font-serif text-xl text-brand-gold-text">{content.compare.acquirePath}</p>
                 </div>
               </div>
-              <Flow steps={content.compare.acquireSteps} highlightLast />
+              <Schema
+                steps={content.compare.acquireSteps.map((label, i) => ({
+                  icon: [BookOpen, Send, Wallet, Award, Briefcase][i] ?? Briefcase,
+                  label,
+                }))}
+              />
             </div>
           </div>
         </div>
@@ -253,7 +290,12 @@ export default async function ParcoursPage() {
             {content.emploi.stepsTitle}
           </p>
           <div className="mt-4 max-w-md">
-            <Flow steps={content.emploi.steps} highlightLast />
+            <Schema
+              steps={content.emploi.steps.map((label, i) => ({
+                icon: [BadgeCheck, UserCheck, Stamp, Search, Send, Briefcase][i] ?? Briefcase,
+                label,
+              }))}
+            />
           </div>
           <Link
             href="/visa-allemagne/travailleur-qualifie"
