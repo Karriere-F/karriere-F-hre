@@ -70,7 +70,7 @@ export default async function VisaPage() {
         <div className="flex flex-wrap gap-4">
           <a
             href="#visas"
-            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
           >
             {content.ctaTypes}
           </a>
@@ -164,7 +164,7 @@ export default async function VisaPage() {
           <p className="text-brand-ink-secondary max-w-lg">{content.finalText}</p>
           <Link
             href="/visa-allemagne/travailleur-qualifie"
-            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
           >
             {content.finalCta}
           </Link>

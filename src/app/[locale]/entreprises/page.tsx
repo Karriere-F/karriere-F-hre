@@ -87,7 +87,7 @@ export default async function EntreprisesPage() {
         <div className="flex flex-wrap gap-4">
           <a
             href="#contact"
-            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
           >
             {content.ctaContact}
           </a>
@@ -299,7 +299,7 @@ export default async function EntreprisesPage() {
           <p className="text-brand-white/60 text-sm max-w-2xl mb-6">{content.pourquoiAfriqueBody2}</p>
           <a
             href="#profils"
-            className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            className="press inline-flex rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
           >
             {content.pourquoiAfriqueCta}
           </a>
@@ -462,7 +462,7 @@ export default async function EntreprisesPage() {
           <p className="text-brand-ink-secondary mb-6">{content.partenaireLead}</p>
           <Link
             href="/entreprises/partenariat"
-            className="press inline-flex rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            className="press inline-flex rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
           >
             {content.partenaireCta}
           </Link>
@@ -501,7 +501,7 @@ export default async function EntreprisesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/employer/signup"
-              className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+              className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
             >
               {content.contactCta}
             </Link>

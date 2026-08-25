@@ -166,7 +166,7 @@ export default async function ChancenkartePage() {
           <p className="text-brand-white/80 max-w-lg">{content.finalText}</p>
           <Link
             href="/postuler"
-            className="press rounded-full bg-brand-gold px-6 py-3 text-brand-black font-medium hover:bg-brand-gold-light transition-colors duration-150"
+            className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
           >
             {content.finalCta}
           </Link>

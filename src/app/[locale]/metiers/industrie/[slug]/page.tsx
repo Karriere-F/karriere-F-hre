@@ -112,7 +112,7 @@ export default async function IndustrieFichePage({
           <div className="mt-10">
             <Link
               href="/postuler"
-              className="press inline-flex items-center gap-2 rounded-lg bg-brand-gold px-7 py-3.5 font-medium text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
+              className="press inline-flex items-center gap-2 rounded-lg border border-brand-gold px-7 py-3.5 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black"
             >
               {tr(INDUSTRIE_UI.apply, locale)}
               <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />

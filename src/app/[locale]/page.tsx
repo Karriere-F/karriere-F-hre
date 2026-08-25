@@ -439,7 +439,7 @@ export default async function HomePage() {
               </ul>
               <Link
                 href="/postuler"
-                className="press mt-8 inline-flex rounded-full bg-brand-gold px-7 py-3.5 font-medium text-brand-black hover:bg-brand-gold-light transition-colors duration-150"
+                className="press mt-8 inline-flex rounded-full border border-brand-gold px-7 py-3.5 font-bold text-brand-gold-text hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
               >
                 {content.ctaCandidature}
               </Link>
