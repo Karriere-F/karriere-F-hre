@@ -1,12 +1,13 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import type { Locale } from "@i18n/routing";
-import { ACTIVE_SECTOR_PATH, SECTEURS_UI, type Sector } from "@/lib/secteurs";
+import { ACTIVE_SECTOR_PATH, SECTEURS_UI, SECTOR_IMAGES, type Sector } from "@/lib/secteurs";
 import { tr } from "@/lib/localized";
 
 export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Locale }) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {sectors.map((s) => {
         const Icon = s.icon;
         const name = tr(s.name, locale);
@@ -17,21 +18,29 @@ export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Loc
             <Link
               key={s.slug}
               href={href}
-              className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_12px_28px_-14px_rgba(17,17,17,0.25)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-brand-grid bg-brand-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_12px_28px_-14px_rgba(17,17,17,0.25)]"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
-                <Icon size={22} strokeWidth={2} aria-hidden="true" />
-              </span>
-              <h3 className="mt-4 font-serif text-lg text-brand-black">{name}</h3>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text">
-                {tr(SECTEURS_UI.choose, locale)}
-                <ArrowRight
-                  size={15}
-                  strokeWidth={2}
-                  aria-hidden="true"
-                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src={SECTOR_IMAGES[s.slug]}
+                  alt={name}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
                 />
-              </span>
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="font-serif text-lg text-brand-black">{name}</h3>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text">
+                  {tr(SECTEURS_UI.choose, locale)}
+                  <ArrowRight
+                    size={15}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                    className="transition-transform duration-200 group-hover:translate-x-0.5"
+                  />
+                </span>
+              </div>
             </Link>
           );
         }

@@ -18,22 +18,12 @@ import {
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
-import { SECTORS_ALL, ACTIVE_SECTOR_PATH } from "@/lib/secteurs";
+import { SECTORS_ALL, ACTIVE_SECTOR_PATH, SECTOR_IMAGES } from "@/lib/secteurs";
 import { tr } from "@/lib/localized";
 import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.parcours;
-
-const SECTOR_IMG: Record<string, string> = {
-  sante: "/images/metiers/sante-equipe.jpg",
-  informatique: "/images/metiers/informaticiens.jpg",
-  industrie: "/images/metiers/industrie-v3.jpg",
-  construction: "/images/metiers/btp.jpg",
-  logistique: "/images/metiers/logistique-v2.jpg",
-  ingenierie: "/images/metiers/ingenieurs-v2.jpg",
-  hotellerie: "/images/metiers/hotellerie-v2.jpg",
-};
 
 export const generateMetadata = () => metadataFromNamespace("parcours", "/parcours");
 
@@ -219,7 +209,7 @@ export default async function ParcoursPage() {
                 >
                   <div className="relative aspect-[16/10]">
                     <Image
-                      src={SECTOR_IMG[sector.slug]}
+                      src={SECTOR_IMAGES[sector.slug]}
                       alt={tr(sector.name, locale)}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

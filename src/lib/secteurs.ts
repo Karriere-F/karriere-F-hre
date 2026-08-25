@@ -32,6 +32,18 @@ export const SECTORS_ALL: Sector[] = [
   HOTELLERIE,
 ];
 
+// Real photo per sector (reused from the home occupations grid), shown on the
+// sector cards across /secteurs and /parcours so the two use one visual language.
+export const SECTOR_IMAGES: Record<string, string> = {
+  sante: "/images/metiers/sante-equipe.jpg",
+  informatique: "/images/metiers/informaticiens.jpg",
+  industrie: "/images/metiers/industrie-v3.jpg",
+  construction: "/images/metiers/btp.jpg",
+  logistique: "/images/metiers/logistique-v2.jpg",
+  ingenierie: "/images/metiers/ingenieurs-v2.jpg",
+  hotellerie: "/images/metiers/hotellerie-v2.jpg",
+};
+
 // Destination for each active sector's landing page. Kept as literal strings so
 // the typed <Link> / getPathname keep their route-key checking. A sector absent
 // here (still "Bientôt disponible") falls back to the /secteurs grid.
