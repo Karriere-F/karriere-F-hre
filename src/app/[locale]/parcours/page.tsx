@@ -2,18 +2,14 @@ import Image from "next/image";
 import { getLocale } from "next-intl/server";
 import {
   ArrowRight,
-  Award,
-  BadgeCheck,
   BookOpen,
   Briefcase,
+  Check,
+  Clock,
   Compass,
   GraduationCap,
-  Search,
-  Send,
-  Stamp,
-  UserCheck,
+  TrendingUp,
   Wallet,
-  type LucideIcon,
 } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
@@ -27,47 +23,6 @@ type Content = typeof frMessages.parcours;
 
 export const generateMetadata = () => metadataFromNamespace("parcours", "/parcours");
 
-// Vertical step flow with a chevron between steps — used by the two comparison
-// columns and the direct-employment path.
-// A read-only process diagram: numbered icon nodes joined by a vertical line. Not
-// interactive -- it explains the steps, it doesn't link anywhere.
-function Schema({ steps }: { steps: { icon: LucideIcon; label: string }[] }) {
-  return (
-    <ol className="relative flex flex-1 flex-col justify-center">
-      {steps.map((s, i) => {
-        const Icon = s.icon;
-        const last = i === steps.length - 1;
-        return (
-          <li key={s.label} className="relative flex items-start gap-4 pb-6 last:pb-0">
-            {!last && (
-              <span
-                aria-hidden="true"
-                className="absolute left-5 top-11 bottom-0 w-px -translate-x-1/2 bg-brand-grid"
-              />
-            )}
-            <span
-              className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full ring-1 ${
-                last
-                  ? "bg-brand-gold text-brand-black ring-brand-gold"
-                  : "bg-brand-white text-brand-gold-text ring-brand-grid"
-              }`}
-            >
-              <Icon size={18} strokeWidth={1.9} aria-hidden="true" />
-            </span>
-            <p
-              className={`pt-2 text-sm leading-snug ${
-                last ? "font-semibold text-brand-black" : "text-brand-ink-secondary"
-              }`}
-            >
-              {s.label}
-            </p>
-          </li>
-        );
-      })}
-    </ol>
-  );
-}
-
 export default async function ParcoursPage() {
   const content = await getPageContent<Content>("parcours");
   const locale = (await getLocale()) as Locale;
@@ -78,11 +33,37 @@ export default async function ParcoursPage() {
     { key: "preparer" as const, href: "/candidats" as const, icon: Compass, data: content.cards.preparer },
   ];
 
+  const chooser = [
+    { href: "/ausbildung-allemagne" as const, q: content.chooser.apprendreQ, path: content.chooser.apprendrePath, text: content.chooser.apprendreText },
+    { href: "/travailler-en-allemagne" as const, q: content.chooser.qualifieQ, path: content.chooser.qualifiePath, text: content.chooser.qualifieText },
+    { href: "/evaluation" as const, q: content.chooser.incertainQ, path: content.chooser.incertainPath, text: content.chooser.incertainText },
+  ];
+
+  const ways = [
+    {
+      icon: GraduationCap,
+      href: "/ausbildung-allemagne" as const,
+      name: content.twoWays.ausbildungName,
+      lead: content.twoWays.ausbildungLead,
+      bullets: content.twoWays.ausbildungBullets,
+      cta: content.twoWays.ausbildungCta,
+    },
+    {
+      icon: Briefcase,
+      href: "/travailler-en-allemagne" as const,
+      name: content.twoWays.emploiName,
+      lead: content.twoWays.emploiLead,
+      bullets: content.twoWays.emploiBullets,
+      cta: content.twoWays.emploiCta,
+    },
+  ];
+
+  const understandIcons = [BookOpen, Wallet, Clock, TrendingUp];
+
   return (
     <div className="flex flex-col">
       {/* 1 — Hero + three routes */}
       <section className="relative overflow-hidden bg-brand-white">
-        {/* Upper hero: text left, photo bleeding in from the right and fading into the page */}
         <div className="relative">
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[54%] lg:block">
             <Image
@@ -148,55 +129,108 @@ export default async function ParcoursPage() {
         </div>
       </section>
 
-      {/* 2 — Which path is yours? */}
-      <section className="bg-brand-card">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      {/* 2 — Which path fits your situation? */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
-            {content.compare.title}
+            {content.chooser.title}
           </h2>
-          <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
-            <div className="flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
-              <div className="mb-7 flex items-center gap-3">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
-                  <Briefcase size={22} strokeWidth={1.75} aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="text-sm text-brand-ink-secondary">{content.compare.qualifiedTitle}</p>
-                  <p className="font-serif text-xl text-brand-gold-text">{content.compare.qualifiedPath}</p>
-                </div>
-              </div>
-              <Schema
-                steps={content.compare.qualifiedSteps.map((label, i) => ({
-                  icon: [BadgeCheck, Search, Send, Briefcase][i] ?? Briefcase,
-                  label,
-                }))}
-              />
-            </div>
-            <div className="flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
-              <div className="mb-7 flex items-center gap-3">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
-                  <GraduationCap size={22} strokeWidth={1.75} aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="text-sm text-brand-ink-secondary">{content.compare.acquireTitle}</p>
-                  <p className="font-serif text-xl text-brand-gold-text">{content.compare.acquirePath}</p>
-                </div>
-              </div>
-              <Schema
-                steps={content.compare.acquireSteps.map((label, i) => ({
-                  icon: [BookOpen, Send, Wallet, Award, Briefcase][i] ?? Briefcase,
-                  label,
-                }))}
-              />
-            </div>
+          <p className="mt-4 max-w-2xl text-brand-ink-secondary leading-relaxed">{content.chooser.intro}</p>
+          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+            {chooser.map((o) => (
+              <Link
+                key={o.href}
+                href={o.href}
+                className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 transition-colors hover:border-brand-gold"
+              >
+                <p className="font-serif text-lg text-brand-black">{o.q}</p>
+                <p className="mt-3 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-gold-text">
+                  <ArrowRight size={14} strokeWidth={2.5} aria-hidden="true" />
+                  {o.path}
+                </p>
+                <p className="mt-3 flex-1 text-sm text-brand-ink-secondary leading-relaxed">{o.text}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 3 — Sectors */}
+      {/* 3 — The two main routes, side by side */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black">{content.sectors.title}</h2>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {content.twoWays.title}
+          </h2>
+          <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
+            {ways.map(({ icon: Icon, href, name, lead, bullets, cta }) => (
+              <div key={name} className="flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-7 sm:p-8">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
+                    <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-2xl text-brand-black">{name}</h3>
+                    <p className="text-sm text-brand-ink-secondary">{lead}</p>
+                  </div>
+                </div>
+                <ul className="mt-6 flex-1 space-y-3">
+                  {bullets.map((b) => (
+                    <li key={b} className="flex gap-3 text-sm text-brand-ink-secondary leading-snug">
+                      <Check size={18} strokeWidth={2} aria-hidden="true" className="mt-0.5 shrink-0 text-brand-gold-text" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={href}
+                  className="press mt-7 inline-flex h-[52px] items-center justify-center gap-2 self-start rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
+                >
+                  {cta}
+                  <ArrowRight size={18} aria-hidden="true" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4 — Timeline: from your situation to your future */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-2xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="text-center font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {content.timeline.title}
+          </h2>
+          <ol className="relative mt-12">
+            {content.timeline.steps.map((s, i) => {
+              const last = i === content.timeline.steps.length - 1;
+              return (
+                <li key={s.n} className="relative flex gap-5 pb-8 last:pb-0">
+                  {!last && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-6 top-14 bottom-0 w-px -translate-x-1/2 bg-brand-grid"
+                    />
+                  )}
+                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-gold/40 bg-brand-white font-serif text-lg text-brand-gold-text">
+                    {s.n}
+                  </span>
+                  <div className="pt-1.5">
+                    <h3 className="font-serif text-lg text-brand-black">{s.title}</h3>
+                    <p className="mt-1 text-sm text-brand-ink-secondary">{s.detail}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </section>
+
+      {/* 5 — Sectors */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {content.sectors.title}
+          </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SECTORS_ALL.map((sector, i) => {
               const item = content.sectors.items[sector.slug as keyof typeof content.sectors.items];
@@ -223,10 +257,6 @@ export default async function ParcoursPage() {
                       {content.sectors.metiersLabel}
                     </p>
                     <p className="mt-1 text-sm text-brand-ink-secondary">{item.metiers}</p>
-                    <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-brand-ink-muted">
-                      {content.sectors.parcoursLabel}
-                    </p>
-                    <p className="mt-1 text-sm text-brand-ink-secondary">{item.parcours}</p>
                     <Link
                       href={href}
                       className="press mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-brand-black hover:text-brand-gold-text"
@@ -242,135 +272,57 @@ export default async function ParcoursPage() {
         </div>
       </section>
 
-      {/* 4 — Ausbildung explained */}
-      <section className="bg-brand-card">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
-            {content.ausbildung.title}
-          </h2>
-          <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">
-            {content.ausbildung.text}
-          </p>
-          <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {content.ausbildung.pillars.map((p) => (
-              <div key={p.label} className="rounded-xl border border-brand-grid bg-brand-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold-text">
-                  {p.label}
-                </p>
-                <p className="mt-2 text-brand-black leading-snug">{p.value}</p>
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/ausbildung-allemagne"
-            className="press mt-9 inline-flex h-[52px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
-          >
-            {content.ausbildung.cta}
-            <ArrowRight size={18} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
-
-      {/* 5 — Direct employment explained */}
+      {/* 6 — Understand before you invest */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black">{content.emploi.title}</h2>
-          <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{content.emploi.text}</p>
-          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.16em] text-brand-ink-muted">
-            {content.emploi.stepsTitle}
-          </p>
-          <div className="mt-4 max-w-md">
-            <Schema
-              steps={content.emploi.steps.map((label, i) => ({
-                icon: [BadgeCheck, UserCheck, Stamp, Search, Send, Briefcase][i] ?? Briefcase,
-                label,
-              }))}
-            />
-          </div>
-          <Link
-            href="/visa-allemagne/travailleur-qualifie"
-            className="press mt-9 inline-flex h-[52px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
-          >
-            {content.emploi.cta}
-            <ArrowRight size={18} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
-
-      {/* 6 — Which path for which profile? */}
-      <section className="bg-brand-card">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black">{content.matcher.title}</h2>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-brand-grid bg-brand-white">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-brand-grid text-left">
-                  <th className="px-5 py-3 font-semibold text-brand-black">{content.matcher.colSituation}</th>
-                  <th className="px-5 py-3 font-semibold text-brand-black">{content.matcher.colParcours}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {content.matcher.rows.map((r) => (
-                  <tr key={r.situation} className="border-b border-brand-grid/60 last:border-0">
-                    <td className="px-5 py-3.5 text-brand-ink-secondary">{r.situation}</td>
-                    <td className="px-5 py-3.5 font-medium text-brand-gold-text">{r.parcours}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-            <p className="font-medium text-brand-black">{content.matcher.ctaText}</p>
-            <Link
-              href="/evaluation"
-              className="press inline-flex h-[50px] items-center justify-center gap-2 rounded-md bg-brand-gold px-7 font-bold text-brand-black transition-colors hover:bg-brand-gold-light"
-            >
-              {content.matcher.cta}
-              <ArrowRight size={18} aria-hidden="true" />
-            </Link>
+        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {content.understand.title}
+          </h2>
+          <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{content.understand.text}</p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {content.understand.items.map((it, i) => {
+              const Icon = understandIcons[i] ?? BookOpen;
+              return (
+                <div key={it.label} className="rounded-xl border border-brand-grid bg-brand-white p-5">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-gold/10 text-brand-gold-text">
+                    <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
+                  </span>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold-text">
+                    {it.label}
+                  </p>
+                  <p className="mt-2 text-sm text-brand-ink-secondary leading-snug">{it.text}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* 7 — Method */}
+      {/* 7 — Final CTA */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-          <h2 className="max-w-3xl font-serif text-2xl sm:text-3xl text-brand-white text-balance leading-snug">
-            {content.method.title}
-          </h2>
-          <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-            {content.method.steps.map((s) => (
-              <div key={s.n}>
-                <p className="font-serif text-3xl text-brand-gold-light">{s.n}</p>
-                <h3 className="mt-3 text-lg font-semibold text-brand-white">{s.title}</h3>
-                <p className="mt-2 text-sm text-brand-white/70 leading-relaxed">{s.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 8 — Final CTA */}
-      <section className="bg-brand-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-white text-balance leading-snug">
             {content.finalCta.title}
           </h2>
+          <p className="mt-4 text-brand-white/70 leading-relaxed">{content.finalCta.subline}</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/evaluation"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors hover:bg-brand-gold-light"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-light transition-colors hover:bg-brand-gold hover:text-brand-black"
             >
               {content.finalCta.primary}
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link
               href="/contact"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-black/25 px-8 font-bold text-brand-black transition-colors hover:border-brand-gold hover:text-brand-gold-text"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-white/30 px-8 font-bold text-brand-white transition-colors hover:border-brand-white hover:bg-brand-white/10"
             >
               {content.finalCta.secondary}
             </Link>
           </div>
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brand-white/45">
+            {content.finalCta.tags}
+          </p>
         </div>
       </section>
     </div>

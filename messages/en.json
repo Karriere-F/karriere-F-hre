@@ -1751,7 +1751,7 @@
       ]
     },
     "sectors": {
-      "title": "Choose your professional field",
+      "title": "In which sectors can you build your future?",
       "metiersLabel": "Occupations",
       "parcoursLabel": "Paths",
       "cta": "See the occupations",
@@ -1899,9 +1899,106 @@
       ]
     },
     "finalCta": {
-      "title": "Now you know which path fits you?",
-      "primary": "Evaluate my profile",
+      "title": "Not sure yet which path fits you?",
+      "subline": "A few questions are enough for a first read on your situation.",
+      "tags": "Training · experience · German · professional goal",
+      "primary": "Assess my profile",
       "secondary": "Talk to Karriere Fähre"
+    },
+    "chooser": {
+      "title": "Which path fits your situation?",
+      "intro": "There is no single route to Germany. Your path depends on your training, your experience and your professional goal.",
+      "apprendreQ": "I want to learn a trade",
+      "apprendrePath": "Ausbildung",
+      "apprendreText": "Paid vocational training in Germany.",
+      "qualifieQ": "I am already qualified",
+      "qualifiePath": "Direct employment",
+      "qualifieText": "For professionals who already hold a relevant qualification and experience.",
+      "incertainQ": "I'm not sure yet",
+      "incertainPath": "Profile assessment",
+      "incertainText": "We analyse your situation and point you to the most coherent path."
+    },
+    "twoWays": {
+      "title": "Two main routes to working in Germany",
+      "ausbildungName": "Ausbildung",
+      "ausbildungLead": "You learn a trade in Germany.",
+      "ausbildungBullets": [
+        "Vocational training",
+        "Alternating between company and school",
+        "Paid training",
+        "Usually 2 to 3.5 years depending on the trade",
+        "Recognised vocational qualification",
+        "Option to move into employment afterwards"
+      ],
+      "ausbildungCta": "Discover the Ausbildung",
+      "emploiName": "Direct employment",
+      "emploiLead": "You are already professionally qualified.",
+      "emploiBullets": [
+        "Qualification or degree",
+        "Professional experience depending on the trade",
+        "Qualification recognition where required",
+        "Search for a suitable employer",
+        "Employment contract",
+        "You work directly in Germany"
+      ],
+      "emploiCta": "Discover direct employment"
+    },
+    "timeline": {
+      "title": "From where you are today to your professional future",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Your profile",
+          "detail": "Training · experience · goal"
+        },
+        {
+          "n": "02",
+          "title": "Your orientation",
+          "detail": "Ausbildung · direct employment · preparation"
+        },
+        {
+          "n": "03",
+          "title": "Preparation",
+          "detail": "German · skills · documents · recognition"
+        },
+        {
+          "n": "04",
+          "title": "Opportunity",
+          "detail": "Company · contract · training"
+        },
+        {
+          "n": "05",
+          "title": "Germany",
+          "detail": "Visa · departure · integration"
+        },
+        {
+          "n": "06",
+          "title": "Your professional future",
+          "detail": "Qualification or job · growth · career"
+        }
+      ]
+    },
+    "understand": {
+      "title": "Understand before you invest",
+      "text": "Your professional project in Germany is an investment. We want you to know exactly which path you are committing to, what it involves and the steps before you leave.",
+      "items": [
+        {
+          "label": "Training",
+          "text": "What you need to learn."
+        },
+        {
+          "label": "Pay",
+          "text": "When you start being paid."
+        },
+        {
+          "label": "Duration",
+          "text": "How long your path takes."
+        },
+        {
+          "label": "Outcome",
+          "text": "What can happen after training or entering employment."
+        }
+      ]
     }
   }
 }

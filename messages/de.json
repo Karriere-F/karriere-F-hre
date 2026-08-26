@@ -1751,7 +1751,7 @@
       ]
     },
     "sectors": {
-      "title": "Wählen Sie Ihren Berufsbereich",
+      "title": "In welchen Branchen können Sie Ihre Zukunft aufbauen?",
       "metiersLabel": "Berufe",
       "parcoursLabel": "Wege",
       "cta": "Berufe ansehen",
@@ -1899,9 +1899,106 @@
       ]
     },
     "finalCta": {
-      "title": "Wissen Sie jetzt, welcher Weg zu Ihnen passt?",
-      "primary": "Profil bewerten",
+      "title": "Sie wissen noch nicht, welcher Weg zu Ihnen passt?",
+      "subline": "Ein paar Fragen genügen für eine erste Einschätzung Ihrer Situation.",
+      "tags": "Ausbildung · Erfahrung · Deutsch · berufliches Ziel",
+      "primary": "Mein Profil auswerten",
       "secondary": "Mit Karriere Fähre sprechen"
+    },
+    "chooser": {
+      "title": "Welcher Weg passt zu Ihrer Situation?",
+      "intro": "Es gibt nicht nur einen Weg nach Deutschland. Ihr Weg hängt von Ihrer Ausbildung, Ihrer Erfahrung und Ihrem beruflichen Ziel ab.",
+      "apprendreQ": "Ich möchte einen Beruf erlernen",
+      "apprendrePath": "Ausbildung",
+      "apprendreText": "Bezahlte Berufsausbildung in Deutschland.",
+      "qualifieQ": "Ich bin bereits qualifiziert",
+      "qualifiePath": "Direkte Anstellung",
+      "qualifieText": "Für Fachkräfte, die bereits über eine passende Qualifikation und Erfahrung verfügen.",
+      "incertainQ": "Ich weiß es noch nicht",
+      "incertainPath": "Profil-Auswertung",
+      "incertainText": "Wir analysieren Ihre Situation und leiten Sie zum passendsten Weg."
+    },
+    "twoWays": {
+      "title": "Zwei Hauptwege zur Arbeit in Deutschland",
+      "ausbildungName": "Ausbildung",
+      "ausbildungLead": "Sie erlernen einen Beruf in Deutschland.",
+      "ausbildungBullets": [
+        "Berufsausbildung",
+        "Wechsel zwischen Betrieb und Berufsschule",
+        "Bezahlte Ausbildung",
+        "Dauer meist 2 bis 3,5 Jahre je nach Beruf",
+        "Anerkannter Berufsabschluss",
+        "Möglichkeit, danach in eine Anstellung überzugehen"
+      ],
+      "ausbildungCta": "Die Ausbildung entdecken",
+      "emploiName": "Direkte Anstellung",
+      "emploiLead": "Sie sind bereits beruflich qualifiziert.",
+      "emploiBullets": [
+        "Qualifikation oder Abschluss",
+        "Berufserfahrung je nach Beruf",
+        "Anerkennung des Abschlusses, wenn nötig",
+        "Suche nach einem passenden Arbeitgeber",
+        "Arbeitsvertrag",
+        "Sie arbeiten direkt in Deutschland"
+      ],
+      "emploiCta": "Die direkte Anstellung entdecken"
+    },
+    "timeline": {
+      "title": "Von Ihrer heutigen Situation zu Ihrer beruflichen Zukunft",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Ihr Profil",
+          "detail": "Ausbildung · Erfahrung · Ziel"
+        },
+        {
+          "n": "02",
+          "title": "Ihre Orientierung",
+          "detail": "Ausbildung · direkte Anstellung · Vorbereitung"
+        },
+        {
+          "n": "03",
+          "title": "Vorbereitung",
+          "detail": "Deutsch · Kompetenzen · Unterlagen · Anerkennung"
+        },
+        {
+          "n": "04",
+          "title": "Gelegenheit",
+          "detail": "Unternehmen · Vertrag · Ausbildung"
+        },
+        {
+          "n": "05",
+          "title": "Deutschland",
+          "detail": "Visum · Abreise · Integration"
+        },
+        {
+          "n": "06",
+          "title": "Ihre berufliche Zukunft",
+          "detail": "Abschluss oder Anstellung · Entwicklung · Karriere"
+        }
+      ]
+    },
+    "understand": {
+      "title": "Verstehen, bevor Sie investieren",
+      "text": "Ihr berufliches Projekt in Deutschland ist eine Investition. Wir möchten, dass Sie genau wissen, worauf Sie sich einlassen, was es bedeutet und welche Schritte vor Ihrer Abreise anstehen.",
+      "items": [
+        {
+          "label": "Ausbildung",
+          "text": "Was Sie lernen müssen."
+        },
+        {
+          "label": "Vergütung",
+          "text": "Ab wann Sie vergütet werden."
+        },
+        {
+          "label": "Dauer",
+          "text": "Wie lange Ihr Weg dauert."
+        },
+        {
+          "label": "Perspektive",
+          "text": "Was nach der Ausbildung oder dem Berufseinstieg möglich ist."
+        }
+      ]
     }
   }
 }

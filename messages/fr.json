@@ -1751,7 +1751,7 @@
       ]
     },
     "sectors": {
-      "title": "Choisissez votre domaine professionnel",
+      "title": "Dans quels secteurs pouvez-vous construire votre avenir ?",
       "metiersLabel": "Métiers",
       "parcoursLabel": "Parcours",
       "cta": "Voir les métiers",
@@ -1899,9 +1899,106 @@
       ]
     },
     "finalCta": {
-      "title": "Vous savez maintenant quel parcours vous correspond ?",
+      "title": "Vous ne savez pas encore quel parcours vous correspond ?",
+      "subline": "Quelques questions suffisent pour faire le premier point sur votre situation.",
+      "tags": "Formation · expérience · allemand · projet professionnel",
       "primary": "Évaluer mon profil",
       "secondary": "Parler à Karriere Fähre"
+    },
+    "chooser": {
+      "title": "Quel parcours correspond à votre situation ?",
+      "intro": "Il n'existe pas un seul chemin vers l'Allemagne. Votre parcours dépend de votre formation, de votre expérience et de votre projet professionnel.",
+      "apprendreQ": "Je veux apprendre un métier",
+      "apprendrePath": "Ausbildung",
+      "apprendreText": "Formation professionnelle rémunérée en Allemagne.",
+      "qualifieQ": "Je suis déjà qualifié",
+      "qualifiePath": "Emploi direct",
+      "qualifieText": "Pour les professionnels disposant déjà d'une qualification et d'une expérience adaptées.",
+      "incertainQ": "Je ne sais pas encore",
+      "incertainPath": "Évaluation du profil",
+      "incertainText": "Nous analysons votre situation et vous orientons vers la voie la plus cohérente."
+    },
+    "twoWays": {
+      "title": "Deux voies principales vers l'emploi en Allemagne",
+      "ausbildungName": "Ausbildung",
+      "ausbildungLead": "Vous apprenez un métier en Allemagne.",
+      "ausbildungBullets": [
+        "Formation professionnelle",
+        "Alternance entre entreprise et enseignement",
+        "Formation rémunérée",
+        "Durée généralement de 2 à 3,5 ans selon le métier",
+        "Diplôme professionnel reconnu",
+        "Possibilité de poursuivre vers un emploi après la formation"
+      ],
+      "ausbildungCta": "Découvrir l'Ausbildung",
+      "emploiName": "Emploi direct",
+      "emploiLead": "Vous êtes déjà professionnellement qualifié.",
+      "emploiBullets": [
+        "Qualification ou diplôme",
+        "Expérience professionnelle selon le métier",
+        "Reconnaissance du diplôme lorsque nécessaire",
+        "Recherche d'un employeur adapté",
+        "Contrat de travail",
+        "Vous travaillez directement en Allemagne"
+      ],
+      "emploiCta": "Découvrir l'emploi direct"
+    },
+    "timeline": {
+      "title": "De votre situation actuelle à votre avenir professionnel",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Votre profil",
+          "detail": "Formation · expérience · projet"
+        },
+        {
+          "n": "02",
+          "title": "Votre orientation",
+          "detail": "Ausbildung · emploi direct · préparation"
+        },
+        {
+          "n": "03",
+          "title": "Préparation",
+          "detail": "Allemand · compétences · documents · reconnaissance"
+        },
+        {
+          "n": "04",
+          "title": "Opportunité",
+          "detail": "Entreprise · contrat · formation"
+        },
+        {
+          "n": "05",
+          "title": "Allemagne",
+          "detail": "Visa · départ · intégration"
+        },
+        {
+          "n": "06",
+          "title": "Votre avenir professionnel",
+          "detail": "Diplôme ou emploi · évolution · carrière"
+        }
+      ]
+    },
+    "understand": {
+      "title": "Comprendre avant d'investir",
+      "text": "Votre projet professionnel en Allemagne est un investissement. Nous voulons que vous sachiez précisément dans quel parcours vous vous engagez, ce qu'il implique et quelles sont les étapes avant votre départ.",
+      "items": [
+        {
+          "label": "Formation",
+          "text": "Ce que vous devez apprendre."
+        },
+        {
+          "label": "Rémunération",
+          "text": "Quand vous commencez à être rémunéré."
+        },
+        {
+          "label": "Durée",
+          "text": "Combien de temps dure votre parcours."
+        },
+        {
+          "label": "Débouché",
+          "text": "Ce qui peut se passer après la formation ou l'accès à l'emploi."
+        }
+      ]
     }
   }
 }
