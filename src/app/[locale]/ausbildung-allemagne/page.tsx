@@ -154,7 +154,7 @@ export default async function AusbildungHubPage() {
           </div>
           <p className="mt-6 text-sm text-brand-ink-muted">{hub.metiersNote}</p>
           <Link
-            href="/ausbildung-allemagne/metiers"
+            href="/secteurs"
             className="press mt-8 inline-flex h-[52px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
           >
             {hub.metiersCta}
