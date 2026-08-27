@@ -1,49 +1,44 @@
+import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
-import { PageHero } from "@/components/marketing/page-hero";
-import { AnchorSection } from "@/components/marketing/anchor-section";
+import {
+  ArrowRight,
+  BookOpen,
+  Check,
+  ClipboardCheck,
+  Cog,
+  Compass,
+  Flag,
+  HardHat,
+  HeartPulse,
+  Send,
+  Users,
+  UtensilsCrossed,
+} from "lucide-react";
+import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
-import { Link, getPathname } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
+import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
 import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.ausbildung;
-type Href = Parameters<typeof getPathname>[0]["href"];
 
 export const generateMetadata = () => metadataFromNamespace("ausbildung", "/ausbildung-allemagne");
+
+const METIER_ICONS = [HeartPulse, UtensilsCrossed, Cog, HardHat];
+const HELP_ICONS = [ClipboardCheck, Compass, BookOpen, Send, Users, Flag];
 
 export default async function AusbildungHubPage() {
   const t = await getTranslations("ausbildung");
   const tNav = await getTranslations("nav");
   const locale = (await getLocale()) as Locale;
   const content = await getPageContent<Content>("ausbildung");
-
-  const besoinsHref = `${getPathname({ href: "/entreprises", locale })}#besoins`;
-
-  const quoi = [
-    [content.quoi1Title, content.quoi1Body],
-    [content.quoi2Title, content.quoi2Body],
-    [content.quoi3Title, content.quoi3Body],
-  ];
-
-  const etapes = [
-    [content.etape1Title, content.etape1Body],
-    [content.etape2Title, content.etape2Body],
-    [content.etape3Title, content.etape3Body],
-    [content.etape4Title, content.etape4Body],
-    [content.etape5Title, content.etape5Body],
-  ];
-
-  // The three spokes of the silo -- each a dedicated page, also in the header dropdown.
-  const cards: { href: Href; title: string; body: string }[] = [
-    { href: "/ausbildung-allemagne/metiers", title: content.card1Title, body: content.card1Body },
-    { href: "/ausbildung-allemagne/conditions", title: content.card2Title, body: content.card2Body },
-    { href: "/ausbildung-allemagne/apres-ausbildung", title: content.card3Title, body: content.card3Body },
-  ];
+  const hub = content.hub;
+  const wa = whatsappLink(WHATSAPP_NUMBERS[0].e164);
 
   return (
-    <div>
+    <div className="flex flex-col">
       <BreadcrumbJsonLd
         locale={locale}
         items={[
@@ -52,123 +47,258 @@ export default async function AusbildungHubPage() {
         ]}
       />
 
-      <PageHero title={content.title} subtitle={content.subtitle} />
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-brand-white">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
+          <Image
+            src="/images/german-courses.jpg"
+            alt="Une salle de formation professionnelle, préparation à l'Ausbildung en Allemagne"
+            fill
+            priority
+            sizes="52vw"
+            className="object-cover object-[center_30%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-white to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
+        </div>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
-        <div className="flex flex-wrap gap-4">
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-xl py-14 lg:flex lg:min-h-[520px] lg:flex-col lg:justify-center lg:py-20">
+            <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
+              {hub.heroTitle}
+            </h1>
+            <p
+              className="animate-fade-up mt-6 max-w-lg text-lg text-brand-ink-secondary leading-relaxed"
+              style={{ animationDelay: "80ms" }}
+            >
+              {hub.heroSubtitle}
+            </p>
+            <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "140ms" }}>
+              <Link
+                href="/evaluation"
+                className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
+              >
+                {hub.heroPrimary}
+                <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+              <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-black/25 px-8 font-bold text-brand-black transition-colors hover:border-brand-gold hover:text-brand-gold-text"
+              >
+                {hub.heroSecondary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 1 — What is an Ausbildung */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {hub.whatTitle}
+          </h2>
+          <p className="mt-5 max-w-3xl text-brand-ink-secondary leading-relaxed">{hub.whatLead}</p>
+
+          {/* Key facts — scannable, SEO-friendly */}
+          <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {hub.whatFacts.map((f) => (
+              <div key={f.label} className="rounded-xl border border-brand-grid bg-brand-card p-5">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold-text">{f.label}</dt>
+                <dd className="mt-2 text-brand-black leading-snug">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <ul className="mt-10 grid gap-3 sm:grid-cols-2">
+            {hub.whatPoints.map((p) => (
+              <li key={p} className="flex gap-3 text-brand-ink-secondary leading-snug">
+                <Check size={18} strokeWidth={2} aria-hidden="true" className="mt-1 shrink-0 text-brand-gold-text" />
+                <span>{p}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 rounded-2xl border border-brand-gold/30 bg-brand-gold/[0.06] p-7 sm:p-8">
+            <p className="font-serif text-xl text-brand-black leading-snug text-balance">{hub.whatMessage}</p>
+          </div>
+          <p className="mt-4 text-xs text-brand-ink-muted">{hub.whatSource}</p>
+        </div>
+      </section>
+
+      {/* 2 — Trades */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {hub.metiersTitle}
+          </h2>
+          <p className="mt-4 max-w-2xl text-brand-ink-secondary leading-relaxed">{hub.metiersLead}</p>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            {hub.metiers.map((m, i) => {
+              const Icon = METIER_ICONS[i] ?? HeartPulse;
+              return (
+                <div key={m.sector} className="flex gap-4 rounded-2xl border border-brand-grid bg-brand-white p-6">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
+                    <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg text-brand-black">{m.sector}</h3>
+                    <p className="mt-1 text-sm text-brand-ink-secondary leading-relaxed">{m.items}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <p className="mt-6 text-sm text-brand-ink-muted">{hub.metiersNote}</p>
           <Link
             href="/ausbildung-allemagne/metiers"
-            className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
+            className="press mt-8 inline-flex h-[52px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
           >
-            {content.ctaMetiers}
-          </Link>
-          <Link
-            href="/ausbildung-allemagne/conditions"
-            className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
-          >
-            {content.ctaConditions}
-          </Link>
-        </div>
-      </div>
-
-      {/* Ce qu'est une Ausbildung */}
-      <AnchorSection
-        id="c-est-quoi"
-        white
-        eyebrow={content.quoiEyebrow}
-        title={content.quoiTitle}
-        lead={content.quoiLead}
-      >
-        <div className="grid gap-6 sm:grid-cols-3">
-          {quoi.map(([title, body], i) => (
-            <div
-              key={title}
-              className="animate-fade-up rounded-xl border border-brand-grid bg-brand-card p-6"
-              style={{ animationDelay: `${i * 60}ms` }}
-            >
-              <h3 className="font-serif text-lg text-brand-black mb-2">{title}</h3>
-              <p className="text-sm text-brand-ink-secondary">{body}</p>
-            </div>
-          ))}
-        </div>
-      </AnchorSection>
-
-      {/* Explorer le silo : 3 pages */}
-      <AnchorSection id="explorer" eyebrow={content.exploreEyebrow} title={content.exploreTitle}>
-        <div className="grid gap-6 sm:grid-cols-3">
-          {cards.map((card, i) => (
-            <Link
-              key={card.title}
-              href={card.href}
-              className="lift-on-hover animate-fade-up flex flex-col rounded-xl border border-brand-grid bg-brand-card p-6"
-              style={{ animationDelay: `${i * 50}ms` }}
-            >
-              <h3 className="font-serif text-lg text-brand-black mb-2">{card.title}</h3>
-              <p className="text-sm text-brand-ink-secondary mb-4">{card.body}</p>
-              <span aria-hidden="true" className="mt-auto text-brand-gold-text font-bold">
-                →
-              </span>
-            </Link>
-          ))}
-        </div>
-      </AnchorSection>
-
-      {/* La langue */}
-      <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-          <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
-            {content.langueEyebrow}
-          </p>
-          <h2 className="text-2xl sm:text-3xl font-serif mb-4 max-w-2xl">{content.langueTitle}</h2>
-          <p className="text-brand-white/75 max-w-2xl mb-3">{content.langueBody1}</p>
-          <p className="text-brand-white/60 text-sm max-w-2xl mb-6">{content.langueBody2}</p>
-          <Link
-            href="/cours-allemand"
-            className="press inline-flex rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
-          >
-            {content.langueCta}
+            {hub.metiersCta}
+            <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </div>
       </section>
 
-      {/* Étapes */}
-      <AnchorSection id="etapes" white eyebrow={content.etapesEyebrow} title={content.etapesTitle}>
-        <ol className="space-y-4 max-w-3xl">
-          {etapes.map(([title, body], i) => (
-            <li
-              key={title}
-              className="animate-fade-up flex gap-5 rounded-xl border border-brand-grid bg-brand-white p-6"
-              style={{ animationDelay: `${i * 50}ms` }}
-            >
-              <span className="shrink-0 h-10 w-10 rounded-lg bg-brand-gold text-brand-black font-serif font-bold flex items-center justify-center">
-                {i + 1}
-              </span>
-              <div>
-                <h3 className="font-serif text-lg text-brand-black mb-1">{title}</h3>
-                <p className="text-sm text-brand-ink-secondary">{body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </AnchorSection>
+      {/* 3 — Timeline */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-2xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="text-center font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {hub.stepsTitle}
+          </h2>
+          <ol className="relative mt-12">
+            {hub.steps.map((s, i) => {
+              const last = i === hub.steps.length - 1;
+              return (
+                <li key={s.n} className="relative flex gap-5 pb-8 last:pb-0">
+                  {!last && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-6 top-14 bottom-0 w-px -translate-x-1/2 bg-brand-grid"
+                    />
+                  )}
+                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-gold/40 bg-brand-white font-serif text-lg text-brand-gold-text">
+                    {s.n}
+                  </span>
+                  <div className="pt-1.5">
+                    <h3 className="font-serif text-lg text-brand-black">{s.title}</h3>
+                    <p className="mt-1 text-sm text-brand-ink-secondary leading-relaxed">{s.detail}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </section>
 
-      {/* CTA final */}
+      {/* 4 — Eligibility */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+                {hub.eligTitle}
+              </h2>
+              <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-brand-ink-muted">
+                {hub.eligIntro}
+              </p>
+              <ul className="mt-4 space-y-3">
+                {hub.eligCriteria.map((c) => (
+                  <li key={c} className="flex gap-3 text-brand-ink-secondary leading-snug">
+                    <Check size={18} strokeWidth={2} aria-hidden="true" className="mt-1 shrink-0 text-brand-gold-text" />
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-brand-grid bg-brand-card p-7 sm:p-8 text-center">
+              <p className="font-serif text-xl text-brand-black leading-snug text-balance">{hub.eligNote}</p>
+              <Link
+                href="/evaluation"
+                className="press mt-6 inline-flex h-[54px] w-full items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
+              >
+                {hub.eligCta}
+                <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5 — What Karriere Fähre does */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
-          <h2 className="text-2xl sm:text-3xl font-serif max-w-xl">{content.finalTitle}</h2>
-          <p className="text-brand-white/80 max-w-lg">{content.finalText}</p>
-          <Link
-            href="/postuler"
-            className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
-          >
-            {content.finalCta}
-          </Link>
-          <p className="text-sm text-brand-white/50 mt-4">
-            {content.employeurNote}{" "}
-            <a href={besoinsHref} className="text-brand-gold-light hover:underline font-medium">
-              {content.employeurCta}
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <h2 className="max-w-2xl font-serif text-2xl sm:text-3xl text-brand-white text-balance leading-snug">
+            {hub.helpTitle}
+          </h2>
+          <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {hub.help.map((h, i) => {
+              const Icon = HELP_ICONS[i] ?? ClipboardCheck;
+              return (
+                <div key={h.label}>
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-white/10 text-brand-gold-light">
+                    <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
+                  </span>
+                  <h3 className="mt-4 text-lg font-semibold text-brand-white">{h.label}</h3>
+                  <p className="mt-2 text-sm text-brand-white/70 leading-relaxed">{h.text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 6 — FAQ */}
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
+            {hub.faqTitle}
+          </h2>
+          <div className="mt-8 divide-y divide-brand-grid border-y border-brand-grid">
+            {hub.faq.map((f) => (
+              <details key={f.q} className="group py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-brand-black [&::-webkit-details-marker]:hidden">
+                  {f.q}
+                  <ArrowRight
+                    size={18}
+                    aria-hidden="true"
+                    className="shrink-0 text-brand-gold-text transition-transform duration-200 group-open:rotate-90"
+                  />
+                </summary>
+                <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7 — Final CTA */}
+      <section className="bg-brand-black text-brand-white">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-white text-balance leading-snug">
+            {hub.finalTitle}
+          </h2>
+          <p className="mt-4 text-brand-white/70 leading-relaxed">{hub.finalText}</p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link
+              href="/evaluation"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-light transition-colors hover:bg-brand-gold hover:text-brand-black"
+            >
+              {hub.finalPrimary}
+              <ArrowRight size={18} aria-hidden="true" />
+            </Link>
+            <a
+              href={wa}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-white/30 px-8 font-bold text-brand-white transition-colors hover:border-brand-white hover:bg-brand-white/10"
+            >
+              {hub.finalWhatsapp}
             </a>
-          </p>
+          </div>
         </div>
       </section>
     </div>

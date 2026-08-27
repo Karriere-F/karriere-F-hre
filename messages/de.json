@@ -694,7 +694,180 @@
     "finalText": "Der Beruf, das Gehalt, dann die Universität: Reichen Sie Ihre Bewerbung ein, wir begleiten Sie bei jedem Schritt.",
     "finalCta": "Bewerben",
     "employeurNote": "Sie sind ein Unternehmen und Ihre Ausbildungsplätze bleiben unbesetzt?",
-    "employeurCta": "Zu unserem Angebot für Unternehmen"
+    "employeurCta": "Zu unserem Angebot für Unternehmen",
+    "hub": {
+      "heroTitle": "In Deutschland ausbilden. Einen Beruf aufbauen. Ihre Zukunft vorbereiten.",
+      "heroSubtitle": "Die Ausbildung ist eine anerkannte Berufsausbildung in Deutschland, die theoretischen Unterricht und praktische Erfahrung im Betrieb verbindet.",
+      "heroPrimary": "Meine Eignung prüfen",
+      "heroSecondary": "Mit einem Berater sprechen",
+      "whatTitle": "Was ist eine Ausbildung?",
+      "whatPoints": [
+        "Ein duales System: Berufsschule und Ausbildungsbetrieb im Wechsel.",
+        "Eine Dauer von in der Regel 2 bis 3,5 Jahren je nach Beruf.",
+        "Eine vergütete Ausbildung: eine monatliche Vergütung wird während der gesamten Dauer gezahlt.",
+        "Ein Deutschniveau von in der Regel B2 zum Start.",
+        "Ein anerkannter deutscher Berufsabschluss am Ende.",
+        "Konkrete Perspektiven in Mangelberufen nach der Ausbildung."
+      ],
+      "whatMessage": "Sie kommen nicht einfach zum Studieren nach Deutschland. Sie bauen eine anerkannte berufliche Qualifikation und echte Arbeitserfahrung auf.",
+      "metiersTitle": "Berufe, die über eine Ausbildung zugänglich sind",
+      "metiersLead": "Einige Beispiele aus den Branchen, die einstellen. Jeder Beruf hat seine Dauer, seine Voraussetzungen und seine Perspektiven.",
+      "metiersCta": "Alle Berufe ansehen",
+      "metiers": [
+        {
+          "sector": "Gesundheit",
+          "items": "Pflegefachfrau / Pflegefachmann · Pflegehelfer · weitere Gesundheitsberufe"
+        },
+        {
+          "sector": "Hotel & Gastronomie",
+          "items": "Küche · Restaurant · Hotel"
+        },
+        {
+          "sector": "Industrie",
+          "items": "Technische Berufe · Produktion · Instandhaltung"
+        },
+        {
+          "sector": "Bau",
+          "items": "Bauberufe · technische Berufe"
+        }
+      ],
+      "metiersNote": "Beruf · Dauer · Voraussetzungen · Richtvergütung · Art des Betriebs · Entwicklung — für jedes Profil geprüft.",
+      "stepsTitle": "Wie läuft der Weg ab?",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Auswertung",
+          "detail": "Abschluss, Alter, Erfahrung, Deutschniveau, berufliches Ziel und persönliche Situation."
+        },
+        {
+          "n": "02",
+          "title": "Orientierung",
+          "detail": "Wir bestimmen den oder die zu Ihrem Profil passenden Wege."
+        },
+        {
+          "n": "03",
+          "title": "Vorbereitung",
+          "detail": "Deutsch, berufliche und interkulturelle Vorbereitung."
+        },
+        {
+          "n": "04",
+          "title": "Bewerbung",
+          "detail": "Auswahl der Schulen und Betriebe, die zu Ihrem Profil passen."
+        },
+        {
+          "n": "05",
+          "title": "Gespräch",
+          "detail": "Vorbereitung auf die Gespräche und Begleitung des Kandidaten."
+        },
+        {
+          "n": "06",
+          "title": "Unterlagen",
+          "detail": "Administrative Begleitung und Vorbereitung der nötigen Dokumente."
+        },
+        {
+          "n": "07",
+          "title": "Abreise",
+          "detail": "Vorbereitung auf die Abreise und Begleitung bis zur Integration."
+        }
+      ],
+      "eligTitle": "Ist die Ausbildung das Richtige für Sie?",
+      "eligIntro": "Sie haben:",
+      "eligCriteria": [
+        "einen passenden Abschluss oder ein passendes Schulniveau",
+        "ein klares berufliches Ziel",
+        "die nötige Motivation, Deutsch zu lernen",
+        "die Fähigkeit, eine Ausbildung in Deutschland zu absolvieren",
+        "ein Profil, das zu einem gefragten Beruf passt"
+      ],
+      "eligNote": "Jede Bewerbung wird individuell geprüft.",
+      "eligCta": "Mein Profil auswerten",
+      "helpTitle": "Sie müssen Ihr Projekt nicht allein bewältigen.",
+      "help": [
+        {
+          "label": "Auswerten",
+          "text": "Wir analysieren Ihr Profil."
+        },
+        {
+          "label": "Orientieren",
+          "text": "Wir bestimmen die stimmigen Wege."
+        },
+        {
+          "label": "Vorbereiten",
+          "text": "Wir bereiten Sie vor der Bewerbung vor."
+        },
+        {
+          "label": "Vorstellen",
+          "text": "Wir leiten Ihre Unterlagen an die passenden Stellen weiter."
+        },
+        {
+          "label": "Begleiten",
+          "text": "Wir begleiten Sie bei den Schritten."
+        },
+        {
+          "label": "Integrieren",
+          "text": "Wir bereiten Sie auf Ihre Ankunft in Deutschland vor."
+        }
+      ],
+      "faqTitle": "Häufige Fragen",
+      "faq": [
+        {
+          "q": "Was ist der Unterschied zwischen Ausbildung und direkter Anstellung?",
+          "a": "Die Ausbildung ist eine vergütete Berufsausbildung, die zu einem deutschen Abschluss führt. Die direkte Anstellung richtet sich an bereits qualifizierte und erfahrene Personen, die direkt in einen Betrieb einsteigen."
+        },
+        {
+          "q": "Welches Deutschniveau ist nötig?",
+          "a": "Das Niveau B2 ist der Standard für eine Ausbildung. Wir begleiten Sie bei Ihrem sprachlichen Fortschritt bis zu diesem Niveau."
+        },
+        {
+          "q": "Welche Abschlüsse sind nötig?",
+          "a": "Ein Schulniveau oder ein Abschluss, der zum angestrebten Beruf passt. Jedes Profil wird individuell geprüft, um die möglichen Wege zu bestimmen."
+        },
+        {
+          "q": "Welche Berufe sind zugänglich?",
+          "a": "Viele Mangelberufe: Gesundheit, Hotel & Gastronomie, Industrie, Bau, Logistik und weitere. Die zugänglichen Berufe hängen von Ihrem Profil ab."
+        },
+        {
+          "q": "Was kostet die Begleitung?",
+          "a": "Die Begleitung wird je nach Ihrer Situation und Ihrem Weg festgelegt. Ein Berater erklärt Ihnen die Modalitäten im Gespräch im Detail."
+        },
+        {
+          "q": "Wie viel Zeit muss ich einplanen?",
+          "a": "Eine Ausbildung dauert je nach Beruf in der Regel 2 bis 3,5 Jahre. Die Vorbereitung davor hängt von Ihrem Ausgangsniveau ab, besonders im Deutschen."
+        },
+        {
+          "q": "Garantiert Karriere Fähre eine Anstellung?",
+          "a": "Nein. Kein seriöser Akteur kann eine Anstellung, eine Ausbildung oder ein Visum garantieren. Wir bereiten Sie vor und orientieren Sie, um Ihr Projekt realisierbar zu machen; die endgültige Zulassung hängt von Schulen, Arbeitgebern und Behörden ab."
+        },
+        {
+          "q": "Wie läuft die Auswahl ab?",
+          "a": "Jede Bewerbung wird individuell geprüft: Profil, Motivation, Ziel und Passung zu einem gefragten Beruf. Wir versprechen nicht jedem eine Abreise; wir bauen die Unterlagen auf, die wir für realisierbar halten."
+        }
+      ],
+      "finalTitle": "Ihr Projekt beginnt mit der richtigen Orientierung.",
+      "finalText": "Sie wissen noch nicht, welcher Weg zu Ihrem Profil passt? Wir können damit beginnen, ihn auszuwerten.",
+      "finalPrimary": "Mein Profil auswerten",
+      "finalWhatsapp": "Über WhatsApp kontaktieren",
+      "whatLead": "Die Ausbildung ist das Herzstück der deutschen Berufsbildung. Sie beruht auf dem dualen System: Sie wechseln zwischen einer Berufsschule und einem Ausbildungsbetrieb und erlernen so einen Beruf, während Sie arbeiten.",
+      "whatFacts": [
+        {
+          "label": "Dauer",
+          "value": "2 bis 3,5 Jahre je nach Beruf"
+        },
+        {
+          "label": "Deutsch",
+          "value": "Niveau B2 in der Regel erforderlich"
+        },
+        {
+          "label": "Vergütung",
+          "value": "Monatliche Vergütung vom Betrieb"
+        },
+        {
+          "label": "Abschluss",
+          "value": "Anerkannter Berufsabschluss"
+        }
+      ],
+      "whatSource": "Quellen: make-it-in-germany.com (offizielles Portal der Bundesregierung) und BIBB (Bundesinstitut für Berufsbildung)."
+    }
   },
   "ausbildungMetiers": {
     "title": "Ausbildungen in Deutschland: welche Berufe, welche Dauer, welche Vergütung",
