@@ -696,118 +696,136 @@
     "employeurNote": "Sie sind ein Unternehmen und Ihre Ausbildungsplätze bleiben unbesetzt?",
     "employeurCta": "Zu unserem Angebot für Unternehmen",
     "hub": {
-      "heroTitle": "In Deutschland ausbilden. Einen Beruf aufbauen. Ihre Zukunft vorbereiten.",
-      "heroSubtitle": "Die Ausbildung ist eine anerkannte Berufsausbildung in Deutschland, die theoretischen Unterricht und praktische Erfahrung im Betrieb verbindet.",
-      "heroPrimary": "Meine Eignung prüfen",
-      "heroSecondary": "Mit einem Berater sprechen",
-      "whatTitle": "Was ist eine Ausbildung?",
-      "whatPoints": [
-        "Ein duales System: Berufsschule und Ausbildungsbetrieb im Wechsel.",
-        "Eine Dauer von in der Regel 2 bis 3,5 Jahren je nach Beruf.",
-        "Eine vergütete Ausbildung: eine monatliche Vergütung wird während der gesamten Dauer gezahlt.",
-        "Ein Deutschniveau von in der Regel B2 zum Start.",
-        "Ein anerkannter deutscher Berufsabschluss am Ende.",
-        "Konkrete Perspektiven in Mangelberufen nach der Ausbildung."
-      ],
-      "whatMessage": "Sie kommen nicht einfach zum Studieren nach Deutschland. Sie bauen eine anerkannte berufliche Qualifikation und echte Arbeitserfahrung auf.",
-      "metiersTitle": "Berufe, die über eine Ausbildung zugänglich sind",
-      "metiersLead": "Einige Beispiele aus den Branchen, die einstellen. Jeder Beruf hat seine Dauer, seine Voraussetzungen und seine Perspektiven.",
-      "metiersCta": "Alle Berufe ansehen",
-      "metiers": [
+      "heroTitle": "In Deutschland ausbilden. Eine echte Karriere aufbauen.",
+      "heroSubtitle": "Eine Ausbildung verbindet theoretisches Lernen mit praktischer Erfahrung im Betrieb. Im dualen System wechseln Sie zwischen Betrieb und Berufsschule. Die Dauer hängt vom Beruf ab, in der Regel zwischen 2 und 3,5 Jahren.",
+      "heroPrimary": "Meinen Ausbildungsweg finden",
+      "heroSecondary": "Zugängliche Berufe ansehen",
+      "s1Num": "01",
+      "s1Kicker": "Den Beruf wählen",
+      "s1Title": "Ihre Ausbildung beginnt mit der richtigen Wahl.",
+      "s1Text": "Deutschland bietet über 300 anerkannte Ausbildungsberufe. Die Wahl richtet sich nach Ihrer Vorbildung, Ihren Kompetenzen, Ihrer Erfahrung, Ihren Interessen und den realen Zugangsmöglichkeiten.",
+      "s1Sectors": [
         {
-          "sector": "Gesundheit",
-          "items": "Pflegefachfrau / Pflegefachmann · Pflegehelfer · weitere Gesundheitsberufe"
+          "name": "Gesundheit",
+          "items": "Pflege · Betreuung · medizinische und pflegerische Berufe"
         },
         {
-          "sector": "Hotel & Gastronomie",
+          "name": "Industrie & Technik",
+          "items": "Mechanik · Elektrotechnik · Produktion · Instandhaltung"
+        },
+        {
+          "name": "Bau",
+          "items": "Bau · Installation · technische Berufe"
+        },
+        {
+          "name": "IT",
+          "items": "IT · Entwicklung · Systeme · Digitales"
+        },
+        {
+          "name": "Hotel & Gastronomie",
           "items": "Küche · Restaurant · Hotel"
-        },
-        {
-          "sector": "Industrie",
-          "items": "Technische Berufe · Produktion · Instandhaltung"
-        },
-        {
-          "sector": "Bau",
-          "items": "Bauberufe · technische Berufe"
         }
       ],
-      "metiersNote": "Beruf · Dauer · Voraussetzungen · Richtvergütung · Art des Betriebs · Entwicklung — für jedes Profil geprüft.",
-      "stepsTitle": "Wie läuft der Weg ab?",
-      "steps": [
+      "s1Cta": "Berufe entdecken",
+      "s2Num": "02",
+      "s2Kicker": "Sich vorbereiten",
+      "s2Title": "Eine Ausbildung beginnt nicht am Flughafen.",
+      "s2Text": "Bevor Sie nach Deutschland kommen, bauen Sie eine stimmige Bewerbung auf:",
+      "s2Flow": [
+        "Profil",
+        "Beruf",
+        "Deutsch",
+        "Bewerbung",
+        "Betrieb",
+        "Formalitäten"
+      ],
+      "s2Note": "Karriere Fähre begleitet Sie bei dieser Vorbereitung, um einen klassischen Fehler zu vermeiden: eine Ausbildung nur zu wählen, weil sie zugänglich scheint, ohne zu prüfen, ob sie wirklich zu Ihrem Profil passt.",
+      "s2Cta": "Mein Profil auswerten",
+      "s3Num": "03",
+      "s3Kicker": "Lernen und arbeiten",
+      "s3Title": "Eine Ausbildung, die Sie schnell in die Arbeitswelt bringt.",
+      "s3Steps": [
         {
-          "n": "01",
-          "title": "Auswertung",
-          "detail": "Abschluss, Alter, Erfahrung, Deutschniveau, berufliches Ziel und persönliche Situation."
+          "label": "Berufsschule",
+          "detail": "Theorie · berufliches Wissen"
         },
         {
-          "n": "02",
-          "title": "Orientierung",
-          "detail": "Wir bestimmen den oder die zu Ihrem Profil passenden Wege."
+          "label": "Betrieb",
+          "detail": "Praxis · Erfahrung · Verantwortung"
         },
         {
-          "n": "03",
-          "title": "Vorbereitung",
-          "detail": "Deutsch, berufliche und interkulturelle Vorbereitung."
-        },
-        {
-          "n": "04",
-          "title": "Bewerbung",
-          "detail": "Auswahl der Schulen und Betriebe, die zu Ihrem Profil passen."
-        },
-        {
-          "n": "05",
-          "title": "Gespräch",
-          "detail": "Vorbereitung auf die Gespräche und Begleitung des Kandidaten."
-        },
-        {
-          "n": "06",
-          "title": "Unterlagen",
-          "detail": "Administrative Begleitung und Vorbereitung der nötigen Dokumente."
-        },
-        {
-          "n": "07",
-          "title": "Abreise",
-          "detail": "Vorbereitung auf die Abreise und Begleitung bis zur Integration."
+          "label": "Abschlussprüfung",
+          "detail": "Anerkannter Berufsabschluss"
         }
       ],
-      "eligTitle": "Ist die Ausbildung das Richtige für Sie?",
-      "eligIntro": "Sie haben:",
-      "eligCriteria": [
-        "einen passenden Abschluss oder ein passendes Schulniveau",
-        "ein klares berufliches Ziel",
-        "die nötige Motivation, Deutsch zu lernen",
-        "die Fähigkeit, eine Ausbildung in Deutschland zu absolvieren",
-        "ein Profil, das zu einem gefragten Beruf passt"
-      ],
-      "eligNote": "Jede Bewerbung wird individuell geprüft.",
-      "eligCta": "Mein Profil auswerten",
-      "helpTitle": "Sie müssen Ihr Projekt nicht allein bewältigen.",
-      "help": [
+      "s3Cta": "Die Funktionsweise verstehen",
+      "s4Num": "04",
+      "s4Kicker": "Vergütet werden",
+      "s4Title": "Sie bilden sich aus und arbeiten zugleich.",
+      "s4Text": "Bei einer dualen Ausbildung zahlt der Betrieb eine Ausbildungsvergütung. Ihre Höhe hängt vom Beruf, der Branche, der Region und dem Betrieb ab.",
+      "s4ColYear": "Jahr",
+      "s4ColAmount": "Monatlicher Mindestbetrag brutto (2026)",
+      "s4Rows": [
         {
-          "label": "Auswerten",
-          "text": "Wir analysieren Ihr Profil."
+          "year": "1. Jahr",
+          "amount": "724 €"
         },
         {
-          "label": "Orientieren",
-          "text": "Wir bestimmen die stimmigen Wege."
+          "year": "2. Jahr",
+          "amount": "854 €"
         },
         {
-          "label": "Vorbereiten",
-          "text": "Wir bereiten Sie vor der Bewerbung vor."
+          "year": "3. Jahr",
+          "amount": "977 €"
         },
         {
-          "label": "Vorstellen",
-          "text": "Wir leiten Ihre Unterlagen an die passenden Stellen weiter."
-        },
-        {
-          "label": "Begleiten",
-          "text": "Wir begleiten Sie bei den Schritten."
-        },
-        {
-          "label": "Integrieren",
-          "text": "Wir bereiten Sie auf Ihre Ankunft in Deutschland vor."
+          "year": "4. Jahr",
+          "amount": "1 014 €"
         }
       ],
+      "s4Note": "Bruttobeträge, gesetzliche Mindestwerte 2026. Die tatsächliche Vergütung kann je nach Beruf, Branche, Region und Betrieb höher sein. Es handelt sich um die Vergütung während der Ausbildung — nicht zu verwechseln mit dem Gehalt nach dem Abschluss.",
+      "s4Source": "Quelle: Bundesagentur für Arbeit",
+      "s4Cta": "Die Bedingungen ansehen",
+      "s5Num": "05",
+      "s5Kicker": "Ein anerkannter Beruf",
+      "s5Title": "Am Ende nehmen Sie nicht nur Erfahrung mit.",
+      "s5Text": "Sie schließen Ihre Ausbildung mit einem anerkannten Berufsabschluss ab und können in Ihrem Bereich ins Berufsleben einsteigen. Die Ausbildung öffnet auch den Weg zur weiteren beruflichen Entwicklung.",
+      "s5Cta": "Die Zeit nach der Ausbildung entdecken",
+      "s6Title": "Ihre Ausbildung ist nicht Ihr Ziel. Sie ist Ihr erster Schritt.",
+      "s6Branches": [
+        {
+          "label": "Arbeiten",
+          "text": "In Ihrem Beruf in Deutschland einsteigen."
+        },
+        {
+          "label": "Sich spezialisieren",
+          "text": "Weiterbildung · Meister · Techniker · Fachwirt."
+        },
+        {
+          "label": "Aufsteigen",
+          "text": "Mehr Verantwortung · Fachfunktionen · Führung."
+        },
+        {
+          "label": "Studieren",
+          "text": "Je nach Zugangsvoraussetzungen und Ihrem Werdegang."
+        }
+      ],
+      "s7Title": "Und wenn Ihre Ausbildung erst der Anfang wäre?",
+      "s7Traj1Label": "Ausbildung Pflege",
+      "s7Traj1": [
+        "Fachkraft",
+        "Weiterbildung / Spezialisierung",
+        "Mehr Verantwortung",
+        "Studium je nach Voraussetzungen möglich"
+      ],
+      "s7Traj2Label": "Technische Ausbildung",
+      "s7Traj2": [
+        "Fachkraft",
+        "Weiterbildung / Techniker / Meister",
+        "Technische Verantwortung",
+        "Studium je nach Voraussetzungen möglich"
+      ],
+      "s7Disclaimer": "Eine Ausbildung kann ein erster Schritt in einem längeren Weg sein. Je nach Ihrer Vorbildung, Ihren Qualifikationen, den Zulassungsvoraussetzungen und Ihrem Projekt können danach weitere Studien möglich sein. Man wird nach einer Ausbildung nicht automatisch Arzt oder Ingenieur: Diese Wege erfordern die Erfüllung der jeweils geltenden Zugangsvoraussetzungen.",
       "faqTitle": "Häufige Fragen",
       "faq": [
         {
@@ -820,19 +838,7 @@
         },
         {
           "q": "Welche Abschlüsse sind nötig?",
-          "a": "Ein Schulniveau oder ein Abschluss, der zum angestrebten Beruf passt. Jedes Profil wird individuell geprüft, um die möglichen Wege zu bestimmen."
-        },
-        {
-          "q": "Welche Berufe sind zugänglich?",
-          "a": "Viele Mangelberufe: Gesundheit, Hotel & Gastronomie, Industrie, Bau, Logistik und weitere. Die zugänglichen Berufe hängen von Ihrem Profil ab."
-        },
-        {
-          "q": "Was kostet die Begleitung?",
-          "a": "Die Begleitung wird je nach Ihrer Situation und Ihrem Weg festgelegt. Ein Berater erklärt Ihnen die Modalitäten im Gespräch im Detail."
-        },
-        {
-          "q": "Wie viel Zeit muss ich einplanen?",
-          "a": "Eine Ausbildung dauert je nach Beruf in der Regel 2 bis 3,5 Jahre. Die Vorbereitung davor hängt von Ihrem Ausgangsniveau ab, besonders im Deutschen."
+          "a": "Ein Schulniveau oder ein Abschluss, der zum angestrebten Beruf passt. Jedes Profil wird individuell geprüft."
         },
         {
           "q": "Garantiert Karriere Fähre eine Anstellung?",
@@ -840,33 +846,13 @@
         },
         {
           "q": "Wie läuft die Auswahl ab?",
-          "a": "Jede Bewerbung wird individuell geprüft: Profil, Motivation, Ziel und Passung zu einem gefragten Beruf. Wir versprechen nicht jedem eine Abreise; wir bauen die Unterlagen auf, die wir für realisierbar halten."
+          "a": "Jede Bewerbung wird individuell geprüft: Profil, Motivation, Ziel und Passung zu einem gefragten Beruf. Wir bauen die Unterlagen auf, die wir für realisierbar halten."
         }
       ],
-      "finalTitle": "Ihr Projekt beginnt mit der richtigen Orientierung.",
-      "finalText": "Sie wissen noch nicht, welcher Weg zu Ihrem Profil passt? Wir können damit beginnen, ihn auszuwerten.",
+      "finalTitle": "Welcher Weg passt zu Ihnen?",
+      "finalText": "Sie sind bereits qualifiziert? Sie suchen eine Ausbildung? Sie wissen noch nicht, welchen Weg Sie wählen sollen? Wir beginnen mit Ihrem Profil.",
       "finalPrimary": "Mein Profil auswerten",
-      "finalWhatsapp": "Über WhatsApp kontaktieren",
-      "whatLead": "Die Ausbildung ist das Herzstück der deutschen Berufsbildung. Sie beruht auf dem dualen System: Sie wechseln zwischen einer Berufsschule und einem Ausbildungsbetrieb und erlernen so einen Beruf, während Sie arbeiten.",
-      "whatFacts": [
-        {
-          "label": "Dauer",
-          "value": "2 bis 3,5 Jahre je nach Beruf"
-        },
-        {
-          "label": "Deutsch",
-          "value": "Niveau B2 in der Regel erforderlich"
-        },
-        {
-          "label": "Vergütung",
-          "value": "Monatliche Vergütung vom Betrieb"
-        },
-        {
-          "label": "Abschluss",
-          "value": "Anerkannter Berufsabschluss"
-        }
-      ],
-      "whatSource": "Quellen: make-it-in-germany.com (offizielles Portal der Bundesregierung) und BIBB (Bundesinstitut für Berufsbildung)."
+      "finalSecondary": "Die Wege entdecken"
     }
   },
   "ausbildungMetiers": {

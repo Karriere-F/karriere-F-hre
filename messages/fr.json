@@ -696,118 +696,136 @@
     "employeurNote": "Vous êtes une entreprise et vos places d'Ausbildung restent vacantes ?",
     "employeurCta": "Voir notre offre employeurs",
     "hub": {
-      "heroTitle": "Se former en Allemagne. Construire un métier. Préparer son avenir.",
-      "heroSubtitle": "L'Ausbildung est une formation professionnelle reconnue en Allemagne qui combine enseignement théorique et expérience pratique en entreprise.",
-      "heroPrimary": "Vérifier mon éligibilité",
-      "heroSecondary": "Parler à un conseiller",
-      "whatTitle": "Qu'est-ce qu'une Ausbildung ?",
-      "whatPoints": [
-        "Un système dual : école professionnelle (Berufsschule) et entreprise formatrice en alternance.",
-        "Une durée généralement de 2 à 3,5 ans selon le métier.",
-        "Une formation rémunérée : une indemnité mensuelle est versée pendant toute la durée.",
-        "Un niveau d'allemand B2 généralement requis pour débuter.",
-        "Une qualification professionnelle allemande reconnue (Berufsabschluss) à la clé.",
-        "Des débouchés concrets dans des métiers en tension à l'issue de la formation."
-      ],
-      "whatMessage": "Vous ne venez pas simplement étudier en Allemagne. Vous construisez une qualification professionnelle reconnue et une véritable expérience de travail.",
-      "metiersTitle": "Les métiers accessibles en Ausbildung",
-      "metiersLead": "Quelques exemples parmi les secteurs qui recrutent. Chaque métier a sa durée, ses conditions et ses débouchés.",
-      "metiersCta": "Voir tous les métiers",
-      "metiers": [
+      "heroTitle": "Se former en Allemagne. Construire une vraie carrière.",
+      "heroSubtitle": "Une Ausbildung permet d'apprendre un métier en combinant formation théorique et expérience pratique en entreprise. Dans le système dual, vous alternez entre l'entreprise et la Berufsschule. La durée dépend du métier, généralement entre 2 et 3,5 ans.",
+      "heroPrimary": "Trouver mon parcours Ausbildung",
+      "heroSecondary": "Voir les métiers accessibles",
+      "s1Num": "01",
+      "s1Kicker": "Choisir son métier",
+      "s1Title": "Votre Ausbildung commence par le bon choix.",
+      "s1Text": "L'Allemagne propose plus de 300 métiers d'Ausbildung reconnus. Le choix doit tenir compte de votre formation, de vos compétences, de votre expérience, de vos intérêts et des possibilités réelles d'accès.",
+      "s1Sectors": [
         {
-          "sector": "Santé",
-          "items": "Pflegefachfrau / Pflegefachmann · aide-soignant · autres métiers de santé"
+          "name": "Santé",
+          "items": "Pflege · soins · professions médicales et médico-sociales"
         },
         {
-          "sector": "Hôtellerie & restauration",
+          "name": "Industrie & technique",
+          "items": "Mécanique · électrotechnique · production · maintenance"
+        },
+        {
+          "name": "BTP",
+          "items": "Construction · installations · métiers techniques"
+        },
+        {
+          "name": "Informatique",
+          "items": "IT · développement · systèmes · numérique"
+        },
+        {
+          "name": "Hôtellerie & restauration",
           "items": "Cuisine · restauration · hôtellerie"
-        },
-        {
-          "sector": "Industrie",
-          "items": "Métiers techniques · production · maintenance"
-        },
-        {
-          "sector": "BTP",
-          "items": "Métiers du bâtiment · métiers techniques"
         }
       ],
-      "metiersNote": "Métier · durée · conditions · rémunération indicative · type d'entreprise · évolution — étudiés pour chaque profil.",
-      "stepsTitle": "Comment se déroule le parcours ?",
-      "steps": [
+      "s1Cta": "Découvrir les métiers",
+      "s2Num": "02",
+      "s2Kicker": "Se préparer",
+      "s2Title": "Une Ausbildung ne commence pas à l'aéroport.",
+      "s2Text": "Avant de rejoindre l'Allemagne, vous construisez un dossier cohérent :",
+      "s2Flow": [
+        "Profil",
+        "Métier",
+        "Allemand",
+        "Candidature",
+        "Entreprise",
+        "Démarches"
+      ],
+      "s2Note": "Karriere Fähre vous accompagne dans cette préparation pour éviter un piège classique : choisir une Ausbildung parce qu'elle semble accessible, sans vérifier qu'elle correspond vraiment à votre profil.",
+      "s2Cta": "Évaluer mon profil",
+      "s3Num": "03",
+      "s3Kicker": "Apprendre et travailler",
+      "s3Title": "Une formation qui vous met rapidement dans le monde professionnel.",
+      "s3Steps": [
         {
-          "n": "01",
-          "title": "Évaluation",
-          "detail": "Diplôme, âge, expérience, niveau d'allemand, projet professionnel et situation personnelle."
+          "label": "Berufsschule",
+          "detail": "Théorie · connaissances professionnelles"
         },
         {
-          "n": "02",
-          "title": "Orientation",
-          "detail": "Nous déterminons le ou les parcours compatibles avec votre profil."
+          "label": "Entreprise",
+          "detail": "Pratique · expérience · responsabilités"
         },
         {
-          "n": "03",
-          "title": "Préparation",
-          "detail": "Allemand, préparation professionnelle et préparation interculturelle."
-        },
-        {
-          "n": "04",
-          "title": "Candidature",
-          "detail": "Sélection des établissements et entreprises correspondant à votre profil."
-        },
-        {
-          "n": "05",
-          "title": "Entretien",
-          "detail": "Préparation aux entretiens et accompagnement du candidat."
-        },
-        {
-          "n": "06",
-          "title": "Dossier",
-          "detail": "Accompagnement administratif et préparation des documents nécessaires."
-        },
-        {
-          "n": "07",
-          "title": "Départ",
-          "detail": "Préparation au départ et accompagnement jusqu'à l'intégration."
+          "label": "Examen final",
+          "detail": "Qualification professionnelle reconnue"
         }
       ],
-      "eligTitle": "L'Ausbildung est-elle faite pour vous ?",
-      "eligIntro": "Vous avez :",
-      "eligCriteria": [
-        "un diplôme ou un niveau scolaire compatible",
-        "un projet professionnel clair",
-        "la motivation nécessaire pour apprendre l'allemand",
-        "la capacité à suivre une formation en Allemagne",
-        "un profil correspondant à un métier recherché"
-      ],
-      "eligNote": "Chaque candidature est étudiée individuellement.",
-      "eligCta": "Évaluer mon profil",
-      "helpTitle": "Vous n'avez pas à gérer seul votre projet.",
-      "help": [
+      "s3Cta": "Comprendre le fonctionnement",
+      "s4Num": "04",
+      "s4Kicker": "Être rémunéré",
+      "s4Title": "Vous vous formez tout en travaillant.",
+      "s4Text": "Pour une Ausbildung duale, l'entreprise verse une Ausbildungsvergütung. Son montant dépend du métier, de la branche, de la région et de l'entreprise.",
+      "s4ColYear": "Année",
+      "s4ColAmount": "Minimum brut mensuel (2026)",
+      "s4Rows": [
         {
-          "label": "Évaluer",
-          "text": "Nous analysons votre profil."
+          "year": "1re année",
+          "amount": "724 €"
         },
         {
-          "label": "Orienter",
-          "text": "Nous identifions les parcours cohérents."
+          "year": "2e année",
+          "amount": "854 €"
         },
         {
-          "label": "Préparer",
-          "text": "Nous vous préparons avant la candidature."
+          "year": "3e année",
+          "amount": "977 €"
         },
         {
-          "label": "Présenter",
-          "text": "Nous transmettons votre dossier aux structures adaptées."
-        },
-        {
-          "label": "Accompagner",
-          "text": "Nous vous accompagnons dans les démarches."
-        },
-        {
-          "label": "Intégrer",
-          "text": "Nous vous préparons à votre arrivée en Allemagne."
+          "year": "4e année",
+          "amount": "1 014 €"
         }
       ],
+      "s4Note": "Montants bruts, minimums légaux 2026. La rémunération réelle peut être supérieure selon le métier, la branche, la région et l'entreprise. Il s'agit de la rémunération pendant l'Ausbildung — à ne pas confondre avec le salaire une fois qualifié.",
+      "s4Source": "Source : Bundesagentur für Arbeit",
+      "s4Cta": "Voir les conditions",
+      "s5Num": "05",
+      "s5Kicker": "Un métier reconnu",
+      "s5Title": "À la fin, vous ne repartez pas seulement avec une expérience.",
+      "s5Text": "Vous terminez votre formation avec une qualification professionnelle reconnue et pouvez entrer dans la vie professionnelle dans votre domaine. L'Ausbildung ouvre aussi la voie à la poursuite de votre développement professionnel.",
+      "s5Cta": "Découvrir l'après-Ausbildung",
+      "s6Title": "Votre Ausbildung n'est pas votre destination. C'est votre première étape.",
+      "s6Branches": [
+        {
+          "label": "Travailler",
+          "text": "Entrer dans votre métier en Allemagne."
+        },
+        {
+          "label": "Se spécialiser",
+          "text": "Weiterbildung · Meister · Techniker · Fachwirt."
+        },
+        {
+          "label": "Évoluer",
+          "text": "Plus de responsabilités · fonctions spécialisées · management."
+        },
+        {
+          "label": "Poursuivre des études",
+          "text": "Selon les conditions d'accès et votre parcours."
+        }
+      ],
+      "s7Title": "Et si votre Ausbildung n'était que le début ?",
+      "s7Traj1Label": "Ausbildung Pflege",
+      "s7Traj1": [
+        "Professionnel qualifié",
+        "Weiterbildung / spécialisation",
+        "Responsabilités supplémentaires",
+        "Études supérieures possibles selon les conditions"
+      ],
+      "s7Traj2Label": "Ausbildung technique",
+      "s7Traj2": [
+        "Technicien qualifié",
+        "Weiterbildung / Techniker / Meister",
+        "Responsabilités techniques",
+        "Études supérieures possibles selon les conditions"
+      ],
+      "s7Disclaimer": "Une Ausbildung peut être une première étape dans un parcours plus long. Selon votre formation initiale, vos qualifications, les conditions d'admission et votre projet, d'autres études peuvent ensuite être envisageables. On ne devient pas automatiquement médecin ou ingénieur après une Ausbildung : ces voies exigent de satisfaire aux conditions d'accès propres à chaque cursus.",
       "faqTitle": "Questions fréquentes",
       "faq": [
         {
@@ -823,50 +841,18 @@
           "a": "Un niveau scolaire ou un diplôme compatible avec le métier visé. Chaque profil est étudié individuellement pour identifier les parcours possibles."
         },
         {
-          "q": "Quels métiers sont accessibles ?",
-          "a": "De nombreux métiers en tension : santé, hôtellerie-restauration, industrie, construction, logistique et d'autres. Les métiers accessibles dépendent de votre profil."
-        },
-        {
-          "q": "Combien coûte l'accompagnement ?",
-          "a": "L'accompagnement est étudié selon votre situation et votre parcours. Un conseiller vous en explique les modalités en détail lors de votre échange."
-        },
-        {
-          "q": "Combien de temps faut-il prévoir ?",
-          "a": "Une Ausbildung dure généralement de 2 à 3,5 ans selon le métier. La préparation en amont dépend de votre niveau de départ, notamment en allemand."
-        },
-        {
           "q": "Karriere Fähre garantit-il un emploi ?",
           "a": "Non. Aucun acteur sérieux ne peut garantir un emploi, une Ausbildung ou un visa. Nous vous préparons et vous orientons pour rendre votre projet réalisable ; l'admission finale dépend des établissements, des employeurs et des autorités."
         },
         {
           "q": "Comment se déroule la sélection ?",
-          "a": "Chaque candidature est étudiée individuellement : profil, motivation, projet et adéquation avec un métier recherché. Nous ne promettons pas un départ à tout le monde ; nous construisons les dossiers que nous estimons réalisables."
+          "a": "Chaque candidature est étudiée individuellement : profil, motivation, projet et adéquation avec un métier recherché. Nous construisons les dossiers que nous estimons réalisables."
         }
       ],
-      "finalTitle": "Votre projet commence par une bonne orientation.",
-      "finalText": "Vous ne savez pas encore quel parcours correspond à votre profil ? Nous pouvons commencer par l'évaluer.",
+      "finalTitle": "Quel parcours est fait pour vous ?",
+      "finalText": "Vous avez déjà une qualification ? Vous cherchez une Ausbildung ? Vous ne savez pas encore quelle voie choisir ? Nous commençons par votre profil.",
       "finalPrimary": "Évaluer mon profil",
-      "finalWhatsapp": "Nous contacter sur WhatsApp",
-      "whatLead": "L'Ausbildung est le cœur de la formation professionnelle allemande. Elle repose sur un système dual : vous alternez entre une école professionnelle (Berufsschule) et une entreprise formatrice, pour apprendre un métier tout en travaillant.",
-      "whatFacts": [
-        {
-          "label": "Durée",
-          "value": "2 à 3,5 ans selon le métier"
-        },
-        {
-          "label": "Allemand",
-          "value": "Niveau B2 généralement requis"
-        },
-        {
-          "label": "Rémunération",
-          "value": "Indemnité mensuelle versée par l'entreprise"
-        },
-        {
-          "label": "Diplôme",
-          "value": "Qualification reconnue (Berufsabschluss)"
-        }
-      ],
-      "whatSource": "Sources : make-it-in-germany.com (portail officiel du gouvernement allemand) et BIBB (Institut fédéral pour la formation professionnelle)."
+      "finalSecondary": "Découvrir les parcours"
     }
   },
   "ausbildungMetiers": {

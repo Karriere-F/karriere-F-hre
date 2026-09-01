@@ -696,118 +696,136 @@
     "employeurNote": "Are you a company whose Ausbildung places stay vacant?",
     "employeurCta": "See our employer offer",
     "hub": {
-      "heroTitle": "Train in Germany. Build a trade. Prepare your future.",
-      "heroSubtitle": "The Ausbildung is a recognised vocational training in Germany that combines classroom teaching with hands-on experience in a company.",
-      "heroPrimary": "Check my eligibility",
-      "heroSecondary": "Talk to an advisor",
-      "whatTitle": "What is an Ausbildung?",
-      "whatPoints": [
-        "A dual system: vocational school (Berufsschule) and training company in alternation.",
-        "A duration of usually 2 to 3.5 years depending on the trade.",
-        "Paid training: a monthly allowance is paid throughout.",
-        "A German level of usually B2 to start.",
-        "A recognised German vocational qualification (Berufsabschluss) at the end.",
-        "Concrete outcomes in in-demand trades after training."
-      ],
-      "whatMessage": "You are not simply coming to study in Germany. You are building a recognised professional qualification and real work experience.",
-      "metiersTitle": "Trades open through an Ausbildung",
-      "metiersLead": "A few examples from the sectors that are hiring. Each trade has its duration, its requirements and its outcomes.",
-      "metiersCta": "See all trades",
-      "metiers": [
+      "heroTitle": "Train in Germany. Build a real career.",
+      "heroSubtitle": "An Ausbildung lets you learn a trade by combining classroom teaching with hands-on experience in a company. In the dual system, you alternate between the company and the Berufsschule. The duration depends on the trade, usually 2 to 3.5 years.",
+      "heroPrimary": "Find my Ausbildung path",
+      "heroSecondary": "See accessible trades",
+      "s1Num": "01",
+      "s1Kicker": "Choosing your trade",
+      "s1Title": "Your Ausbildung starts with the right choice.",
+      "s1Text": "Germany offers more than 300 recognised Ausbildung trades. The choice depends on your background, your skills, your experience, your interests and the real access possibilities.",
+      "s1Sectors": [
         {
-          "sector": "Healthcare",
-          "items": "Pflegefachfrau / Pflegefachmann · care assistant · other healthcare roles"
+          "name": "Healthcare",
+          "items": "Pflege · care · medical and care professions"
         },
         {
-          "sector": "Hospitality & catering",
+          "name": "Industry & technical",
+          "items": "Mechanics · electrical · production · maintenance"
+        },
+        {
+          "name": "Construction",
+          "items": "Building · installation · technical trades"
+        },
+        {
+          "name": "IT",
+          "items": "IT · development · systems · digital"
+        },
+        {
+          "name": "Hospitality & catering",
           "items": "Kitchen · restaurant · hotel"
-        },
-        {
-          "sector": "Industry",
-          "items": "Technical trades · production · maintenance"
-        },
-        {
-          "sector": "Construction",
-          "items": "Building trades · technical trades"
         }
       ],
-      "metiersNote": "Trade · duration · requirements · indicative pay · type of company · progression — reviewed for each profile.",
-      "stepsTitle": "How does the path work?",
-      "steps": [
+      "s1Cta": "Discover the trades",
+      "s2Num": "02",
+      "s2Kicker": "Getting ready",
+      "s2Title": "An Ausbildung doesn't start at the airport.",
+      "s2Text": "Before coming to Germany, you build a coherent application:",
+      "s2Flow": [
+        "Profile",
+        "Trade",
+        "German",
+        "Application",
+        "Company",
+        "Formalities"
+      ],
+      "s2Note": "Karriere Fähre supports you in this preparation to avoid a classic trap: choosing an Ausbildung because it looks accessible, without checking that it truly fits your profile.",
+      "s2Cta": "Assess my profile",
+      "s3Num": "03",
+      "s3Kicker": "Learn and work",
+      "s3Title": "A training that quickly puts you in the professional world.",
+      "s3Steps": [
         {
-          "n": "01",
-          "title": "Assessment",
-          "detail": "Qualification, age, experience, German level, professional goal and personal situation."
+          "label": "Berufsschule",
+          "detail": "Theory · professional knowledge"
         },
         {
-          "n": "02",
-          "title": "Orientation",
-          "detail": "We determine the path or paths compatible with your profile."
+          "label": "Company",
+          "detail": "Practice · experience · responsibilities"
         },
         {
-          "n": "03",
-          "title": "Preparation",
-          "detail": "German, professional preparation and intercultural preparation."
-        },
-        {
-          "n": "04",
-          "title": "Application",
-          "detail": "Selecting the schools and companies that match your profile."
-        },
-        {
-          "n": "05",
-          "title": "Interview",
-          "detail": "Interview preparation and support for the candidate."
-        },
-        {
-          "n": "06",
-          "title": "File",
-          "detail": "Administrative support and preparation of the required documents."
-        },
-        {
-          "n": "07",
-          "title": "Departure",
-          "detail": "Preparation for departure and support through to integration."
+          "label": "Final exam",
+          "detail": "Recognised vocational qualification"
         }
       ],
-      "eligTitle": "Is the Ausbildung right for you?",
-      "eligIntro": "You have:",
-      "eligCriteria": [
-        "a compatible qualification or school level",
-        "a clear professional goal",
-        "the motivation to learn German",
-        "the ability to follow training in Germany",
-        "a profile matching an in-demand trade"
-      ],
-      "eligNote": "Every application is reviewed individually.",
-      "eligCta": "Assess my profile",
-      "helpTitle": "You don't have to manage your project alone.",
-      "help": [
+      "s3Cta": "Understand how it works",
+      "s4Num": "04",
+      "s4Kicker": "Being paid",
+      "s4Title": "You train while you work.",
+      "s4Text": "For a dual Ausbildung, the company pays an Ausbildungsvergütung. Its amount depends on the trade, the sector, the region and the company.",
+      "s4ColYear": "Year",
+      "s4ColAmount": "Monthly gross minimum (2026)",
+      "s4Rows": [
         {
-          "label": "Assess",
-          "text": "We analyse your profile."
+          "year": "Year 1",
+          "amount": "724 €"
         },
         {
-          "label": "Orient",
-          "text": "We identify the coherent paths."
+          "year": "Year 2",
+          "amount": "854 €"
         },
         {
-          "label": "Prepare",
-          "text": "We prepare you before applying."
+          "year": "Year 3",
+          "amount": "977 €"
         },
         {
-          "label": "Present",
-          "text": "We send your file to the right organisations."
-        },
-        {
-          "label": "Support",
-          "text": "We support you through the steps."
-        },
-        {
-          "label": "Integrate",
-          "text": "We prepare you for your arrival in Germany."
+          "year": "Year 4",
+          "amount": "1,014 €"
         }
       ],
+      "s4Note": "Gross amounts, 2026 legal minimums. Actual pay can be higher depending on the trade, sector, region and company. This is the pay during the Ausbildung — not to be confused with the salary once qualified.",
+      "s4Source": "Source: Bundesagentur für Arbeit",
+      "s4Cta": "See the conditions",
+      "s5Num": "05",
+      "s5Kicker": "A recognised trade",
+      "s5Title": "In the end, you don't just leave with experience.",
+      "s5Text": "You finish your training with a recognised vocational qualification and can enter working life in your field. The Ausbildung also opens the way to further professional development.",
+      "s5Cta": "Discover life after the Ausbildung",
+      "s6Title": "Your Ausbildung is not your destination. It's your first step.",
+      "s6Branches": [
+        {
+          "label": "Work",
+          "text": "Enter your trade in Germany."
+        },
+        {
+          "label": "Specialise",
+          "text": "Weiterbildung · Meister · Techniker · Fachwirt."
+        },
+        {
+          "label": "Progress",
+          "text": "More responsibility · specialist roles · management."
+        },
+        {
+          "label": "Study further",
+          "text": "Depending on access conditions and your background."
+        }
+      ],
+      "s7Title": "What if your Ausbildung were only the beginning?",
+      "s7Traj1Label": "Ausbildung Pflege",
+      "s7Traj1": [
+        "Qualified professional",
+        "Weiterbildung / specialisation",
+        "Added responsibilities",
+        "Higher education possible depending on conditions"
+      ],
+      "s7Traj2Label": "Technical Ausbildung",
+      "s7Traj2": [
+        "Qualified technician",
+        "Weiterbildung / Techniker / Meister",
+        "Technical responsibilities",
+        "Higher education possible depending on conditions"
+      ],
+      "s7Disclaimer": "An Ausbildung can be a first step in a longer path. Depending on your initial education, your qualifications, the admission conditions and your project, further studies may then be possible. You do not automatically become a doctor or an engineer after an Ausbildung: those paths require meeting the access conditions specific to each course.",
       "faqTitle": "Frequently asked questions",
       "faq": [
         {
@@ -820,19 +838,7 @@
         },
         {
           "q": "What qualifications are needed?",
-          "a": "A school level or qualification compatible with the target trade. Each profile is reviewed individually to identify the possible paths."
-        },
-        {
-          "q": "Which trades are accessible?",
-          "a": "Many in-demand trades: healthcare, hospitality, industry, construction, logistics and more. Accessible trades depend on your profile."
-        },
-        {
-          "q": "How much does the support cost?",
-          "a": "Support is set according to your situation and your path. An advisor explains the details during your conversation."
-        },
-        {
-          "q": "How long should I plan for?",
-          "a": "An Ausbildung usually lasts 2 to 3.5 years depending on the trade. The preparation beforehand depends on your starting level, particularly in German."
+          "a": "A school level or qualification compatible with the target trade. Each profile is reviewed individually."
         },
         {
           "q": "Does Karriere Fähre guarantee a job?",
@@ -840,33 +846,13 @@
         },
         {
           "q": "How does selection work?",
-          "a": "Every application is reviewed individually: profile, motivation, goal and fit with an in-demand trade. We don't promise everyone a departure; we build the files we consider achievable."
+          "a": "Every application is reviewed individually: profile, motivation, goal and fit with an in-demand trade. We build the files we consider achievable."
         }
       ],
-      "finalTitle": "Your project starts with the right orientation.",
-      "finalText": "Not sure yet which path fits your profile? We can start by assessing it.",
+      "finalTitle": "Which path is right for you?",
+      "finalText": "Already qualified? Looking for an Ausbildung? Not sure yet which way to go? We start with your profile.",
       "finalPrimary": "Assess my profile",
-      "finalWhatsapp": "Contact us on WhatsApp",
-      "whatLead": "The Ausbildung is the backbone of German vocational training. It is based on the dual system: you alternate between a vocational school (Berufsschule) and a training company, learning a trade while you work.",
-      "whatFacts": [
-        {
-          "label": "Duration",
-          "value": "2 to 3.5 years depending on the trade"
-        },
-        {
-          "label": "German",
-          "value": "B2 level usually required"
-        },
-        {
-          "label": "Pay",
-          "value": "Monthly allowance paid by the company"
-        },
-        {
-          "label": "Qualification",
-          "value": "Recognised qualification (Berufsabschluss)"
-        }
-      ],
-      "whatSource": "Sources: make-it-in-germany.com (official German government portal) and BIBB (Federal Institute for Vocational Education and Training)."
+      "finalSecondary": "Discover the paths"
     }
   },
   "ausbildungMetiers": {
