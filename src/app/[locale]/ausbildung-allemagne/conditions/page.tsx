@@ -2,6 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { ConditionsSchema } from "@/components/ausbildung/conditions-schema";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { buildMetadata } from "@/lib/seo";
@@ -52,22 +53,10 @@ export default async function AusbildungConditionsPage() {
         title={content.conditionsTitle}
         lead={content.conditionsLead}
       >
-        <div className="grid gap-4 sm:grid-cols-2">
-          {conditions.map(([title, body], i) => (
-            <div
-              key={title}
-              className="animate-fade-up flex gap-3 rounded-lg border border-brand-grid bg-brand-white p-5"
-              style={{ animationDelay: `${i * 50}ms` }}
-            >
-              <span className="text-brand-gold-text font-bold shrink-0">✓</span>
-              <div>
-                <h4 className="text-brand-black font-medium text-sm mb-1">{title}</h4>
-                <p className="text-sm text-brand-ink-secondary">{body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-sm text-brand-ink-muted max-w-3xl">{content.conditionsNote}</p>
+        <ConditionsSchema
+          items={conditions.map(([title, body]) => ({ title, body }))}
+        />
+        <p className="mt-8 max-w-3xl text-sm text-brand-ink-muted">{content.conditionsNote}</p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href="/ausbildung-allemagne/metiers"
