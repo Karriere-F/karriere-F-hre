@@ -45,7 +45,13 @@ export default async function AusbildungConditionsPage() {
         ]}
       />
 
-      <PageHero title={content.condPageTitle} subtitle={content.condPageSub} />
+      <PageHero
+        title={content.condPageTitle}
+        subtitle={content.condPageSub}
+        image="/images/condition-ausbildung.jpg"
+        imageAlt="Un candidat prépare son dossier d'Ausbildung, mur « Bildung. Zukunft. Perspektiven. »"
+        imagePosition="center 40%"
+      />
 
       <AnchorSection
         id="conditions"
