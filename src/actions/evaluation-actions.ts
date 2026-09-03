@@ -4,6 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { evaluationSchema } from "@/lib/validation/evaluation-schema";
 import { buildSummary, recommend, type Answers } from "@/lib/evaluation";
+import { buildAusSummary, type AusAnswers } from "@/lib/ausbildung-orientation";
 
 // Stores a completed evaluation. The primary target is the dedicated, structured
 // `profile_evaluations` table (each answer in its own column + the computed orientation),
@@ -62,5 +63,33 @@ export async function submitEvaluation(input: unknown) {
     return { ok: false as const, error: "insert_failed" };
   }
 
+  return { ok: true as const };
+}
+
+// Stores an Ausbildung orientation lead (the "Trouver mon parcours" evaluator) as a
+// contact message, with the profile summary + suggested trades. Indicative only.
+export async function submitAusbildungOrientation(input: unknown) {
+  const parsed = evaluationSchema.safeParse(input);
+  if (!parsed.success) {
+    return { ok: false as const, error: "invalid_input" };
+  }
+  const { prenom, nom, whatsapp, email, pays, answers } = parsed.data;
+  const message = [
+    buildAusSummary(answers as AusAnswers),
+    "—",
+    `WhatsApp / téléphone : ${whatsapp}`,
+    `Pays de résidence : ${pays}`,
+  ].join("\n");
+
+  const supabase = await createClient();
+  const { error } = await supabase.from("contact_messages").insert({
+    name: `${prenom} ${nom}`.trim(),
+    email,
+    message,
+  });
+
+  if (error) {
+    return { ok: false as const, error: "insert_failed" };
+  }
   return { ok: true as const };
 }

@@ -2229,5 +2229,177 @@
         }
       ]
     }
+  },
+  "ausbildungEval": {
+    "intro": {
+      "title": "Quel parcours Ausbildung correspond à votre profil ?",
+      "text": "Chaque candidat est différent. Votre niveau scolaire, votre expérience, vos compétences, votre allemand et votre projet professionnel déterminent les formations qui peuvent vous correspondre.",
+      "promise": "Évaluation gratuite · 5 à 7 minutes · Résultat personnalisé",
+      "dimensionsTitle": "Nous analysons votre profil sur 6 dimensions",
+      "dimensions": [
+        {
+          "label": "Formation",
+          "text": "Quel est votre niveau scolaire et quelles formations avez-vous déjà suivies ?"
+        },
+        {
+          "label": "Expérience",
+          "text": "Quels métiers avez-vous exercés et quelles compétences avez-vous acquises ?"
+        },
+        {
+          "label": "Langues",
+          "text": "Quel est votre niveau actuel en allemand et dans les autres langues ?"
+        },
+        {
+          "label": "Compétences & aptitudes",
+          "text": "Êtes-vous plutôt orienté pratique, technique, relationnel, organisationnel ou analytique ?"
+        },
+        {
+          "label": "Projet professionnel",
+          "text": "Quel métier souhaitez-vous exercer en Allemagne ?"
+        },
+        {
+          "label": "Projet d'avenir",
+          "text": "Travailler, vous spécialiser, évoluer ou poursuivre des études ?"
+        }
+      ],
+      "source": "Source : Bundesagentur für Arbeit",
+      "cta": "Commencer mon évaluation"
+    },
+    "progress": "Étape {n} sur {total}",
+    "back": "Retour",
+    "continue": "Continuer",
+    "niveau": {
+      "title": "Quel est votre niveau de formation ?",
+      "options": {
+        "bepc": "BEPC / équivalent",
+        "bac": "Baccalauréat",
+        "bac12": "Bac +1 / +2",
+        "bac3": "Bac +3 ou plus",
+        "formationPro": "Formation professionnelle",
+        "autre": "Autre"
+      }
+    },
+    "experience": {
+      "title": "Avez-vous déjà une expérience professionnelle ?",
+      "options": {
+        "aucune": "Aucune",
+        "moins2": "Moins de 2 ans",
+        "deux5": "2 à 5 ans",
+        "plus5": "Plus de 5 ans"
+      }
+    },
+    "domaine": {
+      "title": "Dans quel domaine souhaitez-vous évoluer ?",
+      "options": {
+        "sante": "Santé",
+        "industrie": "Industrie",
+        "technique": "Technique",
+        "btp": "BTP",
+        "hotellerie": "Hôtellerie & restauration",
+        "logistique": "Logistique",
+        "informatique": "Informatique",
+        "autre": "Autre"
+      }
+    },
+    "style": {
+      "title": "Comment aimez-vous travailler ?",
+      "options": {
+        "personnes": "Avec les personnes",
+        "mains": "Avec mes mains / équipements",
+        "machines": "Avec des machines / technologies",
+        "chiffres": "Avec des chiffres / données",
+        "organiser": "Organiser et coordonner",
+        "indecis": "Je ne sais pas encore"
+      }
+    },
+    "allemand": {
+      "title": "Quel est votre niveau d'allemand ?",
+      "options": {
+        "aucun": "Aucun",
+        "a1": "A1",
+        "a2": "A2",
+        "b1": "B1",
+        "b2": "B2",
+        "c1": "C1+"
+      }
+    },
+    "avenir": {
+      "title": "Que souhaitez-vous surtout, à terme ?",
+      "options": {
+        "travailler": "Travailler",
+        "specialiser": "Me spécialiser",
+        "evoluer": "Évoluer vers des responsabilités",
+        "etudier": "Poursuivre des études"
+      }
+    },
+    "result": {
+      "title": "Votre profil correspond principalement à :",
+      "compatLabel": "Compatibilité avec une Ausbildung",
+      "profiles": {
+        "technique": "Profil technique & pratique",
+        "industriel": "Profil technique & industriel",
+        "relationnel": "Profil relationnel & service",
+        "analytique": "Profil analytique",
+        "organisation": "Profil organisation & coordination",
+        "polyvalent": "Profil polyvalent"
+      },
+      "recoTitle": "Ausbildungen recommandées",
+      "matchTop": "Très bonne correspondance",
+      "matchGood": "Bonne correspondance",
+      "disclaimer": "Ces recommandations sont indicatives. Le choix final dépend des exigences du métier, de l'entreprise et de votre situation personnelle.",
+      "cta": "Recevoir mon analyse"
+    },
+    "pathTitle": "Votre parcours potentiel",
+    "pathSteps": [
+      "Aujourd'hui",
+      "Évaluation de votre profil",
+      "Préparation à l'Ausbildung",
+      "Candidature auprès des entreprises",
+      "Ausbildungsplatz (place de formation)",
+      "Ausbildung en Allemagne",
+      "Diplôme professionnel",
+      "Emploi · spécialisation · évolution"
+    ],
+    "afterTitle": "L'Ausbildung est un début, pas une limite.",
+    "afterText": "Votre premier diplôme professionnel peut devenir la base d'une véritable carrière en Allemagne.",
+    "afterBranches": [
+      {
+        "label": "Travailler",
+        "text": "Entrer dans la vie professionnelle avec une qualification reconnue."
+      },
+      {
+        "label": "Se spécialiser",
+        "text": "Développer son expertise grâce à la formation continue."
+      },
+      {
+        "label": "Évoluer",
+        "text": "Accéder progressivement à davantage de responsabilités."
+      },
+      {
+        "label": "Étudier",
+        "text": "Selon votre parcours et les conditions d'accès, poursuivre vers des études supérieures."
+      }
+    ],
+    "lead": {
+      "title": "Recevez votre analyse personnalisée",
+      "intro": "Pour recevoir votre résultat détaillé et permettre à un conseiller Karriere Fähre de vérifier votre situation :",
+      "prenom": "Prénom",
+      "nom": "Nom",
+      "whatsapp": "WhatsApp / téléphone",
+      "email": "Email",
+      "pays": "Pays de résidence",
+      "submit": "Recevoir mon analyse",
+      "sending": "Envoi…",
+      "error": "Une erreur est survenue. Réessayez.",
+      "requiredNote": "Vos informations restent confidentielles et servent uniquement à l'analyse de votre profil."
+    },
+    "final": {
+      "badge": "Analyse enregistrée",
+      "title": "Votre profil est entre de bonnes mains.",
+      "text": "Un conseiller Karriere Fähre étudie votre situation et revient vers vous pour préciser les parcours Ausbildung qui vous correspondent.",
+      "whatsappCta": "Parler à un conseiller",
+      "whatsappMessage": "Bonjour, je viens de faire l'évaluation Ausbildung sur votre site."
+    },
+    "disclaimer": "Cette évaluation est une première orientation et ne constitue pas une promesse d'Ausbildung, d'emploi ou de visa. Votre éligibilité définitive dépend de la vérification de votre dossier et des exigences applicables à votre métier."
   }
 }

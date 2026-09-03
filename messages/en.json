@@ -2229,5 +2229,177 @@
         }
       ]
     }
+  },
+  "ausbildungEval": {
+    "intro": {
+      "title": "Which Ausbildung path fits your profile?",
+      "text": "Every candidate is different. Your school level, your experience, your skills, your German and your professional goal determine the trainings that can fit you.",
+      "promise": "Free assessment · 5 to 7 minutes · Personalised result",
+      "dimensionsTitle": "We analyse your profile across 6 dimensions",
+      "dimensions": [
+        {
+          "label": "Education",
+          "text": "What is your school level and which trainings have you already done?"
+        },
+        {
+          "label": "Experience",
+          "text": "Which trades have you worked in and what skills have you gained?"
+        },
+        {
+          "label": "Languages",
+          "text": "What is your current level in German and other languages?"
+        },
+        {
+          "label": "Skills & aptitudes",
+          "text": "Are you more practical, technical, people-oriented, organisational or analytical?"
+        },
+        {
+          "label": "Professional goal",
+          "text": "Which trade do you want to practise in Germany?"
+        },
+        {
+          "label": "Future plan",
+          "text": "Work, specialise, progress or continue to higher education?"
+        }
+      ],
+      "source": "Source: Bundesagentur für Arbeit",
+      "cta": "Start my assessment"
+    },
+    "progress": "Step {n} of {total}",
+    "back": "Back",
+    "continue": "Continue",
+    "niveau": {
+      "title": "What is your level of education?",
+      "options": {
+        "bepc": "Lower secondary",
+        "bac": "High-school diploma",
+        "bac12": "1–2 years of university",
+        "bac3": "Bachelor or higher",
+        "formationPro": "Vocational training",
+        "autre": "Other"
+      }
+    },
+    "experience": {
+      "title": "Do you already have professional experience?",
+      "options": {
+        "aucune": "None",
+        "moins2": "Less than 2 years",
+        "deux5": "2 to 5 years",
+        "plus5": "More than 5 years"
+      }
+    },
+    "domaine": {
+      "title": "In which field do you want to work?",
+      "options": {
+        "sante": "Healthcare",
+        "industrie": "Industry",
+        "technique": "Technical",
+        "btp": "Construction",
+        "hotellerie": "Hospitality & catering",
+        "logistique": "Logistics",
+        "informatique": "IT",
+        "autre": "Other"
+      }
+    },
+    "style": {
+      "title": "How do you like to work?",
+      "options": {
+        "personnes": "With people",
+        "mains": "With my hands / equipment",
+        "machines": "With machines / technology",
+        "chiffres": "With numbers / data",
+        "organiser": "Organising and coordinating",
+        "indecis": "Not sure yet"
+      }
+    },
+    "allemand": {
+      "title": "What is your German level?",
+      "options": {
+        "aucun": "None",
+        "a1": "A1",
+        "a2": "A2",
+        "b1": "B1",
+        "b2": "B2",
+        "c1": "C1+"
+      }
+    },
+    "avenir": {
+      "title": "In the long run, what do you mainly want?",
+      "options": {
+        "travailler": "To work",
+        "specialiser": "To specialise",
+        "evoluer": "To move into responsibilities",
+        "etudier": "To continue studying"
+      }
+    },
+    "result": {
+      "title": "Your profile mainly matches:",
+      "compatLabel": "Compatibility with an Ausbildung",
+      "profiles": {
+        "technique": "Technical & hands-on profile",
+        "industriel": "Technical & industrial profile",
+        "relationnel": "People & service profile",
+        "analytique": "Analytical profile",
+        "organisation": "Organisation & coordination profile",
+        "polyvalent": "Versatile profile"
+      },
+      "recoTitle": "Recommended Ausbildungen",
+      "matchTop": "Very good match",
+      "matchGood": "Good match",
+      "disclaimer": "These recommendations are indicative. The final choice depends on the requirements of the trade, the company and your personal situation.",
+      "cta": "Get my analysis"
+    },
+    "pathTitle": "Your potential path",
+    "pathSteps": [
+      "Today",
+      "Assessment of your profile",
+      "Preparation for the Ausbildung",
+      "Application to companies",
+      "Ausbildungsplatz (training place)",
+      "Ausbildung in Germany",
+      "Vocational qualification",
+      "Employment · specialisation · progression"
+    ],
+    "afterTitle": "The Ausbildung is a beginning, not a limit.",
+    "afterText": "Your first vocational qualification can become the basis of a real career in Germany.",
+    "afterBranches": [
+      {
+        "label": "Work",
+        "text": "Enter working life with a recognised qualification."
+      },
+      {
+        "label": "Specialise",
+        "text": "Build your expertise through further training."
+      },
+      {
+        "label": "Progress",
+        "text": "Gradually take on more responsibility."
+      },
+      {
+        "label": "Study",
+        "text": "Depending on your path and access conditions, continue to higher education."
+      }
+    ],
+    "lead": {
+      "title": "Get your personalised analysis",
+      "intro": "To receive your detailed result and let a Karriere Fähre advisor review your situation:",
+      "prenom": "First name",
+      "nom": "Last name",
+      "whatsapp": "WhatsApp / phone",
+      "email": "Email",
+      "pays": "Country of residence",
+      "submit": "Get my analysis",
+      "sending": "Sending…",
+      "error": "Something went wrong. Please try again.",
+      "requiredNote": "Your information stays confidential and is used only to analyse your profile."
+    },
+    "final": {
+      "badge": "Analysis saved",
+      "title": "Your profile is in good hands.",
+      "text": "A Karriere Fähre advisor reviews your situation and gets back to you to refine the Ausbildung paths that fit you.",
+      "whatsappCta": "Talk to an advisor",
+      "whatsappMessage": "Hello, I just completed the Ausbildung assessment on your website."
+    },
+    "disclaimer": "This assessment is a first orientation and is not a promise of an Ausbildung, a job or a visa. Your final eligibility depends on the review of your file and the requirements applicable to your trade."
   }
 }

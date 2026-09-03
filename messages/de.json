@@ -2229,5 +2229,177 @@
         }
       ]
     }
+  },
+  "ausbildungEval": {
+    "intro": {
+      "title": "Welcher Ausbildungsweg passt zu Ihrem Profil?",
+      "text": "Jeder Kandidat ist anders. Ihr Schulniveau, Ihre Erfahrung, Ihre Kompetenzen, Ihr Deutsch und Ihr berufliches Ziel bestimmen die Ausbildungen, die zu Ihnen passen können.",
+      "promise": "Kostenlose Auswertung · 5 bis 7 Minuten · Persönliches Ergebnis",
+      "dimensionsTitle": "Wir analysieren Ihr Profil in 6 Dimensionen",
+      "dimensions": [
+        {
+          "label": "Bildung",
+          "text": "Wie ist Ihr Schulniveau und welche Ausbildungen haben Sie bereits gemacht?"
+        },
+        {
+          "label": "Erfahrung",
+          "text": "Welche Berufe haben Sie ausgeübt und welche Kompetenzen erworben?"
+        },
+        {
+          "label": "Sprachen",
+          "text": "Wie ist Ihr aktuelles Niveau in Deutsch und anderen Sprachen?"
+        },
+        {
+          "label": "Kompetenzen & Stärken",
+          "text": "Sind Sie eher praktisch, technisch, sozial, organisatorisch oder analytisch veranlagt?"
+        },
+        {
+          "label": "Berufliches Ziel",
+          "text": "Welchen Beruf möchten Sie in Deutschland ausüben?"
+        },
+        {
+          "label": "Zukunftsplan",
+          "text": "Arbeiten, sich spezialisieren, aufsteigen oder studieren?"
+        }
+      ],
+      "source": "Quelle: Bundesagentur für Arbeit",
+      "cta": "Meine Auswertung starten"
+    },
+    "progress": "Schritt {n} von {total}",
+    "back": "Zurück",
+    "continue": "Weiter",
+    "niveau": {
+      "title": "Wie ist Ihr Bildungsniveau?",
+      "options": {
+        "bepc": "Mittlerer Schulabschluss",
+        "bac": "Abitur",
+        "bac12": "1–2 Jahre Studium",
+        "bac3": "Bachelor oder höher",
+        "formationPro": "Berufsausbildung",
+        "autre": "Andere"
+      }
+    },
+    "experience": {
+      "title": "Haben Sie bereits Berufserfahrung?",
+      "options": {
+        "aucune": "Keine",
+        "moins2": "Weniger als 2 Jahre",
+        "deux5": "2 bis 5 Jahre",
+        "plus5": "Mehr als 5 Jahre"
+      }
+    },
+    "domaine": {
+      "title": "In welchem Bereich möchten Sie arbeiten?",
+      "options": {
+        "sante": "Gesundheit",
+        "industrie": "Industrie",
+        "technique": "Technik",
+        "btp": "Bau",
+        "hotellerie": "Hotel & Gastronomie",
+        "logistique": "Logistik",
+        "informatique": "IT",
+        "autre": "Andere"
+      }
+    },
+    "style": {
+      "title": "Wie arbeiten Sie gern?",
+      "options": {
+        "personnes": "Mit Menschen",
+        "mains": "Mit den Händen / Geräten",
+        "machines": "Mit Maschinen / Technik",
+        "chiffres": "Mit Zahlen / Daten",
+        "organiser": "Organisieren und koordinieren",
+        "indecis": "Weiß ich noch nicht"
+      }
+    },
+    "allemand": {
+      "title": "Wie ist Ihr Deutschniveau?",
+      "options": {
+        "aucun": "Keins",
+        "a1": "A1",
+        "a2": "A2",
+        "b1": "B1",
+        "b2": "B2",
+        "c1": "C1+"
+      }
+    },
+    "avenir": {
+      "title": "Was möchten Sie langfristig vor allem?",
+      "options": {
+        "travailler": "Arbeiten",
+        "specialiser": "Mich spezialisieren",
+        "evoluer": "Zu mehr Verantwortung aufsteigen",
+        "etudier": "Studieren"
+      }
+    },
+    "result": {
+      "title": "Ihr Profil passt vor allem zu:",
+      "compatLabel": "Kompatibilität mit einer Ausbildung",
+      "profiles": {
+        "technique": "Technisch-praktisches Profil",
+        "industriel": "Technisch-industrielles Profil",
+        "relationnel": "Soziales & serviceorientiertes Profil",
+        "analytique": "Analytisches Profil",
+        "organisation": "Organisations- & Koordinationsprofil",
+        "polyvalent": "Vielseitiges Profil"
+      },
+      "recoTitle": "Empfohlene Ausbildungen",
+      "matchTop": "Sehr gute Übereinstimmung",
+      "matchGood": "Gute Übereinstimmung",
+      "disclaimer": "Diese Empfehlungen sind Richtwerte. Die endgültige Wahl hängt von den Anforderungen des Berufs, des Betriebs und Ihrer persönlichen Situation ab.",
+      "cta": "Meine Analyse erhalten"
+    },
+    "pathTitle": "Ihr möglicher Weg",
+    "pathSteps": [
+      "Heute",
+      "Auswertung Ihres Profils",
+      "Vorbereitung auf die Ausbildung",
+      "Bewerbung bei Betrieben",
+      "Ausbildungsplatz",
+      "Ausbildung in Deutschland",
+      "Berufsabschluss",
+      "Anstellung · Spezialisierung · Aufstieg"
+    ],
+    "afterTitle": "Die Ausbildung ist ein Anfang, keine Grenze.",
+    "afterText": "Ihr erster Berufsabschluss kann die Grundlage einer echten Karriere in Deutschland werden.",
+    "afterBranches": [
+      {
+        "label": "Arbeiten",
+        "text": "Mit einem anerkannten Abschluss ins Berufsleben einsteigen."
+      },
+      {
+        "label": "Sich spezialisieren",
+        "text": "Die eigene Expertise durch Weiterbildung ausbauen."
+      },
+      {
+        "label": "Aufsteigen",
+        "text": "Schrittweise mehr Verantwortung übernehmen."
+      },
+      {
+        "label": "Studieren",
+        "text": "Je nach Werdegang und Zugangsvoraussetzungen weiter studieren."
+      }
+    ],
+    "lead": {
+      "title": "Erhalten Sie Ihre persönliche Analyse",
+      "intro": "Damit Sie Ihr ausführliches Ergebnis erhalten und ein Berater von Karriere Fähre Ihre Situation prüfen kann:",
+      "prenom": "Vorname",
+      "nom": "Name",
+      "whatsapp": "WhatsApp / Telefon",
+      "email": "E-Mail",
+      "pays": "Wohnsitzland",
+      "submit": "Meine Analyse erhalten",
+      "sending": "Senden…",
+      "error": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
+      "requiredNote": "Ihre Angaben bleiben vertraulich und dienen nur der Auswertung Ihres Profils."
+    },
+    "final": {
+      "badge": "Analyse gespeichert",
+      "title": "Ihr Profil ist in guten Händen.",
+      "text": "Ein Berater von Karriere Fähre prüft Ihre Situation und meldet sich, um die passenden Ausbildungswege zu präzisieren.",
+      "whatsappCta": "Mit einem Berater sprechen",
+      "whatsappMessage": "Hallo, ich habe gerade die Ausbildungs-Auswertung auf Ihrer Website gemacht."
+    },
+    "disclaimer": "Diese Auswertung ist eine erste Orientierung und keine Zusage für eine Ausbildung, eine Anstellung oder ein Visum. Ihre endgültige Eignung hängt von der Prüfung Ihrer Unterlagen und den für Ihren Beruf geltenden Anforderungen ab."
   }
 }

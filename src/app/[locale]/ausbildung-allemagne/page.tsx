@@ -93,7 +93,7 @@ export default async function AusbildungHubPage() {
             </p>
             <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "140ms" }}>
               <Link
-                href="/evaluation"
+                href="/ausbildung-allemagne/evaluation"
                 className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
               >
                 {h.heroPrimary}
@@ -299,7 +299,7 @@ export default async function AusbildungHubPage() {
           <p className="mt-4 text-brand-white/70 leading-relaxed">{h.finalText}</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
-              href="/evaluation"
+              href="/ausbildung-allemagne/evaluation"
               className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-light transition-colors hover:bg-brand-gold hover:text-brand-black"
             >
               {h.finalPrimary}
