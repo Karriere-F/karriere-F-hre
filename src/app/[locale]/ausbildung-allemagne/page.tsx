@@ -77,8 +77,8 @@ export default async function AusbildungHubPage() {
         </div>
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl py-14 lg:flex lg:min-h-[540px] lg:flex-col lg:justify-center lg:py-20">
-            <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl text-brand-black leading-tight">
+          <div className="max-w-2xl py-14 lg:flex lg:min-h-[540px] lg:max-w-3xl lg:flex-col lg:justify-center lg:py-20">
+            <h1 className="animate-fade-up font-serif text-4xl sm:text-5xl text-brand-black leading-[1.08]">
               {h.heroTitle.split(/(?<=\.)\s+/).map((line) => (
                 <span key={line} className="block">
                   {line}
