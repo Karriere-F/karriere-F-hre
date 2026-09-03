@@ -158,37 +158,68 @@ export function AusbildungEvaluator() {
   // ---- Intro ----
   if (screen === 0) {
     const dims = t.raw("intro.dimensions") as { label: string; text: string }[];
-    return shell(
-      <div>
-        <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance sm:text-4xl">{t("intro.title")}</h1>
-        <p className="animate-fade-up mt-5 max-w-xl text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
-          {t("intro.text")}
-        </p>
-        <p className="animate-fade-up mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-brand-gold-text" style={{ animationDelay: "120ms" }}>
-          {t("intro.promise")}
-        </p>
+    const promiseItems = t("intro.promise").split(" · ");
+    return (
+      <div className="mx-auto w-full max-w-3xl">
+        {/* Centered header */}
+        <div className="text-center">
+          <h1 className="animate-fade-up mx-auto max-w-2xl font-serif text-3xl text-brand-black text-balance sm:text-4xl lg:text-[2.6rem] leading-[1.1]">
+            {t("intro.title")}
+          </h1>
+          <p
+            className="animate-fade-up mx-auto mt-5 max-w-xl text-brand-ink-secondary leading-relaxed"
+            style={{ animationDelay: "80ms" }}
+          >
+            {t("intro.text")}
+          </p>
+          <div
+            className="animate-fade-up mt-7 flex flex-wrap justify-center gap-2.5"
+            style={{ animationDelay: "120ms" }}
+          >
+            {promiseItems.map((it) => (
+              <span
+                key={it}
+                className="rounded-full border border-brand-gold/30 bg-brand-gold/[0.06] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-brand-gold-text"
+              >
+                {it}
+              </span>
+            ))}
+          </div>
+        </div>
 
-        <h2 className="animate-fade-up mt-10 font-serif text-xl text-brand-black" style={{ animationDelay: "160ms" }}>
+        {/* Dimensions — unified panel with big gold numerals */}
+        <p
+          className="animate-fade-up mt-14 text-center text-sm font-semibold uppercase tracking-[0.2em] text-brand-ink-muted"
+          style={{ animationDelay: "160ms" }}
+        >
           {t("intro.dimensionsTitle")}
-        </h2>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+        </p>
+        <div className="animate-fade-up mt-7 grid gap-px overflow-hidden rounded-2xl border border-brand-grid bg-brand-grid sm:grid-cols-2" style={{ animationDelay: "200ms" }}>
           {dims.map((d, i) => (
-            <div key={d.label} className="animate-fade-up rounded-xl border border-brand-grid bg-brand-white p-5" style={{ animationDelay: `${180 + i * 40}ms` }}>
-              <p className="text-sm font-semibold text-brand-gold-text">{String(i + 1).padStart(2, "0")} · {d.label}</p>
-              <p className="mt-1.5 text-sm text-brand-ink-secondary leading-relaxed">{d.text}</p>
+            <div key={d.label} className="flex gap-4 bg-brand-white p-6">
+              <span className="font-serif text-3xl leading-none text-brand-gold-text/45">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3 className="font-serif text-lg text-brand-black">{d.label}</h3>
+                <p className="mt-1.5 text-sm text-brand-ink-secondary leading-relaxed">{d.text}</p>
+              </div>
             </div>
           ))}
         </div>
 
-        <button
-          type="button"
-          onClick={() => go(1)}
-          className="press mt-9 inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
-        >
-          {t("intro.cta")}
-          <ArrowRight size={18} aria-hidden="true" />
-        </button>
-        <p className="mt-4 text-xs text-brand-ink-muted">{t("intro.source")}</p>
+        {/* CTA */}
+        <div className="mt-10 text-center">
+          <button
+            type="button"
+            onClick={() => go(1)}
+            className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
+          >
+            {t("intro.cta")}
+            <ArrowRight size={18} aria-hidden="true" />
+          </button>
+          <p className="mt-4 text-xs text-brand-ink-muted">{t("intro.source")}</p>
+        </div>
       </div>
     );
   }
