@@ -162,42 +162,34 @@ export function AusbildungEvaluator() {
     const promiseItems = t("intro.promise").split(" · ");
     return (
       <div className="mx-auto w-full max-w-5xl">
-        {/* Header — text left, photo right */}
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div>
+        {/* Header — photo as background, text over a light scrim */}
+        <div className="animate-fade-up relative overflow-hidden rounded-2xl border border-brand-grid">
+          <Image
+            src="/images/ausbildung-eval.jpg"
+            alt="Un candidat réfléchit à son parcours devant différents métiers d'Ausbildung en Allemagne"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[75%_center]"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/88 to-transparent" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-white/70 via-transparent to-transparent sm:hidden" />
+          <div className="relative max-w-xl px-6 py-14 sm:px-10 sm:py-20">
             <span aria-hidden="true" className="block h-px w-12 bg-brand-gold" />
-            <h1 className="animate-fade-up mt-6 font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
+            <h1 className="mt-6 font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
               {t("intro.title")}
             </h1>
-            <p
-              className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed"
-              style={{ animationDelay: "80ms" }}
-            >
-              {t("intro.text")}
-            </p>
-            <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5" style={{ animationDelay: "120ms" }}>
+            <p className="mt-6 text-brand-ink-secondary leading-relaxed">{t("intro.text")}</p>
+            <div className="mt-7 flex flex-wrap gap-2.5">
               {promiseItems.map((it) => (
                 <span
                   key={it}
-                  className="rounded-full border border-brand-gold/40 bg-brand-gold/[0.05] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text"
+                  className="rounded-full border border-brand-gold/40 bg-brand-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text backdrop-blur-sm"
                 >
                   {it}
                 </span>
               ))}
             </div>
-          </div>
-          <div
-            className="animate-fade-up relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-grid"
-            style={{ animationDelay: "160ms" }}
-          >
-            <Image
-              src="/images/ausbildung-eval.jpg"
-              alt="Un candidat réfléchit à son parcours devant différents métiers d'Ausbildung en Allemagne"
-              fill
-              priority
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover object-[70%_center]"
-            />
           </div>
         </div>
 
