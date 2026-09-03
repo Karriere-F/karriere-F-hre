@@ -64,12 +64,12 @@ export default async function AusbildungHubPage() {
       <section className="relative overflow-hidden bg-brand-white">
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
           <Image
-            src="/images/german-courses.jpg"
-            alt="Une salle de formation professionnelle, préparation à l'Ausbildung en Allemagne"
+            src="/images/ausbildung-hero.jpg"
+            alt="Un étudiant en pleine composition dans une salle de classe, formation Ausbildung en Allemagne"
             fill
             priority
             sizes="52vw"
-            className="object-cover object-[center_30%]"
+            className="object-cover object-[58%_35%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
           <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-white to-transparent" />
