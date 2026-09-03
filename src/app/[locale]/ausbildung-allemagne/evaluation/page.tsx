@@ -18,9 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function AusbildungEvaluationPage() {
   return (
     <div className="bg-brand-white">
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <AusbildungEvaluator />
-      </div>
+      <AusbildungEvaluator />
     </div>
   );
 }

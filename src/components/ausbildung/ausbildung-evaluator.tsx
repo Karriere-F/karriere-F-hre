@@ -108,7 +108,7 @@ export function AusbildungEvaluator() {
     ) : null;
 
   const shell = (children: ReactNode, onBack?: () => void) => (
-    <div className="mx-auto w-full max-w-2xl">
+    <div className="mx-auto w-full max-w-2xl px-4 py-16 sm:px-6 sm:py-20">
       {progressBar}
       {onBack && (
         <button type="button" onClick={onBack} className="press mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-ink-muted transition-colors hover:text-brand-black">
@@ -161,50 +161,64 @@ export function AusbildungEvaluator() {
     const dims = t.raw("intro.dimensions") as { label: string; text: string }[];
     const promiseItems = t("intro.promise").split(" · ");
     return (
-      <div className="mx-auto w-full max-w-5xl">
-        {/* Header — text left, full photo on the right */}
-        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
-          <div>
-            <span aria-hidden="true" className="block h-px w-12 bg-brand-gold" />
-            <h1 className="animate-fade-up mt-6 font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
-              {t("intro.title")}
-            </h1>
-            <p className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
-              {t("intro.text")}
-            </p>
-            <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5" style={{ animationDelay: "120ms" }}>
-              {promiseItems.map((it) => (
-                <span
-                  key={it}
-                  className="rounded-full border border-brand-gold/40 bg-brand-gold/[0.05] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text"
-                >
-                  {it}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div
-            className="animate-fade-up relative aspect-[16/9] overflow-hidden rounded-2xl border border-brand-grid"
-            style={{ animationDelay: "160ms" }}
-          >
+      <div>
+        {/* Hero — text left, photo bleeding in from the right, faded into the page */}
+        <section className="relative overflow-hidden bg-brand-white">
+          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
             <Image
               src="/images/ausbildung-eval.jpg"
               alt="Un candidat réfléchit à son parcours devant différents métiers d'Ausbildung en Allemagne"
               fill
               priority
-              sizes="(min-width: 1024px) 58vw, 100vw"
-              className="object-cover"
+              sizes="52vw"
+              className="object-cover object-center"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-white to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
           </div>
-        </div>
 
-        {/* Dimensions — two rows of three cards */}
-        <p
-          className="animate-fade-up mt-14 text-xs font-semibold uppercase tracking-[0.24em] text-brand-ink-muted"
-          style={{ animationDelay: "160ms" }}
-        >
-          {t("intro.dimensionsTitle")}
-        </p>
+          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            {/* Mobile photo: above the text */}
+            <div className="relative -mx-4 aspect-[16/10] sm:-mx-6 lg:hidden">
+              <Image
+                src="/images/ausbildung-eval.jpg"
+                alt="Un candidat réfléchit à son parcours devant différents métiers d'Ausbildung en Allemagne"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
+            </div>
+
+            <div className="max-w-lg py-12 lg:flex lg:min-h-[420px] lg:flex-col lg:justify-center lg:py-16">
+              <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
+                {t("intro.title")}
+              </h1>
+              <p className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
+                {t("intro.text")}
+              </p>
+              <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5" style={{ animationDelay: "120ms" }}>
+                {promiseItems.map((it) => (
+                  <span
+                    key={it}
+                    className="rounded-full border border-brand-gold/40 bg-brand-gold/[0.05] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text"
+                  >
+                    {it}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Dimensions + CTA */}
+        <div className="mx-auto max-w-5xl px-4 pb-16 pt-4 sm:px-6 sm:pb-20 lg:px-8">
+          {/* Dimensions — two rows of three cards */}
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-ink-muted">
+            {t("intro.dimensionsTitle")}
+          </p>
         <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {dims.map((d, i) => (
             <div
@@ -231,6 +245,7 @@ export function AusbildungEvaluator() {
             {t("intro.cta")}
             <ArrowRight size={18} aria-hidden="true" />
           </button>
+        </div>
         </div>
       </div>
     );
