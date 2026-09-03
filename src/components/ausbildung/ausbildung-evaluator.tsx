@@ -161,64 +161,73 @@ export function AusbildungEvaluator() {
     const promiseItems = t("intro.promise").split(" · ");
     return (
       <div className="mx-auto w-full max-w-3xl">
-        {/* Centered header */}
-        <div className="text-center">
-          <h1 className="animate-fade-up mx-auto max-w-2xl font-serif text-3xl text-brand-black text-balance sm:text-4xl lg:text-[2.6rem] leading-[1.1]">
-            {t("intro.title")}
-          </h1>
-          <p
-            className="animate-fade-up mx-auto mt-5 max-w-xl text-brand-ink-secondary leading-relaxed"
-            style={{ animationDelay: "80ms" }}
-          >
-            {t("intro.text")}
-          </p>
-          <div
-            className="animate-fade-up mt-7 flex flex-wrap justify-center gap-2.5"
-            style={{ animationDelay: "120ms" }}
-          >
-            {promiseItems.map((it) => (
-              <span
-                key={it}
-                className="rounded-full border border-brand-gold/30 bg-brand-gold/[0.06] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-brand-gold-text"
+        <div className="animate-fade-up overflow-hidden rounded-[28px] bg-brand-black text-brand-white shadow-[0_40px_90px_-40px_rgba(17,17,17,0.55)]">
+          <div className="px-6 py-14 sm:px-12 sm:py-16">
+            {/* Header */}
+            <div className="max-w-2xl">
+              <span aria-hidden="true" className="block h-px w-12 bg-brand-gold" />
+              <h1 className="mt-6 font-serif text-3xl text-brand-white text-balance leading-[1.12] sm:text-[2.6rem]">
+                {t("intro.title")}
+              </h1>
+              <p
+                className="animate-fade-up mt-6 text-brand-white/70 leading-relaxed"
+                style={{ animationDelay: "80ms" }}
               >
-                {it}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Dimensions — unified panel with big gold numerals */}
-        <p
-          className="animate-fade-up mt-14 text-center text-sm font-semibold uppercase tracking-[0.2em] text-brand-ink-muted"
-          style={{ animationDelay: "160ms" }}
-        >
-          {t("intro.dimensionsTitle")}
-        </p>
-        <div className="animate-fade-up mt-7 grid gap-px overflow-hidden rounded-2xl border border-brand-grid bg-brand-grid sm:grid-cols-2" style={{ animationDelay: "200ms" }}>
-          {dims.map((d, i) => (
-            <div key={d.label} className="flex gap-4 bg-brand-white p-6">
-              <span className="font-serif text-3xl leading-none text-brand-gold-text/45">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3 className="font-serif text-lg text-brand-black">{d.label}</h3>
-                <p className="mt-1.5 text-sm text-brand-ink-secondary leading-relaxed">{d.text}</p>
+                {t("intro.text")}
+              </p>
+              <div
+                className="animate-fade-up mt-7 flex flex-wrap gap-2.5"
+                style={{ animationDelay: "120ms" }}
+              >
+                {promiseItems.map((it) => (
+                  <span
+                    key={it}
+                    className="rounded-full border border-brand-gold/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-light"
+                  >
+                    {it}
+                  </span>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* CTA */}
-        <div className="mt-10 text-center">
-          <button
-            type="button"
-            onClick={() => go(1)}
-            className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
-          >
-            {t("intro.cta")}
-            <ArrowRight size={18} aria-hidden="true" />
-          </button>
-          <p className="mt-4 text-xs text-brand-ink-muted">{t("intro.source")}</p>
+            {/* Dimensions — editorial numbered ledger */}
+            <p
+              className="animate-fade-up mt-14 text-xs font-semibold uppercase tracking-[0.24em] text-brand-gold-light"
+              style={{ animationDelay: "160ms" }}
+            >
+              {t("intro.dimensionsTitle")}
+            </p>
+            <div className="mt-7 grid gap-x-12 sm:grid-cols-2">
+              {dims.map((d, i) => (
+                <div
+                  key={d.label}
+                  className="animate-fade-up flex gap-5 border-t border-brand-white/12 py-6"
+                  style={{ animationDelay: `${200 + i * 60}ms` }}
+                >
+                  <span className="font-serif text-4xl leading-none text-brand-gold-light/50">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg text-brand-white">{d.label}</h3>
+                    <p className="mt-1.5 text-sm text-brand-white/60 leading-relaxed">{d.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 border-t border-brand-white/12 pt-10">
+              <button
+                type="button"
+                onClick={() => go(1)}
+                className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
+              >
+                {t("intro.cta")}
+                <ArrowRight size={18} aria-hidden="true" />
+              </button>
+              <p className="mt-4 text-xs text-brand-white/40">{t("intro.source")}</p>
+            </div>
+          </div>
         </div>
       </div>
     );
