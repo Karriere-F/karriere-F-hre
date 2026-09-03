@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState, useTransition, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowLeft, ArrowRight, ShieldCheck, Star } from "lucide-react";
@@ -161,27 +162,42 @@ export function AusbildungEvaluator() {
     const promiseItems = t("intro.promise").split(" · ");
     return (
       <div className="mx-auto w-full max-w-5xl">
-        {/* Header — left aligned */}
-        <div className="max-w-2xl">
-          <span aria-hidden="true" className="block h-px w-12 bg-brand-gold" />
-          <h1 className="animate-fade-up mt-6 font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl lg:text-[2.6rem]">
-            {t("intro.title")}
-          </h1>
-          <p
-            className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed"
-            style={{ animationDelay: "80ms" }}
+        {/* Header — text left, photo right */}
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div>
+            <span aria-hidden="true" className="block h-px w-12 bg-brand-gold" />
+            <h1 className="animate-fade-up mt-6 font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
+              {t("intro.title")}
+            </h1>
+            <p
+              className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed"
+              style={{ animationDelay: "80ms" }}
+            >
+              {t("intro.text")}
+            </p>
+            <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5" style={{ animationDelay: "120ms" }}>
+              {promiseItems.map((it) => (
+                <span
+                  key={it}
+                  className="rounded-full border border-brand-gold/40 bg-brand-gold/[0.05] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text"
+                >
+                  {it}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div
+            className="animate-fade-up relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-grid"
+            style={{ animationDelay: "160ms" }}
           >
-            {t("intro.text")}
-          </p>
-          <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5" style={{ animationDelay: "120ms" }}>
-            {promiseItems.map((it) => (
-              <span
-                key={it}
-                className="rounded-full border border-brand-gold/40 bg-brand-gold/[0.05] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text"
-              >
-                {it}
-              </span>
-            ))}
+            <Image
+              src="/images/ausbildung-eval.jpg"
+              alt="Un candidat réfléchit à son parcours devant différents métiers d'Ausbildung en Allemagne"
+              fill
+              priority
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover object-[70%_center]"
+            />
           </div>
         </div>
 
@@ -218,7 +234,6 @@ export function AusbildungEvaluator() {
             {t("intro.cta")}
             <ArrowRight size={18} aria-hidden="true" />
           </button>
-          <p className="mt-4 text-xs text-brand-ink-muted">{t("intro.source")}</p>
         </div>
       </div>
     );
