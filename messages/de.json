@@ -1048,7 +1048,77 @@
     "cadreBody2": "Keine Grauzone, keine leeren Versprechen. Ein ordnungsgemäßer Vertrag, ein ordnungsgemäßes Visum, gesetzlich garantierte Rechte, nur so vermitteln wir.",
     "finalTitle": "Bereit, in Deutschland zu arbeiten?",
     "finalText": "Senden Sie uns Ihr Profil. Wir prüfen gemeinsam Ihre Qualifikation, Ihr Deutschniveau und den Zielberuf und zeichnen dann Ihren Weg: Anerkennung, Sprache, Visum.",
-    "finalCta": "Jetzt bewerben"
+    "finalCta": "Jetzt bewerben",
+    "hub": {
+      "heroTitle": "Sie sind bereits qualifiziert? Ihr nächster Job kann in Deutschland beginnen.",
+      "heroSubtitle": "Wenn Sie bereits über eine passende Qualifikation und Erfahrung verfügen, können Sie eine direkte Anstellung in Deutschland anstreben — je nach Beruf und geltenden Bedingungen.",
+      "heroPrimary": "Mein berufliches Profil auswerten",
+      "heroSecondary": "Berufe ansehen",
+      "whoTitle": "Direkte Anstellung — für wen?",
+      "who": [
+        "Sie sind bereits ausgebildet oder qualifiziert",
+        "Sie haben Berufserfahrung",
+        "Ihre Qualifikation passt zum angestrebten Beruf",
+        "Sie möchten in Deutschland arbeiten"
+      ],
+      "stepsTitle": "Ihr Weg zur Anstellung",
+      "steps": [
+        {
+          "title": "Profil-Auswertung",
+          "detail": "Wir analysieren Ihre Qualifikation, Ihre Erfahrung und Ihr Ziel."
+        },
+        {
+          "title": "Prüfung der Qualifikation",
+          "detail": "Wir prüfen die je nach Beruf nötige Anerkennung."
+        },
+        {
+          "title": "Suche nach Möglichkeiten",
+          "detail": "Wir finden Arbeitgeber, die zu Ihrem Profil passen."
+        },
+        {
+          "title": "Bewerbung",
+          "detail": "Wir bereiten Ihre Unterlagen vor und übermitteln sie."
+        },
+        {
+          "title": "Gespräch",
+          "detail": "Wir bereiten Sie auf die Gespräche mit Arbeitgebern vor."
+        },
+        {
+          "title": "Formalitäten",
+          "detail": "Wir begleiten Sie bei Visum und Formalitäten."
+        },
+        {
+          "title": "Integration",
+          "detail": "Wir begleiten Sie bis zur Ankunft und zum Arbeitsbeginn."
+        }
+      ],
+      "recTitle": "Die Anerkennung Ihres Abschlusses",
+      "recText": "Für viele Berufe muss Ihr ausländischer Abschluss in Deutschland anerkannt oder gleichwertig sein. Die Anforderungen hängen vom Beruf und vom Bundesland ab. Wir prüfen Ihre Situation und leiten Sie zum passenden Verfahren.",
+      "recCta": "Mehr zur Anerkennung",
+      "faqTitle": "Häufige Fragen",
+      "faq": [
+        {
+          "q": "Muss mein Abschluss anerkannt werden?",
+          "a": "Für viele Berufe ja — besonders bei reglementierten Berufen wie in der Gesundheit. Für andere ist eine Gleichwertigkeit nicht immer erforderlich. Wir prüfen es je nach Beruf."
+        },
+        {
+          "q": "Welches Deutschniveau für eine direkte Anstellung?",
+          "a": "Das Niveau B2 ist der Standard; einige Berufe, besonders in der Gesundheit, können ein bestimmtes Niveau verlangen. Wir begleiten Sie bis zum erforderlichen Niveau."
+        },
+        {
+          "q": "Was ist der Unterschied zur Ausbildung?",
+          "a": "Die direkte Anstellung richtet sich an bereits qualifizierte und erfahrene Personen. Die Ausbildung ist eine vergütete Berufsausbildung, um eine Qualifikation zu erwerben."
+        },
+        {
+          "q": "Garantiert Karriere Fähre eine Anstellung?",
+          "a": "Nein. Kein seriöser Akteur kann eine Anstellung oder ein Visum garantieren. Wir bereiten Sie vor und orientieren Sie; die endgültige Entscheidung liegt bei Arbeitgebern und Behörden."
+        }
+      ],
+      "finalTitle": "Bereit, Ihr Profil einzuschätzen?",
+      "finalText": "Beginnen wir damit, Ihre Situation und den stimmigsten Weg für Sie auszuwerten.",
+      "finalPrimary": "Mein berufliches Profil auswerten",
+      "finalSecondary": "Die Wege entdecken"
+    }
   },
   "formationsAllemand": {
     "title": "Deutschkurse A1 → B2",

@@ -1048,7 +1048,77 @@
     "cadreBody2": "No grey area, no empty promises. A proper contract, a proper visa, rights guaranteed by law, that's the only way we place our candidates.",
     "finalTitle": "Ready to work in Germany?",
     "finalText": "Send us your profile. Together we review your qualification, your level of German and your target occupation, then map out your path: recognition, language, visa.",
-    "finalCta": "Apply"
+    "finalCta": "Apply",
+    "hub": {
+      "heroTitle": "Already qualified? Your next job can start in Germany.",
+      "heroSubtitle": "If you already hold a relevant qualification and experience, you can aim for direct employment in Germany, depending on your trade and the applicable conditions.",
+      "heroPrimary": "Assess my professional profile",
+      "heroSecondary": "See the trades",
+      "whoTitle": "Direct employment — for whom?",
+      "who": [
+        "You are already qualified or hold a degree",
+        "You have professional experience",
+        "Your qualification matches the target trade",
+        "You want to work in Germany"
+      ],
+      "stepsTitle": "Your path to employment",
+      "steps": [
+        {
+          "title": "Profile assessment",
+          "detail": "We analyse your qualification, your experience and your goal."
+        },
+        {
+          "title": "Qualification check",
+          "detail": "We examine the recognition needed for your trade."
+        },
+        {
+          "title": "Opportunity search",
+          "detail": "We identify employers matching your profile."
+        },
+        {
+          "title": "Application",
+          "detail": "We prepare and send your file."
+        },
+        {
+          "title": "Interview",
+          "detail": "We prepare you for interviews with employers."
+        },
+        {
+          "title": "Formalities",
+          "detail": "We support you with the visa and formalities."
+        },
+        {
+          "title": "Integration",
+          "detail": "We support you through to your arrival and starting the job."
+        }
+      ],
+      "recTitle": "Recognition of your qualification",
+      "recText": "For many trades, your foreign qualification must be recognised or deemed equivalent in Germany. Requirements vary by trade and by Land. We check your situation and guide you to the right procedure.",
+      "recCta": "Learn more about recognition",
+      "faqTitle": "Frequently asked questions",
+      "faq": [
+        {
+          "q": "Does my qualification need to be recognised?",
+          "a": "For many trades, yes — especially regulated professions such as healthcare. For others, an equivalence is not always required. We check based on your trade."
+        },
+        {
+          "q": "What German level for direct employment?",
+          "a": "B2 is the standard level; some professions, particularly in healthcare, may require a specific level. We support you up to the required level."
+        },
+        {
+          "q": "What's the difference with the Ausbildung?",
+          "a": "Direct employment is for people who are already qualified and experienced. The Ausbildung is a paid vocational training to acquire a qualification."
+        },
+        {
+          "q": "Does Karriere Fähre guarantee a job?",
+          "a": "No. No serious organisation can guarantee a job or a visa. We prepare and guide you; the final decision lies with employers and authorities."
+        }
+      ],
+      "finalTitle": "Ready to take stock of your profile?",
+      "finalText": "Let's start by assessing your situation and the most coherent path for you.",
+      "finalPrimary": "Assess my professional profile",
+      "finalSecondary": "Discover the paths"
+    }
   },
   "formationsAllemand": {
     "title": "German courses A1 → B2",

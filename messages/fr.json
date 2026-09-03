@@ -1048,7 +1048,77 @@
     "cadreBody2": "Pas de zone grise, pas de promesse en l'air. Un contrat en règle, un visa en règle, des droits garantis par la loi, c'est la seule façon dont nous plaçons nos candidats.",
     "finalTitle": "Prêt à travailler en Allemagne ?",
     "finalText": "Envoyez-nous votre profil. On examine ensemble votre qualification, votre niveau d'allemand et le métier visé, puis on trace votre parcours : reconnaissance, langue, visa.",
-    "finalCta": "Postuler"
+    "finalCta": "Postuler",
+    "hub": {
+      "heroTitle": "Vous êtes déjà qualifié ? Votre prochain emploi peut commencer en Allemagne.",
+      "heroSubtitle": "Si vous disposez déjà d'une qualification et d'une expérience adaptées, vous pouvez viser un emploi direct en Allemagne, selon votre métier et les conditions applicables.",
+      "heroPrimary": "Évaluer mon profil professionnel",
+      "heroSecondary": "Voir les métiers",
+      "whoTitle": "L'emploi direct, pour qui ?",
+      "who": [
+        "Vous êtes déjà diplômé ou qualifié",
+        "Vous avez une expérience professionnelle",
+        "Votre qualification correspond au métier visé",
+        "Vous voulez travailler en Allemagne"
+      ],
+      "stepsTitle": "Votre parcours vers l'emploi",
+      "steps": [
+        {
+          "title": "Évaluation du profil",
+          "detail": "Nous analysons votre qualification, votre expérience et votre projet."
+        },
+        {
+          "title": "Vérification de la qualification",
+          "detail": "Nous examinons la reconnaissance nécessaire selon votre métier."
+        },
+        {
+          "title": "Recherche d'opportunités",
+          "detail": "Nous identifions les employeurs correspondant à votre profil."
+        },
+        {
+          "title": "Candidature",
+          "detail": "Nous préparons et transmettons votre dossier."
+        },
+        {
+          "title": "Entretien",
+          "detail": "Nous vous préparons aux entretiens avec les employeurs."
+        },
+        {
+          "title": "Démarches",
+          "detail": "Nous vous accompagnons dans le visa et les formalités."
+        },
+        {
+          "title": "Intégration",
+          "detail": "Nous vous accompagnons jusqu'à votre arrivée et votre prise de poste."
+        }
+      ],
+      "recTitle": "La reconnaissance de votre diplôme",
+      "recText": "Pour de nombreux métiers, votre diplôme étranger doit être reconnu ou faire l'objet d'une équivalence en Allemagne. Les exigences varient selon le métier et le Land. Nous vérifions votre situation et vous orientons vers la procédure adaptée.",
+      "recCta": "En savoir plus sur la reconnaissance",
+      "faqTitle": "Questions fréquentes",
+      "faq": [
+        {
+          "q": "Faut-il faire reconnaître mon diplôme ?",
+          "a": "Pour beaucoup de métiers, oui — notamment les professions réglementées comme la santé. Pour d'autres, une équivalence n'est pas toujours exigée. Nous vérifions selon votre métier."
+        },
+        {
+          "q": "Quel niveau d'allemand pour un emploi direct ?",
+          "a": "Le niveau B2 est le standard visé ; certaines professions, notamment en santé, peuvent exiger un niveau spécifique. Nous vous accompagnons jusqu'au niveau requis."
+        },
+        {
+          "q": "Quelle différence avec l'Ausbildung ?",
+          "a": "L'emploi direct s'adresse aux personnes déjà qualifiées et expérimentées. L'Ausbildung est une formation professionnelle rémunérée pour acquérir une qualification."
+        },
+        {
+          "q": "Karriere Fähre garantit-il un emploi ?",
+          "a": "Non. Aucun acteur sérieux ne peut garantir un emploi ou un visa. Nous vous préparons et vous orientons ; la décision finale dépend des employeurs et des autorités."
+        }
+      ],
+      "finalTitle": "Prêt à faire le point sur votre profil ?",
+      "finalText": "Commençons par évaluer votre situation et le parcours le plus cohérent pour vous.",
+      "finalPrimary": "Évaluer mon profil professionnel",
+      "finalSecondary": "Découvrir les parcours"
+    }
   },
   "formationsAllemand": {
     "title": "Cours d'allemand A1 → B2",
