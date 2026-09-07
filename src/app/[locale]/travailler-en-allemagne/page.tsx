@@ -65,13 +65,13 @@ export default async function TravaillerPage() {
       <section className="relative overflow-hidden bg-brand-white">
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
           <Image
-            src="/images/services-candidates.jpg"
-            alt="Une professionnelle qualifiée prépare son dossier pour un emploi en Allemagne"
+            src="/images/emploi-direct-hero.jpg"
+            alt="Un technicien qualifié africain intervient sur une armoire électrique dans une usine en Allemagne"
             fill
             priority
             sizes="52vw"
             className="object-cover"
-            style={{ objectPosition: "center 28%" }}
+            style={{ objectPosition: "62% center" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
           <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-white to-transparent" />
