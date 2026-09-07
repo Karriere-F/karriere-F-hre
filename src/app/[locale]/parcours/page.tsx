@@ -194,37 +194,6 @@ export default async function ParcoursPage() {
         </div>
       </section>
 
-      {/* 4 — Timeline: from your situation to your future */}
-      <section className="bg-brand-white">
-        <div className="mx-auto max-w-2xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="text-center font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
-            {content.timeline.title}
-          </h2>
-          <ol className="relative mt-12">
-            {content.timeline.steps.map((s, i) => {
-              const last = i === content.timeline.steps.length - 1;
-              return (
-                <li key={s.n} className="relative flex gap-5 pb-8 last:pb-0">
-                  {!last && (
-                    <span
-                      aria-hidden="true"
-                      className="absolute left-6 top-14 bottom-0 w-px -translate-x-1/2 bg-brand-grid"
-                    />
-                  )}
-                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-gold/40 bg-brand-white font-serif text-lg text-brand-gold-text">
-                    {s.n}
-                  </span>
-                  <div className="pt-1.5">
-                    <h3 className="font-serif text-lg text-brand-black">{s.title}</h3>
-                    <p className="mt-1 text-sm text-brand-ink-secondary">{s.detail}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        </div>
-      </section>
-
       {/* 5 — Sectors */}
       <section className="bg-brand-white">
         <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
