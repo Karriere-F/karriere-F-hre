@@ -50,6 +50,22 @@ export default async function TravaillerPage() {
   const qMark = h.heroTitle.indexOf("?");
   const heroKicker = qMark >= 0 ? h.heroTitle.slice(0, qMark + 1) : "";
   const heroMain = qMark >= 0 ? h.heroTitle.slice(qMark + 1).trim() : h.heroTitle;
+  // Break the main title into two balanced lines (locale-agnostic: split at the
+  // word boundary nearest the middle).
+  const mainWords = heroMain.split(" ");
+  let splitAt = mainWords.length;
+  let acc = 0;
+  let bestDiff = Infinity;
+  for (let i = 1; i < mainWords.length; i++) {
+    acc += mainWords[i - 1].length + 1;
+    const diff = Math.abs(acc - heroMain.length / 2);
+    if (diff < bestDiff) {
+      bestDiff = diff;
+      splitAt = i;
+    }
+  }
+  const heroLine1 = mainWords.slice(0, splitAt).join(" ");
+  const heroLine2 = mainWords.slice(splitAt).join(" ");
 
   return (
     <div className="flex flex-col">
@@ -79,12 +95,13 @@ export default async function TravaillerPage() {
         </div>
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-xl py-14 lg:flex lg:min-h-[540px] lg:flex-col lg:justify-center lg:py-20">
+          <div className="max-w-2xl py-14 lg:flex lg:min-h-[540px] lg:flex-col lg:justify-center lg:py-20">
             <p className="animate-fade-up text-sm font-semibold uppercase tracking-[0.16em] text-brand-gold-text">
               {heroKicker}
             </p>
-            <h1 className="animate-fade-up mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
-              {heroMain}
+            <h1 className="animate-fade-up mt-3 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] text-brand-black leading-[1.1]">
+              <span className="block">{heroLine1}</span>
+              <span className="block">{heroLine2}</span>
             </h1>
             <p className="animate-fade-up mt-6 max-w-lg text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
               {h.heroSubtitle}
@@ -104,7 +121,7 @@ export default async function TravaillerPage() {
                 {h.heroSecondary}
               </Link>
             </div>
-            <p className="animate-fade-up mt-7 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text" style={{ animationDelay: "200ms" }}>
+            <p className="animate-fade-up mt-7 flex items-center gap-x-2 whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-gold-text" style={{ animationDelay: "200ms" }}>
               {h.heroTags.split(" · ").map((w, i) => (
                 <Fragment key={w}>
                   {i > 0 && <span aria-hidden="true" className="text-brand-gold/50">·</span>}
