@@ -160,7 +160,7 @@ export default async function TravaillerPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-text">
             {h.concernedIntro}
           </p>
-          <h2 className="mt-4 max-w-2xl font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black text-balance leading-[1.15]">
+          <h2 className="mt-4 font-serif text-2xl sm:text-3xl lg:text-[1.9rem] xl:text-[2.1rem] text-brand-black leading-[1.15] lg:whitespace-nowrap">
             {h.concernedTitle}
           </h2>
 
