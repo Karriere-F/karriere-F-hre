@@ -17,6 +17,37 @@ type Content = typeof frMessages.travailler;
 export const generateMetadata = () =>
   metadataFromNamespace("travailler", "/travailler-en-allemagne");
 
+// Split text into n balanced lines at the word boundaries nearest to each n-th of the
+// length. Locale-agnostic, so forced line breaks stay sensible across FR/DE/EN.
+function balancedLines(text: string, n: number): string[] {
+  const words = text.split(" ");
+  if (words.length < n) return [text];
+  const cum: number[] = [];
+  let a = 0;
+  for (const w of words) {
+    a += w.length + 1;
+    cum.push(a);
+  }
+  const total = text.length;
+  const breaks: number[] = [];
+  for (let k = 1; k < n; k++) {
+    const target = (total * k) / n;
+    const from = (breaks[breaks.length - 1] ?? 0) + 1;
+    let best = from;
+    let bestDiff = Infinity;
+    for (let i = from; i < words.length; i++) {
+      const diff = Math.abs(cum[i - 1] - target);
+      if (diff < bestDiff) {
+        bestDiff = diff;
+        best = i;
+      }
+    }
+    breaks.push(best);
+  }
+  const idx = [0, ...breaks, words.length];
+  return Array.from({ length: n }, (_, k) => words.slice(idx[k], idx[k + 1]).join(" "));
+}
+
 function Flow({ steps, highlightLast }: { steps: string[]; highlightLast?: boolean }) {
   return (
     <ol className="relative mt-6 space-y-0">
@@ -50,22 +81,8 @@ export default async function TravaillerPage() {
   const qMark = h.heroTitle.indexOf("?");
   const heroKicker = qMark >= 0 ? h.heroTitle.slice(0, qMark + 1) : "";
   const heroMain = qMark >= 0 ? h.heroTitle.slice(qMark + 1).trim() : h.heroTitle;
-  // Break the main title into two balanced lines (locale-agnostic: split at the
-  // word boundary nearest the middle).
-  const mainWords = heroMain.split(" ");
-  let splitAt = mainWords.length;
-  let acc = 0;
-  let bestDiff = Infinity;
-  for (let i = 1; i < mainWords.length; i++) {
-    acc += mainWords[i - 1].length + 1;
-    const diff = Math.abs(acc - heroMain.length / 2);
-    if (diff < bestDiff) {
-      bestDiff = diff;
-      splitAt = i;
-    }
-  }
-  const heroLine1 = mainWords.slice(0, splitAt).join(" ");
-  const heroLine2 = mainWords.slice(splitAt).join(" ");
+  const [heroLine1, heroLine2] = balancedLines(heroMain, 2);
+  const subLines = balancedLines(h.heroSubtitle, 3);
 
   return (
     <div className="flex flex-col">
@@ -103,8 +120,12 @@ export default async function TravaillerPage() {
               <span className="block">{heroLine1}</span>
               <span className="block">{heroLine2}</span>
             </h1>
-            <p className="animate-fade-up mt-6 max-w-lg text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
-              {h.heroSubtitle}
+            <p className="animate-fade-up mt-6 max-w-2xl text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
+              {subLines.map((l) => (
+                <span key={l} className="block">
+                  {l}
+                </span>
+              ))}
             </p>
             <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "140ms" }}>
               <Link
@@ -124,7 +145,7 @@ export default async function TravaillerPage() {
             <p className="animate-fade-up mt-7 flex items-center gap-x-2 whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-gold-text" style={{ animationDelay: "200ms" }}>
               {h.heroTags.split(" · ").map((w, i) => (
                 <Fragment key={w}>
-                  {i > 0 && <span aria-hidden="true" className="text-brand-gold/50">·</span>}
+                  {i > 0 && <span aria-hidden="true" className="inline-block h-[5px] w-[5px] shrink-0 rounded-full bg-brand-gold" />}
                   <span>{w}</span>
                 </Fragment>
               ))}
@@ -135,7 +156,7 @@ export default async function TravaillerPage() {
 
       {/* Are you concerned? — eligibility checklist */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-4xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-text">
             {h.concernedIntro}
           </p>
@@ -181,10 +202,10 @@ export default async function TravaillerPage() {
 
       {/* Direct employment OR Ausbildung */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.compareTitle}</h2>
-          <div className="mt-10 grid items-start gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-brand-gold/40 bg-brand-gold/[0.05] p-6 sm:p-7">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug lg:whitespace-nowrap">{h.compareTitle}</h2>
+          <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
+            <div className="flex h-full flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold-text">
                   <Briefcase size={22} strokeWidth={1.75} aria-hidden="true" />
@@ -196,9 +217,9 @@ export default async function TravaillerPage() {
               </div>
               <Flow steps={h.compareEmploiSteps} highlightLast />
             </div>
-            <div className="rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
+            <div className="flex h-full flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10 text-brand-gold-text">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold-text">
                   <GraduationCap size={22} strokeWidth={1.75} aria-hidden="true" />
                 </span>
                 <div>
@@ -209,7 +230,7 @@ export default async function TravaillerPage() {
               <Flow steps={h.compareAusSteps} />
             </div>
           </div>
-          <p className="mt-8 rounded-2xl border border-brand-black/10 bg-brand-card px-6 py-5 font-serif text-lg text-brand-black text-balance leading-snug">
+          <p className="mt-8 rounded-2xl border border-brand-black/10 bg-brand-card px-6 py-5 font-serif text-base text-brand-black text-balance leading-snug lg:whitespace-nowrap">
             {h.compareMessage}
           </p>
         </div>
@@ -217,7 +238,7 @@ export default async function TravaillerPage() {
 
       {/* Recognition */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.recTitle}</h2>
           <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{h.recIntro}</p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -252,7 +273,7 @@ export default async function TravaillerPage() {
 
       {/* Path */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-2xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-center font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.pathTitle}</h2>
           <ol className="relative mt-12">
             {h.steps.map((s, i) => {
@@ -276,7 +297,7 @@ export default async function TravaillerPage() {
 
       {/* Sectors */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.sectorsTitle}</h2>
           <p className="mt-3 text-sm text-brand-ink-muted">{h.sectorsNote}</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -314,7 +335,7 @@ export default async function TravaillerPage() {
 
       {/* Salary */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-4xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.salaryTitle}</h2>
           <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{h.salaryText}</p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -333,7 +354,7 @@ export default async function TravaillerPage() {
 
       {/* Our role / what we don't promise */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
               <h2 className="font-serif text-2xl sm:text-3xl text-brand-black">{h.roleTitle}</h2>
@@ -356,7 +377,7 @@ export default async function TravaillerPage() {
 
       {/* After arrival */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.afterTitle}</h2>
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             {h.after.map((a, i) => (
