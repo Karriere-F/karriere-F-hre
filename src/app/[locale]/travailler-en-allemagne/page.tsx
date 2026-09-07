@@ -116,28 +116,45 @@ export default async function TravaillerPage() {
         </div>
       </section>
 
-      {/* Are you concerned? */}
-      <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.concernedTitle}</h2>
-          <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-brand-ink-muted">{h.concernedIntro}</p>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-            {h.concerned.map((c) => (
-              <li key={c} className="flex gap-3 rounded-2xl border border-brand-grid bg-brand-white p-5">
-                <Check size={20} strokeWidth={2} aria-hidden="true" className="mt-0.5 shrink-0 text-brand-gold-text" />
-                <span className="text-brand-black">{c}</span>
+      {/* Are you concerned? — high-contrast eligibility checklist */}
+      <section className="bg-brand-black text-brand-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-light">
+            {h.concernedIntro}
+          </p>
+          <h2 className="mt-4 max-w-2xl font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-white text-balance leading-[1.15]">
+            {h.concernedTitle}
+          </h2>
+
+          <ul className="mt-10 divide-y divide-brand-white/12 border-y border-brand-white/12">
+            {h.concerned.map((c, i) => (
+              <li
+                key={c}
+                className="flex items-center gap-4 py-5 sm:gap-5"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gold text-brand-black shadow-[0_0_24px_rgba(195,154,62,0.35)]">
+                  <Check size={20} strokeWidth={2.5} aria-hidden="true" />
+                </span>
+                <span className="text-base text-brand-white/90 sm:text-lg">{c}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-6 max-w-3xl text-sm text-brand-ink-secondary leading-relaxed">{h.concernedNote}</p>
-          <p className="mt-1.5 text-xs text-brand-ink-muted">
-            <a href="https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-gold-text">
+
+          <p className="mt-8 max-w-3xl text-sm text-brand-white/60 leading-relaxed">{h.concernedNote}</p>
+          <p className="mt-2 text-xs text-brand-white/40">
+            <a
+              href="https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brand-gold-light"
+            >
               {h.concernedSource}
             </a>
           </p>
           <Link
             href="/evaluation"
-            className="press mt-8 inline-flex h-[52px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors hover:bg-brand-gold hover:text-brand-black"
+            className="press mt-9 inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
           >
             {h.concernedCta}
             <ArrowRight size={18} aria-hidden="true" />
