@@ -47,6 +47,9 @@ export default async function TravaillerPage() {
   const content = await getPageContent<Content>("travailler");
   const h = content.hub;
   const wa = whatsappLink(WHATSAPP_NUMBERS[0].e164);
+  const qMark = h.heroTitle.indexOf("?");
+  const heroKicker = qMark >= 0 ? h.heroTitle.slice(0, qMark + 1) : "";
+  const heroMain = qMark >= 0 ? h.heroTitle.slice(qMark + 1).trim() : h.heroTitle;
 
   return (
     <div className="flex flex-col">
@@ -77,8 +80,11 @@ export default async function TravaillerPage() {
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl py-14 lg:flex lg:min-h-[540px] lg:flex-col lg:justify-center lg:py-20">
-            <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
-              {h.heroTitle}
+            <p className="animate-fade-up text-sm font-semibold uppercase tracking-[0.16em] text-brand-gold-text">
+              {heroKicker}
+            </p>
+            <h1 className="animate-fade-up mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
+              {heroMain}
             </h1>
             <p className="animate-fade-up mt-6 max-w-lg text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
               {h.heroSubtitle}
