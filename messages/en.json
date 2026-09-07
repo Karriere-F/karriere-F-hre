@@ -1050,74 +1050,140 @@
     "finalText": "Send us your profile. Together we review your qualification, your level of German and your target occupation, then map out your path: recognition, language, visa.",
     "finalCta": "Apply",
     "hub": {
-      "heroTitle": "Already qualified? Your next job can start in Germany.",
-      "heroSubtitle": "If you already hold a relevant qualification and experience, you can aim for direct employment in Germany, depending on your trade and the applicable conditions.",
+      "heroTitle": "Already qualified? Your next career can start in Germany.",
+      "heroSubtitle": "You have a qualification, a trade and experience? We help you determine whether your profile can match a skilled job in Germany, then build your application.",
       "heroPrimary": "Assess my professional profile",
       "heroSecondary": "See the trades",
-      "whoTitle": "Direct employment — for whom?",
-      "who": [
-        "You are already qualified or hold a degree",
-        "You have professional experience",
-        "Your qualification matches the target trade",
-        "You want to work in Germany"
+      "heroTags": "Qualification · Experience · German · Recognition · Employment",
+      "concernedTitle": "Direct employment is for already-qualified professionals",
+      "concernedIntro": "You are potentially concerned if:",
+      "concerned": [
+        "You have a professional qualification or a degree",
+        "You have experience matching your trade",
+        "Your profile meets the requirements of the target role",
+        "You are ready to work in Germany",
+        "You meet the conditions applicable to your profession and residence status"
       ],
-      "stepsTitle": "Your path to employment",
+      "concernedNote": "For a work visa for skilled professionals, Germany requires among other things a recognised or, depending on the case, comparable qualification and a concrete job offer for a skilled position. For a regulated profession, a licence to practise is also required.",
+      "concernedSource": "Source: make-it-in-germany.com",
+      "concernedCta": "Check my profile",
+      "compareTitle": "You don't necessarily need to start training again",
+      "compareEmploiName": "Direct employment",
+      "compareEmploiSub": "You are already qualified",
+      "compareEmploiSteps": [
+        "Qualification",
+        "Experience",
+        "Requirements check",
+        "Application",
+        "Contract",
+        "Visa",
+        "Employment in Germany"
+      ],
+      "compareAusName": "Ausbildung",
+      "compareAusSub": "You want to acquire a qualification in Germany",
+      "compareAusSteps": [
+        "Preparation",
+        "Application",
+        "Ausbildung",
+        "Qualification",
+        "Employment"
+      ],
+      "compareMessage": "Your situation determines the path. We do not automatically steer you towards an Ausbildung.",
+      "recTitle": "Your foreign qualification: does it need to be recognised?",
+      "recIntro": "It depends among other things on the trade, your qualification and the intended residence route.",
+      "recRegTitle": "Regulated profession",
+      "recRegText": "Some professions require professional recognition and/or a licence to practise in Germany.",
+      "recRegExamples": "Nurse · doctor · certain health professions · teacher · lawyer",
+      "recNonRegTitle": "Non-regulated profession",
+      "recNonRegText": "Formal recognition is not always necessary to practise the trade, but it can be relevant or required for certain residence permits.",
+      "recPartialTitle": "And if your qualification is not fully recognised?",
+      "recPartialText": "Recognition procedures or qualification measures may, depending on your situation, allow you to fill the missing skills.",
+      "recSource": "Source: make-it-in-germany.com",
+      "recCta": "Check the recognition of my qualification",
+      "pathTitle": "From your qualification to your job in Germany",
       "steps": [
         {
-          "title": "Profile assessment",
-          "detail": "We analyse your qualification, your experience and your goal."
+          "n": "01",
+          "title": "Assessment",
+          "detail": "We analyse your training, your experience, your trade and your goal."
         },
         {
-          "title": "Qualification check",
-          "detail": "We examine the recognition needed for your trade."
+          "n": "02",
+          "title": "Verification",
+          "detail": "We determine the requirements tied to your qualification and profession."
         },
         {
-          "title": "Opportunity search",
-          "detail": "We identify employers matching your profile."
+          "n": "03",
+          "title": "Orientation",
+          "detail": "We determine the most coherent path: direct employment, additional recognition or another route."
         },
         {
-          "title": "Application",
-          "detail": "We prepare and send your file."
+          "n": "04",
+          "title": "File preparation",
+          "detail": "CV, supporting documents, qualifications and documents needed for the application."
         },
         {
-          "title": "Interview",
-          "detail": "We prepare you for interviews with employers."
+          "n": "05",
+          "title": "Professional opportunities",
+          "detail": "Search and selection of opportunities matching your profile."
         },
         {
-          "title": "Formalities",
-          "detail": "We support you with the visa and formalities."
+          "n": "06",
+          "title": "Application & interview",
+          "detail": "Preparation and support in your exchanges with the employer."
         },
         {
+          "n": "07",
+          "title": "Visa & departure",
+          "detail": "Support with the administrative steps of your project."
+        },
+        {
+          "n": "08",
           "title": "Integration",
-          "detail": "We support you through to your arrival and starting the job."
+          "detail": "Support through to starting your job and settling in."
         }
       ],
-      "recTitle": "Recognition of your qualification",
-      "recText": "For many trades, your foreign qualification must be recognised or deemed equivalent in Germany. Requirements vary by trade and by Land. We check your situation and guide you to the right procedure.",
-      "recCta": "Learn more about recognition",
-      "faqTitle": "Frequently asked questions",
-      "faq": [
+      "sectorsTitle": "Your trade can have a place in Germany",
+      "sectorsNote": "For each trade: direct employment possible? · recognition required? · experience expected? · German level?",
+      "salaryTitle": "What salary in Germany?",
+      "salaryText": "The salary depends on the trade, the qualification, the experience, the region, the sector and the employer.",
+      "salaryFactors": [
+        "Gross salary",
+        "Indicative net salary",
+        "Possible collective agreement",
+        "Experience"
+      ],
+      "salaryDisclaimer": "The amounts shown are indicative. A stated salary is not a guarantee of pay.",
+      "roleTitle": "Our role",
+      "role": [
+        "We assess your profile.",
+        "We orient you towards the suitable routes.",
+        "We help you prepare your application.",
+        "We support you through the necessary steps.",
+        "We prepare you for exchanges with employers."
+      ],
+      "roleNotTitle": "What we do not promise",
+      "roleNot": "We do not promise a job or a visa before reviewing your file. The final decision lies in particular with the employer and the competent authorities.",
+      "afterTitle": "Your project doesn't stop at the contract",
+      "after": [
         {
-          "q": "Does my qualification need to be recognised?",
-          "a": "For many trades, yes — especially regulated professions such as healthcare. For others, an equivalence is not always required. We check based on your trade."
+          "label": "Before departure",
+          "text": "Administrative preparation · travel · practical information"
         },
         {
-          "q": "What German level for direct employment?",
-          "a": "B2 is the standard level; some professions, particularly in healthcare, may require a specific level. We support you up to the required level."
+          "label": "On arrival",
+          "text": "Settling in · first bearings · starting the job"
         },
         {
-          "q": "What's the difference with the Ausbildung?",
-          "a": "Direct employment is for people who are already qualified and experienced. The Ausbildung is a paid vocational training to acquire a qualification."
-        },
-        {
-          "q": "Does Karriere Fähre guarantee a job?",
-          "a": "No. No serious organisation can guarantee a job or a visa. We prepare and guide you; the final decision lies with employers and authorities."
+          "label": "Afterwards",
+          "text": "Follow-up · support · professional integration"
         }
       ],
-      "finalTitle": "Ready to take stock of your profile?",
-      "finalText": "Let's start by assessing your situation and the most coherent path for you.",
-      "finalPrimary": "Assess my professional profile",
-      "finalSecondary": "Discover the paths"
+      "finalTitle": "Your experience deserves to be assessed.",
+      "finalText": "You already have a trade and want to know whether your profile can match a professional opportunity in Germany?",
+      "finalPrimary": "Assess my profile",
+      "finalTags": "Qualification · experience · trade · German · goal",
+      "finalWhatsapp": "Contact us on WhatsApp"
     }
   },
   "formationsAllemand": {

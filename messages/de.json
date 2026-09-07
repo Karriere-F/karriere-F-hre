@@ -1050,74 +1050,140 @@
     "finalText": "Senden Sie uns Ihr Profil. Wir prüfen gemeinsam Ihre Qualifikation, Ihr Deutschniveau und den Zielberuf und zeichnen dann Ihren Weg: Anerkennung, Sprache, Visum.",
     "finalCta": "Jetzt bewerben",
     "hub": {
-      "heroTitle": "Sie sind bereits qualifiziert? Ihr nächster Job kann in Deutschland beginnen.",
-      "heroSubtitle": "Wenn Sie bereits über eine passende Qualifikation und Erfahrung verfügen, können Sie eine direkte Anstellung in Deutschland anstreben — je nach Beruf und geltenden Bedingungen.",
+      "heroTitle": "Sie sind bereits qualifiziert? Ihre nächste Karriere kann in Deutschland beginnen.",
+      "heroSubtitle": "Sie haben eine Qualifikation, einen Beruf und Erfahrung? Wir helfen Ihnen festzustellen, ob Ihr Profil zu einer qualifizierten Stelle in Deutschland passen kann, und Ihre Bewerbung aufzubauen.",
       "heroPrimary": "Mein berufliches Profil auswerten",
       "heroSecondary": "Berufe ansehen",
-      "whoTitle": "Direkte Anstellung — für wen?",
-      "who": [
-        "Sie sind bereits ausgebildet oder qualifiziert",
-        "Sie haben Berufserfahrung",
-        "Ihre Qualifikation passt zum angestrebten Beruf",
-        "Sie möchten in Deutschland arbeiten"
+      "heroTags": "Qualifikation · Erfahrung · Deutsch · Anerkennung · Anstellung",
+      "concernedTitle": "Die direkte Anstellung richtet sich an bereits qualifizierte Fachkräfte",
+      "concernedIntro": "Sie kommen potenziell infrage, wenn:",
+      "concerned": [
+        "Sie eine Berufsqualifikation oder einen Abschluss haben",
+        "Sie über Erfahrung passend zu Ihrem Beruf verfügen",
+        "Ihr Profil den Anforderungen der gesuchten Stelle entspricht",
+        "Sie bereit sind, in Deutschland zu arbeiten",
+        "Sie die für Ihren Beruf und Ihren Aufenthaltstitel geltenden Bedingungen erfüllen"
       ],
-      "stepsTitle": "Ihr Weg zur Anstellung",
+      "concernedNote": "Für ein Visum für qualifizierte Fachkräfte verlangt Deutschland unter anderem eine anerkannte oder je nach Fall vergleichbare Qualifikation und ein konkretes Stellenangebot für eine qualifizierte Tätigkeit. Für einen reglementierten Beruf ist zusätzlich eine Berufsausübungserlaubnis nötig.",
+      "concernedSource": "Quelle: make-it-in-germany.com",
+      "concernedCta": "Mein Profil prüfen",
+      "compareTitle": "Sie müssen nicht unbedingt eine neue Ausbildung beginnen",
+      "compareEmploiName": "Direkte Anstellung",
+      "compareEmploiSub": "Sie sind bereits qualifiziert",
+      "compareEmploiSteps": [
+        "Qualifikation",
+        "Erfahrung",
+        "Prüfung der Anforderungen",
+        "Bewerbung",
+        "Vertrag",
+        "Visum",
+        "Anstellung in Deutschland"
+      ],
+      "compareAusName": "Ausbildung",
+      "compareAusSub": "Sie möchten in Deutschland eine Qualifikation erwerben",
+      "compareAusSteps": [
+        "Vorbereitung",
+        "Bewerbung",
+        "Ausbildung",
+        "Qualifikation",
+        "Anstellung"
+      ],
+      "compareMessage": "Ihre Situation bestimmt den Weg. Wir leiten Sie nicht automatisch in eine Ausbildung.",
+      "recTitle": "Ihr ausländischer Abschluss: muss er anerkannt werden?",
+      "recIntro": "Das hängt unter anderem vom Beruf, Ihrer Qualifikation und dem geplanten Aufenthaltsweg ab.",
+      "recRegTitle": "Reglementierter Beruf",
+      "recRegText": "Manche Berufe erfordern eine berufliche Anerkennung und/oder eine Berufsausübungserlaubnis in Deutschland.",
+      "recRegExamples": "Pflegekraft · Arzt · bestimmte Gesundheitsberufe · Lehrkraft · Anwalt",
+      "recNonRegTitle": "Nicht reglementierter Beruf",
+      "recNonRegText": "Eine formale Anerkennung ist nicht immer nötig, um den Beruf auszuüben, kann aber für bestimmte Aufenthaltstitel sinnvoll oder erforderlich sein.",
+      "recPartialTitle": "Und wenn Ihre Qualifikation nicht vollständig anerkannt wird?",
+      "recPartialText": "Anerkennungsverfahren oder Qualifizierungsmaßnahmen können je nach Situation ermöglichen, fehlende Kompetenzen zu ergänzen.",
+      "recSource": "Quelle: make-it-in-germany.com",
+      "recCta": "Anerkennung meines Abschlusses prüfen",
+      "pathTitle": "Von Ihrer Qualifikation zu Ihrer Stelle in Deutschland",
       "steps": [
         {
-          "title": "Profil-Auswertung",
-          "detail": "Wir analysieren Ihre Qualifikation, Ihre Erfahrung und Ihr Ziel."
+          "n": "01",
+          "title": "Auswertung",
+          "detail": "Wir analysieren Ihre Ausbildung, Ihre Erfahrung, Ihren Beruf und Ihr Ziel."
         },
         {
-          "title": "Prüfung der Qualifikation",
-          "detail": "Wir prüfen die je nach Beruf nötige Anerkennung."
+          "n": "02",
+          "title": "Prüfung",
+          "detail": "Wir bestimmen die Anforderungen an Ihre Qualifikation und Ihren Beruf."
         },
         {
-          "title": "Suche nach Möglichkeiten",
-          "detail": "Wir finden Arbeitgeber, die zu Ihrem Profil passen."
+          "n": "03",
+          "title": "Orientierung",
+          "detail": "Wir bestimmen den stimmigsten Weg: direkte Anstellung, ergänzende Anerkennung oder ein anderer Weg."
         },
         {
-          "title": "Bewerbung",
-          "detail": "Wir bereiten Ihre Unterlagen vor und übermitteln sie."
+          "n": "04",
+          "title": "Unterlagen",
+          "detail": "Lebenslauf, Nachweise, Abschlüsse und für die Bewerbung nötige Dokumente."
         },
         {
-          "title": "Gespräch",
-          "detail": "Wir bereiten Sie auf die Gespräche mit Arbeitgebern vor."
+          "n": "05",
+          "title": "Berufliche Möglichkeiten",
+          "detail": "Suche und Auswahl von Möglichkeiten passend zu Ihrem Profil."
         },
         {
-          "title": "Formalitäten",
-          "detail": "Wir begleiten Sie bei Visum und Formalitäten."
+          "n": "06",
+          "title": "Bewerbung & Gespräch",
+          "detail": "Vorbereitung und Begleitung Ihrer Gespräche mit dem Arbeitgeber."
         },
         {
+          "n": "07",
+          "title": "Visum & Abreise",
+          "detail": "Begleitung bei den administrativen Schritten Ihres Projekts."
+        },
+        {
+          "n": "08",
           "title": "Integration",
-          "detail": "Wir begleiten Sie bis zur Ankunft und zum Arbeitsbeginn."
+          "detail": "Begleitung bis zum Arbeitsbeginn und zur Ankunft."
         }
       ],
-      "recTitle": "Die Anerkennung Ihres Abschlusses",
-      "recText": "Für viele Berufe muss Ihr ausländischer Abschluss in Deutschland anerkannt oder gleichwertig sein. Die Anforderungen hängen vom Beruf und vom Bundesland ab. Wir prüfen Ihre Situation und leiten Sie zum passenden Verfahren.",
-      "recCta": "Mehr zur Anerkennung",
-      "faqTitle": "Häufige Fragen",
-      "faq": [
+      "sectorsTitle": "Ihr Beruf kann einen Platz in Deutschland haben",
+      "sectorsNote": "Zu jedem Beruf: direkte Anstellung möglich? · Anerkennung nötig? · erwartete Erfahrung? · Deutschniveau?",
+      "salaryTitle": "Welches Gehalt in Deutschland?",
+      "salaryText": "Das Gehalt hängt vom Beruf, der Qualifikation, der Erfahrung, der Region, der Branche und dem Arbeitgeber ab.",
+      "salaryFactors": [
+        "Bruttogehalt",
+        "Richtwert Nettogehalt",
+        "Möglicher Tarifvertrag",
+        "Erfahrung"
+      ],
+      "salaryDisclaimer": "Die angegebenen Beträge sind Richtwerte. Ein genanntes Gehalt ist keine Zusicherung einer Vergütung.",
+      "roleTitle": "Unsere Rolle",
+      "role": [
+        "Wir werten Ihr Profil aus.",
+        "Wir orientieren Sie zu den passenden Wegen.",
+        "Wir helfen Ihnen, Ihre Bewerbung vorzubereiten.",
+        "Wir begleiten Sie bei den nötigen Schritten.",
+        "Wir bereiten Sie auf die Gespräche mit Arbeitgebern vor."
+      ],
+      "roleNotTitle": "Was wir nicht versprechen",
+      "roleNot": "Wir versprechen keine Anstellung und kein Visum vor der Prüfung Ihrer Unterlagen. Die endgültige Entscheidung liegt insbesondere beim Arbeitgeber und den zuständigen Behörden.",
+      "afterTitle": "Ihr Projekt endet nicht mit dem Vertrag",
+      "after": [
         {
-          "q": "Muss mein Abschluss anerkannt werden?",
-          "a": "Für viele Berufe ja — besonders bei reglementierten Berufen wie in der Gesundheit. Für andere ist eine Gleichwertigkeit nicht immer erforderlich. Wir prüfen es je nach Beruf."
+          "label": "Vor der Abreise",
+          "text": "Administrative Vorbereitung · Reise · praktische Infos"
         },
         {
-          "q": "Welches Deutschniveau für eine direkte Anstellung?",
-          "a": "Das Niveau B2 ist der Standard; einige Berufe, besonders in der Gesundheit, können ein bestimmtes Niveau verlangen. Wir begleiten Sie bis zum erforderlichen Niveau."
+          "label": "Bei der Ankunft",
+          "text": "Ankommen · erste Orientierung · Arbeitsbeginn"
         },
         {
-          "q": "Was ist der Unterschied zur Ausbildung?",
-          "a": "Die direkte Anstellung richtet sich an bereits qualifizierte und erfahrene Personen. Die Ausbildung ist eine vergütete Berufsausbildung, um eine Qualifikation zu erwerben."
-        },
-        {
-          "q": "Garantiert Karriere Fähre eine Anstellung?",
-          "a": "Nein. Kein seriöser Akteur kann eine Anstellung oder ein Visum garantieren. Wir bereiten Sie vor und orientieren Sie; die endgültige Entscheidung liegt bei Arbeitgebern und Behörden."
+          "label": "Danach",
+          "text": "Begleitung · Unterstützung · berufliche Integration"
         }
       ],
-      "finalTitle": "Bereit, Ihr Profil einzuschätzen?",
-      "finalText": "Beginnen wir damit, Ihre Situation und den stimmigsten Weg für Sie auszuwerten.",
-      "finalPrimary": "Mein berufliches Profil auswerten",
-      "finalSecondary": "Die Wege entdecken"
+      "finalTitle": "Ihre Erfahrung verdient eine Auswertung.",
+      "finalText": "Sie haben bereits einen Beruf und möchten wissen, ob Ihr Profil zu einer beruflichen Möglichkeit in Deutschland passen kann?",
+      "finalPrimary": "Mein Profil auswerten",
+      "finalTags": "Qualifikation · Erfahrung · Beruf · Deutsch · Ziel",
+      "finalWhatsapp": "Über WhatsApp kontaktieren"
     }
   },
   "formationsAllemand": {
