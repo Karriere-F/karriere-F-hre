@@ -30,11 +30,22 @@ export default async function SecteursPage() {
         ]}
       />
 
-      <PageHero title={tr(SECTEURS_UI.hubTitle, locale)} subtitle={tr(SECTEURS_UI.hubIntro, locale)} />
+      <PageHero
+        title={tr(SECTEURS_UI.hubTitle, locale)}
+        subtitle={tr(SECTEURS_UI.hubIntro, locale)}
+        image="/images/secteurs-hero.jpg"
+        imageAlt={tr(SECTEURS_UI.hubTitle, locale)}
+        imagePosition="center 28%"
+      />
 
       <section className="bg-brand-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <SectorGrid sectors={SECTORS_ALL} locale={locale} />
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black">
+            {tr(SECTEURS_UI.chooseSectorTitle, locale)}
+          </h2>
+          <div className="mt-10">
+            <SectorGrid sectors={SECTORS_ALL} locale={locale} />
+          </div>
         </div>
       </section>
     </div>
