@@ -240,7 +240,7 @@ export default async function TravaillerPage() {
       <section className="bg-brand-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.recTitle}</h2>
-          <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{h.recIntro}</p>
+          <p className="mt-5 text-brand-ink-secondary leading-relaxed lg:whitespace-nowrap">{h.recIntro}</p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
             <div className="rounded-2xl border border-brand-grid bg-brand-white p-6">
               <h3 className="font-serif text-lg text-brand-black">{h.recRegTitle}</h3>
