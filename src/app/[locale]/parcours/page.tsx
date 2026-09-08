@@ -290,7 +290,7 @@ export default async function ParcoursPage() {
               {content.finalCta.secondary}
             </Link>
           </div>
-          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brand-ink-muted">
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brand-gold-text">
             {content.finalCta.tags}
           </p>
         </div>
