@@ -248,7 +248,7 @@ export default async function ParcoursPage() {
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.understand.title}
           </h2>
-          <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{content.understand.text}</p>
+          <p className="mt-5 text-brand-ink-secondary leading-relaxed">{content.understand.text}</p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {content.understand.items.map((it, i) => {
               const Icon = understandIcons[i] ?? BookOpen;
