@@ -131,7 +131,7 @@ export default async function ParcoursPage() {
 
       {/* 2 — Which path fits your situation? */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.chooser.title}
           </h2>
@@ -196,7 +196,7 @@ export default async function ParcoursPage() {
 
       {/* 5 — Sectors */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.sectors.title}
           </h2>
@@ -244,7 +244,7 @@ export default async function ParcoursPage() {
 
       {/* 6 — Understand before you invest */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.understand.title}
           </h2>
@@ -270,7 +270,7 @@ export default async function ParcoursPage() {
 
       {/* 7 — Final CTA */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-3xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.finalCta.title}
           </h2>
