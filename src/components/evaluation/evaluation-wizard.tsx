@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState, useTransition, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowRight, ArrowLeft, Check, ShieldCheck } from "lucide-react";
@@ -122,19 +123,21 @@ export function EvaluationWizard() {
     ) : null;
 
   const shell = (children: ReactNode, onBack?: () => void) => (
-    <div className="mx-auto w-full max-w-2xl">
-      {progressBar}
-      {onBack && (
-        <button
-          type="button"
-          onClick={onBack}
-          className="press mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-ink-muted transition-colors hover:text-brand-black"
-        >
-          <ArrowLeft size={16} aria-hidden="true" />
-          {t("back")}
-        </button>
-      )}
-      {children}
+    <div className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div className="mx-auto w-full max-w-2xl">
+        {progressBar}
+        {onBack && (
+          <button
+            type="button"
+            onClick={onBack}
+            className="press mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-ink-muted transition-colors hover:text-brand-black"
+          >
+            <ArrowLeft size={16} aria-hidden="true" />
+            {t("back")}
+          </button>
+        )}
+        {children}
+      </div>
     </div>
   );
 
@@ -166,38 +169,82 @@ export function EvaluationWizard() {
   // ---- Intro ---------------------------------------------------------------
 
   if (screen === 0) {
-    return shell(
-      <div className="text-center">
-        <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance sm:text-4xl">
-          {t("intro.title")}
-        </h1>
-        <p
-          className="animate-fade-up mx-auto mt-5 max-w-xl text-brand-ink-secondary leading-relaxed"
-          style={{ animationDelay: "80ms" }}
-        >
-          {t("intro.text")}
-        </p>
-        <p
-          className="animate-fade-up mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-brand-gold-text"
-          style={{ animationDelay: "140ms" }}
-        >
-          {t("intro.promise")}
-        </p>
-        <button
-          type="button"
-          onClick={() => go(1)}
-          style={{ animationDelay: "200ms" }}
-          className="press animate-fade-up mt-9 inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
-        >
-          {t("intro.cta")}
-          <ArrowRight size={18} aria-hidden="true" />
-        </button>
-        <p
-          className="animate-fade-up mt-5 text-xs text-brand-ink-muted"
-          style={{ animationDelay: "260ms" }}
-        >
-          {t("intro.reassurance")}
-        </p>
+    const promiseItems = t("intro.promise").split(" · ");
+    const imageAlt =
+      "Un CV posé sur un bureau à côté d'un ordinateur portable, prêt pour une évaluation de profil";
+    return (
+      <div>
+        {/* Hero — text left, photo bleeding in from the right, faded into the page */}
+        <section className="relative overflow-hidden bg-brand-white">
+          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
+            <Image
+              src="/images/evaluation-profil.jpg"
+              alt={imageAlt}
+              fill
+              priority
+              sizes="52vw"
+              className="object-cover"
+              style={{ objectPosition: "50% center" }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-white to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
+          </div>
+
+          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            {/* Mobile photo: above the text */}
+            <div className="relative -mx-4 aspect-[16/10] sm:-mx-6 lg:hidden">
+              <Image
+                src="/images/evaluation-profil.jpg"
+                alt={imageAlt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+                style={{ objectPosition: "50% center" }}
+              />
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
+            </div>
+
+            <div className="max-w-lg py-12 lg:flex lg:min-h-[440px] lg:flex-col lg:justify-center lg:py-16">
+              <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
+                {t("intro.title")}
+              </h1>
+              <p
+                className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed"
+                style={{ animationDelay: "80ms" }}
+              >
+                {t("intro.text")}
+              </p>
+              <div
+                className="animate-fade-up mt-7 flex flex-wrap gap-2.5"
+                style={{ animationDelay: "120ms" }}
+              >
+                {promiseItems.map((it) => (
+                  <span
+                    key={it}
+                    className="rounded-full border border-brand-gold/40 bg-brand-gold/[0.05] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-gold-text"
+                  >
+                    {it}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA + reassurance */}
+        <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
+          <button
+            type="button"
+            onClick={() => go(1)}
+            className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
+          >
+            {t("intro.cta")}
+            <ArrowRight size={18} aria-hidden="true" />
+          </button>
+          <p className="mt-5 text-xs text-brand-ink-muted">{t("intro.reassurance")}</p>
+        </div>
       </div>
     );
   }
