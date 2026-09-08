@@ -269,28 +269,28 @@ export default async function ParcoursPage() {
       </section>
 
       {/* 7 — Final CTA */}
-      <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-white text-balance leading-snug">
+      <section className="bg-brand-white">
+        <div className="mx-auto max-w-3xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.finalCta.title}
           </h2>
-          <p className="mt-4 text-brand-white/70 leading-relaxed">{content.finalCta.subline}</p>
+          <p className="mt-4 text-brand-ink-secondary leading-relaxed">{content.finalCta.subline}</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/evaluation"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-light transition-colors hover:bg-brand-gold hover:text-brand-black"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
             >
               {content.finalCta.primary}
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link
               href="/contact"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-white/30 px-8 font-bold text-brand-white transition-colors hover:border-brand-white hover:bg-brand-white/10"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-grid px-8 font-bold text-brand-black transition-colors hover:border-brand-gold hover:text-brand-gold-text"
             >
               {content.finalCta.secondary}
             </Link>
           </div>
-          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brand-white/45">
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brand-ink-muted">
             {content.finalCta.tags}
           </p>
         </div>
