@@ -6,21 +6,30 @@ import Image from "next/image";
 export function PageHero({
   title,
   subtitle,
+  kicker,
   image,
   imageAlt,
   imagePosition = "center 30%",
 }: {
   title: string;
   subtitle?: string;
+  kicker?: string;
   image?: string;
   imageAlt?: string;
   imagePosition?: string;
 }) {
+  const eyebrow = kicker ? (
+    <p className="animate-fade-up mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
+      {kicker}
+    </p>
+  ) : null;
+
   if (!image) {
     return (
       <section className="bg-brand-card">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-          <h1 className="animate-fade-up max-w-2xl font-serif text-3xl sm:text-4xl text-brand-black">
+          {eyebrow}
+          <h1 className="animate-fade-up max-w-2xl font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight">
             {title}
           </h1>
           {subtitle && (
@@ -70,7 +79,8 @@ export function PageHero({
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl py-12 lg:flex lg:min-h-[460px] lg:flex-col lg:justify-center lg:py-20">
-          <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl text-brand-black">
+          {eyebrow}
+          <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight">
             {title}
           </h1>
           {subtitle && (

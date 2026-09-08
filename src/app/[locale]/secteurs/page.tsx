@@ -31,6 +31,7 @@ export default async function SecteursPage() {
       />
 
       <PageHero
+        kicker={tr(SECTEURS_UI.hubKicker, locale)}
         title={tr(SECTEURS_UI.hubTitle, locale)}
         subtitle={tr(SECTEURS_UI.hubIntro, locale)}
         image="/images/secteurs-hero.jpg"

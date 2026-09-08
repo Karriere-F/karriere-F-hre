@@ -60,7 +60,8 @@ export const ACTIVE_SECTOR_PATH = {
 export const SECTEURS_UI = {
   home: { fr: "Accueil", de: "Startseite", en: "Home" },
   secteurs: { fr: "Secteurs", de: "Branchen", en: "Sectors" },
-  hubTitle: { fr: "Travailler ou se former en Allemagne", de: "In Deutschland arbeiten oder sich ausbilden", en: "Work or train in Germany" },
+  hubKicker: { fr: "Travailler ou se former", de: "Arbeiten oder sich ausbilden", en: "Work or train" },
+  hubTitle: { fr: "Votre métier a un avenir en Allemagne", de: "Ihr Beruf hat Zukunft in Deutschland", en: "Your profession has a future in Germany" },
   hubIntro: {
     fr: "Choisissez votre secteur, puis votre parcours : nous vous accompagnons de l'allemand jusqu'à votre poste et votre installation.",
     de: "Wählen Sie Ihre Branche und dann Ihren Weg: Wir begleiten Sie vom Deutsch bis zur Stelle und zur Ankunft.",
