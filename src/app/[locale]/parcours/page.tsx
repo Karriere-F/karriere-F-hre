@@ -33,12 +33,6 @@ export default async function ParcoursPage() {
     { key: "preparer" as const, href: "/candidats" as const, icon: Compass, data: content.cards.preparer },
   ];
 
-  const chooser = [
-    { href: "/ausbildung-allemagne" as const, q: content.chooser.apprendreQ, path: content.chooser.apprendrePath, text: content.chooser.apprendreText },
-    { href: "/travailler-en-allemagne" as const, q: content.chooser.qualifieQ, path: content.chooser.qualifiePath, text: content.chooser.qualifieText },
-    { href: "/evaluation" as const, q: content.chooser.incertainQ, path: content.chooser.incertainPath, text: content.chooser.incertainText },
-  ];
-
   const ways = [
     {
       icon: GraduationCap,
@@ -123,32 +117,6 @@ export default async function ParcoursPage() {
                     className="text-brand-gold-text transition-transform duration-300 group-hover:translate-x-1"
                   />
                 </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2 — Which path fits your situation? */}
-      <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
-            {content.chooser.title}
-          </h2>
-          <p className="mt-4 max-w-2xl text-brand-ink-secondary leading-relaxed">{content.chooser.intro}</p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-3">
-            {chooser.map((o) => (
-              <Link
-                key={o.href}
-                href={o.href}
-                className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 transition-colors hover:border-brand-gold"
-              >
-                <p className="font-serif text-lg text-brand-black">{o.q}</p>
-                <p className="mt-3 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-gold-text">
-                  <ArrowRight size={14} strokeWidth={2.5} aria-hidden="true" />
-                  {o.path}
-                </p>
-                <p className="mt-3 flex-1 text-sm text-brand-ink-secondary leading-relaxed">{o.text}</p>
               </Link>
             ))}
           </div>
