@@ -276,6 +276,46 @@ export const routing = defineRouting({
       de: "/berufe/hotel-gastronomie/[slug]",
       en: "/occupations/hospitality/[slug]",
     },
+    "/secteurs/commerce": {
+      fr: "/secteurs/commerce",
+      de: "/branchen/handel",
+      en: "/sectors/retail",
+    },
+    "/secteurs/commerce/ausbildung": {
+      fr: "/secteurs/commerce/ausbildung",
+      de: "/branchen/handel/ausbildung",
+      en: "/sectors/retail/ausbildung",
+    },
+    "/secteurs/commerce/diplome": {
+      fr: "/secteurs/commerce/diplome",
+      de: "/branchen/handel/diplom",
+      en: "/sectors/retail/qualified",
+    },
+    "/metiers/commerce/[slug]": {
+      fr: "/metiers/commerce/[slug]",
+      de: "/berufe/handel/[slug]",
+      en: "/occupations/retail/[slug]",
+    },
+    "/secteurs/agroalimentaire": {
+      fr: "/secteurs/agroalimentaire",
+      de: "/branchen/lebensmittel",
+      en: "/sectors/food",
+    },
+    "/secteurs/agroalimentaire/ausbildung": {
+      fr: "/secteurs/agroalimentaire/ausbildung",
+      de: "/branchen/lebensmittel/ausbildung",
+      en: "/sectors/food/ausbildung",
+    },
+    "/secteurs/agroalimentaire/diplome": {
+      fr: "/secteurs/agroalimentaire/diplome",
+      de: "/branchen/lebensmittel/diplom",
+      en: "/sectors/food/qualified",
+    },
+    "/metiers/agroalimentaire/[slug]": {
+      fr: "/metiers/agroalimentaire/[slug]",
+      de: "/berufe/lebensmittel/[slug]",
+      en: "/occupations/food/[slug]",
+    },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
     "/entreprises/partenariat": {
