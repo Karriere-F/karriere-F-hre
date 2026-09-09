@@ -7,7 +7,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
-import { SECTORS_ALL, ACTIVE_SECTOR_PATH, SECTOR_IMAGES } from "@/lib/secteurs";
+import { SECTORS_ALL, ACTIVE_SECTOR_PATH, SECTOR_IMAGES, SECTEURS_UI } from "@/lib/secteurs";
 import { tr } from "@/lib/localized";
 import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
@@ -301,7 +301,24 @@ export default async function TravaillerPage() {
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.sectorsTitle}</h2>
           <p className="mt-3 text-sm text-brand-ink-muted">{h.sectorsNote}</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SECTORS_ALL.filter((sector) => sector.active).map((sector) => {
+            {SECTORS_ALL.map((sector) => {
+              if (!sector.active) {
+                const Icon = sector.icon;
+                return (
+                  <div
+                    key={sector.slug}
+                    className="flex min-h-[16rem] flex-col items-center justify-center rounded-2xl border border-dashed border-brand-grid bg-brand-card/40 p-6 text-center"
+                  >
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-black/[0.04] text-brand-ink-muted">
+                      <Icon size={22} strokeWidth={2} aria-hidden="true" />
+                    </span>
+                    <h3 className="mt-4 font-serif text-lg text-brand-ink-secondary">{tr(sector.name, locale)}</h3>
+                    <span className="mt-4 inline-flex items-center rounded-full bg-brand-black/[0.05] px-3 py-1 text-xs font-medium text-brand-ink-muted">
+                      {tr(SECTEURS_UI.comingSoon, locale)}
+                    </span>
+                  </div>
+                );
+              }
               const href = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
               return (
                 <Link
