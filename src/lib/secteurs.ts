@@ -19,8 +19,8 @@ const CONSTRUCTION: Sector = { slug: "construction", name: { fr: "Construction /
 const LOGISTIQUE: Sector = { slug: "logistique", name: { fr: "Logistique & Transport", de: "Logistik & Transport", en: "Logistics & Transport" }, icon: Truck, active: true };
 const HOTELLERIE: Sector = { slug: "hotellerie", name: { fr: "Hôtellerie-Restauration", de: "Hotel & Gastronomie", en: "Hospitality" }, icon: UtensilsCrossed, active: true };
 const INGENIERIE: Sector = { slug: "ingenierie", name: { fr: "Ingénierie", de: "Ingenieurwesen", en: "Engineering" }, icon: Wrench, active: true };
-const COMMERCE: Sector = { slug: "commerce", name: { fr: "Commerce & Vente", de: "Handel & Verkauf", en: "Retail & Sales" }, icon: Store, active: false };
-const AGROALIMENTAIRE: Sector = { slug: "agroalimentaire", name: { fr: "Agroalimentaire", de: "Lebensmittel & Landwirtschaft", en: "Food & Agriculture" }, icon: Wheat, active: false };
+const COMMERCE: Sector = { slug: "commerce", name: { fr: "Commerce & Vente", de: "Handel & Verkauf", en: "Retail & Sales" }, icon: Store, active: true };
+const AGROALIMENTAIRE: Sector = { slug: "agroalimentaire", name: { fr: "Agroalimentaire", de: "Lebensmittel & Landwirtschaft", en: "Food & Agriculture" }, icon: Wheat, active: true };
 
 // Sector-first navigation: one list of sectors; the route (Ausbildung / already
 // qualified) is chosen inside each sector.
@@ -59,6 +59,8 @@ export const ACTIVE_SECTOR_PATH = {
   logistique: "/secteurs/logistique",
   ingenierie: "/secteurs/ingenierie",
   hotellerie: "/secteurs/hotellerie",
+  commerce: "/secteurs/commerce",
+  agroalimentaire: "/secteurs/agroalimentaire",
 } as const;
 
 export const SECTEURS_UI = {

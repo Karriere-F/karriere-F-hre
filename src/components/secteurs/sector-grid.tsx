@@ -14,6 +14,37 @@ export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Loc
         const href = ACTIVE_SECTOR_PATH[s.slug as keyof typeof ACTIVE_SECTOR_PATH];
 
         if (s.active && href) {
+          const image = SECTOR_IMAGES[s.slug];
+
+          // Active sector without a photo yet: a branded, clickable card
+          // (icon + name + Choisir). It upgrades to the photo card below the
+          // moment a SECTOR_IMAGES entry is added.
+          if (!image) {
+            return (
+              <Link
+                key={s.slug}
+                href={href}
+                className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-brand-black/10 bg-brand-black p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_16px_34px_-16px_rgba(17,17,17,0.4)]"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold-light">
+                  <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
+                </span>
+                <div className="mt-auto pt-6">
+                  <h3 className="font-serif text-xl text-brand-white">{name}</h3>
+                  <span className="mt-2.5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-gold-light">
+                    {tr(SECTEURS_UI.choose, locale)}
+                    <ArrowRight
+                      size={15}
+                      strokeWidth={2}
+                      aria-hidden="true"
+                      className="transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </span>
+                </div>
+              </Link>
+            );
+          }
+
           return (
             <Link
               key={s.slug}
@@ -21,7 +52,7 @@ export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Loc
               className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-brand-grid transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_16px_34px_-16px_rgba(17,17,17,0.4)]"
             >
               <Image
-                src={SECTOR_IMAGES[s.slug]}
+                src={image}
                 alt={name}
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

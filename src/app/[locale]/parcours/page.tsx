@@ -190,29 +190,45 @@ export default async function ParcoursPage() {
               }
               const item = content.sectors.items[sector.slug as keyof typeof content.sectors.items];
               const href = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
+              const image = SECTOR_IMAGES[sector.slug];
+              const Icon = sector.icon;
               return (
                 <div
                   key={sector.slug}
                   style={{ animationDelay: `${Math.min(i, 6) * 60}ms` }}
                   className="animate-fade-up flex flex-col overflow-hidden rounded-2xl border border-brand-grid bg-brand-white"
                 >
-                  <div className="relative aspect-[16/10]">
-                    <Image
-                      src={SECTOR_IMAGES[sector.slug]}
-                      alt={tr(sector.name, locale)}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      style={{ objectPosition: "center 18%" }}
-                      className="object-cover"
-                    />
-                  </div>
+                  {image ? (
+                    <div className="relative aspect-[16/10]">
+                      <Image
+                        src={image}
+                        alt={tr(sector.name, locale)}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        style={{ objectPosition: "center 18%" }}
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex aspect-[16/10] items-center justify-center bg-brand-black">
+                      <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gold/15 text-brand-gold-light">
+                        <Icon size={28} strokeWidth={1.75} aria-hidden="true" />
+                      </span>
+                    </div>
+                  )}
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="font-serif text-xl text-brand-black">{tr(sector.name, locale)}</h3>
-                    <p className="mt-2 text-sm text-brand-ink-secondary leading-relaxed">{item.blurb}</p>
-                    <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-brand-ink-muted">
-                      {content.sectors.metiersLabel}
-                    </p>
-                    <p className="mt-1 text-sm text-brand-ink-secondary">{item.metiers}</p>
+                    {item?.blurb && (
+                      <p className="mt-2 text-sm text-brand-ink-secondary leading-relaxed">{item.blurb}</p>
+                    )}
+                    {item?.metiers && (
+                      <>
+                        <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-brand-ink-muted">
+                          {content.sectors.metiersLabel}
+                        </p>
+                        <p className="mt-1 text-sm text-brand-ink-secondary">{item.metiers}</p>
+                      </>
+                    )}
                     <Link
                       href={href}
                       className="press mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-brand-black hover:text-brand-gold-text"

@@ -320,22 +320,32 @@ export default async function TravaillerPage() {
                 );
               }
               const href = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
+              const image = SECTOR_IMAGES[sector.slug];
+              const Icon = sector.icon;
               return (
                 <Link
                   key={sector.slug}
                   href={href}
                   className="group flex flex-col overflow-hidden rounded-2xl border border-brand-grid bg-brand-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_12px_28px_-14px_rgba(17,17,17,0.25)]"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={SECTOR_IMAGES[sector.slug]}
-                      alt={tr(sector.name, locale)}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      style={{ objectPosition: "center 18%" }}
-                      className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
-                    />
-                  </div>
+                  {image ? (
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={image}
+                        alt={tr(sector.name, locale)}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        style={{ objectPosition: "center 18%" }}
+                        className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex aspect-[16/10] items-center justify-center bg-brand-black">
+                      <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gold/15 text-brand-gold-light">
+                        <Icon size={28} strokeWidth={1.75} aria-hidden="true" />
+                      </span>
+                    </div>
+                  )}
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="font-serif text-lg text-brand-black">{tr(sector.name, locale)}</h3>
                     <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-gold-text">
