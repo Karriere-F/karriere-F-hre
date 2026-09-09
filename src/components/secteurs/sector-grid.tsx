@@ -52,7 +52,7 @@ export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Loc
           <div
             key={s.slug}
             aria-disabled="true"
-            className="flex aspect-[4/5] flex-col justify-end rounded-2xl border border-dashed border-brand-grid bg-brand-card/40 p-6"
+            className="flex aspect-[4/5] flex-col items-center justify-center rounded-2xl border border-dashed border-brand-grid bg-brand-card/40 p-6 text-center"
           >
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-black/[0.04] text-brand-ink-muted">
               <Icon size={22} strokeWidth={2} aria-hidden="true" />

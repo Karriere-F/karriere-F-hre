@@ -2,7 +2,7 @@
 // sector, then a profession. Only "Santé" is populated for now; the other
 // sectors show as "Bientôt disponible" until their content is built.
 
-import { Cog, Cpu, HardHat, HeartPulse, Truck, UtensilsCrossed, Wrench, type LucideIcon } from "lucide-react";
+import { Cog, Cpu, HardHat, HeartPulse, Store, Truck, UtensilsCrossed, Wheat, Wrench, type LucideIcon } from "lucide-react";
 import type { LocalizedText } from "./localized";
 
 export type Sector = {
@@ -19,6 +19,8 @@ const CONSTRUCTION: Sector = { slug: "construction", name: { fr: "Construction /
 const LOGISTIQUE: Sector = { slug: "logistique", name: { fr: "Logistique & Transport", de: "Logistik & Transport", en: "Logistics & Transport" }, icon: Truck, active: true };
 const HOTELLERIE: Sector = { slug: "hotellerie", name: { fr: "Hôtellerie-Restauration", de: "Hotel & Gastronomie", en: "Hospitality" }, icon: UtensilsCrossed, active: true };
 const INGENIERIE: Sector = { slug: "ingenierie", name: { fr: "Ingénierie", de: "Ingenieurwesen", en: "Engineering" }, icon: Wrench, active: true };
+const COMMERCE: Sector = { slug: "commerce", name: { fr: "Commerce & Vente", de: "Handel & Verkauf", en: "Retail & Sales" }, icon: Store, active: false };
+const AGROALIMENTAIRE: Sector = { slug: "agroalimentaire", name: { fr: "Agroalimentaire", de: "Lebensmittel & Landwirtschaft", en: "Food & Agriculture" }, icon: Wheat, active: false };
 
 // Sector-first navigation: one list of sectors; the route (Ausbildung / already
 // qualified) is chosen inside each sector.
@@ -30,6 +32,8 @@ export const SECTORS_ALL: Sector[] = [
   LOGISTIQUE,
   INGENIERIE,
   HOTELLERIE,
+  COMMERCE,
+  AGROALIMENTAIRE,
 ];
 
 // Real photo per sector (reused from the home occupations grid), shown on the

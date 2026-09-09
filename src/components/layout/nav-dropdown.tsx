@@ -76,7 +76,7 @@ export function NavDropdown({
                 {section.items && (
                   <ul role="menu" className="mt-1.5 flex flex-col gap-0.5">
                     {section.items.map((item) => (
-                      <li key={item.href} role="none">
+                      <li key={item.label} role="none">
                         <a
                           href={item.href}
                           onClick={close}

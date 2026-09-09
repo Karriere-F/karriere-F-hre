@@ -169,7 +169,7 @@ export default async function ParcoursPage() {
             {content.sectors.title}
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SECTORS_ALL.map((sector, i) => {
+            {SECTORS_ALL.filter((sector) => sector.active).map((sector, i) => {
               const item = content.sectors.items[sector.slug as keyof typeof content.sectors.items];
               const href = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
               return (

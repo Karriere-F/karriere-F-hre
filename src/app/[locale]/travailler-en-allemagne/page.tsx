@@ -301,7 +301,7 @@ export default async function TravaillerPage() {
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.sectorsTitle}</h2>
           <p className="mt-3 text-sm text-brand-ink-muted">{h.sectorsNote}</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SECTORS_ALL.map((sector) => {
+            {SECTORS_ALL.filter((sector) => sector.active).map((sector) => {
               const href = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
               return (
                 <Link

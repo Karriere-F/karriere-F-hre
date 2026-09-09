@@ -107,7 +107,7 @@ export function MobileNav({
                 <div className="ml-4 flex flex-col border-l border-brand-grid pl-3">
                   {link.items.map((sub) => (
                     <a
-                      key={sub.href}
+                      key={sub.label}
                       href={sub.href}
                       onClick={() => setOpen(false)}
                       className="rounded px-2 py-2 text-sm text-brand-ink-muted hover:text-brand-gold-text hover:bg-brand-card transition-colors"
