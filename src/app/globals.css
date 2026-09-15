@@ -94,13 +94,20 @@ h3,
 h4 {
   text-wrap: balance;
 }
-p,
 li,
 dd,
 dt,
 blockquote,
 figcaption {
   text-wrap: pretty;
+}
+/* Body paragraphs read as clean justified blocks: both edges aligned, the last
+   line left as-is (never stretched), and words never hyphen-split — a whole word
+   moves to the next line instead. A component can opt out with `text-left`. */
+p {
+  text-align: justify;
+  text-wrap: pretty;
+  hyphens: none;
 }
 
 /* ---- Motion system ---- */
