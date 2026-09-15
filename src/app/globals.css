@@ -80,6 +80,27 @@ body {
   /* Match the raised --text-base so un-utility'd text isn't left at the old 16px. */
   font-size: 1.125rem;
   line-height: 1.65;
+  /* Long words (German compounds, emails, URLs) never spill out of their box. */
+  overflow-wrap: break-word;
+}
+
+/* ---- Text wrapping, site-wide ---- */
+/* Headings balance across lines (no short-orphan first/last line); body copy
+   avoids single-word last lines. Tailwind's text-balance / text-pretty / text-nowrap
+   utilities still win where a specific element sets them. */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+p,
+li,
+dd,
+dt,
+blockquote,
+figcaption {
+  text-wrap: pretty;
 }
 
 /* ---- Motion system ---- */
