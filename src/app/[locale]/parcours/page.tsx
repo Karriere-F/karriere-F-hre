@@ -60,6 +60,7 @@ export default async function ParcoursPage() {
   const locale = (await getLocale()) as Locale;
 
   const heroLines = balancedLines(content.hero.title, 2);
+  const heroSubLines = balancedLines(content.hero.subtitle, 3);
 
   const cards = [
     { key: "seFormer" as const, href: "/ausbildung-allemagne" as const, icon: GraduationCap, data: content.cards.seFormer },
@@ -117,10 +118,14 @@ export default async function ParcoursPage() {
                 ))}
               </h1>
               <p
-                className="animate-fade-up mt-6 max-w-lg text-lg text-brand-ink-secondary leading-relaxed"
+                className="animate-fade-up mt-6 max-w-xl text-lg text-brand-ink-secondary leading-relaxed"
                 style={{ animationDelay: "80ms" }}
               >
-                {content.hero.subtitle}
+                {heroSubLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </p>
             </div>
           </div>
