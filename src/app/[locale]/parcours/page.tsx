@@ -21,11 +21,45 @@ import type frMessages from "@messages/fr.json";
 
 type Content = typeof frMessages.parcours;
 
+// Split a title into `n` balanced lines (roughly equal character length) so the
+// hero heading never wraps into a short-orphan + long-line mix in the narrow
+// desktop column. Returns the whole string as one line when it is too short.
+function balancedLines(text: string, n: number): string[] {
+  const words = text.split(" ");
+  if (words.length < n) return [text];
+  const cum: number[] = [];
+  let a = 0;
+  for (const w of words) {
+    a += w.length + 1;
+    cum.push(a);
+  }
+  const total = text.length;
+  const breaks: number[] = [];
+  for (let k = 1; k < n; k++) {
+    const target = (total * k) / n;
+    const from = (breaks[breaks.length - 1] ?? 0) + 1;
+    let best = from;
+    let bestDiff = Infinity;
+    for (let i = from; i < words.length; i++) {
+      const diff = Math.abs(cum[i - 1] - target);
+      if (diff < bestDiff) {
+        bestDiff = diff;
+        best = i;
+      }
+    }
+    breaks.push(best);
+  }
+  const idx = [0, ...breaks, words.length];
+  return Array.from({ length: n }, (_, k) => words.slice(idx[k], idx[k + 1]).join(" "));
+}
+
 export const generateMetadata = () => metadataFromNamespace("parcours", "/parcours");
 
 export default async function ParcoursPage() {
   const content = await getPageContent<Content>("parcours");
   const locale = (await getLocale()) as Locale;
+
+  const heroLines = balancedLines(content.hero.title, 2);
 
   const cards = [
     { key: "seFormer" as const, href: "/ausbildung-allemagne" as const, icon: GraduationCap, data: content.cards.seFormer },
@@ -74,9 +108,13 @@ export default async function ParcoursPage() {
           </div>
 
           <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-xl py-14 lg:flex lg:min-h-[520px] lg:flex-col lg:justify-center lg:py-20">
-              <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black text-balance leading-tight">
-                {content.hero.title}
+            <div className="max-w-2xl py-14 lg:flex lg:min-h-[520px] lg:flex-col lg:justify-center lg:py-20">
+              <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.5rem] text-brand-black leading-tight">
+                {heroLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </h1>
               <p
                 className="animate-fade-up mt-6 max-w-lg text-lg text-brand-ink-secondary leading-relaxed"
