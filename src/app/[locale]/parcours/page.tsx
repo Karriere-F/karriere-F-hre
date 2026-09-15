@@ -117,7 +117,7 @@ export default async function ParcoursPage() {
                 ))}
               </h1>
               <p
-                className="animate-fade-up mt-6 max-w-xl text-lg text-brand-ink-secondary leading-relaxed text-justify [text-wrap:normal] hyphens-auto"
+                className="animate-fade-up mt-6 max-w-xl text-lg text-brand-ink-secondary leading-relaxed text-justify [text-align-last:justify] [text-wrap:normal] hyphens-auto"
                 lang="fr"
                 style={{ animationDelay: "80ms" }}
               >
