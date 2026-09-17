@@ -279,10 +279,10 @@ export default async function HomePage() {
             <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
               {content.metiersTitle}
             </h2>
-            <p className="mt-4 text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">
+            <p className="mt-4 text-brand-ink-secondary leading-relaxed">
               {content.metiersLead}
             </p>
-            <p className="mt-4 font-semibold text-brand-black leading-relaxed text-justify [hyphens:none]">
+            <p className="mt-4 font-semibold text-brand-black leading-relaxed">
               {content.metiersLead2}
             </p>
           </div>

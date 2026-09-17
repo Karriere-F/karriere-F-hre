@@ -101,11 +101,11 @@ blockquote,
 figcaption {
   text-wrap: pretty;
 }
-/* Body paragraphs read as clean justified blocks: both edges aligned, the last
-   line left as-is (never stretched), and words never hyphen-split — a whole word
-   moves to the next line instead. A component can opt out with `text-left`. */
+/* Body paragraphs: left-aligned so word spacing stays natural (justification is
+   avoided — it stretches the gaps between words). Lines are still well shared
+   (pretty), and words are never hyphen-split — a whole word moves to the next
+   line instead. */
 p {
-  text-align: justify;
   text-wrap: pretty;
   hyphens: none;
 }
