@@ -76,7 +76,7 @@ export default async function AusbildungHubPage() {
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl py-14 lg:flex lg:min-h-[540px] lg:max-w-3xl lg:flex-col lg:justify-center lg:py-20">
             <h1 className="animate-fade-up font-serif text-4xl sm:text-5xl text-brand-black leading-[1.08]">
               {h.heroTitle.split(/(?<=\.)\s+/).map((line) => (
@@ -112,7 +112,7 @@ export default async function AusbildungHubPage() {
 
       {/* 01 — Choose a trade */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl border-t border-brand-grid px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <NumHead num={h.s1Num} kicker={h.s1Kicker} title={h.s1Title} />
           <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{h.s1Text}</p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -215,7 +215,7 @@ export default async function AusbildungHubPage() {
 
       {/* 06 — After the Ausbildung */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <h2 className="max-w-3xl font-serif text-2xl sm:text-3xl text-brand-white text-balance leading-snug">
             {h.s6Title}
           </h2>

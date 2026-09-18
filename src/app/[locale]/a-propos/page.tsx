@@ -62,7 +62,7 @@ export default async function AProposPage() {
       <FaqJsonLd items={faqItems} />
 
       <PageHero title={content.title} subtitle={content.intro} />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="animate-fade-up mb-16">
           <h2 className="text-xl font-serif text-brand-black mb-3">{content.missionTitle}</h2>
           <p className="text-brand-ink-secondary leading-relaxed max-w-2xl">
@@ -97,7 +97,7 @@ export default async function AProposPage() {
       </div>
 
       <div className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-xl font-serif text-brand-black mb-6">{content.valuesTitle}</h2>
           <ul className="grid gap-4 sm:grid-cols-3">
             {[content.value1, content.value2, content.value3].map((v, i) => (
@@ -140,7 +140,7 @@ export default async function AProposPage() {
 
       {/* Éthique */}
       <section id="ethique" className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <p className="text-xs uppercase tracking-widest text-brand-gold-text font-semibold mb-2">
             {content.ethiqueEyebrow}
           </p>
@@ -204,7 +204,7 @@ export default async function AProposPage() {
 
       {/* Two doors */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif max-w-xl">{content.doorsTitle}</h2>
           <p className="text-brand-white/80 max-w-lg">{content.doorsText}</p>
           <div className="flex flex-wrap justify-center gap-4">

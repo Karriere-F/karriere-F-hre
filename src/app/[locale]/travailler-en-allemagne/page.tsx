@@ -111,7 +111,7 @@ export default async function TravaillerPage() {
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl py-14 lg:flex lg:min-h-[540px] lg:flex-col lg:justify-center lg:py-20">
             <p className="animate-fade-up text-sm font-semibold uppercase tracking-[0.16em] text-brand-gold-text">
               {heroKicker}
@@ -297,7 +297,7 @@ export default async function TravaillerPage() {
 
       {/* Sectors */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.sectorsTitle}</h2>
           <p className="mt-3 text-sm text-brand-ink-muted">{h.sectorsNote}</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

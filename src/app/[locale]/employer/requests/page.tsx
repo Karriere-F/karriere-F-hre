@@ -15,7 +15,7 @@ export default async function EmployerRequestsPage() {
     .order("created_at", { ascending: false });
 
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-serif text-brand-black">{t("title")}</h1>
         <Link

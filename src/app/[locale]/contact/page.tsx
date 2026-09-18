@@ -17,7 +17,7 @@ export default async function ContactPage() {
   return (
     <div>
       <PageHero title={content.title} subtitle={content.subtitle} />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 grid gap-12 sm:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-12 sm:grid-cols-2">
         <ContactForm />
         <div>
           <h2 className="text-brand-gold-text font-semibold text-sm mb-2">{t("whatsapp")}</h2>

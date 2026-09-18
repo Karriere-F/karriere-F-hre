@@ -101,7 +101,7 @@ export default async function FullTrainingPage() {
 
       {/* Notre différence */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
             {content.metierEyebrow}
           </p>

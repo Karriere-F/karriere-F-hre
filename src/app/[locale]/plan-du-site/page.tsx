@@ -102,7 +102,7 @@ export default async function PlanDuSitePage() {
       <PageHero title={content.title} subtitle={content.subtitle} />
 
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <a
             href={getPathname({ href: "/", locale })}
             className="lift-on-hover animate-fade-up mb-4 flex items-center gap-3 rounded-xl bg-brand-black px-6 py-5 text-brand-gold-light"

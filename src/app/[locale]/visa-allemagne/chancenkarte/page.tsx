@@ -161,7 +161,7 @@ export default async function ChancenkartePage() {
 
       {/* CTA final */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif max-w-xl">{content.finalTitle}</h2>
           <p className="text-brand-white/80 max-w-lg">{content.finalText}</p>
           <Link

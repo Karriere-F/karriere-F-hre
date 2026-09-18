@@ -192,7 +192,7 @@ export default async function HomePage() {
 
       {/* Two audience doors */}
       <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div
             id="portes"
             className="animate-fade-up scroll-mt-28 grid gap-4 sm:gap-5 sm:grid-cols-2"
@@ -274,7 +274,7 @@ export default async function HomePage() {
 
       {/* Section 2 — Métiers qui recrutent : real photo per profession */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div>
             <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
               {content.metiersTitle}
@@ -322,7 +322,7 @@ export default async function HomePage() {
 
       {/* Section 3 — Pourquoi Karriere Fähre : méthode, promotion, équipe */}
       <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           {/* Une méthode claire — three photographed steps with a real flow */}
           <div>
             <h2 className="font-serif text-2xl sm:text-3xl text-brand-black leading-tight text-balance">
@@ -450,7 +450,7 @@ export default async function HomePage() {
 
       {/* The founder as the human bridge — dual German-Cameroonian, the trust anchor */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid gap-10 lg:grid-cols-12 items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid gap-10 lg:grid-cols-12 items-center">
           <div className="animate-fade-up lg:col-span-5">
             <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl">
               <Image
@@ -482,7 +482,7 @@ export default async function HomePage() {
 
       {/* Notre accompagnement — a real, ordered sequence, so the numbers are earned */}
       <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl">
             <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance">
               {content.processTitle}
@@ -536,7 +536,7 @@ export default async function HomePage() {
           className="object-cover object-center opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/85 to-brand-black/75" />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 flex flex-col items-center text-center gap-5">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 flex flex-col items-center text-center gap-5">
           <h2 className="font-serif text-2xl sm:text-3xl max-w-xl text-balance">
             {content.finalCtaTitle}
           </h2>

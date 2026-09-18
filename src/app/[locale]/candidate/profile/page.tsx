@@ -15,7 +15,7 @@ export default async function CandidateProfilePage() {
     .single();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-2xl font-serif text-brand-black mb-6">{t("title")}</h1>
       <ProfileForm
         defaultValues={{

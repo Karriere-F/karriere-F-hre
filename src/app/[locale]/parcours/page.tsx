@@ -107,7 +107,7 @@ export default async function ParcoursPage() {
             <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
           </div>
 
-          <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl py-14 lg:flex lg:min-h-[520px] lg:flex-col lg:justify-center lg:py-20">
               <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.5rem] text-brand-black leading-tight">
                 {heroLines.map((line) => (
@@ -126,7 +126,7 @@ export default async function ParcoursPage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
           <div className="grid gap-5 sm:grid-cols-3">
             {cards.map(({ key, href, icon: Icon, data }, i) => (
               <Link
@@ -202,7 +202,7 @@ export default async function ParcoursPage() {
 
       {/* 5 — Sectors */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
             {content.sectors.title}
           </h2>

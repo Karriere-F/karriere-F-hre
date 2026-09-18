@@ -27,7 +27,7 @@ export function PageHero({
   if (!image) {
     return (
       <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           {eyebrow}
           <h1 className="animate-fade-up max-w-2xl font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight">
             {title}
@@ -77,7 +77,7 @@ export function PageHero({
         <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-card to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl py-12 lg:flex lg:min-h-[460px] lg:flex-col lg:justify-center lg:py-20">
           {eyebrow}
           <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight">

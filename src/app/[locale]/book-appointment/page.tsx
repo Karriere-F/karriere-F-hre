@@ -11,7 +11,7 @@ export default async function BookAppointmentPage() {
   return (
     <div>
       <PageHero title={t("title")} subtitle={t("subtitle")} />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <BookingForm />
       </div>
     </div>

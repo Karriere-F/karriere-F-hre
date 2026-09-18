@@ -61,7 +61,7 @@ export function PartirAfriqueArticle({
 
       {/* Cas particulier : le Cameroun */}
       <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="rounded-2xl border-l-4 border-brand-gold bg-brand-gold/10 p-6 sm:p-8 max-w-3xl">
             <h2 className="text-2xl sm:text-3xl font-serif text-brand-black mb-3">{content.camTitle}</h2>
             <p className="text-brand-ink-secondary mb-4 font-medium">{content.camIntro}</p>
@@ -89,7 +89,7 @@ export function PartirAfriqueArticle({
 
       {/* CTA final */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif max-w-xl">{content.finalTitle}</h2>
           <p className="text-brand-white/80 max-w-lg">{content.finalText}</p>
           <Link

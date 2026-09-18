@@ -104,7 +104,7 @@ export async function SiteHeader() {
 
   return (
     <HeaderShell>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Logo on the left, navigation on the right. No solid CTA in the bar:
             the gold stays a rare accent, which reads more premium. On mobile the
             nav collapses into the drawer. */}

@@ -66,7 +66,7 @@ export default async function VisaPage() {
 
       <PageHero title={content.title} subtitle={content.subtitle} />
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
           <a
             href="#visas"
@@ -146,7 +146,7 @@ export default async function VisaPage() {
 
       {/* Délais */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
             {content.delaisEyebrow}
           </p>
@@ -157,7 +157,7 @@ export default async function VisaPage() {
 
       {/* CTA final */}
       <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif text-brand-black max-w-xl">
             {content.finalTitle}
           </h2>

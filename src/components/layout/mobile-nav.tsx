@@ -70,7 +70,7 @@ export function MobileNav({
             : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
       >
-        <nav className="mx-auto w-full max-w-6xl flex flex-col px-4 sm:px-6 lg:px-8 py-4 gap-1">
+        <nav className="mx-auto w-full max-w-7xl flex flex-col px-4 sm:px-6 lg:px-8 py-4 gap-1">
           <div
             className="flex rounded-full border border-brand-grid bg-brand-card p-0.5 mb-2"
             role="tablist"

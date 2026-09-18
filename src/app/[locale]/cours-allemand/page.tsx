@@ -36,7 +36,7 @@ export default async function CoursAllemandHubPage() {
 
       <PageHero title={content.title} subtitle={content.subtitle} />
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
           <Link
             href="/candidate/signup"
@@ -88,7 +88,7 @@ export default async function CoursAllemandHubPage() {
 
       {/* Teaser du test -> page quiz dédiée */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div className="max-w-xl">
             <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
               {content.quizEyebrow}
@@ -130,7 +130,7 @@ export default async function CoursAllemandHubPage() {
 
       {/* CTA final */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif max-w-xl">{content.finalTitle}</h2>
           <p className="text-brand-white/80 max-w-lg">{content.finalText}</p>
           <Link

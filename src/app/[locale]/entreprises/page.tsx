@@ -83,7 +83,7 @@ export default async function EntreprisesPage() {
       <FaqJsonLd items={faqItems} />
 
       <PageHero title={content.title} subtitle={content.subtitle} image="/images/services-companies.jpg" />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
           <a
             href="#contact"
@@ -102,7 +102,7 @@ export default async function EntreprisesPage() {
 
       {/* Key facts */}
       <div className="bg-brand-black border-y border-brand-gold/25">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/10">
           {keyFacts.map((f) => (
             <div key={f.label} className="px-4 py-6 text-center">
               <div className="font-serif text-2xl text-brand-gold-light">{f.big}</div>
@@ -114,7 +114,7 @@ export default async function EntreprisesPage() {
 
       {/* Problème */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 lg:grid-cols-2 items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 lg:grid-cols-2 items-center">
           <div>
             <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
               {content.probEyebrow}
@@ -290,7 +290,7 @@ export default async function EntreprisesPage() {
 
       {/* Pourquoi Afrique centrale */}
       <section id="pourquoi-afrique" className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
             {content.pourquoiAfriqueEyebrow}
           </p>
@@ -492,7 +492,7 @@ export default async function EntreprisesPage() {
 
       {/* Contact / Demande */}
       <section id="contact" className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold">
             {content.contactEyebrow}
           </p>

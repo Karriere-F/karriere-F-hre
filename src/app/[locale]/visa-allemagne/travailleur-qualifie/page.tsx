@@ -43,7 +43,7 @@ export default async function VisaTravailleurPage() {
 
       <PageHero title={content.title} subtitle={content.subtitle} />
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
         <div className="flex flex-wrap gap-4">
           <Link
             href="/postuler"
@@ -97,7 +97,7 @@ export default async function VisaTravailleurPage() {
 
       {/* Procédure accélérée */}
       <section className="bg-brand-black text-brand-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <p className="text-xs uppercase tracking-widest text-brand-gold-light font-semibold mb-2">
             {content.accelEyebrow}
           </p>
@@ -124,7 +124,7 @@ export default async function VisaTravailleurPage() {
 
       {/* CTA final -> Chancenkarte pour ceux sans offre */}
       <section className="bg-brand-card">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center text-center gap-5">
           <h2 className="text-2xl sm:text-3xl font-serif text-brand-black max-w-xl">{content.finalTitle}</h2>
           <p className="text-brand-ink-secondary max-w-lg">{content.finalText}</p>
           <Link
