@@ -196,7 +196,7 @@ export function AusbildungEvaluator() {
               <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
                 {t("intro.title")}
               </h1>
-              <p className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
+              <p className="animate-fade-up mt-6 text-lg text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
                 {t("intro.text")}
               </p>
               <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5 sm:flex-nowrap" style={{ animationDelay: "120ms" }}>
