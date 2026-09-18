@@ -146,10 +146,10 @@ export default async function HomePage() {
               ))}
             </p>
             <p
-              className="animate-fade-up mt-6 max-w-xl text-brand-ink-secondary leading-relaxed whitespace-normal sm:whitespace-pre-line"
+              className="animate-fade-up mt-6 max-w-xl text-brand-ink-secondary leading-relaxed [white-space:normal]"
               style={{ animationDelay: "140ms" }}
             >
-              {content.heroSubtitle}
+              {content.heroSubtitle.replace(/\n/g, " ")}
             </p>
             <div
               className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
