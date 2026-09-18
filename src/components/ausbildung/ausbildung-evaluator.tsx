@@ -165,15 +165,6 @@ export function AusbildungEvaluator() {
     const splitAt = introTitle.indexOf(" à votre");
     const titleLines =
       splitAt > 0 ? [introTitle.slice(0, splitAt), introTitle.slice(splitAt + 1)] : [introTitle];
-    // Force the intro paragraph onto three lines at chosen word boundaries.
-    const introText = t("intro.text");
-    const breakAfter = (s: string, marker: string) => {
-      const i = s.indexOf(marker);
-      return i < 0 ? [s, ""] : [s.slice(0, i + marker.length).trim(), s.slice(i + marker.length).trim()];
-    };
-    const [textLine1, restText] = breakAfter(introText, "scolaire,");
-    const [textLine2, textLine3] = breakAfter(restText, "votre projet");
-    const textLines = textLine3 ? [textLine1, textLine2, textLine3] : [introText];
     return (
       <div>
         {/* Hero — text left, photo bleeding in from the right, faded into the page */}
@@ -214,12 +205,8 @@ export function AusbildungEvaluator() {
                   </span>
                 ))}
               </h1>
-              <p className="animate-fade-up mt-6 text-lg text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
-                {textLines.map((line) => (
-                  <span key={line} className="block lg:whitespace-nowrap">
-                    {line}
-                  </span>
-                ))}
+              <p className="animate-fade-up mt-6 text-sm text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
+                {t("intro.text")}
               </p>
               <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5 sm:flex-nowrap" style={{ animationDelay: "120ms" }}>
                 {promiseItems.map((it) => (
