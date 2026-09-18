@@ -160,6 +160,11 @@ export function AusbildungEvaluator() {
   if (screen === 0) {
     const dims = t.raw("intro.dimensions") as { label: string; text: string }[];
     const promiseItems = t("intro.promise").split(" · ");
+    // Force the title onto two lines: "...correspond" / "à votre profil ?".
+    const introTitle = t("intro.title");
+    const splitAt = introTitle.indexOf(" à votre");
+    const titleLines =
+      splitAt > 0 ? [introTitle.slice(0, splitAt), introTitle.slice(splitAt + 1)] : [introTitle];
     return (
       <div>
         {/* Hero — text left, photo bleeding in from the right, faded into the page */}
@@ -193,8 +198,12 @@ export function AusbildungEvaluator() {
             </div>
 
             <div className="max-w-xl py-12 lg:flex lg:min-h-[420px] lg:flex-col lg:justify-center lg:py-16">
-              <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
-                {t("intro.title")}
+              <h1 className="animate-fade-up font-serif text-3xl text-brand-black leading-[1.12] sm:text-4xl">
+                {titleLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </h1>
               <p className="animate-fade-up mt-6 text-lg text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
                 {t("intro.text")}
