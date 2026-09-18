@@ -159,6 +159,7 @@ export function AusbildungEvaluator() {
   // ---- Intro ----
   if (screen === 0) {
     const dims = t.raw("intro.dimensions") as { label: string; text: string }[];
+    const promiseItems = t("intro.promise").split(" · ");
     return (
       <div>
         {/* Hero — text left, photo bleeding in from the right, faded into the page */}
@@ -191,19 +192,23 @@ export function AusbildungEvaluator() {
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
             </div>
 
-            <div className="max-w-lg py-12 lg:flex lg:min-h-[420px] lg:flex-col lg:justify-center lg:py-16">
+            <div className="max-w-xl py-12 lg:flex lg:min-h-[420px] lg:flex-col lg:justify-center lg:py-16">
               <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
                 {t("intro.title")}
               </h1>
               <p className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed" style={{ animationDelay: "80ms" }}>
                 {t("intro.text")}
               </p>
-              <p
-                className="animate-fade-up mt-7 text-xs font-semibold uppercase tracking-[0.1em] text-brand-gold-text"
-                style={{ animationDelay: "120ms" }}
-              >
-                {t("intro.promise")}
-              </p>
+              <div className="animate-fade-up mt-7 flex flex-wrap gap-2.5 sm:flex-nowrap" style={{ animationDelay: "120ms" }}>
+                {promiseItems.map((it) => (
+                  <span
+                    key={it}
+                    className="whitespace-nowrap rounded-full border border-brand-gold/40 bg-brand-gold/[0.05] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-brand-gold-text"
+                  >
+                    {it}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
