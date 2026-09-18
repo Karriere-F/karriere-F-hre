@@ -178,7 +178,7 @@ export function AusbildungEvaluator() {
             <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
           </div>
 
-          <div className="relative max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl px-6 sm:px-8 lg:px-12">
             {/* Mobile photo: above the text */}
             <div className="relative -mx-4 aspect-[16/10] sm:-mx-6 lg:hidden">
               <Image
@@ -214,7 +214,7 @@ export function AusbildungEvaluator() {
         </section>
 
         {/* Dimensions + CTA */}
-        <div className="max-w-7xl px-4 pb-16 pt-4 sm:px-6 sm:pb-20 lg:px-8">
+        <div className="max-w-7xl px-6 pb-16 pt-4 sm:px-8 sm:pb-20 lg:px-12">
           {/* Dimensions — two rows of three cards */}
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-ink-muted">
             {t("intro.dimensionsTitle")}
