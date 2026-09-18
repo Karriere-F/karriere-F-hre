@@ -146,7 +146,7 @@ export default async function HomePage() {
               ))}
             </p>
             <p
-              className="animate-fade-up mt-6 max-w-xl text-brand-ink-secondary leading-relaxed whitespace-normal lg:whitespace-pre-line"
+              className="animate-fade-up mt-6 max-w-xl text-brand-ink-secondary leading-relaxed whitespace-normal sm:whitespace-pre-line"
               style={{ animationDelay: "140ms" }}
             >
               {content.heroSubtitle}
