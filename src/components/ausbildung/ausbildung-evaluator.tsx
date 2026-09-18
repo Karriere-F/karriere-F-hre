@@ -200,7 +200,7 @@ export function AusbildungEvaluator() {
             <div className="max-w-xl py-12 lg:flex lg:min-h-[420px] lg:flex-col lg:justify-center lg:py-16">
               <h1 className="animate-fade-up font-serif text-3xl text-brand-black leading-[1.12] sm:text-4xl">
                 {titleLines.map((line) => (
-                  <span key={line} className="block">
+                  <span key={line} className="block lg:whitespace-nowrap">
                     {line}
                   </span>
                 ))}
