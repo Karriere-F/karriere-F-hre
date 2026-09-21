@@ -21,7 +21,7 @@ export function ParallaxImage({
   priority,
   imgClassName,
   objectPosition,
-  strength = 44,
+  strength = 70,
 }: {
   src: string;
   alt: string;
@@ -52,7 +52,7 @@ export function ParallaxImage({
       fill
       priority={priority}
       sizes={sizes}
-      className={imgClassName}
+      className={`ken-burns ${imgClassName ?? ""}`}
       style={objectPosition ? { objectPosition } : undefined}
     />
   );
