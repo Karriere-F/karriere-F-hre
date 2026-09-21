@@ -86,7 +86,7 @@ export default async function AusbildungHubPage() {
               ))}
             </h1>
             <p
-              className="animate-fade-up mt-6 max-w-lg text-brand-ink-secondary leading-relaxed"
+              className="animate-fade-up mt-6 max-w-2xl text-brand-ink-secondary leading-relaxed whitespace-normal lg:whitespace-pre-line"
               style={{ animationDelay: "80ms" }}
             >
               {h.heroSubtitle}

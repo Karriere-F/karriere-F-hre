@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "../../../i18n/routing";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { ScrollReveal } from "@/components/motion/scroll-reveal";
 import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import "../globals.css";
@@ -65,6 +66,7 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col bg-brand-white text-brand-ink">
         <OrganizationJsonLd />
         <NextIntlClientProvider>
+          <ScrollReveal />
           <SiteHeader />
           <main className="flex-1 flex flex-col">{children}</main>
           <SiteFooter />
