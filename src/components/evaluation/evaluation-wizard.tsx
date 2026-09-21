@@ -172,6 +172,11 @@ export function EvaluationWizard() {
     const promiseItems = t("intro.promise").split(" · ");
     const imageAlt =
       "Un CV posé sur un bureau à côté d'un ordinateur portable, prêt pour une évaluation de profil";
+    // Force the title onto two lines: "...Allemagne" / "correspond à votre profil ?".
+    const introTitle = t("intro.title");
+    const splitAt = introTitle.indexOf(" correspond");
+    const titleLines =
+      splitAt > 0 ? [introTitle.slice(0, splitAt), introTitle.slice(splitAt + 1)] : [introTitle];
     return (
       <div>
         {/* Hero — text left, photo bleeding in from the right, faded into the page */}
@@ -191,7 +196,7 @@ export function EvaluationWizard() {
             <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
           </div>
 
-          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Mobile photo: above the text */}
             <div className="relative -mx-4 aspect-[16/10] sm:-mx-6 lg:hidden">
               <Image
@@ -206,9 +211,13 @@ export function EvaluationWizard() {
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
             </div>
 
-            <div className="max-w-lg py-12 lg:flex lg:min-h-[440px] lg:flex-col lg:justify-center lg:py-16">
-              <h1 className="animate-fade-up font-serif text-3xl text-brand-black text-balance leading-[1.12] sm:text-4xl">
-                {t("intro.title")}
+            <div className="max-w-xl py-12 lg:flex lg:min-h-[440px] lg:flex-col lg:justify-center lg:py-16">
+              <h1 className="animate-fade-up font-serif text-3xl text-brand-black leading-[1.12] sm:text-4xl">
+                {titleLines.map((line) => (
+                  <span key={line} className="block lg:whitespace-nowrap">
+                    {line}
+                  </span>
+                ))}
               </h1>
               <p
                 className="animate-fade-up mt-6 text-brand-ink-secondary leading-relaxed"
@@ -234,7 +243,7 @@ export function EvaluationWizard() {
         </section>
 
         {/* CTA + reassurance */}
-        <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
           <button
             type="button"
             onClick={() => go(1)}
