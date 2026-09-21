@@ -73,6 +73,27 @@ html {
   scroll-padding-top: 6rem;
 }
 
+/* ---- Keyboard focus, site-wide ---- */
+/* One consistent, on-brand focus ring for every interactive element. Only shows
+   for keyboard users (:focus-visible). A box-shadow ring (rather than outline)
+   hugs the element's border-radius, survives `outline: none`, and reads as
+   premium: a white gap then a gold ring. This is the accessible default. */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="menuitem"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--brand-white),
+    0 0 0 4px var(--brand-gold);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
