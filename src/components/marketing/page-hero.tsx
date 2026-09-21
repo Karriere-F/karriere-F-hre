@@ -64,14 +64,14 @@ export function PageHero({
       </div>
 
       {/* Mobile photo: above the text */}
-      <div className="relative -mb-2 aspect-[16/11] w-full overflow-hidden lg:hidden">
+      <div className="relative -mb-2 aspect-[16/11] w-full lg:hidden">
         <Image
           src={image}
           alt={imageAlt ?? ""}
           fill
           priority
           sizes="100vw"
-          className="ken-burns object-cover"
+          className="object-cover"
           style={{ objectPosition: imagePosition }}
         />
         <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-card to-transparent" />

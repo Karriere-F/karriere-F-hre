@@ -204,29 +204,6 @@ p {
   }
 }
 
-/* Continuous, always-on Ken Burns drift for hero photos: a slow zoom that eases
-   in and out forever, so the imagery is gently alive even when the page is
-   still. Paired with scroll parallax on the same photo. Disabled for reduced
-   motion. */
-@keyframes ken-burns {
-  from {
-    transform: scale(1.03);
-  }
-  to {
-    transform: scale(1.11);
-  }
-}
-.ken-burns {
-  animation: ken-burns 20s var(--ease-in-out-strong) infinite alternate;
-  transform-origin: center;
-  will-change: transform;
-}
-@media (prefers-reduced-motion: reduce) {
-  .ken-burns {
-    animation: none;
-  }
-}
-
 /* Card hover lift — subtle, transform+shadow only. */
 @media (hover: hover) and (pointer: fine) {
   .lift-on-hover {

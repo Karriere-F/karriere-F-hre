@@ -111,7 +111,7 @@ export default async function HomePage() {
               fill
               priority
               sizes="100vw"
-              className="ken-burns object-cover object-[55%_45%]"
+              className="object-cover object-[55%_45%]"
             />
             <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-white via-brand-white/85 to-transparent" />
             {/* Handwritten brand sign-off, bottom-right of the photo */}
