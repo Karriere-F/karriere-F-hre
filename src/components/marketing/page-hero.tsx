@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ParallaxImage } from "@/components/motion/parallax-image";
 
 // Shared hero for interior pages. When an image is provided it bleeds in from the
 // right and fades into the page background (matching the home and /parcours heroes)
@@ -49,14 +50,13 @@ export function PageHero({
     <section className="relative overflow-hidden bg-brand-card">
       {/* Desktop photo: bleeds in from the right, fades into the page */}
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
-        <Image
+        <ParallaxImage
           src={image}
           alt={imageAlt ?? ""}
-          fill
           priority
           sizes="52vw"
-          className="object-cover"
-          style={{ objectPosition: imagePosition }}
+          imgClassName="object-cover"
+          objectPosition={imagePosition}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-card via-brand-card/15 to-transparent" />
         <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-card to-transparent" />
