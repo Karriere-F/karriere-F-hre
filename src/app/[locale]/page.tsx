@@ -6,6 +6,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "../../../i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { HeroParcours } from "@/components/home/hero-parcours";
+import { ParallaxImage } from "@/components/motion/parallax-image";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "../../../i18n/routing";
 import type frMessages from "../../../messages/fr.json";
@@ -81,13 +82,13 @@ export default async function HomePage() {
         <div className="relative">
         {/* Desktop photo: full-bleed on the right, faded into the page on its left and edges */}
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[72%] lg:block">
-          <Image
+          <ParallaxImage
             src="/images/hero-equipe.jpg"
             alt="Une infirmière, un ouvrier du bâtiment, un informaticien, un cuisinier et un technicien industriel africains au travail en Allemagne"
-            fill
             priority
             sizes="72vw"
-            className="object-cover object-[50%_42%]"
+            imgClassName="object-cover"
+            objectPosition="50% 42%"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-white via-brand-white/15 to-transparent" />
           <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-brand-white to-transparent" />

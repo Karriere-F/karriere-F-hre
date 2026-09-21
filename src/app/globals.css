@@ -173,6 +173,27 @@ p {
   animation: fade-up 500ms var(--ease-out-strong) both;
 }
 
+/* Site-wide page transition: replays on every navigation (App Router template
+   re-mounts). Soft fade + rise, disabled for reduced motion. */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.page-enter {
+  animation: page-enter 450ms var(--ease-out-strong) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+}
+
 /* Very slow cinematic zoom (Apple-style ken burns) for hero imagery. */
 @keyframes slowZoom {
   from {
