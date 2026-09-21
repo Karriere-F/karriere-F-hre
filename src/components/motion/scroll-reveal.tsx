@@ -8,15 +8,16 @@ import { animate } from "framer-motion";
 //
 // Mounted once in the root layout. It upgrades every element that already carries
 // the `.animate-fade-up` class (used across the whole site) so that, instead of
-// all fading in at once on load, elements below the fold rise + fade in as they
-// scroll into view.
+// all fading in at once on load, elements below the fold rise + sharpen (blur →
+// crisp) as they scroll into view, and siblings in the same group cascade with a
+// gentle stagger.
 //
 // Safety / SSR: content is visible by default. We ONLY touch elements that are
 // currently below the fold — those are off-screen, so hiding them causes no
 // flash, and if JS never runs (crawler, no-JS) everything stays visible via the
 // CSS fallback. Reduced-motion and missing IntersectionObserver are respected.
-// Hover transforms are preserved: the inline transform is cleared once the
-// reveal finishes, so CSS `:hover` lifts keep working.
+// Hover transforms are preserved: the inline transform/filter are cleared once
+// the reveal finishes, so CSS `:hover` lifts keep working.
 export function ScrollReveal() {
   const pathname = usePathname();
 
@@ -25,7 +26,7 @@ export function ScrollReveal() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (!("IntersectionObserver" in window)) return;
 
-    const EASE = [0.23, 1, 0.32, 1] as const;
+    const EASE = [0.16, 1, 0.3, 1] as const;
     const cleanups: Array<() => void> = [];
 
     // Wait a frame so freshly-navigated page content is in the DOM.
@@ -36,17 +37,18 @@ export function ScrollReveal() {
 
       const reveal = (el: HTMLElement) => {
         el.dataset.revealed = "1";
-        const delayMs = parseFloat(el.style.animationDelay || "0") || 0;
+        const delayMs = parseFloat(el.dataset.revealDelay || "0") || 0;
         const controls = animate(
           el,
-          { opacity: [0, 1], y: [16, 0] },
-          { duration: 0.5, delay: delayMs / 1000, ease: EASE },
+          { opacity: [0, 1], y: [18, 0], filter: ["blur(8px)", "blur(0px)"] },
+          { duration: 0.6, delay: delayMs / 1000, ease: EASE },
         );
         controls.finished
           .then(() => {
-            // Clear the inline transform so CSS :hover lifts keep working.
+            // Clear inline styles so CSS :hover lifts and normal painting resume.
             el.style.transform = "";
             el.style.opacity = "";
+            el.style.filter = "";
             el.style.willChange = "";
           })
           .catch(() => {});
@@ -64,21 +66,36 @@ export function ScrollReveal() {
         { rootMargin: "0px 0px -10% 0px", threshold: 0.05 },
       );
 
+      // Per-parent counter so a grid of cards cascades instead of popping at once.
+      const staggerByParent = new Map<Element, number>();
+
       for (const el of els) {
         const rect = el.getBoundingClientRect();
-        // Only touch elements that are ENTIRELY below the viewport — those are
-        // off-screen, so hiding them is invisible and never blanks visible
-        // content. Anything already on screen (or scrolled past) is left as-is.
+        // Only touch elements ENTIRELY below the viewport — off-screen, so hiding
+        // them is invisible and never blanks visible content.
         const fullyBelow = rect.top >= window.innerHeight;
         if (!fullyBelow) {
           el.dataset.revealed = "1";
           continue;
         }
-        // Below the fold: hand it to framer-motion for a scroll reveal.
+        // Stagger: keep an author-set animationDelay if present, otherwise derive
+        // one from the element's order among its revealable siblings (capped).
+        // Inline animationDelay is authored in ms (e.g. "60ms"), so parseFloat
+        // already yields milliseconds.
+        const inline = parseFloat(el.style.animationDelay || "0") || 0;
+        let delayMs = inline;
+        if (!inline && el.parentElement) {
+          const n = staggerByParent.get(el.parentElement) ?? 0;
+          staggerByParent.set(el.parentElement, n + 1);
+          delayMs = Math.min(n, 6) * 70;
+        }
+        el.dataset.revealDelay = String(delayMs);
+
         el.style.animation = "none";
         el.style.opacity = "0";
-        el.style.transform = "translateY(16px)";
-        el.style.willChange = "opacity, transform";
+        el.style.transform = "translateY(18px)";
+        el.style.filter = "blur(8px)";
+        el.style.willChange = "opacity, transform, filter";
         io.observe(el);
       }
 
