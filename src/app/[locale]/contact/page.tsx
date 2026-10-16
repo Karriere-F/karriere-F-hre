@@ -16,9 +16,20 @@ export default async function ContactPage() {
 
   return (
     <div>
-      <PageHero title={content.title} subtitle={content.subtitle} />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-12 sm:grid-cols-2">
-        <ContactForm />
+      <PageHero
+        title={content.title}
+        subtitle={content.subtitle}
+        image="/images/contact-call-center.jpg"
+        imageAlt="Une conseillère en centre d'appels, casque audio, prête à répondre à vos questions"
+        imagePosition="center 6%"
+        imageWidthClass="w-[62%]"
+        alignTop
+      />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-2 pb-16 grid gap-12 sm:grid-cols-2">
+        {/* Form pulled up beside the hero photo (desktop), over the faded-left of the image */}
+        <div className="relative z-10 lg:-mt-64">
+          <ContactForm />
+        </div>
         <div>
           <h2 className="text-brand-gold-text font-semibold text-sm mb-2">{t("whatsapp")}</h2>
           <ul className="text-sm text-brand-ink-secondary space-y-1 mb-8">

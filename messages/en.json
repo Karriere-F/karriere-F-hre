@@ -25,6 +25,11 @@
     "entProfils": "Profiles",
     "entProcessus": "Process",
     "entPartenaires": "Partners",
+    "entFachkraefte": "Recruit Fachkräfte",
+    "entAzubis": "Recruit Azubis",
+    "entMethode": "Our method",
+    "entSecteurs": "Our sectors",
+    "entDemande": "Describe my need",
     "metiers": "Occupations",
     "aPropos": "About",
     "blog": "Blog",
@@ -96,12 +101,13 @@
     "heroTrust1": "End-to-end support",
     "heroTrust2": "Germany experts",
     "heroTrust3": "With you until you settle",
-    "door1Title": "You want to move to Germany",
-    "door1Body": "A qualified job, an Ausbildung or the Chancenkarte, we teach you German, get your qualification recognised and support you all the way to departure.",
-    "door2Title": "You're looking for skilled workers",
-    "door2Body": "We train, select and prepare professionals ready to integrate for the long term into your teams in Germany.",
-    "metiersTitle": "Your profession has a place in Germany.",
-    "metiersLead": "Germany is recruiting qualified professionals across many in-demand sectors: healthcare, engineering, construction, industry, logistics, IT, hospitality and services.",
+    "door1Title": "Want to work or train in Germany?",
+    "door1Body": "Ausbildung, skilled employment, Chancenkarte",
+    "door2Title": "Looking for qualified candidates?",
+    "door2Body": "Azubis, Fachkräfte, experienced profiles",
+    "metiersKicker": "Accessible professions",
+    "metiersTitle": "Trades. Paths. A career.",
+    "metiersLead": "Discover the sectors where you can train or work in Germany, depending on your profile and your qualification.",
     "metiersLead2": "Karriere Fähre supports you at every step to turn your experience into a career in Germany.",
     "metierMedecins": "Doctors",
     "metierSante": "Healthcare",
@@ -115,8 +121,8 @@
     "metierIndustrie": "Industry",
     "metierLogistique": "Logistics & Transport",
     "founderCta": "Discover our story",
-    "ctaCandidate": "I want to work / train in Germany",
-    "ctaEmployer": "I'm hiring",
+    "ctaCandidate": "Explore the paths",
+    "ctaEmployer": "Our recruitment solutions",
     "ctaBook": "Book an appointment",
     "riveEyebrow": "The situation",
     "riveTitle": "Two continents. One shared ambition",
@@ -177,7 +183,7 @@
     "pillar3Body": "Once in Germany, we ease your arrival and integration: housing, formalities and your first steps in a new life.",
     "methodeTitle1": "A clear method.",
     "methodeTitle2": "End-to-end support.",
-    "methodeLead": "Building a career in Germany takes far more than an application. We support every candidate at each stage, all the way to integration.",
+    "methodeLead": "Building a career in Germany is more than sending an application. From German preparation to the recognition of your qualification, from placement to settling in, we support you at every step, never leaving you alone with the paperwork.",
     "stepPrepareTitle": "Prepare",
     "stepConstruireTitle": "Build",
     "stepReussirTitle": "Succeed",
@@ -192,9 +198,11 @@
     "reuss1": "Settling in",
     "reuss2": "Integration",
     "reuss3": "Follow-up",
-    "promoTitle": "Our first cohort is already under way",
-    "promoText": "Our first candidates are preparing for their move to Germany in their German classes.",
+    "promoTitle": "Our first cohort is already on its way.",
+    "promoText": "Our first candidates are learning German and preparing, step by step with us, for their move to Germany.",
     "promoBadge": "Live",
+    "promoCta1": "See our language tracks",
+    "promoCta2": "Assess my German level",
     "teamTitle": "A dedicated team by your side",
     "trust1": "One-to-one support",
     "trust2": "Presence in Cameroon and Germany",
@@ -302,7 +310,7 @@
   },
   "candidats": {
     "title": "Working or training in Germany, supported at every step",
-    "subtitle": "In short: there are three legal paths to working in Germany from Cameroon: skilled employment, vocational training (Ausbildung), and the Opportunity Card (Chancenkarte). Karriere Fähre assesses your profile, trains you in German, and prepares every step up to departure.",
+    "subtitle": "From Cameroon, several paths lead to a professional project in Germany: skilled employment, vocational training (Ausbildung) or, under certain conditions, the Opportunity Card (Chancenkarte) to look for a job on site. Karriere Fähre reviews your profile, helps you improve your German and supports you through every step, right up to your departure.",
     "kick": "Candidate area, Cameroon & Central Africa → Germany",
     "ctaEligibility": "Check my eligibility",
     "ctaVoies": "Compare the 3 paths",
@@ -357,9 +365,23 @@
     "tableRow6Val2": "You're starting your career",
     "tableRow6Val3": "You're flexible and motivated",
     "tableNote": "The exact thresholds (points, language level per occupation) evolve with German regulations. We check them for your case during the assessment.",
+    "tableCtaText": "Not sure yet which path fits your profile?",
+    "tableCtaBtn": "Get my profile assessed",
+    "langTitle": "Your German level decides your project",
+    "langLead": "German isn't a formality: it's the criterion that opens or closes each path to Germany. Here's what each path requires.",
+    "lang1Title": "Skilled employment",
+    "lang1Body": "B2 level required, with a recognised qualification or experience.",
+    "lang2Title": "Ausbildung",
+    "lang2Body": "B2 level required to start a dual training.",
+    "lang3Title": "Chancenkarte",
+    "lang3Body": "A1 minimum: the higher your level, the more points you score.",
+    "langNote": "The exact thresholds evolve with German regulations and the target occupation. We check them for your case during the assessment.",
+    "langCtaText": "Don't have the required language level yet?",
+    "langCtaCours": "See our language tracks",
+    "langCtaTest": "Assess my German level",
     "eligibiliteEyebrow": "Eligibility",
-    "eligibiliteTitle": "Am I eligible to work in Germany?",
-    "eligibiliteLead": "You're likely eligible if you're between 18 and about 40, have a qualification or professional experience, and are willing to learn German up to the required level. Four things matter:",
+    "eligibiliteTitle": "Am I eligible to work or train in Germany?",
+    "eligibiliteLead": "You're likely eligible if you have a qualification or professional experience, and are willing to learn German up to the required level. Four things matter:",
     "crit1Title": "Qualification or experience",
     "crit1Body": "A qualification (even a Cameroonian one) or solid experience in a sought-after trade. We help get it recognized.",
     "crit2Title": "German level",
@@ -368,7 +390,7 @@
     "crit3Body": "Most paths target 18-40 year-olds, with Ausbildung geared more toward younger candidates. Each case is reviewed individually.",
     "crit4Title": "Motivation & plan",
     "crit4Body": "Success depends as much on preparation as on drive. We support those who commit seriously.",
-    "ctaEval": "Get my profile assessed",
+    "ctaEval": "Assess my profile",
     "accompagnementEyebrow": "Full-service support",
     "accompagnementTitle": "Our 360° support",
     "accompagnementLead": "From your first assessment to your integration in Germany, we handle every step. Seven services, one single point of contact: you never have to navigate the process alone.",
@@ -707,23 +729,23 @@
       "s1Sectors": [
         {
           "name": "Healthcare",
-          "items": "Pflege · care · medical and care professions"
+          "items": "Pflege, care, medical and care professions"
         },
         {
           "name": "Industry & technical",
-          "items": "Mechanics · electrical · production · maintenance"
+          "items": "Mechanics, electrical, production, maintenance"
         },
         {
           "name": "Construction",
-          "items": "Building · installation · technical trades"
+          "items": "Building, installation, technical trades"
         },
         {
           "name": "IT",
-          "items": "IT · development · systems · digital"
+          "items": "IT, development, systems, digital"
         },
         {
           "name": "Hospitality & catering",
-          "items": "Kitchen · restaurant · hotel"
+          "items": "Kitchen, restaurant, hotel"
         }
       ],
       "s1Cta": "Discover the trades",
@@ -747,11 +769,11 @@
       "s3Steps": [
         {
           "label": "Berufsschule",
-          "detail": "Theory · professional knowledge"
+          "detail": "Theory and professional knowledge"
         },
         {
           "label": "Company",
-          "detail": "Practice · experience · responsibilities"
+          "detail": "Practice, experience, responsibilities"
         },
         {
           "label": "Final exam",
@@ -783,7 +805,7 @@
           "amount": "1,014 €"
         }
       ],
-      "s4Note": "Gross amounts, 2026 legal minimums. Actual pay can be higher depending on the trade, sector, region and company. This is the pay during the Ausbildung — not to be confused with the salary once qualified.",
+      "s4Note": "Gross amounts, 2026 legal minimums. Actual pay can be higher depending on the trade, sector, region and company. This is the pay during the Ausbildung, not to be confused with the salary once qualified.",
       "s4Source": "Source: Bundesagentur für Arbeit",
       "s4Cta": "See the conditions",
       "s5Num": "05",
@@ -799,11 +821,11 @@
         },
         {
           "label": "Specialise",
-          "text": "Weiterbildung · Meister · Techniker · Fachwirt."
+          "text": "Weiterbildung, Meister, Techniker, Fachwirt."
         },
         {
           "label": "Progress",
-          "text": "More responsibility · specialist roles · management."
+          "text": "More responsibility, specialist roles, management."
         },
         {
           "label": "Study further",
@@ -1084,6 +1106,8 @@
       "compareAusSteps": [
         "Preparation",
         "Application",
+        "Contract",
+        "Visa",
         "Ausbildung",
         "Qualification",
         "Employment"
@@ -1168,15 +1192,15 @@
       "after": [
         {
           "label": "Before departure",
-          "text": "Administrative preparation · travel · practical information"
+          "items": ["Administrative preparation", "Travel", "Practical information"]
         },
         {
           "label": "On arrival",
-          "text": "Settling in · first bearings · starting the job"
+          "items": ["Settling in", "First bearings", "Starting the job"]
         },
         {
           "label": "Afterwards",
-          "text": "Follow-up · support · professional integration"
+          "items": ["Follow-up", "Support", "Professional integration"]
         }
       ],
       "finalTitle": "Your experience deserves to be assessed.",
@@ -1558,6 +1582,10 @@
     "registeredAddressValue": "Bonamoussadi, building across from Super U, 3rd floor, Douala, Cameroon",
     "postalAddressLabel": "Postal address",
     "postalAddressValue": "BP 8414, Douala, Cameroon",
+    "legalRepLabel": "Legal representatives",
+    "legalRepValue": "Gaëlle Boumsong & Sebastian Schmidt",
+    "emailLabel": "Business e-mail",
+    "emailValue": "kontakt@karrierefaehre.com",
     "contactLabel": "Contact",
     "imprintNote": "Publisher: the management of Karriere Fähre SARL.",
     "privacyTitle": "Privacy Policy",
@@ -2364,6 +2392,8 @@
         "hotellerie": "Hospitality & catering",
         "logistique": "Logistics",
         "informatique": "IT",
+        "commerce": "Retail & sales",
+        "agroalimentaire": "Food & agriculture",
         "autre": "Other"
       }
     },

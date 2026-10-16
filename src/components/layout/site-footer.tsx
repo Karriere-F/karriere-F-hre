@@ -3,6 +3,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { getPathname } from "../../../i18n/navigation";
 import type { Locale } from "../../../i18n/routing";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
+import { SECTEURS_UI } from "@/lib/secteurs";
+import { tr } from "@/lib/localized";
 import { NewsletterForm } from "./newsletter-form";
 
 const EMAIL = "kontakt@karrierefaehre.com";
@@ -37,41 +39,46 @@ const SOCIALS = [
 
 export async function SiteFooter() {
   const t = await getTranslations("footer");
+  const tNav = await getTranslations("nav");
   const locale = (await getLocale()) as Locale;
   const year = new Date().getFullYear();
+  const L = (x: { fr: string; de: string; en: string }) => tr(x, locale);
 
   const path = (href: Parameters<typeof getPathname>[0]["href"], hash?: string) =>
     getPathname({ href, locale }) + (hash ? `#${hash}` : "");
 
+  // Footer navigation mirrors the restructured header menus (flat lists):
+  // Candidats, Entreprises and À propos de nous.
   const columns = [
     {
-      title: t("columnCandidats"),
+      title: tNav("candidats"),
       links: [
-        { href: path("/candidats", "voies"), label: t("linkHowItWorks") },
-        { href: path("/candidats", "eligibilite"), label: t("linkEligibility") },
-        { href: path("/metiers"), label: t("linkOccupations") },
-        { href: path("/candidats", "formations"), label: t("linkTrainings") },
-        { href: path("/candidats", "faq"), label: t("linkFaq") },
+        { href: path("/ausbildung-allemagne"), label: tNav("ausbildung") },
+        { href: path("/travailler-en-allemagne"), label: tNav("travailler") },
+        { href: path("/visa-allemagne/chancenkarte"), label: L({ fr: "Chancenkarte", de: "Chancenkarte", en: "Chancenkarte" }) },
+        { href: path("/cours-allemand"), label: tNav("coursAllemand") },
+        { href: path("/secteurs"), label: L(SECTEURS_UI.secteurs) },
+        { href: path("/evaluation"), label: L({ fr: "Évaluer mon profil", de: "Mein Profil einschätzen", en: "Assess my profile" }) },
       ],
     },
     {
-      title: t("columnEntreprises"),
+      title: tNav("entreprises"),
       links: [
-        { href: path("/entreprises", "services"), label: t("linkEntServices") },
-        { href: path("/entreprises", "profils"), label: t("linkEntProfiles") },
-        { href: path("/entreprises", "processus"), label: t("linkEntProcess") },
-        { href: path("/entreprises/partenariat"), label: t("linkEntPartner") },
-        { href: path("/entreprises", "contact"), label: t("linkEntRequest") },
+        { href: path("/entreprises/fachkraefte"), label: tNav("entFachkraefte") },
+        { href: path("/entreprises/ausbildung"), label: tNav("entAzubis") },
+        { href: path("/entreprises/methode"), label: tNav("entMethode") },
+        { href: path("/entreprises/secteurs"), label: tNav("entSecteurs") },
+        { href: path("/entreprises/demande-recrutement"), label: tNav("entDemande") },
       ],
     },
     {
-      title: t("columnCompany"),
+      title: tNav("aProposUs"),
       links: [
-        { href: path("/a-propos"), label: t("linkAbout") },
-        { href: path("/a-propos/notre-histoire"), label: t("linkFounder") },
-        { href: path("/partenaires"), label: t("linkPartners") },
-        { href: path("/temoignages"), label: t("linkTestimonials") },
-        { href: path("/blog"), label: t("linkBlog") },
+        { href: path("/a-propos"), label: L({ fr: "Qui sommes-nous", de: "Wer wir sind", en: "Who we are" }) },
+        { href: path("/a-propos/methode"), label: L({ fr: "Notre méthode", de: "Unsere Methode", en: "Our method" }) },
+        { href: path("/a-propos/notre-histoire"), label: L({ fr: "Notre histoire", de: "Unsere Geschichte", en: "Our story" }) },
+        { href: path("/partenaires"), label: L({ fr: "Nos partenaires", de: "Unsere Partner", en: "Our partners" }) },
+        { href: path("/contact"), label: L({ fr: "Contact", de: "Kontakt", en: "Contact" }) },
       ],
     },
   ];
@@ -80,7 +87,6 @@ export async function SiteFooter() {
     { href: path("/mentions-legales"), label: t("imprint") },
     { href: path("/confidentialite"), label: t("privacy") },
     { href: path("/cgu"), label: t("terms") },
-    { href: path("/plan-du-site"), label: t("sitemap") },
   ];
 
   return (

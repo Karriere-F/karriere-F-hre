@@ -25,6 +25,11 @@
     "entProfils": "Profile",
     "entProcessus": "Ablauf",
     "entPartenaires": "Partner",
+    "entFachkraefte": "Fachkräfte gewinnen",
+    "entAzubis": "Azubis gewinnen",
+    "entMethode": "Unsere Methode",
+    "entSecteurs": "Unsere Branchen",
+    "entDemande": "Bedarf beschreiben",
     "metiers": "Berufe",
     "aPropos": "Über uns",
     "blog": "Blog",
@@ -96,12 +101,13 @@
     "heroTrust1": "Rundum-Begleitung",
     "heroTrust2": "Deutschland-Experten",
     "heroTrust3": "Betreuung bis zur Ankunft",
-    "door1Title": "Sie möchten nach Deutschland",
-    "door1Body": "Qualifizierte Stelle, Ausbildung oder Chancenkarte, wir bringen Ihnen Deutsch bei, lassen Ihren Abschluss anerkennen und begleiten Sie bis zur Ausreise.",
-    "door2Title": "Sie suchen qualifizierte Fachkräfte",
-    "door2Body": "Wir bilden aus, wählen aus und bereiten Fachkräfte vor, die sich dauerhaft in Ihre Teams in Deutschland integrieren.",
-    "metiersTitle": "Ihr Beruf hat in Deutschland einen Platz.",
-    "metiersLead": "Deutschland sucht qualifizierte Fachkräfte in zahlreichen Engpassbranchen: Gesundheit, Ingenieurwesen, Bau, Industrie, Logistik, IT, Hotellerie und Gastronomie sowie Dienstleistungen.",
+    "door1Title": "Möchten Sie in Deutschland arbeiten oder sich ausbilden lassen?",
+    "door1Body": "Ausbildung, qualifizierte Beschäftigung, Chancenkarte",
+    "door2Title": "Suchen Sie qualifizierte Kandidaten?",
+    "door2Body": "Azubis, Fachkräfte, erfahrene Profile",
+    "metiersKicker": "Zugängliche Berufe",
+    "metiersTitle": "Berufe. Wege. Eine Karriere.",
+    "metiersLead": "Entdecken Sie die Branchen, in denen Sie sich je nach Profil und Qualifikation in Deutschland ausbilden lassen oder arbeiten können.",
     "metiersLead2": "Karriere Fähre begleitet Sie bei jedem Schritt, damit aus Ihrer Erfahrung eine Karriere in Deutschland wird.",
     "metierMedecins": "Ärzte",
     "metierSante": "Gesundheit",
@@ -115,8 +121,8 @@
     "metierIndustrie": "Industrie",
     "metierLogistique": "Logistik & Transport",
     "founderCta": "Unsere Geschichte entdecken",
-    "ctaCandidate": "Ich möchte in Deutschland arbeiten / mich ausbilden lassen",
-    "ctaEmployer": "Ich suche Fachkräfte",
+    "ctaCandidate": "Die Wege entdecken",
+    "ctaEmployer": "Unsere Rekrutierungslösungen",
     "ctaBook": "Termin buchen",
     "riveEyebrow": "Der Befund",
     "riveTitle": "Zwei Kontinente. Ein gemeinsames Ziel",
@@ -177,7 +183,7 @@
     "pillar3Body": "In Deutschland erleichtern wir Ankunft und Integration: Wohnung, Formalitäten und die ersten Schritte in Ihrem neuen Leben.",
     "methodeTitle1": "Eine klare Methode.",
     "methodeTitle2": "Eine umfassende Begleitung.",
-    "methodeLead": "Eine Karriere in Deutschland aufzubauen erfordert mehr als eine einfache Bewerbung. Wir begleiten jeden Kandidaten in jeder Phase, bis zur Integration.",
+    "methodeLead": "Eine Karriere in Deutschland aufzubauen ist mehr als eine Bewerbung. Von der sprachlichen Vorbereitung über die Anerkennung Ihres Abschlusses bis zur Vermittlung und Ihrer Ankunft begleiten wir Sie bei jedem Schritt, ohne Sie mit den Formalitäten allein zu lassen.",
     "stepPrepareTitle": "Vorbereiten",
     "stepConstruireTitle": "Aufbauen",
     "stepReussirTitle": "Ankommen",
@@ -192,9 +198,11 @@
     "reuss1": "Ankunft",
     "reuss2": "Integration",
     "reuss3": "Betreuung",
-    "promoTitle": "Unser erster Jahrgang läuft bereits",
-    "promoText": "Unsere ersten Kandidaten bereiten sich im Deutschunterricht auf ihre Ausreise nach Deutschland vor.",
+    "promoTitle": "Unser erster Jahrgang ist bereits unterwegs.",
+    "promoText": "Unsere ersten Kandidaten lernen Deutsch und bereiten mit uns Schritt für Schritt ihre Ausreise nach Deutschland vor.",
     "promoBadge": "Läuft",
+    "promoCta1": "Unsere Sprachkurse ansehen",
+    "promoCta2": "Mein Deutschniveau einschätzen",
     "teamTitle": "Ein engagiertes Team an Ihrer Seite",
     "trust1": "Individuelle Begleitung",
     "trust2": "Präsenz in Kamerun und Deutschland",
@@ -302,7 +310,7 @@
   },
   "candidats": {
     "title": "Arbeiten oder sich ausbilden in Deutschland, bei jedem Schritt begleitet",
-    "subtitle": "Kurz gesagt: Es gibt drei legale Wege, um von Kamerun aus in Deutschland zu arbeiten: die qualifizierte Erwerbstätigkeit, die Berufsausbildung und die Chancenkarte. Karriere Fähre bewertet Ihr Profil, bildet Sie in Deutsch aus und bereitet alle Ihre Schritte bis zur Abreise vor.",
+    "subtitle": "Von Kamerun aus führen mehrere Wege zu einem Berufsprojekt in Deutschland: die qualifizierte Beschäftigung, die duale Ausbildung oder, unter bestimmten Bedingungen, die Chancenkarte, um vor Ort eine Stelle zu suchen. Karriere Fähre prüft Ihr Profil, hilft Ihnen, Ihr Deutsch zu verbessern, und begleitet Sie bei allen Schritten bis zu Ihrer Ausreise.",
     "kick": "Kandidatenbereich, Kamerun & Zentralafrika → Deutschland",
     "ctaEligibility": "Meine Eignung prüfen",
     "ctaVoies": "Die 3 Wege vergleichen",
@@ -357,9 +365,23 @@
     "tableRow6Val2": "Sie starten Ihre Karriere",
     "tableRow6Val3": "Sie sind flexibel und motiviert",
     "tableNote": "Die genauen Schwellenwerte (Punkte, Sprachniveau je Beruf) ändern sich je nach deutscher Gesetzgebung. Wir prüfen sie für Ihren Fall bei der Bewertung.",
+    "tableCtaText": "Sie wissen noch nicht, welcher Weg zu Ihrem Profil passt?",
+    "tableCtaBtn": "Mein Profil bewerten lassen",
+    "langTitle": "Ihr Deutschniveau entscheidet über Ihr Projekt",
+    "langLead": "Deutsch ist keine Formalität: Es ist das Kriterium, das jeden Weg nach Deutschland öffnet oder verschließt. Das verlangt jeder Weg.",
+    "lang1Title": "Qualifizierte Beschäftigung",
+    "lang1Body": "Niveau B2 erforderlich, mit anerkanntem Abschluss oder anerkannter Erfahrung.",
+    "lang2Title": "Ausbildung",
+    "lang2Body": "Niveau B2 erforderlich, um eine duale Ausbildung zu beginnen.",
+    "lang3Title": "Chancenkarte",
+    "lang3Body": "Mindestens A1: je höher Ihr Niveau, desto mehr Punkte.",
+    "langNote": "Die genauen Schwellenwerte ändern sich je nach deutscher Gesetzgebung und angestrebtem Beruf. Wir prüfen sie für Ihren Fall bei der Bewertung.",
+    "langCtaText": "Sie haben noch nicht das erforderliche Sprachniveau?",
+    "langCtaCours": "Unsere Sprachkurse ansehen",
+    "langCtaTest": "Mein Deutschniveau einschätzen",
     "eligibiliteEyebrow": "Voraussetzungen",
-    "eligibiliteTitle": "Bin ich geeignet, um in Deutschland zu arbeiten?",
-    "eligibiliteLead": "Sie sind wahrscheinlich geeignet, wenn Sie zwischen 18 und etwa 40 Jahre alt sind, einen Abschluss oder Berufserfahrung haben und bereit sind, Deutsch bis zum erforderlichen Niveau zu lernen. Vier Elemente zählen:",
+    "eligibiliteTitle": "Bin ich geeignet, um in Deutschland zu arbeiten oder mich ausbilden zu lassen?",
+    "eligibiliteLead": "Sie sind wahrscheinlich geeignet, wenn Sie einen Abschluss oder Berufserfahrung haben und bereit sind, Deutsch bis zum erforderlichen Niveau zu lernen. Vier Elemente zählen:",
     "crit1Title": "Abschluss oder Erfahrung",
     "crit1Body": "Ein Abschluss (auch ein kamerunischer) oder solide Erfahrung in einem gesuchten Beruf. Wir helfen bei der Anerkennung.",
     "crit2Title": "Deutschniveau",
@@ -368,7 +390,7 @@
     "crit3Body": "Die meisten Wege richten sich an 18- bis 40-Jährige, die Ausbildung eher an Jüngere. Jeder Fall wird individuell geprüft.",
     "crit4Title": "Motivation & Vorhaben",
     "crit4Body": "Der Erfolg hängt ebenso von der Vorbereitung wie vom Willen ab. Wir begleiten diejenigen, die sich ernsthaft engagieren.",
-    "ctaEval": "Mein Profil bewerten lassen",
+    "ctaEval": "Mein Profil bewerten",
     "accompagnementEyebrow": "Kompletter Service",
     "accompagnementTitle": "Unsere 360°-Begleitung",
     "accompagnementLead": "Von der ersten Bewertung bis zu Ihrer Integration in Deutschland übernehmen wir jeden Schritt. Sieben Services, ein einziger Ansprechpartner: Sie müssen die Formalitäten nie allein bewältigen.",
@@ -707,23 +729,23 @@
       "s1Sectors": [
         {
           "name": "Gesundheit",
-          "items": "Pflege · Betreuung · medizinische und pflegerische Berufe"
+          "items": "Pflege, Betreuung, medizinische und pflegerische Berufe"
         },
         {
           "name": "Industrie & Technik",
-          "items": "Mechanik · Elektrotechnik · Produktion · Instandhaltung"
+          "items": "Mechanik, Elektrotechnik, Produktion, Instandhaltung"
         },
         {
           "name": "Bau",
-          "items": "Bau · Installation · technische Berufe"
+          "items": "Bau, Installation, technische Berufe"
         },
         {
           "name": "IT",
-          "items": "IT · Entwicklung · Systeme · Digitales"
+          "items": "IT, Entwicklung, Systeme, Digitales"
         },
         {
           "name": "Hotel & Gastronomie",
-          "items": "Küche · Restaurant · Hotel"
+          "items": "Küche, Restaurant, Hotel"
         }
       ],
       "s1Cta": "Berufe entdecken",
@@ -747,11 +769,11 @@
       "s3Steps": [
         {
           "label": "Berufsschule",
-          "detail": "Theorie · berufliches Wissen"
+          "detail": "Theorie und berufliches Wissen"
         },
         {
           "label": "Betrieb",
-          "detail": "Praxis · Erfahrung · Verantwortung"
+          "detail": "Praxis, Erfahrung, Verantwortung"
         },
         {
           "label": "Abschlussprüfung",
@@ -783,7 +805,7 @@
           "amount": "1 014 €"
         }
       ],
-      "s4Note": "Bruttobeträge, gesetzliche Mindestwerte 2026. Die tatsächliche Vergütung kann je nach Beruf, Branche, Region und Betrieb höher sein. Es handelt sich um die Vergütung während der Ausbildung — nicht zu verwechseln mit dem Gehalt nach dem Abschluss.",
+      "s4Note": "Bruttobeträge, gesetzliche Mindestwerte 2026. Die tatsächliche Vergütung kann je nach Beruf, Branche, Region und Betrieb höher sein. Es handelt sich um die Vergütung während der Ausbildung, nicht zu verwechseln mit dem Gehalt nach dem Abschluss.",
       "s4Source": "Quelle: Bundesagentur für Arbeit",
       "s4Cta": "Die Bedingungen ansehen",
       "s5Num": "05",
@@ -799,11 +821,11 @@
         },
         {
           "label": "Sich spezialisieren",
-          "text": "Weiterbildung · Meister · Techniker · Fachwirt."
+          "text": "Weiterbildung, Meister, Techniker, Fachwirt."
         },
         {
           "label": "Aufsteigen",
-          "text": "Mehr Verantwortung · Fachfunktionen · Führung."
+          "text": "Mehr Verantwortung, Fachfunktionen, Führung."
         },
         {
           "label": "Studieren",
@@ -1084,6 +1106,8 @@
       "compareAusSteps": [
         "Vorbereitung",
         "Bewerbung",
+        "Vertrag",
+        "Visum",
         "Ausbildung",
         "Qualifikation",
         "Anstellung"
@@ -1168,15 +1192,15 @@
       "after": [
         {
           "label": "Vor der Abreise",
-          "text": "Administrative Vorbereitung · Reise · praktische Infos"
+          "items": ["Administrative Vorbereitung", "Reise", "Praktische Infos"]
         },
         {
           "label": "Bei der Ankunft",
-          "text": "Ankommen · erste Orientierung · Arbeitsbeginn"
+          "items": ["Ankommen", "Erste Orientierung", "Arbeitsbeginn"]
         },
         {
           "label": "Danach",
-          "text": "Begleitung · Unterstützung · berufliche Integration"
+          "items": ["Begleitung", "Unterstützung", "Berufliche Integration"]
         }
       ],
       "finalTitle": "Ihre Erfahrung verdient eine Auswertung.",
@@ -1558,6 +1582,10 @@
     "registeredAddressValue": "Bonamoussadi, Gebäude gegenüber Super U, 3. Stock, Douala, Kamerun",
     "postalAddressLabel": "Postanschrift",
     "postalAddressValue": "BP 8414, Douala, Kamerun",
+    "legalRepLabel": "Gesetzliche Vertreter",
+    "legalRepValue": "Gaëlle Boumsong & Sebastian Schmidt",
+    "emailLabel": "Geschäftliche E-Mail",
+    "emailValue": "kontakt@karrierefaehre.com",
     "contactLabel": "Kontakt",
     "imprintNote": "Verantwortlich für den Inhalt: die Geschäftsführung von Karriere Fähre SARL.",
     "privacyTitle": "Datenschutzerklärung",
@@ -2364,6 +2392,8 @@
         "hotellerie": "Hotel & Gastronomie",
         "logistique": "Logistik",
         "informatique": "IT",
+        "commerce": "Handel & Verkauf",
+        "agroalimentaire": "Lebensmittel & Landwirtschaft",
         "autre": "Andere"
       }
     },

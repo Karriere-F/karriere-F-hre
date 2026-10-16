@@ -57,7 +57,7 @@ export default async function BlogCategoryPage({
         <p className="text-brand-ink-muted text-sm mb-8">{t("comingSoon")}</p>
         <Link
           href="/blog"
-          className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
+          className="press inline-flex rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-medium transition-colors duration-150 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
         >
           {t("backToBlog")}
         </Link>

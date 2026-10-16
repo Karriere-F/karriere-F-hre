@@ -24,7 +24,7 @@ export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Loc
               <Link
                 key={s.slug}
                 href={href}
-                className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-brand-black/10 bg-brand-black p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_16px_34px_-16px_rgba(17,17,17,0.4)]"
+                className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-brand-black/10 bg-brand-black p-6 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1.5 hover:border-brand-gold/60 hover:shadow-[0_20px_40px_-18px_rgba(17,17,17,0.45)] motion-reduce:hover:translate-y-0"
               >
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold-light">
                   <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
@@ -49,7 +49,7 @@ export function SectorGrid({ sectors, locale }: { sectors: Sector[]; locale: Loc
             <Link
               key={s.slug}
               href={href}
-              className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-brand-grid transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_16px_34px_-16px_rgba(17,17,17,0.4)]"
+              className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-brand-grid transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1.5 hover:border-brand-gold/60 hover:shadow-[0_20px_40px_-18px_rgba(17,17,17,0.45)] motion-reduce:hover:translate-y-0"
             >
               <Image
                 src={image}

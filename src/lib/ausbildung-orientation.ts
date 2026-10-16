@@ -12,6 +12,8 @@ export type DomaineA =
   | "hotellerie"
   | "logistique"
   | "informatique"
+  | "commerce"
+  | "agroalimentaire"
   | "autre";
 export type Style = "personnes" | "mains" | "machines" | "chiffres" | "organiser" | "indecis";
 export type AllemandA = "aucun" | "a1" | "a2" | "b1" | "b2" | "c1";
@@ -36,6 +38,8 @@ export const DOMAINES_A: DomaineA[] = [
   "hotellerie",
   "logistique",
   "informatique",
+  "commerce",
+  "agroalimentaire",
   "autre",
 ];
 export const STYLES: Style[] = ["personnes", "mains", "machines", "chiffres", "organiser", "indecis"];
@@ -121,6 +125,16 @@ const TRADES: Record<DomaineA, TradeRec[]> = {
     { name: "IT-Systemelektroniker / Technicien systèmes", stars: 4 },
     { name: "Fachinformatiker Systemintegration", stars: 4 },
   ],
+  commerce: [
+    { name: "Kaufmann im Einzelhandel / Employé de commerce de détail", stars: 5 },
+    { name: "Verkäufer / Vendeur qualifié", stars: 4 },
+    { name: "Kaufmann im E-Commerce / Gestionnaire e-commerce", stars: 4 },
+  ],
+  agroalimentaire: [
+    { name: "Fachkraft für Lebensmitteltechnik / Technicien agroalimentaire", stars: 5 },
+    { name: "Fleischer / Boucher-charcutier", stars: 4 },
+    { name: "Milchtechnologe / Technologue laitier", stars: 4 },
+  ],
   autre: [
     { name: "Kaufmann / Employé de commerce", stars: 4 },
     { name: "Fachlagerist / Magasinier", stars: 4 },
@@ -151,6 +165,8 @@ const FR: Record<string, Record<string, string>> = {
     hotellerie: "Hôtellerie & restauration",
     logistique: "Logistique",
     informatique: "Informatique",
+    commerce: "Commerce & vente",
+    agroalimentaire: "Agroalimentaire",
     autre: "Autre",
   },
   style: {

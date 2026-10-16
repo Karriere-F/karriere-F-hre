@@ -2,6 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/marketing/page-hero";
 import { AnchorSection } from "@/components/marketing/anchor-section";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { CoursAllemandCta } from "@/components/marketing/cours-allemand-cta";
 import { Link } from "@i18n/navigation";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
@@ -53,7 +54,7 @@ export default async function VisaTravailleurPage() {
           </Link>
           <a
             href="#conditions"
-            className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
+            className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-medium transition-colors duration-150 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
           >
             {content.condTitle}
           </a>
@@ -135,6 +136,8 @@ export default async function VisaTravailleurPage() {
           </Link>
         </div>
       </section>
+
+      <CoursAllemandCta locale={locale} />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 import { NavDropdown } from "./nav-dropdown";
 import { HeaderShell } from "./header-shell";
-import { ACTIVE_SECTOR_PATH, SECTORS_ALL, SECTEURS_UI } from "@/lib/secteurs";
+import { SECTEURS_UI } from "@/lib/secteurs";
 import { tr } from "@/lib/localized";
 
 export async function SiteHeader() {
@@ -24,83 +24,40 @@ export async function SiteHeader() {
   const candidatsSwitch = { href: path("/candidats"), label: t("candidats") };
   const entreprisesSwitch = { href: path("/entreprises"), label: t("entreprises") };
 
-  // Sector-first entry. The column header goes to the /secteurs grid; each sector lists
-  // beneath it. Active sectors link to their own landing page; the rest point back to the
-  // grid, where their "bientôt disponible" state is shown.
-  const secteursGroup = {
-    href: path("/secteurs"),
-    label: tr(SECTEURS_UI.secteurs, locale),
-    items: SECTORS_ALL.map((sector) => {
-      const dest = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
-      return {
-        href: sector.active && dest ? path(dest) : path("/secteurs"),
-        label: sector.active
-          ? tr(sector.name, locale)
-          : `${tr(sector.name, locale)} (${tr(SECTEURS_UI.comingSoon, locale)})`,
-      };
-    }),
-  };
-
+  // Candidats: a simple single-column list (same shape as Entreprises), pointing to the
+  // key candidate hubs — the three parcours, the German courses, the professions grid and
+  // the profile assessment. Each page presents its own sub-sections, so the menu stays flat.
   const candidateLinks = [
-    secteursGroup,
+    { href: path("/ausbildung-allemagne"), label: t("ausbildung") },
+    { href: path("/travailler-en-allemagne"), label: t("travailler") },
     {
-      href: path("/cours-allemand"),
-      label: t("coursAllemand"),
-      // Clicking the label goes to the hub; the dropdown lists only the three dedicated
-      // pages. "Pourquoi le niveau" and "L'inscription" stay as sections on the hub, not
-      // in the menu -- reached by opening the hub itself.
-      items: [
-        { href: path("/cours-allemand/full-training"), label: t("coursFullTraining") },
-        { href: path("/cours-allemand/fast-track"), label: t("coursFastTrack") },
-        { href: path("/cours-allemand/quel-parcours"), label: t("coursQuiz") },
-      ],
+      href: path("/visa-allemagne/chancenkarte"),
+      label: tr({ fr: "Chancenkarte", de: "Chancenkarte", en: "Chancenkarte" }, locale),
     },
+    { href: path("/cours-allemand"), label: t("coursAllemand") },
+    { href: path("/secteurs"), label: tr(SECTEURS_UI.secteurs, locale) },
     {
-      href: path("/ausbildung-allemagne"),
-      label: t("ausbildung"),
-      items: [
-        { href: path("/ausbildung-allemagne/metiers"), label: t("ausMetiers") },
-        { href: path("/ausbildung-allemagne/conditions"), label: t("ausConditions") },
-        { href: path("/ausbildung-allemagne/apres-ausbildung"), label: t("ausApres") },
-      ],
-    },
-    {
-      href: path("/visa-allemagne"),
-      label: t("visa"),
-      // The three visa routes the hub presents as cards. The Ausbildung visa detail
-      // lives in the Ausbildung silo, so that item crosses to /ausbildung-allemagne.
-      items: [
-        { href: path("/ausbildung-allemagne"), label: t("ausbildung") },
-        { href: path("/visa-allemagne/travailleur-qualifie"), label: t("visTravailleur") },
-        { href: path("/visa-allemagne/chancenkarte"), label: t("visChancenkarte") },
-      ],
-    },
-    {
-      href: path("/travailler-en-allemagne"),
-      label: t("travailler"),
-      // The two sub-topics of "working in Germany" -- both full pages living in other
-      // silos (the hub already presents them as cards).
-      items: [
-        { href: path("/metiers"), label: t("travMetiers") },
-        { href: path("/candidats/vivre-en-allemagne"), label: t("travVivre") },
-      ],
+      href: path("/evaluation"),
+      label: tr({ fr: "Évaluer mon profil", de: "Mein Profil einschätzen", en: "Assess my profile" }, locale),
     },
   ];
 
   const employerLinks = [
-    { href: path("/entreprises", "services"), label: t("entServices") },
-    { href: path("/entreprises", "profils"), label: t("entProfils") },
-    { href: path("/entreprises", "processus"), label: t("entProcessus") },
-    { href: path("/entreprises/partenariat"), label: t("entPartenaires") },
+    { href: path("/entreprises/fachkraefte"), label: t("entFachkraefte") },
+    { href: path("/entreprises/ausbildung"), label: t("entAzubis") },
+    { href: path("/entreprises/methode"), label: t("entMethode") },
+    { href: path("/entreprises/secteurs"), label: t("entSecteurs") },
+    { href: path("/entreprises/demande-recrutement"), label: t("entDemande") },
   ];
 
-  const companyLinks = [
-    { href: path("/a-propos"), label: t("aPropos") },
-    { href: path("/blog"), label: t("blog") },
+  // "À propos de nous": a simple single-column list, same shape as Entreprises/Candidats.
+  const aboutLinks = [
+    { href: path("/a-propos"), label: tr({ fr: "Qui sommes-nous", de: "Wer wir sind", en: "Who we are" }, locale) },
+    { href: path("/a-propos/methode"), label: tr({ fr: "Notre méthode", de: "Unsere Methode", en: "Our method" }, locale) },
+    { href: path("/a-propos/notre-histoire"), label: tr({ fr: "Notre histoire", de: "Unsere Geschichte", en: "Our story" }, locale) },
+    { href: path("/partenaires"), label: tr({ fr: "Nos partenaires", de: "Unsere Partner", en: "Our partners" }, locale) },
+    { href: path("/contact"), label: tr({ fr: "Contact", de: "Kontakt", en: "Contact" }, locale) },
   ];
-
-  const navLink =
-    "text-sm font-medium text-brand-ink hover:text-brand-gold-text transition-colors duration-150";
 
   return (
     <HeaderShell>
@@ -121,11 +78,9 @@ export async function SiteHeader() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
-            <NavDropdown label={t("candidats")} groups={candidateLinks} />
+            <NavDropdown label={t("candidats")} items={candidateLinks} />
             <NavDropdown label={t("entreprises")} items={employerLinks} />
-            <Link href="/a-propos" className={navLink}>
-              {t("aProposUs")}
-            </Link>
+            <NavDropdown label={t("aProposUs")} items={aboutLinks} />
             <LocaleSwitcher />
           </nav>
 
@@ -136,7 +91,7 @@ export async function SiteHeader() {
               entreprisesSwitch={entreprisesSwitch}
               candidateLinks={candidateLinks}
               employerLinks={employerLinks}
-              companyLinks={companyLinks}
+              companyLinks={aboutLinks}
               postulerLabel={t("postulerNow")}
               employerCtaLabel={tEnt("contactCta")}
               loginLabel={t("login")}

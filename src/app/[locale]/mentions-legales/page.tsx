@@ -25,6 +25,7 @@ export default async function MentionsLegalesPage() {
     [t("registrationLabel"), t("registrationValue")],
     [t("registeredAddressLabel"), t("registeredAddressValue")],
     [t("postalAddressLabel"), t("postalAddressValue")],
+    [t("legalRepLabel"), t("legalRepValue")],
   ];
 
   return (
@@ -38,6 +39,14 @@ export default async function MentionsLegalesPage() {
               <dd className="text-brand-black">{value}</dd>
             </div>
           ))}
+          <div>
+            <dt className="text-brand-ink-muted">{t("emailLabel")}</dt>
+            <dd className="text-brand-black">
+              <a href={`mailto:${t("emailValue")}`} className="hover:text-brand-gold-text transition-colors">
+                {t("emailValue")}
+              </a>
+            </dd>
+          </div>
           <div>
             <dt className="text-brand-ink-muted">{t("contactLabel")}</dt>
             <dd className="text-brand-black">

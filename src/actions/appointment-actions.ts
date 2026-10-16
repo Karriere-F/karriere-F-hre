@@ -24,6 +24,11 @@ export async function bookAppointment(input: unknown) {
     return { ok: false as const, error: "invalid_input" };
   }
 
+  // Honeypot filled → bot. Pretend success and drop it (don't book a slot).
+  if (parsed.data.company && parsed.data.company.trim() !== "") {
+    return { ok: true as const };
+  }
+
   const validSlots = await getAvailableSlots(parsed.data.appointmentDate);
   if (!validSlots.includes(parsed.data.appointmentTime)) {
     return { ok: false as const, error: "slot_unavailable" };

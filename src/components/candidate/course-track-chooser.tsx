@@ -112,11 +112,7 @@ function TrackCard({
       <p className="text-sm text-brand-ink-secondary mb-6 grow">{path.text}</p>
       <a
         href={path.ctaHref}
-        className={`press inline-flex w-fit items-center rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-150 ${
-          isMatch
-            ? "bg-brand-gold text-brand-black hover:bg-brand-gold-light"
-            : "border border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-white"
-        }`}
+        className="press inline-flex w-fit items-center rounded-full border border-brand-gold px-5 py-2.5 text-sm font-medium text-brand-gold-text transition-colors duration-150 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
       >
         {path.ctaLabel}
       </a>

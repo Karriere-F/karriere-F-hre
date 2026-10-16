@@ -20,8 +20,7 @@ type Job = {
   label: LocalizedText;
   de: string;
   // Whether this is a genuine dual Ausbildung (a paid 2-3.5 year vocational training),
-  // as opposed to an entry-level role or an add-on certification. Drives which jobs the
-  // /ausbildung-allemagne/metiers page lists.
+  // as opposed to an entry-level role or an add-on certification.
   ausbildung: boolean;
   duration: LocalizedText;
   qualifications: LocalizedText;

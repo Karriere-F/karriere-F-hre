@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { Fragment } from "react";
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowRight, Briefcase, Check, GraduationCap, ShieldCheck } from "lucide-react";
+import { ArrowRight, Briefcase, Check, GraduationCap } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { CoursAllemandCta } from "@/components/marketing/cours-allemand-cta";
 import { getPageContent } from "@/lib/content/get-page-content";
 import { metadataFromNamespace } from "@/lib/seo";
 import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
-import { SECTORS_ALL, ACTIVE_SECTOR_PATH, SECTOR_IMAGES, SECTEURS_UI } from "@/lib/secteurs";
-import { tr } from "@/lib/localized";
 import type { Locale } from "@i18n/routing";
 import type frMessages from "@messages/fr.json";
 
@@ -50,12 +49,14 @@ function balancedLines(text: string, n: number): string[] {
 
 function Flow({ steps, highlightLast }: { steps: string[]; highlightLast?: boolean }) {
   return (
-    <ol className="relative mt-6 space-y-0">
+    // flex-1 + justify-between lets flows with different step counts fill the same
+    // card height, so both cards read as the same length.
+    <ol className="relative mt-6 flex flex-1 flex-col justify-between">
+      <span aria-hidden="true" className="absolute left-[7px] top-2 bottom-2 w-px -translate-x-1/2 bg-brand-grid" />
       {steps.map((s, i) => {
         const last = i === steps.length - 1;
         return (
-          <li key={s} className="relative flex items-start gap-3 pb-5 last:pb-0">
-            {!last && <span aria-hidden="true" className="absolute left-[7px] top-5 bottom-0 w-px -translate-x-1/2 bg-brand-grid" />}
+          <li key={s} className="relative flex items-start gap-3 py-1.5">
             <span
               className={`relative z-10 mt-1 h-3.5 w-3.5 shrink-0 rounded-full ring-2 ring-brand-white ${
                 highlightLast && last ? "bg-brand-gold" : "bg-brand-gold/40"
@@ -98,8 +99,8 @@ export default async function TravaillerPage() {
       <section className="relative overflow-hidden bg-brand-white">
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
           <Image
-            src="/images/emploi-direct-hero.jpg"
-            alt="Un technicien qualifié africain intervient sur une armoire électrique dans une usine en Allemagne"
+            src="/images/emploi-direct-hero.webp"
+            alt="Une professionnelle prépare son dossier pour travailler ou se former en Allemagne"
             fill
             priority
             sizes="52vw"
@@ -156,11 +157,11 @@ export default async function TravaillerPage() {
 
       {/* Are you concerned? — eligibility checklist */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-text">
             {h.concernedIntro}
           </p>
-          <h2 className="mt-4 font-serif text-2xl sm:text-3xl lg:text-[1.9rem] xl:text-[2.1rem] text-brand-black leading-[1.15] lg:whitespace-nowrap">
+          <h2 className="mt-4 font-serif text-2xl sm:text-3xl lg:text-[1.9rem] xl:text-[2.1rem] text-brand-black leading-[1.15]">
             {h.concernedTitle}
           </h2>
 
@@ -179,7 +180,7 @@ export default async function TravaillerPage() {
             ))}
           </ul>
 
-          <p className="mt-8 max-w-3xl text-sm text-brand-ink-secondary leading-relaxed">{h.concernedNote}</p>
+          <p className="mt-8 text-sm text-brand-ink-secondary leading-relaxed">{h.concernedNote}</p>
           <p className="mt-2 text-xs text-brand-ink-muted">
             <a
               href="https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals"
@@ -202,9 +203,9 @@ export default async function TravaillerPage() {
 
       {/* Direct employment OR Ausbildung */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug lg:whitespace-nowrap">{h.compareTitle}</h2>
-          <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.compareTitle}</h2>
+          <div className="mx-auto mt-10 grid max-w-4xl items-stretch gap-6 md:grid-cols-2">
             <div className="flex h-full flex-col rounded-2xl border border-brand-grid bg-brand-white p-6 sm:p-7">
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold-text">
@@ -212,7 +213,7 @@ export default async function TravaillerPage() {
                 </span>
                 <div>
                   <h3 className="font-serif text-xl text-brand-black">{h.compareEmploiName}</h3>
-                  <p className="text-sm text-brand-ink-secondary">{h.compareEmploiSub}</p>
+                  <p className="text-sm text-brand-ink-secondary sm:min-h-[2.5rem]">{h.compareEmploiSub}</p>
                 </div>
               </div>
               <Flow steps={h.compareEmploiSteps} highlightLast />
@@ -224,13 +225,13 @@ export default async function TravaillerPage() {
                 </span>
                 <div>
                   <h3 className="font-serif text-xl text-brand-black">{h.compareAusName}</h3>
-                  <p className="text-sm text-brand-ink-secondary">{h.compareAusSub}</p>
+                  <p className="text-sm text-brand-ink-secondary sm:min-h-[2.5rem]">{h.compareAusSub}</p>
                 </div>
               </div>
               <Flow steps={h.compareAusSteps} />
             </div>
           </div>
-          <p className="mt-8 rounded-2xl border border-brand-black/10 bg-brand-card px-6 py-5 font-serif text-base text-brand-black text-balance leading-snug lg:whitespace-nowrap">
+          <p className="mx-auto mt-8 max-w-4xl rounded-2xl border border-brand-black/10 bg-brand-card px-6 py-5 text-center font-serif text-base text-brand-black text-balance leading-snug">
             {h.compareMessage}
           </p>
         </div>
@@ -273,21 +274,19 @@ export default async function TravaillerPage() {
 
       {/* Path */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-center font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.pathTitle}</h2>
-          <ol className="relative mt-12">
+          <ol className="mx-auto mt-12 max-w-2xl space-y-9">
             {h.steps.map((s, i) => {
               const last = i === h.steps.length - 1;
               return (
-                <li key={s.n} className="relative flex gap-5 pb-8 last:pb-0">
-                  {!last && <span aria-hidden="true" className="absolute left-6 top-14 bottom-0 w-px -translate-x-1/2 bg-brand-grid" />}
-                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-gold/40 bg-brand-white font-serif text-lg text-brand-gold-text">
+                <li key={s.n} className="flex flex-col items-center text-center">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-brand-gold/40 bg-brand-white font-serif text-lg text-brand-gold-text">
                     {s.n}
                   </span>
-                  <div className="pt-1.5">
-                    <h3 className="font-serif text-lg text-brand-black">{s.title}</h3>
-                    <p className="mt-1 text-sm text-brand-ink-secondary leading-relaxed">{s.detail}</p>
-                  </div>
+                  <h3 className="mt-4 font-serif text-lg text-brand-black">{s.title}</h3>
+                  <p className="mt-1 max-w-md text-sm text-brand-ink-secondary leading-relaxed">{s.detail}</p>
+                  {!last && <span aria-hidden="true" className="mt-6 h-6 w-px bg-brand-grid" />}
                 </li>
               );
             })}
@@ -295,89 +294,6 @@ export default async function TravaillerPage() {
         </div>
       </section>
 
-      {/* Sectors */}
-      <section className="bg-brand-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.sectorsTitle}</h2>
-          <p className="mt-3 text-sm text-brand-ink-muted">{h.sectorsNote}</p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SECTORS_ALL.map((sector) => {
-              if (!sector.active) {
-                const Icon = sector.icon;
-                return (
-                  <div
-                    key={sector.slug}
-                    className="flex min-h-[16rem] flex-col items-center justify-center rounded-2xl border border-dashed border-brand-grid bg-brand-card/40 p-6 text-center"
-                  >
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-black/[0.04] text-brand-ink-muted">
-                      <Icon size={22} strokeWidth={2} aria-hidden="true" />
-                    </span>
-                    <h3 className="mt-4 font-serif text-lg text-brand-ink-secondary">{tr(sector.name, locale)}</h3>
-                    <span className="mt-4 inline-flex items-center rounded-full bg-brand-black/[0.05] px-3 py-1 text-xs font-medium text-brand-ink-muted">
-                      {tr(SECTEURS_UI.comingSoon, locale)}
-                    </span>
-                  </div>
-                );
-              }
-              const href = ACTIVE_SECTOR_PATH[sector.slug as keyof typeof ACTIVE_SECTOR_PATH];
-              const image = SECTOR_IMAGES[sector.slug];
-              const Icon = sector.icon;
-              return (
-                <Link
-                  key={sector.slug}
-                  href={href}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-brand-grid bg-brand-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_12px_28px_-14px_rgba(17,17,17,0.25)]"
-                >
-                  {image ? (
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <Image
-                        src={image}
-                        alt={tr(sector.name, locale)}
-                        fill
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        style={{ objectPosition: "center 18%" }}
-                        className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex aspect-[16/10] items-center justify-center bg-brand-black">
-                      <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gold/15 text-brand-gold-light">
-                        <Icon size={28} strokeWidth={1.75} aria-hidden="true" />
-                      </span>
-                    </div>
-                  )}
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-serif text-lg text-brand-black">{tr(sector.name, locale)}</h3>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-gold-text">
-                      {content.hub.heroSecondary}
-                      <ArrowRight size={15} strokeWidth={2} aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Salary */}
-      <section className="bg-brand-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.salaryTitle}</h2>
-          <p className="mt-5 max-w-2xl text-brand-ink-secondary leading-relaxed">{h.salaryText}</p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {h.salaryFactors.map((f) => (
-              <div key={f} className="rounded-xl border border-brand-grid bg-brand-card px-5 py-4 text-sm font-medium text-brand-black">
-                {f}
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 flex items-start gap-2.5 rounded-lg border border-brand-grid bg-brand-card px-4 py-3.5 text-xs leading-relaxed text-brand-ink-muted">
-            <ShieldCheck size={16} aria-hidden="true" className="mt-0.5 shrink-0 text-brand-gold-text" />
-            <span>{h.salaryDisclaimer}</span>
-          </p>
-        </div>
-      </section>
 
       {/* Our role / what we don't promise */}
       <section className="bg-brand-white">
@@ -402,16 +318,26 @@ export default async function TravaillerPage() {
         </div>
       </section>
 
-      {/* After arrival */}
+      {/* After arrival — a connected three-phase journey */}
       <section className="bg-brand-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.afterTitle}</h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+          <h2 className="text-center font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.afterTitle}</h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             {h.after.map((a, i) => (
-              <div key={a.label} className="rounded-2xl border border-brand-grid bg-brand-white p-6">
-                <span className="font-serif text-2xl text-brand-gold-text/50">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-3 font-serif text-lg text-brand-black">{a.label}</h3>
-                <p className="mt-1.5 text-sm text-brand-ink-secondary leading-relaxed">{a.text}</p>
+              <div
+                key={a.label}
+                className="lift-on-hover animate-fade-up rounded-2xl border border-brand-grid bg-brand-white p-7"
+                style={{ animationDelay: `${i * 90}ms` }}
+              >
+                <h3 className="font-serif text-xl text-brand-black">{a.label}</h3>
+                <ul className="mt-4 space-y-2.5">
+                  {a.items.map((it) => (
+                    <li key={it} className="flex items-start gap-2.5 text-sm text-brand-ink-secondary">
+                      <Check size={16} strokeWidth={2.25} aria-hidden="true" className="mt-0.5 shrink-0 text-brand-gold-text" />
+                      {it}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -419,14 +345,14 @@ export default async function TravaillerPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-brand-black text-brand-white">
+      <section className="border-t border-brand-grid bg-brand-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-white text-balance leading-snug">{h.finalTitle}</h2>
-          <p className="mt-4 text-brand-white/70 leading-relaxed">{h.finalText}</p>
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">{h.finalTitle}</h2>
+          <p className="mt-4 text-brand-ink-secondary leading-relaxed">{h.finalText}</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/evaluation"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-light transition-colors hover:bg-brand-gold hover:text-brand-black"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
             >
               {h.finalPrimary}
               <ArrowRight size={18} aria-hidden="true" />
@@ -435,14 +361,15 @@ export default async function TravaillerPage() {
               href={wa}
               target="_blank"
               rel="noopener noreferrer"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-white/30 px-8 font-bold text-brand-white transition-colors hover:border-brand-white hover:bg-brand-white/10"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
             >
               {h.finalWhatsapp}
             </a>
           </div>
-          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brand-white/45">{h.finalTags}</p>
         </div>
       </section>
+
+      <CoursAllemandCta locale={locale} />
     </div>
   );
 }

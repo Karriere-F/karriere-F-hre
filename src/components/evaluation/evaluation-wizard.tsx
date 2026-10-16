@@ -113,11 +113,15 @@ export function EvaluationWizard() {
             {Math.round((screen / QUESTION_SCREENS) * 100)}%
           </span>
         </div>
-        <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-brand-grid">
-          <div
-            className="h-full rounded-full bg-brand-gold transition-[width] duration-500 ease-out"
-            style={{ width: `${(screen / QUESTION_SCREENS) * 100}%` }}
-          />
+        <div className="mt-2.5 flex gap-1.5" aria-hidden="true">
+          {Array.from({ length: QUESTION_SCREENS }, (_, i) => (
+            <span
+              key={i}
+              className={`h-0.5 flex-1 rounded-full transition-colors duration-500 ease-out ${
+                i < screen ? "bg-brand-gold" : "bg-brand-grid"
+              }`}
+            />
+          ))}
         </div>
       </div>
     ) : null;
@@ -136,7 +140,9 @@ export function EvaluationWizard() {
             {t("back")}
           </button>
         )}
-        {children}
+        <div key={screen} className="animate-step-in">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -211,7 +217,7 @@ export function EvaluationWizard() {
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-white to-transparent" />
             </div>
 
-            <div className="max-w-xl py-12 lg:flex lg:min-h-[440px] lg:flex-col lg:justify-center lg:py-16">
+            <div className="max-w-xl py-12 lg:flex lg:min-h-[440px] lg:flex-col lg:justify-start lg:pt-12 lg:pb-16">
               <h1 className="animate-fade-up font-serif text-3xl text-brand-black leading-[1.12] sm:text-4xl">
                 {titleLines.map((line) => (
                   <span key={line} className="block lg:whitespace-nowrap">
@@ -263,7 +269,7 @@ export function EvaluationWizard() {
   if (screen === 1) {
     return shell(
       <div>
-        {heading(t("objectif.title"), "animate-fade-up")}
+        {heading(t("objectif.title"))}
         <div className="mt-7 grid gap-2.5">
           {OBJECTIFS.map((id, i) => (
             <OptionButton
@@ -286,7 +292,7 @@ export function EvaluationWizard() {
   if (screen === 2) {
     return shell(
       <div>
-        {heading(t("etudes.title"), "animate-fade-up")}
+        {heading(t("etudes.title"))}
         <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
           {ETUDES.map((id, i) => (
             <OptionButton
@@ -321,7 +327,7 @@ export function EvaluationWizard() {
   if (screen === 3) {
     return shell(
       <div>
-        {heading(t("qualification.title"), "animate-fade-up")}
+        {heading(t("qualification.title"))}
         <div className="mt-7 grid gap-2.5">
           {QUALIFICATIONS.map((id, i) => (
             <OptionButton
@@ -356,7 +362,7 @@ export function EvaluationWizard() {
   if (screen === 4) {
     return shell(
       <div>
-        {heading(t("allemand.title"), "animate-fade-up")}
+        {heading(t("allemand.title"))}
         <div className="mt-6 grid grid-cols-3 gap-2.5 sm:grid-cols-6">
           {ALLEMANDS.map((id, i) => (
             <OptionButton
@@ -391,7 +397,7 @@ export function EvaluationWizard() {
   if (screen === 5) {
     return shell(
       <div>
-        {heading(t("age.title"), "animate-fade-up")}
+        {heading(t("age.title"))}
         <input
           type="number"
           inputMode="numeric"
@@ -420,7 +426,7 @@ export function EvaluationWizard() {
       emploi: string;
     }[];
     return shell(
-      <div className="animate-fade-up">
+      <div>
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand-ink-muted">
           {t("result.title")}
         </p>
@@ -524,7 +530,7 @@ export function EvaluationWizard() {
     const onChange = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
       setForm((f) => ({ ...f, [key]: e.target.value }));
     return shell(
-      <div className="animate-fade-up">
+      <div>
         {heading(t("lead.title"))}
         <p className="mt-4 max-w-xl text-brand-ink-secondary leading-relaxed">{t("lead.intro")}</p>
         <form
@@ -586,7 +592,7 @@ export function EvaluationWizard() {
     [t("final.labelAllemand"), answers.allemand && t(`allemand.options.${answers.allemand}`)],
   ];
   return shell(
-    <div className="animate-fade-up">
+    <div>
       <div className="inline-flex items-center gap-2 rounded-full bg-brand-gold/15 px-4 py-1.5 text-sm font-semibold text-brand-gold-text">
         <Check size={16} aria-hidden="true" />
         {t("final.badge")}

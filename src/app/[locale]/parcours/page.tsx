@@ -108,7 +108,7 @@ export default async function ParcoursPage() {
           </div>
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl py-14 lg:flex lg:min-h-[520px] lg:flex-col lg:justify-center lg:py-20">
+            <div className="max-w-2xl py-14 lg:flex lg:min-h-[520px] lg:flex-col lg:justify-start lg:pt-16 lg:pb-20">
               <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.5rem] text-brand-black leading-tight">
                 {heroLines.map((line) => (
                   <span key={line} className="block">
@@ -282,28 +282,44 @@ export default async function ParcoursPage() {
         </div>
       </section>
 
-      {/* 6 — Understand before you invest */}
+      {/* 6 — Understand before you invest — editorial band, two columns */}
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl text-brand-black text-balance leading-snug">
-            {content.understand.title}
-          </h2>
-          <p className="mt-5 text-brand-ink-secondary leading-relaxed">{content.understand.text}</p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {content.understand.items.map((it, i) => {
-              const Icon = understandIcons[i] ?? BookOpen;
-              return (
-                <div key={it.label} className="rounded-xl border border-brand-grid bg-brand-white p-5">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-gold/10 text-brand-gold-text">
-                    <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
-                  </span>
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold-text">
-                    {it.label}
-                  </p>
-                  <p className="mt-2 text-sm text-brand-ink-secondary leading-snug">{it.text}</p>
-                </div>
-              );
-            })}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-20">
+            {/* Left — heading + intro */}
+            <div className="lg:sticky lg:top-28 self-start">
+              <h2 className="animate-fade-up font-serif text-3xl sm:text-4xl text-brand-black text-balance leading-tight">
+                {content.understand.title}
+              </h2>
+              <p
+                className="animate-fade-up mt-6 max-w-md text-justify text-brand-ink-secondary leading-relaxed"
+                style={{ animationDelay: "80ms" }}
+              >
+                {content.understand.text}
+              </p>
+            </div>
+
+            {/* Right — the four things to understand, an editorial list */}
+            <ul className="lg:pl-4">
+              {content.understand.items.map((it, i) => {
+                const Icon = understandIcons[i] ?? BookOpen;
+                return (
+                  <li
+                    key={it.label}
+                    style={{ animationDelay: `${120 + i * 90}ms` }}
+                    className="animate-fade-up flex items-start gap-5 py-6 first:pt-0 lg:py-7"
+                  >
+                    <span className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold-text">
+                      <Icon size={22} strokeWidth={1.6} aria-hidden="true" />
+                    </span>
+                    <div>
+                      <h3 className="font-serif text-xl text-brand-black sm:text-2xl">{it.label}</h3>
+                      <p className="mt-2 text-brand-ink-secondary leading-relaxed">{it.text}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </section>
@@ -318,14 +334,14 @@ export default async function ParcoursPage() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/evaluation"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brand-gold px-8 font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
             >
               {content.finalCta.primary}
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link
               href="/contact"
-              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-grid px-8 font-bold text-brand-black transition-colors hover:border-brand-gold hover:text-brand-gold-text"
+              className="press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
             >
               {content.finalCta.secondary}
             </Link>

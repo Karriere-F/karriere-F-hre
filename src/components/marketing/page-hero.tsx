@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { ParallaxImage } from "@/components/motion/parallax-image";
 
@@ -11,13 +12,28 @@ export function PageHero({
   image,
   imageAlt,
   imagePosition = "center 30%",
+  imageWidthClass = "w-[52%]",
+  alignTop = false,
+  wide = false,
+  subtitleGapClass = "mt-4",
+  subtitleClassName = "",
 }: {
-  title: string;
+  title: ReactNode;
   subtitle?: string;
   kicker?: string;
   image?: string;
   imageAlt?: string;
   imagePosition?: string;
+  /** Desktop width of the bleeding hero photo (Tailwind width class). */
+  imageWidthClass?: string;
+  /** Top-align the hero text (instead of vertically centering it). */
+  alignTop?: boolean;
+  /** Widen the hero text column (title + subtitle). */
+  wide?: boolean;
+  /** Top margin of the subtitle (Tailwind), to push it lower under the title. */
+  subtitleGapClass?: string;
+  /** Extra classes for the subtitle paragraph (e.g. "text-justify"). */
+  subtitleClassName?: string;
 }) {
   const eyebrow = kicker ? (
     <p className="animate-fade-up mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
@@ -26,16 +42,17 @@ export function PageHero({
   ) : null;
 
   if (!image) {
+    const textWidth = wide ? "max-w-5xl" : "max-w-2xl";
     return (
       <section className="bg-brand-card">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           {eyebrow}
-          <h1 className="animate-fade-up max-w-2xl font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight">
+          <h1 className={`animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight ${textWidth}`}>
             {title}
           </h1>
           {subtitle && (
             <p
-              className="animate-fade-up mt-4 max-w-2xl text-brand-ink-secondary"
+              className={`animate-fade-up mt-4 text-brand-ink-secondary ${textWidth} ${subtitleClassName}`}
               style={{ animationDelay: "80ms" }}
             >
               {subtitle}
@@ -49,7 +66,7 @@ export function PageHero({
   return (
     <section className="relative overflow-hidden bg-brand-card">
       {/* Desktop photo: bleeds in from the right, fades into the page */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
+      <div className={`pointer-events-none absolute inset-y-0 right-0 hidden lg:block ${imageWidthClass}`}>
         <ParallaxImage
           src={image}
           alt={imageAlt ?? ""}
@@ -78,14 +95,18 @@ export function PageHero({
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-xl py-12 lg:flex lg:min-h-[460px] lg:flex-col lg:justify-center lg:py-20">
+        <div
+          className={`py-12 lg:flex lg:min-h-[460px] lg:flex-col ${wide ? "max-w-3xl" : "max-w-xl"} ${
+            alignTop ? "lg:justify-start lg:pt-14 lg:pb-20" : "lg:justify-center lg:py-20"
+          }`}
+        >
           {eyebrow}
           <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight">
             {title}
           </h1>
           {subtitle && (
             <p
-              className="animate-fade-up mt-4 max-w-lg text-brand-ink-secondary"
+              className={`animate-fade-up text-brand-ink-secondary ${subtitleGapClass} ${wide ? "max-w-2xl" : "max-w-lg"} ${subtitleClassName}`}
               style={{ animationDelay: "80ms" }}
             >
               {subtitle}

@@ -71,6 +71,10 @@
 html {
   /* Sticky header clearance so in-page anchor jumps don't hide content behind it. */
   scroll-padding-top: 6rem;
+  /* Contain any off-canvas horizontal overflow at the scroll-container level so no
+     stray horizontal scrollbar ever appears. `clip` keeps vertical scrolling and the
+     sticky header intact (unlike `hidden`, which would create a scroll container). */
+  overflow-x: clip;
 }
 
 /* ---- Keyboard focus, site-wide ---- */
@@ -103,6 +107,11 @@ body {
   line-height: 1.65;
   /* Long words (German compounds, emails, URLs) never spill out of their box. */
   overflow-wrap: break-word;
+  /* No stray horizontal scrollbar site-wide: `clip` (not `hidden`) contains any
+     off-canvas overflow — from slide-in animations, negative-margin hero images,
+     or sub-pixel rounding — without creating a scroll container, so the sticky
+     header and in-page anchor jumps keep working. Vertical scrolling is untouched. */
+  overflow-x: clip;
 }
 
 /* ---- Text wrapping, site-wide ---- */
@@ -194,6 +203,28 @@ p {
   }
 }
 
+/* Step transition for the profile-evaluation wizard: each new question slides in
+   gently from the right + fades. Keyed by step so it replays on every navigation.
+   Calm and progressive — the "professional tool" feel, not a flashy carousel. */
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateX(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-step-in {
+  animation: step-in 420ms var(--ease-out-strong) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-step-in {
+    animation: none;
+  }
+}
+
 /* Very slow cinematic zoom (Apple-style ken burns) for hero imagery. */
 @keyframes slowZoom {
   from {
@@ -210,10 +241,10 @@ p {
     transition: transform 200ms var(--ease-out-strong), box-shadow 200ms var(--ease-out-strong);
   }
   .lift-on-hover:hover {
-    transform: translateY(-3px);
-    /* Blur kept <=8px on purpose: a 1px border is already present at rest, and
-       pairing that with a wide, soft shadow is the "ghost-card" pattern. */
-    box-shadow: 0 6px 8px -4px rgb(0 0 0 / 0.16);
+    transform: translateY(-6px);
+    /* Soft, wide shadow tied to the lift — the card rises off the page. Blur is
+       negative-spread so it stays a halo, not a hard drop. */
+    box-shadow: 0 18px 34px -18px rgb(17 17 17 / 0.28);
   }
 }
 

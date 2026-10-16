@@ -124,7 +124,7 @@ export function MobileNav({
             <Link
               href="/employer/signup"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-brand-gold px-3 py-2 text-center text-brand-black font-medium"
+              className="mt-2 rounded-full border border-brand-gold px-3 py-2 text-center text-brand-gold-text font-medium transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
             >
               {employerCtaLabel}
             </Link>
@@ -132,7 +132,7 @@ export function MobileNav({
             <Link
               href="/postuler"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-brand-gold px-3 py-2 text-center text-brand-black font-medium"
+              className="mt-2 rounded-full border border-brand-gold px-3 py-2 text-center text-brand-gold-text font-medium transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
             >
               {postulerLabel}
             </Link>

@@ -146,3 +146,21 @@ export async function cancelAppointment(appointmentId: string) {
   revalidatePath("/admin/appointments");
   return { ok: true as const };
 }
+
+// On-demand, short-lived (5 min) signed URL for a Fast Track document stored in the private
+// cv-uploads bucket. Admin-only; the message inbox stores only the storage path (never a
+// long-lived URL), so access to applicant CVs/diplomas is minted fresh each time it's opened.
+export async function getUploadSignedUrl(path: string) {
+  await requireRole("admin");
+
+  // Only fast-track PDFs, no path traversal — the only paths that appear in messages.
+  if (!/^fast-track\/[A-Za-z0-9._-]+\/(cv|diplomes)\.pdf$/.test(path)) {
+    return { ok: false as const, error: "invalid_path" };
+  }
+
+  const admin = createAdminClient();
+  const { data, error } = await admin.storage.from("cv-uploads").createSignedUrl(path, 300);
+  if (error || !data?.signedUrl) return { ok: false as const, error: "sign_failed" };
+
+  return { ok: true as const, url: data.signedUrl };
+}

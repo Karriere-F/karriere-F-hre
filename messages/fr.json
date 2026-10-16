@@ -25,6 +25,11 @@
     "entProfils": "Profils",
     "entProcessus": "Processus",
     "entPartenaires": "Partenaires",
+    "entFachkraefte": "Recruter des Fachkräfte",
+    "entAzubis": "Recruter des Azubis",
+    "entMethode": "Notre méthode",
+    "entSecteurs": "Nos secteurs",
+    "entDemande": "Décrire mon besoin",
     "metiers": "Métiers",
     "aPropos": "À propos",
     "blog": "Blog",
@@ -96,12 +101,13 @@
     "heroTrust1": "Accompagnement complet",
     "heroTrust2": "Experts Allemagne",
     "heroTrust3": "Suivi jusqu'à votre installation",
-    "door1Title": "Vous voulez partir en Allemagne",
-    "door1Body": "Emploi qualifié, Ausbildung ou Chancenkarte, nous vous formons en allemand, faisons reconnaître votre diplôme et vous accompagnons jusqu'au départ.",
-    "door2Title": "Vous cherchez des talents qualifiés",
-    "door2Body": "Nous formons, sélectionnons et préparons des professionnels prêts à s'intégrer durablement dans vos équipes, en Allemagne.",
-    "metiersTitle": "Votre métier a sa place en Allemagne.",
-    "metiersLead": "L'Allemagne recrute des professionnels qualifiés dans de nombreux secteurs en tension : santé, ingénierie, bâtiment, industrie, logistique, informatique, hôtellerie-restauration et services.",
+    "door1Title": "Vous souhaitez travailler ou vous former en Allemagne ?",
+    "door1Body": "Ausbildung, emploi qualifié, Chancenkarte",
+    "door2Title": "Vous recherchez des candidats qualifiés ?",
+    "door2Body": "Azubis, Fachkräfte, profils expérimentés",
+    "metiersKicker": "Les métiers accessibles",
+    "metiersTitle": "Des métiers. Des parcours. Une carrière.",
+    "metiersLead": "Découvrez les secteurs dans lesquels vous pouvez vous former ou travailler en Allemagne selon votre profil et votre qualification.",
     "metiersLead2": "Karriere Fähre vous accompagne à chaque étape pour transformer votre expérience en une carrière en Allemagne.",
     "metierMedecins": "Médecins",
     "metierSante": "Santé",
@@ -115,8 +121,8 @@
     "metierIndustrie": "Industrie",
     "metierLogistique": "Logistique & Transport",
     "founderCta": "Découvrir notre histoire",
-    "ctaCandidate": "Je veux travailler / me former en Allemagne",
-    "ctaEmployer": "Je recrute",
+    "ctaCandidate": "Découvrir les parcours",
+    "ctaEmployer": "Nos solutions de recrutement",
     "ctaBook": "Prendre rendez-vous",
     "riveEyebrow": "Le constat",
     "riveTitle": "Deux continents. Une même ambition",
@@ -177,7 +183,7 @@
     "pillar3Body": "Une fois en Allemagne, nous facilitons votre installation et votre intégration : logement, formalités d'arrivée et premiers pas dans votre nouvelle vie.",
     "methodeTitle1": "Une méthode claire.",
     "methodeTitle2": "Un accompagnement complet.",
-    "methodeLead": "Construire une carrière en Allemagne demande bien plus qu'une simple candidature. Nous accompagnons chaque candidat à chaque étape, jusqu'à son intégration.",
+    "methodeLead": "Construire une carrière en Allemagne ne se résume pas à une candidature. De la préparation en allemand à la reconnaissance de votre diplôme, du placement jusqu'à votre installation, nous vous accompagnons à chaque étape, sans jamais vous laisser seul face aux démarches.",
     "stepPrepareTitle": "Préparer",
     "stepConstruireTitle": "Construire",
     "stepReussirTitle": "Réussir",
@@ -192,9 +198,11 @@
     "reuss1": "Installation",
     "reuss2": "Intégration",
     "reuss3": "Suivi",
-    "promoTitle": "Notre première promotion est en cours",
-    "promoText": "Nos premiers candidats se préparent, en cours d'allemand, à leur départ pour l'Allemagne.",
+    "promoTitle": "Notre première promotion est déjà en route.",
+    "promoText": "Nos premiers candidats apprennent l'allemand et préparent, pas à pas avec nous, leur départ pour l'Allemagne.",
     "promoBadge": "En cours",
+    "promoCta1": "Voir nos parcours en langue",
+    "promoCta2": "Évaluer mon niveau d'allemand",
     "teamTitle": "Une équipe engagée à vos côtés",
     "trust1": "Accompagnement individuel",
     "trust2": "Présence au Cameroun et en Allemagne",
@@ -302,7 +310,7 @@
   },
   "candidats": {
     "title": "Travailler ou se former en Allemagne, accompagné à chaque étape",
-    "subtitle": "En bref : il existe trois voies légales pour aller travailler en Allemagne depuis le Cameroun : l'emploi qualifié, la formation professionnelle (Ausbildung) et la carte des opportunités (Chancenkarte). Karriere Fähre évalue votre profil, vous forme en allemand et prépare toutes vos démarches jusqu'au départ.",
+    "subtitle": "Depuis le Cameroun, plusieurs parcours mènent à un projet professionnel en Allemagne : l'emploi qualifié, la formation professionnelle (Ausbildung) ou, sous certaines conditions, la Carte des opportunités (Chancenkarte) pour chercher un emploi sur place. Karriere Fähre évalue votre profil, vous aide à progresser en allemand et vous accompagne dans toutes vos démarches, jusqu'à votre départ.",
     "kick": "Espace candidat, Cameroun & Afrique centrale → Allemagne",
     "ctaEligibility": "Vérifier mon éligibilité",
     "ctaVoies": "Comparer les 3 voies",
@@ -357,9 +365,23 @@
     "tableRow6Val2": "Vous débutez votre carrière",
     "tableRow6Val3": "Vous êtes flexible et motivé",
     "tableNote": "Les seuils exacts (points, niveau de langue par métier) évoluent selon la réglementation allemande. Nous les vérifions pour votre cas lors de l'évaluation.",
+    "tableCtaText": "Vous ne savez pas encore quelle voie correspond à votre profil ?",
+    "tableCtaBtn": "Faire évaluer mon profil",
+    "langTitle": "C'est votre niveau d'allemand qui décide de votre projet",
+    "langLead": "L'allemand n'est pas une formalité : c'est le critère qui ouvre ou ferme chacune des voies vers l'Allemagne. Voici ce que chaque voie exige.",
+    "lang1Title": "Emploi qualifié",
+    "lang1Body": "Niveau B2 requis, avec un diplôme ou une expérience reconnue.",
+    "lang2Title": "Ausbildung",
+    "lang2Body": "Niveau B2 requis pour intégrer une formation en alternance.",
+    "lang3Title": "Chancenkarte",
+    "lang3Body": "A1 au minimum : plus votre niveau est élevé, plus vous marquez de points.",
+    "langNote": "Les seuils exacts évoluent selon la réglementation allemande et le métier visé. Nous les vérifions pour votre cas lors de l'évaluation.",
+    "langCtaText": "Vous n'avez pas encore le niveau de langue requis ?",
+    "langCtaCours": "Voir nos parcours en langue",
+    "langCtaTest": "Évaluer mon niveau d'allemand",
     "eligibiliteEyebrow": "Éligibilité",
-    "eligibiliteTitle": "Suis-je éligible pour travailler en Allemagne ?",
-    "eligibiliteLead": "Vous êtes probablement éligible si vous avez entre 18 et environ 40 ans, un diplôme ou une expérience professionnelle, et la volonté d'apprendre l'allemand jusqu'au niveau requis. Quatre éléments comptent :",
+    "eligibiliteTitle": "Suis-je éligible pour travailler ou me former en Allemagne ?",
+    "eligibiliteLead": "Vous êtes probablement éligible si vous avez un diplôme ou une expérience professionnelle, et la volonté d'apprendre l'allemand jusqu'au niveau requis. Quatre éléments comptent :",
     "crit1Title": "Diplôme ou expérience",
     "crit1Body": "Un diplôme (même camerounais) ou une expérience solide dans un métier recherché. Nous aidons à le faire reconnaître.",
     "crit2Title": "Niveau d'allemand",
@@ -368,7 +390,7 @@
     "crit3Body": "La plupart des voies s'adressent aux 18-40 ans, l'Ausbildung visant plutôt les plus jeunes. Chaque cas s'étudie.",
     "crit4Title": "Motivation & projet",
     "crit4Body": "La réussite tient autant à la préparation qu'à l'envie. Nous accompagnons ceux qui s'engagent sérieusement.",
-    "ctaEval": "Faire évaluer mon profil",
+    "ctaEval": "Évaluer mon profil",
     "accompagnementEyebrow": "Service complet",
     "accompagnementTitle": "Notre accompagnement 360°",
     "accompagnementLead": "De la première évaluation jusqu'à votre intégration en Allemagne, nous prenons en charge chaque étape. Sept services, un seul interlocuteur : vous n'avez jamais à naviguer seul dans les démarches.",
@@ -697,7 +719,7 @@
     "employeurCta": "Voir notre offre employeurs",
     "hub": {
       "heroTitle": "Se former en Allemagne. Construire une vraie carrière.",
-      "heroSubtitle": "Une Ausbildung permet d'apprendre un métier en combinant formation\nthéorique et expérience pratique en entreprise. Dans le système dual, vous alternez entre l'entreprise et la Berufsschule. La durée dépend du métier, généralement entre 2 et 3,5 ans.",
+      "heroSubtitle": "Une Ausbildung permet d'apprendre un métier en combinant formation théorique et expérience pratique en entreprise. Dans le système dual, vous alternez entre l'entreprise et la Berufsschule. La durée dépend du métier, généralement entre 2 et 3,5 ans.",
       "heroPrimary": "Trouver mon parcours Ausbildung",
       "heroSecondary": "Voir les métiers accessibles",
       "s1Num": "01",
@@ -707,23 +729,23 @@
       "s1Sectors": [
         {
           "name": "Santé",
-          "items": "Pflege · soins · professions médicales et médico-sociales"
+          "items": "Pflege, soins, professions médicales et médico-sociales"
         },
         {
           "name": "Industrie & technique",
-          "items": "Mécanique · électrotechnique · production · maintenance"
+          "items": "Mécanique, électrotechnique, production, maintenance"
         },
         {
           "name": "BTP",
-          "items": "Construction · installations · métiers techniques"
+          "items": "Construction, installations, métiers techniques"
         },
         {
           "name": "Informatique",
-          "items": "IT · développement · systèmes · numérique"
+          "items": "IT, développement, systèmes, numérique"
         },
         {
           "name": "Hôtellerie & restauration",
-          "items": "Cuisine · restauration · hôtellerie"
+          "items": "Cuisine, restauration, hôtellerie"
         }
       ],
       "s1Cta": "Découvrir les métiers",
@@ -747,11 +769,11 @@
       "s3Steps": [
         {
           "label": "Berufsschule",
-          "detail": "Théorie · connaissances professionnelles"
+          "detail": "Théorie et connaissances professionnelles"
         },
         {
           "label": "Entreprise",
-          "detail": "Pratique · expérience · responsabilités"
+          "detail": "Pratique, expérience, responsabilités"
         },
         {
           "label": "Examen final",
@@ -783,7 +805,7 @@
           "amount": "1 014 €"
         }
       ],
-      "s4Note": "Montants bruts, minimums légaux 2026. La rémunération réelle peut être supérieure selon le métier, la branche, la région et l'entreprise. Il s'agit de la rémunération pendant l'Ausbildung — à ne pas confondre avec le salaire une fois qualifié.",
+      "s4Note": "Montants bruts, minimums légaux 2026. La rémunération réelle peut être supérieure selon le métier, la branche, la région et l'entreprise. Il s'agit de la rémunération pendant l'Ausbildung, à ne pas confondre avec le salaire une fois qualifié.",
       "s4Source": "Source : Bundesagentur für Arbeit",
       "s4Cta": "Voir les conditions",
       "s5Num": "05",
@@ -799,11 +821,11 @@
         },
         {
           "label": "Se spécialiser",
-          "text": "Weiterbildung · Meister · Techniker · Fachwirt."
+          "text": "Weiterbildung, Meister, Techniker, Fachwirt."
         },
         {
           "label": "Évoluer",
-          "text": "Plus de responsabilités · fonctions spécialisées · management."
+          "text": "Plus de responsabilités, fonctions spécialisées, management."
         },
         {
           "label": "Poursuivre des études",
@@ -1084,6 +1106,8 @@
       "compareAusSteps": [
         "Préparation",
         "Candidature",
+        "Contrat",
+        "Visa",
         "Ausbildung",
         "Qualification",
         "Emploi"
@@ -1168,15 +1192,15 @@
       "after": [
         {
           "label": "Avant le départ",
-          "text": "Préparation administrative · voyage · informations pratiques"
+          "items": ["Préparation administrative", "Voyage", "Informations pratiques"]
         },
         {
           "label": "À l'arrivée",
-          "text": "Installation · premiers repères · prise de poste"
+          "items": ["Installation", "Premiers repères", "Prise de poste"]
         },
         {
           "label": "Ensuite",
-          "text": "Suivi · accompagnement · intégration professionnelle"
+          "items": ["Suivi", "Accompagnement", "Intégration professionnelle"]
         }
       ],
       "finalTitle": "Votre expérience mérite d'être évaluée.",
@@ -1558,6 +1582,10 @@
     "registeredAddressValue": "Bonamoussadi, immeuble en face de Super U, 3e étage, Douala, Cameroun",
     "postalAddressLabel": "Adresse postale",
     "postalAddressValue": "BP 8414, Douala, Cameroun",
+    "legalRepLabel": "Représentant légal",
+    "legalRepValue": "Gaëlle Boumsong & Sebastian Schmidt",
+    "emailLabel": "E-mail professionnel",
+    "emailValue": "kontakt@karrierefaehre.com",
     "contactLabel": "Contact",
     "imprintNote": "Responsable de publication : la direction de Karriere Fähre SARL.",
     "privacyTitle": "Politique de confidentialité",
@@ -2364,6 +2392,8 @@
         "hotellerie": "Hôtellerie & restauration",
         "logistique": "Logistique",
         "informatique": "Informatique",
+        "commerce": "Commerce & vente",
+        "agroalimentaire": "Agroalimentaire",
         "autre": "Autre"
       }
     },

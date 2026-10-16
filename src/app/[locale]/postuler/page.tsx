@@ -18,9 +18,9 @@ export default async function PostulerPage() {
   return (
     <div>
       <PageHero title={content.title} subtitle={content.subtitle} />
-      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 text-center">
         <p className="animate-fade-up text-brand-ink-secondary leading-relaxed mb-8">{content.body}</p>
-        <div className="animate-fade-up flex flex-wrap justify-center gap-4" style={{ animationDelay: "80ms" }}>
+        <div className="animate-fade-up flex flex-col items-center justify-center gap-4 sm:flex-row" style={{ animationDelay: "80ms" }}>
           <Link
             href="/candidate/signup"
             className="press inline-flex rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-bold hover:bg-brand-gold hover:text-brand-black transition-colors duration-150"
@@ -29,7 +29,7 @@ export default async function PostulerPage() {
           </Link>
           <a
             href={candidatsFaqHref}
-            className="press inline-flex rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
+            className="press inline-flex rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-medium transition-colors duration-150 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
           >
             {content.ctaSecondary}
           </a>

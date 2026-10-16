@@ -99,7 +99,7 @@ export default async function ShortageOccupationDetailPage({
             </Link>
             <Link
               href="/metiers"
-              className="press rounded-full border border-brand-black px-6 py-3 text-brand-black font-medium hover:bg-brand-black hover:text-brand-white transition-colors duration-150"
+              className="press rounded-full border border-brand-gold px-6 py-3 text-brand-gold-text font-medium transition-colors duration-150 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black"
             >
               {t("ctaAll")}
             </Link>

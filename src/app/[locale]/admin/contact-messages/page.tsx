@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { ContactMessageToggle } from "@/components/admin/contact-message-toggle";
+import { UploadedDocLinks } from "@/components/admin/uploaded-doc-links";
 
 export default async function AdminContactMessagesPage() {
   const supabase = await createClient();
@@ -21,7 +22,8 @@ export default async function AdminContactMessagesPage() {
               </p>
               <ContactMessageToggle messageId={m.id} handled={m.handled} />
             </div>
-            <p className="text-sm text-brand-ink-secondary">{m.message}</p>
+            <p className="text-sm text-brand-ink-secondary whitespace-pre-line">{m.message}</p>
+            <UploadedDocLinks message={m.message ?? ""} />
           </div>
         ))}
         {(!messages || messages.length === 0) && (

@@ -1,4 +1,5 @@
 import { createAdminClient } from "@/lib/supabase/admin";
+import { requireRole } from "@/lib/auth/require-role";
 import { DOMAINES, frLabel } from "@/lib/evaluation";
 import { EvaluationToggle } from "@/components/admin/evaluation-toggle";
 import { Link } from "@i18n/navigation";
@@ -20,6 +21,9 @@ export default async function AdminEvaluationsPage({
 }: {
   searchParams: Promise<Search>;
 }) {
+  // This page reads profile_evaluations with the service-role client (bypasses RLS), so the
+  // admin role must be enforced here, not only in the admin layout.
+  await requireRole("admin");
   const { orientation, domaine } = await searchParams;
   const admin = createAdminClient();
 

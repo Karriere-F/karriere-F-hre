@@ -13,13 +13,14 @@ type NewsletterFormProps = {
 
 export function NewsletterForm({ placeholder, cta, success, error }: NewsletterFormProps) {
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState(""); // honeypot
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (status === "loading") return;
     setStatus("loading");
-    const res = await subscribeNewsletter({ email });
+    const res = await subscribeNewsletter({ email, company });
     if (res.ok) {
       setStatus("done");
       setEmail("");
@@ -39,6 +40,17 @@ export function NewsletterForm({ placeholder, cta, success, error }: NewsletterF
 
   return (
     <form onSubmit={onSubmit} className="w-full max-w-sm">
+      {/* Honeypot — hidden from real users, left blank; bots fill it and get dropped. */}
+      <input
+        type="text"
+        name="company"
+        value={company}
+        onChange={(e) => setCompany(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div className="flex items-center gap-2 rounded-lg border border-brand-white/15 bg-brand-white/[0.04] p-1.5 focus-within:border-brand-gold/60 transition-colors duration-200">
         <input
           type="email"

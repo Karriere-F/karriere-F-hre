@@ -52,10 +52,20 @@ export const routing = defineRouting({
       de: "/deutschkurs/fast-track",
       en: "/german-course/fast-track",
     },
+    "/cours-allemand/fast-track/inscription": {
+      fr: "/cours-allemand/fast-track/inscription",
+      de: "/deutschkurs/fast-track/anmeldung",
+      en: "/german-course/fast-track/apply",
+    },
     "/cours-allemand/quel-parcours": {
       fr: "/cours-allemand/quel-parcours",
       de: "/deutschkurs/welcher-weg",
       en: "/german-course/which-track",
+    },
+    "/cours-allemand/test-niveau": {
+      fr: "/cours-allemand/test-niveau",
+      de: "/deutschkurs/niveautest",
+      en: "/german-course/level-test",
     },
 
     // Silo 2. "Ausbildung" is kept untranslated in every locale -- it's the term people
@@ -64,11 +74,6 @@ export const routing = defineRouting({
       fr: "/ausbildung-allemagne",
       de: "/ausbildung-in-deutschland",
       en: "/ausbildung-germany",
-    },
-    "/ausbildung-allemagne/metiers": {
-      fr: "/ausbildung-allemagne/metiers",
-      de: "/ausbildung-in-deutschland/berufe",
-      en: "/ausbildung-germany/occupations",
     },
     "/ausbildung-allemagne/conditions": {
       fr: "/ausbildung-allemagne/conditions",
@@ -318,6 +323,31 @@ export const routing = defineRouting({
     },
 
     "/entreprises": { fr: "/entreprises", de: "/unternehmen", en: "/employers" },
+    "/entreprises/fachkraefte": {
+      fr: "/entreprises/fachkraefte",
+      de: "/unternehmen/fachkraefte",
+      en: "/employers/skilled-workers",
+    },
+    "/entreprises/ausbildung": {
+      fr: "/entreprises/ausbildung",
+      de: "/unternehmen/ausbildung",
+      en: "/employers/ausbildung",
+    },
+    "/entreprises/methode": {
+      fr: "/entreprises/methode",
+      de: "/unternehmen/methode",
+      en: "/employers/method",
+    },
+    "/entreprises/secteurs": {
+      fr: "/entreprises/secteurs",
+      de: "/unternehmen/branchen",
+      en: "/employers/sectors",
+    },
+    "/entreprises/demande-recrutement": {
+      fr: "/entreprises/demande-recrutement",
+      de: "/unternehmen/personalanfrage",
+      en: "/employers/recruitment-request",
+    },
     "/entreprises/partenariat": {
       fr: "/entreprises/partenariat",
       de: "/unternehmen/partnerschaft",

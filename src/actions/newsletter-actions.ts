@@ -5,6 +5,9 @@ import { createClient } from "@/lib/supabase/server";
 
 const newsletterSchema = z.object({
   email: z.string().email(),
+  // Honeypot: a hidden field real users never fill. Bots that fill every input get silently
+  // dropped (we return success so they don't learn the field is a trap).
+  company: z.string().optional(),
 });
 
 // Newsletter sign-ups are captured as contact messages (a lightweight lead
@@ -13,6 +16,10 @@ export async function subscribeNewsletter(input: unknown) {
   const parsed = newsletterSchema.safeParse(input);
   if (!parsed.success) {
     return { ok: false as const, error: "invalid_email" };
+  }
+
+  if (parsed.data.company && parsed.data.company.trim() !== "") {
+    return { ok: true as const };
   }
 
   const supabase = await createClient();

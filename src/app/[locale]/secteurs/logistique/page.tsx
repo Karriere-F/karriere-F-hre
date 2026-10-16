@@ -51,7 +51,7 @@ export default async function SecteursLogistiquePage() {
       <PageHero title={tr(LOGISTIQUE_UI.sector, locale)} subtitle={tr(SECTEURS_UI.chooseRouteTitle, locale)} />
 
       <section className="bg-brand-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 -mt-10 sm:-mt-12">
           <Link
             href="/secteurs"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text hover:underline"
@@ -67,14 +67,9 @@ export default async function SecteursLogistiquePage() {
                 href={href}
                 className="group flex flex-col rounded-2xl border border-brand-grid bg-brand-card p-7 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-gold/60 hover:shadow-[0_14px_34px_-16px_rgba(17,17,17,0.25)] sm:p-8"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
-                  <Icon size={24} strokeWidth={2} aria-hidden="true" />
-                </span>
-                <h2 className="mt-4 font-serif text-xl text-brand-black leading-snug sm:text-2xl">
-                  {title}
-                </h2>
-                <p className="mt-2 flex-1 text-sm text-brand-ink-secondary leading-relaxed">{intro}</p>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-gold-text">
+                <div className="flex items-center gap-3"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black"><Icon size={24} strokeWidth={2} aria-hidden="true" /></span><h2 className="font-serif text-xl text-brand-black leading-snug sm:text-2xl">{title}</h2></div>
+                <p className="mt-2 flex-1 text-justify text-sm text-brand-ink-secondary leading-relaxed">{intro}</p>
+                <span className="mt-6 inline-flex items-center gap-1.5 self-center rounded-md border border-brand-gold px-5 py-2.5 text-sm font-semibold text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
                   {tr(SECTEURS_UI.choose, locale)}
                   <ArrowRight
                     size={16}

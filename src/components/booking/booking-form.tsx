@@ -50,6 +50,7 @@ export function BookingForm() {
       appointmentDate: date,
       appointmentTime: selectedTime,
       notes: String(formData.get("notes") ?? ""),
+      company: String(formData.get("company") ?? ""),
     });
 
     if (!result.ok) {
@@ -106,6 +107,8 @@ export function BookingForm() {
 
       {selectedTime && (
         <form action={onSubmit} className="animate-fade-up flex flex-col gap-4">
+          {/* Honeypot — hidden from real users; bots that fill it are silently dropped. */}
+          <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
           <div>
             <label className="block text-sm text-brand-ink-secondary mb-1">
               {t("formName")}

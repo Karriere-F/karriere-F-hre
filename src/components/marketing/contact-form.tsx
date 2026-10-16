@@ -34,6 +34,15 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 max-w-md">
+      {/* Honeypot — hidden from real users; bots that fill it are silently dropped. */}
+      <input
+        {...register("company")}
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div>
         <label className="block text-sm text-brand-ink-secondary mb-1">
           {t("formName")}

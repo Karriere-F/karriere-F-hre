@@ -477,12 +477,6 @@ export const CONTENT_PAGES = {
       "employeurCta",
     ],
   },
-  ausbildungMetiers: {
-    // Page-level copy only; the trades/durations/pay come from metier-categories.ts.
-    label: "Ausbildung : Les métiers",
-    path: "/ausbildung-allemagne/metiers",
-    fields: ["title", "subtitle", "eyebrow", "sectionTitle", "sectionLead", "cta"],
-  },
   visa: {
     label: "Visa (silo)",
     path: "/visa-allemagne",
