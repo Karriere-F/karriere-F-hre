@@ -1953,6 +1953,20 @@
             "Wahl von Bereich und Weg",
             "Aufbau des Dossiers"
           ]
+        },
+        "conseil": {
+          "name": "PERSÖNLICHE BERATUNG",
+          "intro": "Ohne formalen Abschluss verdient Ihr Werdegang eine gründliche Prüfung. Ein Berater von Karriere Fähre analysiert Ihre Situation im Detail, um den realistischsten Weg zu finden: Ausbildung, Qualifizierung oder Vorbereitung.",
+          "strengths": [
+            "Ihre Motivation und Ihr Vorhaben zählen",
+            "Ihre Erfahrung wird berücksichtigt",
+            "Menschliche Begleitung von Anfang an"
+          ],
+          "checks": [
+            "Ausführliche Bilanz Ihrer Erfahrung",
+            "Optionen für Ausbildung oder Qualifizierung",
+            "Zu erreichendes Deutschniveau"
+          ]
         }
       },
       "compareTitle": "Die beiden Wege",
@@ -1988,6 +2002,7 @@
         ]
       },
       "closerTo": "Ihr Profil liegt derzeit näher an:",
+      "conseilNote": "Ihr Dossier wird persönlich von einem Berater geprüft, der gemeinsam mit Ihnen den passenden Weg festlegt.",
       "cta": "Meine Analyse erhalten"
     },
     "lead": {
@@ -2020,6 +2035,13 @@
         "Prüfung des Sprachniveaus",
         "Ermittlung passender Stellen oder Ausbildungen",
         "Bewerbung bei Arbeitgebern oder Ausbildungszentren"
+      ],
+      "stepsConseil": [
+        "Ausführliche Prüfung Ihres Profils und Ihrer Erfahrung",
+        "Ermittlung der realistischsten Wege (Ausbildung, Qualifizierung, Vorbereitung)",
+        "Festlegung des zu erreichenden Deutschniveaus",
+        "Persönlicher Austausch mit einem Berater",
+        "Gemeinsamer Aufbau Ihres Dossiers"
       ],
       "whatsappCta": "Mit einem Berater sprechen",
       "whatsappMessage": "Hallo, ich habe gerade die Profilbewertung auf Ihrer Website gemacht. Meine vorläufige Orientierung: {path}. Ich würde gern mit einem Karriere-Fähre-Berater darüber sprechen."

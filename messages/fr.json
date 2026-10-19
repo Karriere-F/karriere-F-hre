@@ -1953,6 +1953,20 @@
             "Choix du secteur et du parcours",
             "Constitution du dossier"
           ]
+        },
+        "conseil": {
+          "name": "ACCOMPAGNEMENT PERSONNALISÉ",
+          "intro": "Sans diplôme formel, votre parcours mérite un examen approfondi. Un conseiller Karriere Fähre étudie votre situation en détail pour identifier la voie la plus réaliste : formation, qualification ou préparation.",
+          "strengths": [
+            "Votre motivation et votre projet comptent",
+            "Votre expérience est prise en compte",
+            "Un accompagnement humain dès le départ"
+          ],
+          "checks": [
+            "Bilan détaillé de votre expérience",
+            "Options de formation ou de qualification",
+            "Niveau d'allemand à atteindre"
+          ]
         }
       },
       "compareTitle": "Les deux parcours",
@@ -1988,6 +2002,7 @@
         ]
       },
       "closerTo": "Votre profil semble actuellement plus proche de :",
+      "conseilNote": "Votre dossier sera étudié personnellement par un conseiller, qui définira avec vous la voie la plus adaptée.",
       "cta": "Recevoir mon analyse"
     },
     "lead": {
@@ -2014,6 +2029,13 @@
       "orientationTitle": "Notre orientation préliminaire",
       "toStudy": "à étudier",
       "stepsTitle": "Prochaines étapes",
+      "stepsConseil": [
+        "Examen approfondi de votre profil et de votre expérience",
+        "Identification des voies les plus réalistes (Ausbildung, qualification, préparation)",
+        "Définition du niveau d'allemand à atteindre",
+        "Échange personnalisé avec un conseiller",
+        "Construction de votre dossier ensemble"
+      ],
       "steps": [
         "Vérification du diplôme",
         "Vérification de la reconnaissance nécessaire",

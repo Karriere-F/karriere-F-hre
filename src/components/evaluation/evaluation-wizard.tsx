@@ -467,6 +467,12 @@ export function EvaluationWizard() {
           </div>
         </div>
 
+        {rec.path === "conseil" ? (
+          <p className="mt-10 rounded-lg border border-brand-gold/40 bg-brand-gold/10 px-5 py-4 leading-relaxed text-brand-black">
+            {t("result.conseilNote")}
+          </p>
+        ) : (
+          <>
         {heading(t("result.compareTitle"), "mt-12")}
         <div className="mt-5 overflow-x-auto">
           <table className="w-full min-w-[520px] border-collapse text-sm">
@@ -507,6 +513,8 @@ export function EvaluationWizard() {
             {t(`result.paths.${closerPath}.name`)}
           </span>
         </p>
+          </>
+        )}
 
         {disclaimer}
 
@@ -580,7 +588,9 @@ export function EvaluationWizard() {
 
   // ---- Final (detailed result) --------------------------------------------
 
-  const steps = t.raw("final.steps") as string[];
+  const steps = t.raw(
+    rec.path === "conseil" ? "final.stepsConseil" : "final.steps"
+  ) as string[];
   const profileRows: [string, string | undefined][] = [
     [t("final.labelObjectif"), answers.objectif && t(`objectif.options.${answers.objectif}`)],
     [t("final.labelSecteur"), answers.domaine && t(`domaine.options.${answers.domaine}`)],
@@ -613,7 +623,10 @@ export function EvaluationWizard() {
           {t("final.orientationTitle")}
         </p>
         <p className="mt-1.5 font-serif text-2xl text-brand-black">
-          {pathName} <span className="text-brand-gold-text">→ {t("final.toStudy")}</span>
+          {pathName}
+          {rec.path !== "conseil" && (
+            <span className="text-brand-gold-text"> → {t("final.toStudy")}</span>
+          )}
         </p>
       </div>
 

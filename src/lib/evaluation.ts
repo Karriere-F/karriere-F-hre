@@ -54,7 +54,7 @@ export const QUALIFICATIONS: Qualification[] = [
 export const EXPERIENCES: Experience[] = ["0", "<1", "1-2", "3-5", "5+"];
 export const ALLEMANDS: Allemand[] = ["aucun", "a1", "a2", "b1", "b2", "c1"];
 
-export type Path = "ausbildung" | "emploi" | "preparation";
+export type Path = "ausbildung" | "emploi" | "preparation" | "conseil";
 export type Compat = "elevee" | "prometteuse" | "aConstruire";
 
 export type Recommendation = { path: Path; compat: Compat };
@@ -65,6 +65,10 @@ export type Recommendation = { path: Path; compat: Compat };
 // the stated objective refine the outcome, and a candidate with no German yet who is
 // undecided is steered to a preparation-first track.
 export function recommend(a: Answers): Recommendation {
+  // No formal qualification ("sans diplôme") → never an automated Ausbildung/direct-job
+  // orientation. The file needs a personalised, human review to find the realistic route.
+  if (a.etudes === "sans") return { path: "conseil", compat: "aConstruire" };
+
   const qualified = a.qualification === "qualif_pro" || a.qualification === "diplome_univ";
   const hasExperience =
     a.experience === "1-2" || a.experience === "3-5" || a.experience === "5+";
@@ -149,6 +153,7 @@ const FR: Record<string, Record<string, string>> = {
     ausbildung: "AUSBILDUNG",
     emploi: "EMPLOI DIRECT",
     preparation: "PRÉPARATION",
+    conseil: "ACCOMPAGNEMENT PERSONNALISÉ",
   },
   compat: {
     elevee: "élevée",

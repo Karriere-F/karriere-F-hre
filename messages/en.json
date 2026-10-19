@@ -1953,6 +1953,20 @@
             "Choosing the sector and path",
             "Building the file"
           ]
+        },
+        "conseil": {
+          "name": "PERSONALISED GUIDANCE",
+          "intro": "Without a formal qualification, your profile deserves an in-depth review. A Karriere Fähre adviser studies your situation in detail to identify the most realistic route: training, qualification or preparation.",
+          "strengths": [
+            "Your motivation and project matter",
+            "Your experience is taken into account",
+            "Human guidance from the start"
+          ],
+          "checks": [
+            "Detailed review of your experience",
+            "Training or qualification options",
+            "German level to reach"
+          ]
         }
       },
       "compareTitle": "The two paths",
@@ -1988,6 +2002,7 @@
         ]
       },
       "closerTo": "Your profile currently seems closer to:",
+      "conseilNote": "Your file will be reviewed personally by an adviser, who will define the most suitable route with you.",
       "cta": "Receive my analysis"
     },
     "lead": {
@@ -2020,6 +2035,13 @@
         "Checking the language level",
         "Identifying compatible jobs or trainings",
         "Applying to employers or training centres"
+      ],
+      "stepsConseil": [
+        "In-depth review of your profile and experience",
+        "Identifying the most realistic routes (Ausbildung, qualification, preparation)",
+        "Defining the German level to reach",
+        "A personal conversation with an adviser",
+        "Building your file together"
       ],
       "whatsappCta": "Talk to an adviser",
       "whatsappMessage": "Hello, I've just completed the profile evaluation on your website. My preliminary orientation: {path}. I'd like to discuss it with a Karriere Fähre adviser."
