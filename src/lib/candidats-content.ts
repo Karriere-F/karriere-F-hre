@@ -213,7 +213,7 @@ export const CANDIDATS = {
   },
   finalText: {
     fr: "Que vous visiez une Ausbildung, un emploi qualifié ou la Chancenkarte, la langue est déterminante. Découvrez nos parcours d'allemand adaptés à votre objectif, du niveau débutant jusqu'au niveau professionnel.",
-    de: "Ob Ausbildung, qualifizierte Beschäftigung oder Chancenkarte, die Sprache ist entscheidend. Entdecken Sie unsere Deutschkurse, die auf Ihr Ziel abgestimmt sind, vom Anfänger- bis zum Berufsniveau.",
+    de: "Ob Ausbildung, qualifizierte Beschäftigung oder Chancenkarte, die Sprache ist entscheidend. Entdecken Sie unsere Deutschkurse, die auf Ihr Ziel abgestimmt sind, vom Anfänger bis zum Berufsniveau.",
     en: "Whether you aim for an Ausbildung, skilled employment or the Chancenkarte, language is decisive. Discover our German courses tailored to your goal, from beginner to professional level.",
   },
   finalCtaPrimary: { fr: "Découvrir nos cours d'allemand", de: "Unsere Deutschkurse entdecken", en: "Discover our German courses" },
