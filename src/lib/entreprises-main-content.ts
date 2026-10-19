@@ -67,7 +67,7 @@ export const ENT_MAIN: {
   },
   heroIntro1: {
     fr: "Karriere Fähre accompagne les entreprises allemandes dans la recherche et la préparation de candidats qualifiés au Cameroun et, selon les besoins, dans d'autres pays d'Afrique centrale.",
-    de: "Karriere Fähre begleitet deutsche Unternehmen bei der Suche und Vorbereitung qualifizierter Kandidaten in Kamerun und, je nach Bedarf, in weiteren Ländern Zentralafrikas.",
+    de: "Karriere Fähre begleitet deutsche Unternehmen bei der Suche und Vorbereitung qualifizierter Kandidaten in Kamerun und je nach Bedarf, in weiteren Ländern Zentralafrikas.",
     en: "Karriere Fähre supports German companies in sourcing and preparing qualified candidates in Cameroon and, depending on needs, in other countries of Central Africa.",
   },
   heroIntro2: {
