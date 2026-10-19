@@ -86,14 +86,14 @@ export const ENT_MAIN: {
 
   solKicker: { fr: "Votre besoin", de: "Ihr Bedarf", en: "Your need" },
   solTitle: {
-    fr: "Quel type de recrutement souhaitez-vous organiser ?",
-    de: "Welche Art der Rekrutierung möchten Sie organisieren?",
-    en: "What type of recruitment do you want to organise?",
+    fr: "Quelle solution de recrutement convient à votre entreprise ?",
+    de: "Welche Rekrutierungslösung passt zu Ihrem Unternehmen?",
+    en: "Which recruitment solution fits your company?",
   },
   solLead: {
-    fr: "Deux parcours selon que vous recherchez un professionnel déjà qualifié ou que vous souhaitez former un futur collaborateur.",
-    de: "Zwei Wege, je nachdem, ob Sie eine bereits qualifizierte Fachkraft suchen oder einen künftigen Mitarbeiter ausbilden möchten.",
-    en: "Two paths, depending on whether you seek an already qualified professional or want to train a future employee.",
+    fr: "Deux parcours, selon que vous recherchez des professionnels déjà qualifiés ou que vous souhaitez offrir une Ausbildung à de futurs talents.",
+    de: "Zwei Wege, je nachdem, ob Sie bereits qualifizierte Fachkräfte suchen oder Talenten eine Ausbildung ermöglichen möchten.",
+    en: "Two paths, depending on whether you seek already qualified skilled workers or want to offer talents an Ausbildung.",
   },
   fachTitle: { fr: "Recruter des professionnels qualifiés", de: "Qualifizierte Fachkräfte einstellen", en: "Recruit qualified professionals" },
   fachQuestion: {
