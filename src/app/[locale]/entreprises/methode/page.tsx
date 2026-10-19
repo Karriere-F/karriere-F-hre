@@ -43,30 +43,32 @@ export default async function EntreprisesMethodePage() {
       {/* SECTION 01 — HERO */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="max-w-3xl">
+          <div className="max-w-5xl">
             <p className="animate-fade-up mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
               {L(M.heroKicker)}
             </p>
-            <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black text-balance leading-tight">
+            <h1 className="animate-fade-up font-serif text-3xl sm:text-4xl lg:text-[2.7rem] text-brand-black leading-tight lg:whitespace-nowrap">
               {L(M.heroTitle)}
             </h1>
-            <p
-              className={`animate-fade-up mt-5 text-lg text-brand-ink-secondary leading-relaxed ${justify}`}
-              style={{ animationDelay: "80ms" }}
-            >
-              {L(M.heroIntro1)}
-            </p>
-            <p
-              className={`animate-fade-up mt-3 text-brand-ink-secondary leading-relaxed ${justify}`}
-              style={{ animationDelay: "120ms" }}
-            >
-              {L(M.heroIntro2)}
-            </p>
-            <div className="animate-fade-up mt-8" style={{ animationDelay: "160ms" }}>
-              <Link href="/entreprises/demande-recrutement" className={btnOutline}>
-                {L(M.heroCta)}
-                <ArrowRight size={18} aria-hidden="true" />
-              </Link>
+            <div className="max-w-3xl">
+              <p
+                className={`animate-fade-up mt-5 text-lg text-brand-ink-secondary leading-relaxed ${justify}`}
+                style={{ animationDelay: "80ms" }}
+              >
+                {L(M.heroIntro1)}
+              </p>
+              <p
+                className={`animate-fade-up mt-3 text-brand-ink-secondary leading-relaxed ${justify}`}
+                style={{ animationDelay: "120ms" }}
+              >
+                {L(M.heroIntro2)}
+              </p>
+              <div className="animate-fade-up mt-8" style={{ animationDelay: "160ms" }}>
+                <Link href="/entreprises/demande-recrutement" className={btnOutline}>
+                  {L(M.heroCta)}
+                  <ArrowRight size={18} aria-hidden="true" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
