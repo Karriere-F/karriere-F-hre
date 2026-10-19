@@ -139,6 +139,15 @@ p {
   text-wrap: pretty;
   hyphens: none;
 }
+/* Opt-in: justified text WITH automatic hyphenation (German "Silbentrennung").
+   On German pages (<html lang="de">) this fills lines and removes the stretched
+   word gaps that plain justification causes; needs more specificity than the
+   p rule above to re-enable hyphens. Apply via the page-level `justify` helper. */
+.text-justify-hyphen {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
 
 /* ---- Motion system ---- */
 /* Strong custom easings (built-in CSS easings are too weak to feel intentional). */
