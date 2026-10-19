@@ -10,9 +10,9 @@ export const ACCUEIL = {
     en: "Find the path suited to your situation",
   },
   parcoursTitle: {
-    fr: "Trois parcours. Un projet professionnel à construire.",
-    de: "Drei Wege. Ein berufliches Projekt zum Aufbauen.",
-    en: "Three paths. One professional project to build.",
+    fr: "Trois parcours. Quelle voie vous correspond ?",
+    de: "Drei Wege. Welcher Weg passt zu Ihnen?",
+    en: "Three paths. Which path suits you?",
   },
   parcoursTitleL1: {
     fr: "Trois parcours.",
@@ -20,9 +20,9 @@ export const ACCUEIL = {
     en: "Three paths.",
   },
   parcoursTitleL2: {
-    fr: "Un projet professionnel à construire.",
-    de: "Ein berufliches Projekt zum Aufbauen.",
-    en: "One professional project to build.",
+    fr: "Quelle voie vous correspond ?",
+    de: "Welcher Weg passt zu Ihnen?",
+    en: "Which path suits you?",
   },
   parcoursLead: {
     fr: "Chaque parcours dépend de votre formation, de votre expérience, de votre niveau d'allemand et des conditions applicables en Allemagne.",
@@ -182,7 +182,7 @@ export const ACCUEIL = {
       title: { fr: "Réussir", de: "Erfolgreich sein", en: "Succeed" },
       items: [
         { fr: "Préparation au départ et à l'arrivée.", de: "Vorbereitung auf Ausreise und Ankunft.", en: "Preparation for departure and arrival." },
-        { fr: "Orientation vers les étapes d'installation.", de: "Orientierung zu den Schritten der Niederlassung.", en: "Guidance toward the settling-in steps." },
+        { fr: "Soutien dans les premières démarches en Allemagne.", de: "Unterstützung bei den ersten Schritten in Deutschland.", en: "Support with the first steps in Germany." },
         { fr: "Accompagnement à l'intégration selon les prestations convenues.", de: "Begleitung bei der Integration je nach vereinbarten Leistungen.", en: "Support with integration according to the agreed services." },
       ],
     },
