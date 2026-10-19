@@ -11,7 +11,7 @@ export const CANDIDATS = {
   },
   heroTitle: {
     fr: "Travailler ou se former en Allemagne, accompagné à chaque étape.",
-    de: "In Deutschland arbeiten oder sich ausbilden lassen, bei jedem Schritt begleitet.",
+    de: "In Deutschland arbeiten oder sich ausbilden lassen, wir begleiten Sie Schritt für Schritt.",
     en: "Work or train in Germany, supported at every step.",
   },
   heroIntro: {
