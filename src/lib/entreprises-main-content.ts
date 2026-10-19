@@ -131,33 +131,33 @@ export const ENT_MAIN: {
     {
       title: { fr: "Une présélection ciblée", de: "Eine gezielte Vorauswahl", en: "Targeted pre-selection" },
       body: {
-        fr: "Nous partons de vos critères pour rechercher des profils pertinents.",
-        de: "Wir gehen von Ihren Kriterien aus, um passende Profile zu suchen.",
-        en: "We start from your criteria to search for relevant profiles.",
+        fr: "Nous recherchons des candidats adaptés selon les critères que vous définissez.",
+        de: "Wir suchen passende Kandidaten anhand Ihrer vorgegebenen Kriterien.",
+        en: "We search for suitable candidates based on the criteria you set.",
       },
     },
     {
       title: { fr: "Un allemand orienté métier", de: "Berufsorientiertes Deutsch", en: "Job-focused German" },
       body: {
-        fr: "Nous travaillons le Sprechen, la Fachsprache et le vocabulaire professionnel selon le parcours convenu.",
-        de: "Wir arbeiten an Sprechen, Fachsprache und beruflichem Wortschatz gemäß dem vereinbarten Weg.",
-        en: "We work on Sprechen, Fachsprache and professional vocabulary according to the agreed path.",
+        fr: "Nous travaillons de manière ciblée le Sprechen, la Fachsprache et le vocabulaire professionnel, adaptés à votre besoin spécifique.",
+        de: "Wir trainieren gezielt das Sprechen, die Fachsprache und den beruflichen Wortschatz, abgestimmt auf Ihren individuellen Bedarf.",
+        en: "We train speaking, Fachsprache and professional vocabulary in a targeted way, tailored to your specific need.",
       },
     },
     {
-      title: { fr: "Une préparation aux entretiens", de: "Eine Gesprächsvorbereitung", en: "Interview preparation" },
+      title: { fr: "La rencontre personnelle", de: "Das persönliche Kennenlernen", en: "A personal meeting" },
       body: {
-        fr: "Les candidats s'entraînent à présenter leur parcours, leurs compétences et leur motivation.",
-        de: "Die Kandidaten üben, ihren Werdegang, ihre Kompetenzen und ihre Motivation darzustellen.",
-        en: "Candidates practise presenting their background, their skills and their motivation.",
+        fr: "Vous avez la possibilité de vérifier vous-même le niveau et la motivation des candidats lors d'un entretien vidéo en direct.",
+        de: "Sie haben die Möglichkeit, den Wissensstand und die Motivation der Kandidaten in einem Live-Videogespräch selbst zu überprüfen.",
+        en: "You can check candidates' knowledge level and motivation yourself in a live video interview.",
       },
     },
     {
       title: { fr: "Un accompagnement coordonné", de: "Eine koordinierte Begleitung", en: "Coordinated support" },
       body: {
-        fr: "Nous vous accompagnons dans les étapes définies ensemble, depuis la préparation du candidat jusqu'aux démarches convenues et à l'intégration.",
-        de: "Wir begleiten Sie bei den gemeinsam festgelegten Schritten, von der Vorbereitung des Kandidaten bis zu den vereinbarten Formalitäten und der Integration.",
-        en: "We support you through the steps defined together, from preparing the candidate to the agreed formalities and integration.",
+        fr: "Nous vous accompagnons de façon fiable à travers toutes les étapes, de la préparation des candidats aux formalités administratives jusqu'à une intégration réussie.",
+        de: "Wir begleiten Sie zuverlässig durch alle Phasen von der Vorbereitung der Kandidaten über die behördlichen Formalitäten bis hin zur erfolgreichen Integration.",
+        en: "We support you reliably through every phase, from preparing the candidates to the administrative formalities and a successful integration.",
       },
     },
   ],
