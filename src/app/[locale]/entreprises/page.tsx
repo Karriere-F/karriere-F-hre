@@ -164,9 +164,9 @@ export default async function EntreprisesPage() {
       {/* SECTION 4 — MÉTHODE EN UN COUP D'ŒIL */}
       <section className="bg-brand-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(E.methodKicker)}</p>
-            <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(E.methodTitle)}</h2>
+            <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug lg:whitespace-nowrap">{L(E.methodTitle)}</h2>
           </div>
 
           <FlipCards
