@@ -89,8 +89,8 @@ export default async function HomePage() {
               {content.heroTitle}
             </h1>
             <p
-              className="animate-fade-up mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-semibold uppercase tracking-[0.1em] text-brand-gold-text"
-              style={{ animationDelay: "100ms" }}
+              className="animate-fade-up mt-5 flex flex-nowrap items-center gap-x-1 whitespace-nowrap font-semibold uppercase text-brand-gold-text"
+              style={{ animationDelay: "100ms", fontSize: "clamp(0.5rem, 2.5vw, 0.875rem)", letterSpacing: "0.04em" }}
             >
               {content.heroTags.split(" · ").map((w, i) => (
                 <Fragment key={w}>
