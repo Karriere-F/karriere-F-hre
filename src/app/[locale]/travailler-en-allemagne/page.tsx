@@ -158,12 +158,12 @@ export default async function TravaillerPage() {
       {/* Are you concerned? — eligibility checklist */}
       <section className="bg-brand-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-gold-text">
-            {h.concernedIntro}
-          </p>
-          <h2 className="mt-4 font-serif text-2xl sm:text-3xl lg:text-[1.9rem] xl:text-[2.1rem] text-brand-black leading-[1.15]">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-[1.9rem] xl:text-[2.1rem] text-brand-black leading-[1.15]">
             {h.concernedTitle}
           </h2>
+          <p className="mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
+            {h.concernedIntro}
+          </p>
 
           <ul className="mt-10 divide-y divide-brand-grid border-y border-brand-grid">
             {h.concerned.map((c, i) => (
