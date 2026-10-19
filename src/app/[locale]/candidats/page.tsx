@@ -42,58 +42,45 @@ export default async function CandidatsPage() {
         ]}
       />
 
-      {/* SECTION 01 — HERO */}
-      <section className="relative overflow-hidden bg-brand-card">
-        {/* Desktop: photo on the right, blended into the background */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block">
-          <Image
-            src="/images/candidats-soins-technique.webp"
-            alt="Une soignante et un technicien, profils de candidats accompagnés vers l'Allemagne"
-            fill
-            priority
-            sizes="52vw"
-            className="object-cover"
-            style={{ objectPosition: "50% 35%" }}
-          />
-          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-brand-card via-brand-card/20 to-transparent" />
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-brand-card to-transparent" />
-          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-card to-transparent" />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Mobile: photo above the text */}
-          <div className="relative -mx-4 aspect-[16/10] sm:-mx-6 lg:hidden">
-            <Image
-              src="/images/candidats-soins-technique.webp"
-              alt="Une soignante et un technicien, profils de candidats accompagnés vers l'Allemagne"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
-              style={{ objectPosition: "50% 35%" }}
-            />
-            <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-card to-transparent" />
-          </div>
-
-          <div className="max-w-xl py-12 lg:max-w-[48rem] lg:py-20">
-            <p className="animate-fade-up mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
-              {L(C.heroKicker)}
-            </p>
-            <h1 className="animate-fade-up font-serif text-3xl lg:text-[2.4rem] xl:text-[2.85rem] text-brand-black leading-tight text-left">
-              {L(C.heroTitle)}
-            </h1>
-            <p className={`animate-fade-up mt-6 max-w-xl text-lg text-brand-ink-secondary leading-relaxed ${justify}`} style={{ animationDelay: "80ms" }}>
-              {L(C.heroIntro)}
-            </p>
-            <div className="animate-fade-up mt-8 flex max-w-md flex-col gap-3 sm:flex-row" style={{ animationDelay: "160ms" }}>
-              <Link href="/evaluation" className={`${btnOutline} w-full sm:flex-1`}>
-                {L(C.heroCtaPrimary)}
-                <ArrowRight size={18} aria-hidden="true" />
-              </Link>
-              <a href="#parcours" className={`${btnOutline} w-full sm:flex-1`}>
-                {L(C.heroCtaSecondary)}
-                <ArrowDown size={18} aria-hidden="true" />
-              </a>
+      {/* SECTION 01 — HERO (même mise en page que Chancenkarte) */}
+      <section className="bg-brand-card">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:pt-16 lg:pb-4">
+          <p className="animate-fade-up mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
+            {L(C.heroKicker)}
+          </p>
+          <h1 className="animate-fade-up max-w-4xl font-serif text-3xl lg:text-[2.1rem] xl:text-[2.6rem] text-brand-black leading-tight">
+            {L(C.heroTitle)}
+          </h1>
+          <div className="mt-8 grid items-start gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-10">
+            <div>
+              <p className={`animate-fade-up text-lg text-brand-ink-secondary leading-relaxed ${justify} lg:mt-6`} style={{ animationDelay: "80ms" }}>
+                {L(C.heroIntro)}
+              </p>
+              <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "160ms" }}>
+                <Link href="/evaluation" className={`${btnOutline} w-full sm:flex-1`}>
+                  {L(C.heroCtaPrimary)}
+                  <ArrowRight size={18} aria-hidden="true" />
+                </Link>
+                <a href="#parcours" className={`${btnOutline} w-full sm:flex-1`}>
+                  {L(C.heroCtaSecondary)}
+                  <ArrowDown size={18} aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+            <div className="animate-fade-up relative lg:-mr-16 xl:-mr-28" style={{ animationDelay: "120ms" }}>
+              <Image
+                src="/images/candidats-soins-technique.webp"
+                alt="Une soignante et un technicien, profils de candidats accompagnés vers l'Allemagne"
+                width={1600}
+                height={900}
+                priority
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="h-auto w-full rounded-2xl"
+              />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-brand-card to-transparent" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-brand-card to-transparent" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/6 bg-gradient-to-b from-brand-card to-transparent" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-brand-card to-transparent" />
             </div>
           </div>
         </div>
