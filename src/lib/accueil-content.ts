@@ -195,7 +195,7 @@ export const ACCUEIL = {
   methodeCta: { fr: "Découvrir notre méthode", de: "Unsere Methode entdecken", en: "Discover our method" },
 
   // SECTION 07 — L'ÉQUIPE
-  equipeKicker: { fr: "Les visages du pont", de: "Die Gesichter der Brücke", en: "The faces of the bridge" },
+  equipeKicker: { fr: "Les visages de la Fähre", de: "Die Gesichter der Fähre", en: "The faces of the Fähre" },
   equipeTitle: { fr: "Une équipe engagée à vos côtés.", de: "Ein Team, das an Ihrer Seite steht.", en: "A team committed by your side." },
   equipeText1: {
     fr: "Karriere Fähre est une agence de placement international basée à Douala, au Cameroun. Notre ambition est de construire un lien fiable entre les talents d'Afrique centrale et les possibilités professionnelles en Allemagne.",
