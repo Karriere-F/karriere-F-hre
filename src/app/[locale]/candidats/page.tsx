@@ -167,7 +167,6 @@ export default async function CandidatsPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(C.evalKicker)}</p>
               <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(C.evalTitle)}</h2>
               <p className="mt-5 text-lg text-brand-ink-secondary leading-relaxed">{L(C.evalText1)}</p>
-              <p className="mt-3 text-brand-ink-secondary leading-relaxed">{L(C.evalText2)}</p>
               <div className="mt-8">
                 <Link href="/evaluation" className={btnOutline}>
                   {L(C.evalCta)}

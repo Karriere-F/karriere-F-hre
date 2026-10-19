@@ -184,14 +184,9 @@ export const CANDIDATS = {
     en: "Every project is different. So is your path.",
   },
   evalText1: {
-    fr: "Votre niveau d'allemand, vos qualifications, votre expérience et votre objectif permettent de déterminer les possibilités à examiner.",
-    de: "Ihr Deutschniveau, Ihre Qualifikationen, Ihre Erfahrung und Ihr Ziel helfen, die zu prüfenden Möglichkeiten zu bestimmen.",
-    en: "Your level of German, your qualifications, your experience and your goal help determine the possibilities to examine.",
-  },
-  evalText2: {
-    fr: "Répondez à quelques questions pour nous aider à mieux comprendre votre situation et à vous orienter vers les prochaines étapes.",
-    de: "Beantworten Sie einige Fragen, damit wir Ihre Situation besser verstehen und Sie zu den nächsten Schritten orientieren können.",
-    en: "Answer a few questions to help us better understand your situation and guide you toward the next steps.",
+    fr: "Dites-nous en quelques questions qui vous êtes, votre niveau d'allemand et vos objectifs, afin que nous trouvions les possibilités adaptées à votre profil.",
+    de: "Verraten Sie uns in wenigen Fragen mehr über sich, Ihr Deutschniveau und Ihre Ziele, damit wir die passenden Möglichkeiten für Sie finden.",
+    en: "Tell us more about yourself in a few questions, your level of German and your goals, so we can find the possibilities that suit you.",
   },
   evalCta: { fr: "Évaluer mon profil", de: "Mein Profil einschätzen", en: "Assess my profile" },
   evalDisclaimer: {
