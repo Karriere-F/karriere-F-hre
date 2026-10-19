@@ -328,7 +328,7 @@ export default async function AusbildungHubPage() {
             {tr(
               {
                 fr: "La formation en alternance, en entreprise comme à l'école professionnelle, se déroule en allemand. Préparez-vous avec nos parcours de langue, du niveau débutant jusqu'au niveau professionnel.",
-                de: "Die duale Ausbildung findet im Betrieb wie in der Berufsschule auf Deutsch statt. Bereiten Sie sich mit unseren Sprachkursen vor, vom Anfänger- bis zum Berufsniveau.",
+                de: "Die duale Ausbildung findet im Betrieb wie in der Berufsschule auf Deutsch statt. Bereiten Sie sich mit unseren Sprachkursen vor, vom Anfänger bis zum Berufsniveau.",
                 en: "Dual training, in the company and at the vocational school, takes place in German. Prepare with our language courses, from beginner to professional level.",
               },
               locale,
