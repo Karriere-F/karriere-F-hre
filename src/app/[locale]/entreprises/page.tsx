@@ -197,7 +197,7 @@ export default async function EntreprisesPage() {
               </span>
             ))}
           </div>
-          <p className={`mt-8 max-w-3xl text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.secNote)}</p>
+          <p className={`mt-8 text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.secNote)}</p>
           <div className="mt-8">
             <Link href="/entreprises/secteurs" className={btnOutline}>
               {L(E.secCta)}
