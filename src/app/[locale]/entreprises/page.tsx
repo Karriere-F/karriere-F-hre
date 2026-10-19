@@ -52,10 +52,10 @@ export default async function EntreprisesPage() {
 
           <div className="mt-10 grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
             <div>
-              <p className="animate-fade-up text-lg text-brand-ink-secondary leading-relaxed text-left" style={{ animationDelay: "80ms" }}>
+              <p className={`animate-fade-up text-lg text-brand-ink-secondary leading-relaxed ${justify}`} style={{ animationDelay: "80ms" }}>
                 {L(E.heroIntro1)}
               </p>
-              <p className="animate-fade-up mt-3 text-brand-ink-secondary leading-relaxed text-left" style={{ animationDelay: "120ms" }}>
+              <p className={`animate-fade-up mt-3 text-brand-ink-secondary leading-relaxed ${justify}`} style={{ animationDelay: "120ms" }}>
                 {L(E.heroIntro2)}
               </p>
               <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "160ms" }}>
