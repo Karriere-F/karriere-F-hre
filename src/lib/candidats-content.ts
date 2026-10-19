@@ -16,7 +16,7 @@ export const CANDIDATS = {
   },
   heroIntro: {
     fr: "Depuis le Cameroun, plusieurs parcours permettent de construire un projet professionnel en Allemagne. Karriere Fähre vous aide à identifier la voie adaptée à votre profil, à développer votre allemand et à préparer votre projet jusqu'au départ.",
-    de: "Von Kamerun aus führen mehrere Wege zu einem beruflichen Projekt in Deutschland. Karriere Fähre hilft Ihnen, den zu Ihrem Profil passenden Weg zu finden, Ihr Deutsch zu entwickeln und Ihr Projekt bis zur Ausreise vorzubereiten.",
+    de: "Von Kamerun aus führen mehrere Wege zu einem beruflichen Start in Deutschland. Karriere Fähre hilft Ihnen, den zu Ihrem Profil passenden Weg zu finden, Ihr Deutsch zu entwickeln und Sie auf Ihre Ein- und Ausreise vorzubereiten.",
     en: "From Cameroon, several paths lead to a professional project in Germany. Karriere Fähre helps you identify the route suited to your profile, develop your German and prepare your project through to departure.",
   },
   heroCtaPrimary: { fr: "Évaluer mon profil", de: "Mein Profil einschätzen", en: "Assess my profile" },
