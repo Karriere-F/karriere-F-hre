@@ -147,12 +147,12 @@ export default async function ParcoursPage() {
                 <p className="mt-3 flex-1 text-sm text-brand-ink-secondary leading-relaxed text-left text-pretty">
                   {data.text}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-black">
+                <span className="mt-6 inline-flex w-full items-center justify-center gap-1.5 rounded-md border border-brand-gold px-4 py-2.5 text-sm font-semibold text-brand-gold-text transition-colors duration-200 group-hover:bg-brand-gold group-hover:text-brand-black">
                   {data.cta}
                   <ArrowRight
                     size={16}
                     aria-hidden="true"
-                    className="text-brand-gold-text transition-transform duration-300 group-hover:translate-x-1"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
                   />
                 </span>
               </Link>
