@@ -48,6 +48,12 @@ export default async function ChancenkartePage() {
     [content.p12Label, content.p12Val],
   ];
 
+  // Hero title split into "Chancenkarte:" + the rest, so the wrapped lines of the
+  // rest align under the first word after the colon ("Zur") on desktop.
+  const titleColon = content.title.indexOf(": ");
+  const titlePrefix = titleColon === -1 ? null : content.title.slice(0, titleColon + 1);
+  const titleRest = titleColon === -1 ? content.title : content.title.slice(titleColon + 2);
+
   return (
     <div>
       <BreadcrumbJsonLd
@@ -62,8 +68,15 @@ export default async function ChancenkartePage() {
       {/* Hero — titre pleine largeur, photo entière fondue à droite */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:pt-16 lg:pb-4">
-          <h1 className="animate-fade-up font-serif text-3xl lg:text-[2.1rem] xl:text-[2.6rem] text-brand-black leading-tight lg:whitespace-nowrap">
-            {content.title}
+          <h1 className="animate-fade-up flex max-w-5xl flex-col font-serif text-3xl lg:flex-row lg:items-baseline lg:gap-x-[0.3em] text-brand-black leading-tight lg:text-[2.1rem] xl:text-[2.6rem]">
+            {titlePrefix ? (
+              <>
+                <span className="whitespace-nowrap">{titlePrefix}</span>
+                <span className="lg:min-w-0 lg:flex-1">{titleRest}</span>
+              </>
+            ) : (
+              content.title
+            )}
           </h1>
           <div className="mt-8 grid items-start gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-10">
             <div>
