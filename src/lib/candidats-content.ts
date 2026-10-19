@@ -138,7 +138,7 @@ export const CANDIDATS = {
       title: { fr: "Identifier le parcours adapté", de: "Den passenden Weg bestimmen", en: "Identify the right path" },
       body: {
         fr: "Nous vous orientons vers les possibilités à étudier selon votre situation et les exigences du projet.",
-        de: "Wir weisen Ihnen die zu prüfenden Möglichkeiten je nach Situation und Projektanforderungen.",
+        de: "Wir zeigen Ihnen Ihre individuellen Möglichkeiten auf.",
         en: "We guide you toward the possibilities to study based on your situation and the project's requirements.",
       },
     },
@@ -154,15 +154,15 @@ export const CANDIDATS = {
       title: { fr: "Préparer votre candidature", de: "Ihre Bewerbung vorbereiten", en: "Prepare your application" },
       body: {
         fr: "Nous vous accompagnons dans la préparation du dossier, du CV et des entretiens, selon le parcours choisi.",
-        de: "Wir begleiten Sie bei der Vorbereitung der Unterlagen, des Lebenslaufs und der Gespräche, je nach gewähltem Weg.",
+        de: "Wir unterstützen Sie gezielt bei der Aufbereitung Ihrer Bewerbungsunterlagen.",
         en: "We support you in preparing the file, the CV and the interviews, according to the chosen path.",
       },
     },
     {
-      title: { fr: "Préparer les démarches", de: "Die Schritte vorbereiten", en: "Prepare the procedures" },
+      title: { fr: "Préparer les démarches", de: "Die nächsten Schritte vorbereiten", en: "Prepare the procedures" },
       body: {
         fr: "Nous vous accompagnons dans les étapes convenues concernant les documents, la reconnaissance éventuelle des qualifications et les démarches administratives applicables.",
-        de: "Wir begleiten Sie bei den vereinbarten Schritten rund um Dokumente, die etwaige Anerkennung der Qualifikationen und die geltenden behördlichen Verfahren.",
+        de: "Wir unterstützen Sie bei allen behördlichen Schritten, der Prüfung Ihrer Dokumente und der offiziellen Anerkennung Ihrer Qualifikationen.",
         en: "We support you in the agreed steps regarding documents, any recognition of qualifications and the applicable administrative procedures.",
       },
     },
@@ -170,7 +170,7 @@ export const CANDIDATS = {
       title: { fr: "Préparer votre départ", de: "Ihre Ausreise vorbereiten", en: "Prepare your departure" },
       body: {
         fr: "Nous vous aidons à anticiper les prochaines étapes et à préparer votre arrivée en Allemagne, dans le cadre de notre accompagnement.",
-        de: "Wir helfen Ihnen, die nächsten Schritte zu antizipieren und Ihre Ankunft in Deutschland vorzubereiten, im Rahmen unserer Begleitung.",
+        de: "Wir begleiten Sie Schritt für Schritt bei Ihrer Ausreise und bereiten Sie auf Ihre erfolgreiche Ankunft in Deutschland vor.",
         en: "We help you anticipate the next steps and prepare your arrival in Germany, as part of our support.",
       },
     },
