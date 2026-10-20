@@ -78,25 +78,25 @@ export const APROPOS = {
   // 02 — Notre mission
   missionKicker: { fr: "Notre mission", de: "Unsere Mission", en: "Our mission" },
   missionTitle: {
-    fr: "Transformer un projet en parcours professionnel préparé.",
-    de: "Ein Vorhaben in einen vorbereiteten beruflichen Weg verwandeln.",
-    en: "Turning a project into a prepared professional path.",
+    fr: "Transformer un projet en parcours professionnel bien préparé.",
+    de: "Ein Vorhaben in einen gut vorbereiteten beruflichen Weg verwandeln.",
+    en: "Turning a project into a well-prepared professional path.",
   },
   missionBody: [
     {
-      fr: "Notre mission est de rapprocher les compétences, les ambitions individuelles et les besoins du marché du travail allemand, en tenant compte des exigences propres à chaque parcours.",
-      de: "Unsere Mission ist es, Kompetenzen, individuelle Ambitionen und die Bedürfnisse des deutschen Arbeitsmarktes zusammenzubringen, unter Berücksichtigung der Anforderungen jedes einzelnen Weges.",
-      en: "Our mission is to bring together skills, individual ambitions and the needs of the German labour market, taking into account the requirements specific to each path.",
+      fr: "Notre mission est de rapprocher avec précision les compétences personnelles, les ambitions individuelles et les exigences du marché du travail allemand, toujours en fonction des conditions spécifiques à chaque parcours.",
+      de: "Unsere Mission ist es, persönliche Kompetenzen, individuelle Ambitionen und die Anforderungen des deutschen Arbeitsmarktes passgenau zusammenzubringen, stets abgestimmt auf die spezifischen Voraussetzungen des jeweiligen Weges.",
+      en: "Our mission is to precisely bring together personal skills, individual ambitions and the requirements of the German labour market, always in line with the specific conditions of each path.",
     },
     {
-      fr: "Pour les candidats, nous proposons une orientation fondée sur leur formation, leur expérience, leur niveau d'allemand et leurs objectifs.",
-      de: "Für Kandidaten bieten wir eine Orientierung, die auf ihrer Ausbildung, ihrer Erfahrung, ihrem Deutschniveau und ihren Zielen beruht.",
-      en: "For candidates, we offer guidance based on their training, their experience, their level of German and their goals.",
+      fr: "Pour les candidats, nous proposons une orientation fondée sur leur formation, leur expérience, leur niveau de langue et leurs objectifs personnels.",
+      de: "Für Kandidaten bieten wir eine Orientierung, die auf ihrer Ausbildung, ihrer Erfahrung, ihrem Sprachniveau und ihren persönlichen Zielen beruht.",
+      en: "For candidates, we offer guidance based on their training, their experience, their language level and their personal goals.",
     },
     {
-      fr: "Pour les entreprises, nous souhaitons faciliter l'identification et la préparation de profils correspondant aux compétences recherchées.",
-      de: "Für Unternehmen möchten wir die Identifizierung und Vorbereitung von Profilen erleichtern, die den gesuchten Kompetenzen entsprechen.",
-      en: "For companies, we aim to make it easier to identify and prepare profiles matching the skills sought.",
+      fr: "Pour les entreprises, nous facilitons l'identification et la préparation ciblée de profils de candidats correspondant aux exigences recherchées.",
+      de: "Für Unternehmen erleichtern wir die Identifizierung und gezielte Vorbereitung von Kandidatenprofilen, die den gesuchten Anforderungen entsprechen.",
+      en: "For companies, we make it easier to identify and specifically prepare candidate profiles matching the requirements sought.",
     },
   ] as LT[],
   missionEngagementsIntro: {

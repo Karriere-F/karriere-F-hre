@@ -117,7 +117,7 @@ export default async function AProposPage() {
       <section className="bg-brand-card">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(A.missionKicker)}</p>
-          <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-[1.9rem] xl:text-[2.4rem] text-brand-black leading-snug" style={{ textWrap: "wrap" }}>
+          <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-[1.75rem] xl:text-[2.3rem] text-brand-black leading-snug" style={{ textWrap: "wrap" }}>
             {L(A.missionTitle)}
           </h2>
           <div className="mt-6 space-y-4">
