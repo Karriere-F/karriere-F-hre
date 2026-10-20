@@ -212,9 +212,21 @@ export default async function AProposPage() {
                 <div key="text">
                   <p className="font-serif text-xl sm:text-2xl text-brand-black leading-snug text-balance">{L(f.tagline)}</p>
                   <div className="mt-8 space-y-5">
-                    {f.bio.map((p, i) => (
-                      <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">{L(p)}</p>
-                    ))}
+                    {f.bio.map((p, i) => {
+                      const t = L(p);
+                      const ci = t.indexOf(": ");
+                      if (ci > 0 && ci <= 24) {
+                        return (
+                          <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify-hyphen">
+                            <strong className="font-semibold text-brand-black">{t.slice(0, ci + 1)}</strong>
+                            {t.slice(ci + 1)}
+                          </p>
+                        );
+                      }
+                      return (
+                        <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify-hyphen">{t}</p>
+                      );
+                    })}
                   </div>
                 </div>
               );
