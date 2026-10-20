@@ -250,7 +250,7 @@ export default async function AProposPage() {
             <h3 className="font-serif text-2xl sm:text-3xl text-brand-black leading-snug">{L(A.foundersAmbitionTitle)}</h3>
             <div className="mt-5 space-y-4">
               {A.foundersAmbition.map((p, i) => (
-                <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">{L(p)}</p>
+                <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify-hyphen">{L(p)}</p>
               ))}
             </div>
           </div>
