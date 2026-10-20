@@ -176,7 +176,7 @@ export default async function EntreprisesFachkraeftePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(F.recoKicker)}</p>
-            <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-[2.5rem] text-brand-black leading-snug">{L(F.recoTitle)}</h2>
+            <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-[1.75rem] xl:text-[2.2rem] text-brand-black leading-snug" style={{ textWrap: "wrap" }}>{L(F.recoTitle)}</h2>
           </div>
           <p className={`mt-4 text-lg text-brand-ink-secondary leading-relaxed ${justify}`}>{L(F.recoIntro)}</p>
 
