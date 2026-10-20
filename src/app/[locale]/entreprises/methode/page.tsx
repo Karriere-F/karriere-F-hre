@@ -181,8 +181,9 @@ export default async function EntreprisesMethodePage() {
               {L(M.finalCtaPrimary)}
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link href="/entreprises" className="font-semibold text-brand-gold-text underline-offset-4 hover:underline">
+            <Link href="/entreprises" className={btnOutline}>
               {L(M.finalCtaSecondary)}
+              <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
         </div>
