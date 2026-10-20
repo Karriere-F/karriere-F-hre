@@ -165,7 +165,7 @@ export default async function EntreprisesPartenariatPage() {
       {/* SECTION 3 — CE QUI DISTINGUE */}
       <section className="bg-brand-card">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-          <div className="max-w-4xl">
+          <div>
             <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(E.distinctKicker)}</p>
             <h2 className="animate-fade-up mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(E.distinctTitle)}</h2>
             <div className="mt-6 space-y-4">
