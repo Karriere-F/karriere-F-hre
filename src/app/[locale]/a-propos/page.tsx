@@ -264,7 +264,7 @@ export default async function AProposPage() {
           <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug text-balance">
             {L(A.approcheTitle)}
           </h2>
-          <p className="mt-4 max-w-4xl text-brand-ink-secondary leading-relaxed">{L(A.approcheIntro)}</p>
+          <p className="mt-4 text-brand-ink-secondary leading-relaxed">{L(A.approcheIntro)}</p>
 
           <div className="mt-10 max-w-4xl space-y-4">
             {A.approcheSteps.map((step, i) => (
