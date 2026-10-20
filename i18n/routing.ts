@@ -353,6 +353,11 @@ export const routing = defineRouting({
       de: "/unternehmen/partnerschaft",
       en: "/employers/partnership",
     },
+    "/entreprises/partenariat/demande": {
+      fr: "/entreprises/partenariat/demande",
+      de: "/unternehmen/partnerschaft/anfrage",
+      en: "/employers/partnership/request",
+    },
 
     "/partenaires": { fr: "/partenaires", de: "/partner", en: "/partners" },
     "/plan-du-site": { fr: "/plan-du-site", de: "/seitenuebersicht", en: "/sitemap" },
