@@ -126,7 +126,7 @@ export default async function EntreprisesPartenariatPage() {
                     <Icon size={22} strokeWidth={1.8} aria-hidden="true" />
                   </span>
                   <h3 className="mt-5 font-serif text-xl text-brand-black leading-snug">{L(pr.title)}</h3>
-                  <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed">{L(pr.body)}</p>
+                  <p className={`mt-3 text-sm text-brand-ink-secondary leading-relaxed ${justify}`}>{L(pr.body)}</p>
                 </div>
               );
             })}
