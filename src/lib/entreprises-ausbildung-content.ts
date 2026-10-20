@@ -101,25 +101,25 @@ export const ENT_AUSBILDUNG: {
     {
       label: { fr: "Profil scolaire", de: "Schulisches Profil", en: "Academic profile" },
       text: {
-        fr: "Nous examinons le parcours scolaire, les diplômes présentés et la cohérence du projet avec l'Ausbildung visée.",
-        de: "Wir prüfen den schulischen Werdegang, die vorgelegten Abschlüsse und die Stimmigkeit des Projekts mit der angestrebten Ausbildung.",
-        en: "We review the academic background, the qualifications presented and how well the project fits the target Ausbildung.",
+        fr: "Nous examinons le parcours scolaire, les diplômes présentés et l'adéquation du profil avec l'Ausbildung visée.",
+        de: "Wir prüfen den schulischen Werdegang, die vorgelegten Abschlüsse und die Passung des Profils zur angestrebten Ausbildung.",
+        en: "We review the academic background, the qualifications presented and how well the profile fits the target Ausbildung.",
       },
     },
     {
       label: { fr: "Motivation", de: "Motivation", en: "Motivation" },
       text: {
-        fr: "Nous cherchons à comprendre l'intérêt du candidat pour le métier, ses objectifs et sa connaissance du parcours.",
-        de: "Wir versuchen, das Interesse des Kandidaten am Beruf, seine Ziele und seine Kenntnis des Wegs zu verstehen.",
-        en: "We seek to understand the candidate's interest in the profession, their goals and their knowledge of the path.",
+        fr: "Nous analysons l'intérêt pour le métier, les objectifs personnels et la conscience du parcours à venir.",
+        de: "Wir analysieren das Berufsinteresse, die persönlichen Ziele und das Bewusstsein für den bevorstehenden Weg.",
+        en: "We analyse the interest in the profession, the personal goals and the awareness of the path ahead.",
       },
     },
     {
       label: { fr: "Allemand", de: "Deutsch", en: "Deutsch" },
       text: {
-        fr: "Nous examinons le niveau de départ et les compétences linguistiques nécessaires pour suivre la formation et communiquer en entreprise.",
-        de: "Wir prüfen das Ausgangsniveau und die sprachlichen Kompetenzen, die nötig sind, um der Ausbildung zu folgen und im Unternehmen zu kommunizieren.",
-        en: "We review the starting level and the language skills needed to follow the training and communicate in the company.",
+        fr: "Nous évaluons le niveau de langue et développons de manière ciblée les compétences nécessaires à la réussite à l'école professionnelle et en entreprise.",
+        de: "Wir prüfen das Sprachniveau und bauen gezielt die Kompetenzen auf, die für den Erfolg in der Berufsschule und im Unternehmen erforderlich sind.",
+        en: "We assess the language level and build, in a targeted way, the skills required to succeed at vocational school and in the company.",
       },
     },
     {
