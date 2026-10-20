@@ -20,8 +20,6 @@ export async function generateMetadata() {
 
 const btnOutline =
   "press inline-flex min-h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-6 py-3 text-center font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black";
-const btnOutlineDark =
-  "press inline-flex min-h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-6 py-3 text-center font-bold text-brand-gold-light transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black";
 const justify = "text-justify-hyphen";
 
 const PRINCIPLE_ICONS = [Handshake, Target, TrendingUp];
@@ -183,19 +181,19 @@ export default async function EntreprisesPartenariatPage() {
       </section>
 
       {/* SECTION 4 — CTA FINAL */}
-      <section className="bg-brand-black text-brand-white">
+      <section className="bg-brand-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-24">
-          <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-light">{L(E.finalKicker)}</p>
-          <h2 className="animate-fade-up font-serif text-2xl sm:text-3xl lg:text-4xl leading-snug">{L(E.finalTitle)}</h2>
+          <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(E.finalKicker)}</p>
+          <h2 className="animate-fade-up font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(E.finalTitle)}</h2>
           <div className="animate-fade-up max-w-4xl space-y-3">
             {E.finalBody.map((p, i) => (
-              <p key={i} className="text-lg text-brand-white/80 leading-relaxed">{L(p)}</p>
+              <p key={i} className="text-lg text-brand-ink-secondary leading-relaxed">{L(p)}</p>
             ))}
-            <p className="text-lg text-brand-white/80 leading-relaxed">{L(E.finalLead)}</p>
+            <p className="text-lg text-brand-ink-secondary leading-relaxed">{L(E.finalLead)}</p>
           </div>
-          <p className="animate-fade-up mt-2 font-serif text-xl text-brand-gold-light">{L(E.finalBold)}</p>
+          <p className="animate-fade-up mt-2 font-serif text-xl text-brand-gold-text">{L(E.finalBold)}</p>
           <div className="animate-fade-up mt-4">
-            <a href="#anfrage" className={btnOutlineDark}>
+            <a href="#anfrage" className={btnOutline}>
               {L(E.finalCta)}
               <ArrowRight size={18} aria-hidden="true" />
             </a>
