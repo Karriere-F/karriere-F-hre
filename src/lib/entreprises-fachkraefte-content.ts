@@ -186,9 +186,9 @@ export const ENT_FACHKRAEFTE: {
     {
       title: { fr: "Définition du besoin", de: "Definition des Bedarfs", en: "Defining the need" },
       body: {
-        fr: "Vous présentez le poste, les compétences, les conditions et le calendrier souhaité.",
-        de: "Sie stellen die Stelle, die Kompetenzen, die Bedingungen und den gewünschten Zeitplan vor.",
-        en: "You present the position, the skills, the conditions and the desired timeline.",
+        fr: "Vous définissez vos exigences. Ensemble, nous discutons du profil recherché, des conditions-cadres et de votre calendrier.",
+        de: "Sie definieren Ihre Anforderungen. Gemeinsam besprechen wir das Anforderungsprofil, die Rahmenbedingungen und Ihren Zeitplan.",
+        en: "You define your requirements. Together we discuss the target profile, the general conditions and your timeline.",
       },
     },
     {
@@ -218,17 +218,17 @@ export const ENT_FACHKRAEFTE: {
     {
       title: { fr: "Entretien et décision", de: "Gespräch und Entscheidung", en: "Interview and decision" },
       body: {
-        fr: "Vous rencontrez les candidats et restez responsable de la décision de recrutement.",
-        de: "Sie treffen die Kandidaten und bleiben für die Einstellungsentscheidung verantwortlich.",
-        en: "You meet the candidates and remain responsible for the hiring decision.",
+        fr: "Vous rencontrez les candidats en ligne. Une rencontre personnelle ou un rendez-vous sur place au Cameroun, nous l'organisons volontiers selon vos souhaits.",
+        de: "Sie treffen die Kandidaten online. Ein persönliches Kennenlernen oder einen Termin vor Ort in Kamerun organisieren wir gerne individuell nach Ihren Wünschen.",
+        en: "You meet the candidates online. A personal meeting or an on-site appointment in Cameroon, we gladly arrange individually to your wishes.",
       },
     },
     {
       title: { fr: "Démarches et arrivée", de: "Formalitäten und Ankunft", en: "Formalities and arrival" },
       body: {
-        fr: "Après votre décision, nous accompagnons les démarches convenues selon la situation du candidat.",
-        de: "Nach Ihrer Entscheidung begleiten wir die vereinbarten Schritte entsprechend der Situation des Kandidaten.",
-        en: "After your decision, we support the agreed steps according to the candidate's situation.",
+        fr: "Après votre décision positive, nous coordonnons toutes les étapes suivantes et adaptons notre accompagnement à vos souhaits et à la situation du candidat.",
+        de: "Nach Ihrer positiven Entscheidung koordinieren wir alle weiteren Schritte und passen unsere Begleitung individuell an Ihre Wünsche und die Situation des Kandidaten an.",
+        en: "After your positive decision, we coordinate all further steps and tailor our support to your wishes and the candidate's situation.",
       },
     },
   ],
