@@ -140,14 +140,14 @@ export const APROPOS = {
   },
   foundersIntro: [
     {
-      fr: "Karriere Fähre est portée par deux cofondateurs réunis autour d'une ambition commune : créer des passerelles professionnelles solides entre le Cameroun et l'Allemagne.",
-      de: "Karriere Fähre wird von zwei Mitgründern getragen, die eine gemeinsame Ambition verbindet: solide berufliche Brücken zwischen Kamerun und Deutschland zu schaffen.",
-      en: "Karriere Fähre is driven by two co-founders united around a shared ambition: to create solid professional bridges between Cameroon and Germany.",
+      fr: "Karriere Fähre est portée par deux cofondateurs réunis autour d'une ambition commune : créer des parcours professionnels solides entre le Cameroun et l'Allemagne.",
+      de: "Karriere Fähre wird von zwei Mitgründern getragen, die eine gemeinsame Ambition verbindet: solide berufliche Wege zwischen Kamerun und Deutschland zu schaffen.",
+      en: "Karriere Fähre is driven by two co-founders united around a shared ambition: to create solid professional paths between Cameroon and Germany.",
     },
     {
-      fr: "Leur complémentarité associe compréhension interculturelle, organisation opérationnelle et développement du projet. Ensemble, ils souhaitent construire une structure à taille humaine, attentive aux personnes et exigeante dans sa méthode.",
-      de: "Ihre Komplementarität verbindet interkulturelles Verständnis, operative Organisation und Projektentwicklung. Gemeinsam möchten sie eine Struktur mit menschlichem Maß aufbauen, die den Menschen zugewandt und in ihrer Methode anspruchsvoll ist.",
-      en: "Their complementarity combines intercultural understanding, operational organisation and project development. Together, they want to build a human-sized structure, attentive to people and demanding in its method.",
+      fr: "Leurs compétences complémentaires associent compréhension interculturelle, organisation opérationnelle et développement de projets. Ensemble, ils bâtissent une structure à taille humaine, qui place l'humain au centre tout en poursuivant une exigence méthodique élevée.",
+      de: "Ihre sich ergänzenden Kompetenzen verbinden interkulturelles Verständnis, operative Organisation und Projektentwicklung. Gemeinsam bauen sie eine Struktur mit menschlichem Maß auf, die Menschen in den Mittelpunkt stellt und zugleich hohe methodische Ansprüche verfolgt.",
+      en: "Their complementary skills combine intercultural understanding, operational organisation and project development. Together, they build a human-sized structure that puts people at the centre while pursuing high methodological standards.",
     },
   ] as LT[],
   founders: [

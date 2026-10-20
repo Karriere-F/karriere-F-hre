@@ -164,9 +164,22 @@ export default async function AProposPage() {
             })()}
           </h2>
           <div className="mt-6 space-y-4">
-            {A.foundersIntro.map((p, i) => (
-              <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">{L(p)}</p>
-            ))}
+            {A.foundersIntro.map((p, i) => {
+              const t = L(p);
+              const ci = i === 0 ? t.indexOf(": ") : -1;
+              return (
+                <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify-hyphen">
+                  {ci === -1 ? (
+                    t
+                  ) : (
+                    <>
+                      {t.slice(0, ci + 2)}
+                      <strong className="font-semibold text-brand-black">{t.slice(ci + 2)}</strong>
+                    </>
+                  )}
+                </p>
+              );
+            })}
           </div>
 
           {/* Portraits — même format et mêmes dimensions pour les deux, nom sous la photo,
