@@ -266,9 +266,9 @@ export const ENT_FACHKRAEFTE: {
     {
       title: { fr: "Anerkennungspartnerschaft", de: "Anerkennungspartnerschaft", en: "Anerkennungspartnerschaft" },
       body: {
-        fr: "Possibilité à examiner pour les dossiers admissibles, lorsque le candidat et l'employeur remplissent les conditions applicables.",
-        de: "Zu prüfende Möglichkeit für zulässige Fälle, wenn Kandidat und Arbeitgeber die geltenden Bedingungen erfüllen.",
-        en: "An option to examine for eligible cases, when the candidate and the employer meet the applicable conditions.",
+        fr: "La possibilité prévue par la loi d'achever la procédure de reconnaissance en parallèle de l'emploi déjà commencé dans votre entreprise.",
+        de: "Die gesetzlich vorgesehene Möglichkeit, das Anerkennungsverfahren parallel zu Ihrer bereits begonnenen Beschäftigung in Ihrem Unternehmen abzuschließen.",
+        en: "The legally provided option to complete the recognition procedure in parallel with the employment already started in your company.",
       },
     },
     {
