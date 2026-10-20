@@ -55,9 +55,9 @@ export const DEMANDE_PAGE: {
   heroKicker: { fr: "Votre projet de recrutement", de: "Ihr Rekrutierungsprojekt", en: "Your recruitment project" },
   heroTitle: { fr: "Décrivons ensemble votre besoin.", de: "Beschreiben wir gemeinsam Ihren Bedarf.", en: "Let's describe your need together." },
   heroText1: {
-    fr: "Vous souhaitez recruter une Fachkraft, pourvoir des places d'Ausbildung ou étudier un projet de recrutement international ?",
-    de: "Möchten Sie eine Fachkraft einstellen, Ausbildungsplätze besetzen oder ein internationales Rekrutierungsprojekt prüfen?",
-    en: "Do you want to recruit a Fachkraft, fill Ausbildung places or study an international recruitment project?",
+    fr: "Vous souhaitez recruter une Fachkraft ou pourvoir des places d'Ausbildung ?",
+    de: "Möchten Sie eine Fachkraft einstellen, Ausbildungsplätze besetzen?",
+    en: "Do you want to recruit a Fachkraft or fill Ausbildung places?",
   },
   heroText2: {
     fr: "Transmettez-nous les informations essentielles. Nous pourrons préparer un premier échange ciblé sur votre besoin, les profils recherchés et les prochaines étapes.",
