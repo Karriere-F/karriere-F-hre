@@ -347,9 +347,9 @@ export const APROPOS = {
       kicker: { fr: "Langue", de: "Sprache", en: "Language" },
       name: { fr: "Préparation linguistique", de: "Sprachliche Vorbereitung", en: "Language preparation" },
       body: {
-        fr: "L'allemand joue un rôle essentiel dans de nombreux parcours. La préparation peut porter sur la communication quotidienne, le vocabulaire professionnel et la préparation aux examens, selon le programme suivi.",
-        de: "Deutsch spielt in vielen Wegen eine wesentliche Rolle. Die Vorbereitung kann sich je nach belegtem Programm auf die alltägliche Kommunikation, den Fachwortschatz und die Prüfungsvorbereitung beziehen.",
-        en: "German plays an essential role in many paths. The preparation may cover everyday communication, professional vocabulary and exam preparation, depending on the programme followed.",
+        fr: "Les connaissances linguistiques sont indispensables sur chaque chemin vers l'Allemagne. Selon le programme choisi, l'accent est mis sur la communication quotidienne, le vocabulaire professionnel propre au secteur ou la préparation ciblée aux examens.",
+        de: "Sprachkenntnisse sind auf jedem Weg nach Deutschland unerlässlich. Je nach gewähltem Programm liegt der Fokus auf der alltäglichen Verständigung, dem branchenspezifischen Fachwortschatz oder der gezielten Prüfungsvorbereitung.",
+        en: "Language skills are essential on every path to Germany. Depending on the programme chosen, the focus is on everyday communication, sector-specific professional vocabulary or targeted exam preparation.",
       },
       cta: { fr: "Découvrir nos cours d'allemand", de: "Unsere Deutschkurse entdecken", en: "Discover our German courses" },
       href: "/cours-allemand",
