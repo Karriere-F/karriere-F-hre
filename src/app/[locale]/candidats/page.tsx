@@ -122,8 +122,8 @@ export default async function CandidatsPage() {
                     )}
                   </h3>
                   <p className="mt-4 text-lg font-medium text-brand-black leading-snug">{L(p.question)}</p>
-                  <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed">{L(p.body1)}</p>
-                  <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed">{L(p.body2)}</p>
+                  <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed text-justify-hyphen">{L(p.body1)}</p>
+                  <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed text-justify-hyphen">{L(p.body2)}</p>
                 </div>
                 <div className="pt-2">
                   <Link
