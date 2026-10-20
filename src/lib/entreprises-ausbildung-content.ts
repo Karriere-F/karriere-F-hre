@@ -66,9 +66,9 @@ export const ENT_AUSBILDUNG: {
     en: "Would you like to fill your Ausbildung places with motivated international candidates? Karriere Fähre supports you in the search, the preselection and the language preparation of candidates who match your criteria.",
   },
   heroIntro2: {
-    fr: "Nous travaillons avec vous pour organiser un parcours cohérent entre les exigences de votre entreprise, la formation en allemand et les démarches nécessaires.",
-    de: "Wir arbeiten mit Ihnen zusammen, um einen stimmigen Ablauf zwischen den Anforderungen Ihres Unternehmens, der Ausbildung in Deutsch und den notwendigen Schritten zu gestalten.",
-    en: "We work with you to organise a coherent path between your company's requirements, the German-language training and the necessary steps.",
+    fr: "Nous travaillons avec vous pour organiser un parcours cohérent entre les exigences de votre entreprise, la formation en allemand et les démarches administratives nécessaires.",
+    de: "Wir arbeiten mit Ihnen zusammen, um einen stimmigen Ablauf zwischen den Anforderungen Ihres Unternehmens, der Ausbildung auf Deutsch und den notwendigen behördlichen Schritten zu gestalten.",
+    en: "We work with you to organise a coherent path between your company's requirements, the German-language training and the necessary administrative steps.",
   },
   heroCtaPrimary: {
     fr: "Recruter des Azubis",
