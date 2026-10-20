@@ -23,7 +23,7 @@ export async function generateMetadata() {
 
 const btnOutline =
   "press inline-flex h-[54px] items-center justify-center gap-2 rounded-md border border-brand-gold px-8 font-bold text-brand-gold-text transition-colors duration-200 hover:bg-brand-gold hover:text-brand-black active:bg-brand-gold active:text-brand-black";
-const justify = "text-justify [hyphens:none]";
+const justify = "text-justify-hyphen";
 
 const heroAlt = {
   fr: "Un technicien qualifié intervient sur une armoire électrique",
