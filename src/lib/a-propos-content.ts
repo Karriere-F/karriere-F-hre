@@ -108,25 +108,25 @@ export const APROPOS = {
     {
       title: { fr: "Orienter avec discernement.", de: "Mit Urteilsvermögen orientieren.", en: "Guide with discernment." },
       body: {
-        fr: "Identifier les parcours envisageables plutôt que proposer une solution identique à tous.",
-        de: "Die möglichen Wege ermitteln, statt allen die gleiche Lösung anzubieten.",
-        en: "Identify the feasible paths rather than offering everyone the same solution.",
+        fr: "Nous déterminons la voie adaptée plutôt que de proposer une solution identique à tous.",
+        de: "Wir ermitteln den passenden Weg, statt allen die gleiche Lösung anzubieten.",
+        en: "We identify the right path rather than offering everyone the same solution.",
       },
     },
     {
       title: { fr: "Préparer avec méthode.", de: "Methodisch vorbereiten.", en: "Prepare methodically." },
       body: {
-        fr: "Organiser les étapes nécessaires à la préparation linguistique, à la candidature et aux démarches applicables.",
-        de: "Die notwendigen Schritte für die sprachliche Vorbereitung, die Bewerbung und die anwendbaren Verfahren organisieren.",
-        en: "Organise the steps needed for language preparation, the application and the applicable procedures.",
+        fr: "Nous structurons les étapes nécessaires de la préparation linguistique, de la vérification des documents et des démarches applicables.",
+        de: "Wir strukturieren die notwendigen Schritte der sprachlichen Vorbereitung, der Dokumentenprüfung und der anwendbaren Verfahren.",
+        en: "We structure the necessary steps of language preparation, document review and the applicable procedures.",
       },
     },
     {
       title: { fr: "Accompagner avec transparence.", de: "Transparent begleiten.", en: "Support with transparency." },
       body: {
-        fr: "Expliquer les conditions, les limites et les prochaines étapes afin que chacun puisse prendre des décisions éclairées.",
-        de: "Die Bedingungen, Grenzen und nächsten Schritte erklären, damit jeder fundierte Entscheidungen treffen kann.",
-        en: "Explain the conditions, the limits and the next steps so everyone can make informed decisions.",
+        fr: "Nous expliquons clairement le cadre et les prochaines étapes, afin que chacun puisse prendre des décisions éclairées.",
+        de: "Wir erklären die Rahmenbedingungen und die nächsten Schritte verständlich, damit jeder fundierte Entscheidungen treffen kann.",
+        en: "We clearly explain the framework and the next steps, so everyone can make informed decisions.",
       },
     },
   ] as { title: LT; body: LT }[],
