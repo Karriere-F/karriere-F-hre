@@ -33,6 +33,34 @@ export const ENT_PARTENARIAT: {
   finalLead: LT;
   finalBold: LT;
   finalCta: LT;
+
+  formKicker: LT;
+  formTitle: LT;
+  formIntro: LT;
+  form: {
+    sec1: LT;
+    sec2: LT;
+    sec3: LT;
+    unternehmen: LT;
+    branche: LT;
+    website: LT;
+    ansprechpartner: LT;
+    position: LT;
+    email: LT;
+    telefon: LT;
+    interesse: LT;
+    interesseOptions: LT[];
+    nachricht: LT;
+    consent: LT;
+    consentNote: LT;
+    submit: LT;
+    submitting: LT;
+    required: LT;
+    error: LT;
+    errorConsent: LT;
+    successTitle: LT;
+    successText: LT;
+  };
 } = {
   // ── HERO ──────────────────────────────────────────────────────────────
   heroKicker: {
@@ -185,4 +213,66 @@ export const ENT_PARTENARIAT: {
     en: "We look forward to the conversation with you.",
   },
   finalCta: { fr: "Demander un partenariat", de: "Partnerschaft anfragen", en: "Request a partnership" },
+
+  // ── FORMULAIRE ────────────────────────────────────────────────────────
+  formKicker: { fr: "Demande sans engagement", de: "Unverbindliche Anfrage", en: "No-obligation enquiry" },
+  formTitle: { fr: "Faisons connaissance.", de: "Lernen wir uns kennen.", en: "Let's get to know each other." },
+  formIntro: {
+    fr: "Nous serions ravis d'en savoir plus sur votre entreprise et sur votre vision d'une collaboration possible. Transmettez-nous les informations essentielles, nous reviendrons vers vous pour discuter des prochaines étapes de vive voix.",
+    de: "Wir freuen uns, mehr über Ihr Unternehmen und Ihre Vorstellungen einer möglichen Zusammenarbeit zu erfahren. Teilen Sie uns die wichtigsten Informationen mit, wir melden uns bei Ihnen, um die nächsten Schritte persönlich zu besprechen.",
+    en: "We would be glad to learn more about your company and your vision of a possible collaboration. Share the key information with us and we will get back to you to discuss the next steps personally.",
+  },
+  form: {
+    sec1: { fr: "Informations sur l'entreprise", de: "Angaben zum Unternehmen", en: "Company details" },
+    sec2: { fr: "Vos coordonnées", de: "Ihre Kontaktdaten", en: "Your contact details" },
+    sec3: { fr: "Votre partenariat", de: "Ihre Partnerschaft", en: "Your partnership" },
+    unternehmen: { fr: "Nom de l'entreprise", de: "Unternehmensname", en: "Company name" },
+    branche: { fr: "Secteur d'activité", de: "Branche", en: "Industry" },
+    website: { fr: "Site web de l'entreprise", de: "Website des Unternehmens", en: "Company website" },
+    ansprechpartner: { fr: "Nom de l'interlocuteur", de: "Name des Ansprechpartners", en: "Contact name" },
+    position: { fr: "Fonction dans l'entreprise", de: "Position im Unternehmen", en: "Position in the company" },
+    email: { fr: "Adresse e-mail professionnelle", de: "Geschäftliche E-Mail-Adresse", en: "Business email address" },
+    telefon: { fr: "Numéro de téléphone", de: "Telefonnummer", en: "Phone number" },
+    interesse: {
+      fr: "Quel type de collaboration vous intéresse ?",
+      de: "Was für eine Zusammenarbeit interessiert Sie?",
+      en: "What kind of collaboration are you interested in?",
+    },
+    interesseOptions: [
+      { fr: "Établir un partenariat durable", de: "Aufbau einer langfristigen Partnerschaft", en: "Building a long-term partnership" },
+      { fr: "Échange professionnel et mise en réseau", de: "Fachlicher Austausch und Vernetzung", en: "Professional exchange and networking" },
+      { fr: "Collaboration sur des projets concrets", de: "Zusammenarbeit bei konkreten Projekten", en: "Collaboration on concrete projects" },
+      { fr: "Autre", de: "Sonstiges", en: "Other" },
+    ],
+    nachricht: { fr: "Votre message", de: "Ihre Nachricht", en: "Your message" },
+    consent: {
+      fr: "J'ai pris connaissance de la politique de confidentialité et j'accepte le traitement de mes données pour le traitement de ma demande.",
+      de: "Ich habe die Datenschutzerklärung zur Kenntnis genommen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage einverstanden.",
+      en: "I have read the privacy policy and consent to the processing of my information to handle my request.",
+    },
+    consentNote: {
+      fr: "Les informations transmises sont utilisées uniquement pour le traitement de votre demande de partenariat.",
+      de: "Die Angaben werden ausschließlich zur Bearbeitung Ihrer Partnerschaftsanfrage verwendet.",
+      en: "The information provided is used solely to process your partnership request.",
+    },
+    submit: { fr: "Demander un partenariat", de: "Partnerschaft anfragen", en: "Request a partnership" },
+    submitting: { fr: "Envoi…", de: "Senden…", en: "Sending…" },
+    required: { fr: "Champs obligatoires", de: "Pflichtfelder", en: "Required fields" },
+    error: {
+      fr: "Une erreur est survenue. Vérifiez vos informations et réessayez.",
+      de: "Ein Fehler ist aufgetreten. Prüfen Sie Ihre Angaben und versuchen Sie es erneut.",
+      en: "An error occurred. Check your details and try again.",
+    },
+    errorConsent: {
+      fr: "Merci de confirmer votre accord sur l'utilisation des informations transmises.",
+      de: "Bitte bestätigen Sie Ihre Zustimmung zur Verwendung der übermittelten Informationen.",
+      en: "Please confirm your consent to the use of the information provided.",
+    },
+    successTitle: { fr: "Demande bien reçue.", de: "Anfrage erhalten.", en: "Request received." },
+    successText: {
+      fr: "Merci de votre intérêt pour un partenariat. Nous revenons vers vous très bientôt.",
+      de: "Vielen Dank für Ihr Interesse an einer Partnerschaft. Wir melden uns in Kürze bei Ihnen.",
+      en: "Thank you for your interest in a partnership. We will get back to you shortly.",
+    },
+  },
 };

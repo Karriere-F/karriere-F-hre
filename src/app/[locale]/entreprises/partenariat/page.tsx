@@ -1,8 +1,8 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { ArrowRight, ArrowDown, Handshake, Target, TrendingUp } from "lucide-react";
-import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { PartnershipRequestForm } from "@/components/entreprises/partnership-request-form";
 import { buildMetadata } from "@/lib/seo";
 import { tr } from "@/lib/localized";
 import { ENT_PARTENARIAT as E } from "@/lib/entreprises-partenariat-content";
@@ -31,6 +31,32 @@ export default async function EntreprisesPartenariatPage() {
   const locale = (await getLocale()) as Locale;
   const L = (t: { fr: string; de: string; en: string }) => tr(t, locale);
 
+  const f = E.form;
+  const formLabels = {
+    sec1: L(f.sec1),
+    sec2: L(f.sec2),
+    sec3: L(f.sec3),
+    unternehmen: L(f.unternehmen),
+    branche: L(f.branche),
+    website: L(f.website),
+    ansprechpartner: L(f.ansprechpartner),
+    position: L(f.position),
+    email: L(f.email),
+    telefon: L(f.telefon),
+    interesse: L(f.interesse),
+    interesseOptions: f.interesseOptions.map((o) => L(o)),
+    nachricht: L(f.nachricht),
+    consent: L(f.consent),
+    consentNote: L(f.consentNote),
+    submit: L(f.submit),
+    submitting: L(f.submitting),
+    required: L(f.required),
+    error: L(f.error),
+    errorConsent: L(f.errorConsent),
+    successTitle: L(f.successTitle),
+    successText: L(f.successText),
+  };
+
   return (
     <div>
       <BreadcrumbJsonLd
@@ -55,7 +81,7 @@ export default async function EntreprisesPartenariatPage() {
             {L(E.heroTagline)}
           </p>
 
-          <div className="mt-10 grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+          <div className="mt-10 grid items-start gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
             <div>
               {E.heroIntro.map((p, i) => (
                 <p
@@ -67,10 +93,10 @@ export default async function EntreprisesPartenariatPage() {
                 </p>
               ))}
               <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "220ms" }}>
-                <Link href="/entreprises/demande-recrutement" className={btnOutline}>
+                <a href="#anfrage" className={btnOutline}>
                   {L(E.heroCta)}
                   <ArrowRight size={18} aria-hidden="true" />
-                </Link>
+                </a>
                 <a href="#augenhoehe" className={btnOutline}>
                   {L(E.augenTitle)}
                   <ArrowDown size={18} aria-hidden="true" />
@@ -78,7 +104,7 @@ export default async function EntreprisesPartenariatPage() {
               </div>
             </div>
 
-            <div className="animate-fade-up relative lg:-mt-10 lg:-mr-12 xl:-mr-24" style={{ animationDelay: "120ms" }}>
+            <div className="animate-fade-up relative lg:-mt-16" style={{ animationDelay: "120ms" }}>
               <Image
                 src="/images/partenariat-hero.webp"
                 alt={L({
@@ -89,10 +115,11 @@ export default async function EntreprisesPartenariatPage() {
                 width={1671}
                 height={941}
                 priority
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full rounded-2xl"
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                className="h-auto w-full"
               />
-              <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-brand-card to-transparent" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-[14%] bg-gradient-to-r from-brand-card to-transparent" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-[14%] bg-gradient-to-l from-brand-card to-transparent" />
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/5 bg-gradient-to-b from-brand-card to-transparent" />
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-brand-card to-transparent" />
             </div>
@@ -168,10 +195,24 @@ export default async function EntreprisesPartenariatPage() {
           </div>
           <p className="animate-fade-up mt-2 font-serif text-xl text-brand-gold-light">{L(E.finalBold)}</p>
           <div className="animate-fade-up mt-4">
-            <Link href="/entreprises/demande-recrutement" className={btnOutlineDark}>
+            <a href="#anfrage" className={btnOutlineDark}>
               {L(E.finalCta)}
               <ArrowRight size={18} aria-hidden="true" />
-            </Link>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 — FORMULAIRE DE PARTENARIAT */}
+      <section id="anfrage" className="scroll-mt-24 bg-brand-white">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div className="text-center">
+            <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(E.formKicker)}</p>
+            <h2 className="animate-fade-up mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(E.formTitle)}</h2>
+            <p className={`animate-fade-up mx-auto mt-4 max-w-2xl text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.formIntro)}</p>
+          </div>
+          <div className="animate-fade-up mt-10">
+            <PartnershipRequestForm labels={formLabels} />
           </div>
         </div>
       </section>
