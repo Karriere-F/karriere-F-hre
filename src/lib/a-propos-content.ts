@@ -356,7 +356,7 @@ export const APROPOS = {
     },
     {
       kicker: { fr: "Orientation", de: "Orientierung", en: "Guidance" },
-      name: { fr: "Orientation et préparation du dossier", de: "Orientierung und Vorbereitung der Unterlagen", en: "Guidance and file preparation" },
+      name: { fr: "Orientation et préparation du dossier", de: "Orientierung und Vorbereitung\nder Unterlagen", en: "Guidance and file preparation" },
       body: {
         fr: "Pour les personnes qui souhaitent clarifier leur projet, mieux comprendre les exigences et identifier les étapes à préparer avant de candidater.",
         de: "Für Personen, die ihr Projekt klären, die Anforderungen besser verstehen und die vor einer Bewerbung vorzubereitenden Schritte ermitteln möchten.",

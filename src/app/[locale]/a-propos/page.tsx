@@ -309,7 +309,14 @@ export default async function AProposPage() {
                 className="group relative flex flex-col rounded-2xl bg-brand-card p-7 shadow-[0_6px_24px_rgba(17,17,17,0.05)] ring-1 ring-brand-black/5 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_18px_45px_rgba(17,17,17,0.1)] hover:ring-2 hover:ring-brand-gold motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(d.kicker)}</p>
-                <h3 className="mt-2 font-serif text-2xl text-brand-black">{L(d.name)}</h3>
+                <h3 className="mt-2 font-serif text-2xl text-brand-black">
+                  {L(d.name).split("\n").map((line, j, arr) => (
+                    <span key={j}>
+                      {line}
+                      {j < arr.length - 1 ? <br /> : null}
+                    </span>
+                  ))}
+                </h3>
                 <p className="mt-3 flex-1 text-brand-ink-secondary leading-relaxed">{L(d.body)}</p>
                 <Link
                   href={d.href as "/ausbildung-allemagne"}
