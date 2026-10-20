@@ -54,24 +54,24 @@ export const APROPOS = {
   },
   histoireBody: [
     {
-      fr: "Un projet professionnel en Allemagne ne se résume pas à trouver une offre ou à déposer un dossier. Il demande de comprendre les exigences du métier, de préparer sa candidature, de développer ses compétences linguistiques et d'anticiper les démarches nécessaires.",
-      de: "Ein berufliches Projekt in Deutschland bedeutet mehr, als ein Angebot zu finden oder eine Akte einzureichen. Es erfordert, die Anforderungen des Berufs zu verstehen, seine Bewerbung vorzubereiten, seine Sprachkenntnisse zu entwickeln und die notwendigen Schritte vorauszusehen.",
-      en: "A professional project in Germany is not just about finding an offer or submitting a file. It requires understanding the profession's requirements, preparing one's application, developing language skills and anticipating the necessary procedures.",
+      fr: "Un projet professionnel en Allemagne ne se résume pas à trouver une offre ou à déposer un dossier. Il demande de comprendre les exigences du métier, de préparer sa propre candidature, de développer ses compétences linguistiques et d'anticiper les démarches nécessaires.",
+      de: "Ein berufliches Projekt in Deutschland bedeutet mehr, als nur ein Angebot zu finden oder eine Akte einzureichen. Es erfordert, die fachlichen Anforderungen zu verstehen, die eigene Bewerbung vorzubereiten, die Sprachkenntnisse zu entwickeln und die notwendigen Schritte vorauszusehen.",
+      en: "A professional project in Germany is not just about finding an offer or submitting a file. It requires understanding the professional requirements, preparing your own application, developing language skills and anticipating the necessary procedures.",
     },
     {
-      fr: "C'est autour de cette réalité que s'inscrit Karriere Fähre.",
-      de: "Genau um diese Realität dreht sich Karriere Fähre.",
-      en: "It is around this reality that Karriere Fähre is built.",
+      fr: "C'est exactement la raison d'être de Karriere Fähre.",
+      de: "Genau darum geht es bei Karriere Fähre.",
+      en: "That is exactly what Karriere Fähre is about.",
     },
     {
-      fr: "Depuis Douala, nous souhaitons rapprocher les ambitions des candidats, les possibilités de formation et les besoins des entreprises allemandes. Notre objectif est de rendre les parcours plus lisibles, de mieux préparer les candidatures et de favoriser des projets professionnels cohérents.",
-      de: "Von Douala aus möchten wir die Ambitionen der Kandidaten, die Ausbildungsmöglichkeiten und die Bedürfnisse der deutschen Unternehmen zusammenführen. Unser Ziel ist es, die Wege verständlicher zu machen, die Bewerbungen besser vorzubereiten und stimmige berufliche Projekte zu fördern.",
-      en: "From Douala, we want to bring together candidates' ambitions, training possibilities and the needs of German companies. Our goal is to make paths clearer, prepare applications better and foster coherent professional projects.",
+      fr: "Depuis Douala, nous souhaitons rapprocher avec succès les ambitions de nos candidats, les possibilités de formation et les besoins des entreprises allemandes. Notre objectif est de rendre les parcours professionnels plus lisibles, de professionnaliser la préparation et de favoriser des perspectives professionnelles adaptées.",
+      de: "Von Douala aus möchten wir die Ambitionen unserer Kandidaten, die Ausbildungsmöglichkeiten und die Bedürfnisse deutscher Unternehmen erfolgreich zusammenführen. Unser Ziel ist es, berufliche Wege verständlicher zu machen, die Vorbereitung zu professionalisieren und passende berufliche Perspektiven zu fördern.",
+      en: "From Douala, we want to successfully bring together our candidates' ambitions, training opportunities and the needs of German companies. Our goal is to make professional paths clearer, to professionalise preparation and to foster suitable professional prospects.",
     },
     {
-      fr: "Nous considérons chaque candidature comme un projet individuel qui mérite une orientation sérieuse, une préparation adaptée et une information transparente.",
-      de: "Wir betrachten jede Bewerbung als ein individuelles Projekt, das eine ernsthafte Orientierung, eine angepasste Vorbereitung und transparente Informationen verdient.",
-      en: "We see each application as an individual project that deserves serious guidance, suitable preparation and transparent information.",
+      fr: "Nous considérons chaque candidat comme un individu avec un projet qui lui est propre, méritant une orientation solide, une préparation sur mesure et une transparence absolue.",
+      de: "Wir betrachten jeden Kandidaten als Individuum mit einem eigenen Projekt, das eine fundierte Orientierung, eine maßgeschneiderte Vorbereitung und absolute Transparenz verdient.",
+      en: "We see each candidate as an individual with their own project, deserving well-founded guidance, tailored preparation and absolute transparency.",
     },
   ] as LT[],
 

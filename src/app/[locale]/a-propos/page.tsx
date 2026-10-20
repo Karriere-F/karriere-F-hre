@@ -102,7 +102,12 @@ export default async function AProposPage() {
           </h2>
           <div className="mt-6 space-y-4">
             {A.histoireBody.map((p, i) => (
-              <p key={i} className="text-brand-ink-secondary leading-relaxed text-justify [hyphens:none]">{L(p)}</p>
+              <p
+                key={i}
+                className={`leading-relaxed text-justify-hyphen ${i === 1 ? "font-semibold text-brand-black" : "text-brand-ink-secondary"}`}
+              >
+                {L(p)}
+              </p>
             ))}
           </div>
         </div>
