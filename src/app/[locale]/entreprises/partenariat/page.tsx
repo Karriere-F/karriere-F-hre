@@ -86,7 +86,7 @@ export default async function EntreprisesPartenariatPage() {
               {E.heroIntro.map((p, i) => (
                 <p
                   key={i}
-                  className={`animate-fade-up text-brand-ink-secondary leading-relaxed ${i === 0 ? "text-lg" : "mt-3"}`}
+                  className={`animate-fade-up text-brand-ink-secondary leading-relaxed ${justify} ${i === 0 ? "text-lg" : "mt-3"}`}
                   style={{ animationDelay: `${80 + i * 40}ms` }}
                 >
                   {L(p)}
