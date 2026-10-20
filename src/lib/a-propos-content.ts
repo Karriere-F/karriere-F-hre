@@ -402,9 +402,9 @@ export const APROPOS = {
     {
       title: { fr: "Responsabilité", de: "Verantwortung", en: "Responsibility" },
       body: {
-        fr: "Distinguer les possibilités envisageables des résultats qui ne peuvent pas être garantis. Une candidature, une admission, un emploi ou un visa ne doivent jamais être présentés comme acquis avant les décisions correspondantes.",
-        de: "Die möglichen Optionen von Ergebnissen unterscheiden, die nicht garantiert werden können. Eine Bewerbung, eine Zulassung, eine Beschäftigung oder ein Visum dürfen niemals als gesichert dargestellt werden, bevor die entsprechenden Entscheidungen getroffen sind.",
-        en: "Distinguish feasible possibilities from outcomes that cannot be guaranteed. An application, an admission, a job or a visa must never be presented as secured before the corresponding decisions.",
+        fr: "Il faut toujours distinguer les options réalistes des résultats qui ne peuvent être garantis. Une candidature, une admission, un emploi ou un visa ne doivent jamais être présentés comme acquis avant que les décisions administratives ou contractuelles correspondantes soient prises.",
+        de: "Man muss stets zwischen realistischen Optionen und Ergebnissen unterscheiden, die nicht garantiert werden können. Eine Bewerbung, eine Zulassung, eine Beschäftigung oder ein Visum dürfen niemals als gesichert dargestellt werden, bevor die entsprechenden behördlichen oder vertraglichen Entscheidungen getroffen sind.",
+        en: "One must always distinguish realistic options from outcomes that cannot be guaranteed. An application, an admission, a job or a visa must never be presented as secured before the corresponding administrative or contractual decisions have been made.",
       },
     },
     {
