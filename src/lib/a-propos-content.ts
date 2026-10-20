@@ -336,9 +336,9 @@ export const APROPOS = {
       kicker: { fr: "Travailler", de: "Arbeiten", en: "Work" },
       name: { fr: "Emploi qualifié", de: "Qualifizierte Beschäftigung", en: "Skilled employment" },
       body: {
-        fr: "Pour les professionnels qui souhaitent valoriser leurs qualifications et leur expérience dans le cadre d'un projet d'emploi en Allemagne. Les possibilités dépendent notamment du métier, des qualifications détenues, des éventuelles exigences de reconnaissance et des conditions de séjour applicables.",
-        de: "Für Fachkräfte, die ihre Qualifikationen und Erfahrung im Rahmen eines Beschäftigungsprojekts in Deutschland einbringen möchten. Die Möglichkeiten hängen insbesondere vom Beruf, den vorhandenen Qualifikationen, etwaigen Anerkennungsanforderungen und den geltenden Aufenthaltsbedingungen ab.",
-        en: "For professionals who want to put their qualifications and experience to use within an employment project in Germany. The possibilities depend in particular on the profession, the qualifications held, any recognition requirements and the applicable residence conditions.",
+        fr: "Pour les professionnels qui souhaitent valoriser leurs qualifications et leurs expériences dans le cadre d'un projet d'emploi qualifié en Allemagne. Les possibilités dépendent notamment du profil de poste, des diplômes détenus, des exigences de reconnaissance requises et des conditions de séjour applicables.",
+        de: "Für Fachkräfte, die ihre Qualifikationen und Erfahrungen im Rahmen eines qualifizierten Beschäftigungsprojekts in Deutschland einbringen möchten. Die Möglichkeiten hängen insbesondere vom Berufsbild, den vorhandenen Abschlüssen, den erforderlichen Anerkennungsanforderungen und den geltenden Aufenthaltsbedingungen ab.",
+        en: "For professionals who want to put their qualifications and experience to use within a skilled employment project in Germany. The possibilities depend in particular on the occupational profile, the diplomas held, the required recognition conditions and the applicable residence conditions.",
       },
       cta: { fr: "Découvrir l'emploi qualifié", de: "Qualifizierte Beschäftigung entdecken", en: "Discover skilled employment" },
       href: "/travailler-en-allemagne",
