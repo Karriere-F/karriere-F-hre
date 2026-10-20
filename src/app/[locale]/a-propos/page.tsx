@@ -409,7 +409,7 @@ export default async function AProposPage() {
       <section className="bg-brand-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(A.pourquoiKicker)}</p>
-          <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug text-balance">
+          <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-[2.5rem] text-brand-black leading-snug" style={{ textWrap: "wrap" }}>
             {L(A.pourquoiTitle)}
           </h2>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
