@@ -114,7 +114,7 @@ export default async function EntreprisesFachkraeftePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(F.needKicker)}</p>
-            <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-[1.75rem] xl:text-[2.2rem] text-brand-black leading-snug">
+            <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-[1.75rem] xl:text-[2.2rem] text-brand-black leading-snug" style={{ textWrap: "wrap" }}>
               {L(F.needTitle)}
             </h2>
           </div>
