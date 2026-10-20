@@ -420,7 +420,7 @@ export const ENT_AUSBILDUNG: {
   // SECTION 08 — CTA FINAL
   finalTitle: {
     fr: "Préparons ensemble votre prochain recrutement d'Azubis.",
-    de: "Lassen Sie uns gemeinsam Ihre nächste Azubi-Einstellung vorbereiten.",
+    de: "Lassen Sie uns gemeinsam Ihre nächsten Azubis vorbereiten.",
     en: "Let's prepare your next Azubi recruitment together.",
   },
   finalText: {

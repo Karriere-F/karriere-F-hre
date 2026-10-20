@@ -265,7 +265,7 @@ export default async function EntreprisesAusbildungPage() {
       {/* SECTION 08 — CTA FINAL */}
       <section className="bg-brand-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-4 py-20 text-center sm:px-6 lg:px-8">
-          <h2 className="max-w-2xl font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(A.finalTitle)}</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-[2.1rem] xl:text-[2.6rem] text-brand-black leading-snug">{L(A.finalTitle)}</h2>
           <p className="max-w-2xl text-lg text-brand-ink-secondary leading-relaxed">{L(A.finalText)}</p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <Link
