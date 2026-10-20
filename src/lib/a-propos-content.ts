@@ -425,9 +425,9 @@ export const APROPOS = {
     en: "Trust must never rest on unrealistic promises.",
   },
   responsableIntro1: {
-    fr: "Un projet professionnel à l'international engage du temps, des efforts et parfois des ressources financières importantes. Il doit donc être préparé avec sérieux.",
-    de: "Ein internationales berufliches Projekt bindet Zeit, Mühe und manchmal erhebliche finanzielle Mittel. Es muss daher mit Sorgfalt vorbereitet werden.",
-    en: "An international professional project involves time, effort and sometimes significant financial resources. It must therefore be prepared seriously.",
+    fr: "Un projet professionnel à l'international exige du temps, des efforts et souvent des ressources financières importantes. Il doit donc être préparé avec le plus grand soin.",
+    de: "Ein internationales berufliches Projekt erfordert Zeit, Mühe und oft erhebliche finanzielle Mittel. Es muss daher mit großer Sorgfalt vorbereitet werden.",
+    en: "An international professional project requires time, effort and often significant financial resources. It must therefore be prepared with the greatest care.",
   },
   responsableIntro2: {
     fr: "Chez Karriere Fähre, nous souhaitons promouvoir une approche fondée sur :",
@@ -467,14 +467,14 @@ export const APROPOS = {
     },
   ] as LT[],
   responsableBody1: {
-    fr: "Les prestations, les responsabilités de chaque partie et les éventuels frais doivent être clarifiés avant tout engagement.",
-    de: "Die Leistungen, die Verantwortlichkeiten jeder Partei und die etwaigen Kosten müssen vor jeder Verpflichtung geklärt werden.",
-    en: "The services, each party's responsibilities and any fees must be clarified before any commitment.",
+    fr: "Les prestations, les responsabilités de chaque partie et les éventuels frais doivent être clarifiés avant tout engagement contraignant.",
+    de: "Die Leistungen, die Verantwortlichkeiten jeder Partei und die etwaigen Kosten müssen vor jeder bindenden Verpflichtung geklärt sein.",
+    en: "The services, each party's responsibilities and any costs must be clarified before any binding commitment.",
   },
   responsableBody2: {
-    fr: "Notre objectif est d'aider les candidats à avancer avec une meilleure compréhension de leur projet et de permettre aux entreprises de dialoguer avec des profils préparés et correctement informés.",
-    de: "Unser Ziel ist es, den Kandidaten zu helfen, mit einem besseren Verständnis ihres Projekts voranzukommen, und den Unternehmen zu ermöglichen, mit vorbereiteten und korrekt informierten Profilen in den Austausch zu treten.",
-    en: "Our goal is to help candidates move forward with a better understanding of their project and to enable companies to engage with prepared and well-informed profiles.",
+    fr: "Notre objectif est d'aider les candidats à comprendre clairement leur projet professionnel et de permettre aux entreprises d'échanger avec des candidats parfaitement préparés et informés en toute transparence.",
+    de: "Unser Ziel ist es, Kandidaten dabei zu unterstützen, ihr berufliches Vorhaben klar zu verstehen und Unternehmen gleichzeitig zu ermöglichen, mit optimal vorbereiteten und transparent informierten Kandidaten in den Austausch zu treten.",
+    en: "Our goal is to help candidates clearly understand their professional project while enabling companies to engage with optimally prepared and transparently informed candidates.",
   },
 
   // 08 — Nos partenaires
