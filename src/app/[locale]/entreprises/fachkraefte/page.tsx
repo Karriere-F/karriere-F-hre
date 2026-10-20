@@ -65,7 +65,7 @@ export default async function EntreprisesFachkraeftePage() {
           <p className="animate-fade-up mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
             {L(F.heroKicker)}
           </p>
-          <h1 className="animate-fade-up font-serif text-3xl lg:text-[2rem] xl:text-[2.6rem] text-brand-black leading-tight lg:whitespace-nowrap">
+          <h1 className="animate-fade-up font-serif text-3xl lg:text-[2.3rem] xl:text-[2.85rem] text-brand-black leading-tight lg:whitespace-nowrap">
             {L(F.heroTitle)}
           </h1>
 
