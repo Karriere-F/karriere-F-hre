@@ -430,15 +430,15 @@ export const APROPOS = {
     en: "An international professional project requires time, effort and often significant financial resources. It must therefore be prepared with the greatest care.",
   },
   responsableIntro2: {
-    fr: "Chez Karriere Fähre, nous souhaitons promouvoir une approche fondée sur :",
-    de: "Bei Karriere Fähre möchten wir einen Ansatz fördern, der beruht auf:",
-    en: "At Karriere Fähre, we want to promote an approach based on:",
+    fr: "L'approche de Karriere Fähre repose sur :",
+    de: "Der Ansatz von Karriere Fähre basiert auf:",
+    en: "Karriere Fähre's approach is based on:",
   },
   responsableBullets: [
     {
-      fr: "des informations claires sur les parcours et les conditions applicables",
-      de: "klaren Informationen über die Wege und die geltenden Bedingungen",
-      en: "clear information about the paths and the applicable conditions",
+      fr: "des informations claires sur les différents parcours et les conditions applicables",
+      de: "klaren Informationen über die verschiedenen Wege und die geltenden Bedingungen",
+      en: "clear information about the different paths and the applicable conditions",
     },
     {
       fr: "une présentation compréhensible des prestations et des frais éventuels",
@@ -446,14 +446,14 @@ export const APROPOS = {
       en: "an understandable presentation of the services and any fees",
     },
     {
-      fr: "une attention particulière à la confidentialité des documents et des données personnelles",
-      de: "einer besonderen Aufmerksamkeit für die Vertraulichkeit der Dokumente und der personenbezogenen Daten",
-      en: "particular attention to the confidentiality of documents and personal data",
+      fr: "une attention maximale à la confidentialité des documents et des données personnelles",
+      de: "höchster Aufmerksamkeit für die Vertraulichkeit der Dokumente und der personenbezogenen Daten",
+      en: "the utmost attention to the confidentiality of documents and personal data",
     },
     {
-      fr: "une préparation cohérente avec les exigences du métier et de l'employeur",
-      de: "einer Vorbereitung im Einklang mit den Anforderungen des Berufs und des Arbeitgebers",
-      en: "preparation consistent with the requirements of the profession and the employer",
+      fr: "une préparation en phase avec les exigences du métier et les attentes de l'employeur",
+      de: "einer Vorbereitung im Einklang mit den beruflichen Anforderungen und den Erwartungen des Arbeitgebers",
+      en: "preparation aligned with the professional requirements and the employer's expectations",
     },
     {
       fr: "le respect des procédures de recrutement et d'immigration applicables",
@@ -461,9 +461,9 @@ export const APROPOS = {
       en: "respect for the applicable recruitment and immigration procedures",
     },
     {
-      fr: "l'absence de promesses d'emploi, d'admission ou de visa garanti",
-      de: "dem Verzicht auf Versprechen einer garantierten Beschäftigung, Zulassung oder eines Visums",
-      en: "no promises of guaranteed employment, admission or visa",
+      fr: "l'absence de promesse d'emploi, d'admission ou de délivrance de visa garantis",
+      de: "dem Verzicht auf Versprechen einer garantierten Beschäftigung, Zulassung oder Visumerteilung",
+      en: "no promise of guaranteed employment, admission or visa issuance",
     },
   ] as LT[],
   responsableBody1: {
