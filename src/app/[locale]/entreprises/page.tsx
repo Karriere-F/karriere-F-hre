@@ -232,7 +232,19 @@ export default async function EntreprisesPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-4 py-20 text-center sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(E.finalKicker)}</p>
           <h2 className="max-w-2xl font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(E.finalTitle)}</h2>
-          <p className="max-w-2xl text-lg text-brand-ink-secondary leading-relaxed">{L(E.finalText)}</p>
+          <p className="max-w-2xl text-lg text-brand-ink-secondary leading-relaxed">
+            {(() => {
+              const t = L(E.finalText);
+              const i = t.indexOf(". ");
+              return i === -1 ? t : (
+                <>
+                  {t.slice(0, i + 1)}
+                  <br />
+                  {t.slice(i + 2)}
+                </>
+              );
+            })()}
+          </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <Link href="/entreprises/demande-recrutement" className={btnOutline}>
               {L(E.finalCtaPrimary)}
