@@ -38,9 +38,9 @@ export const APROPOS = {
     en: "Karriere Fähre is an international placement agency based in Douala, Cameroon. We support candidates who want to train or build a career in Germany and develop collaborations with those looking for skills suited to their needs.",
   },
   heroBody2: {
-    fr: "Notre approche associe compréhension interculturelle, préparation professionnelle et accompagnement structuré pour aider chacun à mieux comprendre son parcours et les étapes à franchir.",
-    de: "Unser Ansatz verbindet interkulturelles Verständnis, berufliche Vorbereitung und strukturierte Begleitung, um jedem zu helfen, seinen Weg und die zu gehenden Schritte besser zu verstehen.",
-    en: "Our approach combines intercultural understanding, professional preparation and structured support to help everyone better understand their path and the steps to take.",
+    fr: "Notre approche associe compréhension interculturelle, préparation professionnelle et accompagnement structuré pour soutenir chaque candidat sur son parcours individuel.",
+    de: "Unser Ansatz verbindet interkulturelles Verständnis, berufliche Vorbereitung und strukturierte Begleitung, um jeden Kandidaten auf seinem individuellen Weg zu unterstützen.",
+    en: "Our approach combines intercultural understanding, professional preparation and structured support to help each candidate along their individual path.",
   },
   heroCtaPrimary: { fr: "Évaluer mon profil", de: "Mein Profil einschätzen", en: "Assess my profile" },
   heroCtaSecondary: { fr: "Découvrir notre méthode", de: "Unsere Methode entdecken", en: "Discover our method" },
