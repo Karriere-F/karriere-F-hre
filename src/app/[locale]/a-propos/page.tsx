@@ -145,8 +145,18 @@ export default async function AProposPage() {
       <section className="bg-brand-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(A.foundersKicker)}</p>
-          <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug text-balance">
-            {L(A.foundersTitle)}
+          <h2 className="mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">
+            {(() => {
+              const t = L(A.foundersTitle);
+              const i = t.indexOf(". ");
+              return i === -1 ? t : (
+                <>
+                  {t.slice(0, i + 1)}
+                  <br />
+                  {t.slice(i + 2)}
+                </>
+              );
+            })()}
           </h2>
           <div className="mt-6 space-y-4">
             {A.foundersIntro.map((p, i) => (
