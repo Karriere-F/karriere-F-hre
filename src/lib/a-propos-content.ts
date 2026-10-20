@@ -292,7 +292,7 @@ export const APROPOS = {
       title: { fr: "Organiser les démarches", de: "Die Schritte organisieren", en: "Organise the procedures" },
       body: {
         fr: "Nous aidons à clarifier les étapes administratives applicables, notamment celles liées à la reconnaissance des qualifications ou à la demande de visa lorsque cela est pertinent.",
-        de: "Wir helfen, die anwendbaren behördlichen Schritte zu klären, insbesondere jene zur Anerkennung der Qualifikationen oder zum Visumantrag, sofern dies relevant ist.",
+        de: "Wir helfen, die anwendbaren behördlichen Schritte zu klären, insbesondere jene zur Anerkennung der Qualifikationen oder zum Visumsantrag, sofern dies relevant ist.",
         en: "We help clarify the applicable administrative steps, in particular those related to the recognition of qualifications or the visa application when relevant.",
       },
     },
