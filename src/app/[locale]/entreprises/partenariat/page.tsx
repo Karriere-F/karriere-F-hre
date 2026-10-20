@@ -86,7 +86,7 @@ export default async function EntreprisesPartenariatPage() {
               {E.heroIntro.map((p, i) => (
                 <p
                   key={i}
-                  className={`animate-fade-up text-brand-ink-secondary leading-relaxed ${justify} ${i === 0 ? "text-lg" : "mt-3"}`}
+                  className={`animate-fade-up text-brand-ink-secondary leading-relaxed ${i === 0 ? "text-lg" : "mt-3"}`}
                   style={{ animationDelay: `${80 + i * 40}ms` }}
                 >
                   {L(p)}
@@ -154,7 +154,7 @@ export default async function EntreprisesPartenariatPage() {
                     <Icon size={22} strokeWidth={1.8} aria-hidden="true" />
                   </span>
                   <h3 className="mt-5 font-serif text-xl text-brand-black leading-snug">{L(pr.title)}</h3>
-                  <p className={`mt-3 text-sm text-brand-ink-secondary leading-relaxed ${justify}`}>{L(pr.body)}</p>
+                  <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed">{L(pr.body)}</p>
                 </div>
               );
             })}
@@ -209,7 +209,7 @@ export default async function EntreprisesPartenariatPage() {
           <div className="text-center">
             <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">{L(E.formKicker)}</p>
             <h2 className="animate-fade-up mt-3 font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black leading-snug">{L(E.formTitle)}</h2>
-            <p className={`animate-fade-up mx-auto mt-4 max-w-2xl text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.formIntro)}</p>
+            <p className="animate-fade-up mx-auto mt-4 max-w-2xl text-brand-ink-secondary leading-relaxed">{L(E.formIntro)}</p>
           </div>
           <div className="animate-fade-up mt-10">
             <PartnershipRequestForm labels={formLabels} />
