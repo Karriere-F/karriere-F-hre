@@ -236,14 +236,14 @@ export const APROPOS = {
   foundersAmbitionTitle: { fr: "Une ambition commune", de: "Eine gemeinsame Ambition", en: "A shared ambition" },
   foundersAmbition: [
     {
-      fr: "Gaëlle et Sebastian partagent une conviction : un projet professionnel international doit être construit sur la confiance, la préparation et la compréhension mutuelle.",
-      de: "Gaëlle und Sebastian teilen eine Überzeugung: Ein internationales berufliches Projekt muss auf Vertrauen, Vorbereitung und gegenseitigem Verständnis aufgebaut sein.",
-      en: "Gaëlle and Sebastian share a conviction: an international professional project must be built on trust, preparation and mutual understanding.",
+      fr: "Gaëlle et Sebastian partagent une conviction fondamentale : un projet professionnel international doit reposer sur la confiance, une préparation solide et la compréhension mutuelle.",
+      de: "Gaëlle und Sebastian teilen eine grundlegende Überzeugung: Ein internationales berufliches Projekt muss auf Vertrauen, fundierter Vorbereitung und gegenseitigem Verständnis aufgebaut sein.",
+      en: "Gaëlle and Sebastian share a fundamental conviction: an international professional project must be built on trust, solid preparation and mutual understanding.",
     },
     {
-      fr: "Ensemble, ils souhaitent développer Karriere Fähre comme un interlocuteur de confiance pour les candidats, les entreprises et les partenaires de formation.",
-      de: "Gemeinsam möchten sie Karriere Fähre als einen vertrauenswürdigen Ansprechpartner für Kandidaten, Unternehmen und Ausbildungspartner entwickeln.",
-      en: "Together, they want to develop Karriere Fähre as a trusted contact for candidates, companies and training partners.",
+      fr: "Ensemble, ils façonnent Karriere Fähre comme un interlocuteur fiable pour les candidats, les entreprises et les partenaires de formation.",
+      de: "Gemeinsam gestalten sie Karriere Fähre als einen verlässlichen Ansprechpartner für Kandidaten, Unternehmen und Ausbildungspartner.",
+      en: "Together, they shape Karriere Fähre into a reliable contact for candidates, companies and training partners.",
     },
   ] as LT[],
 
