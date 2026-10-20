@@ -1,8 +1,8 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { ArrowRight, ArrowDown, Handshake, Target, TrendingUp } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
-import { HeroCarousel } from "@/components/entreprises/hero-carousel";
 import { buildMetadata } from "@/lib/seo";
 import { tr } from "@/lib/localized";
 import { ENT_PARTENARIAT as E } from "@/lib/entreprises-partenariat-content";
@@ -67,7 +67,7 @@ export default async function EntreprisesPartenariatPage() {
                 </p>
               ))}
               <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "220ms" }}>
-                <Link href="/contact" className={btnOutline}>
+                <Link href="/entreprises/demande-recrutement" className={btnOutline}>
                   {L(E.heroCta)}
                   <ArrowRight size={18} aria-hidden="true" />
                 </Link>
@@ -79,16 +79,22 @@ export default async function EntreprisesPartenariatPage() {
             </div>
 
             <div className="animate-fade-up relative lg:-mt-10 lg:-mr-12 xl:-mr-24" style={{ animationDelay: "120ms" }}>
-              <HeroCarousel
-                slides={[
-                  { src: "/images/ent-hero-1.webp", alt: L({ fr: "Électricien industriel contrôlant une armoire électrique", de: "Industrieelektriker prüft einen Schaltschrank", en: "Industrial electrician checking an electrical cabinet" }) },
-                  { src: "/images/ent-hero-2.webp", alt: L({ fr: "Soignante accompagnant une personne âgée en maison de retraite", de: "Pflegekraft begleitet eine ältere Person im Pflegeheim", en: "Caregiver assisting an elderly resident in a care home" }) },
-                  { src: "/images/ent-hero-3.webp", alt: L({ fr: "Cheffe de cuisine dressant une assiette au restaurant", de: "Köchin richtet einen Teller im Restaurant an", en: "Chef plating a dish in a restaurant" }) },
-                  { src: "/images/ent-hero-4.webp", alt: L({ fr: "Responsable logistique sur un quai de chargement", de: "Logistikmitarbeiter an der Laderampe", en: "Logistics worker at a loading dock" }) },
-                  { src: "/images/ent-hero-5.webp", alt: L({ fr: "Maçon travaillant sur un chantier de construction", de: "Maurer auf einer Baustelle", en: "Mason working on a construction site" }) },
-                  { src: "/images/ent-hero-6.webp", alt: L({ fr: "Mécanicien réparant le moteur d'un camion", de: "Mechaniker repariert einen Lkw-Motor", en: "Mechanic repairing a truck engine" }) },
-                ]}
+              <Image
+                src="/images/partenariat-hero.webp"
+                alt={L({
+                  fr: "Réunion d'affaires entre une entreprise partenaire et l'équipe de Karriere Fähre autour d'une table",
+                  de: "Geschäftstreffen zwischen einem Partnerunternehmen und dem Team von Karriere Fähre am Tisch",
+                  en: "Business meeting between a partner company and the Karriere Fähre team around a table",
+                })}
+                width={1671}
+                height={941}
+                priority
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="h-auto w-full rounded-2xl"
               />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-brand-card to-transparent" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/5 bg-gradient-to-b from-brand-card to-transparent" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-brand-card to-transparent" />
             </div>
           </div>
         </div>
@@ -162,7 +168,7 @@ export default async function EntreprisesPartenariatPage() {
           </div>
           <p className="animate-fade-up mt-2 font-serif text-xl text-brand-gold-light">{L(E.finalBold)}</p>
           <div className="animate-fade-up mt-4">
-            <Link href="/contact" className={btnOutlineDark}>
+            <Link href="/entreprises/demande-recrutement" className={btnOutlineDark}>
               {L(E.finalCta)}
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
