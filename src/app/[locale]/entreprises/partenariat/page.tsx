@@ -175,9 +175,9 @@ export default async function EntreprisesPartenariatPage() {
             </div>
           </div>
 
-          <div className="animate-fade-up mt-10 rounded-2xl bg-brand-gold p-8 text-brand-black shadow-[0_12px_40px_rgba(17,17,17,0.14)] sm:p-10">
+          <div className="animate-fade-up mt-10 rounded-2xl bg-brand-gold/12 p-8 text-brand-black ring-1 ring-brand-gold/30 sm:p-10">
             <p className="font-serif text-2xl leading-snug text-brand-black">{L(E.distinctBold)}</p>
-            <p className={`mt-3 text-brand-black/80 leading-relaxed ${justify}`}>{L(E.distinctAfter)}</p>
+            <p className={`mt-3 text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.distinctAfter)}</p>
           </div>
         </div>
       </section>
