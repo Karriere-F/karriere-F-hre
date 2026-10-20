@@ -186,8 +186,8 @@ export default async function EntreprisesPartenariatPage() {
       <section className="bg-brand-black text-brand-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-24">
           <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-light">{L(E.finalKicker)}</p>
-          <h2 className="animate-fade-up max-w-3xl font-serif text-2xl sm:text-3xl lg:text-4xl leading-snug">{L(E.finalTitle)}</h2>
-          <div className="animate-fade-up max-w-2xl space-y-3">
+          <h2 className="animate-fade-up font-serif text-2xl sm:text-3xl lg:text-4xl leading-snug">{L(E.finalTitle)}</h2>
+          <div className="animate-fade-up max-w-4xl space-y-3">
             {E.finalBody.map((p, i) => (
               <p key={i} className="text-lg text-brand-white/80 leading-relaxed">{L(p)}</p>
             ))}
