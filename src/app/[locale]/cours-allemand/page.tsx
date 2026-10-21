@@ -207,7 +207,7 @@ export default async function CoursAllemandPage() {
                   {L(card.tag)}
                 </span>
                 <h3 className="mt-4 font-serif text-xl text-brand-black leading-snug">{L(card.title)}</h3>
-                <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed">{L(card.body)}</p>
+                <p className="mt-3 text-sm text-brand-ink-secondary leading-relaxed text-justify-hyphen">{L(card.body)}</p>
                 <Link
                   href={card.href as "/ausbildung-allemagne"}
                   className="group mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-brand-gold-text"
