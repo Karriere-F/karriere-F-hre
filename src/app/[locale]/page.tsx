@@ -258,8 +258,8 @@ export default async function HomePage() {
               >
                 <span className="font-serif text-3xl text-brand-gold-text">{p.num}</span>
                 <h3 className="mt-3 font-serif text-2xl font-bold text-brand-black">{L(p.title)}</h3>
-                <p className="mt-3 text-brand-ink-secondary leading-relaxed">{L(p.body)}</p>
-                <p className="mt-4 text-sm text-brand-ink-muted leading-relaxed">{L(p.pour)}</p>
+                <p className="mt-3 text-brand-ink-secondary leading-relaxed text-justify-hyphen">{L(p.body)}</p>
+                <p className="mt-4 text-sm text-brand-ink-muted leading-relaxed text-justify-hyphen">{L(p.pour)}</p>
                 <Link
                   href={p.href as "/ausbildung-allemagne"}
                   className="mt-auto inline-flex items-center gap-2 pt-6 font-bold text-brand-gold-text after:absolute after:inset-0 after:content-['']"
