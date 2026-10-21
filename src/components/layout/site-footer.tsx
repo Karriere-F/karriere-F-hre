@@ -6,6 +6,7 @@ import { WHATSAPP_NUMBERS, whatsappLink } from "@/lib/constants";
 import { SECTEURS_UI } from "@/lib/secteurs";
 import { tr } from "@/lib/localized";
 import { NewsletterForm } from "./newsletter-form";
+import { CookieFooterNotice } from "@/components/cookie-consent/cookie-consent";
 
 const EMAIL = "kontakt@karrierefaehre.com";
 
@@ -202,6 +203,9 @@ export async function SiteFooter() {
           L&apos;exigence allemande. Votre réussite.
         </p>
       </div>
+
+      {/* Cookie notice */}
+      <CookieFooterNotice />
 
       {/* Bottom bar */}
       <div className="border-t border-brand-white/10">

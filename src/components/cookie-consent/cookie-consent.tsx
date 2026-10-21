@@ -27,6 +27,10 @@ type Strings = {
   back: string;
   imprint: string;
   privacy: string;
+  footerText: string;
+  footerChange: string;
+  footerReject: string;
+  footerAccept: string;
 };
 
 const T: Record<Locale, Strings> = {
@@ -56,6 +60,11 @@ const T: Record<Locale, Strings> = {
     back: "Zurück",
     imprint: "Impressum",
     privacy: "Datenschutzerklärung",
+    footerText:
+      "Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung mit der Website bieten zu können. Ihre Cookie-Einstellungen werden im lokalen Speicher Ihres Browsers gespeichert. Dazu gehören Cookies, die für die Website technisch notwendig sind. Darüber hinaus können Sie frei entscheiden, ob Sie Cookies akzeptieren, und dies jederzeit ändern. Sie können auch Cookies zur Verbesserung der Website-Leistung sowie Cookies zum Anzeigen von Inhalten, die auf Ihre Interessen zugeschnitten sind, ablehnen. Wenn Sie nicht alle Cookies akzeptieren, kann dies Auswirkungen auf Ihre Erfahrung auf der Site und die von uns angebotenen Services haben.",
+    footerChange: "Cookie-Einstellungen ändern",
+    footerReject: "Alle Cookies ablehnen",
+    footerAccept: "Alle Cookies akzeptieren",
   },
   fr: {
     title: "Paramètres de confidentialité",
@@ -83,6 +92,11 @@ const T: Record<Locale, Strings> = {
     back: "Retour",
     imprint: "Mentions légales",
     privacy: "Politique de confidentialité",
+    footerText:
+      "Nous utilisons des cookies afin de vous offrir la meilleure expérience possible sur le site. Vos préférences de cookies sont enregistrées dans le stockage local de votre navigateur. Cela inclut les cookies techniquement nécessaires au fonctionnement du site. Au-delà, vous êtes libre de décider si vous acceptez les cookies et de modifier ce choix à tout moment. Vous pouvez aussi refuser les cookies destinés à améliorer les performances du site ainsi que ceux servant à afficher des contenus adaptés à vos centres d'intérêt. Si vous n'acceptez pas tous les cookies, cela peut avoir des conséquences sur votre expérience sur le site et sur les services que nous proposons.",
+    footerChange: "Modifier les paramètres des cookies",
+    footerReject: "Refuser tous les cookies",
+    footerAccept: "Accepter tous les cookies",
   },
   en: {
     title: "Privacy settings",
@@ -110,6 +124,11 @@ const T: Record<Locale, Strings> = {
     back: "Back",
     imprint: "Legal notice",
     privacy: "Privacy policy",
+    footerText:
+      "We use cookies to give you the best possible experience on the website. Your cookie settings are stored in your browser's local storage. This includes cookies that are technically necessary for the website. Beyond that, you are free to decide whether to accept cookies and to change this at any time. You can also decline cookies that improve website performance as well as cookies used to display content tailored to your interests. If you do not accept all cookies, this may affect your experience on the site and the services we offer.",
+    footerChange: "Change cookie settings",
+    footerReject: "Reject all cookies",
+    footerAccept: "Accept all cookies",
   },
 };
 
@@ -258,6 +277,39 @@ export function CookieConsent() {
               {t.imprint}
             </Link>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Persistent footer notice: lets visitors re-open the banner or accept/reject all
+// at any time, as required for a revocable consent.
+export function CookieFooterNotice() {
+  const locale = (useLocale() as Locale) ?? "de";
+  const t = T[locale] ?? T.de;
+
+  const change = () => window.dispatchEvent(new Event(OPEN_EVENT));
+  const reject = () => store({ statistics: false, marketing: false, externalMedia: false });
+  const accept = () => store({ statistics: true, marketing: true, externalMedia: true });
+
+  const link =
+    "press font-semibold text-brand-white/80 underline-offset-2 transition-colors duration-200 hover:text-brand-gold-light hover:underline";
+
+  return (
+    <div className="border-t border-brand-white/10">
+      <div className="mx-auto max-w-7xl px-4 py-6 text-xs leading-relaxed text-brand-white/45 sm:px-6 lg:px-10">
+        <p className="max-w-4xl">{t.footerText}</p>
+        <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+          <button type="button" onClick={change} className={link}>
+            {t.footerChange}
+          </button>
+          <button type="button" onClick={reject} className={link}>
+            {t.footerReject}
+          </button>
+          <button type="button" onClick={accept} className={link}>
+            {t.footerAccept}
+          </button>
         </div>
       </div>
     </div>
