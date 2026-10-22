@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useLocale } from "next-intl";
 import { Link } from "@i18n/navigation";
 
@@ -35,7 +36,7 @@ type Strings = {
 
 const T: Record<Locale, Strings> = {
   de: {
-    title: "Datenschutzeinstellungen",
+    title: "Cookie-Einstellungen",
     intro: [
       "Wir respektieren Ihre Privatsphäre und möchten, dass Sie selbst entscheiden, welche Cookies Sie zulassen.",
       "Sind Sie unter 16 Jahre alt, holen Sie bitte die Zustimmung Ihrer Erziehungsberechtigten ein, bevor Sie optionale Dienste erlauben.",
@@ -54,9 +55,9 @@ const T: Record<Locale, Strings> = {
       { key: "externalMedia", title: "Externe Medien", desc: "Erlauben eingebettete Inhalte von Drittanbietern wie Videos oder Karten, die sonst erst nach Ihrer Zustimmung geladen werden." },
     ],
     save: "Speichern",
-    acceptAll: "Alle akzeptieren",
-    essentialOnly: "Nur essenzielle Cookies akzeptieren",
-    individual: "Individuelle Datenschutzeinstellungen",
+    acceptAll: "Alles akzeptieren",
+    essentialOnly: "Alles ablehnen",
+    individual: "Einstellungen",
     back: "Zurück",
     imprint: "Impressum",
     privacy: "Datenschutzerklärung",
@@ -67,7 +68,7 @@ const T: Record<Locale, Strings> = {
     footerAccept: "Alle Cookies akzeptieren",
   },
   fr: {
-    title: "Paramètres de confidentialité",
+    title: "Paramètres des cookies",
     intro: [
       "Nous respectons votre vie privée et souhaitons que vous décidiez vous-même des cookies que vous autorisez.",
       "Si vous avez moins de 16 ans, demandez l'accord de vos responsables légaux avant d'autoriser des services optionnels.",
@@ -87,8 +88,8 @@ const T: Record<Locale, Strings> = {
     ],
     save: "Enregistrer",
     acceptAll: "Tout accepter",
-    essentialOnly: "Accepter uniquement les cookies essentiels",
-    individual: "Paramètres de confidentialité individuels",
+    essentialOnly: "Tout refuser",
+    individual: "Paramètres",
     back: "Retour",
     imprint: "Mentions légales",
     privacy: "Politique de confidentialité",
@@ -99,7 +100,7 @@ const T: Record<Locale, Strings> = {
     footerAccept: "Accepter tous les cookies",
   },
   en: {
-    title: "Privacy settings",
+    title: "Cookie settings",
     intro: [
       "We respect your privacy and want you to decide for yourself which cookies you allow.",
       "If you are under 16, please ask your legal guardians for permission before allowing optional services.",
@@ -119,8 +120,8 @@ const T: Record<Locale, Strings> = {
     ],
     save: "Save",
     acceptAll: "Accept all",
-    essentialOnly: "Accept only essential cookies",
-    individual: "Individual privacy settings",
+    essentialOnly: "Reject all",
+    individual: "Settings",
     back: "Back",
     imprint: "Legal notice",
     privacy: "Privacy policy",
@@ -191,23 +192,28 @@ export function CookieConsent() {
   };
   const toggle = (k: keyof Prefs) => setPrefs((p) => ({ ...p, [k]: !p[k] }));
 
-  const btnPrimary =
-    "press inline-flex min-h-[48px] items-center justify-center rounded-md bg-brand-gold px-5 py-2.5 text-center text-sm font-bold text-brand-black transition-colors duration-200 hover:bg-brand-gold-light";
-  const btnGhost =
-    "press inline-flex min-h-[48px] items-center justify-center rounded-md border border-brand-grid px-5 py-2.5 text-center text-sm font-semibold text-brand-black transition-colors duration-200 hover:border-brand-gold hover:text-brand-gold-text";
+  const btnFilled =
+    "press inline-flex min-h-[52px] items-center justify-center rounded-md bg-brand-gold px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand-black transition-colors duration-200 hover:bg-brand-gold-light";
 
   return (
     <div
       role="dialog"
       aria-modal="true"
       aria-label={t.title}
-      className="fixed inset-0 z-[200] flex items-end justify-center bg-brand-black/50 p-0 backdrop-blur-sm sm:items-center sm:p-6"
+      className="fixed inset-0 z-[200] flex items-center justify-center bg-brand-black/50 p-4 backdrop-blur-sm sm:p-6"
     >
-      <div className="flex max-h-[92dvh] w-full max-w-2xl flex-col overflow-hidden rounded-t-2xl bg-brand-white shadow-[0_24px_70px_rgba(17,17,17,0.35)] sm:rounded-2xl">
-        <div className="overflow-y-auto px-6 py-7 sm:px-8 sm:py-8">
-          <h2 className="font-serif text-2xl text-brand-black leading-snug">{t.title}</h2>
+      <div className="flex max-h-[90dvh] w-full max-w-2xl flex-col rounded-2xl bg-brand-white px-6 py-7 shadow-[0_24px_70px_rgba(17,17,17,0.35)] sm:px-10 sm:py-9">
+        <Image
+          src="/logo-kf-transparent.png"
+          alt="Karriere Fähre"
+          width={900}
+          height={620}
+          className="h-auto w-[104px] self-center"
+        />
+        <h2 className="mt-5 font-serif text-2xl font-bold text-brand-black sm:text-3xl">{t.title}</h2>
 
-          <div className="mt-4 space-y-3 text-sm text-brand-ink-secondary leading-relaxed">
+        <div className="mt-4 max-h-[42vh] overflow-y-auto pr-3 text-sm text-brand-ink-secondary leading-relaxed [scrollbar-gutter:stable]">
+          <div className="space-y-3">
             <p>{t.intro[0]}</p>
             <p>{t.intro[1]}</p>
             <p>{t.intro[2]}</p>
@@ -223,7 +229,7 @@ export function CookieConsent() {
 
           {details && (
             <div className="mt-6">
-              <p className="text-sm text-brand-ink-secondary leading-relaxed">{t.groupsIntro}</p>
+              <p>{t.groupsIntro}</p>
               <ul className="mt-4 space-y-3">
                 {t.groups.map((g) => {
                   const isEssential = g.key === "essential";
@@ -241,7 +247,7 @@ export function CookieConsent() {
                           className="mt-0.5 h-5 w-5 shrink-0 accent-brand-gold disabled:opacity-60"
                         />
                       </div>
-                      <p className="mt-2 text-xs text-brand-ink-secondary leading-relaxed">{g.desc}</p>
+                      <p className="mt-2 text-xs leading-relaxed">{g.desc}</p>
                     </li>
                   );
                 })}
@@ -250,33 +256,30 @@ export function CookieConsent() {
           )}
         </div>
 
-        <div className="border-t border-brand-grid bg-brand-card px-6 py-5 sm:px-8">
-          <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
-            {details ? (
-              <button type="button" onClick={saveSelection} className={btnPrimary}>
-                {t.save}
-              </button>
-            ) : null}
-            <button type="button" onClick={acceptAll} className={btnPrimary}>
-              {t.acceptAll}
-            </button>
-            <button type="button" onClick={essentialOnly} className={btnGhost}>
-              {t.essentialOnly}
-            </button>
-            {!details ? (
-              <button type="button" onClick={() => setDetails(true)} className={btnGhost}>
-                {t.individual}
-              </button>
-            ) : null}
-          </div>
-          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-brand-ink-muted">
-            <Link href="/confidentialite" className="hover:text-brand-gold-text hover:underline">
-              {t.privacy}
-            </Link>
-            <Link href="/mentions-legales" className="hover:text-brand-gold-text hover:underline">
-              {t.imprint}
-            </Link>
-          </div>
+        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+          <button
+            type="button"
+            onClick={details ? saveSelection : () => setDetails(true)}
+            className={btnFilled}
+          >
+            {details ? t.save : t.individual}
+          </button>
+          <button type="button" onClick={essentialOnly} className={btnFilled}>
+            {t.essentialOnly}
+          </button>
+          <button type="button" onClick={acceptAll} className={btnFilled}>
+            {t.acceptAll}
+          </button>
+        </div>
+
+        <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-brand-ink-muted">
+          <Link href="/mentions-legales" className="hover:text-brand-gold-text hover:underline">
+            {t.imprint}
+          </Link>
+          <span aria-hidden="true" className="text-brand-grid">|</span>
+          <Link href="/confidentialite" className="hover:text-brand-gold-text hover:underline">
+            {t.privacy}
+          </Link>
         </div>
       </div>
     </div>
