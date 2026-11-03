@@ -1,0 +1,59 @@
+# Karriere Fähre
+
+> Karriere Fähre is an international placement and German-language training agency based in Douala, Cameroon. We connect motivated Cameroonian candidates with German companies and prepare them — linguistically, professionally and administratively — for an Ausbildung (dual vocational training), qualified employment, or the Chancenkarte (Opportunity Card) in Germany.
+
+Karriere Fähre serves two audiences: candidates who want to train or work in Germany, and German companies that want to recruit qualified international professionals and apprentices. The site is trilingual: every URL below uses the French `/fr/` prefix — replace it with `/de/` for German or `/en/` for English. Service prices are not published online and are discussed individually. We never guarantee a job, a recognition or a visa; those decisions rest with the competent employers and authorities.
+
+## Candidates — train and work in Germany
+- [Candidates overview](https://karrierefaehre.com/fr/candidats): the three paths to Germany — Ausbildung, qualified employment and the Chancenkarte.
+- [Ausbildung in Germany](https://karrierefaehre.com/fr/ausbildung-allemagne): dual vocational training combining classroom theory and in-company practice.
+- [Ausbildung requirements](https://karrierefaehre.com/fr/ausbildung-allemagne/conditions)
+- [After the Ausbildung](https://karrierefaehre.com/fr/ausbildung-allemagne/apres-ausbildung)
+- [Working in Germany](https://karrierefaehre.com/fr/travailler-en-allemagne): qualified employment for experienced professionals.
+- [Germany visa](https://karrierefaehre.com/fr/visa-allemagne): the main visa routes to Germany.
+- [Chancenkarte (Opportunity Card)](https://karrierefaehre.com/fr/visa-allemagne/chancenkarte)
+- [Skilled worker visa](https://karrierefaehre.com/fr/visa-allemagne/travailleur-qualifie)
+- [Qualification recognition](https://karrierefaehre.com/fr/candidats/reconnaissance-diplomes)
+- [Living in Germany](https://karrierefaehre.com/fr/candidats/vivre-en-allemagne)
+- [Assess my profile](https://karrierefaehre.com/fr/evaluation): a free online orientation questionnaire.
+
+## German courses
+- [German courses](https://karrierefaehre.com/fr/cours-allemand): levels A1 to B2, from everyday German to job-specific language.
+- [Full Training (A1 to B2)](https://karrierefaehre.com/fr/cours-allemand/full-training)
+- [Fast Track](https://karrierefaehre.com/fr/cours-allemand/fast-track)
+- [Exam preparation](https://karrierefaehre.com/fr/cours-allemand/preparation-examens)
+- [Which track is right for me](https://karrierefaehre.com/fr/cours-allemand/quel-parcours)
+- [Level test](https://karrierefaehre.com/fr/cours-allemand/test-niveau)
+
+## Sectors and professions
+- [Sectors](https://karrierefaehre.com/fr/secteurs): Healthcare, IT, Industry, Construction, Logistics, Engineering and Hospitality, each with an Ausbildung path, an already-qualified path and per-profession fact sheets.
+- [Healthcare](https://karrierefaehre.com/fr/secteurs/sante)
+- [IT](https://karrierefaehre.com/fr/secteurs/informatique)
+- [Industry](https://karrierefaehre.com/fr/secteurs/industrie)
+- [Construction](https://karrierefaehre.com/fr/secteurs/construction)
+- [Logistics](https://karrierefaehre.com/fr/secteurs/logistique)
+- [Engineering](https://karrierefaehre.com/fr/secteurs/ingenierie)
+- [Hospitality](https://karrierefaehre.com/fr/secteurs/hotellerie)
+- [Professions in demand](https://karrierefaehre.com/fr/metiers)
+
+## Employers — recruit from Cameroon
+- [Employers overview](https://karrierefaehre.com/fr/entreprises): structured international recruitment for German companies.
+- [Recruit skilled workers (Fachkräfte)](https://karrierefaehre.com/fr/entreprises/fachkraefte)
+- [Recruit apprentices (Azubis)](https://karrierefaehre.com/fr/entreprises/ausbildung)
+- [Our recruitment method](https://karrierefaehre.com/fr/entreprises/methode)
+- [Sectors for employers](https://karrierefaehre.com/fr/entreprises/secteurs)
+- [Become a partner company](https://karrierefaehre.com/fr/entreprises/partenariat)
+- [Submit a recruitment request](https://karrierefaehre.com/fr/entreprises/demande-recrutement)
+
+## About and contact
+- [About us](https://karrierefaehre.com/fr/a-propos): who we are and our mission.
+- [Our method](https://karrierefaehre.com/fr/a-propos/methode)
+- [Our story](https://karrierefaehre.com/fr/a-propos/notre-histoire)
+- [Partners](https://karrierefaehre.com/fr/partenaires)
+- [Contact](https://karrierefaehre.com/fr/contact)
+
+## Optional
+- [Legal notice](https://karrierefaehre.com/fr/mentions-legales)
+- [Privacy policy](https://karrierefaehre.com/fr/confidentialite)
+- [Terms of use](https://karrierefaehre.com/fr/cgu)
+- [Sitemap](https://karrierefaehre.com/fr/plan-du-site)
