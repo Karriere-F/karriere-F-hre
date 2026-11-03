@@ -7,9 +7,14 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 w-full flex gap-10">
       <nav className="w-48 shrink-0 flex flex-col gap-2 text-sm">
-        <Link href="/erp" className="mb-2 font-semibold text-brand-gold-text hover:text-brand-gold">
+        <a
+          href="https://erp.karrierefaehre.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-2 font-semibold text-brand-gold-text hover:text-brand-gold"
+        >
           ERP Karriere Fähre
-        </Link>
+        </a>
         <Link href="/admin" className="text-brand-ink-secondary hover:text-brand-gold">
           Vue d&apos;ensemble
         </Link>

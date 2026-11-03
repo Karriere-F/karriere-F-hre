@@ -10,7 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         "/*/candidate/",
         "/*/employer/",
         "/*/admin/",
-        "/*/erp",
         "/*/connexion",
         "/*/login",
         "/*/anmelden",

@@ -411,24 +411,6 @@ export const routing = defineRouting({
     "/admin/occupations/new": "/admin/occupations/new",
     "/admin/occupations/[id]/edit": "/admin/occupations/[id]/edit",
     "/admin/staffing-requests": "/admin/staffing-requests",
-
-    // Internal ERP (team back office), French only like the admin.
-    "/erp": "/erp",
-    "/erp/dossiers": "/erp/dossiers",
-    "/erp/dossiers/nouveau": "/erp/dossiers/nouveau",
-    "/erp/dossiers/[id]": "/erp/dossiers/[id]",
-    "/erp/placements": "/erp/placements",
-    "/erp/placements/[id]": "/erp/placements/[id]",
-    "/erp/taches": "/erp/taches",
-    "/erp/ecole": "/erp/ecole",
-    "/erp/ecole/[id]": "/erp/ecole/[id]",
-    "/erp/examens": "/erp/examens",
-    "/erp/factures": "/erp/factures",
-    "/erp/factures/nouvelle": "/erp/factures/nouvelle",
-    "/erp/factures/[id]": "/erp/factures/[id]",
-    "/erp/factures/[id]/imprimer": "/erp/factures/[id]/imprimer",
-    "/erp/depenses": "/erp/depenses",
-    "/erp/equipe": "/erp/equipe",
   },
 });
 

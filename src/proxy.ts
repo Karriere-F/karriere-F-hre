@@ -18,7 +18,6 @@ const PROTECTED_PREFIXES = [
   "/employer/requests",
   "/employer/candidates",
   "/admin",
-  "/erp",
 ];
 
 function stripLocale(pathname: string) {

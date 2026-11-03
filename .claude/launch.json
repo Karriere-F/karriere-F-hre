@@ -4,8 +4,22 @@
     {
       "name": "web",
       "runtimeExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000
+    },
+    {
+      "name": "erp",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+      "runtimeArgs": [
+        "--prefix",
+        "erp",
+        "run",
+        "dev"
+      ],
+      "port": 3001
     }
   ]
 }
