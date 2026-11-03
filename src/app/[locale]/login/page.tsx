@@ -47,9 +47,6 @@ export default function LoginPage() {
 
     if (profile?.role === "admin") {
       router.push("/admin");
-    } else if (profile?.role === "staff") {
-      // Team members work in the separate ERP platform, not on the website.
-      window.location.assign("https://erp.karrierefaehre.com");
     } else if (profile?.role === "employer") {
       router.push("/employer/dashboard");
     } else {
