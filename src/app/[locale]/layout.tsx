@@ -44,6 +44,15 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: "Agence de placement international, Douala, Cameroun",
+  openGraph: {
+    siteName: SITE_NAME,
+    type: "website",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-default.png"],
+  },
 };
 
 export default async function LocaleLayout({
