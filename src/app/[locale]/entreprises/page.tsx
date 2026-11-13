@@ -15,8 +15,8 @@ export async function generateMetadata() {
   return buildMetadata({
     pathname: "/entreprises",
     locale,
-    title: tr(E.heroTitle, locale),
-    description: tr(E.heroIntro1, locale),
+    title: tr(E.seoTitle, locale),
+    description: tr(E.seoDescription, locale),
   });
 }
 
@@ -46,7 +46,7 @@ export default async function EntreprisesPage() {
           <p className="animate-fade-up mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold-text">
             {L(E.heroKicker)}
           </p>
-          <h1 className="animate-fade-up font-serif text-3xl lg:text-[2.1rem] xl:text-[2.6rem] text-brand-black leading-tight lg:whitespace-nowrap">
+          <h1 className="animate-fade-up font-serif text-3xl lg:text-4xl xl:text-[2.6rem] text-brand-black leading-tight">
             {L(E.heroTitle)}
           </h1>
 
@@ -58,7 +58,10 @@ export default async function EntreprisesPage() {
               <p className={`animate-fade-up mt-3 text-brand-ink-secondary leading-relaxed ${justify}`} style={{ animationDelay: "120ms" }}>
                 {L(E.heroIntro2)}
               </p>
-              <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "160ms" }}>
+              <p className={`animate-fade-up mt-3 text-brand-ink-secondary leading-relaxed ${justify}`} style={{ animationDelay: "150ms" }}>
+                {L(E.heroIntro3)}
+              </p>
+              <div className="animate-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "190ms" }}>
                 <Link href="/entreprises/demande-recrutement" className={btnOutline}>
                   {L(E.heroCtaPrimary)}
                   <ArrowRight size={18} aria-hidden="true" />
@@ -110,7 +113,7 @@ export default async function EntreprisesPage() {
               <span className="self-start rounded-full bg-brand-gold px-4 py-1.5 font-serif text-sm font-bold text-brand-black">Fachkräfte</span>
               <h3 className="mt-5 font-serif text-2xl text-brand-black leading-snug">{L(E.fachTitle)}</h3>
               <p className="mt-4 font-medium text-brand-black">{L(E.fachQuestion)}</p>
-              <p className={`mt-3 text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.fachBody)}</p>
+              <p className="mt-3 text-brand-ink-secondary leading-relaxed text-left">{L(E.fachBody)}</p>
               <div className="mt-8 pt-2">
                 <Link
                   href="/entreprises/fachkraefte"
@@ -127,7 +130,7 @@ export default async function EntreprisesPage() {
               <span className="self-start rounded-full border border-brand-gold px-4 py-1.5 font-serif text-sm font-bold text-brand-gold-light">Ausbildung</span>
               <h3 className="mt-5 font-serif text-2xl leading-snug">{L(E.ausTitle)}</h3>
               <p className="mt-4 font-medium text-brand-white">{L(E.ausQuestion)}</p>
-              <p className={`mt-3 text-brand-white/80 leading-relaxed ${justify}`}>{L(E.ausBody)}</p>
+              <p className="mt-3 text-brand-white/80 leading-relaxed text-left">{L(E.ausBody)}</p>
               <div className="mt-8 pt-2">
                 <Link
                   href="/entreprises/ausbildung"
@@ -217,6 +220,8 @@ export default async function EntreprisesPage() {
           <div className="mt-4 space-y-3">
             <p className={`text-lg text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.frameText1)}</p>
             <p className={`text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.frameText2)}</p>
+            <p className={`text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.frameText3)}</p>
+            <p className={`text-brand-ink-secondary leading-relaxed ${justify}`}>{L(E.frameText4)}</p>
           </div>
           <div className="mt-8">
             <Link href="/entreprises/fachkraefte" className={btnOutline}>
