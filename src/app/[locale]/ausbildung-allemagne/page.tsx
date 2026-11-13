@@ -41,7 +41,7 @@ export default async function AusbildungHubPage() {
         locale={locale}
         items={[
           { name: tNav("home"), pathname: "/" },
-          { name: t("title"), pathname: "/ausbildung-allemagne" },
+          { name: t("breadcrumbTitle"), pathname: "/ausbildung-allemagne" },
         ]}
       />
 

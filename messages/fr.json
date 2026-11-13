@@ -634,7 +634,10 @@
   },
   "ausbildung": {
     "title": "Ausbildung en Allemagne : le tremplin vers un métier payé, et l'université",
-    "subtitle": "L'Ausbildung n'est pas une fin, c'est un tremplin. La formation professionnelle allemande en alternance : payé dès le premier mois, un diplôme reconnu à la fin, sans diplôme exigé pour commencer. Puis, après deux à trois ans d'expérience, les portes de l'université s'ouvrent, le métier d'abord, les études ensuite.",
+    "seoTitle": "Ausbildung en Allemagne : conditions et parcours",
+    "seoDescription": "Découvrez l'Ausbildung en Allemagne : conditions d'accès, allemand, rémunération et étapes pour préparer votre projet avec Karriere Fähre.",
+    "breadcrumbTitle": "Ausbildung en Allemagne",
+    "subtitle": "Découvrez la formation professionnelle en Allemagne : fonctionnement de l'Ausbildung duale, conditions d'accès, niveau d'allemand, rémunération éventuelle et perspectives après la formation. Les critères varient selon le métier, l'établissement et votre situation.",
     "kick": "Voie légale, Formation professionnelle en alternance",
     "exploreEyebrow": "Tout sur l'Ausbildung",
     "exploreTitle": "Le parcours Ausbildung, section par section",
@@ -647,33 +650,33 @@
     "condPageTitle": "Les conditions d'accès à une Ausbildung en Allemagne",
     "condPageSub": "Âge, niveau d'allemand, diplôme, place de formation : ce qu'il faut réunir pour partir en Ausbildung, et ce que Karriere Fähre prend en charge.",
     "apresPageTitle": "Après l'Ausbildung : de l'emploi qualifié à l'université",
-    "apresPageSub": "L'Ausbildung n'est pas une fin, c'est un tremplin. En Allemagne, un métier appris ouvre l'université, sans baccalauréat : ils étaient près de 70 000 à étudier ainsi en 2023. Technicien vers ingénieur, soignant vers la santé jusqu'à la médecine : le diplôme suit l'expérience.",
+    "apresPageSub": "Une Ausbildung peut constituer une première étape vers l'emploi qualifié et, sous certaines conditions, vers des études supérieures. L'accès à l'université sans Abitur dépend notamment de la qualification professionnelle, de l'expérience, du domaine d'études et des règles du Land.",
     "ctaConditions": "Les conditions d'accès à un Ausbildung",
     "ctaMetiers": "Voir les Ausbildung",
     "quoiEyebrow": "De quoi on parle",
     "quoiTitle": "L'Ausbildung, ce n'est pas un stage",
     "quoiLead": "C'est le système de formation professionnelle allemand, et la voie d'entrée la plus courante pour un jeune qui n'a pas encore de métier.",
     "quoi1Title": "Vous êtes salarié, pas étudiant",
-    "quoi1Body": "Vous signez un contrat de formation avec une entreprise allemande et vous êtes payé chaque mois, dès la première année.",
+    "quoi1Body": "Dans une Ausbildung duale en entreprise, vous signez un contrat de formation avec un employeur et percevez une rémunération mensuelle. Les modalités diffèrent pour les formations professionnelles en milieu scolaire.",
     "quoi2Title": "Entreprise et école, en alternance",
     "quoi2Body": "Vous apprenez le métier sur le terrain dans l'entreprise, et la théorie à l'école professionnelle (Berufsschule).",
     "quoi3Title": "Un diplôme reconnu au bout",
-    "quoi3Body": "À la fin des trois ans, vous obtenez une qualification reconnue dans toute l'Allemagne, et vous devenez une Fachkraft.",
+    "quoi3Body": "À l'issue de la formation, dont la durée varie selon le métier, généralement de deux à trois ans et demi, vous obtenez une qualification professionnelle reconnue selon le cursus suivi.",
     "conditionsEyebrow": "Les conditions",
     "conditionsTitle": "Ce qu'il faut réunir pour partir en Ausbildung",
     "conditionsLead": "Moins exigeant qu'on ne le croit sur le diplôme, plus exigeant sur la langue et l'âge.",
-    "cond1Title": "Aucun diplôme professionnel requis",
-    "cond1Body": "C'est tout l'intérêt de cette voie : vous n'avez pas besoin d'une qualification reconnue au départ. Un diplôme de fin d'études secondaires suffit.",
-    "cond2Title": "Moins de 35 ans",
-    "cond2Body": "La limite d'âge du visa Ausbildung a été relevée à 35 ans en mars 2024 (§ 16a de la loi allemande sur le séjour).",
+    "cond1Title": "Les diplômes scolaires et professionnels",
+    "cond1Body": "Pour une Ausbildung duale, la loi ne fixe généralement pas de diplôme scolaire unique pour tous les métiers : chaque entreprise définit ses critères de sélection et peut demander un diplôme précis. Pour une formation en milieu scolaire, des conditions scolaires spécifiques et une reconnaissance du diplôme peuvent être exigées.",
+    "cond2Title": "L'âge dépend du type de visa",
+    "cond2Body": "Il n'existe pas de limite d'âge générale pour commencer une Ausbildung. En revanche, le visa destiné à venir en Allemagne pour rechercher une place de formation est réservé aux personnes de moins de 35 ans. Les conditions sont différentes si vous avez déjà une place de formation.",
     "cond3Title": "Le niveau d'allemand",
-    "cond3Body": "Le niveau B2 est notre standard : c'est lui qui vous permet de suivre l'école professionnelle et de comprendre votre formateur dès le premier jour. Nos formations vous y amènent, même en partant de zéro.",
+    "cond3Body": "Pour le visa Ausbildung, le niveau B1 est généralement demandé si l'établissement ou l'entreprise n'a pas déjà vérifié vos compétences linguistiques et si vous n'avez pas suivi de cours préparatoire. Selon le métier, l'employeur et l'école professionnelle, un niveau supérieur peut être nécessaire. Chez Karriere Fähre, nous visons le B2 pour vous aider à suivre la formation et à communiquer avec autonomie.",
     "cond4Title": "Une place de formation",
-    "cond4Body": "Il vous faut un contrat avec une entreprise allemande avant de partir. C'est précisément ce que nous cherchons pour vous.",
-    "conditionsNote": "Les seuils exacts évoluent selon la réglementation allemande, le métier et la chambre de métiers compétente. Nous les vérifions pour votre cas lors de l'évaluation.",
+    "cond4Body": "Pour demander le visa destiné à suivre une Ausbildung, vous devez généralement disposer d'une place de formation concrète en Allemagne. Le contrat ou l'admission doit être établi avant la demande de visa correspondante.",
+    "conditionsNote": "Les exigences varient selon le métier, le type de formation, l'établissement, l'entreprise et le visa demandé. Nous vérifions les critères applicables à votre situation lors de l'évaluation.",
     "langueEyebrow": "L'étape qui décide",
     "langueTitle": "Tout commence par l'allemand",
-    "langueBody1": "Sans le niveau de langue, il n'y a ni visa, ni place de formation, ni école professionnelle suivable. C'est la première marche, et c'est celle sur laquelle nous vous accompagnons depuis zéro.",
+    "langueBody1": "L'allemand est essentiel : les échanges en entreprise, les cours à la Berufsschule et les examens se déroulent généralement en allemand. Le niveau B1 est généralement demandé pour le visa Ausbildung, tandis que certaines entreprises, écoles ou professions peuvent exiger B2 ou davantage.",
     "langueBody2": "Notre parcours vous mène de A1 à B2 en environ 10 mois, plus un mois de préparation à l'examen.",
     "langueCta": "Voir le parcours d'allemand",
     "etapesEyebrow": "Comment ça se passe",
@@ -691,20 +694,20 @@
     "apresEyebrow": "Et après ? Le tremplin",
     "apresTitle": "L'Ausbildung n'est pas une fin, c'est un tremplin",
     "apresQuote": "On vous a appris à choisir : études OU métier. En Allemagne, c'est métier PUIS études, les deux.",
-    "apresIntro": "Ce n'est pas un slogan. L'Allemagne reconnaît une « troisième voie » vers l'université, ouverte aux personnes qualifiées par un métier, encadrée depuis 2009 par la Conférence des ministres de l'éducation (KMK).",
+    "apresIntro": "L'Allemagne prévoit des voies d'accès à l'enseignement supérieur pour certaines personnes qualifiées par la formation professionnelle. Les conditions dépendent du type de qualification et du Land.",
     "path1Kicker": "Ausbildung technique",
-    "path1Goal": "Devenez ingénieur",
+    "path1Goal": "Poursuivre vers l'ingénierie, selon les conditions d'accès",
     "path2Kicker": "Ausbildung en soins",
-    "path2Goal": "Jusqu'à la médecine",
-    "univTitle": "L'université, sans baccalauréat",
-    "univBody": "En Allemagne, on accède à l'université sans bac par deux chemins. Vous entrez d'abord dans le pays, un métier, un salaire, l'intégration ; les études supérieures peuvent suivre.",
-    "payeLine": "Soyez payé (souvent 1 000 à 1 400 €/mois), apprenez la langue, prenez de l'expérience… puis étudiez.",
-    "path1Body": "Un Meister ou un Techniker, une formation de perfectionnement, donne le même accès à l'université qu'un bachelier, et ouvre les études d'ingénieur.",
-    "path2Body": "Avec une formation de perfectionnement (Fachwirt), la note de l'examen remplace celle du bac pour candidater, y compris en médecine et en dentisterie.",
+    "path2Goal": "Envisager des études dans la santé, sous conditions",
+    "univTitle": "Étudier sans Abitur : des possibilités sous conditions",
+    "univBody": "Certaines qualifications professionnelles peuvent ouvrir l'accès à l'enseignement supérieur sans Abitur. Les règles diffèrent selon le parcours : une qualification de perfectionnement comme Meister, Techniker ou Fachwirt peut ouvrir un accès général ; une Ausbildung achevée peut, avec une expérience professionnelle pertinente et d'autres conditions, ouvrir un accès lié au domaine de formation.",
+    "payeLine": "Dans une Ausbildung duale, vous percevez une rémunération pendant la formation. Son montant dépend notamment du métier, de la branche, de la convention applicable et de l'entreprise.",
+    "path1Body": "Certains diplômes de perfectionnement, notamment Meister, Techniker ou Fachwirt, peuvent donner un accès général à l'enseignement supérieur. Les conditions précises dépendent de la qualification reconnue et des règles applicables.",
+    "path2Body": "Après une formation professionnelle achevée, une expérience professionnelle pertinente peut permettre de candidater à des études dans un domaine apparenté, sous réserve des conditions du Land et de l'établissement. L'accès à la médecine ou à la dentisterie obéit à des critères de sélection spécifiques.",
     "route1Title": "La formation de perfectionnement",
-    "route1Body": "Meister, Techniker ou Fachwirt : ces qualifications d'évolution ouvrent l'université dans toutes les filières, avec le même accès qu'un bachelier.",
+    "route1Body": "Les qualifications de perfectionnement telles que Meister, Techniker ou Fachwirt peuvent ouvrir un accès général à l'enseignement supérieur. Il faut vérifier que le titre obtenu répond aux conditions applicables.",
     "route2Title": "Le métier + l'expérience",
-    "route2Body": "Un métier appris et environ trois ans d'expérience ouvrent l'université dans votre domaine, souvent après un test d'aptitude. Dans certains Länder (Berlin, Brême, Hesse, Rhénanie-Palatinat), l'Ausbildung seule suffit désormais.",
+    "route2Body": "Une formation professionnelle achevée, généralement d'au moins deux ans, associée à une expérience professionnelle pertinente, peut ouvrir un accès à des études dans un domaine apparenté. Une procédure d'aptitude ou d'autres conditions peuvent s'appliquer selon le Land et l'établissement.",
     "apresStat1Num": "≈ 70 000",
     "apresStat1Label": "étudiants sans bac en Allemagne (2023)",
     "apresStat2Num": "≈ 95 000",
@@ -713,19 +716,19 @@
     "apresStat3Label": "plus qu'il y a 25 ans",
     "apresSource": "Sources : Conférence des ministres de l'éducation (KMK, résolution de 2009) ; Statistisches Bundesamt et CHE, studieren-ohne-abitur.de, données 2023.",
     "finalTitle": "Prêt à commencer votre Ausbildung ?",
-    "finalText": "Le métier, le salaire, puis l'université : lancez votre candidature, nous vous accompagnons à chaque étape.",
+    "finalText": "Votre projet commence par le choix d'un métier et la vérification de votre profil. Nous vous aidons à identifier les étapes à préparer, sans garantie automatique de place, d'emploi ou de visa.",
     "finalCta": "Postuler",
     "employeurNote": "Vous êtes une entreprise et vos places d'Ausbildung restent vacantes ?",
     "employeurCta": "Voir notre offre employeurs",
     "hub": {
       "heroTitle": "Se former en Allemagne. Construire une vraie carrière.",
-      "heroSubtitle": "Une Ausbildung permet d'apprendre un métier en combinant formation théorique et expérience pratique en entreprise. Dans le système dual, vous alternez entre l'entreprise et la Berufsschule. La durée dépend du métier, généralement entre 2 et 3,5 ans.",
+      "heroSubtitle": "Une Ausbildung permet d'apprendre un métier en combinant théorie et pratique. Dans le système dual, vous alternez entre l'entreprise et la Berufsschule ; vous percevez généralement une rémunération versée par l'entreprise. La durée varie selon le métier, généralement de 2 à 3,5 ans. Les formations en milieu scolaire suivent d'autres modalités.",
       "heroPrimary": "Trouver mon parcours Ausbildung",
       "heroSecondary": "Voir les métiers accessibles",
       "s1Num": "01",
       "s1Kicker": "Choisir son métier",
       "s1Title": "Votre Ausbildung commence par le bon choix.",
-      "s1Text": "L'Allemagne propose plus de 300 métiers d'Ausbildung reconnus. Le choix doit tenir compte de votre formation, de vos compétences, de votre expérience, de vos intérêts et des possibilités réelles d'accès.",
+      "s1Text": "L'Allemagne propose plus de 300 métiers de formation professionnelle reconnus. Le choix dépend de votre parcours scolaire, de vos compétences, de votre expérience, de vos intérêts et des critères de sélection propres au métier et à l'entreprise.",
       "s1Sectors": [
         {
           "name": "Santé",
@@ -761,7 +764,7 @@
         "Entreprise",
         "Démarches"
       ],
-      "s2Note": "Karriere Fähre vous accompagne dans cette préparation pour éviter un piège classique : choisir une Ausbildung parce qu'elle semble accessible, sans vérifier qu'elle correspond vraiment à votre profil.",
+      "s2Note": "Karriere Fähre vous accompagne dans cette préparation pour éviter un piège classique : choisir une formation parce qu'elle semble accessible, sans vérifier qu'elle correspond réellement à votre profil et aux conditions du métier visé.",
       "s2Cta": "Évaluer mon profil",
       "s3Num": "03",
       "s3Kicker": "Apprendre et travailler",
@@ -784,7 +787,7 @@
       "s4Num": "04",
       "s4Kicker": "Être rémunéré",
       "s4Title": "Vous vous formez tout en travaillant.",
-      "s4Text": "Pour une Ausbildung duale, l'entreprise verse une Ausbildungsvergütung. Son montant dépend du métier, de la branche, de la région et de l'entreprise.",
+      "s4Text": "Pour une Ausbildung duale relevant du régime légal concerné, l'entreprise verse une rémunération de formation (Ausbildungsvergütung). Son montant dépend notamment du métier, de la branche, de la convention collective, de la région et de l'entreprise.",
       "s4ColYear": "Année",
       "s4ColAmount": "Minimum brut mensuel (2026)",
       "s4Rows": [
@@ -805,13 +808,13 @@
           "amount": "1 014 €"
         }
       ],
-      "s4Note": "Montants bruts, minimums légaux 2026. La rémunération réelle peut être supérieure selon le métier, la branche, la région et l'entreprise. Il s'agit de la rémunération pendant l'Ausbildung, à ne pas confondre avec le salaire une fois qualifié.",
+      "s4Note": "Montants mensuels bruts minimaux applicables aux contrats relevant du régime légal et débutant en 2026. La rémunération réelle peut être supérieure. Ces montants ne s'appliquent pas automatiquement à toutes les formations, notamment aux formations en milieu scolaire.",
       "s4Source": "Source : Bundesagentur für Arbeit",
       "s4Cta": "Voir les conditions",
       "s5Num": "05",
       "s5Kicker": "Un métier reconnu",
       "s5Title": "À la fin, vous ne repartez pas seulement avec une expérience.",
-      "s5Text": "Vous terminez votre formation avec une qualification professionnelle reconnue et pouvez entrer dans la vie professionnelle dans votre domaine. L'Ausbildung ouvre aussi la voie à la poursuite de votre développement professionnel.",
+      "s5Text": "À l'issue de la formation, vous pouvez obtenir une qualification professionnelle reconnue et accéder à des emplois dans votre domaine. La durée et les modalités de certification dépendent du métier et du type de formation.",
       "s5Cta": "Découvrir l'après-Ausbildung",
       "s6Title": "Votre Ausbildung n'est pas votre destination. C'est votre première étape.",
       "s6Branches": [
@@ -847,28 +850,32 @@
         "Responsabilités techniques",
         "Études supérieures possibles selon les conditions"
       ],
-      "s7Disclaimer": "Une Ausbildung peut être une première étape dans un parcours plus long. Selon votre formation initiale, vos qualifications, les conditions d'admission et votre projet, d'autres études peuvent ensuite être envisageables. On ne devient pas automatiquement médecin ou ingénieur après une Ausbildung : ces voies exigent de satisfaire aux conditions d'accès propres à chaque cursus.",
+      "s7Disclaimer": "Une Ausbildung peut être une première étape dans un parcours plus long. Certaines qualifications de perfectionnement peuvent ouvrir un accès général à l'enseignement supérieur ; une formation professionnelle achevée accompagnée d'une expérience pertinente peut ouvrir un accès lié au domaine. Les conditions varient selon le Land, la qualification et l'établissement. On ne devient pas automatiquement médecin ou ingénieur après une Ausbildung.",
       "faqTitle": "Questions fréquentes",
       "faq": [
         {
-          "q": "Quelle différence entre Ausbildung et emploi direct ?",
-          "a": "L'Ausbildung est une formation professionnelle rémunérée qui mène à une qualification allemande. L'emploi direct s'adresse aux personnes déjà qualifiées et expérimentées, qui intègrent directement une entreprise."
+          "q": "Quelle différence entre Ausbildung duale et formation scolaire ?",
+          "a": "Dans une Ausbildung duale, vous alternez entre une entreprise et une Berufsschule et percevez généralement une rémunération de formation. Une formation en milieu scolaire se déroule principalement dans un établissement de formation ; ses conditions d'accès, son financement et sa rémunération éventuelle dépendent du cursus."
         },
         {
           "q": "Quel niveau d'allemand faut-il ?",
-          "a": "Le niveau B2 est le standard visé pour une Ausbildung. Nous vous accompagnons dans votre progression linguistique jusqu'à ce niveau."
+          "a": "Pour le visa Ausbildung, le niveau B1 est généralement demandé si l'établissement ou l'entreprise n'a pas déjà vérifié vos compétences linguistiques et si vous n'avez pas suivi de cours préparatoire. Certains métiers, employeurs ou établissements peuvent demander B2 ou davantage. Karriere Fähre recommande de viser B2 pour mieux suivre la formation."
+        },
+        {
+          "q": "Faut-il avoir moins de 35 ans ?",
+          "a": "Non, il n'existe pas de limite d'âge générale pour commencer une Ausbildung. La limite de moins de 35 ans concerne le visa permettant de venir en Allemagne pour rechercher une place de formation. Si vous avez déjà une place, les conditions de visa sont différentes."
         },
         {
           "q": "Quels diplômes sont nécessaires ?",
-          "a": "Un diplôme scolaire ou un diplôme professionnel reconnu, compatible avec le métier visé. Chaque profil est étudié individuellement pour identifier les parcours possibles."
+          "a": "Pour une Ausbildung duale, les entreprises fixent leurs critères et peuvent demander un diplôme scolaire précis. Pour une formation en milieu scolaire, des conditions scolaires spécifiques et une reconnaissance du diplôme peuvent être exigées. Le métier et l'établissement déterminent les exigences applicables."
         },
         {
-          "q": "Karriere Fähre garantit-il un emploi ?",
-          "a": "Non. Aucun acteur sérieux ne peut garantir un emploi, une Ausbildung ou un visa. Nous vous préparons et vous orientons pour rendre votre projet réalisable ; l'admission finale dépend des établissements, des employeurs et des autorités."
+          "q": "Peut-on commencer une Ausbildung depuis le Cameroun ?",
+          "a": "Oui, un candidat résidant au Cameroun peut préparer une candidature depuis son pays. Pour demander le visa correspondant, il faut généralement disposer d'une place de formation concrète, justifier le niveau linguistique requis et satisfaire aux conditions de séjour et de financement. Les exigences exactes doivent être vérifiées pour chaque dossier."
         },
         {
-          "q": "Comment se déroule la sélection ?",
-          "a": "Chaque candidature est étudiée individuellement : profil, motivation, projet et adéquation avec le métier souhaité."
+          "q": "Karriere Fähre garantit-il une place, un emploi ou un visa ?",
+          "a": "Non. Aucun acteur ne peut garantir la décision d'un employeur ou des autorités. Karriere Fähre peut vous accompagner dans la préparation et l'orientation ; la sélection finale dépend notamment de l'entreprise, de l'établissement et des autorités compétentes."
         }
       ],
       "finalTitle": "Quel parcours est fait pour vous ?",
