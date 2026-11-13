@@ -1,0 +1,30 @@
+User-Agent: *
+Allow: /
+
+# Espaces privés à la racine
+Disallow: /candidate/
+Disallow: /employer/
+Disallow: /admin/
+
+# Routes privées sans slash final
+Disallow: /candidate$
+Disallow: /employer$
+Disallow: /admin$
+
+# Espaces privés avec préfixe de langue
+Disallow: /*/candidate/
+Disallow: /*/employer/
+Disallow: /*/admin/
+
+# ERP et authentification
+Disallow: /erp
+Disallow: /*/erp
+Disallow: /connexion
+Disallow: /login
+Disallow: /anmelden
+Disallow: /*/connexion
+Disallow: /*/login
+Disallow: /*/anmelden
+
+# Sitemap officiel
+Sitemap: https://www.karrierefaehre.com/sitemap.xml
