@@ -3,7 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { getPathname } from "../../i18n/navigation";
 import { routing, type Locale } from "../../i18n/routing";
 
-export const SITE_URL = "https://karrierefaehre.com";
+export const SITE_URL = "https://www.karrierefaehre.com";
 export const SITE_NAME = "Karriere Fähre";
 
 type PathnameHref = Parameters<typeof getPathname>[0]["href"];
@@ -61,10 +61,12 @@ export async function metadataFromNamespace(
 ): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   const t = await getTranslations(namespace);
+  // Prefer dedicated SEO fields when present, so the page's visible hero title/intro
+  // can stay long/editorial while the <title>/<meta description> stay concise.
   return buildMetadata({
     pathname,
     locale,
-    title: t("title"),
-    description: t("subtitle"),
+    title: t.has("seoTitle") ? t("seoTitle") : t("title"),
+    description: t.has("seoDescription") ? t("seoDescription") : t("subtitle"),
   });
 }
