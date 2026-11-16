@@ -14,8 +14,8 @@ export async function generateMetadata() {
   return buildMetadata({
     pathname: "/candidats",
     locale,
-    title: tr(C.heroTitle, locale),
-    description: tr(C.heroIntro, locale),
+    title: tr(C.seoTitle, locale),
+    description: tr(C.seoDescription, locale),
   });
 }
 

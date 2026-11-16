@@ -3,6 +3,18 @@ import type { LocalizedText } from "./localized";
 type LT = LocalizedText;
 
 export const CANDIDATS = {
+  // SEO — dedicated title/description, decoupled from the visible H1/intro.
+  seoTitle: {
+    fr: "Travailler ou se former en Allemagne depuis le Cameroun",
+    de: "Arbeiten oder eine Ausbildung in Deutschland",
+    en: "Work or study in Germany from Cameroon",
+  },
+  seoDescription: {
+    fr: "Ausbildung, emploi qualifié ou Chancenkarte : Karriere Fähre vous accompagne depuis le Cameroun dans la préparation du projet professionnel et linguistique.",
+    de: "Ausbildung, qualifizierte Beschäftigung oder Chancenkarte: Karriere Fähre begleitet Sie aus Kamerun bei Ihrem beruflichen Vorhaben und Ihren Deutschkenntnissen.",
+    en: "Ausbildung, skilled employment or the Chancenkarte: Karriere Fähre supports applicants in Cameroon with their career plans and German preparation.",
+  },
+
   // SECTION 01 — HERO
   heroKicker: {
     fr: "Votre avenir professionnel en Allemagne",
