@@ -16,8 +16,8 @@ export async function generateMetadata() {
   return buildMetadata({
     pathname: "/entreprises/fachkraefte",
     locale,
-    title: tr(F.heroTitle, locale),
-    description: tr(F.heroIntro1, locale),
+    title: tr(F.seoTitle, locale),
+    description: tr(F.seoDescription, locale),
   });
 }
 
@@ -258,6 +258,16 @@ export default async function EntreprisesFachkraeftePage() {
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
+          <p className="mt-8 max-w-2xl text-sm text-brand-ink-secondary leading-relaxed">
+            {L(F.hubLinkText)}{" "}
+            <Link
+              href="/entreprises"
+              className="inline-flex items-center gap-1 font-semibold text-brand-gold-text underline-offset-2 transition-colors duration-200 hover:text-brand-black hover:underline"
+            >
+              {L(F.hubLinkLabel)}
+              <ArrowRight size={15} aria-hidden="true" />
+            </Link>
+          </p>
         </div>
       </section>
     </div>

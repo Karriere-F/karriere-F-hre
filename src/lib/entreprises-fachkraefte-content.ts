@@ -8,6 +8,8 @@ import type { LocalizedText } from "./localized";
 type LT = LocalizedText;
 
 export const ENT_FACHKRAEFTE: {
+  seoTitle: LT;
+  seoDescription: LT;
   heroKicker: LT;
   heroTitle: LT;
   heroIntro1: LT;
@@ -44,7 +46,20 @@ export const ENT_FACHKRAEFTE: {
   finalText: LT;
   finalCtaPrimary: LT;
   finalCtaSecondary: LT;
+  hubLinkText: LT;
+  hubLinkLabel: LT;
 } = {
+  seoTitle: {
+    fr: "Recruter des professionnels qualifiés en Allemagne",
+    de: "Internationale Fachkräfte für Deutschland gewinnen",
+    en: "Recruit Skilled Workers for Germany",
+  },
+  seoDescription: {
+    fr: "Recrutez des professionnels qualifiés depuis le Cameroun pour votre entreprise en Allemagne. Présélection, préparation linguistique et accompagnement des démarches de reconnaissance.",
+    de: "Gewinnen Sie qualifizierte Fachkräfte aus Kamerun für Ihr Unternehmen in Deutschland. Mit Vorauswahl, Sprachvorbereitung und Begleitung im Anerkennungsprozess.",
+    en: "Recruit qualified professionals from Cameroon for your German business. Candidate screening, German language preparation and guidance through the qualification recognition process.",
+  },
+
   // SECTION 01 — HERO
   heroKicker: {
     fr: "Internationale Fachkräfte",
@@ -184,51 +199,51 @@ export const ENT_FACHKRAEFTE: {
   },
   processSteps: [
     {
-      title: { fr: "Définition du besoin", de: "Definition des Bedarfs", en: "Defining the need" },
+      title: { fr: "Définir les qualifications requises", de: "Die erforderlichen Qualifikationen definieren", en: "Define the required qualifications" },
       body: {
-        fr: "Vous définissez vos exigences. Ensemble, nous discutons du profil recherché, des conditions-cadres et de votre calendrier.",
-        de: "Sie definieren Ihre Anforderungen. Gemeinsam besprechen wir das Anforderungsprofil, die Rahmenbedingungen und Ihren Zeitplan.",
-        en: "You define your requirements. Together we discuss the target profile, the general conditions and your timeline.",
+        fr: "Vous définissez vos exigences. Ensemble, nous précisons les qualifications, les compétences techniques et l'expérience attendues, ainsi que les conditions-cadres et votre calendrier.",
+        de: "Sie definieren Ihre Anforderungen. Gemeinsam präzisieren wir die erwarteten Qualifikationen, die fachlichen Kompetenzen und die Erfahrung sowie die Rahmenbedingungen und Ihren Zeitplan.",
+        en: "You define your requirements. Together we specify the expected qualifications, technical skills and experience, as well as the general conditions and your timeline.",
       },
     },
     {
-      title: { fr: "Recherche et présélection", de: "Suche und Vorauswahl", en: "Sourcing and preselection" },
+      title: { fr: "Rechercher les profils correspondants", de: "Geeignete Profile finden", en: "Identify matching profiles" },
       body: {
         fr: "Nous recherchons les profils correspondant aux critères convenus et examinons les dossiers disponibles.",
         de: "Wir suchen die Profile, die den vereinbarten Kriterien entsprechen, und prüfen die verfügbaren Unterlagen.",
-        en: "We source the profiles matching the agreed criteria and review the available files.",
+        en: "We identify profiles that match the agreed criteria and review the available files.",
       },
     },
     {
-      title: { fr: "Préparation du candidat", de: "Vorbereitung des Kandidaten", en: "Preparing the candidate" },
+      title: { fr: "Évaluer les diplômes et l'expérience", de: "Abschlüsse und Erfahrung bewerten", en: "Assess qualifications and experience" },
       body: {
-        fr: "Selon le besoin, nous renforçons les compétences linguistiques, la Fachsprache et la préparation aux entretiens.",
-        de: "Je nach Bedarf stärken wir die sprachlichen Kompetenzen, die Fachsprache und die Vorbereitung auf Gespräche.",
-        en: "Depending on the need, we strengthen language skills, Fachsprache and interview preparation.",
+        fr: "Nous examinons les diplômes, le parcours professionnel et l'expérience, et vérifions la cohérence du profil avec le poste.",
+        de: "Wir prüfen die Abschlüsse, den beruflichen Werdegang und die Erfahrung und beurteilen die Passung des Profils zur Stelle.",
+        en: "We examine qualifications, professional background and experience, and assess how well the profile fits the position.",
       },
     },
     {
-      title: { fr: "Présentation des profils", de: "Vorstellung der Profile", en: "Presenting the profiles" },
+      title: { fr: "Préparer les entretiens professionnels", de: "Das Vorstellungsgespräch vorbereiten", en: "Prepare for job interviews" },
       body: {
-        fr: "Nous vous soumettons les candidatures pertinentes selon le cadre convenu.",
-        de: "Wir legen Ihnen die relevanten Bewerbungen im vereinbarten Rahmen vor.",
-        en: "We submit the relevant applications to you within the agreed framework.",
+        fr: "Nous préparons les candidats à l'entretien professionnel et organisons votre rencontre, en ligne ou sur place au Cameroun selon vos souhaits.",
+        de: "Wir bereiten die Kandidaten auf das Vorstellungsgespräch vor und organisieren Ihr Gespräch, online oder vor Ort in Kamerun, ganz nach Ihren Wünschen.",
+        en: "We prepare candidates for the job interview and arrange your meeting, online or on site in Cameroon according to your wishes.",
       },
     },
     {
-      title: { fr: "Entretien et décision", de: "Gespräch und Entscheidung", en: "Interview and decision" },
+      title: { fr: "Accompagner la reconnaissance et les démarches applicables", de: "Anerkennungsverfahren und weitere Schritte begleiten", en: "Support recognition and the relevant procedures" },
       body: {
-        fr: "Vous rencontrez les candidats en ligne. Une rencontre personnelle ou un rendez-vous sur place au Cameroun, nous l'organisons volontiers selon vos souhaits.",
-        de: "Sie treffen die Kandidaten online. Ein persönliches Kennenlernen oder einen Termin vor Ort in Kamerun organisieren wir gerne individuell nach Ihren Wünschen.",
-        en: "You meet the candidates online. A personal meeting or an on-site appointment in Cameroon, we gladly arrange individually to your wishes.",
+        fr: "Après votre décision, nous préparons et coordonnons les démarches convenues : reconnaissance des qualifications, visa et autres étapes, selon le profil et le cadre légal applicable.",
+        de: "Nach Ihrer Entscheidung bereiten wir die vereinbarten Schritte vor und koordinieren sie: Anerkennung der Qualifikationen, Visum und weitere Etappen, je nach Profil und geltendem rechtlichen Rahmen.",
+        en: "After your decision, we prepare and coordinate the agreed steps: recognition of qualifications, visa and further stages, depending on the profile and the applicable legal framework.",
       },
     },
     {
-      title: { fr: "Démarches et arrivée", de: "Formalitäten und Ankunft", en: "Formalities and arrival" },
+      title: { fr: "Préparer l'arrivée et le parcours d'intégration", de: "Die Ankunft und den Integrationsweg vorbereiten", en: "Prepare arrival and the integration path" },
       body: {
-        fr: "Après votre décision positive, nous coordonnons toutes les étapes suivantes et adaptons notre accompagnement à vos souhaits et à la situation du candidat.",
-        de: "Nach Ihrer positiven Entscheidung koordinieren wir alle weiteren Schritte und passen unsere Begleitung individuell an Ihre Wünsche und die Situation des Kandidaten an.",
-        en: "After your positive decision, we coordinate all further steps and tailor our support to your wishes and the candidate's situation.",
+        fr: "Nous préparons l'arrivée du candidat en Allemagne et adaptons notre accompagnement à sa situation et à vos souhaits, jusqu'à son intégration.",
+        de: "Wir bereiten die Ankunft des Kandidaten in Deutschland vor und passen unsere Begleitung an seine Situation und Ihre Wünsche an, bis zu seiner Integration in Deutschland.",
+        en: "We prepare the candidate's arrival in Germany and tailor our support to their situation and your wishes, through to their integration in Germany.",
       },
     },
   ],
@@ -376,5 +391,15 @@ export const ENT_FACHKRAEFTE: {
     fr: "Découvrir le recrutement d'Azubis",
     de: "Die Rekrutierung von Azubis entdecken",
     en: "Discover Azubi recruitment",
+  },
+  hubLinkText: {
+    fr: "Vous souhaitez découvrir l'ensemble de nos solutions de recrutement pour les entreprises ?",
+    de: "Möchten Sie alle unsere Rekrutierungslösungen für Unternehmen entdecken?",
+    en: "Would you like to discover all our recruitment solutions for companies?",
+  },
+  hubLinkLabel: {
+    fr: "Découvrir notre accompagnement global",
+    de: "Unsere ganzheitliche Begleitung entdecken",
+    en: "Discover our end-to-end support",
   },
 };
